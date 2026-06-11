@@ -34,7 +34,11 @@
   var root = document.createElement("div");
   root.innerHTML =
     '<button class="chat-orb" aria-label="Chat with GHF Coach">' + MARK + "</button>" +
-    '<div class="chat-orb__hint"><em>Hey there!</em> Questions about the club? Ask GHF Coach.</div>' +
+    '<div class="chat-orb__hint" role="button" tabindex="0">' +
+    '  <span class="chat-orb__hint-avatar">' + MARK + "</span>" +
+    '  <span class="chat-orb__hint-text"><em>Have questions?</em> I\'m here to help.</span>' +
+    '  <button class="chat-orb__hint-x" aria-label="Dismiss">✕</button>' +
+    "</div>" +
     '<div class="chat-panel" role="dialog" aria-label="GHF Coach chat">' +
     '  <div class="chat-head">' +
     '    <div class="chat-head__icon">' + MARK + "</div>" +
@@ -222,11 +226,25 @@
   }
 
   /* ---------- events ---------- */
-  orb.addEventListener("click", function () {
+  function openChat() {
     document.body.classList.add("chat-open");
     hint.classList.remove("is-on");
     if (!msgs.children.length) restore();
     setTimeout(function () { input.focus(); }, 400);
+  }
+  orb.addEventListener("click", openChat);
+  /* clicking the popup bubble opens the chat too */
+  hint.addEventListener("click", function (e) {
+    if (e.target.closest(".chat-orb__hint-x")) return;
+    openChat();
+  });
+  hint.addEventListener("keydown", function (e) {
+    if (e.key === "Enter" || e.key === " ") { e.preventDefault(); openChat(); }
+  });
+  hint.querySelector(".chat-orb__hint-x").addEventListener("click", function (e) {
+    e.stopPropagation();
+    hint.classList.remove("is-on");
+    try { sessionStorage.setItem("ghf-chat-hint", "1"); } catch (er) {}
   });
   root.querySelector(".chat-head__close").addEventListener("click", function () {
     document.body.classList.remove("chat-open");
@@ -240,14 +258,16 @@
     input.style.height = Math.min(input.scrollHeight, 110) + "px";
   });
 
-  /* teaser hint, once per session */
+  /* teaser popup, once per session — appears shortly after load, lingers */
   try {
     if (!sessionStorage.getItem("ghf-chat-hint")) {
       setTimeout(function () {
         if (!document.body.classList.contains("chat-open")) hint.classList.add("is-on");
-        setTimeout(function () { hint.classList.remove("is-on"); }, 7000);
-        sessionStorage.setItem("ghf-chat-hint", "1");
-      }, 9000);
+      }, 3500);
+      setTimeout(function () {
+        hint.classList.remove("is-on");
+        try { sessionStorage.setItem("ghf-chat-hint", "1"); } catch (er) {}
+      }, 16000);
     }
   } catch (e) {}
 })();

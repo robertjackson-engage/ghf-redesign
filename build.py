@@ -8,12 +8,20 @@ V = str(int(time.time()))  # cache-bust CSS/JS on every build
 
 # Modern GHF mark — the raised-arms figure from the original logo, geometrized
 def mark_svg(cls):
+    # small circular "i" glyph (used only inside the AI chat orb)
     return f"""<svg class="{cls}" viewBox="0 0 64 64" fill="none" aria-hidden="true">
 <circle cx="32" cy="13" r="7" fill="currentColor"/>
 <path d="M13 24 L32 37 L51 24" stroke="currentColor" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M32 37 L32 56" stroke="currentColor" stroke-width="8" stroke-linecap="round"/>
 <path d="M14 56 A 26 26 0 0 0 50 56" stroke="currentColor" stroke-width="4" stroke-linecap="round" opacity="0.45"/>
 </svg>"""
+
+LOGO_MARK = "assets/img/brand/logo-mark.png"      # Gainesville H&F lockup, no tagline (header/menu)
+LOGO_FULL = "assets/img/brand/logo-lockup.png"    # full lockup with tagline (footer)
+
+def brand_logo(src=LOGO_MARK, cls=""):
+    return (f'<img class="brand__logo {cls}" src="{src}" '
+            f'alt="Gainesville Health &amp; Fitness" width="1000" height="350" />')
 
 NAV = [
     ("Why GHF", "why-ghf.html"),
@@ -66,9 +74,7 @@ def head(title, desc):
 </head>
 <body>
 <div class="preloader" aria-hidden="true">
-  {mark_svg("preloader__icon")}
-  <div class="preloader__mark"><span>GH<em class="accent">F</em></span></div>
-  <div class="preloader__sub">Gainesville Health &amp; Fitness</div>
+  <img class="preloader__logo" src="assets/img/brand/logo-mark.png" alt="Gainesville Health &amp; Fitness" width="1000" height="350" />
   <div class="preloader__bar"><i></i></div>
   <div class="preloader__count">0</div>
 </div>
@@ -87,9 +93,7 @@ def header_html(active=""):
 <header class="site-header">
   <div class="site-header__inner">
     <a class="brand" href="index.html" aria-label="Gainesville Health &amp; Fitness — home">
-      {mark_svg("brand__icon")}
-      <span class="brand__mark">GH<em>F</em></span>
-      <span class="brand__sub">Gainesville<br>Health &amp; Fitness</span>
+      {brand_logo()}
     </a>
     <nav class="nav-desktop" aria-label="Primary">{links}</nav>
     <div class="header-cta">
@@ -154,10 +158,8 @@ def footer_html():
   <div class="wrap">
     <div class="site-footer__top">
       <div class="site-footer__brand">
-        <a class="brand" href="index.html">
-          {mark_svg("brand__icon")}
-          <span class="brand__mark">GH<em>F</em></span>
-          <span class="brand__sub">Gainesville<br>Health &amp; Fitness</span>
+        <a class="brand brand--footer" href="index.html">
+          {brand_logo(LOGO_FULL)}
         </a>
         <p>The gym that's best at helping beginners — with staff to guide your journey. One membership, three locations.</p>
         <div class="socials">
