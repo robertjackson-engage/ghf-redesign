@@ -258,8 +258,10 @@ body.menu-open .menu-list a { opacity: 1; transform: translateY(0); transition: 
   font-size: clamp(54px, 9.2vw, 158px); line-height: 0.96; letter-spacing: 0.005em;
   color: var(--white); font-weight: 400; max-width: 14ch;
 }
-.hero__title .ln { display: block; overflow: hidden; }
-.hero__title .ln > span { display: inline-block; transform: translateY(112%); transition: transform 1.15s var(--ease-power); }
+/* padding+negative margin give italic serif descenders (y, g, p) room
+   inside the animation mask so they don't get sliced off */
+.hero__title .ln { display: block; overflow: hidden; padding-bottom: 0.16em; margin-bottom: -0.16em; }
+.hero__title .ln > span { display: inline-block; transform: translateY(125%); transition: transform 1.15s var(--ease-power); }
 .is-loaded .hero__title .ln > span { transform: translateY(0); }
 .hero__title .serif { font-family: var(--font-serif); font-style: italic; text-transform: none; letter-spacing: 0; color: var(--accent-soft); font-size: 0.92em; }
 .hero__sub {

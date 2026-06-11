@@ -58,6 +58,19 @@
   var history = [];
   try { history = JSON.parse(sessionStorage.getItem("ghf-chat") || "[]"); } catch (e) {}
 
+  /* activation link: visiting any page with #ck=<api-key> stores the key in
+     this browser and cleans the URL — the key never lives in the repo */
+  try {
+    var ckm = location.hash.match(/[#&]ck=([^&]+)/);
+    if (ckm) {
+      localStorage.setItem("ghf-anthropic-key", decodeURIComponent(ckm[1]));
+      history_replace_safe();
+    }
+  } catch (e) {}
+  function history_replace_safe() {
+    try { window.history.replaceState(null, "", location.pathname + location.search); } catch (e) {}
+  }
+
   function getKey() {
     if (CFG.proxyUrl) return "proxy"; /* key lives server-side; nothing needed here */
     if (CFG.apiKey) return CFG.apiKey;
