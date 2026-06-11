@@ -1,0 +1,10 @@
+# raw scrape of the original site (large; not needed to build or deploy)
+scrape/
+# local tooling
+.claude/
+__pycache__/
+*.pyc
+.DS_Store
+# never commit credentials
+.anthropic-key
+.env

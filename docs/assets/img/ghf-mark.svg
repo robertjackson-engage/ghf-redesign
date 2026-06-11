@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <!-- GHF mark: the raised-arms figure from the original Gainesville logo,
+       rebuilt as a modern geometric monogram -->
+  <circle cx="32" cy="13" r="7" fill="#ff4d00"/>
+  <path d="M13 24 L32 37 L51 24" stroke="#ff4d00" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M32 37 L32 56" stroke="#ff4d00" stroke-width="8" stroke-linecap="round"/>
+  <path d="M14 56 A 26 26 0 0 0 50 56" stroke="#ff4d00" stroke-width="4" stroke-linecap="round" opacity="0.45"/>
+</svg>
