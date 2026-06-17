@@ -1,0 +1,35 @@
+backend:
+  name: github
+  repo: robertjackson-engage/ghf-redesign
+  branch: main
+media_folder: "docs/assets/img"
+public_folder: "/assets/img"
+site_url: https://robertjackson-engage.github.io/ghf-redesign/
+publish_mode: simple
+collections:
+  - name: blog
+    label: "Blog Posts"
+    label_singular: "Blog Post"
+    folder: "content/blog"
+    create: true
+    slug: "{{slug}}"
+    summary: "{{title}}  —  {{date}}"
+    sortable_fields: [date, title]
+    fields:
+      - { name: title, label: "Title", widget: string }
+      - { name: date, label: "Date", widget: datetime, date_format: "YYYY-MM-DD", time_format: false, format: "YYYY-MM-DD" }
+      - { name: author, label: "Author", widget: string, default: "The GHF Team" }
+      - { name: image, label: "Cover Image", widget: image, required: false }
+      - { name: excerpt, label: "Short Summary", widget: text }
+      - { name: featured, label: "Feature on top?", widget: boolean, default: false, required: false }
+      - { name: body, label: "Post Content", widget: markdown }
+  - name: staff
+    label: "Staff & Trainers"
+    folder: "content/staff"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { name: name, label: "Name", widget: string }
+      - { name: role, label: "Role", widget: string }
+      - { name: photo, label: "Photo", widget: image, required: false }
+      - { name: body, label: "Bio", widget: markdown, required: false }

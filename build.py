@@ -4,6 +4,66 @@ import os, time
 
 OUT = os.path.join(os.path.dirname(__file__), "docs")
 IMG = "assets/img"
+
+# ============================================================ CMS content engine
+CONTENT = os.path.join(os.path.dirname(__file__), "content")
+import glob as _glob, re as _re
+
+def _parse_md(path):
+    raw = open(path, encoding="utf-8").read(); meta, body = {}, raw
+    m = _re.match(r"^---\s*\n(.*?)\n---\s*\n?(.*)$", raw, _re.S)
+    if m:
+        for line in m.group(1).split("\n"):
+            if ":" in line:
+                k, _, v = line.partition(":"); meta[k.strip()] = v.strip().strip('"').strip("'")
+        body = m.group(2)
+    return meta, _md_to_html(body.strip())
+
+def _md_to_html(md):
+    md = md.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
+    out, lines, i = [], md.split("\n"), 0
+    while i < len(lines):
+        ln = lines[i]
+        if _re.match(r"^\s*[-*]\s+", ln):
+            items = []
+            while i < len(lines) and _re.match(r"^\s*[-*]\s+", lines[i]):
+                items.append("<li>" + _inline(_re.sub(r"^\s*[-*]\s+", "", lines[i])) + "</li>"); i += 1
+            out.append("<ul>" + "".join(items) + "</ul>"); continue
+        h = _re.match(r"^(#{1,4})\s+(.*)$", ln)
+        if h:
+            lvl = len(h.group(1)); out.append(f"<h{lvl+1}>{_inline(h.group(2))}</h{lvl+1}>"); i += 1; continue
+        if ln.strip() == "":
+            i += 1; continue
+        para = [ln]; i += 1
+        while i < len(lines) and lines[i].strip() and not _re.match(r"^(#{1,4}\s|\s*[-*]\s)", lines[i]):
+            para.append(lines[i]); i += 1
+        out.append("<p>" + _inline(" ".join(para)) + "</p>")
+    return "\n".join(out)
+
+def _inline(t):
+    t = _re.sub(r"\*\*([^*]+)\*\*", r"<strong>\1</strong>", t)
+    t = _re.sub(r"(?<!\*)\*([^*]+)\*(?!\*)", r"<em>\1</em>", t)
+    t = _re.sub(r"\[([^\]]+)\]\(([^)]+)\)", r'<a href="\2">\1</a>', t)
+    return t
+
+def load_collection(folder):
+    items = []
+    for p in _glob.glob(os.path.join(CONTENT, folder, "*.md")):
+        meta, body = _parse_md(p)
+        meta["_slug"] = os.path.splitext(os.path.basename(p))[0]; meta["_body"] = body
+        items.append(meta)
+    items.sort(key=lambda m: m.get("date", ""), reverse=True)
+    return items
+
+def cms_img(path):
+    return (path or "").lstrip("/") or f"assets/img/Echo_GroupFit_Outdoor_Classes_Fun_Classes_2021.jpg"
+
+def fmt_date(d):
+    months = ["", "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
+    m = _re.match(r"(\d{4})-(\d{2})-(\d{2})", d or "")
+    return f"{months[int(m.group(2))]} {int(m.group(3))}, {m.group(1)}" if m else (d or "")
+# ============================================================ end CMS content engine
+
 V = str(int(time.time()))  # cache-bust CSS/JS on every build
 
 # Modern GHF mark — the raised-arms figure from the original logo, geometrized
@@ -48,6 +108,7 @@ MENU = [
     ("Kids Club", "kids-club.html"),
     ("Locations &amp; Hours", "locations.html"),
     ("Join Online", "join.html"),
+    ("Blog", "blog.html"),
     ("Contact", "contact.html"),
 ]
 
@@ -173,6 +234,7 @@ def footer_html():
         <h5>Explore</h5>
         <div class="site-footer__links">
           <a href="join.html">Join Online</a>
+          <a href="blog.html">Blog</a>
           <a href="why-ghf.html">Why GHF</a>
           <a href="group-fitness.html">Group Classes</a>
           <a href="personal-training.html">Personal Training</a>
@@ -2655,7 +2717,77 @@ PAGES = [
     ("contact.html", "Contact Us & Get Pricing | Gainesville Health & Fitness", "Let's talk fitness memberships in Gainesville — pricing packages and amenities to craft your gym experience.", "", contact_body),
 ]
 
+
+# ============================================================ BLOG (CMS-driven)
+POSTS = load_collection("blog")
+
+def blog_index_body():
+    if not POSTS:
+        cards = '<p class="body-copy">No posts yet — check back soon.</p>'
+    else:
+        cards = ""
+        for p in POSTS:
+            num = f'<span class="card__num">{fmt_date(p.get("date"))} · {p.get("author","")}</span>'
+            cards += (f'<a class="card" href="blog/{p["_slug"]}.html"><div class="card__media card__media--wide">'
+                      f'<img src="{cms_img(p.get("image"))}" alt="{p.get("title","")}" loading="lazy">{num}'
+                      f'<div class="card__label"><h3>{p.get("title","")}</h3></div></div>'
+                      f'<div class="card__below"><p>{p.get("excerpt","")}</p></div></a>')
+    return hero("GHF Blog", ["News &amp;", '<span class="serif">stories</span>'],
+        "Member stories, training tips, club news and behind-the-scenes fun — fresh from the team.",
+        img=f"{IMG}/Echo_GroupFit_Outdoor_Classes_Fun_Classes_2021.jpg", crumb="Blog",
+        actions=[("Join Now", "join.html", True)], page=True,
+    ) + f"""
+<section class="section"><div class="wrap">
+  <div class="cards-head"><div><p class="eyebrow"><span class="num">01</span> Latest</p><h2 class="h-display reveal" style="font-size:clamp(34px,4.6vw,72px)">On the <span class="serif">blog</span></h2></div></div>
+  <div class="card-grid" data-stagger>{cards}</div>
+</div></section>
+""" + cta_band('Come be part of the <span class="serif">story</span>', "There's always something happening. Come see for yourself.", f"{IMG}/GroupFit_Echo_Yoga_Class_Outdoor_Classes_2021.jpg")
+
+def blog_post_body(p):
+    others = "".join(
+        f'<a class="row-item" href="../blog/{o["_slug"]}.html"><span class="row-item__idx">→</span>'
+        f'<span class="row-item__title">{o.get("title","")}</span>'
+        f'<span class="row-item__desc">{o.get("excerpt","")}</span><span class="row-item__arrow">→</span></a>'
+        for o in POSTS if o["_slug"] != p["_slug"])
+    more = f"""
+<section class="section section--light"><div class="wrap">
+  <div class="cards-head"><div><p class="eyebrow"><span class="num">02</span> Keep reading</p><h2 class="h-display reveal" style="font-size:clamp(30px,3.4vw,52px)">More from <span class="serif">the blog</span></h2></div>
+  <a class="inline-link reveal" href="../blog.html">All posts →</a></div><div class="rows reveal">{others}</div>
+</div></section>""" if others else ""
+    return f"""
+<section class="hero hero--page hero--post">
+  <div class="hero__media"><img src="../{cms_img(p.get('image'))}" alt=""></div>
+  <div class="hero__crumb"><div><a href="../index.html">Home</a> &nbsp;/&nbsp; <a href="../blog.html">Blog</a></div></div>
+  <div class="hero__inner">
+    <p class="hero__kicker">{fmt_date(p.get('date'))} &nbsp;·&nbsp; {p.get('author','Team')}</p>
+    <h1 class="hero__title"><span class="ln"><span style="transition-delay:.12s">{p.get('title','')}</span></span></h1>
+  </div>
+  <div class="hero__scroll" aria-hidden="true"></div>
+</section>
+<section class="section section--tight"><div class="wrap" style="max-width:760px">
+  <div class="post-body reveal">{p['_body']}</div>
+  <div class="reveal" style="margin-top:40px"><a class="btn btn--solid" href="../blog.html">← Back to the blog</a></div>
+</div></section>
+{more}
+""" + cta_band('Like what you\'re <span class="serif">reading?</span>', "Come see it in person.", f"../{IMG}/GroupFit_Echo_Yoga_Class_Outdoor_Classes_2021.jpg")
+
+def page_sub(filename, title, desc, body):
+    html = head(title, desc) + header_html("blog.html") + body + footer_html()
+    html = _re.sub(r'(href|src)="/(?!/)', r'\1="../', html)
+    html = _re.sub(r'(href|src)="assets/', r'\1="../assets/', html)
+    html = _re.sub(r'(href)="([a-z0-9-]+\.html)(#[^"]*)?"', r'\1="../\2\3"', html)
+    os.makedirs(os.path.join(OUT, "blog"), exist_ok=True)
+    with open(os.path.join(OUT, filename), "w") as f:
+        f.write(html)
+    print("built", filename)
+# ============================================================ end BLOG
+
+PAGES.append(("blog.html", f"Blog | GHF", "News, stories and tips from GHF.", "blog.html", blog_index_body()))
+
 for fn, title, desc, active, body in PAGES:
     page(fn, title, desc, active, body)
 
 print("\nDone:", len(PAGES), "pages")
+for _p in POSTS:
+    page_sub(f"blog/{_p['_slug']}.html", f"{_p.get('title','Post')} | GHF Blog", _p.get("excerpt","")[:160], blog_post_body(_p))
+print("blog posts:", len(POSTS))
