@@ -280,6 +280,114 @@
     });
   });
 
+  /* ---------- trainer profile panel ---------- */
+  (function () {
+    var panel = document.querySelector(".trainer-panel");
+    if (!panel) return;
+    var inner = panel.querySelector(".trainer-panel__inner");
+    var closeBtn = panel.querySelector(".trainer-panel__close");
+    var lastFocus = null;
+
+    function fill(card) {
+      var d = JSON.parse(card.getAttribute("data-trainer"));
+      panel.querySelector("[data-t-photo]").src = d.photo;
+      panel.querySelector("[data-t-photo]").alt = d.name;
+      panel.querySelector("[data-t-name]").textContent = d.name;
+      panel.querySelector("[data-t-role]").textContent = d.role;
+
+      var q = panel.querySelector("[data-t-quote]");
+      q.innerHTML = d.quote || "";
+      q.hidden = !d.quote;                       // omit the empty "message" slot
+
+      var tags = panel.querySelector("[data-t-tags]");
+      tags.innerHTML = (d.specialties || []).map(function (t) {
+        return "<span>" + t + "</span>";
+      }).join("");
+      tags.hidden = !(d.specialties && d.specialties.length);
+
+      var facts = panel.querySelector("[data-t-facts]");
+      facts.innerHTML = (d.facts || []).map(function (f) {
+        return "<div><dt>" + f[0] + "</dt><dd>" + f[1] + "</dd></div>";
+      }).join("");
+      facts.hidden = !(d.facts && d.facts.length);
+    }
+
+    function open(card) {
+      lastFocus = card;
+      fill(card);
+      panel.classList.add("is-open");
+      document.body.style.overflow = "hidden";
+      inner.scrollTop = 0;
+      setTimeout(function () { closeBtn.focus(); }, 60);
+    }
+
+    function close() {
+      panel.classList.remove("is-open");
+      document.body.style.overflow = "";
+      if (lastFocus) { lastFocus.focus(); lastFocus = null; }
+    }
+
+    document.querySelectorAll(".trainer-card").forEach(function (card) {
+      card.addEventListener("click", function () { open(card); });
+    });
+
+    closeBtn.addEventListener("click", close);
+    panel.querySelector(".trainer-panel__scrim").addEventListener("click", close);
+
+    document.addEventListener("keydown", function (e) {
+      if (!panel.classList.contains("is-open")) return;
+      if (e.key === "Escape") { close(); return; }
+      if (e.key !== "Tab") return;
+      // keep focus inside the dialog
+      var f = panel.querySelectorAll("button, [href], input, select, textarea, [tabindex]:not([tabindex='-1'])");
+      if (!f.length) return;
+      var first = f[0], last = f[f.length - 1];
+      if (e.shiftKey && document.activeElement === first) { last.focus(); e.preventDefault(); }
+      else if (!e.shiftKey && document.activeElement === last) { first.focus(); e.preventDefault(); }
+    });
+  })();
+
+  /* ---------- photo slideshow ---------- */
+  document.querySelectorAll(".slideshow").forEach(function (sh) {
+    var slides = sh.querySelectorAll(".slideshow__slide");
+    if (!slides.length) return;
+    var cap = sh.querySelector(".slideshow__cap");
+    var cur = sh.querySelector(".slideshow__cur");
+    var i = 0;
+
+    function show(n) {
+      i = (n + slides.length) % slides.length;
+      slides.forEach(function (s, k) {
+        s.classList.toggle("is-on", k === i);
+        // keep offscreen slides out of the tab order
+        var img = s.querySelector("img");
+        if (img && k !== i) img.setAttribute("aria-hidden", "true");
+        else if (img) img.removeAttribute("aria-hidden");
+      });
+      if (cur) cur.textContent = String(i + 1).padStart(2, "0");
+      if (cap) cap.textContent = slides[i].getAttribute("data-cap") || "";
+      // load the neighbours so the next click is instant
+      [i + 1, i - 1].forEach(function (k) {
+        var s = slides[(k + slides.length) % slides.length];
+        var img = s && s.querySelector("img[loading=lazy]");
+        if (img) img.removeAttribute("loading");
+      });
+    }
+
+    sh.querySelectorAll("[data-slide]").forEach(function (b) {
+      b.addEventListener("click", function () {
+        show(i + (b.getAttribute("data-slide") === "next" ? 1 : -1));
+      });
+    });
+
+    sh.addEventListener("keydown", function (e) {
+      if (e.key === "ArrowRight") { show(i + 1); e.preventDefault(); }
+      if (e.key === "ArrowLeft") { show(i - 1); e.preventDefault(); }
+    });
+
+    show(0);
+  });
+
   /* ---------- hero video: respect data saver ---------- */
   var heroVid = document.querySelector(".hero__media video");
   if (heroVid && navigator.connection && navigator.connection.saveData) {

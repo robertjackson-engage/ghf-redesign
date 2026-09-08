@@ -7,7 +7,7 @@ IMG = "assets/img"
 
 # ============================================================ CMS content engine
 CONTENT = os.path.join(os.path.dirname(__file__), "content")
-import glob as _glob, re as _re
+import glob as _glob, re as _re, json as _json
 
 def _parse_md(path):
     raw = open(path, encoding="utf-8").read(); meta, body = {}, raw
@@ -64,6 +64,71 @@ def fmt_date(d):
     return f"{months[int(m.group(2))]} {int(m.group(3))}, {m.group(1)}" if m else (d or "")
 # ============================================================ end CMS content engine
 
+# Trainers come from the CMS (content/staff/*.md) so staff can maintain the roster
+# at /admin. Loaded here rather than beside POSTS because pt_body is built at
+# module level far above that, and load_collection() sorts by "date" — which staff
+# records don't have — so re-sort explicitly.
+TRAINERS = sorted(load_collection("staff"),
+                  key=lambda t: (t.get("order", ""), t.get("name", "")))
+
+
+def _facts(t):
+    out = []
+    for key, label in (("hometown", "Hometown"), ("education", "Education"),
+                       ("certifications", "Certifications"), ("hobbies", "Hobbies")):
+        if t.get(key):
+            out.append([label, t[key]])
+    return out
+
+
+def trainers_section(num):
+    if not TRAINERS:
+        return ""
+    cards = ""
+    for t in TRAINERS:
+        specs = [x.strip() for x in (t.get("specialties") or "").split(",") if x.strip()]
+        payload = _json.dumps({
+            "name": t.get("name", ""), "role": t.get("role", "Personal Trainer"),
+            "photo": cms_img(t.get("photo")), "quote": t.get("_body", ""),
+            "specialties": specs, "facts": _facts(t),
+        }, ensure_ascii=False).replace('"', "&quot;")
+        cards += (f'<button class="card trainer-card" type="button" data-trainer="{payload}">'
+                  f'<div class="card__media"><img src="{cms_img(t.get("photo"))}" '
+                  f'alt="{t.get("name","")}, personal trainer at GHF" loading="lazy">'
+                  f'<div class="card__label"><h3>{t.get("name","")}</h3>'
+                  f'<span class="go">Read profile &rarr;</span></div></div>'
+                  f'<div class="card__below"><p>{", ".join(specs[:3])}</p></div></button>')
+    return f"""
+<section class="section" id="trainers">
+  <div class="wrap">
+    <div class="cards-head">
+      <div>
+        <p class="eyebrow"><span class="num">{num}</span> Meet our trainers</p>
+        <h2 class="h-display reveal" style="font-size:clamp(34px,4.6vw,72px)">The people you'll actually <span class="serif">work with</span></h2>
+      </div>
+      <p class="body-copy reveal" style="max-width:36ch">{len(TRAINERS)} certified trainers, each with their own specialties. Click anyone to see their background.</p>
+    </div>
+    <div class="card-grid card-grid--4" data-stagger>{cards}</div>
+  </div>
+</section>
+
+<div class="trainer-panel" role="dialog" aria-modal="true" aria-label="Trainer profile">
+  <div class="trainer-panel__scrim"></div>
+  <div class="trainer-panel__inner">
+    <button class="trainer-panel__close" type="button" aria-label="Close profile">&#10005;</button>
+    <div class="trainer-panel__media"><img data-t-photo src="" alt=""></div>
+    <div class="trainer-panel__body">
+      <h3 data-t-name></h3>
+      <span class="trainer-panel__role" data-t-role></span>
+      <blockquote class="trainer-quote" data-t-quote></blockquote>
+      <div class="trainer-tags" data-t-tags></div>
+      <dl class="trainer-facts" data-t-facts></dl>
+    </div>
+  </div>
+</div>
+"""
+
+
 V = str(int(time.time()))  # cache-bust CSS/JS on every build
 
 # Modern GHF mark — the raised-arms figure from the original logo, geometrized
@@ -79,12 +144,16 @@ def mark_svg(cls):
 LOGO_MARK = "assets/img/brand/logo-mark.png"      # Gainesville H&F lockup, no tagline (header/menu)
 LOGO_FULL = "assets/img/brand/logo-lockup.png"    # full lockup with tagline (footer)
 
+# intrinsic pixel sizes, so the aspect-ratio hint matches the file and the
+# browser reserves the right box before the image loads
+LOGO_SIZES = {LOGO_MARK: (1000, 400), LOGO_FULL: (1000, 451)}
+
 def brand_logo(src=LOGO_MARK, cls=""):
-    return (f'<img class="brand__logo {cls}" src="{src}" '
-            f'alt="Gainesville Health &amp; Fitness" width="1000" height="350" />')
+    w, h = LOGO_SIZES[src]
+    return (f'<img class="brand__logo {cls}" src="{src}?v={V}" '
+            f'alt="Gainesville Health &amp; Fitness" width="{w}" height="{h}" />')
 
 NAV = [
-    ("Why GHF", "why-ghf.html"),
     ("Classes", "group-fitness.html"),
     ("Training", "training.html"),
     ("Amenities", "amenities.html"),
@@ -92,24 +161,32 @@ NAV = [
 ]
 
 MENU = [
-    ("Home", "index.html"),
-    ("Why GHF", "why-ghf.html"),
-    ("Amenities", "amenities.html"),
-    ("Group Classes", "group-fitness.html"),
-    ("Hot Yoga", "hot-yoga.html"),
-    ("Pilates", "pilates.html"),
-    ("Personal Training", "personal-training.html"),
-    ("TRIBE Team Training", "tribe.html"),
-    ("Strength Training", "strength-training.html"),
-    ("Cardio", "cardio.html"),
-    ("Pool &amp; Aqua Center", "pool.html"),
-    ("Recovery", "recovery.html"),
-    ("Weight Loss", "weight-loss.html"),
-    ("Kids Club", "kids-club.html"),
-    ("Locations &amp; Hours", "locations.html"),
     ("Join Online", "join.html"),
+    ("Free All-Access Pass", "ghf-pass.html#claim"),
+    ("Class Schedule", "group-fitness.html#schedule"),
+    ("Locations", "locations.html"),
+    ("GHF Main", "main-center.html"),
+    ("GHF Women", "womens-center.html"),
+    ("GHF Tioga", "tioga-center.html"),
+    ("Amenities", "amenities.html"),
+    ("Pool &amp; Aqua Center", "pool.html"),
+    ("Post Workout Recovery", "recovery.html"),
+    ("Strength Training Equipment", "strength-training.html"),
+    ("Cardio Selections", "cardio.html"),
+    ("Hot Yoga", "hot-yoga.html"),
+    ("Kids Club", "kids-club.html"),
+    ("Personal Training", "personal-training.html"),
+    ("Pilates", "pilates.html"),
+    ("Hyrox", "hyrox.html"),
+    ("CrossFit", "crossfit.html"),
+    ("X-Force Fat Loss", "xforce.html"),
+    ("Team Strong Training", "team-strong-training.html"),
+    ("Why GHF", "why-ghf.html"),
+    ("Home", "index.html"),
+    ("Weight Loss", "weight-loss.html"),
     ("Blog", "blog.html"),
     ("Contact", "contact.html"),
+    ("TRIBE Team Training", "tribe.html"),
 ]
 
 
@@ -135,7 +212,7 @@ def head(title, desc):
 </head>
 <body>
 <div class="preloader" aria-hidden="true">
-  <img class="preloader__logo" src="assets/img/brand/logo-mark.png" alt="Gainesville Health &amp; Fitness" width="1000" height="350" />
+  <img class="preloader__logo" src="assets/img/brand/logo-mark.png?v={V}" alt="Gainesville Health &amp; Fitness" width="1000" height="400" />
   <div class="preloader__bar"><i></i></div>
   <div class="preloader__count">0</div>
 </div>
@@ -164,7 +241,7 @@ def header_html(active=""):
       </div>
       <a class="btn btn--sm only-guest header-pricing" href="contact.html#pricing">Get Pricing</a>
       <a class="btn btn--solid btn--sm only-guest" href="join.html">Join Online</a>
-      <a class="btn btn--solid btn--sm only-member" href="group-fitness.html">Class Schedule</a>
+      <a class="btn btn--solid btn--sm only-member" href="group-fitness.html#schedule">Class Schedule</a>
       <button class="menu-toggle" aria-expanded="false" aria-label="Open menu">
         <span>Menu</span>
         <span class="menu-toggle__icon"><i></i><i></i></span>
@@ -179,7 +256,7 @@ def header_html(active=""):
     <aside class="menu-side">
       <div class="menu-side__pass">
         <p>"There is no charge, no obligation and no risk. There is, however, a chance that you will be inspired."</p>
-        <a class="btn btn--solid btn--sm" href="contact.html#pricing">Free All-Access Pass <span class="arr">→</span></a>
+        <a class="btn btn--solid btn--sm" href="ghf-pass.html#claim">Free All-Access Pass <span class="arr">→</span></a>
       </div>
       <div class="menu-side__group">
         <h6>More at GHF</h6>
@@ -234,6 +311,7 @@ def footer_html():
         <h5>Explore</h5>
         <div class="site-footer__links">
           <a href="join.html">Join Online</a>
+          <a href="ghf-pass.html#claim">Free All-Access Pass</a>
           <a href="blog.html">Blog</a>
           <a href="why-ghf.html">Why GHF</a>
           <a href="group-fitness.html">Group Classes</a>
@@ -295,7 +373,7 @@ def footer_html():
 
 
 def hero(kicker, lines, sub="", img=None, video=None, poster=None, crumb=None,
-         actions=None, meta=None, page=False):
+         actions=None, meta=None, promo=None, page=False):
     lns = ""
     for i, ln in enumerate(lines):
         lns += f'<span class="ln"><span style="transition-delay:{0.12 + i * 0.09:.2f}s">{ln}</span></span>'
@@ -319,6 +397,12 @@ def hero(kicker, lines, sub="", img=None, video=None, poster=None, crumb=None,
     meta_html = ""
     if meta:
         meta_html = '<div class="hero__meta">' + "".join(f"<span>{m}</span>" for m in meta) + "</div>"
+    promo_html = ""
+    if promo:
+        subs = "".join(f"<span>{s}</span>" for s in promo[1:])
+        promo_html = ('\n    <div class="hero__promo">'
+                      f'<p class="hero__promo-lead">{promo[0]}</p>'
+                      f'<div class="hero__promo-sub">{subs}</div></div>')
     sub_html = f'<p class="hero__sub">{sub}</p>' if sub else ""
     return f"""
 <section class="hero{' hero--page' if page else ''}">
@@ -327,7 +411,7 @@ def hero(kicker, lines, sub="", img=None, video=None, poster=None, crumb=None,
   <div class="hero__inner">
     <p class="hero__kicker">{kicker}</p>
     <h1 class="hero__title">{lns}</h1>
-    {sub_html}
+    {sub_html}{promo_html}
     {acts}
   </div>
   {meta_html}
@@ -388,8 +472,8 @@ def split(eyebrow, num, title, paras, img, alt, rev=False, cta=None, tag=None, l
 """
 
 
-def cta_band(title_html, text, img, primary=("Claim Your Free Pass", "contact.html#pricing"),
-             secondary=("Free All-Access Pass", "contact.html#pricing")):
+def cta_band(title_html, text, img, primary=("Claim Your Free Pass", "ghf-pass.html#claim"),
+             secondary=("Free All-Access Pass", "ghf-pass.html#claim")):
     sec = ""
     if secondary:
         sec = f'<a class="btn" href="{secondary[1]}">{secondary[0]} <span class="arr">→</span></a>'
@@ -408,7 +492,8 @@ def cta_band(title_html, text, img, primary=("Claim Your Free Pass", "contact.ht
 """
 
 
-def form_section(sec_id, num, eyebrow, title_html, text, btn, fields=None, light=True, extra=""):
+def form_section(sec_id, num, eyebrow, title_html, text, btn, fields=None, light=True,
+                 extra="", select=None):
     fields = fields or [
         ("text", "first", "First name"), ("text", "last", "Last name"),
         ("email", "email", "Email address"), ("tel", "phone", "Phone"),
@@ -417,6 +502,17 @@ def form_section(sec_id, num, eyebrow, title_html, text, btn, fields=None, light
     for ftype, name, label in fields:
         f_html += f"""
         <div class="field"><input type="{ftype}" name="{name}" id="{sec_id}-{name}" placeholder=" " required><label for="{sec_id}-{name}">{label}</label></div>"""
+    sel_html = ""
+    if select:
+        s_name, s_label, s_opts = select
+        opts = "".join(f"<option>{o}</option>" for o in s_opts)
+        sel_html = f"""
+          <div class="field field--full">
+            <select name="{s_name}" id="{sec_id}-{s_name}" aria-label="{s_label}">
+              <option value="">&nbsp;</option>{opts}
+            </select>
+            <label for="{sec_id}-{s_name}">{s_label}</label>
+          </div>"""
     return f"""
 <section class="section{' section--light' if light else ''}" id="{sec_id}">
   <div class="wrap">
@@ -429,7 +525,7 @@ def form_section(sec_id, num, eyebrow, title_html, text, btn, fields=None, light
       </div>
       <div class="intro-grid__right reveal">
         <form class="form-grid" data-demo>
-          {f_html}
+          {f_html}{sel_html}
           <div class="field field--full">
             <select name="location" id="{sec_id}-loc" aria-label="Preferred location">
               <option value="">&nbsp;</option>
@@ -447,6 +543,16 @@ def form_section(sec_id, num, eyebrow, title_html, text, btn, fields=None, light
   </div>
 </section>
 """
+
+
+def embed(src, title, tall=False, allow_yt=False, cls="", eager=False):
+    """Responsive third-party frame. Styling lives in .embed / .embed--tall / .embed--fixed."""
+    extra = ('allow="accelerometer; autoplay; clipboard-write; encrypted-media; '
+             'gyroscope; picture-in-picture; web-share" allowfullscreen ') if allow_yt else ""
+    mods = (" embed--tall" if tall else "") + ((" " + cls) if cls else "")
+    return (f'<div class="embed{mods}">'
+            f'<iframe src="{src}" title="{title}" loading="{"eager" if eager else "lazy"}" {extra}'
+            f'referrerpolicy="strict-origin-when-cross-origin"></iframe></div>')
 
 
 def accordion(items, open_first=True):
@@ -484,7 +590,7 @@ view_chooser = f"""
       <div class="vc-panel__body">
         <span class="vc-panel__kicker">First time here?</span>
         <h3>I'm a <span class="serif">guest</span></h3>
-        <p>Tour the club, get pricing, and claim your free all-access pass.</p>
+        <p>Tour the club, get pricing, and claim your <a href="ghf-pass.html#claim">free all-access pass</a>.</p>
         <span class="go">Show me around →</span>
       </div>
     </button>
@@ -505,7 +611,7 @@ member_strip = """
 <div class="member-strip only-member">
   <div class="wrap">
     <span class="hello">Welcome back.</span>
-    <a href="group-fitness.html">Class Schedules</a>
+    <a href="group-fitness.html#schedule">Class Schedules</a>
     <a href="hot-yoga.html">Hot Yoga</a>
     <a href="kids-club.html#hours">Kid's Club Hours</a>
     <a href="pool.html">Pool &amp; Spa</a>
@@ -537,7 +643,7 @@ home_steps = f"""
       <p class="body-copy reveal" style="max-width:36ch">No contracts to sign, no sales pitch to survive. Just show up and see how it feels.</p>
     </div>
     <div class="steps reveal">
-      <div class="step"><span class="step__num">01</span><h3>Claim your free pass</h3><p>One day, full access, zero obligation. Every class, the pool, the sauna, the coaches — on us.</p></div>
+      <div class="step"><span class="step__num">01</span><h3><a href="ghf-pass.html#claim">Claim your free pass</a></h3><p>One day, full access, zero obligation. Every class, the pool, the sauna, the coaches — on us.</p></div>
       <div class="step"><span class="step__num">02</span><h3>Meet your coach</h3><p>A real human gives you the tour, learns your goal, and walks you through your first workout — so you're never guessing.</p></div>
       <div class="step"><span class="step__num">03</span><h3>Make it a habit</h3><p>A plan that fits your life, people who notice when you show up, and results you can see. That's how one visit becomes a routine.</p></div>
     </div>
@@ -547,18 +653,18 @@ home_steps = f"""
 
 home_body = view_chooser + hero(
     "Gainesville's most-loved gym — 45 years strong",
-    ["Walk in nervous.", 'Walk out a <span class="serif">regular</span>.'],
+    ["Walk in unsure.", 'Walk out <span class="serif">stronger</span>.'],
     "Starting is the hardest part — so we made it the easiest. From your very first visit, a real coach walks the floor with you, builds your plan, and shows you the ropes. No guesswork. No intimidation. Just results.",
     video=f"assets/video/ghf-walkthrough.mp4",
     poster=f"{IMG}/Free_Weights_Gainesville_Health_and_Fiitness_2021_1_(1).jpg",
     actions=[
-        ("Claim Your Free Day Pass", "contact.html#pricing", True, "only-guest"),
+        ("Claim Your Free Fitness Pass", "ghf-pass.html#claim", True, "only-guest"),
         ("See What's Inside", "amenities.html", False, "only-guest"),
-        ("View Class Schedule", "group-fitness.html", True, "only-member"),
+        ("View Class Schedule", "group-fitness.html#schedule", True, "only-member"),
         ("Bring a Friend Free", "bring-a-guest.html", False, "only-member"),
     ],
     meta=["Free coaching on every visit", "Open 24/7 at GHF Main", "900+ classes included"],
-) + member_strip + marquee(["Strength", "Cardio", "Hot Yoga", "Pilates", "Aquatics", "Recovery", "Group Fitness", "Personal Training"]) + f"""
+) + member_strip + marquee(["Strength", "Cardio", "Hot Yoga", "Pilates", "Indoor Pool", "Sauna", "Recovery", "Fitness Classes", "Personal Training"]) + f"""
 <section class="section">
   <div class="wrap">
     <div class="intro-grid">
@@ -722,7 +828,7 @@ why_body = hero(
     "Anyone can sell you a membership. GHF is engineered so you'll use yours — more coaching, more variety, more recovery, and more reasons to keep showing up than any gym in Gainesville.",
     img=f"{IMG}/Tioga_Carrie_Grotto_Arm_Cross_Facility_2022.jpg",
     crumb="Why GHF",
-    actions=[("Free All-Access Pass", "contact.html#pricing", True)],
+    actions=[("Free All-Access Pass", "ghf-pass.html#claim", True)],
     page=True,
 ) + f"""
 <section class="section">
@@ -807,7 +913,7 @@ amenities_body = hero(
     "Hot yoga studio. Cold plunge. Sauna, steam and hot tub. A 75-foot pool. Free babysitting. Basketball. 900+ classes. Stop piecing together five subscriptions — one membership covers it all.",
     img=f"{IMG}/GHF_Aquix_Pool_2018.jpg",
     crumb="Amenities",
-    actions=[("Try Our Amenities for Free", "contact.html#pricing", True)],
+    actions=[("Try Our Amenities for Free", "ghf-pass.html#claim", True)],
     page=True,
 ) + f"""
 <section class="section section--tight">
@@ -824,13 +930,13 @@ amenities_body = hero(
     </div>
   </div>
 </section>
-""" + marquee(["24/7 Access", "Free Babysitting", "Indoor Pools", "Outdoor Fitness", "Basketball", "J-Bar Smoothies", "Member Savings"]) + split(
+""" + marquee(["24/7 Access", "Free Babysitting", "Indoor Pools", "Outdoor Fitness", "Basketball", "J-Bar Smoothies", "3 Locations"]) + split(
     "GHF Main — Open 24/7", "02",
     'The flagship that never <span class="serif">sleeps</span>',
-    ["GHF's Main Center makes it easy to get fit, strong and lean, with 24-hour access, pool and spa studio, free babysitting, expansive cardio selections, state-of-the-art strength training equipment, the largest free weight area, access to all three facilities, and more."],
+    ["GHF Main makes it easy to get fit, strong and lean, with 24-hour access, pool and spa studio, free babysitting, expansive cardio selections, state-of-the-art strength training equipment, the largest free weight area, access to all three facilities, and more."],
     f"{IMG}/Free_Weights_Gainesville_Health_and_Fiitness_2021_1_(1).jpg",
     "Open free weight space with benches, dumbbells, and barbells at Gainesville's largest gym",
-    cta=("Explore GHF Main", "locations.html"), tag="Main Center",
+    cta=("Explore GHF Main", "locations.html"), tag="GHF Main",
 ) + split(
     "GHF Women", "03",
     'The only gym in Gainesville just for <span class="serif">women</span>',
@@ -841,11 +947,11 @@ amenities_body = hero(
 ) + split(
     "GHF Tioga", "04",
     'Your family-friendly <span class="serif">gym</span>',
-    ["From the moment you walk through the door, you will encounter friendly GHF Tioga Center staff, dedicated to making your health club experience remarkable. They will guide you to the right space whether you want to take a group fitness class, walk on the treadmill, or sweat it out on our outdoor fitness turf, there is always someone happy to show you how.",
+    ["From the moment you walk through the door, you will encounter friendly GHF Tioga staff, dedicated to making your health club experience remarkable. They will guide you to the right space whether you want to take a group fitness class, walk on the treadmill, or sweat it out on our outdoor fitness turf, there is always someone happy to show you how.",
      "Bring the kids to the Kid's Club for complimentary babysitting or to CrossFit for Kids — there's a place for everyone in the family!"],
     f"{IMG}/GHF_CrossFit_Kids_Exercise_CrossFit_for_Kids_Tioga_2026.jpg",
     "Kids CrossFit class bear crawl exercise at GHF Tioga",
-    cta=("Explore GHF Tioga", "locations.html"), tag="Tioga Center",
+    cta=("Explore GHF Tioga", "locations.html"), tag="GHF Tioga",
 ) + split(
     "Echo — Outdoor Fitness Pavilion", "05",
     'The largest open-air fitness <span class="serif">destination</span>',
@@ -930,16 +1036,20 @@ amenities_body = hero(
 )
 
 # ============================================================ GROUP FITNESS
+schedule_embed = embed("https://app.perchteams.com/public/gx/ghf",
+                       "GHF group fitness class schedule",
+                       cls="embed--fixed", eager=True)
+
 groupfit_body = hero(
     "GroupFit at GHF",
     ["The hour you'll look", 'forward to <span class="serif">all day</span>'],
     "900+ classes a month means there's always one that fits your schedule, your level, and your mood. Dance it out, find your zen, or sweat with a roomful of people cheering you on — your first class is free.",
     img=f"{IMG}/GHF_GroupFit_Les_Mills_Body_Pump_Squats.jpg",
     crumb='<a href="group-fitness.html">Fitness</a> &nbsp;/&nbsp; Group Classes',
-    actions=[("Try a Free Class", "#pass", True), ("Most Popular Classes", "#popular", False)],
+    actions=[("View Class Schedule", "#schedule", True), ("Try a Free Class", "#pass", False)],
     meta=["900+ classes / month", "Included in membership", "All levels welcome"],
     page=True,
-) + marquee(["Zumba", "Body Pump", "SkyCycle", "Yoga", "HIIT", "Pilates Mat", "Tai Chi", "Aqua", "PiYo", "Body Combat"]) + f"""
+) + marquee(["Zumba", "Body Pump", "Indoor Cycle", "Yoga", "HIIT", "Pilates Mat", "Tai Chi", "Aqua", "Hot Yoga", "Body Combat"]) + f"""
 <section class="section">
   <div class="wrap">
     <div class="intro-grid">
@@ -984,19 +1094,33 @@ groupfit_body = hero(
       <p class="body-copy reveal" style="max-width:38ch">We recommend trying all kinds of classes to find what best suits you, your style and your vibe. Most classes are offered at a variety of times and days with different instructors.</p>
     </div>
     <div class="rows reveal">
-      <div class="row-item"><span class="row-item__idx">01</span><span class="row-item__title">Zumba</span><span class="row-item__desc">Dance-party cardio that never feels like a workout.</span><span class="row-item__arrow">→</span></div>
-      <div class="row-item"><span class="row-item__idx">02</span><span class="row-item__title">Body Combat</span><span class="row-item__desc">Strike, punch and kick your way to total-body fitness.</span><span class="row-item__arrow">→</span></div>
-      <div class="row-item"><span class="row-item__idx">03</span><span class="row-item__title">Body Pump</span><span class="row-item__desc">The original barbell class — tone and condition every major muscle group.</span><span class="row-item__arrow">→</span></div>
-      <div class="row-item"><span class="row-item__idx">04</span><span class="row-item__title">Cycle</span><span class="row-item__desc">Indoor cycling classes every day of the week in our Sky Cycle studio.</span><span class="row-item__arrow">→</span></div>
-      <div class="row-item"><span class="row-item__idx">05</span><span class="row-item__title">Aqua HIIT &amp; HIIT</span><span class="row-item__desc">High-intensity intervals — in and out of the water.</span><span class="row-item__arrow">→</span></div>
-      <div class="row-item"><span class="row-item__idx">06</span><span class="row-item__title">S.W.E.A.T.</span><span class="row-item__desc">Exactly what it sounds like. Bring a towel.</span><span class="row-item__arrow">→</span></div>
-      <div class="row-item"><span class="row-item__idx">07</span><span class="row-item__title">Yoga or Stretch</span><span class="row-item__desc">Find your zen, restore your range of motion.</span><span class="row-item__arrow">→</span></div>
-      <div class="row-item"><span class="row-item__idx">08</span><span class="row-item__title">Pilates Mat</span><span class="row-item__desc">Core strength and control — no machines required.</span><span class="row-item__arrow">→</span></div>
+      <div class="row-item"><span class="row-item__idx">01</span><span class="row-item__title">Zumba</span><span class="row-item__desc">Dance-party cardio that never feels like a workout.</span><span class="row-item__arrow">&rarr;</span></div>
+      <div class="row-item"><span class="row-item__idx">02</span><span class="row-item__title">Body Combat</span><span class="row-item__desc">Strike, punch and kick your way to total-body fitness.</span><span class="row-item__arrow">&rarr;</span></div>
+      <div class="row-item"><span class="row-item__idx">03</span><span class="row-item__title">Body Pump</span><span class="row-item__desc">The original barbell class &mdash; tone and condition every major muscle group.</span><span class="row-item__arrow">&rarr;</span></div>
+      <div class="row-item"><span class="row-item__idx">04</span><span class="row-item__title">Cardio Party MashUp</span><span class="row-item__desc">A mashup of dance and cardio styles set to music you already love.</span><span class="row-item__arrow">&rarr;</span></div>
+      <div class="row-item"><span class="row-item__idx">05</span><span class="row-item__title">Aqua HIIT &amp; HIIT</span><span class="row-item__desc">High-intensity intervals &mdash; in and out of the water.</span><span class="row-item__arrow">&rarr;</span></div>
+      <div class="row-item"><span class="row-item__idx">06</span><span class="row-item__title">S.W.E.A.T.</span><span class="row-item__desc">Exactly what it sounds like. Bring a towel.</span><span class="row-item__arrow">&rarr;</span></div>
+      <div class="row-item"><span class="row-item__idx">07</span><span class="row-item__title">Yoga or Stretch</span><span class="row-item__desc">Find your zen, restore your range of motion.</span><span class="row-item__arrow">&rarr;</span></div>
+      <div class="row-item"><span class="row-item__idx">08</span><span class="row-item__title">Pilates Mat</span><span class="row-item__desc">Core strength and control &mdash; no machines required.</span><span class="row-item__arrow">&rarr;</span></div>
+      <div class="row-item"><span class="row-item__idx">09</span><span class="row-item__title">Cycle</span><span class="row-item__desc">Indoor cycling classes every day of the week in our Sky Cycle studio.</span><span class="row-item__arrow">&rarr;</span></div>
     </div>
   </div>
 </section>
+
+<section class="section section--light" id="schedule">
+  <div class="wrap">
+    <div class="cards-head">
+      <div>
+        <p class="eyebrow"><span class="num">03</span> Class schedule</p>
+        <h2 class="h-display reveal" style="font-size:clamp(34px,4.6vw,72px)">Find your <span class="serif">class</span></h2>
+      </div>
+      <p class="body-copy reveal" style="max-width:38ch">Filter by location, class type, studio, day or instructor. Every class below is included in your membership.</p>
+    </div>
+    <div class="reveal">{schedule_embed}</div>
+  </div>
+</section>
 """ + split(
-    "Classes for every body", "03",
+    "Classes for every body", "04",
     'Beginners and seniors <span class="serif">welcome</span>',
     ["There is something for everyone from beginner to advanced and classes are included in your membership. You may also select from indoor cycling classes every day of the week in our Sky Cycle studio or take classes designed just for seniors.",
      "Enjoy more than 700 classes per month including Zumba, Pilates mat, yoga, sports conditioning, H.I.I.T, Les Mills programs, aqua, and more."],
@@ -1004,7 +1128,7 @@ groupfit_body = hero(
     "Senior GHF members in a strength group fitness class",
     cta=("Classes for Seniors", "group-fitness.html"), tag="All Levels",
 ) + form_section(
-    "pass", "04", "Request your free fitness class pass",
+    "pass", "05", "Request your free fitness class pass",
     'Your free class pass is <span class="serif">waiting</span>',
     "With your free class pass, you will have full membership privileges for one day at any Gainesville Health &amp; Fitness location. There is no charge, no obligation and no risk. There is, however, a chance that you will be inspired.",
     "Get My Free Class Pass",
@@ -1088,7 +1212,7 @@ pt_body = hero(
     <div class="split">
       <div class="split__media reveal-img"><img src="{IMG}/GHF_Personal_Training_Trainers_one_on_one_clients_2025-2.jpg" alt="GHF trainer working one on one with a client" loading="lazy"><span class="tag">GHF PT Studio</span></div>
       <div class="split__body">
-        <p class="eyebrow"><span class="num">03</span> Our trainers</p>
+        <p class="eyebrow"><span class="num">03</span> Why train at GHF</p>
         <h2 class="h-display" style="font-size:clamp(30px,3.8vw,58px)">The best in the <span class="serif">industry</span></h2>
         <ul class="checklist reveal" style="margin-top:10px">
           <li>40 personal trainers on staff</li>
@@ -1102,10 +1226,10 @@ pt_body = hero(
     </div>
   </div>
 </section>
-
+""" + trainers_section("04") + f"""
 <section class="section">
   <div class="wrap" style="padding-left:0;padding-right:0">
-    <p class="eyebrow wrap" style="margin-bottom:clamp(30px,4vw,60px)"><span class="num">04</span> Real members. Real results.</p>
+    <p class="eyebrow wrap" style="margin-bottom:clamp(30px,4vw,60px)"><span class="num">05</span> Real members. Real results.</p>
     <div class="t-slider">
       <div class="t-slider__track">{slides}</div>
       <div class="t-slider__nav">
@@ -1116,7 +1240,7 @@ pt_body = hero(
   </div>
 </section>
 """ + form_section(
-    "assessment", "05", "Free fitness assessment &amp; training session",
+    "assessment", "06", "Free fitness assessment &amp; training session",
     'Your first session is on <span class="serif">us</span>',
     "You will be matched with a certified personal trainer to assess your abilities, determine your action plan and guide your complimentary training session. Your assessment features the InBody 570 Body Composition Analyzer — a detailed snapshot of your body's makeup: body fat, lean muscle, metabolic rate, total body water, and visceral fat — helping you make informed decisions about your fitness and wellness journey.",
     "Schedule Your Assessment",
@@ -1268,7 +1392,7 @@ cardio_body = hero(
      "There is something for everyone from beginner to advanced and classes are included in your membership. With three centers to choose from, hundreds of cardio machines, an exciting variety of group exercise classes, and a caring staff to help you every step of the way, now is the time to get started."],
     f"{IMG}/GHF_GroupFit_SkyCycle_Classes_Cycle_Cardio_2024.jpg",
     "Participants in indoor cycle studio",
-    cta=("Check out the GroupFit Class schedule", "group-fitness.html"), tag="SkyCycle",
+    cta=("Check out the GroupFit Class schedule", "group-fitness.html#schedule"), tag="SkyCycle",
 ) + form_section(
     "pass", "04", "Request your free guest pass",
     'Your free all-access pass is <span class="serif">waiting</span>',
@@ -1335,7 +1459,7 @@ pool_body = hero(
           <li>Stretch &amp; Tone</li>
         </ul>
         <p class="body-copy reveal" style="margin-top:26px">And best of all, these classes are included in your GHF membership. Come as often as you want. We're here to help you reach your potential.</p>
-        <div class="split__cta"><a class="inline-link" href="group-fitness.html">See Our Complete Class Schedule →</a></div>
+        <div class="split__cta"><a class="inline-link" href="group-fitness.html#schedule">See Our Complete Class Schedule →</a></div>
       </div>
     </div>
   </div>
@@ -1619,7 +1743,7 @@ recovery_body = hero(
     "Cold plunge, hydromassage, sauna, steam, restorative classes and on-site physical therapy — the tools that turn sore into strong. Train hard, recover harder, and feel better than you have in years.",
     img=f"{IMG}/Chill_by_GHF_hydromassage_room_Gainesville_health_and_fitness_copy.jpg",
     crumb='Fitness &nbsp;/&nbsp; Recovery',
-    actions=[("Free Guest Pass", "contact.html#pricing", True)],
+    actions=[("Free Guest Pass", "ghf-pass.html#claim", True)],
     meta=["The holistic approach", "Body, mind, and spirit"],
     page=True,
 ) + f"""
@@ -1664,7 +1788,7 @@ recovery_body = hero(
      "You will find healing and restorative elements in all levels of Yoga, Simply Stretch, Tai Chi, Body Flow, Gentle Joints, and Breathing For Life."],
     f"{IMG}/Simply_Stretch_GHF_Tioga_GroupFit_Flexibility_2023_1_1.jpg",
     "Senior fitness stretch class",
-    rev=True, cta=("See class schedule", "group-fitness.html"), tag="GroupFit",
+    rev=True, cta=("See class schedule", "group-fitness.html#schedule"), tag="GroupFit",
 ) + f"""
 <section class="section section--light">
   <div class="wrap">
@@ -1777,7 +1901,7 @@ weightloss_body = hero(
     "Diets end. Plans built around your real life don't. Pick your path — one-on-one training, X-Force, TRIBE, CrossFit or 800+ classes — with coaches who keep you honest until the mirror agrees.",
     img=f"{IMG}/GHF_F2F_Face_2_Face_Weight_Loss_Fitness_Progress.jpg",
     crumb='Fitness &nbsp;/&nbsp; Weight Loss',
-    actions=[("Try GHF For Free", "contact.html#pricing", True)],
+    actions=[("Try GHF For Free", "ghf-pass.html#claim", True)],
     meta=["Programs for every level", "Experts included"],
     page=True,
 ) + split(
@@ -1838,7 +1962,7 @@ locations_body = hero(
     "One membership unlocks all three: the 24/7 flagship on Newberry Road, Gainesville's only women-only club, and the family-friendly Tioga center. Wherever your day takes you, your gym is already there.",
     img=f"{IMG}/GHF_Tioga_Gainesville_Health_Gainesville_Gyms_TIoga_Strength_Gyms_Nearby_2026-2.jpg",
     crumb="Locations and Hours",
-    actions=[("Get Your Free All-Access Pass", "contact.html#pricing", True)],
+    actions=[("Get Your Free All-Access Pass", "ghf-pass.html#claim", True)],
     page=True,
 ) + f"""
 <section class="section">
@@ -1848,14 +1972,14 @@ locations_body = hero(
         <div class="loc-item__media reveal-img"><img src="{IMG}/Free_Weights_Gainesville_Health_and_Fiitness_2021_1_(1).jpg" alt="Free weight area at GHF Main" loading="lazy"></div>
         <div>
           <span class="loc-badge">Open 24/7</span>
-          <h3>Main Center</h3>
+          <h3><a href="main-center.html">GHF Main</a></h3>
           <a class="phone" href="tel:3523774955">(352) 377-4955</a>
           <div class="loc-hours">
             <div><dt>Every day</dt><dd>Open 24 hours</dd></div>
           </div>
           <address>4820 W Newberry Road, Gainesville, FL 32607<br>General Manager — Adrian Antigua</address>
           <div class="hero__actions" style="opacity:1;transform:none;margin-top:26px">
-            <a class="btn btn--sm" href="contact.html#pricing">Access Membership Pricing <span class="arr">→</span></a>
+            <a class="btn btn--sm" href="main-center.html">Explore GHF Main <span class="arr">→</span></a>
           </div>
         </div>
       </div>
@@ -1863,7 +1987,7 @@ locations_body = hero(
         <div class="loc-item__media reveal-img"><img src="{IMG}/GHF_GHF_Women_Womens_Center_Body_Pump_2023_1.jpg" alt="Body Pump class at GHF Women" loading="lazy"></div>
         <div>
           <span class="loc-badge">Women Only</span>
-          <h3>GHF Women</h3>
+          <h3><a href="womens-center.html">GHF Women</a></h3>
           <a class="phone" href="tel:3523744634">(352) 374-4634</a>
           <div class="loc-hours">
             <div><dt>Mon–Thurs</dt><dd>5am–9pm</dd></div>
@@ -1873,7 +1997,7 @@ locations_body = hero(
           </div>
           <address>2441 NW 43rd Street, Gainesville, FL 32606<br>Manager — Jordan Heitzler</address>
           <div class="hero__actions" style="opacity:1;transform:none;margin-top:26px">
-            <a class="btn btn--sm" href="contact.html#pricing">Access Membership Pricing <span class="arr">→</span></a>
+            <a class="btn btn--sm" href="womens-center.html">Explore GHF Women <span class="arr">→</span></a>
           </div>
         </div>
       </div>
@@ -1881,7 +2005,7 @@ locations_body = hero(
         <div class="loc-item__media reveal-img"><img src="{IMG}/GHF_Tioga_Gainesville_Health_Gainesville_Gyms_TIoga_Strength_Gyms_Nearby_2026-2.jpg" alt="Strength training at GHF Tioga" loading="lazy"></div>
         <div>
           <span class="loc-badge">Family Friendly</span>
-          <h3>Tioga Center</h3>
+          <h3><a href="tioga-center.html">GHF Tioga</a></h3>
           <a class="phone" href="tel:3526922180">(352) 692-2180</a>
           <div class="loc-hours">
             <div><dt>Mon–Thurs</dt><dd>5am–10pm</dd></div>
@@ -1889,9 +2013,9 @@ locations_body = hero(
             <div><dt>Saturday</dt><dd>8am–8pm</dd></div>
             <div><dt>Sunday</dt><dd>10am–5pm</dd></div>
           </div>
-          <address>12830 SW 1st Lane, Suite 100, Newberry, FL 32669<br>Manager — Wrenn Klettner</address>
+          <address>12830 SW 1st Lane, Suite 100, Newberry, FL 32669<br>Manager — Darrius Powell</address>
           <div class="hero__actions" style="opacity:1;transform:none;margin-top:26px">
-            <a class="btn btn--sm" href="contact.html#pricing">Access Membership Pricing <span class="arr">→</span></a>
+            <a class="btn btn--sm" href="tioga-center.html">Explore GHF Tioga <span class="arr">→</span></a>
           </div>
         </div>
       </div>
@@ -1907,6 +2031,8 @@ locations_body = hero(
     'Find the gym that\'s right for <span class="serif">you</span>',
     "Each location is unique and offers a different experience and value. You have access to all 3 locations (GHF Women is women only).",
     f"{IMG}/Echo_GroupFit_Outdoor_Classes_Fun_Classes_2021.jpg",
+    primary=("Claim Your Free Fitness Pass", "ghf-pass.html#claim"),
+    secondary=("Get Membership Pricing", "contact.html#pricing"),
 )
 
 # ============================================================ CONTACT
@@ -2000,11 +2126,14 @@ contact_body = hero(
 join_body = hero(
     "Join Online — Memberships from $29.99 + tax",
     ["Join Gainesville's", 'best gym — <span class="serif">online</span>'],
-    'Be part of Gainesville\'s largest, state-of-the-art fitness community, where your membership connects you to expert guidance, innovative programs, and top-tier amenities for both physical and mental well-being. <em>Must be 18 years or older to join without parent or guardian. Not quite ready to join? <a href="contact.html#pricing" style="color:var(--accent-soft)">Try GHF with a free gym pass</a>.</em>',
+    'Be part of Gainesville\'s largest, state-of-the-art fitness community, where your membership connects you to expert guidance, innovative programs, and top-tier amenities for both physical and mental well-being. <em>Must be 18 years or older to join without parent or guardian. Not quite ready to join? <a href="ghf-pass.html#claim" style="color:var(--accent-soft)">Try GHF with a free gym pass</a>.</em>',
     img=f"{IMG}/join-today-bg.jpg",
     crumb="Join Online",
     actions=[("Start My Membership", "#wizard", True), ("Or Call (352) 377-4955", "tel:3523774955", False)],
-    meta=["$29.99 + tax · dues every other Wednesday", "24 month · 12 month · month-to-month", "One membership, 3 locations"],
+    promo=[
+        'All memberships are less than <strong>$16</strong> a week',
+        "One membership, 3 locations",
+    ],
     page=True,
 ) + f"""
 <section class="join" id="wizard">
@@ -2187,7 +2316,7 @@ join_body = hero(
     'Or call <span class="serif">(352) 377-4955</span> today',
     "Not quite ready to join? Try GHF with a free gym pass — there is no charge, no obligation and no risk.",
     f"{IMG}/GHF_Careers_Floor_Instructor_Fitness_Jobs_Service.jpg",
-    primary=("Try GHF For Free", "contact.html#pricing"),
+    primary=("Try GHF For Free", "ghf-pass.html#claim"),
     secondary=("Request Pricing &amp; More Info", "contact.html#pricing"),
 )
 
@@ -2246,6 +2375,10 @@ training_body = hero(
     'Your complimentary workout is a click <span class="serif">away</span>',
     "The best way to pick the signature program best for you is to try a complimentary session. Experience the style of workout, environment, and trainer to see if it's right for you. Accelerate your results with the experts of Personal Training, X-Force Body, Pilates, CrossFit, and TRIBE Team Training. They will guide you to the results you want to reconnect with life!",
     "Request Free Trial",
+    select=("program", "Which program interests you?", [
+        "Personal Training", "Pilates", "CrossFit", "X-Force Body",
+        "TRIBE Team Training", "Hyrox", "Team Strong Training",
+    ]),
 ) + cta_band(
     'The expertise you need to get <span class="serif">better results</span>',
     "Ready to start a more fit life? Become a GHF member today for as little as $15 per week.",
@@ -2399,6 +2532,80 @@ xforce_body_page = hero(
     f"{IMG}/XForce_XForce_Body_GHF_Gain_Muscle_Leg_Exercises_2023.jpg",
 )
 
+# ============================================================ HYROX
+hyrox_body = hero(
+    "Hyrox at GHF",
+    ["Train for the", 'finish <span class="serif">line</span>'],
+    "PLACEHOLDER COPY \u2014 replace with the real program description. Hyrox pairs running with functional workout stations, and the training that gets you there lives on our indoor turf: sled push, sled pull, farmers carry, wall balls, rowing.",
+    img=f"{IMG}/GHF_Functional_Training_Turf_Indoor_Turf_Gainesville_Gyms_Strength_2025.jpg",
+    crumb='Training &nbsp;/&nbsp; Hyrox',
+    actions=[("Get Pricing", "contact.html#pricing", True), ("Join GHF Online", "join.html", False)],
+    meta=["PLACEHOLDER", "PLACEHOLDER", "PLACEHOLDER"],
+    page=True,
+) + f"""
+<section class="section">
+  <div class="wrap">
+    <div class="intro-grid">
+      <div>
+        <p class="eyebrow"><span class="num">01</span> About the program</p>
+        <h2 class="h-display reveal">What Hyrox training looks like at <span class="serif">GHF</span></h2>
+        <p class="body-copy reveal" style="margin-top:26px">PLACEHOLDER COPY \u2014 to be written. Describe how members train for Hyrox at GHF: what the sessions cover, who coaches them, where they happen, how often they run, and what someone should do to get started.</p>
+      </div>
+      <div class="intro-grid__right reveal">
+        <ul class="checklist">
+          <li>PLACEHOLDER \u2014 what a session includes</li>
+          <li>PLACEHOLDER \u2014 schedule and locations</li>
+          <li>PLACEHOLDER \u2014 who it's for / fitness level</li>
+          <li>PLACEHOLDER \u2014 coaching and equipment</li>
+          <li>PLACEHOLDER \u2014 cost or membership requirement</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+""" + cta_band(
+    'Ready to put it to the <span class="serif">test?</span>',
+    "PLACEHOLDER COPY \u2014 replace with the real call to action for this program.",
+    f"{IMG}/GHF_Functional_Training_Turf_Indoor_Turf_Gainesville_Gyms_Strength_2025.jpg",
+)
+
+# ============================================================ TEAM STRONG TRAINING
+teamstrong_body = hero(
+    "Team Strong Training",
+    ["Stronger with a", 'team behind <span class="serif">you</span>'],
+    "PLACEHOLDER COPY \u2014 replace with the real program description. Team-based strength training with coaching, structure and a group that expects you to show up.",
+    img=f"{IMG}/GHF_Tribe_Tribe_Team_Training_Tribe_Fit_Strong_Tribe_Punch_2025.jpg",
+    crumb='Training &nbsp;/&nbsp; Team Strong Training',
+    actions=[("Get Pricing", "contact.html#pricing", True), ("Join GHF Online", "join.html", False)],
+    meta=["PLACEHOLDER", "PLACEHOLDER", "PLACEHOLDER"],
+    page=True,
+) + f"""
+<section class="section">
+  <div class="wrap">
+    <div class="intro-grid">
+      <div>
+        <p class="eyebrow"><span class="num">01</span> About the program</p>
+        <h2 class="h-display reveal">How Team Strong Training <span class="serif">works</span></h2>
+        <p class="body-copy reveal" style="margin-top:26px">PLACEHOLDER COPY \u2014 to be written. Describe the format, team size, season length, coaching, and how this differs from TRIBE Team Training so the two programs read distinctly.</p>
+      </div>
+      <div class="intro-grid__right reveal">
+        <ul class="checklist">
+          <li>PLACEHOLDER \u2014 format and team size</li>
+          <li>PLACEHOLDER \u2014 schedule and locations</li>
+          <li>PLACEHOLDER \u2014 who it's for / fitness level</li>
+          <li>PLACEHOLDER \u2014 coaching approach</li>
+          <li>PLACEHOLDER \u2014 cost or membership requirement</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+""" + cta_band(
+    'Find your <span class="serif">team</span>',
+    "PLACEHOLDER COPY \u2014 replace with the real call to action for this program.",
+    f"{IMG}/GHF_Tribe_Tribe_Team_Training_Tribe_Fit_Strong_Tribe_Punch_2025.jpg",
+)
+
 # ============================================================ SENIORS
 seniors_body = hero(
     "Club Seniors at GHF",
@@ -2416,7 +2623,7 @@ seniors_body = hero(
      "On land, you may choose from balance foundations, functional fitness, simply stretch, postural health, balance for beginners, tai chi, and more."],
     f"{IMG}/Strength_GroupFit_Seniors_GHF_Tioga_2023_1.jpg",
     "Senior GHF members in a strength group fitness class",
-    cta=("View Full Class Schedule", "group-fitness.html"), tag="GroupFit",
+    cta=("View Full Class Schedule", "group-fitness.html#schedule"), tag="GroupFit",
 ) + split(
     "Aqua classes", "02",
     'Pain-free range of <span class="serif">motion</span>',
@@ -2634,6 +2841,569 @@ savings_body = hero(
     f"{IMG}/Family_Membership_Plans.jpg",
 )
 
+# ============================================================ LOCATION PAGES
+# One builder, three data sets. Copy is ported from the live per-location pages
+# (main-center.aspx / womens-center.aspx / tioga-center.aspx) with their typos
+# and duplicated sentences cleaned up.
+
+def slideshow(slides, label, ratio):
+    """slides: list of (filename, alt, caption). Behaviour lives in main.js."""
+    out = ""
+    for n, (fn, alt, cap) in enumerate(slides):
+        cap_attr = f' data-cap="{cap}"' if cap else ' data-cap=""'
+        lazy = "" if n == 0 else ' loading="lazy"'
+        out += (f'<div class="slideshow__slide"{cap_attr}>'
+                f'<img src="{IMG}/gallery/{fn}" alt="{alt}"{lazy}></div>')
+    return f"""
+<div class="slideshow reveal" tabindex="0" role="group" aria-label="{label} photo gallery">
+  <div class="slideshow__stage" style="aspect-ratio:{ratio}">{out}</div>
+  <div class="slideshow__bar">
+    <button class="slideshow__btn" type="button" data-slide="prev" aria-label="Previous photo">&larr;</button>
+    <button class="slideshow__btn" type="button" data-slide="next" aria-label="Next photo">&rarr;</button>
+    <span class="slideshow__count"><span class="slideshow__cur">01</span> / {len(slides):02d}</span>
+    <p class="slideshow__cap"></p>
+  </div>
+</div>
+"""
+
+
+def location_page(L):
+    hours_rows = "".join(f"<div><dt>{d}</dt><dd>{t}</dd></div>" for d, t in L["hours"])
+    kids = ""
+    if L.get("kids_hours"):
+        kids_rows = "".join(f"<div><dt>{d}</dt><dd>{t}</dd></div>" for d, t in L["kids_hours"])
+        kids = ('<h4 style="margin-top:34px">Kid&rsquo;s Club hours</h4>'
+                f'<div class="loc-hours">{kids_rows}</div>')
+    feats = "".join(f"<li>{f}</li>" for f in L["features"])
+    intro = "".join(f'<p class="body-copy reveal">{p}</p>' for p in L["intro"])
+    progs = ""
+    if L.get("programs"):
+        progs = '<div class="pillars" data-stagger>' + "".join(
+            f'<div class="pillar"><span class="pillar__num">{t}</span><h3>{b}</h3></div>'
+            for t, b in L["programs"]) + "</div>"
+        progs = f"""
+<section class="section section--tight">
+  <div class="wrap">
+    <div class="cards-head">
+      <div>
+        <p class="eyebrow"><span class="num">0{L['prog_num']}</span> {L['prog_eyebrow']}</p>
+        <h2 class="h-display reveal" style="font-size:clamp(34px,4.6vw,72px)">{L['prog_title']}</h2>
+      </div>
+    </div>
+    {progs}
+  </div>
+</section>
+"""
+    return hero(
+        L["kicker"], L["lines"], L["sub"],
+        img=L["hero_img"],
+        crumb=f'<a href="locations.html">Locations</a> &nbsp;/&nbsp; {L["name"]}',
+        actions=[("Claim Your Free Fitness Pass", "ghf-pass.html#claim", True),
+                 (f'Call {L["phone"]}', f'tel:{L["tel"]}', False)],
+        meta=L["meta"], page=True,
+    ) + stats_band(L["stats"]) + f"""
+<section class="section">
+  <div class="wrap">
+    <div class="intro-grid">
+      <div>
+        <p class="eyebrow"><span class="num">01</span> {L['intro_eyebrow']}</p>
+        <h2 class="h-display reveal">{L['intro_title']}</h2>
+      </div>
+      <div class="intro-grid__right">
+        {intro}
+        <div class="reveal" style="margin-top:8px"><a class="inline-link" href="ghf-pass.html#claim">Claim your free fitness pass &rarr;</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--tight">
+  <div class="wrap">
+    <div class="cards-head">
+      <div>
+        <p class="eyebrow"><span class="num">02</span> Virtual tour</p>
+        <h2 class="h-display reveal" style="font-size:clamp(34px,4.6vw,72px)">Look around before you <span class="serif">walk in</span></h2>
+      </div>
+      <p class="body-copy reveal" style="max-width:36ch">{L['tour_note']}</p>
+    </div>
+    <div class="reveal">{embed('https://www.youtube.com/embed/' + L['tour_id'], 'Virtual tour of ' + L['name'], allow_yt=True)}</div>
+  </div>
+</section>
+{progs}
+<section class="section section--light">
+  <div class="wrap">
+    <div class="intro-grid">
+      <div>
+        <p class="eyebrow"><span class="num">0{L['feat_num']}</span> What's here</p>
+        <h2 class="h-display reveal">{L['feat_title']}</h2>
+        <p class="body-copy reveal" style="margin-top:26px">{L['feat_note']}</p>
+      </div>
+      <div class="intro-grid__right reveal">
+        <ul class="checklist">{feats}</ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="cards-head">
+      <div>
+        <p class="eyebrow"><span class="num">0{L['gal_num']}</span> Photo gallery</p>
+        <h2 class="h-display reveal" style="font-size:clamp(34px,4.6vw,72px)">Inside <span class="serif">{L['short']}</span></h2>
+      </div>
+      <p class="body-copy reveal" style="max-width:34ch">Real photos of the floor, the studios and the spaces you'll actually use.</p>
+    </div>
+    {slideshow(L['gallery'], L['name'], L['gallery_ratio'])}
+  </div>
+</section>
+
+<section class="section section--light">
+  <div class="wrap">
+    <div class="intro-grid">
+      <div>
+        <p class="eyebrow"><span class="num">0{L['visit_num']}</span> Visit us</p>
+        <h2 class="h-display reveal">Come see it for <span class="serif">yourself</span></h2>
+        <p class="body-copy reveal" style="margin-top:26px">Walk in anytime we're open. Tell the front desk it's your first visit and someone will show you around &mdash; no appointment, no pressure.</p>
+        <div class="hero__actions reveal" style="opacity:1;transform:none;margin-top:30px">
+          <a class="btn btn--dark" href="ghf-pass.html#claim">Claim Your Free Fitness Pass <span class="arr">&rarr;</span></a>
+        </div>
+      </div>
+      <div class="intro-grid__right reveal">
+        <span class="loc-badge">{L['badge']}</span>
+        <h3 style="margin-top:16px">{L['name']}</h3>
+        <a class="phone" href="tel:{L['tel']}">{L['phone']}</a>
+        <h4 style="margin-top:30px">Hours</h4>
+        <div class="loc-hours">{hours_rows}</div>
+        {kids}
+        <address style="margin-top:30px">{L['address']}<br>{L['manager']}</address>
+        <div style="margin-top:18px"><a class="inline-link" href="{L['map']}" target="_blank" rel="noopener">Get directions &rarr;</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+""" + marquee(L["marquee"]) + cta_band(
+        L["cta_title"], L["cta_text"], L["cta_img"],
+        primary=("Claim Your Free Fitness Pass", "ghf-pass.html#claim"),
+        secondary=("Join GHF Online", "join.html"),
+    )
+
+
+MAIN_CENTER = dict(
+    name="GHF Main", short="GHF Main", slug="main-center.html",
+    kicker="GHF Main &mdash; open 24/7",
+    lines=["Gainesville's best gym", 'near <span class="serif">you</span>'],
+    sub="130,000 square feet, open every hour of every day, with the deepest bench of equipment, classes and recovery in North Central Florida. And staff on the floor to make sure you never have to figure it out alone.",
+    hero_img=f"{IMG}/Free_Weights_Gainesville_Health_and_Fiitness_2021_1_(1).jpg",
+    phone="(352) 377-4955", tel="3523774955",
+    address="4820 W Newberry Road, Gainesville, FL 32607",
+    manager="General Manager &mdash; Adrian Antigua",
+    map="https://maps.google.com/?q=4820+W+Newberry+Road,+Gainesville,+FL+32607",
+    badge="Open 24/7",
+    meta=["Open 24 hours, every day", "130,000 sq ft", "600 classes a month"],
+    hours=[("Every day", "Open 24 hours")],
+    stats=[(130, "K", "Square feet under one roof"), (24, "/7", "Hours, every day of the year"),
+           (600, "", "Group classes each month"), (75, "ft", "Indoor heated lap pool")],
+    intro_eyebrow="The flagship",
+    intro_title='Everyone wants something <span class="serif">better</span>',
+    intro=[
+        "At Gainesville Health &amp; Fitness we believe everyone wants something better &mdash; to look better, feel better, live better &mdash; and that most people need help getting there. That's why we're here.",
+        "GHF Main makes it easy to get fit, strong and lean: 24-hour access, free babysitting, expansive cardio selections, state-of-the-art strength equipment, and the most options in town for post-workout recovery &mdash; sauna, cold pool, hot tub, lap pool.",
+        "We recently opened another 10,000 square feet featuring hot yoga, functional training turf and a brand new personal training studio. Add indoor basketball and volleyball, a complete aquatic center with a 75-foot pool, and boutique small-group training, and you have unparalleled variety &mdash; the kind that keeps you in the exercise habit for a lifetime.",
+        "Here you'll find friendly, down-to-earth staff who make every member and guest feel welcome, with the guidance and support to help you become a better you.",
+    ],
+    tour_note="Take the full walkthrough of GHF Main &mdash; the weight floor, the pool, the studios and the recovery wing.",
+    tour_id="iRFAaDA-NbI",
+    feat_num=3, gal_num=4, visit_num=5,
+    feat_title='GHF Main <span class="serif">features</span>',
+    feat_note="Everything below is included in your membership, and your membership works at all three locations.",
+    features=[
+        "The most cardio and strength machines", "New functional training turf",
+        "Newly expanded free weight areas", "The EndZone &mdash; glute-focused area",
+        "Supervised strength circuit for beginners", "75-ft indoor heated pool",
+        "Sauna, steam room and hot tub", "Warm and cold therapy pools",
+        "Hot yoga studio", "Arthritis and Aquatic Center",
+        "Indoor cycling studio", "Free babysitting",
+        "600 group classes monthly", "Outdoor fitness pavilion",
+        "Staff to help you every time", "X-Force negative-only training center",
+        "Open air stretching area", "Indoor basketball and volleyball court",
+        "Showers, vanities, hair dryers, lockers, private changing",
+        "J-Bar smoothie bar", "Complimentary WiFi",
+        "Access to GHF Women and GHF Tioga",
+    ],
+    gallery=[
+        ("Main-Center-ExpansionCableStrengthGHF.jpg", "Cable and strength machines at GHF Main", "Tone up, bulk up or shape up &mdash; state-of-the-art equipment to help you reach your goals."),
+        ("Main-Center-HammerStrengthTrainingGHF.jpg", "Hammer Strength equipment at GHF Main", "All the strength training equipment you need to take your body to the next level."),
+        ("Main-Center-BasketballCourtGHF.jpg", "Indoor basketball court at GHF Main", "Shoot some hoops on our regulation-size indoor basketball court."),
+        ("Main-Center-GroupFitnessExteriorYogaGHF.jpg", "Group fitness studio at GHF Main", "Stretch, dance or find your Zen in the group fitness studio."),
+        ("Main-Center-GroupXGatorGHF.jpg", "Group fitness class at GHF Main", "You never know who you'll run into when you take a group fitness class here."),
+        ("Main-Center-StretchPersonalTrainingStudioGHF.jpg", "Personal training studio at GHF Main", "Personal instruction and motivation in the Personal Training Studio."),
+        ("Main-Center-XForceBodyTrainingStudioGHF.jpg", "X-Force Body training studio at GHF Main", "Lose fat and add muscle with the X-Force Body program."),
+        ("Main-Center-LuxuryLoungeGHF.jpg", "Member lounge at GHF Main", "Catch your breath, or catch up with friends, in the lounge."),
+        ("Main-Center-ProteinSmoothieBarGHF.jpg", "The J-Bar smoothie bar at GHF Main", "A refreshing smoothie or an energizing snack at the J-Bar."),
+        ("Main-Center-SmoothieCafePatioGHF.jpg", "Outdoor patio at GHF Main", "Take a break and enjoy some sunshine on the patio outside the J-Bar."),
+        ("Main-Center-RetailFitnessFashionGHF.jpg", "Retail shop at GHF Main", "The gift shop carries the latest athletic wear and GHF-themed goods."),
+    ],
+    gallery_ratio="1200/350",
+    marquee=["24/7 Access", "75ft Lap Pool", "Hot Yoga", "The EndZone", "X-Force", "Free Weights", "J-Bar", "Basketball"],
+    cta_title='Live better at <span class="serif">GHF</span>',
+    cta_text="Better people. Better programs. Better facilities. Better benefits. Better community. Gainesville's best gym to help you get stronger &mdash; and stay that way.",
+    cta_img=f"{IMG}/GHF_Benches_Free_Weight_Expansion_2025.jpg",
+)
+
+WOMENS_CENTER = dict(
+    name="GHF Women", short="GHF Women", slug="womens-center.html",
+    kicker="GHF Women &mdash; women only",
+    lines=["Where every woman", 'gets <span class="serif">stronger</span>'],
+    sub="Gainesville's only women-only club. Ready to glow from the inside out? Nothing matters more than feeling amazing &mdash; and having women who support and empower each other while you get there.",
+    hero_img=f"{IMG}/GHF_GHF_Women_Womens_Center_SWEAT_2023_1.jpg",
+    phone="(352) 374-4634", tel="3523744634",
+    address="2441 NW 43rd Street, Gainesville, FL 32606",
+    manager="Manager &mdash; Jordan Heitzler",
+    map="https://maps.google.com/?q=2441+NW+43rd+Street,+Gainesville,+FL+32606",
+    badge="Women Only",
+    meta=["Women only", "All-female staff", "175 classes a month"],
+    hours=[("Mon&ndash;Thurs", "5am&ndash;9pm"), ("Friday", "5am&ndash;8pm"),
+           ("Saturday", "8am&ndash;6pm"), ("Sunday", "Closed")],
+    kids_hours=[("Mon&ndash;Thurs", "8am&ndash;1pm, 3pm&ndash;8pm"), ("Friday", "8am&ndash;1pm, 3pm&ndash;7pm"),
+                ("Saturday", "8am&ndash;1pm"), ("Sunday", "Closed")],
+    stats=[(175, "", "Fitness classes each month"), (100, "%", "Female staff"),
+           (1, "", "Women-only club in Gainesville"), (0, "", "Extra cost for babysitting")],
+    intro_eyebrow="A gym designed by women, for women",
+    intro_title='Grab your girl <span class="serif">squad</span>',
+    intro=[
+        "Experience the place where every woman gets stronger &mdash; in every area of wellness. Feel the support and motivation to lead your healthiest life and make your fitness goals come true.",
+        "Come to the hottest group classes in Gainesville, lift in a private space, and see why we're known for our variety of ways to sweat, dance, stretch and challenge yourself.",
+        "Every membership includes free babysitting at Kid's Club, and your card works at GHF Main and GHF Tioga too &mdash; so the women-only floor is your home base, not your limit.",
+    ],
+    tour_note="Step inside the women-only floor, Studio Q and the group fitness studio before your first visit.",
+    tour_id="eqRGwNykS_4",
+    prog_num=3, feat_num=4, gal_num=5, visit_num=6,
+    prog_eyebrow="Programs built for you",
+    prog_title='Four ways to get <span class="serif">strong</span>',
+    programs=[
+        ("Group Fitness", "Build total-body strength with Body Pump, sweat it out with HIIT or Zumba, or lengthen and tone with Pilates Mat and Yoga"),
+        ("Personal Training", "Work with nationally certified, expert female trainers &mdash; guidance, motivation and accountability, one-on-one in an enclosed space"),
+        ("Functional Training", "Studio Q is built for your favorite functional work: TRX straps, free weights, the hip thrust machine and more"),
+        ("Specialty Programs", "Including Yoga For Pregnancy &mdash; improving flexibility and strength while teaching you to use yoga through labor and delivery"),
+    ],
+    feat_title='Build your strongest <span class="serif">you</span>',
+    feat_note="The most classes, the best programs, expansive amenities, and a strong community of women.",
+    features=[
+        "All-female staff", "Functional training studio &mdash; Studio Q",
+        "Free babysitting", "175 fitness classes monthly",
+        "Supervised strength circuit for beginners", "Sauna, steam room and hot tub",
+        "The most cardio and strength machines", "Stretching and ab workout area",
+        "Showers, vanities, hair dryers, lockers, private changing",
+        "Convenient parking in Thornebrook Village", "Complimentary WiFi",
+        "Access to GHF Main and GHF Tioga",
+    ],
+    gallery=[
+        ("Womens-Center-CardioTrainingMachines.jpg", "Cardio floor at GHF Women", "Boost your cardio in a supportive environment, designed exclusively for women."),
+        ("Womens-Center-CircuitGroupFitnessTrainingQueenax.jpg", "Queenax functional training rig at GHF Women", "Build functional fitness with Queenax, a suspended body-weight system in Studio Q."),
+        ("Womens-Center-GroupFitnessTrainingHeartRate.jpg", "Group fitness class at GHF Women", "Work up a sweat in the variety of fun, energizing group classes."),
+        ("Womens-Center-MatrixStrengthTrainingMachines.jpg", "Matrix strength machines at GHF Women", "Staff are always happy to answer questions or demonstrate the equipment."),
+    ],
+    gallery_ratio="1200/350",
+    marquee=["Women Only", "Studio Q", "Body Pump", "Free Babysitting", "Sauna &amp; Steam", "Yoga", "HIIT", "Zumba"],
+    cta_title='Get strong with us. Be strong for <span class="serif">them.</span>',
+    cta_text="We understand you &mdash; your needs, your challenges, your life responsibilities. Come see what a room full of women pulling for each other feels like.",
+    cta_img=f"{IMG}/GHF_Women_Strength_Moms_Fitness_Medicine_balls_2025.jpg",
+)
+
+TIOGA_CENTER = dict(
+    name="GHF Tioga", short="GHF Tioga", slug="tioga-center.html",
+    kicker="GHF Tioga &mdash; Tioga Town Center",
+    lines=["Gainesville's best gym", 'just minutes from your <span class="serif">door</span>'],
+    sub="An elegant fitness facility west of I-75, with top-of-the-line equipment, luxurious spaces and deluxe amenities &mdash; steps from the dining and shopping of Tioga Town Center.",
+    hero_img=f"{IMG}/Tioga_Carrie_Grotto_Arm_Cross_Facility_2022.jpg",
+    phone="(352) 692-2180", tel="3526922180",
+    address="12830 SW 1st Lane, Suite 100, Newberry, FL 32669",
+    manager="Manager &mdash; Darrius Powell",
+    map="https://maps.google.com/?q=12830+SW+1st+Lane,+Suite+100,+Newberry,+FL+32669",
+    badge="West of I-75",
+    meta=["Minutes from home", "200 classes a month", "Pilates &amp; CrossFit studios"],
+    hours=[("Mon&ndash;Thurs", "5am&ndash;10pm"), ("Friday", "5am&ndash;9pm"),
+           ("Saturday", "8am&ndash;8pm"), ("Sunday", "10am&ndash;5pm")],
+    stats=[(200, "", "Fitness classes each month"), (1, "", "Membership, three locations"),
+           (0, "", "Extra cost for babysitting"), (5, "min", "From most of west Gainesville")],
+    intro_eyebrow="Your neighborhood club",
+    intro_title="You're going to feel good <span class=\"serif\">here</span>",
+    intro=[
+        "We believe people achieve more when they're energized, inspired and supported. GHF at Tioga Town Center provides that environment for members, their families and guests alike.",
+        "Most people choose a gym close to home, and Tioga is the most convenient fitness choice west of I-75. That proximity is the whole point &mdash; it makes the difference in how often you actually go, and that's how you get results.",
+        "It's an elegant facility: top-of-the-line equipment, luxurious spaces, and innovative training options including a dedicated Pilates studio and outdoor CrossFit turf. From the state-of-the-art cardio and strength areas to the upscale locker rooms with private changing, every detail was designed with your fitness in mind.",
+        "From the moment you walk through the door you'll meet friendly Tioga staff dedicated to making your experience remarkable. It's a place where you will belong.",
+    ],
+    tour_note="See the Pilates studio, the CrossFit turf and the locker rooms before you make the drive.",
+    tour_id="6Qiv714c9Bk",
+    feat_num=3, gal_num=4, visit_num=5,
+    feat_title='GHF Tioga luxury <span class="serif">amenities</span>',
+    feat_note="Boutique touches you won't find at a neighborhood gym &mdash; included in the same one membership.",
+    features=[
+        "Free babysitting while you work out", "Hydro Massage in our Chill Studio",
+        "Staff to help you every time", "Supervised strength circuit for beginners",
+        "200 fitness classes monthly", "Private Pilates studio",
+        "Outdoor CrossFit turf", "Endless cardio and strength machines",
+        "Stretching and ab workout spaces", "Private personal training",
+        "Showers, multiple vanities, hair dryers, lockers, private changing",
+        "Complimentary WiFi", "Access to GHF Main and GHF Women",
+    ],
+    gallery=[
+        ("Tioga-Center-01.jpg", "Inside GHF Tioga", ""),
+        ("Tioga-Center-02.jpg", "Inside GHF Tioga", ""),
+        ("Tioga-Center-03.jpg", "Inside GHF Tioga", ""),
+        ("Tioga-Center-04.jpg", "Inside GHF Tioga", ""),
+        ("Tioga-Center-05.jpg", "Inside GHF Tioga", ""),
+        ("Tioga-Center-06.jpg", "Inside GHF Tioga", ""),
+        ("Tioga-Center-07.jpg", "Inside GHF Tioga", ""),
+        ("Tioga-Center-08.jpg", "Inside GHF Tioga", ""),
+        ("Tioga-Center-09.jpg", "Inside GHF Tioga", ""),
+        ("Tioga-Center-10.jpg", "Inside GHF Tioga", ""),
+        ("Tioga-Center-11.jpg", "Inside GHF Tioga", ""),
+        ("Tioga-Center-12.jpg", "Inside GHF Tioga", ""),
+        ("Tioga-Center-13.jpg", "Inside GHF Tioga", ""),
+        ("Tioga-Center-14.jpg", "Inside GHF Tioga", ""),
+        ("Tioga-Center-15.jpg", "Inside GHF Tioga", ""),
+        ("Tioga-Center-16.jpg", "Inside GHF Tioga", ""),
+        ("Tioga-Center-17.jpg", "Inside GHF Tioga", ""),
+    ],
+    gallery_ratio="3/2",
+    marquee=["Pilates Studio", "CrossFit Turf", "Chill Studio", "Hydro Massage", "Free Babysitting", "West of I-75", "Tioga Town Center"],
+    cta_title='Welcome to your neighborhood <span class="serif">gym</span>',
+    cta_text="A clean, comfortable environment in a world-class fitness center with hometown values. Come see why members say it's a place where you belong.",
+    cta_img=f"{IMG}/Tioga_Carrie_Grotto_2_Facility_2022_copy.jpg",
+)
+
+main_center_body = location_page(MAIN_CENTER)
+womens_center_body = location_page(WOMENS_CENTER)
+tioga_center_body = location_page(TIOGA_CENTER)
+
+
+# ============================================================ GHF PASS (FREE ALL-ACCESS)
+# Keap / Infusionsoft hosted-form endpoint. Field names and hidden values are copied
+# verbatim from the live form at ghfc.com/ghf-pass ("All Access Pass", call name
+# allaccesspass) so submissions land in the same CRM campaign.
+KEAP_ACTION = "https://pv228.infusionsoft.com/app/form/process/838e496be2a9f0685d4734661fc52994"
+KEAP_XID = "838e496be2a9f0685d4734661fc52994"
+
+pass_form = f"""
+<section class="section section--light" id="claim">
+  <div class="wrap">
+    <div class="intro-grid">
+      <div>
+        <p class="eyebrow"><span class="num">05</span> Request your pass</p>
+        <h2 class="h-display reveal" style="font-size:clamp(34px,4.6vw,72px)">You're one click away from the gym that helps <span class="serif">beginners</span></h2>
+        <p class="lede reveal" style="margin-top:28px">Once you've completed the form, we'll contact you by phone, text, or email to set up your pass — then send it to you by email to activate anytime by coming to the location of your choice.</p>
+        <ul class="checklist reveal" style="margin-top:34px">
+          <li>Full membership privileges for one day</li>
+          <li>Good at any of our three locations</li>
+          <li>Please bring photo ID to check in</li>
+          <li>For first-time, local guests</li>
+          <li>Ages 13+ — 13 to 17 with a parent or guardian</li>
+          <li>No charge, no obligation, no risk</li>
+        </ul>
+      </div>
+      <div class="intro-grid__right reveal">
+        <form class="form-grid" method="post" action="{KEAP_ACTION}" accept-charset="UTF-8">
+          <input type="hidden" name="inf_form_xid" value="{KEAP_XID}">
+          <input type="hidden" name="inf_form_name" value="All Access Pass">
+          <input type="hidden" name="infusionsoft_version" value="1.70.0.60815">
+          <input type="hidden" name="inf_IntegrationName" value="pv228">
+          <input type="hidden" name="inf_CallName" value="allaccesspass">
+          <input type="hidden" name="inf_api_enabled" value="true">
+          <div class="field"><input type="text" name="inf_field_FirstName" id="gp-first" placeholder=" " required><label for="gp-first">First name</label></div>
+          <div class="field"><input type="text" name="inf_field_LastName" id="gp-last" placeholder=" " required><label for="gp-last">Last name</label></div>
+          <div class="field"><input type="email" name="inf_field_Email" id="gp-email" placeholder=" " required><label for="gp-email">Email address</label></div>
+          <div class="field"><input type="tel" name="inf_field_Phone1" id="gp-phone" placeholder=" " required><label for="gp-phone">Phone</label></div>
+          <div class="field field--full">
+            <select name="inf_custom_Facility" id="gp-loc" aria-label="Gym you would like to visit">
+              <option value="">&nbsp;</option>
+              <option value="Main">GHF Main — 4820 W Newberry Road</option>
+              <option value="Women's Center">GHF Women — 2441 NW 43rd Street</option>
+              <option value="Tioga">GHF Tioga — Tioga Town Center</option>
+            </select>
+            <label for="gp-loc">Gym you would like to visit</label>
+          </div>
+          <button class="btn btn--dark field--full" type="submit" style="justify-content:center">Claim My Free Pass <span class="arr">&rarr;</span></button>
+        </form>
+        <p class="form-note">We will contact you via phone, email, or text. There is no charge, no obligation and no risk.</p>
+      </div>
+    </div>
+  </div>
+</section>
+"""
+
+pass_faq = [
+
+        ("What does the free pass actually get me?",
+         "Full membership privileges for one day at the Gainesville Health &amp; Fitness location of your choice. That means every group fitness class, the pool and Aquix recovery area, the sauna and steam room, the full weight floor and cardio deck, Kid's Club babysitting, and a hydromassage session. There is no charge, no obligation and no risk. There is, however, a chance that you will be inspired."),
+        ("Who is the pass for?",
+         "First-time, local guests. The minimum age is 13 &mdash; guests 13 to 17 need to be accompanied by a parent or guardian. If you've used a pass with us before, or you're visiting from out of town, give us a call at (352) 377-4955 and we'll sort something out."),
+        ("What should I bring?",
+         "Photo ID to check in as a guest, comfortable clothes, supportive shoes, a water bottle, and a towel. If you plan to shower or use the sauna, bring toiletries and a change of clothes &mdash; lockers are free and we have full-time housekeeping."),
+        ("Do I have to know what I'm doing?",
+         "Not even a little. We're the gym that's best at helping beginners &mdash; that's the whole point. Tell the front desk it's your first visit and a fitness instructor will come meet you, learn your goal, and walk you through your first workout. You will not be handed a key card and left to guess."),
+        ("Will someone try to sell me a membership?",
+         "No pitch, no pressure. If you decide you want pricing afterward we're happy to walk you through it, and you can always <a href=\"join.html\" style=\"color:var(--accent)\">join online</a> on your own time. But the pass is genuinely free and genuinely no-obligation."),
+        ("Can I bring a friend?",
+         "Come in together and we'll take care of you both. Once you're a member, our Power of Friends program gives every guest you bring 6 free visits &mdash; see <a href=\"bring-a-guest.html\" style=\"color:var(--accent)\">Bring a Guest</a> for how that works."),
+]
+
+ghf_pass_body = hero(
+    "The GHF Pass",
+    ["Find your", 'strong <span class="serif">here</span>'],
+    "Your free pass gives you a team that will help you navigate the gym — you don't have to figure it out alone. Full membership privileges for one day: every class, the pool, the sauna, the weight room, and a coach who walks it with you.",
+    img=f"{IMG}/GHF_Careers_Floor_Instructor_Fitness_Jobs_Service.jpg",
+    crumb="Free All-Access Pass",
+    actions=[("Claim My Free Pass", "#claim", True), ("Call (352) 377-4955", "tel:3523774955", False)],
+    meta=["One day, full access", "No charge, no obligation", "Any of 3 locations"],
+    page=True,
+) + stats_band([
+    (1, "", "Day of full membership privileges"),
+    (3, "", "Locations to choose from"),
+    (900, "+", "Classes included each month"),
+    (0, "", "Cost, obligation or risk"),
+]) + f"""
+<section class="section">
+  <div class="wrap">
+    <div class="intro-grid">
+      <div>
+        <p class="eyebrow"><span class="num">01</span> What your pass includes</p>
+        <h2 class="h-display reveal">A full day, <span class="serif">all of it</span></h2>
+        <p class="body-copy reveal" style="margin-top:26px">Feeling out of shape, not sure where to start, and afraid you won't stick with it? That's exactly who we're best at helping. Your pass isn't a tour — it's the real thing, with someone beside you.</p>
+      </div>
+      <div class="intro-grid__right reveal">
+        <ul class="checklist">
+          <li>One-day gym membership</li>
+          <li>Free hydromassage session</li>
+          <li>24/7 access at GHF Main</li>
+          <li>All group fitness classes</li>
+          <li>Indoor heated lap &amp; therapy pools</li>
+          <li>Sauna, steam, hot tub, cold plunge</li>
+          <li>Largest free weight area in town</li>
+          <li>Most cardio &amp; weight machines</li>
+          <li>Indoor basketball &amp; volleyball</li>
+          <li>Free babysitting at Kid's Club</li>
+          <li>Free lockers &amp; full-time housekeeping</li>
+          <li>A women-only fitness center</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--tight">
+  <div class="wrap">
+    <div class="cards-head">
+      <div>
+        <p class="eyebrow"><span class="num">02</span> Why choose GHF</p>
+        <h2 class="h-display reveal" style="font-size:clamp(34px,4.6vw,72px)">More than just a <span class="serif">gym</span></h2>
+      </div>
+      <p class="body-copy reveal" style="max-width:38ch">First-timers and seasoned lifters train side by side here — and both walk out feeling like they belong.</p>
+    </div>
+    <div class="pillars" data-stagger>
+      <div class="pillar"><span class="pillar__num">Convenience</span><h3>Staffed 24 hours a day, three locations on one membership, a women-only club, and free babysitting while you work out</h3></div>
+      <div class="pillar"><span class="pillar__num">Programming</span><h3>Supervised strength training on The Line, 900+ group classes monthly, indoor cycle studio and hot yoga — all included</h3></div>
+      <div class="pillar"><span class="pillar__num">Availability</span><h3>Thousands of strength and cardio machines, the largest free weight areas in town, indoor basketball and volleyball</h3></div>
+      <div class="pillar"><span class="pillar__num">Aquix Area</span><h3>75-foot lap pool, cold pool, sauna, steam room, hot tub and warm therapy pool for the ultimate post-workout recovery</h3></div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--light">
+  <div class="wrap">
+    <div class="cards-head">
+      <div>
+        <p class="eyebrow"><span class="num">03</span> How it works</p>
+        <h2 class="h-display reveal" style="font-size:clamp(34px,4.6vw,72px)">Four steps, <span class="serif">zero pressure</span></h2>
+      </div>
+      <p class="body-copy reveal" style="max-width:36ch">No contracts to sign, no sales pitch to survive. Just show up and see how it feels.</p>
+    </div>
+    <div class="steps reveal">
+      <div class="step"><span class="step__num">01</span><h3>Request your pass</h3><p>Fill out the form below. It takes about twenty seconds and costs you nothing.</p></div>
+      <div class="step"><span class="step__num">02</span><h3>We reach out</h3><p>We'll contact you by phone, text, or email to set it up, then send the pass to your inbox.</p></div>
+      <div class="step"><span class="step__num">03</span><h3>Come in when you're ready</h3><p>Activate it anytime by walking into the location you picked. Bring photo ID to check in as a guest.</p></div>
+      <div class="step"><span class="step__num">04</span><h3>A coach shows you around</h3><p>A real person learns your goal, walks you through your first workout, and makes sure you're never guessing.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="cards-head">
+      <div>
+        <p class="eyebrow"><span class="num">04</span> Where to use it</p>
+        <h2 class="h-display reveal" style="font-size:clamp(34px,4.6vw,72px)">Pick your <span class="serif">club</span></h2>
+      </div>
+      <p class="body-copy reveal" style="max-width:38ch">Your pass is good at any one of the three. Each is a little different — choose the one that fits your day.</p>
+    </div>
+    <div class="loc">
+      <div class="loc-item">
+        <div class="loc-item__media reveal-img"><img src="{IMG}/Free_Weights_Gainesville_Health_and_Fiitness_2021_1_(1).jpg" alt="Free weight area at GHF Main" loading="lazy"></div>
+        <div>
+          <span class="loc-badge">Open 24/7</span>
+          <h3><a href="main-center.html">GHF Main</a></h3>
+          <a class="phone" href="tel:3523774955">(352) 377-4955</a>
+          <div class="loc-hours">
+            <div><dt>Every day</dt><dd>Open 24 hours</dd></div>
+          </div>
+          <address>4820 W Newberry Road, Gainesville, FL 32607</address>
+        </div>
+      </div>
+      <div class="loc-item">
+        <div class="loc-item__media reveal-img"><img src="{IMG}/GHF_GHF_Women_Womens_Center_Body_Pump_2023_1.jpg" alt="Body Pump class at GHF Women" loading="lazy"></div>
+        <div>
+          <span class="loc-badge">Women Only</span>
+          <h3><a href="womens-center.html">GHF Women</a></h3>
+          <a class="phone" href="tel:3523744634">(352) 374-4634</a>
+          <div class="loc-hours">
+            <div><dt>Mon&ndash;Thurs</dt><dd>5am&ndash;9pm</dd></div>
+            <div><dt>Friday</dt><dd>5am&ndash;8pm</dd></div>
+            <div><dt>Saturday</dt><dd>8am&ndash;6pm</dd></div>
+            <div><dt>Sunday</dt><dd>Closed</dd></div>
+          </div>
+          <address>2441 NW 43rd Street, Gainesville, FL 32606</address>
+        </div>
+      </div>
+      <div class="loc-item">
+        <div class="loc-item__media reveal-img"><img src="{IMG}/GHF_Tioga_Gainesville_Health_Gainesville_Gyms_TIoga_Strength_Gyms_Nearby_2026-2.jpg" alt="Strength training at GHF Tioga" loading="lazy"></div>
+        <div>
+          <span class="loc-badge">Family Friendly</span>
+          <h3><a href="tioga-center.html">GHF Tioga</a></h3>
+          <a class="phone" href="tel:3526922180">(352) 692-2180</a>
+          <div class="loc-hours">
+            <div><dt>Mon&ndash;Thurs</dt><dd>5am&ndash;10pm</dd></div>
+            <div><dt>Friday</dt><dd>5am&ndash;9pm</dd></div>
+            <div><dt>Saturday</dt><dd>8am&ndash;8pm</dd></div>
+            <div><dt>Sunday</dt><dd>10am&ndash;5pm</dd></div>
+          </div>
+          <address>12830 SW 1st Lane, Suite 100, Newberry, FL 32669</address>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+""" + pass_form + f"""
+<section class="section">
+  <div class="wrap">
+    <div class="cards-head">
+      <div>
+        <p class="eyebrow"><span class="num">06</span> Pass questions</p>
+        <h2 class="h-display reveal" style="font-size:clamp(34px,4.6vw,72px)">Before you <span class="serif">come in</span></h2>
+      </div>
+    </div>
+    {accordion(pass_faq, open_first=True)}
+  </div>
+</section>
+""" + cta_band(
+    'Ready to make it <span class="serif">yours?</span>',
+    "Get ready for an experience that will help you get the most out of life and inspire you to become your best. Memberships start at as little as $15 per week.",
+    f"{IMG}/Echo_GroupFit_Outdoor_Classes_Fun_Classes_2021.jpg",
+    primary=("Join GHF Online", "join.html"), secondary=None,
+)
+
+
 # ============================================================ FAQ
 faq_items = [
     ("What should I bring with me when I work out?",
@@ -2704,16 +3474,22 @@ PAGES = [
     ("kids-club.html", "Kid's Club at GHF | Free Babysitting While You Work Out", "Free babysitting as a member benefit while you workout at any of our three fitness centers.", "", kids_body),
     ("weight-loss.html", "Weight Loss at GHF | Accelerate Your Results", "GHF has all the equipment, programs, and experts to help you reach your weight loss goals.", "", weightloss_body),
     ("locations.html", "Locations & Hours | One Membership, Three Locations | GHF", "View hours and amenities for our three gyms in Gainesville, FL.", "locations.html", locations_body),
+    ("main-center.html", "GHF Main | 24/7 Gym in Gainesville, FL", "GHF Main — 130,000 sq ft, open 24/7 at 4820 W Newberry Road. Virtual tour, photo gallery, hours, and everything included in your membership.", "locations.html", main_center_body),
+    ("womens-center.html", "GHF Women | Women-Only Gym in Gainesville, FL", "GHF Women — Gainesville's only women-only fitness club, with all-female staff, Studio Q and 175 classes a month. Take the virtual tour.", "locations.html", womens_center_body),
+    ("tioga-center.html", "GHF Tioga | Gym in Tioga Town Center, Newberry FL", "GHF Tioga — the most convenient gym west of I-75, with a private Pilates studio, outdoor CrossFit turf and Hydro Massage in the Chill Studio.", "locations.html", tioga_center_body),
     ("join.html", "Join Online | Gainesville's Best Gym Memberships | GHF", "Join Gainesville's best gym online — $29.99 + tax, dues every other Wednesday, no maintenance fee. 24 month, 12 month, and month-to-month agreements.", "", join_body),
     ("training.html", "Signature Training Programs | GHF", "Reach a higher level of fitness with Personal Training, Pilates, CrossFit, X-Force Body, and TRIBE Team Training.", "personal-training.html", training_body),
     ("crossfit.html", "CrossFit at GHF Tioga | The Pursuit of Optimal Fitness", "GHF CrossFit is open to the community — free trial week, Olympic lifting, and youth classes.", "", crossfit_body),
     ("xforce.html", "X-Force Body | Lose Body Fat Fast | GHF", "Gainesville's top choice for accelerated fat loss — negative training, 2 × 25-minute workouts weekly.", "", xforce_body_page),
+    ("hyrox.html", "Hyrox Training at GHF | Gainesville Health & Fitness", "PLACEHOLDER — Hyrox-style functional fitness training at Gainesville Health & Fitness.", "", hyrox_body),
+    ("team-strong-training.html", "Team Strong Training | GHF", "PLACEHOLDER — Team-based strength training at Gainesville Health & Fitness.", "", teamstrong_body),
     ("seniors.html", "Senior Fitness Classes | Fitness For Life | GHF", "Club Seniors at GHF — resort-style amenities, senior-friendly classes, and a community of seniors just like you.", "", seniors_body),
     ("sports-activities.html", "Sports Activities at GHF | Basketball, Pool, Cycling & More", "Basketball, volleyball, lap pool, HIIT, indoor cycling and sports performance at Gainesville Health & Fitness.", "", sports_body),
     ("special-needs-fitness.html", "FIT for ALL | Special Needs Fitness at GHF", "Fun Inclusive Training (FIT) for ALL is a free fitness program designed for individuals with special needs.", "", fitforall_body),
     ("bring-a-guest.html", "Bring a Guest | 6 Free Visits | GHF", "The Power Of Friends Guest program — each guest visiting with a member gets 6 free visits.", "", guest_body),
     ("member-savings.html", "Member Savings Program | GHF", "Save the cost of your gym membership dues at over 100 participating local businesses.", "", savings_body),
     ("faq.html", "FAQ | Get The Most Out Of Your Gym Membership | GHF", "Frequently asked questions about Gainesville Health & Fitness memberships, amenities, and getting started.", "", faq_body),
+    ("ghf-pass.html", "Free All-Access Pass | Try GHF Free | Gainesville Health & Fitness", "Try Gainesville Health & Fitness free. Your all-access pass gives you full membership privileges for one day at any of our three locations — classes, pool, sauna, weight floor and a coach to guide you. No charge, no obligation.", "", ghf_pass_body),
     ("contact.html", "Contact Us & Get Pricing | Gainesville Health & Fitness", "Let's talk fitness memberships in Gainesville — pricing packages and amenities to craft your gym experience.", "", contact_body),
 ]
 

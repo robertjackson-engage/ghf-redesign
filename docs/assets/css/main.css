@@ -286,6 +286,32 @@ body.menu-open .menu-list a { opacity: 1; transform: translateY(0); transition: 
   opacity: 0; transition: opacity 1s ease 1s;
 }
 .is-loaded .hero__meta { opacity: 1; }
+.hero__promo {
+  margin-top: clamp(24px, 3.6vh, 40px); padding-left: clamp(16px, 1.6vw, 24px);
+  border-left: 2px solid var(--accent);
+  opacity: 0; transform: translateY(24px); transition: opacity .9s ease .9s, transform .9s var(--ease-out) .9s;
+}
+.is-loaded .hero__promo { opacity: 1; transform: none; }
+.hero__promo-lead {
+  font-family: var(--font-display); text-transform: uppercase; font-weight: 400;
+  font-size: clamp(20px, 2.2vw, 32px); line-height: 1.1; color: var(--white);
+}
+.hero__promo-lead strong { font-weight: 400; font-size: 1.15em; color: var(--accent-soft); }
+/* always stacked — an inline row of these orphans its separator whenever it wraps */
+.hero__promo-sub {
+  display: flex; flex-direction: column; gap: 5px; margin-top: 12px;
+  font-size: 11px; letter-spacing: 0.26em; text-transform: uppercase;
+  color: rgba(243, 240, 233, 0.75);
+}
+/* wide screens: the hero's right half is empty, so park the price there rather than
+   stacking it under the copy — keeps the price and the CTAs both above the fold. */
+@media (min-width: 1200px) {
+  .hero__promo {
+    position: absolute; bottom: clamp(48px, 8vh, 96px); z-index: 2;
+    /* clears the fixed .chat-orb (64px wide) parked in the same corner */
+    right: calc(var(--pad) + 76px); width: min(32vw, 430px); margin-top: 0;
+  }
+}
 .hero__scroll {
   position: absolute; left: 50%; bottom: 26px; transform: translateX(-50%); z-index: 2;
   width: 1px; height: 56px; background: var(--line); overflow: hidden;
@@ -725,6 +751,124 @@ body.menu-open .menu-list a { opacity: 1; transform: translateY(0); transition: 
 .video-feature__overlay span {
   font-family: var(--font-display); text-transform: uppercase; color: #fff;
   font-size: clamp(28px, 4.6vw, 76px); text-align: center; line-height: 1;
+}
+
+/* ---------- trainer grid + profile panel ---------- */
+.trainer-card { text-align: left; width: 100%; cursor: pointer; }
+.trainer-card .card__media { aspect-ratio: 1 / 1; }
+.trainer-card .card__label h3 { font-size: clamp(18px, 1.5vw, 24px); }
+.trainer-card .card__role {
+  display: block; margin-top: 6px; font-size: 10px; letter-spacing: 0.22em;
+  text-transform: uppercase; color: var(--accent-soft);
+}
+
+.trainer-panel {
+  position: fixed; inset: 0; z-index: 1550; display: flex;
+  align-items: center; justify-content: center; padding: var(--pad);
+  opacity: 0; visibility: hidden; transition: opacity .45s, visibility .45s;
+}
+.trainer-panel.is-open { opacity: 1; visibility: visible; }
+.trainer-panel__scrim { position: absolute; inset: 0; background: rgba(11,11,12,0.86); }
+.trainer-panel__inner {
+  position: relative; z-index: 2; background: var(--ink-2); border: 1px solid var(--line);
+  width: min(900px, 100%); max-height: 86vh; overflow-y: auto;
+  display: grid; grid-template-columns: 300px 1fr;
+  transform: translateY(18px); transition: transform .5s var(--ease-out);
+}
+.trainer-panel.is-open .trainer-panel__inner { transform: none; }
+.trainer-panel__media { background: var(--ink-3); }
+.trainer-panel__media img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.trainer-panel__body { padding: clamp(26px, 3vw, 42px); }
+.trainer-panel__body h3 {
+  font-family: var(--font-display); text-transform: uppercase; font-weight: 400;
+  font-size: clamp(26px, 3vw, 40px); line-height: 1.05;
+}
+.trainer-panel__role {
+  display: block; margin-top: 8px; font-size: 10px; letter-spacing: 0.26em;
+  text-transform: uppercase; color: var(--accent-soft);
+}
+.trainer-panel__close {
+  position: absolute; top: 14px; right: 14px; z-index: 3;
+  width: 42px; height: 42px; border-radius: 50%; border: 1px solid var(--line);
+  background: var(--ink); color: var(--bone); font-size: 17px; cursor: pointer;
+  transition: background .3s, border-color .3s;
+}
+.trainer-panel__close:hover { background: var(--accent); border-color: var(--accent); color: #fff; }
+.trainer-quote {
+  font-family: var(--font-serif); font-style: italic;
+  font-size: clamp(16px, 1.5vw, 20px); line-height: 1.5; color: var(--bone);
+  margin-top: 22px; padding-left: 18px; border-left: 2px solid var(--accent);
+}
+.trainer-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 22px; }
+.trainer-tags span {
+  font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase;
+  padding: 7px 12px; border: 1px solid var(--line); color: var(--muted);
+}
+.trainer-facts { margin-top: 26px; }
+.trainer-facts > div { padding: 12px 0; border-top: 1px solid var(--line); }
+.trainer-facts dt {
+  font-size: 10px; letter-spacing: 0.24em; text-transform: uppercase;
+  color: var(--accent-soft); margin-bottom: 6px;
+}
+.trainer-facts dd { color: var(--muted); font-size: 14.5px; line-height: 1.55; }
+
+@media (max-width: 720px) {
+  .trainer-panel__inner { grid-template-columns: 1fr; max-height: 88vh; }
+  .trainer-panel__media { aspect-ratio: 3 / 2; }
+}
+
+/* ---------- photo slideshow ---------- */
+.slideshow { position: relative; }
+.slideshow__stage {
+  /* aspect-ratio is set inline per location: every photo in a given gallery
+     shares one ratio, so the frame matches the source and nothing is cropped */
+  position: relative; width: 100%; aspect-ratio: 16/9; overflow: hidden;
+  background: var(--ink-2); border: 1px solid var(--line);
+  /* keep the frame and its controls on screen together on tall ratios */
+  max-height: min(70vh, 660px);
+}
+.slideshow__slide {
+  position: absolute; inset: 0; opacity: 0; transition: opacity .55s var(--ease-out);
+  pointer-events: none;
+}
+.slideshow__slide.is-on { opacity: 1; pointer-events: auto; }
+.slideshow__slide img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.slideshow__bar {
+  display: flex; align-items: center; gap: clamp(14px, 2vw, 26px);
+  margin-top: 18px; flex-wrap: wrap;
+}
+.slideshow__btn {
+  width: 46px; height: 46px; flex: none; border: 1px solid var(--line); background: none;
+  color: inherit; font-size: 17px; cursor: pointer; border-radius: 50%;
+  transition: background .35s, color .35s, border-color .35s;
+}
+.slideshow__btn:hover { background: var(--accent); border-color: var(--accent); color: #fff; }
+.slideshow__count {
+  font-family: var(--font-display); font-size: 15px; letter-spacing: .06em; flex: none;
+}
+.slideshow__cap { font-size: 14px; line-height: 1.5; color: var(--muted); flex: 1 1 240px; min-width: 0; }
+.section--light .slideshow__stage { border-color: var(--line-dark); background: var(--bone-2); }
+.section--light .slideshow__btn { border-color: var(--line-dark); }
+.section--light .slideshow__cap { color: var(--muted-dark); }
+@media (max-width: 720px) {
+  /* a 3.4:1 panorama would be a ~98px sliver at phone widths — give the frame a
+     floor and let object-fit: cover crop the sides instead */
+  .slideshow__stage { min-height: 210px; }
+  .slideshow__cap { order: 3; flex-basis: 100%; }
+}
+
+/* ---------- responsive third-party embeds (virtual tour, photo gallery) ---------- */
+.embed { position: relative; width: 100%; aspect-ratio: 16/9; overflow: hidden; background: #000; border: 1px solid var(--line); }
+.embed iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; display: block; }
+.embed--tall { aspect-ratio: 4/3; }
+/* fixed-height frame for a tall third-party widget (the class schedule): the
+   content is ~18,000px, so give it real height instead of a video ratio.
+   aspect-ratio must be reset explicitly or 16/9 still competes with height. */
+.embed--fixed { aspect-ratio: auto; height: clamp(700px, 85vh, 1100px); background: var(--white); }
+.section--light .embed { border-color: var(--line-dark); }
+@media (max-width: 720px) {
+  .embed--tall { aspect-ratio: 1/1; }
+  .embed--fixed { height: 78vh; min-height: 560px; }
 }
 
 /* ---------- temps (hot yoga) ---------- */

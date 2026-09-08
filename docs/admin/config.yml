@@ -25,11 +25,20 @@ collections:
       - { name: body, label: "Post Content", widget: markdown }
   - name: staff
     label: "Staff & Trainers"
+    label_singular: "Trainer"
     folder: "content/staff"
     create: true
     slug: "{{slug}}"
+    summary: "{{name}}  —  {{role}}"
+    sortable_fields: [order, name]
     fields:
       - { name: name, label: "Name", widget: string }
-      - { name: role, label: "Role", widget: string }
-      - { name: photo, label: "Photo", widget: image, required: false }
-      - { name: body, label: "Bio", widget: markdown, required: false }
+      - { name: role, label: "Role", widget: string, default: "Personal Trainer" }
+      - { name: photo, label: "Photo", widget: image, required: false, media_folder: "docs/assets/img/staff", public_folder: "/assets/img/staff" }
+      - { name: order, label: "Display order (e.g. 01)", widget: string, required: false }
+      - { name: specialties, label: "Specialties (comma separated)", widget: string, required: false }
+      - { name: hometown, label: "Hometown", widget: string, required: false }
+      - { name: education, label: "Education", widget: string, required: false }
+      - { name: certifications, label: "Certifications", widget: string, required: false }
+      - { name: hobbies, label: "Hobbies", widget: string, required: false }
+      - { name: body, label: "Message from this trainer", widget: markdown, required: false }
