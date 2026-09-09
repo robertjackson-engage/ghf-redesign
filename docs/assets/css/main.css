@@ -133,10 +133,10 @@ body.menu-open .nav-desktop, body.menu-open .header-cta .btn { opacity: 0; point
 .site-header.is-scrolled .site-header__inner { height: 66px; }
 .brand { display: flex; align-items: baseline; gap: 10px; z-index: 1102; position: relative; }
 /* real Gainesville logo — white in dark header/menu/footer (monochrome art) */
-.brand__logo { height: 34px; width: auto; filter: brightness(0) invert(1); transition: height .45s var(--ease-out); }
-.site-header.is-scrolled .brand__logo { height: 28px; }
+.brand__logo { height: 48px; width: auto; filter: brightness(0) invert(1); transition: height .45s var(--ease-out); }
+.site-header.is-scrolled .brand__logo { height: 39px; }
 .brand--footer .brand__logo { height: 46px; }
-@media (max-width: 820px) { .brand__logo { height: 28px; } }
+@media (max-width: 820px) { .brand__logo { height: 39px; } }
 
 .nav-desktop { display: flex; align-items: center; gap: clamp(18px, 2.4vw, 38px); }
 .nav-desktop > a {
@@ -151,6 +151,8 @@ body.menu-open .nav-desktop, body.menu-open .header-cta .btn { opacity: 0; point
 .nav-desktop > a:hover::after, .nav-desktop > a.is-active::after { transform: scaleX(1); transform-origin: left; }
 
 .header-cta { display: flex; align-items: center; gap: 14px; }
+/* header CTAs: solid cobalt, hover inverts to white */
+.header-cta .btn--solid::before { background: var(--white); }
 
 .btn {
   display: inline-flex; align-items: center; gap: 12px;
@@ -286,6 +288,32 @@ body.menu-open .menu-list a { opacity: 1; transform: translateY(0); transition: 
   opacity: 0; transition: opacity 1s ease 1s;
 }
 .is-loaded .hero__meta { opacity: 1; }
+.hero__promo {
+  margin-top: clamp(24px, 3.6vh, 40px); padding-left: clamp(16px, 1.6vw, 24px);
+  border-left: 2px solid var(--accent);
+  opacity: 0; transform: translateY(24px); transition: opacity .9s ease .9s, transform .9s var(--ease-out) .9s;
+}
+.is-loaded .hero__promo { opacity: 1; transform: none; }
+.hero__promo-lead {
+  font-family: var(--font-display); text-transform: uppercase; font-weight: 400;
+  font-size: clamp(20px, 2.2vw, 32px); line-height: 1.1; color: var(--white);
+}
+.hero__promo-lead strong { font-weight: 400; font-size: 1.15em; color: var(--accent-soft); }
+/* always stacked — an inline row of these orphans its separator whenever it wraps */
+.hero__promo-sub {
+  display: flex; flex-direction: column; gap: 5px; margin-top: 12px;
+  font-size: 11px; letter-spacing: 0.26em; text-transform: uppercase;
+  color: rgba(243, 240, 233, 0.75);
+}
+/* wide screens: the hero's right half is empty, so park the price there rather than
+   stacking it under the copy — keeps the price and the CTAs both above the fold. */
+@media (min-width: 1200px) {
+  .hero__promo {
+    position: absolute; bottom: clamp(48px, 8vh, 96px); z-index: 2;
+    /* clears the fixed .chat-orb (64px wide) parked in the same corner */
+    right: calc(var(--pad) + 76px); width: min(32vw, 430px); margin-top: 0;
+  }
+}
 .hero__scroll {
   position: absolute; left: 50%; bottom: 26px; transform: translateX(-50%); z-index: 2;
   width: 1px; height: 56px; background: var(--line); overflow: hidden;
@@ -727,6 +755,124 @@ body.menu-open .menu-list a { opacity: 1; transform: translateY(0); transition: 
   font-size: clamp(28px, 4.6vw, 76px); text-align: center; line-height: 1;
 }
 
+/* ---------- trainer grid + profile panel ---------- */
+.trainer-card { text-align: left; width: 100%; cursor: pointer; }
+.trainer-card .card__media { aspect-ratio: 1 / 1; }
+.trainer-card .card__label h3 { font-size: clamp(18px, 1.5vw, 24px); }
+.trainer-card .card__role {
+  display: block; margin-top: 6px; font-size: 10px; letter-spacing: 0.22em;
+  text-transform: uppercase; color: var(--accent-soft);
+}
+
+.trainer-panel {
+  position: fixed; inset: 0; z-index: 1550; display: flex;
+  align-items: center; justify-content: center; padding: var(--pad);
+  opacity: 0; visibility: hidden; transition: opacity .45s, visibility .45s;
+}
+.trainer-panel.is-open { opacity: 1; visibility: visible; }
+.trainer-panel__scrim { position: absolute; inset: 0; background: rgba(11,11,12,0.86); }
+.trainer-panel__inner {
+  position: relative; z-index: 2; background: var(--ink-2); border: 1px solid var(--line);
+  width: min(900px, 100%); max-height: 86vh; overflow-y: auto;
+  display: grid; grid-template-columns: 300px 1fr;
+  transform: translateY(18px); transition: transform .5s var(--ease-out);
+}
+.trainer-panel.is-open .trainer-panel__inner { transform: none; }
+.trainer-panel__media { background: var(--ink-3); }
+.trainer-panel__media img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.trainer-panel__body { padding: clamp(26px, 3vw, 42px); }
+.trainer-panel__body h3 {
+  font-family: var(--font-display); text-transform: uppercase; font-weight: 400;
+  font-size: clamp(26px, 3vw, 40px); line-height: 1.05;
+}
+.trainer-panel__role {
+  display: block; margin-top: 8px; font-size: 10px; letter-spacing: 0.26em;
+  text-transform: uppercase; color: var(--accent-soft);
+}
+.trainer-panel__close {
+  position: absolute; top: 14px; right: 14px; z-index: 3;
+  width: 42px; height: 42px; border-radius: 50%; border: 1px solid var(--line);
+  background: var(--ink); color: var(--bone); font-size: 17px; cursor: pointer;
+  transition: background .3s, border-color .3s;
+}
+.trainer-panel__close:hover { background: var(--accent); border-color: var(--accent); color: #fff; }
+.trainer-quote {
+  font-family: var(--font-serif); font-style: italic;
+  font-size: clamp(16px, 1.5vw, 20px); line-height: 1.5; color: var(--bone);
+  margin-top: 22px; padding-left: 18px; border-left: 2px solid var(--accent);
+}
+.trainer-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 22px; }
+.trainer-tags span {
+  font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase;
+  padding: 7px 12px; border: 1px solid var(--line); color: var(--muted);
+}
+.trainer-facts { margin-top: 26px; }
+.trainer-facts > div { padding: 12px 0; border-top: 1px solid var(--line); }
+.trainer-facts dt {
+  font-size: 10px; letter-spacing: 0.24em; text-transform: uppercase;
+  color: var(--accent-soft); margin-bottom: 6px;
+}
+.trainer-facts dd { color: var(--muted); font-size: 14.5px; line-height: 1.55; }
+
+@media (max-width: 720px) {
+  .trainer-panel__inner { grid-template-columns: 1fr; max-height: 88vh; }
+  .trainer-panel__media { aspect-ratio: 3 / 2; }
+}
+
+/* ---------- photo slideshow ---------- */
+.slideshow { position: relative; }
+.slideshow__stage {
+  /* aspect-ratio is set inline per location: every photo in a given gallery
+     shares one ratio, so the frame matches the source and nothing is cropped */
+  position: relative; width: 100%; aspect-ratio: 16/9; overflow: hidden;
+  background: var(--ink-2); border: 1px solid var(--line);
+  /* keep the frame and its controls on screen together on tall ratios */
+  max-height: min(70vh, 660px);
+}
+.slideshow__slide {
+  position: absolute; inset: 0; opacity: 0; transition: opacity .55s var(--ease-out);
+  pointer-events: none;
+}
+.slideshow__slide.is-on { opacity: 1; pointer-events: auto; }
+.slideshow__slide img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.slideshow__bar {
+  display: flex; align-items: center; gap: clamp(14px, 2vw, 26px);
+  margin-top: 18px; flex-wrap: wrap;
+}
+.slideshow__btn {
+  width: 46px; height: 46px; flex: none; border: 1px solid var(--line); background: none;
+  color: inherit; font-size: 17px; cursor: pointer; border-radius: 50%;
+  transition: background .35s, color .35s, border-color .35s;
+}
+.slideshow__btn:hover { background: var(--accent); border-color: var(--accent); color: #fff; }
+.slideshow__count {
+  font-family: var(--font-display); font-size: 15px; letter-spacing: .06em; flex: none;
+}
+.slideshow__cap { font-size: 14px; line-height: 1.5; color: var(--muted); flex: 1 1 240px; min-width: 0; }
+.section--light .slideshow__stage { border-color: var(--line-dark); background: var(--bone-2); }
+.section--light .slideshow__btn { border-color: var(--line-dark); }
+.section--light .slideshow__cap { color: var(--muted-dark); }
+@media (max-width: 720px) {
+  /* a 3.4:1 panorama would be a ~98px sliver at phone widths — give the frame a
+     floor and let object-fit: cover crop the sides instead */
+  .slideshow__stage { min-height: 210px; }
+  .slideshow__cap { order: 3; flex-basis: 100%; }
+}
+
+/* ---------- responsive third-party embeds (virtual tour, photo gallery) ---------- */
+.embed { position: relative; width: 100%; aspect-ratio: 16/9; overflow: hidden; background: #000; border: 1px solid var(--line); }
+.embed iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; display: block; }
+.embed--tall { aspect-ratio: 4/3; }
+/* fixed-height frame for a tall third-party widget (the class schedule): the
+   content is ~18,000px, so give it real height instead of a video ratio.
+   aspect-ratio must be reset explicitly or 16/9 still competes with height. */
+.embed--fixed { aspect-ratio: auto; height: clamp(700px, 85vh, 1100px); background: var(--white); }
+.section--light .embed { border-color: var(--line-dark); }
+@media (max-width: 720px) {
+  .embed--tall { aspect-ratio: 1/1; }
+  .embed--fixed { height: 78vh; min-height: 560px; }
+}
+
 /* ---------- temps (hot yoga) ---------- */
 .temps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); }
 .temp { background: var(--ink); padding: clamp(34px, 4vw, 60px) clamp(26px, 3vw, 44px); position: relative; overflow: hidden; transition: background .5s; }
@@ -953,104 +1099,15 @@ body.menu-open .menu-list a { opacity: 1; transform: translateY(0); transition: 
 }
 
 /* ============================================================
-   Brand mark · Guest/Member experience
+   Brand mark
    ============================================================ */
 .brand { align-items: center; }
 .brand__icon { width: 30px; height: 30px; color: var(--accent); flex: 0 0 auto; }
 .preloader__icon { width: 60px; height: 60px; color: var(--accent); margin-bottom: 20px; animation: preFade .9s ease both; }
 .site-footer .brand__icon { width: 26px; height: 26px; }
 
-/* view toggle (header) */
-.view-toggle { display: inline-flex; border: 1px solid var(--line); border-radius: 999px; padding: 3px; }
-.view-toggle button {
-  padding: 7px 14px; border-radius: 999px;
-  font-size: 9.5px; letter-spacing: 0.16em; text-transform: uppercase; font-weight: 600;
-  color: var(--muted); transition: background .35s, color .35s;
-}
-html[data-view="guest"] .view-toggle [data-view-set="guest"],
-html[data-view="member"] .view-toggle [data-view-set="member"] { background: var(--bone); color: var(--ink); }
-
 /* two header CTAs is tight mid-width — keep Join Online, tuck Get Pricing away */
 @media (max-width: 1420px) { .header-pricing { display: none; } }
-
-/* view-scoped content */
-html[data-view="guest"] .only-member { display: none !important; }
-html[data-view="member"] .only-guest { display: none !important; }
-
-/* member quick-links strip */
-.member-strip { background: var(--ink-2); border-bottom: 1px solid var(--line); }
-.member-strip .wrap { display: flex; gap: clamp(18px, 3vw, 44px); align-items: center; overflow-x: auto; padding-top: 16px; padding-bottom: 16px; scrollbar-width: none; }
-.member-strip .wrap::-webkit-scrollbar { display: none; }
-.member-strip .hello { font-family: var(--font-serif); font-style: italic; font-size: 19px; color: var(--accent-soft); white-space: nowrap; }
-.member-strip a {
-  font-size: 10.5px; letter-spacing: 0.2em; text-transform: uppercase; font-weight: 600;
-  white-space: nowrap; color: var(--bone); padding: 6px 0; border-bottom: 1px solid transparent;
-  transition: color .3s, border-color .3s;
-}
-.member-strip a:hover { color: var(--accent); border-color: var(--accent); }
-
-/* full-screen experience chooser */
-.view-chooser {
-  position: fixed; inset: 0; z-index: 1600; background: var(--ink);
-  display: flex; flex-direction: column;
-  opacity: 0; visibility: hidden; transition: opacity .6s ease, visibility .6s;
-}
-body.choice-open .view-chooser { opacity: 1; visibility: visible; }
-body.choice-done .view-chooser {
-  transform: translateY(-100%); opacity: 1; visibility: visible;
-  transition: transform .9s var(--ease-power);
-}
-.view-chooser__head { text-align: center; padding: clamp(28px, 6vh, 64px) var(--pad) clamp(16px, 3vh, 30px); }
-.view-chooser__head .kicker {
-  font-size: 10px; letter-spacing: 0.34em; text-transform: uppercase; color: var(--muted);
-  display: block; margin-bottom: 14px;
-}
-.view-chooser__head h2 {
-  font-family: var(--font-serif); font-style: italic; font-weight: 400;
-  font-size: clamp(28px, 4.2vw, 52px); line-height: 1.1;
-}
-.view-chooser__panels { flex: 1; display: flex; gap: 2px; min-height: 0; }
-.vc-panel {
-  position: relative; flex: 1; overflow: hidden; cursor: pointer; text-align: left;
-  color: var(--bone); transition: flex .85s var(--ease-power);
-}
-.vc-panel:hover, .vc-panel:focus-visible { flex: 1.6; }
-.vc-panel img {
-  position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;
-  opacity: 0.4; transition: opacity .7s, transform 1.4s var(--ease-out);
-}
-.vc-panel:hover img { opacity: 0.68; transform: scale(1.04); }
-.vc-panel::after {
-  content: ""; position: absolute; inset: 0;
-  background: linear-gradient(to top, rgba(11,11,12,0.88), transparent 60%);
-}
-.vc-panel__body { position: absolute; left: clamp(24px, 4vw, 56px); right: clamp(24px, 4vw, 56px); bottom: clamp(24px, 5vh, 56px); z-index: 2; }
-.vc-panel__kicker { font-size: 10px; letter-spacing: 0.3em; text-transform: uppercase; color: var(--accent-soft); display: block; margin-bottom: 12px; font-weight: 600; }
-.vc-panel h3 {
-  font-family: var(--font-display); text-transform: uppercase; font-weight: 400;
-  font-size: clamp(34px, 4.6vw, 64px); line-height: 1;
-}
-.vc-panel h3 .serif { font-family: var(--font-serif); font-style: italic; text-transform: none; color: var(--accent-soft); }
-.vc-panel p { color: rgba(243,240,233,0.75); margin-top: 10px; font-size: 14.5px; max-width: 40ch; }
-.vc-panel .go {
-  display: inline-flex; align-items: center; gap: 10px; margin-top: 18px;
-  font-size: 10px; letter-spacing: 0.28em; text-transform: uppercase; color: var(--bone);
-  opacity: 0; transform: translateY(8px); transition: opacity .5s, transform .5s var(--ease-out);
-}
-.vc-panel:hover .go { opacity: 1; transform: none; }
-.vc-skip {
-  position: absolute; top: clamp(20px, 4vh, 40px); right: var(--pad); z-index: 3;
-  font-size: 10px; letter-spacing: 0.26em; text-transform: uppercase; color: var(--muted);
-  transition: color .3s;
-}
-.vc-skip:hover { color: var(--accent); }
-
-@media (max-width: 820px) {
-  .view-chooser__panels { flex-direction: column; }
-  .vc-panel:hover { flex: 1.35; }
-  .vc-panel h3 { font-size: clamp(28px, 8vw, 40px); }
-  .member-strip .hello { font-size: 16px; }
-}
 
 /* ============================================================
    GHF Coach — AI concierge
