@@ -51,6 +51,9 @@
     if (!a || a.target || e.metaKey || e.ctrlKey || e.shiftKey) return;
     var href = a.getAttribute("href");
     if (!href || href.charAt(0) === "#" || /^(https?:|tel:|mailto:)/.test(href)) return;
+    /* a download (e.g. the schedule's .ics blob) is not a page navigation —
+       without this the page fades out and tries to navigate to blob:/data: */
+    if (a.hasAttribute("download") || /^(blob:|data:)/.test(href)) return;
     var url = new URL(a.href, location.href);
     if (url.pathname === location.pathname && url.hash) return; /* same-page anchor */
     e.preventDefault();

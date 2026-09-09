@@ -220,16 +220,13 @@
         "<div><dt>Studio</dt><dd>" + esc(c.location) + "</dd></div>" +
       "</dl>" +
       '<div class="gx-cal">' +
-        '<div class="gx-cal__scope" role="group" aria-label="Calendar scope">' +
-          '<button type="button" class="is-on" data-scope="one">This class only</button>' +
-          '<button type="button" data-scope="all">All in next 8 days</button>' +
-        "</div>" +
         '<div class="gx-cal__links">' +
           '<span class="gx-cal__label">Add to calendar</span>' +
           '<a class="gx-cal__btn" data-cal="google" href="#" target="_blank" rel="noopener">Google</a>' +
           '<button type="button" class="gx-cal__btn" data-cal="apple">Apple</button>' +
           '<a class="gx-cal__btn" data-cal="outlook" href="#" target="_blank" rel="noopener">Outlook</a>' +
         "</div>" +
+        '<p class="gx-cal__hint">Add it once, then set it to repeat in your calendar.</p>' +
       "</div>";
 
     return '<article class="gx-class" data-id="' + esc(c.id) + '" data-tone="' + esc(tone) + '">' +
@@ -283,7 +280,7 @@
 
   /* Mutates the rows already in the DOM. Deliberately does NOT call render():
      that replaces elDays.innerHTML wholesale and would collapse any expanded
-     row and reset its calendar scope on every tick. */
+     row on every tick. */
   function markTime() {
     var now = Date.now();
     var rows = elDays.querySelectorAll(".gx-class");
@@ -374,13 +371,6 @@
     return clean(iso).replace(/[-:]/g, "").replace(/\.\d{3}/, "");
   }
 
-  function seriesFor(c, scope) {
-    if (scope !== "all") return [c];
-    return all.filter(function (x) {
-      return x.name === c.name && x.time === c.time && x.room === c.room && x.site === c.site;
-    });
-  }
-
   function calTitle(c) {
     return c.name + " — Gainesville Health & Fitness";
   }
@@ -414,8 +404,6 @@
       .replace(/,/g, "\\,").replace(/\n/g, "\\n");
   }
 
-  /* one VEVENT per real occurrence — the API exposes no recurrence rule, so
-     emitting an RRULE would go stale the moment the timetable changes */
   function icsFor(list) {
     var now = stamp(new Date().toISOString());
     var lines = ["BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//Gainesville Health & Fitness//GX Schedule//EN", "CALSCALE:GREGORIAN"];
@@ -434,14 +422,15 @@
     return lines.join("\r\n");
   }
 
-  function downloadIcs(c, scope) {
-    var list = seriesFor(c, scope);
+  function downloadIcs(c) {
     var name = (c.name || "class").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
-    var blob = new Blob([icsFor(list)], { type: "text/calendar;charset=utf-8" });
+    var blob = new Blob([icsFor([c])], { type: "text/calendar;charset=utf-8" });
     var url = URL.createObjectURL(blob);
     var a = document.createElement("a");
     a.href = url;
     a.download = "ghf-" + name + ".ics";
+    /* keep the synthetic click off main.js's document-level link handler */
+    a.addEventListener("click", function (ev) { ev.stopPropagation(); });
     document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);
@@ -516,21 +505,12 @@
         return;
       }
 
-      var scope = e.target.closest("[data-scope]");
-      if (scope) {
-        var box = scope.closest(".gx-cal__scope");
-        box.querySelectorAll("[data-scope]").forEach(function (x) { x.classList.remove("is-on"); });
-        scope.classList.add("is-on");
-        syncCal(scope.closest(".gx-class"));
-        return;
-      }
-
       var apple = e.target.closest('[data-cal="apple"]');
       if (apple) {
         e.preventDefault();
         var card2 = apple.closest(".gx-class");
         var c = byId(card2.getAttribute("data-id"));
-        if (c) downloadIcs(c, currentScope(card2));
+        if (c) downloadIcs(c);
       }
     });
 
@@ -546,20 +526,11 @@
     bindLightbox();
   }
 
-  function currentScope(card) {
-    var on = card.querySelector(".gx-cal__scope .is-on");
-    return on ? on.getAttribute("data-scope") : "one";
-  }
-
   function syncCal(card) {
     var c = byId(card.getAttribute("data-id"));
     if (!c) return;
-    /* Google and Outlook take a single event; "all" is served by the .ics */
     card.querySelector('[data-cal="google"]').href = googleUrl(c);
     card.querySelector('[data-cal="outlook"]').href = outlookUrl(c);
-    var many = currentScope(card) === "all";
-    var n = many ? seriesFor(c, "all").length : 1;
-    card.querySelector('[data-cal="apple"]').textContent = many ? "Apple (" + n + ")" : "Apple";
   }
 
   function resetAll() {

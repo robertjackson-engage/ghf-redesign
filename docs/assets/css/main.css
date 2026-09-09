@@ -1274,12 +1274,6 @@ body.menu-open .menu-list a { opacity: 1; transform: translateY(0); transition: 
 
 /* ---------- add to calendar ---------- */
 .gx-cal { display: flex; flex-wrap: wrap; align-items: center; gap: 22px 30px; }
-.gx-cal__scope { display: inline-flex; border: 1px solid var(--gx-line); }
-.gx-cal__scope button {
-  padding: 9px 15px; font-size: 9.5px; letter-spacing: 0.14em; text-transform: uppercase;
-  font-weight: 600; color: var(--gx-muted); transition: background .3s, color .3s;
-}
-.gx-cal__scope button.is-on { background: var(--ink); color: var(--bone); }
 .gx-cal__links { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
 .gx-cal__label { font-size: 9.5px; letter-spacing: 0.24em; text-transform: uppercase; color: var(--gx-muted); margin-right: 2px; }
 .gx-cal__btn {
@@ -1288,6 +1282,7 @@ body.menu-open .menu-list a { opacity: 1; transform: translateY(0); transition: 
   transition: background .35s, color .35s, border-color .35s;
 }
 .gx-cal__btn:hover { background: var(--accent); border-color: var(--accent); color: #fff; }
+.gx-cal__hint { flex: 1 0 100%; margin-top: -6px; font-size: 12.5px; color: var(--gx-muted); }
 
 /* ---------- responsive ---------- */
 @media (max-width: 1100px) {
@@ -1308,8 +1303,7 @@ body.menu-open .menu-list a { opacity: 1; transform: translateY(0); transition: 
   .gx-class__chev { grid-area: chev; align-self: start; }
   .gx-class__facts { grid-template-columns: 1fr; margin-bottom: 18px; }
   .gx-cal { gap: 16px; }
-  .gx-cal__scope, .gx-cal__links { width: 100%; }
-  .gx-cal__scope button { flex: 1; }
+  .gx-cal__links { width: 100%; }
 }
 
 
