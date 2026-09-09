@@ -205,9 +205,6 @@ def head(title, desc):
 <link rel="stylesheet" href="assets/css/main.css?v={V}">
 <script>(function(){{try{{
   if(sessionStorage.getItem("ghf-intro"))document.documentElement.classList.add("no-preloader");
-  var v=localStorage.getItem("ghf-view");
-  document.documentElement.setAttribute("data-view", v==="member"?"member":"guest");
-  if(v||sessionStorage.getItem("ghf-view-skip"))document.documentElement.classList.add("has-view");
 }}catch(e){{}}}})();</script>
 </head>
 <body>
@@ -235,13 +232,9 @@ def header_html(active=""):
     </a>
     <nav class="nav-desktop" aria-label="Primary">{links}</nav>
     <div class="header-cta">
-      <div class="view-toggle" role="group" aria-label="View site as">
-        <button type="button" data-view-set="guest">Guest</button>
-        <button type="button" data-view-set="member">Member</button>
-      </div>
-      <a class="btn btn--sm only-guest header-pricing" href="contact.html#pricing">Get Pricing</a>
-      <a class="btn btn--solid btn--sm only-guest" href="join.html">Join Online</a>
-      <a class="btn btn--solid btn--sm only-member" href="group-fitness.html#schedule">Class Schedule</a>
+      <a class="btn btn--solid btn--sm" href="join.html">Join Online</a>
+      <a class="btn btn--solid btn--sm" href="ghf-pass.html#claim">Free Pass</a>
+      <a class="btn btn--solid btn--sm header-pricing" href="contact.html#pricing">Get Pricing</a>
       <button class="menu-toggle" aria-expanded="false" aria-label="Open menu">
         <span>Menu</span>
         <span class="menu-toggle__icon"><i></i><i></i></span>
@@ -577,51 +570,6 @@ def page(filename, title, desc, active, body):
 
 
 # ============================================================ HOME
-view_chooser = f"""
-<div class="view-chooser" role="dialog" aria-label="Choose your experience">
-  <button class="vc-skip" type="button">Just browsing →</button>
-  <div class="view-chooser__head">
-    <span class="kicker">Welcome to Gainesville Health &amp; Fitness</span>
-    <h2>How are you visiting today?</h2>
-  </div>
-  <div class="view-chooser__panels">
-    <button class="vc-panel" type="button" data-choose="guest">
-      <img src="{IMG}/Tioga_Carrie_Grotto_Arm_Cross_Facility_2022.jpg" alt="">
-      <div class="vc-panel__body">
-        <span class="vc-panel__kicker">First time here?</span>
-        <h3>I'm a <span class="serif">guest</span></h3>
-        <p>Tour the club, get pricing, and claim your <a href="ghf-pass.html#claim">free all-access pass</a>.</p>
-        <span class="go">Show me around →</span>
-      </div>
-    </button>
-    <button class="vc-panel" type="button" data-choose="member">
-      <img src="{IMG}/GHF_Leg_Den_Leg_Day_Exercise_Fitness_Squats_Deadlifts_2025-2.jpg" alt="">
-      <div class="vc-panel__body">
-        <span class="vc-panel__kicker">Welcome back</span>
-        <h3>I'm a <span class="serif">member</span></h3>
-        <p>Class schedules, club hours, Kid's Club, and your member perks.</p>
-        <span class="go">Take me in →</span>
-      </div>
-    </button>
-  </div>
-</div>
-"""
-
-member_strip = """
-<div class="member-strip only-member">
-  <div class="wrap">
-    <span class="hello">Welcome back.</span>
-    <a href="group-fitness.html#schedule">Class Schedules</a>
-    <a href="hot-yoga.html">Hot Yoga</a>
-    <a href="kids-club.html#hours">Kid's Club Hours</a>
-    <a href="pool.html">Pool &amp; Spa</a>
-    <a href="locations.html">Locations &amp; Hours</a>
-    <a href="member-savings.html">Member Savings</a>
-    <a href="bring-a-guest.html">Bring a Guest</a>
-  </div>
-</div>
-"""
-
 home_steps = f"""
 <section class="section section--tight">
   <div class="wrap">
@@ -651,20 +599,18 @@ home_steps = f"""
 </section>
 """
 
-home_body = view_chooser + hero(
+home_body = hero(
     "Gainesville's most-loved gym — 45 years strong",
     ["Walk in unsure.", 'Walk out <span class="serif">stronger</span>.'],
     "Starting is the hardest part — so we made it the easiest. From your very first visit, a real coach walks the floor with you, builds your plan, and shows you the ropes. No guesswork. No intimidation. Just results.",
     video=f"assets/video/ghf-walkthrough.mp4",
     poster=f"{IMG}/Free_Weights_Gainesville_Health_and_Fiitness_2021_1_(1).jpg",
     actions=[
-        ("Claim Your Free Fitness Pass", "ghf-pass.html#claim", True, "only-guest"),
-        ("See What's Inside", "amenities.html", False, "only-guest"),
-        ("View Class Schedule", "group-fitness.html#schedule", True, "only-member"),
-        ("Bring a Friend Free", "bring-a-guest.html", False, "only-member"),
+        ("Claim Your Free Fitness Pass", "ghf-pass.html#claim", True),
+        ("See What's Inside", "amenities.html", False),
     ],
     meta=["Free coaching on every visit", "Open 24/7 at GHF Main", "900+ classes included"],
-) + member_strip + marquee(["Strength", "Cardio", "Hot Yoga", "Pilates", "Indoor Pool", "Sauna", "Recovery", "Fitness Classes", "Personal Training"]) + f"""
+) + marquee(["Strength", "Cardio", "Hot Yoga", "Pilates", "Indoor Pool", "Sauna", "Recovery", "Fitness Classes", "Personal Training"]) + f"""
 <section class="section">
   <div class="wrap">
     <div class="intro-grid">

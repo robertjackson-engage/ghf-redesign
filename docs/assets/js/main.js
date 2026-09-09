@@ -5,48 +5,10 @@
   var docEl = document.documentElement;
   docEl.classList.add("js");
 
-  /* ---------- guest/member view ---------- */
-  function setView(v, persist) {
-    docEl.setAttribute("data-view", v);
-    if (persist !== false) {
-      try { localStorage.setItem("ghf-view", v); } catch (e) {}
-      docEl.classList.add("has-view");
-    }
-  }
-  document.querySelectorAll("[data-view-set]").forEach(function (b) {
-    b.addEventListener("click", function () { setView(b.getAttribute("data-view-set")); });
-  });
-
-  /* ---------- preloader intro + experience chooser sequencing ---------- */
+  /* ---------- preloader intro sequencing ---------- */
   var pre = document.querySelector(".preloader");
   var skipIntro = docEl.classList.contains("no-preloader");
-  var chooser = document.querySelector(".view-chooser");
-  var needChoice = chooser && !docEl.classList.contains("has-view");
-
-  function reveal() { document.body.classList.add("is-loaded"); }
-
-  function ready() {
-    if (!needChoice) { reveal(); return; }
-    document.body.classList.add("choice-open");
-    chooser.querySelectorAll("[data-choose]").forEach(function (p) {
-      p.addEventListener("click", function () {
-        setView(p.getAttribute("data-choose"));
-        finishChoice();
-      });
-    });
-    var skip = chooser.querySelector(".vc-skip");
-    if (skip) skip.addEventListener("click", function () {
-      setView("guest", false);
-      try { sessionStorage.setItem("ghf-view-skip", "1"); } catch (e) {}
-      finishChoice();
-    });
-  }
-  function finishChoice() {
-    document.body.classList.remove("choice-open");
-    document.body.classList.add("choice-done");
-    setTimeout(reveal, 350);
-    setTimeout(function () { chooser.remove(); document.body.classList.remove("choice-done"); }, 1000);
-  }
+  function ready() { document.body.classList.add("is-loaded"); }
 
   if (!pre || skipIntro) {
     if (pre) pre.remove();
