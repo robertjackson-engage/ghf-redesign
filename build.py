@@ -2302,6 +2302,7 @@ join_body = hero(
   </div>
 </section>
 
+<script>window.GHF_JOIN_API={JOIN_API_JSON};</script>
 <script src="assets/js/join.js?v={V}" defer></script>
 """ + cta_band(
     'Or call <span class="serif">(352) 377-4955</span> today',
