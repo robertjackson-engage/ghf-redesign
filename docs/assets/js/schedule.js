@@ -35,6 +35,13 @@
   var elStatus = root.querySelector(".gx__status");
   var elDays = root.querySelector(".gx__days");
   var elFilters = root.querySelector(".gx__filters");
+  var elNow = root.querySelector(".gx__now");
+  var lb = root.querySelector(".gx-lb");
+  var lbImg = lb && lb.querySelector(".gx-lb__img");
+  var lbName = lb && lb.querySelector(".gx-lb__name");
+  var lbClose = lb && lb.querySelector(".gx-lb__close");
+  var lbLastFocus = null;
+  var TICK = 30000;
 
   /* ---------- helpers ---------- */
 
@@ -111,6 +118,9 @@
           duration: clean(c.duration),
           startTime: clean(c.startTime),
           endTime: clean(c.endTime),
+          /* true UTC instants — correct in every viewer timezone */
+          _start: Date.parse(c.startTime) || 0,
+          _end: Date.parse(c.endTime) || 0,
           site: clean(c.site),
           room: clean(c.room),
           location: clean(c.location),
@@ -182,8 +192,14 @@
 
   function classHtml(c) {
     var tone = SITE_TONE[c.site] || "main";
+    var whoName = titleCase(c.instructor);
+    /* a photo is clickable (role/tabindex, not <button> — this sits inside the
+       row's own <button>); initials stay inert */
     var photo = c.photo
-      ? '<img class="gx-class__avatar" src="' + esc(c.photo) + '" alt="" loading="lazy" width="34" height="34">'
+      ? '<img class="gx-class__avatar gx-class__avatar--zoom" src="' + esc(c.photo) +
+        '" alt="' + esc(whoName) + '" title="View photo of ' + esc(whoName) +
+        '" role="button" tabindex="0" data-photo="' + esc(c.photo) +
+        '" data-who="' + esc(whoName) + '" loading="lazy" width="34" height="34">'
       : (c.instructor
           ? '<span class="gx-class__avatar gx-class__avatar--initials" aria-hidden="true">' + esc(initials(c.instructor)) + "</span>"
           : "");
@@ -220,6 +236,7 @@
       '<button type="button" class="gx-class__head" aria-expanded="false">' +
         '<span class="gx-class__time"><b>' + esc(c.time) + "</b><i>" + esc(c.duration) + "</i></span>" +
         '<span class="gx-class__main">' +
+          '<span class="gx-class__live"><i aria-hidden="true"></i>Happening Now</span>' +
           '<span class="gx-class__name">' + esc(c.name) + "</span>" +
           '<span class="gx-class__meta">' + esc(titleCase(c.category)) +
             (c.room ? ' <span class="gx-class__dot">&middot;</span> ' + esc(titleCase(c.room)) : "") +
@@ -259,6 +276,91 @@
       ? (total + (total === 1 ? " class" : " classes") + (isFiltered() ? " match" : " this week"))
       : "";
     elReset.hidden = !isFiltered();
+    markTime();
+  }
+
+  /* ---------- clock ---------- */
+
+  /* Mutates the rows already in the DOM. Deliberately does NOT call render():
+     that replaces elDays.innerHTML wholesale and would collapse any expanded
+     row and reset its calendar scope on every tick. */
+  function markTime() {
+    var now = Date.now();
+    var rows = elDays.querySelectorAll(".gx-class");
+    for (var i = 0; i < rows.length; i++) {
+      var c = byId(rows[i].getAttribute("data-id"));
+      if (!c) continue;
+      rows[i].classList.toggle("is-now", c._start <= now && now < c._end);
+      rows[i].classList.toggle("is-past", c._end > 0 && c._end <= now);
+    }
+    syncNow();
+  }
+
+  /* first visible row that is live, else the next one still to come */
+  function nowTarget() {
+    var now = Date.now();
+    var rows = elDays.querySelectorAll(".gx-class");
+    var upcoming = null;
+    for (var i = 0; i < rows.length; i++) {
+      var c = byId(rows[i].getAttribute("data-id"));
+      if (!c) continue;
+      if (c._start <= now && now < c._end) return rows[i];
+      if (!upcoming && c._start > now) upcoming = rows[i];
+    }
+    return upcoming;
+  }
+
+  function syncNow() {
+    if (elNow) elNow.hidden = !nowTarget();
+  }
+
+  function jumpToNow() {
+    var el = nowTarget();
+    if (!el) return;
+    var top = el.getBoundingClientRect().top + window.scrollY - 90; /* sticky header */
+    window.scrollTo({ top: top, behavior: "smooth" });
+    el.classList.add("is-flash");
+    setTimeout(function () { el.classList.remove("is-flash"); }, 1600);
+  }
+
+  /* ---------- instructor photo lightbox ---------- */
+
+  function openPhoto(src, who, trigger) {
+    if (!lb) return;
+    lbLastFocus = trigger || null;
+    lbImg.src = src;
+    lbImg.alt = who || "";
+    lbName.textContent = who || "";
+    lb.hidden = false;
+    /* next frame so the transition runs from the hidden state */
+    requestAnimationFrame(function () { lb.classList.add("is-open"); });
+    document.body.style.overflow = "hidden";
+    setTimeout(function () { lbClose.focus(); }, 60);
+  }
+
+  function closePhoto() {
+    if (!lb || lb.hidden) return;
+    lb.classList.remove("is-open");
+    document.body.style.overflow = "";
+    setTimeout(function () {
+      lb.hidden = true;
+      lbImg.src = "";
+    }, 450);
+    if (lbLastFocus) { lbLastFocus.focus(); lbLastFocus = null; }
+  }
+
+  function bindLightbox() {
+    if (!lb) return;
+    lbClose.addEventListener("click", closePhoto);
+    lb.querySelector(".gx-lb__scrim").addEventListener("click", closePhoto);
+    document.addEventListener("keydown", function (e) {
+      if (lb.hidden) return;
+      if (e.key === "Escape") { closePhoto(); return; }
+      if (e.key !== "Tab") return;
+      /* only the close button is focusable in here — keep focus inside */
+      e.preventDefault();
+      lbClose.focus();
+    });
   }
 
   function setStatus(html) {
@@ -388,12 +490,23 @@
       });
 
     elReset.addEventListener("click", resetAll);
+    if (elNow) elNow.addEventListener("click", jumpToNow);
     elStatus.addEventListener("click", function (e) {
       if (e.target.closest("[data-reset]")) resetAll();
     });
 
     /* expand / collapse + calendar, delegated so injected rows just work */
     elDays.addEventListener("click", function (e) {
+      /* checked first: the avatar sits inside .gx-class__head, so without this
+         the row would expand behind the lightbox */
+      var av = e.target.closest(".gx-class__avatar--zoom");
+      if (av) {
+        e.preventDefault();
+        e.stopPropagation();
+        openPhoto(av.getAttribute("data-photo"), av.getAttribute("data-who"), av);
+        return;
+      }
+
       var head = e.target.closest(".gx-class__head");
       if (head) {
         var card = head.closest(".gx-class");
@@ -420,6 +533,17 @@
         if (c) downloadIcs(c, currentScope(card2));
       }
     });
+
+    elDays.addEventListener("keydown", function (e) {
+      if (e.key !== "Enter" && e.key !== " " && e.key !== "Spacebar") return;
+      var av = e.target.closest && e.target.closest(".gx-class__avatar--zoom");
+      if (!av) return;
+      e.preventDefault();
+      e.stopPropagation();
+      openPhoto(av.getAttribute("data-photo"), av.getAttribute("data-who"), av);
+    });
+
+    bindLightbox();
   }
 
   function currentScope(card) {
@@ -477,6 +601,7 @@
         bind();
         elFilters.hidden = false;
         render();
+        setInterval(markTime, TICK);
       })
       .catch(fail)
       .finally(function () { clearTimeout(timer); });

@@ -1190,7 +1190,10 @@ groupfit_body = hero(
 
         <div class="gx__bar">
           <p class="gx__count" aria-live="polite"></p>
-          <button type="button" class="gx__reset" hidden>Clear filters</button>
+          <div class="gx__bar-actions">
+            <button type="button" class="gx__now" hidden>Jump to now</button>
+            <button type="button" class="gx__reset" hidden>Clear filters</button>
+          </div>
         </div>
       </div>
 
@@ -1200,6 +1203,15 @@ groupfit_body = hero(
       </div>
 
       <div class="gx__days"></div>
+
+      <div class="gx-lb" role="dialog" aria-modal="true" aria-label="Instructor photo" hidden>
+        <div class="gx-lb__scrim"></div>
+        <div class="gx-lb__inner">
+          <button type="button" class="gx-lb__close" aria-label="Close photo">&times;</button>
+          <img class="gx-lb__img" src="" alt="">
+          <p class="gx-lb__name"></p>
+        </div>
+      </div>
 
       <noscript>
         <p class="gx__noscript">Our class schedule needs JavaScript to load.
