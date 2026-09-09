@@ -42,8 +42,35 @@
   function go(n) {
     [1, 2, 3, 4, 5, 6].forEach(function (i) { var c = $("#c" + i); if (c) c.classList.toggle("hide", i !== n); });
     [1, 2, 3, 4, 5].forEach(function (i) { var e = $("#s" + i); if (e) e.className = "rl" + (i < n ? " done" : i === n ? " on" : ""); });
-    var top = root.getBoundingClientRect().top + window.scrollY - 80;
-    window.scrollTo({ top: Math.max(0, top), behavior: "smooth" });
+    if (modal) modal.scrollTo({ top: 0, behavior: "smooth" });
+    else window.scrollTo({ top: Math.max(0, root.getBoundingClientRect().top + window.scrollY - 80), behavior: "smooth" });
+  }
+
+  /* ---------- pop-out: the module opens as a takeover from "Start My Membership" / join.html#start ---------- */
+  var modal = document.getElementById("joinModal"), lastFocus = null;
+  function openJoin() {
+    if (!modal || !modal.hidden) return;
+    lastFocus = document.activeElement;
+    modal.hidden = false; modal.classList.add("is-open"); document.body.classList.add("jn-open");
+    modal.scrollTop = 0;
+    var close = modal.querySelector("[data-join-close]"); if (close) close.focus();
+    if (location.hash !== "#start") history.replaceState(null, "", "#start");
+  }
+  function closeJoin() {
+    if (!modal || modal.hidden) return;
+    modal.hidden = true; modal.classList.remove("is-open"); document.body.classList.remove("jn-open");
+    if (location.hash === "#start") history.replaceState(null, "", location.pathname + location.search);
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  if (modal) {
+    document.addEventListener("click", function (e) {
+      var a = e.target.closest("a[href$='#start'], a[href$='#wizard'], [data-join-open]");
+      if (a) { e.preventDefault(); openJoin(); return; }
+      if (e.target.closest("[data-join-close]")) { e.preventDefault(); closeJoin(); }
+    });
+    document.addEventListener("keydown", function (e) { if (e.key === "Escape") closeJoin(); });
+    if (location.hash === "#start" || location.hash === "#wizard") openJoin();
+    window.addEventListener("hashchange", function () { if (location.hash === "#start") openJoin(); });
   }
   root.querySelectorAll("[data-go]").forEach(function (b) {
     b.addEventListener("click", function () { go(+b.dataset.go); });

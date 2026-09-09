@@ -1346,3 +1346,20 @@ label:not(.opt){display:block;font-size:11px;letter-spacing:.16em;text-transform
 @media(max-width:940px){.jn aside{order:-1}.jn .jn-cart{position:static}}
 @media (max-width: 940px) { .jn .jn-wrap { grid-template-columns: 1fr; } .jn aside { order: -1; } .jn .jn-cart { position: static; } }
 @media (max-width: 600px) { .jn .g2 { grid-template-columns: 1fr; } .jn h1 { font-size: 34px; } .jn .rl { min-width: 110px; padding: 12px 12px; } }
+
+/* ---- Join pop-out: the module opens as a full-screen takeover above the page ---- */
+.jn-modal { position: fixed; inset: 0; z-index: 1500; background: var(--ink); overflow-y: auto; -webkit-overflow-scrolling: touch; overscroll-behavior: contain; }
+.jn-modal[hidden] { display: none; }
+.jn-modal.is-open { animation: jnIn .5s var(--ease-out) both; }
+@keyframes jnIn { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: none; } }
+@media (prefers-reduced-motion: reduce) { .jn-modal.is-open { animation: none; } }
+.jn-modal__bar { position: sticky; top: 0; z-index: 2; display: flex; align-items: center; gap: 18px; padding: 16px clamp(20px, 4vw, 48px); background: rgba(11,11,12,.88); backdrop-filter: blur(14px); border-bottom: 1px solid var(--line); }
+.jn-modal__brand { font-family: var(--font-display); font-size: 19px; letter-spacing: .02em; text-transform: uppercase; color: var(--bone); }
+.jn-modal__brand em { font-family: var(--font-serif); font-style: italic; text-transform: none; color: var(--accent-soft); font-size: 17px; margin-left: 7px; }
+.jn-modal__sec { margin-left: auto; font-size: 11px; letter-spacing: .18em; text-transform: uppercase; color: var(--muted); }
+.jn-modal__close { width: 44px; height: 44px; border: 1px solid var(--line); background: transparent; color: var(--bone); font-size: 26px; line-height: 1; cursor: pointer; border-radius: 2px; transition: .3s; }
+.jn-modal__close:hover, .jn-modal__close:focus-visible { border-color: var(--accent); background: rgba(13,111,191,.12); outline: none; }
+body.jn-open { overflow: hidden !important; }
+/* keep IntelliPay's Lightbox above the takeover (it uses near-max z-index already; this is belt and braces) */
+#intellipay-lightbox, .intellipay-md-modal, .intellipay-md-overlay { z-index: 2147483000; }
+@media (max-width: 600px) { .jn-modal__sec { display: none; } }

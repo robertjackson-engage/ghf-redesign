@@ -235,7 +235,7 @@ def header_html(active=""):
     </a>
     <nav class="nav-desktop" aria-label="Primary">{links}</nav>
     <div class="header-cta">
-      <a class="btn btn--solid btn--sm" href="join.html">Join Online</a>
+      <a class="btn btn--solid btn--sm" href="join.html#start">Join Online</a>
       <a class="btn btn--solid btn--sm" href="ghf-pass.html#claim">Free Pass</a>
       <a class="btn btn--solid btn--sm header-pricing" href="contact.html#pricing">Get Pricing</a>
       <button class="menu-toggle" aria-expanded="false" aria-label="Open menu">
@@ -869,7 +869,7 @@ home_body = hero(
     'Your first day is <span class="serif">free</span>',
     "Full access for a day: every class, the pool, the sauna, the coaches — no charge, no obligation, no sales pitch. The only risk is falling in love with the place.",
     f"{IMG}/Echo_GroupFit_Outdoor_Classes_Fun_Classes_2021.jpg",
-    secondary=("Join Online Today", "join.html"),
+    secondary=("Join Online Today", "join.html#start"),
 )
 
 # ============================================================ WHY GHF
@@ -2180,13 +2180,19 @@ join_body = hero(
     'Be part of Gainesville\'s largest, state-of-the-art fitness community, where your membership connects you to expert guidance, innovative programs, and top-tier amenities for both physical and mental well-being. <em>Must be 18 years or older to join without parent or guardian. Not quite ready to join? <a href="ghf-pass.html#claim" style="color:var(--accent-soft)">Try GHF with a free gym pass</a>.</em>',
     img=f"{IMG}/join-today-bg.jpg",
     crumb="Join Online",
-    actions=[("Start My Membership", "#wizard", True), ("Or Call (352) 377-4955", "tel:3523774955", False)],
+    actions=[("Start My Membership", "#start", True), ("Or Call (352) 377-4955", "tel:3523774955", False)],
     promo=[
         'All memberships are less than <strong>$16</strong> a week',
         "One membership, 3 locations",
     ],
     page=True,
 ) + f"""
+<div class="jn-modal" id="joinModal" hidden role="dialog" aria-modal="true" aria-label="Join online">
+  <div class="jn-modal__bar">
+    <div class="jn-modal__brand">Gainesville Health &amp; Fitness <em>join</em></div>
+    <div class="jn-modal__sec">Secure enrollment</div>
+    <button class="jn-modal__close" type="button" data-join-close aria-label="Close">&times;</button>
+  </div>
 <section class="jn" id="wizard" aria-label="Join online">
   <div class="jn-rail" role="list" aria-label="Steps">
     <div class="rl on" id="s1" role="listitem"><b>01</b><span>Home club</span></div>
@@ -2261,6 +2267,7 @@ join_body = hero(
     <aside><div class="jn-cart"><h3>Your cart</h3><div class="in" id="cart"><div class="ln">Pick a plan to see today's total</div></div></div></aside>
   </div>
 </section>
+</div>
 
 <section class="section section--light">
   <div class="wrap">
@@ -2531,7 +2538,7 @@ hyrox_body = hero(
     "PLACEHOLDER COPY \u2014 replace with the real program description. Hyrox pairs running with functional workout stations, and the training that gets you there lives on our indoor turf: sled push, sled pull, farmers carry, wall balls, rowing.",
     img=f"{IMG}/GHF_Functional_Training_Turf_Indoor_Turf_Gainesville_Gyms_Strength_2025.jpg",
     crumb='Training &nbsp;/&nbsp; Hyrox',
-    actions=[("Get Pricing", "contact.html#pricing", True), ("Join GHF Online", "join.html", False)],
+    actions=[("Get Pricing", "contact.html#pricing", True), ("Join GHF Online", "join.html#start", False)],
     meta=["PLACEHOLDER", "PLACEHOLDER", "PLACEHOLDER"],
     page=True,
 ) + f"""
@@ -2568,7 +2575,7 @@ teamstrong_body = hero(
     "PLACEHOLDER COPY \u2014 replace with the real program description. Team-based strength training with coaching, structure and a group that expects you to show up.",
     img=f"{IMG}/GHF_Tribe_Tribe_Team_Training_Tribe_Fit_Strong_Tribe_Punch_2025.jpg",
     crumb='Training &nbsp;/&nbsp; Team Strong Training',
-    actions=[("Get Pricing", "contact.html#pricing", True), ("Join GHF Online", "join.html", False)],
+    actions=[("Get Pricing", "contact.html#pricing", True), ("Join GHF Online", "join.html#start", False)],
     meta=["PLACEHOLDER", "PLACEHOLDER", "PLACEHOLDER"],
     page=True,
 ) + f"""
@@ -2765,7 +2772,7 @@ guest_body = hero(
     "Workouts are better with your favorite humans. Every guest visiting with a member gets 6 free visits — classes, pool, sauna, all of it. Grab your friend; we'll handle the rest.",
     img=f"{IMG}/cycle_friends.jpg",
     crumb="Bring a Guest",
-    actions=[("Join GHF Online", "join.html", True), ("Get Pricing", "contact.html#pricing", False)],
+    actions=[("Join GHF Online", "join.html#start", True), ("Get Pricing", "contact.html#pricing", False)],
     meta=["6 free visits per guest", "Unlimited guests", "2 at a time"],
     page=True,
 ) + f"""
