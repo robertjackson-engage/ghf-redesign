@@ -9,14 +9,14 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="icon" type="image/svg+xml" href="assets/img/ghf-mark.svg">
-<link rel="stylesheet" href="assets/css/main.css?v=1788973176">
+<link rel="stylesheet" href="assets/css/main.css?v=1788976479">
 <script>(function(){try{
   if(sessionStorage.getItem("ghf-intro"))document.documentElement.classList.add("no-preloader");
 }catch(e){}})();</script>
 </head>
 <body>
 <div class="preloader" aria-hidden="true">
-  <img class="preloader__logo" src="assets/img/brand/logo-mark.png?v=1788973176" alt="Gainesville Health &amp; Fitness" width="1000" height="400" />
+  <img class="preloader__logo" src="assets/img/brand/logo-mark.png?v=1788976479" alt="Gainesville Health &amp; Fitness" width="1000" height="400" />
   <div class="preloader__bar"><i></i></div>
   <div class="preloader__count">0</div>
 </div>
@@ -24,7 +24,7 @@
 <header class="site-header">
   <div class="site-header__inner">
     <a class="brand" href="index.html" aria-label="Gainesville Health &amp; Fitness — home">
-      <img class="brand__logo " src="assets/img/brand/logo-mark.png?v=1788973176" alt="Gainesville Health &amp; Fitness" width="1000" height="400" />
+      <img class="brand__logo " src="assets/img/brand/logo-mark.png?v=1788976479" alt="Gainesville Health &amp; Fitness" width="1000" height="400" />
     </a>
     <nav class="nav-desktop" aria-label="Primary"><a href="group-fitness.html" class="is-active">Classes</a><a href="training.html">Training</a><a href="amenities.html">Amenities</a><a href="locations.html">Locations</a></nav>
     <div class="header-cta">
@@ -160,8 +160,52 @@
       </div>
       <p class="body-copy reveal" style="max-width:38ch">Filter by location, class type, studio, day or instructor. Every class below is included in your membership.</p>
     </div>
-    <div class="reveal"><div class="embed embed--fixed"><iframe src="https://app.perchteams.com/public/gx/ghf" title="GHF group fitness class schedule" loading="eager" referrerpolicy="strict-origin-when-cross-origin"></iframe></div></div>
+    <div class="gx" data-endpoint="https://perch-platform-api.onrender.com/public/gx/schedule?orgSlug=ghf">
+
+      <div class="gx__filters">
+        <div class="gx__search">
+          <input type="search" id="gxSearch" placeholder="Search class name or instructor" aria-label="Search classes by name or instructor" autocomplete="off">
+          <button type="button" class="gx__search-clear" aria-label="Clear search" hidden>&times;</button>
+        </div>
+
+        <div class="gx__chips" role="group" aria-label="Filter by location"></div>
+
+        <div class="gx__selects">
+          <label class="gx__select"><span>Type</span>
+            <select id="gxType" aria-label="Filter by class type"><option value="">All types</option></select>
+          </label>
+          <label class="gx__select"><span>Studio</span>
+            <select id="gxRoom" aria-label="Filter by studio"><option value="">All studios</option></select>
+          </label>
+          <label class="gx__select"><span>Day</span>
+            <select id="gxDay" aria-label="Filter by day"><option value="">All days</option></select>
+          </label>
+          <label class="gx__select"><span>Instructor</span>
+            <select id="gxInstructor" aria-label="Filter by instructor"><option value="">All instructors</option></select>
+          </label>
+        </div>
+
+        <div class="gx__bar">
+          <p class="gx__count" aria-live="polite"></p>
+          <button type="button" class="gx__reset" hidden>Clear filters</button>
+        </div>
+      </div>
+
+      <div class="gx__status" role="status" aria-live="polite">
+        <span class="gx__dots" aria-hidden="true"><i></i><i></i><i></i></span>
+        <p>Loading this week&rsquo;s classes&hellip;</p>
+      </div>
+
+      <div class="gx__days"></div>
+
+      <noscript>
+        <p class="gx__noscript">Our class schedule needs JavaScript to load.
+        You can view it directly at <a href="https://app.perchteams.com/public/gx/ghf" rel="noopener">app.perchteams.com</a>,
+        or call us at <a href="tel:3523774955">(352) 377-4955</a>.</p>
+      </noscript>
+    </div>
   </div>
+  <script src="assets/js/schedule.js?v=1788976479" defer></script>
 </section>
 
 <section class="section">
@@ -230,7 +274,7 @@
     <div class="site-footer__top">
       <div class="site-footer__brand">
         <a class="brand brand--footer" href="index.html">
-          <img class="brand__logo " src="assets/img/brand/logo-lockup.png?v=1788973176" alt="Gainesville Health &amp; Fitness" width="1000" height="451" />
+          <img class="brand__logo " src="assets/img/brand/logo-lockup.png?v=1788976479" alt="Gainesville Health &amp; Fitness" width="1000" height="451" />
         </a>
         <p>The gym that's best at helping beginners — with staff to guide your journey. One membership, three locations.</p>
         <div class="socials">
@@ -297,8 +341,8 @@
     </div>
   </div>
 </footer>
-<script src="assets/js/main.js?v=1788973176"></script>
-<script src="assets/js/chat-config.js?v=1788973176"></script>
-<script src="assets/js/chat.js?v=1788973176" defer></script>
+<script src="assets/js/main.js?v=1788976479"></script>
+<script src="assets/js/chat-config.js?v=1788976479"></script>
+<script src="assets/js/chat.js?v=1788976479" defer></script>
 </body>
 </html>

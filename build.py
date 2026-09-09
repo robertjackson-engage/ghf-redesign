@@ -982,10 +982,6 @@ amenities_body = hero(
 )
 
 # ============================================================ GROUP FITNESS
-schedule_embed = embed("https://app.perchteams.com/public/gx/ghf",
-                       "GHF group fitness class schedule",
-                       cls="embed--fixed", eager=True)
-
 groupfit_body = hero(
     "GroupFit at GHF",
     ["The hour you'll look", 'forward to <span class="serif">all day</span>'],
@@ -1062,8 +1058,52 @@ groupfit_body = hero(
       </div>
       <p class="body-copy reveal" style="max-width:38ch">Filter by location, class type, studio, day or instructor. Every class below is included in your membership.</p>
     </div>
-    <div class="reveal">{schedule_embed}</div>
+    <div class="gx" data-endpoint="https://perch-platform-api.onrender.com/public/gx/schedule?orgSlug=ghf">
+
+      <div class="gx__filters">
+        <div class="gx__search">
+          <input type="search" id="gxSearch" placeholder="Search class name or instructor" aria-label="Search classes by name or instructor" autocomplete="off">
+          <button type="button" class="gx__search-clear" aria-label="Clear search" hidden>&times;</button>
+        </div>
+
+        <div class="gx__chips" role="group" aria-label="Filter by location"></div>
+
+        <div class="gx__selects">
+          <label class="gx__select"><span>Type</span>
+            <select id="gxType" aria-label="Filter by class type"><option value="">All types</option></select>
+          </label>
+          <label class="gx__select"><span>Studio</span>
+            <select id="gxRoom" aria-label="Filter by studio"><option value="">All studios</option></select>
+          </label>
+          <label class="gx__select"><span>Day</span>
+            <select id="gxDay" aria-label="Filter by day"><option value="">All days</option></select>
+          </label>
+          <label class="gx__select"><span>Instructor</span>
+            <select id="gxInstructor" aria-label="Filter by instructor"><option value="">All instructors</option></select>
+          </label>
+        </div>
+
+        <div class="gx__bar">
+          <p class="gx__count" aria-live="polite"></p>
+          <button type="button" class="gx__reset" hidden>Clear filters</button>
+        </div>
+      </div>
+
+      <div class="gx__status" role="status" aria-live="polite">
+        <span class="gx__dots" aria-hidden="true"><i></i><i></i><i></i></span>
+        <p>Loading this week&rsquo;s classes&hellip;</p>
+      </div>
+
+      <div class="gx__days"></div>
+
+      <noscript>
+        <p class="gx__noscript">Our class schedule needs JavaScript to load.
+        You can view it directly at <a href="https://app.perchteams.com/public/gx/ghf" rel="noopener">app.perchteams.com</a>,
+        or call us at <a href="tel:3523774955">(352) 377-4955</a>.</p>
+      </noscript>
+    </div>
   </div>
+  <script src="assets/js/schedule.js?v={V}" defer></script>
 </section>
 """ + split(
     "Classes for every body", "04",
