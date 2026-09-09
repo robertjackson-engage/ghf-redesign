@@ -1,0 +1,339 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>Join · Gainesville Health &amp; Fitness</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<!--IPAY_TERMINAL-->
+<style>
+:root{--ink:#0b0b0c;--ink-2:#141416;--ink-3:#1d1d20;--bone:#f3f0e9;--bone-2:#e9e4d8;
+ --brand:#005898;--accent:#0d6fbf;--accent-soft:#5aa6dd;
+ --line:rgba(243,240,233,.14);--muted:rgba(243,240,233,.62);
+ --font-display:"Anton","Arial Narrow",sans-serif;--font-serif:"Instrument Serif",Georgia,serif;
+ --font-body:"Inter",-apple-system,sans-serif;--ease:cubic-bezier(.16,1,.3,1)}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font:400 16px/1.6 var(--font-body);background:var(--ink);color:var(--bone);-webkit-font-smoothing:antialiased}
+.serif{font-family:var(--font-serif);font-style:italic;font-weight:400;color:var(--accent-soft)}
+/* header */
+.hd{position:sticky;top:0;z-index:50;background:rgba(11,11,12,.86);backdrop-filter:blur(14px);
+ border-bottom:1px solid var(--line);padding:16px clamp(20px,4vw,48px);display:flex;align-items:center;justify-content:space-between}
+.hd .bd{font-family:var(--font-display);font-size:19px;letter-spacing:.02em;text-transform:uppercase}
+.hd .bd em{font-family:var(--font-serif);font-style:italic;text-transform:none;color:var(--accent-soft);font-size:17px;margin-left:7px}
+.hd .sec{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+/* rail */
+.rail{display:flex;gap:0;border-bottom:1px solid var(--line);background:var(--ink-2);overflow-x:auto}
+.rl{flex:1;min-width:132px;padding:15px 16px;border-right:1px solid var(--line);position:relative}
+.rl:last-child{border-right:0}
+.rl b{display:block;font-family:var(--font-display);font-size:11px;letter-spacing:.2em;color:var(--muted);margin-bottom:3px}
+.rl span{font-size:13.5px;font-weight:500;color:var(--muted)}
+.rl.on{background:var(--ink-3)} .rl.on span{color:var(--bone)}
+.rl.on::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:2px;background:var(--accent)}
+.rl.done span{color:var(--bone)} .rl.done span::before{content:"✓ ";color:var(--accent-soft)}
+/* layout */
+.wrap{max-width:1180px;margin:0 auto;padding:clamp(28px,5vw,56px) clamp(20px,4vw,48px) 100px;
+ display:grid;grid-template-columns:1fr 352px;gap:clamp(24px,3.5vw,52px);align-items:start}
+@media(max-width:940px){.wrap{grid-template-columns:1fr}}
+h1{font-family:var(--font-display);font-size:clamp(34px,5vw,54px);line-height:.98;letter-spacing:-.01em;text-transform:uppercase}
+h1 .serif{text-transform:none;font-size:.92em}
+.kick{font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--accent-soft);
+ font-weight:600;margin-bottom:14px;display:flex;align-items:center;gap:11px}
+.kick::before{content:"";width:26px;height:1px;background:var(--accent)}
+.lede{color:var(--muted);margin-top:14px;max-width:56ch;font-size:15.5px}
+.panel{margin-top:30px}
+/* options */
+.opt{display:block;border:1px solid var(--line);background:var(--ink-2);border-radius:3px;
+ padding:19px 21px;margin-bottom:11px;cursor:pointer;position:relative;transition:.35s var(--ease)}
+.opt:hover{border-color:rgba(243,240,233,.3);transform:translateY(-1px)}
+.opt.sel{border-color:var(--accent);background:linear-gradient(180deg,rgba(13,111,191,.13),rgba(13,111,191,.04))}
+.opt input{position:absolute;opacity:0}
+.opt .nm{font-family:var(--font-display);font-size:17px;letter-spacing:.02em;text-transform:uppercase}
+.opt .pr{font-size:15px;margin-top:6px;color:var(--bone)} .opt .pr b{color:var(--accent-soft);font-weight:600;font-size:17px}
+.opt .nt{color:var(--muted);font-size:13.5px;margin-top:5px;line-height:1.5}
+.opt .tick{position:absolute;top:19px;right:19px;width:19px;height:19px;border:1px solid var(--line);border-radius:50%}
+.opt.sel .tick{border-color:var(--accent);background:var(--accent)}
+.opt.sel .tick::after{content:"";position:absolute;left:5.5px;top:2.5px;width:5px;height:9px;
+ border:solid #fff;border-width:0 2px 2px 0;transform:rotate(45deg)}
+.tag{position:absolute;top:-8px;right:16px;background:var(--accent);color:#fff;font-family:var(--font-display);
+ font-size:10px;letter-spacing:.16em;padding:4px 10px;border-radius:2px}
+/* fields */
+label:not(.opt){display:block;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin:18px 0 7px;font-weight:600}
+.opt{text-transform:none;letter-spacing:normal}
+input,select{width:100%;padding:13px 0;background:transparent;border:0;border-bottom:1px solid var(--line);
+ color:var(--bone);font:400 16px var(--font-body);transition:.3s}
+input:focus,select:focus{outline:none;border-bottom-color:var(--accent)}
+select option{background:var(--ink-2);color:var(--bone)}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:22px}@media(max-width:600px){.g2{grid-template-columns:1fr}}
+/* buttons */
+.btn{display:inline-flex;align-items:center;gap:11px;background:var(--accent);color:#fff;border:0;border-radius:2px;
+ padding:16px 30px;font-family:var(--font-display);font-size:14px;letter-spacing:.12em;text-transform:uppercase;
+ cursor:pointer;margin-top:26px;transition:.35s var(--ease)}
+.btn:hover:not([disabled]){background:var(--brand);transform:translateY(-2px)}
+.btn[disabled]{opacity:.35;cursor:not-allowed}
+.btn.ghost{background:transparent;border:1px solid var(--line);color:var(--bone)}
+.btn.ghost:hover{border-color:var(--accent);background:rgba(13,111,191,.1)}
+/* cart */
+.cart{position:sticky;top:96px;border:1px solid var(--line);background:var(--ink-2);border-radius:3px;overflow:hidden}
+.cart h3{font-family:var(--font-display);font-size:12px;letter-spacing:.22em;text-transform:uppercase;
+ padding:17px 21px;border-bottom:1px solid var(--line);color:var(--muted)}
+.cart .in{padding:19px 21px}
+.ln{display:flex;justify-content:space-between;gap:14px;padding:8px 0;font-size:14px;color:var(--muted)}
+.ln b{color:var(--bone);font-weight:600;white-space:nowrap}
+.tot{display:flex;justify-content:space-between;align-items:baseline;border-top:1px solid var(--line);
+ margin-top:13px;padding-top:15px}
+.tot span:first-child{font-family:var(--font-display);font-size:13px;letter-spacing:.18em;text-transform:uppercase}
+.tot span:last-child{font-family:var(--font-display);font-size:31px;color:var(--bone)}
+.rec{background:var(--ink-3);border-top:1px solid var(--line);padding:14px 21px;font-size:13px;color:var(--muted)}
+.rec b{color:var(--accent-soft)}
+/* misc */
+.chip{display:inline-flex;align-items:center;gap:7px;border:1px solid var(--line);border-radius:2px;
+ padding:7px 13px;font-size:12.5px;margin:6px 7px 0 0;color:var(--muted);background:var(--ink-2)}
+.chip b{color:var(--bone);font-weight:600}
+.note{border-left:2px solid var(--accent);background:rgba(13,111,191,.07);padding:13px 16px;
+ font-size:13.5px;color:var(--muted);margin-top:18px;line-height:1.6}
+.note.warn{border-color:#d98324;background:rgba(217,131,36,.08)}
+.ok{color:var(--accent-soft);font-weight:600}.bad{color:#e07a6f;font-weight:600}
+.lock{font-size:12px;color:var(--muted);margin-top:14px;display:flex;align-items:center;gap:8px}
+pre{background:#08080a;border:1px solid var(--line);color:var(--accent-soft);padding:15px;border-radius:3px;
+ overflow:auto;font-size:11.5px;line-height:1.6;margin-top:16px}
+.hide{display:none}
+.big{font-family:var(--font-display);font-size:44px;line-height:1;color:var(--bone)}
+</style></head><body>
+
+<div class="hd"><div class="bd">Gainesville Health &amp; Fitness<em>join</em></div>
+  <div class="sec">Secure enrollment</div></div>
+
+<div class="rail">
+  <div class="rl on" id="s1"><b>01</b><span>Club</span></div>
+  <div class="rl" id="s2"><b>02</b><span>Membership</span></div>
+  <div class="rl" id="s3"><b>03</b><span>Your details</span></div>
+  <div class="rl" id="s4"><b>04</b><span>Recurring dues</span></div>
+  <div class="rl" id="s5"><b>05</b><span>Due today</span></div>
+</div>
+
+<div class="wrap">
+ <div>
+  <!-- 1 -->
+  <section id="c1"><p class="kick">Step one</p>
+    <h1>Pick your <span class="serif">home</span> club</h1>
+    <p class="lede">One membership opens all three. Train wherever the day takes you.</p>
+    <div class="panel" id="clubs"></div>
+    <button class="btn" onclick="go(2)">Continue</button></section>
+
+  <!-- 2 -->
+  <section id="c2" class="hide"><p class="kick">Step two</p>
+    <h1>Choose your <span class="serif">membership</span></h1>
+    <p class="lede">Every plan is $29.99 + tax every other Wednesday — and there is no maintenance fee, ever.</p>
+    <div class="panel" id="plans"></div>
+    <p class="kick" style="margin-top:34px">Optional add-ons</p><div id="addons"></div>
+    <button class="btn" onclick="go(3)">Continue</button></section>
+
+  <!-- 3 -->
+  <section id="c3" class="hide"><p class="kick">Step three</p>
+    <h1>Tell us <span class="serif">about you</span></h1>
+    <div class="panel">
+      <div class="g2"><div><label>First name</label><input id="firstName" value="Jane"></div>
+        <div><label>Last name</label><input id="lastName" value="Sample"></div></div>
+      <div class="g2"><div><label>Email</label><input id="email" type="email" value="jane@example.com"></div>
+        <div><label>Mobile</label><input id="phone" value="352-555-0142"></div></div>
+    </div>
+    <button class="btn" id="toPay">Continue to payment</button>
+    <div id="mOut"></div></section>
+
+  <!-- 4 -->
+  <section id="c4" class="hide"><p class="kick">Step four · nothing is charged now</p>
+    <h1>Set up your <span class="serif">recurring</span> dues</h1>
+    <p class="lede">Choose how we draft your dues every other Wednesday. You'll pay today's total on the next step.</p>
+    <div class="panel" id="recChoice">
+      <label class="opt sel" data-m="CC"><span class="tick"></span>
+        <div class="nm">Credit / debit card</div>
+        <div class="nt">Can also cover today's total — nothing to re-enter.</div></label>
+      <label class="opt" data-m="ACH"><span class="tick"></span>
+        <div class="nm">Bank draft · ACH</div>
+        <div class="nt">Simplest for ongoing dues. A card is still required for today's total.</div></label>
+    </div>
+    <input class="ipayfield" data-ipayname="account" type="hidden" id="ipay-account">
+    <input class="ipayfield" data-ipayname="amount"  type="hidden" id="ipay-amount" value="0.00">
+    <input class="ipayfield" data-ipayname="firstname" type="hidden" id="ipay-first">
+    <input class="ipayfield" data-ipayname="lastname"  type="hidden" id="ipay-last">
+    <input class="ipayfield" data-ipayname="email"     type="hidden" id="ipay-email">
+    <input class="ipayfield" data-ipayname="phone"     type="hidden" id="ipay-phone">
+    <input class="ipayfield" data-ipayname="invoice"   type="hidden" id="ipay-invoice">
+    <button class="btn" id="vaultBtn" disabled>Save payment method</button>
+    <div class="lock"><span id="tstatus">Preparing secure window…</span></div>
+    <p class="lock">🔒 Entered directly with our processor. GHF never sees your card or account number.</p>
+    <div id="recOut"></div></section>
+
+  <!-- 5 -->
+  <section id="c5" class="hide"><p class="kick">Step five</p>
+    <h1>Total due <span class="serif">today</span></h1>
+    <div class="panel" id="todayBox"></div><div id="payOut"></div></section>
+
+  <!-- 6 -->
+  <section id="c6" class="hide"><p class="kick">Welcome to GHF</p>
+    <h1>You're <span class="serif">in</span>.</h1>
+    <div class="panel" id="done"></div><pre id="json"></pre></section>
+ </div>
+
+ <aside><div class="cart"><h3>Your cart</h3><div class="in" id="cart"></div></div></aside>
+</div>
+
+<script>
+const $=s=>document.querySelector(s), money=n=>'$'+Number(n||0).toFixed(2);
+let CAT={},club='',plan='24mo',addons=[],memberId=null,rec=null,mode='CC',M=null;
+function go(n){[1,2,3,4,5,6].forEach(i=>{const c=$('#c'+i); if(c)c.className=(i===n?'':'hide')});
+ [1,2,3,4,5].forEach(i=>{const e=$('#s'+i); if(e)e.className='rl'+(i<n?' done':i===n?' on':'')});
+ window.scrollTo({top:0,behavior:'smooth'});}
+
+fetch('/api/catalog').then(r=>r.json()).then(c=>{CAT=c;
+ $('#clubs').innerHTML=c.clubs.map((x,i)=>{const [a,b]=x.split('—');
+  return `<label class="opt ${i?'':'sel'}" data-v="${x}"><span class="tick"></span>
+   <div class="nm">${a.trim()}</div><div class="nt">${(b||'').trim()}</div></label>`}).join('');
+ club=c.clubs[0];
+ $('#plans').innerHTML=Object.entries(c.plans).map(([k,v],i)=>`
+  <label class="opt ${i?'':'sel'}" data-p="${k}"><span class="tick"></span>
+   ${v.badge?`<span class="tag">${v.badge}</span>`:''}
+   <div class="nm">${v.name}</div>
+   <div class="pr"><b>${money(v.dues)}</b> + tax every other Wednesday · ${money(v.startFee)} to start</div>
+   <div class="nt">${v.note}</div></label>`).join('');
+ $('#addons').innerHTML=Object.entries(c.addons).map(([k,v])=>`
+  <label class="opt" data-a="${k}"><span class="tick"></span>
+   <div class="nm">${v.name}</div>
+   <div class="pr"><b>${money(v.price)}</b> · ${v.oneTime?'one-time':'added to dues'}</div></label>`).join('');
+ wire(); quoteNow();});
+
+function wire(){
+ const pick=(sel,fn)=>document.querySelectorAll(sel).forEach(e=>e.onclick=()=>{
+   document.querySelectorAll(sel).forEach(x=>x.classList.remove('sel'));e.classList.add('sel');fn(e);});
+ pick('[data-v]',e=>club=e.dataset.v);
+ pick('[data-p]',e=>{plan=e.dataset.p;quoteNow();});
+ pick('#recChoice .opt',e=>{mode=e.dataset.m;applyMode();});
+ document.querySelectorAll('[data-a]').forEach(e=>e.onclick=()=>{e.classList.toggle('sel');
+   addons=[...document.querySelectorAll('[data-a].sel')].map(x=>x.dataset.a);quoteNow();});}
+
+async function quoteNow(){
+ const q=await(await fetch(`/api/quote?plan=${plan}&addons=${addons.join(',')}`)).json();
+ $('#cart').innerHTML=q.lines.map(l=>`<div class="ln">${l.label}<b>${money(l.amount)}</b></div>`).join('')
+  +`<div class="ln">Sales tax (${(CAT.taxRate*100).toFixed(0)}%)<b>${money(q.tax)}</b></div>
+    <div class="tot"><span>Due today</span><span>${money(q.dueToday)}</span></div>`
+  +`</div><div class="rec">Then <b>${money(q.recurringWithTax)}</b> every other Wednesday.`;
+}
+$('#toPay').onclick=async()=>{
+ const b={firstName:$('#firstName').value,lastName:$('#lastName').value,email:$('#email').value,
+  phone:$('#phone').value,club,plan,addons};
+ const r=await fetch('/api/member',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(b)});
+ M=await r.json(); if(!r.ok){$('#mOut').innerHTML=`<p class="note">${M.error}</p>`;return;}
+ memberId=M.memberId;
+ $('#ipay-account').value=$('#ipay-invoice').value=M.memberId;
+ $('#ipay-first').value=M.firstName; $('#ipay-last').value=M.lastName;
+ $('#ipay-email').value=M.email;     $('#ipay-phone').value=M.phone||'';
+ go(4); loadTerminal();};
+
+async function loadTerminal(){
+ $('#tstatus').textContent='Connecting to secure window…';
+ if(window.__ipayError){ $('#tstatus').innerHTML=`<span class="bad">${window.__ipayError}</span>`; return; }
+ // The terminal blob was server-rendered into <head>, so window.load already ran
+ // intellipay.initialize() natively. Fallback only if that somehow didn't happen.
+ const iv=setInterval(()=>{ if(typeof intellipay==='undefined')return; clearInterval(iv);
+   if(!document.getElementById('intellipay-lightbox')) intellipay.initialize();
+   brandLightbox(); intellipay.setStoreOnly(true); applyMode();
+   if(intellipay.runOnApproval)intellipay.runOnApproval(onVaulted);
+   if(intellipay.runOnNonApproval)intellipay.runOnNonApproval(r=>
+     $('#recOut').innerHTML=`<p class="note warn">${(r&&r.declinereason)||'That method could not be saved.'} Please try another.</p>`);
+   let tries=0; const rv=setInterval(()=>{ tries++;
+     if(intellipay.isReady){ clearInterval(rv); $('#vaultBtn').disabled=false;
+       $('#tstatus').innerHTML='<span class="ok">Secure window ready — nothing will be charged</span>'; }
+     else if(tries>60){ clearInterval(rv);
+       $('#tstatus').innerHTML='<span class="bad">Secure window didn\'t respond. Reload and try again.</span>'; }
+   },250);},200);}
+
+/* ---- brand the IntelliPay overlay to the GHF system ---- */
+function brandLightbox(stage){
+ // Only these (field, property) pairs are read by IntelliPay's frame — anything else is ignored.
+ const set=(f,fn,v)=>{try{intellipay[fn](f,v)}catch(e){}};
+ const today = stage==='today';
+ // Header bar: GHF brand blue with the Gainesville logo (white-on-blue, so it blends into the bar)
+ set('header','setItemBackgroundColor','#005898');
+ set('header','setItemColor','#ffffff');
+ set('header','setItemLabel', today ? "Pay today's total" : (mode==='ACH' ? 'Set up your bank draft' : 'Set up recurring dues'));
+ if(window.__ghfLogo){ set('banner','setItemUrl',window.__ghfLogo); set('bannerImage','setItemHeight','54px'); }
+ set('company','setItemLabel','Gainesville Health & Fitness');
+ // Panels, inputs, corners
+ set('leftContainer','setItemBackgroundColor','#0b0b0c');
+ set('lightbox','setItemBorderRadius','4px');
+ set('input','setItemBackgroundColor','#ffffff');
+ set('input','setItemColor','#0b0b0c');
+ set('input','setItemBorderRadius','2px');
+ set('input','setItemBorderBottom','2px solid #005898');
+ set('inputBorder','setItemColor','#cfd6dd');
+ set('inputFont','setItemColor','#0b0b0c');
+ set('paymentTypeButtonSelected','setItemColor','#ffffff');
+ // Primary action
+ set('button','setItemBackgroundColor','#0d6fbf');
+ set('button','setItemColor','#ffffff');
+ set('button','setItemLabel', today ? 'Pay '+money(rec.dueToday) : (mode==='ACH' ? 'Save bank account' : 'Save my card'));
+ // We already collected these in step 3 — keep the Lightbox down to the card fields
+ set('account','setItemLabel','Member ID');
+ try{intellipay.disable('account');intellipay.disable('email');intellipay.disable('phone');}catch(e){}
+ // Outcome copy in GHF voice
+ set('successmessage','setItemLabel', today ? 'Payment received — welcome to GHF.' : 'Saved — nothing was charged today.');
+ set('declinemessage','setItemLabel',"We couldn't process that. Please check the details or try another card.");
+}
+function applyMode(){ if(typeof intellipay==='undefined')return;
+ const ach = mode==='ACH';
+ try{intellipay.setACHAvailable(ach);intellipay.setCCAvailable(!ach);}catch(e){}
+ brandLightbox('recurring');}
+$('#vaultBtn').onclick=()=>{if(typeof intellipay!=='undefined')intellipay.onSubmit()};
+
+async function onVaulted(resp){
+ const r=await fetch('/api/recurring-method',{method:'POST',headers:{'Content-Type':'application/json'},
+  body:JSON.stringify({memberId,custid:resp.custid,paymenttype:resp.paymenttype,methodhint:resp.methodhint})});
+ rec=await r.json();
+ $('#recOut').innerHTML=`<p class="note"><span class="ok">Payment method saved.</span>
+   <span class="chip">${rec.method}</span><span class="chip">${rec.hint||''}</span>
+   <span class="chip">token <b>${rec.token}</b></span></p>`;
+ go(5); renderToday();}
+
+function renderToday(){
+ const a=money(rec.dueToday);
+ $('#todayBox').innerHTML = rec.canReuseForToday
+  ? `<p class="lede" style="margin:0 0 8px">One charge today, then you're set.</p>
+     <div class="big">${a}</div>
+     <label class="opt sel" style="margin-top:22px"><span class="tick"></span>
+       <div class="nm">Use the card I just saved</div>
+       <div class="nt">${rec.hint||'Saved card'} — one tap, nothing to re-enter.</div></label>
+     <button class="btn" id="payNow">Pay ${a}</button>`
+  : `<p class="lede" style="margin:0 0 8px">One charge today, then your dues draft from your bank.</p>
+     <div class="big">${a}</div>
+     <div class="note warn">Your dues will draft from your <b>bank account</b>. We don't accept bank draft
+       for the up-front payment — please add a credit or debit card for today's total.</div>
+     <button class="btn" id="payCard">Add card &amp; pay ${a}</button>`;
+ if(rec.canReuseForToday)$('#payNow').onclick=payWithSaved; else $('#payCard').onclick=payWithNewCard;}
+
+async function payWithSaved(){
+ $('#payOut').innerHTML='<p class="lock">Processing…</p>';
+ const o=await(await fetch('/api/charge-today',{method:'POST',headers:{'Content-Type':'application/json'},
+   body:JSON.stringify({memberId})})).json();
+ finish(o,o.approved?'Charged to your saved card':'Submitted');}
+
+function payWithNewCard(){
+ intellipay.setStoreOnly(false);
+ intellipay.setACHAvailable(false); intellipay.setCCAvailable(true);
+ brandLightbox('today');
+ $('#ipay-amount').value=Number(rec.dueToday).toFixed(2);
+ intellipay.runOnApproval(async resp=>{
+   const o=await(await fetch('/api/today-card',{method:'POST',headers:{'Content-Type':'application/json'},
+     body:JSON.stringify({memberId,custid:resp.custid,methodhint:resp.methodhint,
+       status:resp.status,approved:resp.response==='A',amount:rec.dueToday})})).json();
+   finish(o,'Paid with a separate card');});
+ intellipay.onSubmit();}
+
+function finish(o,label){
+ go(6);
+ $('#done').innerHTML=`<p class="lede" style="margin-top:0">${label}. Your membership is active — see you at the club.</p>
+  <div style="margin-top:18px">
+   <span class="chip">Member ID <b>${memberId}</b></span>
+   <span class="chip">Recurring token <b>${rec.token}</b></span>
+   <span class="chip">${rec.method}</span>
+   <span class="chip">Paid today <b>${money(rec.dueToday)}</b></span></div>
+  <div class="note">Your <b>recurring token</b> goes to GHF's member-management system in tonight's file
+   to drive your dues. No card or bank number is stored by GHF.</div>`;
+ $('#json').textContent=JSON.stringify(o,null,2);}
+</script></body></html>

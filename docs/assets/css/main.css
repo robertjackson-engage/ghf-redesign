@@ -1195,3 +1195,23 @@ body.chat-open .chat-panel { opacity: 1; transform: none; pointer-events: auto; 
 .post-body li::before { content: "→"; position: absolute; left: -6px; color: var(--accent); }
 .post-body strong { color: var(--white); }
 .post-body em { font-family: var(--font-serif); font-style: italic; font-size: 1.08em; }
+
+/* ---- Join: recurring dues + due today (IntelliPay two-stage) ---- */
+.choice-grid--2 { grid-template-columns: 1fr 1fr; }
+.choice--pay { padding: 26px 22px 24px; text-align: left; }
+.choice--pay h3 { padding: 0; font-size: 20px; }
+.choice--pay .meta { padding: 0; margin-top: 8px; }
+.pay-actions { display: flex; align-items: center; gap: 20px; flex-wrap: wrap; margin-top: 28px; }
+.pay-status { font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--muted); }
+.pay-status.ok { color: var(--accent-soft); }
+.pay-status.bad { color: #e57f79; }
+.pay-lock { font-size: 12.5px; color: var(--muted); margin-top: 16px; }
+.pay-total { font-family: var(--font-display); font-size: clamp(56px, 7vw, 96px); line-height: 1; margin: 4px 0 22px; }
+.pay-note { border-left: 2px solid var(--accent); background: var(--ink-2); padding: 14px 18px; font-size: 13.5px; color: var(--muted); margin: 20px 0; line-height: 1.6; max-width: 60ch; }
+.pay-note b { color: var(--bone); }
+.pay-note.warn { border-left-color: #e6a54b; }
+.sum-cart .sum-row { padding: 10px 0; font-size: 13px; }
+.chip { display: inline-block; border: 1px solid var(--line); padding: 5px 11px; font-size: 12px; color: var(--muted); margin: 0 8px 8px 0; }
+.chip b { color: var(--bone); font-weight: 500; }
+.join-success .chips { margin: 0 0 30px; }
+@media (max-width: 700px) { .choice-grid--2 { grid-template-columns: 1fr; } .pay-actions { align-items: flex-start; flex-direction: column; } }

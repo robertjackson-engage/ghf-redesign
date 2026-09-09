@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # GHF redesign — static site generator
-import os, time
+import os, time, json
 
 OUT = os.path.join(os.path.dirname(__file__), "docs")
 IMG = "assets/img"
@@ -65,6 +65,9 @@ def fmt_date(d):
 # ============================================================ end CMS content engine
 
 V = str(int(time.time()))  # cache-bust CSS/JS on every build
+# Join API (intellipay/server.py). Override per environment: GHF_JOIN_API=https://join.ghfc.com python3 build.py
+import json as _json
+JOIN_API_JSON = _json.dumps(os.environ.get("GHF_JOIN_API", "https://ghf-join-demo.azurewebsites.net"))
 
 # Modern GHF mark — the raised-arms figure from the original logo, geometrized
 def mark_svg(cls):
@@ -468,6 +471,108 @@ def page(filename, title, desc, active, body):
     with open(os.path.join(OUT, filename), "w") as f:
         f.write(html)
     print("built", filename)
+
+
+# ============================================================ CMS PAGE BUILDER
+# Staff-editable pages: content/pages/*.json → rendered with the same design-
+# system components as the hand-authored pages. New pages are created in the CMS.
+def _accent(t):
+    """Wrap *word* in the serif accent span used across headlines."""
+    return _re.sub(r"\*([^*]+)\*", r'<span class="serif">\1</span>', t or "")
+
+
+def _img_or_none(v):
+    return cms_img(v) if v else None
+
+
+def render_block(b):
+    """Map one CMS block dict → HTML via the existing component helpers."""
+    t = (b.get("type") or "").strip()
+    if t == "hero":
+        lines = [_accent(x) for x in (b.get("lines") or []) if x]
+        actions = [(a.get("label", ""), a.get("href", "#"), bool(a.get("solid", True)))
+                   for a in (b.get("actions") or []) if a.get("label")]
+        return hero(
+            b.get("kicker", ""), lines, sub=b.get("sub", ""),
+            img=_img_or_none(b.get("image")), video=(b.get("video") or None),
+            poster=_img_or_none(b.get("poster")), crumb=(b.get("crumb") or None),
+            actions=(actions or None), meta=(b.get("meta") or None),
+            page=not bool(b.get("tall")),
+        )
+    if t == "split":
+        cta = (b["cta_label"], b.get("cta_href", "#")) if b.get("cta_label") else None
+        return split(
+            b.get("eyebrow", ""), b.get("num", ""), _accent(b.get("title", "")),
+            (b.get("paragraphs") or []), cms_img(b.get("image")), b.get("alt", ""),
+            rev=bool(b.get("reversed")), cta=cta, tag=(b.get("tag") or None),
+            light=bool(b.get("light")), wide=bool(b.get("wide")),
+        )
+    if t == "stats":
+        items = [(i.get("number", "0"), i.get("suffix", ""), i.get("label", ""))
+                 for i in (b.get("items") or [])]
+        return stats_band(items, light=bool(b.get("light")))
+    if t == "cta":
+        primary = (b.get("primary_label", "Claim Your Free Pass"),
+                   b.get("primary_href", "contact.html#pricing"))
+        secondary = ((b.get("secondary_label"), b.get("secondary_href", "#"))
+                     if b.get("secondary_label") else None)
+        return cta_band(_accent(b.get("title", "")), b.get("text", ""),
+                        cms_img(b.get("image")), primary=primary, secondary=secondary)
+    if t == "accordion":
+        items = [(i.get("q", ""), _md_to_html(i.get("a", ""))) for i in (b.get("items") or [])]
+        head_html = ""
+        if b.get("title"):
+            head_html = (f'<div class="cards-head"><div><p class="eyebrow"><span class="num">'
+                         f'{b.get("num", "")}</span> {b.get("eyebrow", "")}</p>'
+                         f'<h2 class="h-display reveal" style="font-size:clamp(30px,3.8vw,58px)">'
+                         f'{_accent(b.get("title", ""))}</h2></div></div>')
+        return (f'\n<section class="section{" section--light" if b.get("light") else ""}">'
+                f'<div class="wrap" style="max-width:960px">{head_html}{accordion(items)}</div></section>\n')
+    if t == "marquee":
+        return marquee((b.get("words") or []), accent=bool(b.get("accent")), ghost=bool(b.get("ghost")))
+    if t == "form":
+        return form_section(b.get("id", "lead"), b.get("num", "01"), b.get("eyebrow", ""),
+                            _accent(b.get("title", "")), b.get("text", ""),
+                            b.get("button", "Get Started"), light=bool(b.get("light", True)))
+    if t == "checklist":
+        lis = "".join(f"<li>{_inline(x)}</li>" for x in (b.get("items") or []) if x)
+        return (f'\n<section class="section{" section--light" if b.get("light") else ""}">'
+                f'<div class="wrap"><div class="intro-grid"><div>'
+                f'<p class="eyebrow"><span class="num">{b.get("num", "")}</span> {b.get("eyebrow", "")}</p>'
+                f'<h2 class="h-display reveal">{_accent(b.get("title", ""))}</h2>'
+                f'<p class="body-copy reveal" style="margin-top:26px">{b.get("text", "")}</p></div>'
+                f'<div class="intro-grid__right reveal"><ul class="checklist">{lis}</ul></div>'
+                f'</div></div></section>\n')
+    if t == "richtext":
+        eyebrow = (f'<p class="eyebrow"><span class="num">{b.get("num", "")}</span> {b.get("eyebrow", "")}</p>'
+                   if b.get("eyebrow") else "")
+        title = (f'<h2 class="h-display reveal" style="font-size:clamp(30px,3.8vw,58px);margin-bottom:22px">'
+                 f'{_accent(b.get("title", ""))}</h2>' if b.get("title") else "")
+        body = _md_to_html(b.get("body", ""))
+        return (f'\n<section class="section{" section--light" if b.get("light") else ""}">'
+                f'<div class="wrap" style="max-width:820px">{eyebrow}{title}'
+                f'<div class="reveal" style="font-size:16px;line-height:1.75">{body}</div></div></section>\n')
+    return f"<!-- unknown block type: {t} -->"
+
+
+def render_blocks(blocks):
+    return "".join(render_block(b) for b in (blocks or []))
+
+
+def load_pages():
+    """Read content/pages/*.json into page dicts (filename, nav settings, blocks)."""
+    items = []
+    for p in sorted(_glob.glob(os.path.join(CONTENT, "pages", "*.json"))):
+        try:
+            data = json.load(open(p, encoding="utf-8"))
+        except Exception as e:
+            print("!! skipping bad page JSON", os.path.basename(p), e)
+            continue
+        data["_slug"] = os.path.splitext(os.path.basename(p))[0]
+        slug = (data.get("slug") or data["_slug"]).strip().replace(".html", "")
+        data["_filename"] = slug + ".html"
+        items.append(data)
+    return items
 
 
 # ============================================================ HOME
@@ -2017,7 +2122,8 @@ join_body = hero(
             <li class="is-active"><span class="n">01</span><span class="lbl">Home Club</span></li>
             <li><span class="n">02</span><span class="lbl">Your Plan</span></li>
             <li><span class="n">03</span><span class="lbl">Your Details</span></li>
-            <li><span class="n">04</span><span class="lbl">Review</span></li>
+            <li><span class="n">04</span><span class="lbl">Recurring Dues</span></li>
+            <li><span class="n">05</span><span class="lbl">Due Today</span></li>
           </ol>
         </div>
 
@@ -2055,21 +2161,21 @@ join_body = hero(
               <button type="button" data-type="Family">Family</button>
             </div>
             <div class="choice-grid">
-              <button class="choice choice--plan" type="button" data-name="24 Month Agreement" data-fee="$49.00"
+              <button class="choice choice--plan" type="button" data-name="24 Month Agreement" data-plan="24mo" data-fee="$49.00"
                 data-note="After the initial 24 months, dues drop to $20.99 + tax every other Wednesday.">
                 <span class="choice__chip">Best Value</span><span class="choice__check">✓</span>
                 <h3>24 Month</h3>
                 <div class="price">$29.99<small> + tax · every other Wednesday</small></div>
                 <p class="meta">After initial 24 months, dues drop to $20.99 + tax every other Wednesday. Starting fee $49.00. No maintenance fee.</p>
               </button>
-              <button class="choice choice--plan" type="button" data-name="12 Month Agreement" data-fee="$49.00"
+              <button class="choice choice--plan" type="button" data-name="12 Month Agreement" data-plan="12mo" data-fee="$49.00"
                 data-note="After the initial 12 months, dues remain at $29.99 + tax and renew month-to-month.">
                 <span class="choice__check">✓</span>
                 <h3>12 Month</h3>
                 <div class="price">$29.99<small> + tax · every other Wednesday</small></div>
                 <p class="meta">After initial 12 months, remains at $29.99 + tax and renews month-to-month. Starting fee $49.00. No maintenance fee.</p>
               </button>
-              <button class="choice choice--plan" type="button" data-name="Month To Month Agreement" data-fee="$149.00 + tax"
+              <button class="choice choice--plan" type="button" data-name="Month To Month Agreement" data-plan="m2m" data-fee="$149.00 + tax"
                 data-note="Cancel membership with 30 day notice.">
                 <span class="choice__check">✓</span>
                 <h3>Month To Month</h3>
@@ -2091,19 +2197,45 @@ join_body = hero(
           </div>
 
           <div class="join-step" data-step="4">
-            <h2 class="join-step__title">Review &amp; <span class="serif">confirm</span></h2>
-            <p class="join-step__hint">Almost there. Look everything over, then complete your join — we'll finish your setup at the front desk on your first visit.</p>
-            <div id="reviewList"></div>
-            <label class="review-agree">
-              <input type="checkbox" id="agree">
-              <span>I confirm I am 18 years or older (or joining with a parent/guardian), and I'd like GHF to contact me via phone, email, or text to complete my membership.</span>
-            </label>
+            <h2 class="join-step__title">Set up your <span class="serif">recurring dues</span></h2>
+            <p class="join-step__hint">Nothing is charged now. Choose how we draft your dues every other Wednesday — you'll pay today's total on the next step.</p>
+            <div class="choice-grid choice-grid--2" id="payMethods">
+              <button class="choice choice--pay is-selected" type="button" data-method="CC">
+                <span class="choice__check">✓</span>
+                <h3>Credit / Debit Card</h3>
+                <p class="meta">Can also cover today's total — nothing to re-enter.</p>
+              </button>
+              <button class="choice choice--pay" type="button" data-method="ACH">
+                <span class="choice__check">✓</span>
+                <h3>Bank Draft · ACH</h3>
+                <p class="meta">Simplest for ongoing dues. A card is still required for today's total.</p>
+              </button>
+            </div>
+            <input class="ipayfield" data-ipayname="account"   type="hidden" id="ipay-account">
+            <input class="ipayfield" data-ipayname="amount"    type="hidden" id="ipay-amount" value="0.00">
+            <input class="ipayfield" data-ipayname="firstname" type="hidden" id="ipay-first">
+            <input class="ipayfield" data-ipayname="lastname"  type="hidden" id="ipay-last">
+            <input class="ipayfield" data-ipayname="email"     type="hidden" id="ipay-email">
+            <input class="ipayfield" data-ipayname="phone"     type="hidden" id="ipay-phone">
+            <input class="ipayfield" data-ipayname="invoice"   type="hidden" id="ipay-invoice">
+            <div class="pay-actions">
+              <button class="btn btn--solid" type="button" id="vaultBtn" disabled><span class="lbl">Save Payment Method</span> <span class="arr">→</span></button>
+              <span class="pay-status" id="payStatus">Preparing secure window…</span>
+            </div>
+            <p class="pay-lock">🔒 Entered directly with our payment processor. GHF never sees your card or account number.</p>
+            <div id="recOut"></div>
+          </div>
+
+          <div class="join-step" data-step="5">
+            <h2 class="join-step__title">Total due <span class="serif">today</span></h2>
+            <p class="join-step__hint">One charge today. After that, your dues draft automatically every other Wednesday.</p>
+            <div id="todayBox"></div>
           </div>
         </div>
 
         <div class="join__nav-row">
           <button class="btn btn--sm back" type="button">← Back</button>
-          <span class="join__count">Step 01 / 04</span>
+          <span class="join__count">Step 01 / 05</span>
           <button class="btn btn--solid next" type="button" disabled><span class="lbl">Continue</span> <span class="arr">→</span></button>
         </div>
       </div>
@@ -2119,10 +2251,13 @@ join_body = hero(
           <div class="sum-row"><dt>Plan</dt><dd class="empty" data-sum="plan">—</dd></div>
           <div class="sum-row"><dt>Starting fee</dt><dd class="empty" data-sum="fee">—</dd></div>
           <div class="sum-row"><dt>Member</dt><dd class="empty" data-sum="name">—</dd></div>
+          <div class="sum-row"><dt>Payment method</dt><dd class="empty" data-sum="pay">—</dd></div>
+          <div class="sum-cart" data-cart></div>
           <div class="sum-rate">
-            <span class="lbl">Your dues</span>
-            <span class="amt">$29.99<small> + tax · biweekly</small></span>
+            <span class="lbl">Due today</span>
+            <span class="amt" data-sum="due">$29.99<small> + tax</small></span>
           </div>
+          <p class="sum-note" data-sum-recurring>Then $29.99 + tax every other Wednesday.</p>
           <p class="sum-note" data-sum-note>Every membership includes all 900+ monthly classes, hot yoga, pools &amp; spa, Kid's Club, and access to all three locations.</p>
           <span class="sum-badge">No maintenance fee</span>
         </div>
@@ -2175,13 +2310,15 @@ join_body = hero(
   <div class="join-success__inner">
     <div class="mark">✓</div>
     <h2 data-success-name>You're going to feel good here.</h2>
-    <p>Your membership request has been received. A GHF fitness counselor will reach out via phone, email, or text to complete your setup — then come meet your new gym. Bring a water bottle.</p>
+    <p data-success-copy>Your membership is active. Your dues will draft automatically every other Wednesday — come meet your new gym. Bring a water bottle.</p>
+    <div class="chips" data-success-detail></div>
     <div class="hero__actions">
       <a class="btn btn--solid" href="index.html">Back to Home <span class="arr">→</span></a>
       <a class="btn" href="group-fitness.html">Browse Classes <span class="arr">→</span></a>
     </div>
   </div>
 </div>
+<script>window.GHF_JOIN_API={JOIN_API_JSON};</script>
 <script src="assets/js/join.js?v={V}" defer></script>
 """ + cta_band(
     'Or call <span class="serif">(352) 377-4955</span> today',
@@ -2784,10 +2921,34 @@ def page_sub(filename, title, desc, body):
 
 PAGES.append(("blog.html", f"Blog | GHF", "News, stories and tips from GHF.", "blog.html", blog_index_body()))
 
-for fn, title, desc, active, body in PAGES:
-    page(fn, title, desc, active, body)
+# ---- CMS-authored pages (content/pages/*.json) ---------------------------------
+CMS_PAGES = load_pages()
+_cms_filenames = {p["_filename"] for p in CMS_PAGES}
 
-print("\nDone:", len(PAGES), "pages")
+# Merge CMS pages flagged "in_nav" into the site menu (per-page nav toggle),
+# ordered by nav_order; dedupe by href so migrated pages don't double up.
+_menu_hrefs = {h for _, h in MENU}
+for p in sorted(CMS_PAGES, key=lambda x: (x.get("nav_order", 100) or 100)):
+    if p.get("in_nav") and p["_filename"] not in _menu_hrefs:
+        MENU.append((p.get("nav_label") or p.get("title") or p["_slug"], p["_filename"]))
+        _menu_hrefs.add(p["_filename"])
+
+# Build code pages, but let a CMS page override one with the same filename.
+_built = 0
+for fn, title, desc, active, body in PAGES:
+    if fn in _cms_filenames:
+        continue
+    page(fn, title, desc, active, body)
+    _built += 1
+
+# Build the CMS pages.
+for p in CMS_PAGES:
+    page(p["_filename"], p.get("title", p["_slug"]),
+         p.get("description", ""), p.get("active", p["_filename"]),
+         render_blocks(p.get("blocks")))
+    _built += 1
+
+print("\nDone:", _built, "pages", f"({len(CMS_PAGES)} from CMS)")
 for _p in POSTS:
     page_sub(f"blog/{_p['_slug']}.html", f"{_p.get('title','Post')} | GHF Blog", _p.get("excerpt","")[:160], blog_post_body(_p))
 print("blog posts:", len(POSTS))

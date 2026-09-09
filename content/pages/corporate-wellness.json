@@ -1,0 +1,71 @@
+{
+  "title": "Corporate Wellness | Gainesville Health & Fitness",
+  "slug": "corporate-wellness",
+  "description": "Bring GHF to your team. Corporate memberships, on-site wellness, and healthier, happier, more productive employees across Gainesville.",
+  "in_nav": true,
+  "nav_label": "Corporate Wellness",
+  "nav_order": 60,
+  "blocks": [
+    {
+      "type": "hero",
+      "kicker": "For Gainesville Employers",
+      "lines": ["A healthier team,", "the *GHF* way"],
+      "sub": "Corporate memberships and on-site wellness that make your people feel their best — and bring that energy back to work.",
+      "image": "assets/img/GHF_Functional_Training_Turf_Indoor_Turf_Gainesville_Gyms_Strength_2025.jpg",
+      "crumb": "Corporate Wellness",
+      "actions": [
+        {"label": "Talk to Our Team", "href": "contact.html#pricing", "solid": true},
+        {"label": "See Membership Options", "href": "join.html", "solid": false}
+      ]
+    },
+    {
+      "type": "stats",
+      "light": true,
+      "items": [
+        {"number": "3", "suffix": "", "label": "Gainesville locations"},
+        {"number": "900", "suffix": "+", "label": "Classes every month"},
+        {"number": "24", "suffix": "/7", "label": "Access at GHF Main"},
+        {"number": "100", "suffix": "+", "label": "Member savings partners"}
+      ]
+    },
+    {
+      "type": "split",
+      "eyebrow": "Why it works",
+      "num": "01",
+      "title": "Well people do *better* work",
+      "paragraphs": [
+        "Teams that move together are healthier, more energized, and more connected. A GHF corporate membership gives your employees the guidance, variety and community that actually keeps them coming back.",
+        "From 24/7 strength floors to 900+ monthly classes, hot yoga, Pilates, recovery and our aqua center — there's something for every fitness level on your team."
+      ],
+      "image": "assets/img/GHF_Personal_Training_Trainers_one_on_one_clients_2025-2.jpg",
+      "alt": "A GHF personal trainer coaching a client",
+      "reversed": false
+    },
+    {
+      "type": "split",
+      "eyebrow": "How it works",
+      "num": "02",
+      "title": "We bring wellness *to you*",
+      "paragraphs": [
+        "Prefer to start at the office? Our team can run on-site fitness demos, lunch-and-learns and challenge programs to kick things off — then transition your team into full club access.",
+        "Flexible corporate rates, simple billing, and a dedicated GHF contact to keep it all running smoothly."
+      ],
+      "image": "assets/img/AMPD_45_Metcon_Coached_Training_Strength_Straining_GHF_2023.jpg",
+      "alt": "A coached group training session at GHF",
+      "reversed": true,
+      "light": true,
+      "cta_label": "Ask about on-site programs",
+      "cta_href": "contact.html#pricing"
+    },
+    {
+      "type": "cta",
+      "title": "Let's build your *team's* plan",
+      "text": "Tell us about your company and we'll put together corporate rates and a wellness plan that fits. No charge, no obligation.",
+      "image": "assets/img/Echo_GroupFit_Outdoor_Classes_Fun_Classes_2021.jpg",
+      "primary_label": "Talk to Our Team",
+      "primary_href": "contact.html#pricing",
+      "secondary_label": "Get Pricing",
+      "secondary_href": "contact.html#pricing"
+    }
+  ]
+}

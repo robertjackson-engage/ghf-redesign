@@ -52,3 +52,25 @@ python3 serve.py                  # in another → open http://localhost:4175/ad
 2. Pick a collection (e.g. **Blog Posts**) → **New**.
 3. Fill the friendly fields, drag in an image, write the post.
 4. **Publish.** The site updates itself within a minute.
+
+## Pages — build & edit full pages (the page builder)
+The **Pages** collection lets staff edit existing pages and **create brand-new ones**
+using the site's design blocks — no code. Each page is assembled from **sections**:
+
+- **Hero** (top banner) · **Image + Text** · **Heading + Checklist** · **Stats band**
+- **Call-to-action band** · **FAQ / Accordion** · **Rich text** · **Lead form** · **Scrolling word strip**
+
+How to create a page:
+1. `/admin` → **Pages** → **New Page**.
+2. Set the **title**, a **URL slug** (e.g. `corporate-wellness` → `/corporate-wellness.html`),
+   and an **SEO description**.
+3. **Show in site menu** on/off, plus an optional **menu label** and **order**.
+4. Add **sections** and fill in the fields. Reorder by dragging.
+5. Save → the site rebuilds and the page goes live (~1 min); it appears in the menu if toggled on.
+
+Tips:
+- Wrap a word in `*asterisks*` inside a headline to give it the **blue serif accent**
+  (e.g. `A healthier team, the *GHF* way`).
+- Every page automatically gets the site header, footer, navigation and AI concierge.
+- Existing pages migrated into the builder (e.g. **Bring a Guest**, **Corporate Wellness**)
+  live in `content/pages/*.json`; the rest are still generated from `build.py` until migrated.
