@@ -1236,7 +1236,8 @@ body.menu-open .menu-list a { opacity: 1; transform: translateY(0); transition: 
 
 .gx-class__site {
   justify-self: start; font-size: 9.5px; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 600;
-  padding: 5px 9px; border: 1px solid var(--gx-tone, var(--accent)); color: var(--gx-tone, var(--accent));
+  padding: 5px 9px; border: 1px solid var(--gx-tone, var(--accent));
+  background: var(--gx-tone, var(--accent)); color: #fff;
 }
 .gx-class[data-tone="main"]  { --gx-tone: var(--brand); }
 .gx-class[data-tone="women"] { --gx-tone: #a8336b; }
