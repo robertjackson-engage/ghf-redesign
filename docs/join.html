@@ -9,14 +9,14 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="icon" type="image/svg+xml" href="assets/img/ghf-mark.svg">
-<link rel="stylesheet" href="assets/css/main.css?v=1788973717">
+<link rel="stylesheet" href="assets/css/main.css?v=1788974227">
 <script>(function(){try{
   if(sessionStorage.getItem("ghf-intro"))document.documentElement.classList.add("no-preloader");
 }catch(e){}})();</script>
 </head>
 <body>
 <div class="preloader" aria-hidden="true">
-  <img class="preloader__logo" src="assets/img/brand/logo-mark.png?v=1788973717" alt="Gainesville Health &amp; Fitness" width="1000" height="400" />
+  <img class="preloader__logo" src="assets/img/brand/logo-mark.png?v=1788974227" alt="Gainesville Health &amp; Fitness" width="1000" height="400" />
   <div class="preloader__bar"><i></i></div>
   <div class="preloader__count">0</div>
 </div>
@@ -24,7 +24,7 @@
 <header class="site-header">
   <div class="site-header__inner">
     <a class="brand" href="index.html" aria-label="Gainesville Health &amp; Fitness — home">
-      <img class="brand__logo " src="assets/img/brand/logo-mark.png?v=1788973717" alt="Gainesville Health &amp; Fitness" width="1000" height="400" />
+      <img class="brand__logo " src="assets/img/brand/logo-mark.png?v=1788974227" alt="Gainesville Health &amp; Fitness" width="1000" height="400" />
     </a>
     <nav class="nav-desktop" aria-label="Primary"><a href="group-fitness.html">Classes</a><a href="training.html">Training</a><a href="amenities.html">Amenities</a><a href="locations.html">Locations</a></nav>
     <div class="header-cta">
@@ -90,157 +90,78 @@
   <div class="hero__scroll" aria-hidden="true"></div>
 </section>
 
-<section class="join" id="wizard">
-  <div class="wrap">
-    <div class="join__grid">
-      <div class="join__main">
-        <div class="join__progress">
-          <div class="join__progress-bar"><i></i></div>
-          <ol class="join__steps-nav">
-            <li class="is-active"><span class="n">01</span><span class="lbl">Home Club</span></li>
-            <li><span class="n">02</span><span class="lbl">Your Plan</span></li>
-            <li><span class="n">03</span><span class="lbl">Your Details</span></li>
-            <li><span class="n">04</span><span class="lbl">Recurring Dues</span></li>
-            <li><span class="n">05</span><span class="lbl">Due Today</span></li>
-          </ol>
+<section class="jn" id="wizard" aria-label="Join online">
+  <div class="jn-rail" role="list" aria-label="Steps">
+    <div class="rl on" id="s1" role="listitem"><b>01</b><span>Home club</span></div>
+    <div class="rl" id="s2" role="listitem"><b>02</b><span>Membership</span></div>
+    <div class="rl" id="s3" role="listitem"><b>03</b><span>Your details</span></div>
+    <div class="rl" id="s4" role="listitem"><b>04</b><span>Recurring dues</span></div>
+    <div class="rl" id="s5" role="listitem"><b>05</b><span>Due today</span></div>
+  </div>
+  <div class="jn-wrap">
+    <div>
+      <section id="c1"><p class="kick">Step one</p>
+        <h1>Pick your <span class="serif">home</span> club</h1>
+        <p class="jn-lede">One membership opens all three. Train wherever the day takes you.</p>
+        <div class="panel" id="clubs"></div>
+        <button class="jn-btn" type="button" data-go="2">Continue</button></section>
+
+      <section id="c2" class="hide"><p class="kick">Step two</p>
+        <h1>Choose your <span class="serif">membership</span></h1>
+        <p class="jn-lede">Every plan is $29.99 + tax every other Wednesday — and there is no maintenance fee, ever.</p>
+        <div class="panel" id="plans"></div>
+        <p class="kick" style="margin-top:34px">Optional add-ons</p><div id="addons"></div>
+        <button class="jn-btn ghost" type="button" data-go="1">Back</button>
+        <button class="jn-btn" type="button" data-go="3">Continue</button></section>
+
+      <section id="c3" class="hide"><p class="kick">Step three</p>
+        <h1>Tell us <span class="serif">about you</span></h1>
+        <p class="jn-lede">Must be 18 years or older to join without a parent or guardian.</p>
+        <form class="panel" id="detailsForm" novalidate>
+          <div class="g2"><div><label for="firstName">First name</label><input id="firstName" name="firstName" autocomplete="given-name" required></div>
+            <div><label for="lastName">Last name</label><input id="lastName" name="lastName" autocomplete="family-name" required></div></div>
+          <div class="g2"><div><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email" required></div>
+            <div><label for="phone">Mobile</label><input id="phone" name="phone" type="tel" autocomplete="tel" required></div></div>
+        </form>
+        <div class="field-err" id="detailsErr" hidden></div>
+        <button class="jn-btn ghost" type="button" data-go="2">Back</button>
+        <button class="jn-btn" type="button" id="toPay">Continue to payment</button>
+        <div id="mOut"></div></section>
+
+      <section id="c4" class="hide"><p class="kick">Step four · nothing is charged now</p>
+        <h1>Set up your <span class="serif">recurring</span> dues</h1>
+        <p class="jn-lede">Choose how we draft your dues every other Wednesday. You'll pay today's total on the next step.</p>
+        <div class="panel" id="recChoice">
+          <label class="opt sel" data-m="CC"><span class="tick"></span>
+            <div class="nm">Credit / debit card</div>
+            <div class="nt">Can also cover today's total — nothing to re-enter.</div></label>
+          <label class="opt" data-m="ACH"><span class="tick"></span>
+            <div class="nm">Bank draft · ACH</div>
+            <div class="nt">Simplest for ongoing dues. A card is still required for today's total.</div></label>
         </div>
+        <input class="ipayfield" data-ipayname="account"   type="hidden" id="ipay-account">
+        <input class="ipayfield" data-ipayname="amount"    type="hidden" id="ipay-amount" value="0.00">
+        <input class="ipayfield" data-ipayname="firstname" type="hidden" id="ipay-first">
+        <input class="ipayfield" data-ipayname="lastname"  type="hidden" id="ipay-last">
+        <input class="ipayfield" data-ipayname="email"     type="hidden" id="ipay-email">
+        <input class="ipayfield" data-ipayname="phone"     type="hidden" id="ipay-phone">
+        <input class="ipayfield" data-ipayname="invoice"   type="hidden" id="ipay-invoice">
+        <button class="jn-btn" type="button" id="vaultBtn" disabled>Save payment method</button>
+        <div class="lock"><span id="tstatus">Preparing secure window…</span></div>
+        <p class="lock">🔒 Entered directly with our payment processor. GHF never sees your card or account number.</p>
+        <div id="recOut"></div></section>
 
-        <div class="join__steps">
-          <div class="join-step is-active" data-step="1">
-            <h2 class="join-step__title">Choose your <span class="serif">home club</span></h2>
-            <p class="join-step__hint">One membership, three locations — every plan includes access to all three. Pick the club where you'll check in most.</p>
-            <div class="choice-grid">
-              <button class="choice" type="button" data-name="GHF Main" data-img="assets/img/Free_Weights_Gainesville_Health_and_Fiitness_2021_1_(1).jpg">
-                <span class="choice__chip">Open 24/7</span><span class="choice__check">✓</span>
-                <div class="choice__img"><img src="assets/img/Free_Weights_Gainesville_Health_and_Fiitness_2021_1_(1).jpg" alt="Free weight area at GHF Main" loading="lazy"></div>
-                <h3>GHF Main</h3>
-                <p class="meta">4820 W Newberry Road, Gainesville</p>
-              </button>
-              <button class="choice" type="button" data-name="GHF Women" data-img="assets/img/GHF_GHF_Women_Womens_Center_Body_Pump_2023_1.jpg">
-                <span class="choice__chip">Women Only</span><span class="choice__check">✓</span>
-                <div class="choice__img"><img src="assets/img/GHF_GHF_Women_Womens_Center_Body_Pump_2023_1.jpg" alt="Body Pump class at GHF Women" loading="lazy"></div>
-                <h3>GHF Women</h3>
-                <p class="meta">2441 NW 43rd Street, Gainesville</p>
-              </button>
-              <button class="choice" type="button" data-name="GHF Tioga" data-img="assets/img/GHF_Tioga_Gainesville_Health_Gainesville_Gyms_TIoga_Strength_Gyms_Nearby_2026-2.jpg">
-                <span class="choice__chip">Family Friendly</span><span class="choice__check">✓</span>
-                <div class="choice__img"><img src="assets/img/GHF_Tioga_Gainesville_Health_Gainesville_Gyms_TIoga_Strength_Gyms_Nearby_2026-2.jpg" alt="Strength training at GHF Tioga" loading="lazy"></div>
-                <h3>GHF Tioga</h3>
-                <p class="meta">12830 SW 1st Lane, Newberry</p>
-              </button>
-            </div>
-          </div>
+      <section id="c5" class="hide"><p class="kick">Step five</p>
+        <h1>Total due <span class="serif">today</span></h1>
+        <div class="panel" id="todayBox"></div><div id="payOut"></div></section>
 
-          <div class="join-step" data-step="2">
-            <h2 class="join-step__title">Pick your <span class="serif">plan</span></h2>
-            <p class="join-step__hint">Choose from a 24 month, 12 month, or month-to-month agreement — all $29.99 + tax with dues every other Wednesday, and no maintenance fee. Special pricing on family memberships is available for spouses and children 13–21 years of age.</p>
-            <div class="seg" role="group" aria-label="Membership type">
-              <button type="button" class="is-on" data-type="Individual">Individual</button>
-              <button type="button" data-type="Family">Family</button>
-            </div>
-            <div class="choice-grid">
-              <button class="choice choice--plan" type="button" data-name="24 Month Agreement" data-plan="24mo" data-fee="$49.00"
-                data-note="After the initial 24 months, dues drop to $20.99 + tax every other Wednesday.">
-                <span class="choice__chip">Best Value</span><span class="choice__check">✓</span>
-                <h3>24 Month</h3>
-                <div class="price">$29.99<small> + tax · every other Wednesday</small></div>
-                <p class="meta">After initial 24 months, dues drop to $20.99 + tax every other Wednesday. Starting fee $49.00. No maintenance fee.</p>
-              </button>
-              <button class="choice choice--plan" type="button" data-name="12 Month Agreement" data-plan="12mo" data-fee="$49.00"
-                data-note="After the initial 12 months, dues remain at $29.99 + tax and renew month-to-month.">
-                <span class="choice__check">✓</span>
-                <h3>12 Month</h3>
-                <div class="price">$29.99<small> + tax · every other Wednesday</small></div>
-                <p class="meta">After initial 12 months, remains at $29.99 + tax and renews month-to-month. Starting fee $49.00. No maintenance fee.</p>
-              </button>
-              <button class="choice choice--plan" type="button" data-name="Month To Month Agreement" data-plan="m2m" data-fee="$149.00 + tax"
-                data-note="Cancel membership with 30 day notice.">
-                <span class="choice__check">✓</span>
-                <h3>Month To Month</h3>
-                <div class="price">$29.99<small> + tax · every other Wednesday</small></div>
-                <p class="meta">Cancel membership with 30 day notice. Starting fee $149.00 + tax. No maintenance fee.</p>
-              </button>
-            </div>
-          </div>
-
-          <div class="join-step" data-step="3">
-            <h2 class="join-step__title">Tell us about <span class="serif">you</span></h2>
-            <p class="join-step__hint">Must be 18 years or older to join without parent or guardian.</p>
-            <div class="form-grid">
-              <div class="field"><input type="text" name="first" id="j-first" placeholder=" " required><label for="j-first">First name</label></div>
-              <div class="field"><input type="text" name="last" id="j-last" placeholder=" " required><label for="j-last">Last name</label></div>
-              <div class="field"><input type="email" name="email" id="j-email" placeholder=" " required><label for="j-email">Email address</label></div>
-              <div class="field"><input type="tel" name="phone" id="j-phone" placeholder=" " required><label for="j-phone">Phone</label></div>
-            </div>
-          </div>
-
-          <div class="join-step" data-step="4">
-            <h2 class="join-step__title">Set up your <span class="serif">recurring dues</span></h2>
-            <p class="join-step__hint">Nothing is charged now. Choose how we draft your dues every other Wednesday — you'll pay today's total on the next step.</p>
-            <div class="choice-grid choice-grid--2" id="payMethods">
-              <button class="choice choice--pay is-selected" type="button" data-method="CC">
-                <span class="choice__check">✓</span>
-                <h3>Credit / Debit Card</h3>
-                <p class="meta">Can also cover today's total — nothing to re-enter.</p>
-              </button>
-              <button class="choice choice--pay" type="button" data-method="ACH">
-                <span class="choice__check">✓</span>
-                <h3>Bank Draft · ACH</h3>
-                <p class="meta">Simplest for ongoing dues. A card is still required for today's total.</p>
-              </button>
-            </div>
-            <input class="ipayfield" data-ipayname="account"   type="hidden" id="ipay-account">
-            <input class="ipayfield" data-ipayname="amount"    type="hidden" id="ipay-amount" value="0.00">
-            <input class="ipayfield" data-ipayname="firstname" type="hidden" id="ipay-first">
-            <input class="ipayfield" data-ipayname="lastname"  type="hidden" id="ipay-last">
-            <input class="ipayfield" data-ipayname="email"     type="hidden" id="ipay-email">
-            <input class="ipayfield" data-ipayname="phone"     type="hidden" id="ipay-phone">
-            <input class="ipayfield" data-ipayname="invoice"   type="hidden" id="ipay-invoice">
-            <div class="pay-actions">
-              <button class="btn btn--solid" type="button" id="vaultBtn" disabled><span class="lbl">Save Payment Method</span> <span class="arr">→</span></button>
-              <span class="pay-status" id="payStatus">Preparing secure window…</span>
-            </div>
-            <p class="pay-lock">🔒 Entered directly with our payment processor. GHF never sees your card or account number.</p>
-            <div id="recOut"></div>
-          </div>
-
-          <div class="join-step" data-step="5">
-            <h2 class="join-step__title">Total due <span class="serif">today</span></h2>
-            <p class="join-step__hint">One charge today. After that, your dues draft automatically every other Wednesday.</p>
-            <div id="todayBox"></div>
-          </div>
-        </div>
-
-        <div class="join__nav-row">
-          <button class="btn btn--sm back" type="button">← Back</button>
-          <span class="join__count">Step 01 / 05</span>
-          <button class="btn btn--solid next" type="button" disabled><span class="lbl">Continue</span> <span class="arr">→</span></button>
-        </div>
-      </div>
-
-      <aside class="join__summary" aria-label="Your membership summary">
-        <div class="join__summary-head">
-          <h4>Your Membership</h4>
-          <span>GHF</span>
-        </div>
-        <div class="join__summary-body">
-          <div class="sum-row"><dt>Home club</dt><dd class="empty" data-sum="loc">—</dd></div>
-          <div class="sum-row"><dt>Membership</dt><dd data-sum="type">Individual</dd></div>
-          <div class="sum-row"><dt>Plan</dt><dd class="empty" data-sum="plan">—</dd></div>
-          <div class="sum-row"><dt>Starting fee</dt><dd class="empty" data-sum="fee">—</dd></div>
-          <div class="sum-row"><dt>Member</dt><dd class="empty" data-sum="name">—</dd></div>
-          <div class="sum-row"><dt>Payment method</dt><dd class="empty" data-sum="pay">—</dd></div>
-          <div class="sum-cart" data-cart></div>
-          <div class="sum-rate">
-            <span class="lbl">Due today</span>
-            <span class="amt" data-sum="due">$29.99<small> + tax</small></span>
-          </div>
-          <p class="sum-note" data-sum-recurring>Then $29.99 + tax every other Wednesday.</p>
-          <p class="sum-note" data-sum-note>Every membership includes all 900+ monthly classes, hot yoga, pools &amp; spa, Kid's Club, and access to all three locations.</p>
-          <span class="sum-badge">No maintenance fee</span>
-        </div>
-      </aside>
+      <section id="c6" class="hide"><p class="kick">Welcome to GHF</p>
+        <h1>You're <span class="serif">in</span>.</h1>
+        <div class="panel" id="done"></div>
+        <a class="jn-btn" href="group-fitness.html">Browse classes</a>
+        <a class="jn-btn ghost" href="index.html">Back to home</a></section>
     </div>
+    <aside><div class="jn-cart"><h3>Your cart</h3><div class="in" id="cart"><div class="ln">Pick a plan to see today's total</div></div></div></aside>
   </div>
 </section>
 
@@ -284,20 +205,7 @@
   </div>
 </section>
 
-<div class="join-success" role="dialog" aria-modal="true" aria-label="Membership request received">
-  <div class="join-success__inner">
-    <div class="mark">✓</div>
-    <h2 data-success-name>You're going to feel good here.</h2>
-    <p data-success-copy>Your membership is active. Your dues will draft automatically every other Wednesday — come meet your new gym. Bring a water bottle.</p>
-    <div class="chips" data-success-detail></div>
-    <div class="hero__actions">
-      <a class="btn btn--solid" href="index.html">Back to Home <span class="arr">→</span></a>
-      <a class="btn" href="group-fitness.html">Browse Classes <span class="arr">→</span></a>
-    </div>
-  </div>
-</div>
-<script>window.GHF_JOIN_API="https://ghf-join-demo.azurewebsites.net";</script>
-<script src="assets/js/join.js?v=1788973717" defer></script>
+<script src="assets/js/join.js?v=1788974227" defer></script>
 
 <section class="cta-band">
   <div class="cta-band__media"><img src="assets/img/GHF_Careers_Floor_Instructor_Fitness_Jobs_Service.jpg" alt="" loading="lazy"></div>
@@ -317,7 +225,7 @@
     <div class="site-footer__top">
       <div class="site-footer__brand">
         <a class="brand brand--footer" href="index.html">
-          <img class="brand__logo " src="assets/img/brand/logo-lockup.png?v=1788973717" alt="Gainesville Health &amp; Fitness" width="1000" height="451" />
+          <img class="brand__logo " src="assets/img/brand/logo-lockup.png?v=1788974227" alt="Gainesville Health &amp; Fitness" width="1000" height="451" />
         </a>
         <p>The gym that's best at helping beginners — with staff to guide your journey. One membership, three locations.</p>
         <div class="socials">
@@ -384,8 +292,8 @@
     </div>
   </div>
 </footer>
-<script src="assets/js/main.js?v=1788973717"></script>
-<script src="assets/js/chat-config.js?v=1788973717"></script>
-<script src="assets/js/chat.js?v=1788973717" defer></script>
+<script src="assets/js/main.js?v=1788974227"></script>
+<script src="assets/js/chat-config.js?v=1788974227"></script>
+<script src="assets/js/chat.js?v=1788974227" defer></script>
 </body>
 </html>

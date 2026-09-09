@@ -86,13 +86,13 @@ once pushed, Pages serves it and the http dev path picks it up automatically.
 
 ## Site integration (docs/join.html)
 
-The GHF website's **Join Online** page now runs this flow inside the site's own wizard
-(`build.py` → `docs/join.html`, logic in `docs/assets/js/join.js`). The static page talks to this
-server cross-origin:
+The GHF website's **Join Online** page is this cart-style module, wrapped in the site's header and
+footer (`build.py` → `docs/join.html`; styles scoped under `.jn` in `docs/assets/css/main.css`; logic in
+`docs/assets/js/join.js`). The static page talks to this server cross-origin:
 
 - **API base** is baked in at build time: `GHF_JOIN_API=https://join.ghfc.com python3 build.py`
-  (default `https://ghf-join-demo.azurewebsites.net`). For local testing open
-  `join.html?api=http://localhost:4400` once — it is remembered in `localStorage`.
+  (default `https://ghf-join-demo.azurewebsites.net`). Pages served from `localhost` automatically use
+  `http://localhost:4400`; `join.html?api=…` overrides either (remembered in `localStorage`).
 - **CORS**: the server answers preflights and sets `Access-Control-Allow-Origin` —
   `JOIN_ALLOWED_ORIGINS=https://ghfc.com,https://www.ghfc.com` in production (`*` by default for dev).
 - **Terminal**: the page fetches `/api/terminal` at runtime, re-creates the blob's inline `<script>`
