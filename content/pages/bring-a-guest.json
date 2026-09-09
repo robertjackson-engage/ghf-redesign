@@ -1,0 +1,46 @@
+{
+  "title": "Bring a Guest | 6 Free Visits | GHF",
+  "slug": "bring-a-guest",
+  "description": "The Power Of Friends Guest program — each guest visiting with a member gets 6 free visits.",
+  "active": "bring-a-guest.html",
+  "in_nav": true,
+  "nav_label": "Bring a Guest",
+  "nav_order": 120,
+  "blocks": [
+    {
+      "type": "hero",
+      "kicker": "Power of Friends",
+      "lines": ["Your people train", "*free*"],
+      "sub": "Workouts are better with your favorite humans. Every guest visiting with a member gets 6 free visits — classes, pool, sauna, all of it. Grab your friend; we'll handle the rest.",
+      "image": "assets/img/cycle_friends.jpg",
+      "crumb": "Bring a Guest",
+      "actions": [
+        {"label": "Join GHF Online", "href": "join.html", "solid": true},
+        {"label": "Get Pricing", "href": "contact.html#pricing", "solid": false}
+      ],
+      "meta": ["6 free visits per guest", "Unlimited guests", "2 at a time"]
+    },
+    {
+      "type": "checklist",
+      "num": "01",
+      "eyebrow": "Guidelines for guest visits",
+      "title": "Bring as many friends as you *like*",
+      "text": "You may bring as many guests as you'd like during your membership (but just 2 at one time). If you and your guest are unable to work out together, you may request a guest pass. Guests are welcome to join the gym online anytime.",
+      "items": [
+        "Guests must be accompanied by a current GHF member",
+        "Guests may visit GHF facilities up to 6 times total",
+        "Guests must check in and present photo ID",
+        "Minimum age is 13 years | 13–17 must be accompanied by parent/guardian",
+        "No special passes or advanced reservations required"
+      ]
+    },
+    {
+      "type": "cta",
+      "title": "The power of *friends*",
+      "text": "Guests are welcome to join the gym online anytime — or grab a free all-access pass and see what GHF is all about.",
+      "image": "assets/img/Echo_GroupFit_Outdoor_Classes_Fun_Classes_2021.jpg",
+      "primary_label": "Join GHF Online",
+      "primary_href": "join.html"
+    }
+  ]
+}

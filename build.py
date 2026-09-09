@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # GHF redesign — static site generator
-import os, time
+import os, time, json
 
 OUT = os.path.join(os.path.dirname(__file__), "docs")
 IMG = "assets/img"
@@ -130,6 +130,9 @@ def trainers_section(num):
 
 
 V = str(int(time.time()))  # cache-bust CSS/JS on every build
+# Join API (intellipay/server.py). Override per environment: GHF_JOIN_API=https://join.ghfc.com python3 build.py
+import json as _json
+JOIN_API_JSON = _json.dumps(os.environ.get("GHF_JOIN_API", "https://ghf-join-demo.azurewebsites.net"))
 
 # Modern GHF mark — the raised-arms figure from the original logo, geometrized
 def mark_svg(cls):
@@ -232,7 +235,7 @@ def header_html(active=""):
     </a>
     <nav class="nav-desktop" aria-label="Primary">{links}</nav>
     <div class="header-cta">
-      <a class="btn btn--solid btn--sm" href="join.html">Join Online</a>
+      <a class="btn btn--solid btn--sm" href="join.html#start">Join Online</a>
       <a class="btn btn--solid btn--sm" href="ghf-pass.html#claim">Free Pass</a>
       <a class="btn btn--solid btn--sm header-pricing" href="contact.html#pricing">Get Pricing</a>
       <button class="menu-toggle" aria-expanded="false" aria-label="Open menu">
@@ -569,6 +572,108 @@ def page(filename, title, desc, active, body):
     print("built", filename)
 
 
+# ============================================================ CMS PAGE BUILDER
+# Staff-editable pages: content/pages/*.json → rendered with the same design-
+# system components as the hand-authored pages. New pages are created in the CMS.
+def _accent(t):
+    """Wrap *word* in the serif accent span used across headlines."""
+    return _re.sub(r"\*([^*]+)\*", r'<span class="serif">\1</span>', t or "")
+
+
+def _img_or_none(v):
+    return cms_img(v) if v else None
+
+
+def render_block(b):
+    """Map one CMS block dict → HTML via the existing component helpers."""
+    t = (b.get("type") or "").strip()
+    if t == "hero":
+        lines = [_accent(x) for x in (b.get("lines") or []) if x]
+        actions = [(a.get("label", ""), a.get("href", "#"), bool(a.get("solid", True)))
+                   for a in (b.get("actions") or []) if a.get("label")]
+        return hero(
+            b.get("kicker", ""), lines, sub=b.get("sub", ""),
+            img=_img_or_none(b.get("image")), video=(b.get("video") or None),
+            poster=_img_or_none(b.get("poster")), crumb=(b.get("crumb") or None),
+            actions=(actions or None), meta=(b.get("meta") or None),
+            page=not bool(b.get("tall")),
+        )
+    if t == "split":
+        cta = (b["cta_label"], b.get("cta_href", "#")) if b.get("cta_label") else None
+        return split(
+            b.get("eyebrow", ""), b.get("num", ""), _accent(b.get("title", "")),
+            (b.get("paragraphs") or []), cms_img(b.get("image")), b.get("alt", ""),
+            rev=bool(b.get("reversed")), cta=cta, tag=(b.get("tag") or None),
+            light=bool(b.get("light")), wide=bool(b.get("wide")),
+        )
+    if t == "stats":
+        items = [(i.get("number", "0"), i.get("suffix", ""), i.get("label", ""))
+                 for i in (b.get("items") or [])]
+        return stats_band(items, light=bool(b.get("light")))
+    if t == "cta":
+        primary = (b.get("primary_label", "Claim Your Free Pass"),
+                   b.get("primary_href", "contact.html#pricing"))
+        secondary = ((b.get("secondary_label"), b.get("secondary_href", "#"))
+                     if b.get("secondary_label") else None)
+        return cta_band(_accent(b.get("title", "")), b.get("text", ""),
+                        cms_img(b.get("image")), primary=primary, secondary=secondary)
+    if t == "accordion":
+        items = [(i.get("q", ""), _md_to_html(i.get("a", ""))) for i in (b.get("items") or [])]
+        head_html = ""
+        if b.get("title"):
+            head_html = (f'<div class="cards-head"><div><p class="eyebrow"><span class="num">'
+                         f'{b.get("num", "")}</span> {b.get("eyebrow", "")}</p>'
+                         f'<h2 class="h-display reveal" style="font-size:clamp(30px,3.8vw,58px)">'
+                         f'{_accent(b.get("title", ""))}</h2></div></div>')
+        return (f'\n<section class="section{" section--light" if b.get("light") else ""}">'
+                f'<div class="wrap" style="max-width:960px">{head_html}{accordion(items)}</div></section>\n')
+    if t == "marquee":
+        return marquee((b.get("words") or []), accent=bool(b.get("accent")), ghost=bool(b.get("ghost")))
+    if t == "form":
+        return form_section(b.get("id", "lead"), b.get("num", "01"), b.get("eyebrow", ""),
+                            _accent(b.get("title", "")), b.get("text", ""),
+                            b.get("button", "Get Started"), light=bool(b.get("light", True)))
+    if t == "checklist":
+        lis = "".join(f"<li>{_inline(x)}</li>" for x in (b.get("items") or []) if x)
+        return (f'\n<section class="section{" section--light" if b.get("light") else ""}">'
+                f'<div class="wrap"><div class="intro-grid"><div>'
+                f'<p class="eyebrow"><span class="num">{b.get("num", "")}</span> {b.get("eyebrow", "")}</p>'
+                f'<h2 class="h-display reveal">{_accent(b.get("title", ""))}</h2>'
+                f'<p class="body-copy reveal" style="margin-top:26px">{b.get("text", "")}</p></div>'
+                f'<div class="intro-grid__right reveal"><ul class="checklist">{lis}</ul></div>'
+                f'</div></div></section>\n')
+    if t == "richtext":
+        eyebrow = (f'<p class="eyebrow"><span class="num">{b.get("num", "")}</span> {b.get("eyebrow", "")}</p>'
+                   if b.get("eyebrow") else "")
+        title = (f'<h2 class="h-display reveal" style="font-size:clamp(30px,3.8vw,58px);margin-bottom:22px">'
+                 f'{_accent(b.get("title", ""))}</h2>' if b.get("title") else "")
+        body = _md_to_html(b.get("body", ""))
+        return (f'\n<section class="section{" section--light" if b.get("light") else ""}">'
+                f'<div class="wrap" style="max-width:820px">{eyebrow}{title}'
+                f'<div class="reveal" style="font-size:16px;line-height:1.75">{body}</div></div></section>\n')
+    return f"<!-- unknown block type: {t} -->"
+
+
+def render_blocks(blocks):
+    return "".join(render_block(b) for b in (blocks or []))
+
+
+def load_pages():
+    """Read content/pages/*.json into page dicts (filename, nav settings, blocks)."""
+    items = []
+    for p in sorted(_glob.glob(os.path.join(CONTENT, "pages", "*.json"))):
+        try:
+            data = json.load(open(p, encoding="utf-8"))
+        except Exception as e:
+            print("!! skipping bad page JSON", os.path.basename(p), e)
+            continue
+        data["_slug"] = os.path.splitext(os.path.basename(p))[0]
+        slug = (data.get("slug") or data["_slug"]).strip().replace(".html", "")
+        data["_filename"] = slug + ".html"
+        items.append(data)
+    return items
+
+
 # ============================================================ HOME
 home_steps = f"""
 <section class="section section--tight">
@@ -764,7 +869,7 @@ home_body = hero(
     'Your first day is <span class="serif">free</span>',
     "Full access for a day: every class, the pool, the sauna, the coaches — no charge, no obligation, no sales pitch. The only risk is falling in love with the place.",
     f"{IMG}/Echo_GroupFit_Outdoor_Classes_Fun_Classes_2021.jpg",
-    secondary=("Join Online Today", "join.html"),
+    secondary=("Join Online Today", "join.html#start"),
 )
 
 # ============================================================ WHY GHF
@@ -2115,136 +2220,94 @@ join_body = hero(
     'Be part of Gainesville\'s largest, state-of-the-art fitness community, where your membership connects you to expert guidance, innovative programs, and top-tier amenities for both physical and mental well-being. <em>Must be 18 years or older to join without parent or guardian. Not quite ready to join? <a href="ghf-pass.html#claim" style="color:var(--accent-soft)">Try GHF with a free gym pass</a>.</em>',
     img=f"{IMG}/join-today-bg.jpg",
     crumb="Join Online",
-    actions=[("Start My Membership", "#wizard", True), ("Or Call (352) 377-4955", "tel:3523774955", False)],
+    actions=[("Start My Membership", "#start", True), ("Or Call (352) 377-4955", "tel:3523774955", False)],
     promo=[
         'All memberships are less than <strong>$16</strong> a week',
         "One membership, 3 locations",
     ],
     page=True,
 ) + f"""
-<section class="join" id="wizard">
-  <div class="wrap">
-    <div class="join__grid">
-      <div class="join__main">
-        <div class="join__progress">
-          <div class="join__progress-bar"><i></i></div>
-          <ol class="join__steps-nav">
-            <li class="is-active"><span class="n">01</span><span class="lbl">Home Club</span></li>
-            <li><span class="n">02</span><span class="lbl">Your Plan</span></li>
-            <li><span class="n">03</span><span class="lbl">Your Details</span></li>
-            <li><span class="n">04</span><span class="lbl">Review</span></li>
-          </ol>
+<div class="jn-modal" id="joinModal" hidden role="dialog" aria-modal="true" aria-label="Join online">
+  <div class="jn-modal__bar">
+    <div class="jn-modal__brand">Gainesville Health &amp; Fitness <em>join</em></div>
+    <div class="jn-modal__sec">Secure enrollment</div>
+    <button class="jn-modal__close" type="button" data-join-close aria-label="Close">&times;</button>
+  </div>
+<section class="jn" id="wizard" aria-label="Join online">
+  <div class="jn-rail" role="list" aria-label="Steps">
+    <div class="rl on" id="s1" role="listitem"><b>01</b><span>Home club</span></div>
+    <div class="rl" id="s2" role="listitem"><b>02</b><span>Membership</span></div>
+    <div class="rl" id="s3" role="listitem"><b>03</b><span>Your details</span></div>
+    <div class="rl" id="s4" role="listitem"><b>04</b><span>Recurring dues</span></div>
+    <div class="rl" id="s5" role="listitem"><b>05</b><span>Due today</span></div>
+  </div>
+  <div class="jn-wrap">
+    <div>
+      <section id="c1"><p class="kick">Step one</p>
+        <h1>Pick your <span class="serif">home</span> club</h1>
+        <p class="jn-lede">One membership opens all three. Train wherever the day takes you.</p>
+        <div class="panel" id="clubs"></div>
+        <button class="jn-btn" type="button" data-go="2">Continue</button></section>
+
+      <section id="c2" class="hide"><p class="kick">Step two</p>
+        <h1>Choose your <span class="serif">membership</span></h1>
+        <p class="jn-lede">Every plan is $29.99 + tax every other Wednesday — and there is no maintenance fee, ever.</p>
+        <div class="panel" id="plans"></div>
+        <p class="kick" style="margin-top:34px">Optional add-ons</p><div id="addons"></div>
+        <button class="jn-btn ghost" type="button" data-go="1">Back</button>
+        <button class="jn-btn" type="button" data-go="3">Continue</button></section>
+
+      <section id="c3" class="hide"><p class="kick">Step three</p>
+        <h1>Tell us <span class="serif">about you</span></h1>
+        <p class="jn-lede">Must be 18 years or older to join without a parent or guardian.</p>
+        <form class="panel" id="detailsForm" novalidate>
+          <div class="g2"><div><label for="firstName">First name</label><input id="firstName" name="firstName" autocomplete="given-name" required></div>
+            <div><label for="lastName">Last name</label><input id="lastName" name="lastName" autocomplete="family-name" required></div></div>
+          <div class="g2"><div><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email" required></div>
+            <div><label for="phone">Mobile</label><input id="phone" name="phone" type="tel" autocomplete="tel" required></div></div>
+        </form>
+        <div class="field-err" id="detailsErr" hidden></div>
+        <button class="jn-btn ghost" type="button" data-go="2">Back</button>
+        <button class="jn-btn" type="button" id="toPay">Continue to payment</button>
+        <div id="mOut"></div></section>
+
+      <section id="c4" class="hide"><p class="kick">Step four · nothing is charged now</p>
+        <h1>Set up your <span class="serif">recurring</span> dues</h1>
+        <p class="jn-lede">Choose how we draft your dues every other Wednesday. You'll pay today's total on the next step.</p>
+        <div class="panel" id="recChoice">
+          <label class="opt sel" data-m="CC"><span class="tick"></span>
+            <div class="nm">Credit / debit card</div>
+            <div class="nt">Can also cover today's total — nothing to re-enter.</div></label>
+          <label class="opt" data-m="ACH"><span class="tick"></span>
+            <div class="nm">Bank draft · ACH</div>
+            <div class="nt">Simplest for ongoing dues. A card is still required for today's total.</div></label>
         </div>
+        <input class="ipayfield" data-ipayname="account"   type="hidden" id="ipay-account">
+        <input class="ipayfield" data-ipayname="amount"    type="hidden" id="ipay-amount" value="0.00">
+        <input class="ipayfield" data-ipayname="firstname" type="hidden" id="ipay-first">
+        <input class="ipayfield" data-ipayname="lastname"  type="hidden" id="ipay-last">
+        <input class="ipayfield" data-ipayname="email"     type="hidden" id="ipay-email">
+        <input class="ipayfield" data-ipayname="phone"     type="hidden" id="ipay-phone">
+        <input class="ipayfield" data-ipayname="invoice"   type="hidden" id="ipay-invoice">
+        <button class="jn-btn" type="button" id="vaultBtn" disabled>Save payment method</button>
+        <div class="lock"><span id="tstatus">Preparing secure window…</span></div>
+        <p class="lock">🔒 Entered directly with our payment processor. GHF never sees your card or account number.</p>
+        <div id="recOut"></div></section>
 
-        <div class="join__steps">
-          <div class="join-step is-active" data-step="1">
-            <h2 class="join-step__title">Choose your <span class="serif">home club</span></h2>
-            <p class="join-step__hint">One membership, three locations — every plan includes access to all three. Pick the club where you'll check in most.</p>
-            <div class="choice-grid">
-              <button class="choice" type="button" data-name="GHF Main" data-img="{IMG}/Free_Weights_Gainesville_Health_and_Fiitness_2021_1_(1).jpg">
-                <span class="choice__chip">Open 24/7</span><span class="choice__check">✓</span>
-                <div class="choice__img"><img src="{IMG}/Free_Weights_Gainesville_Health_and_Fiitness_2021_1_(1).jpg" alt="Free weight area at GHF Main" loading="lazy"></div>
-                <h3>GHF Main</h3>
-                <p class="meta">4820 W Newberry Road, Gainesville</p>
-              </button>
-              <button class="choice" type="button" data-name="GHF Women" data-img="{IMG}/GHF_GHF_Women_Womens_Center_Body_Pump_2023_1.jpg">
-                <span class="choice__chip">Women Only</span><span class="choice__check">✓</span>
-                <div class="choice__img"><img src="{IMG}/GHF_GHF_Women_Womens_Center_Body_Pump_2023_1.jpg" alt="Body Pump class at GHF Women" loading="lazy"></div>
-                <h3>GHF Women</h3>
-                <p class="meta">2441 NW 43rd Street, Gainesville</p>
-              </button>
-              <button class="choice" type="button" data-name="GHF Tioga" data-img="{IMG}/GHF_Tioga_Gainesville_Health_Gainesville_Gyms_TIoga_Strength_Gyms_Nearby_2026-2.jpg">
-                <span class="choice__chip">Family Friendly</span><span class="choice__check">✓</span>
-                <div class="choice__img"><img src="{IMG}/GHF_Tioga_Gainesville_Health_Gainesville_Gyms_TIoga_Strength_Gyms_Nearby_2026-2.jpg" alt="Strength training at GHF Tioga" loading="lazy"></div>
-                <h3>GHF Tioga</h3>
-                <p class="meta">12830 SW 1st Lane, Newberry</p>
-              </button>
-            </div>
-          </div>
+      <section id="c5" class="hide"><p class="kick">Step five</p>
+        <h1>Total due <span class="serif">today</span></h1>
+        <div class="panel" id="todayBox"></div><div id="payOut"></div></section>
 
-          <div class="join-step" data-step="2">
-            <h2 class="join-step__title">Pick your <span class="serif">plan</span></h2>
-            <p class="join-step__hint">Choose from a 24 month, 12 month, or month-to-month agreement — all $29.99 + tax with dues every other Wednesday, and no maintenance fee. Special pricing on family memberships is available for spouses and children 13–21 years of age.</p>
-            <div class="seg" role="group" aria-label="Membership type">
-              <button type="button" class="is-on" data-type="Individual">Individual</button>
-              <button type="button" data-type="Family">Family</button>
-            </div>
-            <div class="choice-grid">
-              <button class="choice choice--plan" type="button" data-name="24 Month Agreement" data-fee="$49.00"
-                data-note="After the initial 24 months, dues drop to $20.99 + tax every other Wednesday.">
-                <span class="choice__chip">Best Value</span><span class="choice__check">✓</span>
-                <h3>24 Month</h3>
-                <div class="price">$29.99<small> + tax · every other Wednesday</small></div>
-                <p class="meta">After initial 24 months, dues drop to $20.99 + tax every other Wednesday. Starting fee $49.00. No maintenance fee.</p>
-              </button>
-              <button class="choice choice--plan" type="button" data-name="12 Month Agreement" data-fee="$49.00"
-                data-note="After the initial 12 months, dues remain at $29.99 + tax and renew month-to-month.">
-                <span class="choice__check">✓</span>
-                <h3>12 Month</h3>
-                <div class="price">$29.99<small> + tax · every other Wednesday</small></div>
-                <p class="meta">After initial 12 months, remains at $29.99 + tax and renews month-to-month. Starting fee $49.00. No maintenance fee.</p>
-              </button>
-              <button class="choice choice--plan" type="button" data-name="Month To Month Agreement" data-fee="$149.00 + tax"
-                data-note="Cancel membership with 30 day notice.">
-                <span class="choice__check">✓</span>
-                <h3>Month To Month</h3>
-                <div class="price">$29.99<small> + tax · every other Wednesday</small></div>
-                <p class="meta">Cancel membership with 30 day notice. Starting fee $149.00 + tax. No maintenance fee.</p>
-              </button>
-            </div>
-          </div>
-
-          <div class="join-step" data-step="3">
-            <h2 class="join-step__title">Tell us about <span class="serif">you</span></h2>
-            <p class="join-step__hint">Must be 18 years or older to join without parent or guardian.</p>
-            <div class="form-grid">
-              <div class="field"><input type="text" name="first" id="j-first" placeholder=" " required><label for="j-first">First name</label></div>
-              <div class="field"><input type="text" name="last" id="j-last" placeholder=" " required><label for="j-last">Last name</label></div>
-              <div class="field"><input type="email" name="email" id="j-email" placeholder=" " required><label for="j-email">Email address</label></div>
-              <div class="field"><input type="tel" name="phone" id="j-phone" placeholder=" " required><label for="j-phone">Phone</label></div>
-            </div>
-          </div>
-
-          <div class="join-step" data-step="4">
-            <h2 class="join-step__title">Review &amp; <span class="serif">confirm</span></h2>
-            <p class="join-step__hint">Almost there. Look everything over, then complete your join — we'll finish your setup at the front desk on your first visit.</p>
-            <div id="reviewList"></div>
-            <label class="review-agree">
-              <input type="checkbox" id="agree">
-              <span>I confirm I am 18 years or older (or joining with a parent/guardian), and I'd like GHF to contact me via phone, email, or text to complete my membership.</span>
-            </label>
-          </div>
-        </div>
-
-        <div class="join__nav-row">
-          <button class="btn btn--sm back" type="button">← Back</button>
-          <span class="join__count">Step 01 / 04</span>
-          <button class="btn btn--solid next" type="button" disabled><span class="lbl">Continue</span> <span class="arr">→</span></button>
-        </div>
-      </div>
-
-      <aside class="join__summary" aria-label="Your membership summary">
-        <div class="join__summary-head">
-          <h4>Your Membership</h4>
-          <span>GHF</span>
-        </div>
-        <div class="join__summary-body">
-          <div class="sum-row"><dt>Home club</dt><dd class="empty" data-sum="loc">—</dd></div>
-          <div class="sum-row"><dt>Membership</dt><dd data-sum="type">Individual</dd></div>
-          <div class="sum-row"><dt>Plan</dt><dd class="empty" data-sum="plan">—</dd></div>
-          <div class="sum-row"><dt>Starting fee</dt><dd class="empty" data-sum="fee">—</dd></div>
-          <div class="sum-row"><dt>Member</dt><dd class="empty" data-sum="name">—</dd></div>
-          <div class="sum-rate">
-            <span class="lbl">Your dues</span>
-            <span class="amt">$29.99<small> + tax · biweekly</small></span>
-          </div>
-          <p class="sum-note" data-sum-note>Every membership includes all 900+ monthly classes, hot yoga, pools &amp; spa, Kid's Club, and access to all three locations.</p>
-          <span class="sum-badge">No maintenance fee</span>
-        </div>
-      </aside>
+      <section id="c6" class="hide"><p class="kick">Welcome to GHF</p>
+        <h1>You're <span class="serif">in</span>.</h1>
+        <div class="panel" id="done"></div>
+        <a class="jn-btn" href="group-fitness.html">Browse classes</a>
+        <a class="jn-btn ghost" href="index.html">Back to home</a></section>
     </div>
+    <aside><div class="jn-cart"><h3>Your cart</h3><div class="in" id="cart"><div class="ln">Pick a plan to see today's total</div></div></div></aside>
   </div>
 </section>
+</div>
 
 <section class="section section--light">
   <div class="wrap">
@@ -2286,17 +2349,7 @@ join_body = hero(
   </div>
 </section>
 
-<div class="join-success" role="dialog" aria-modal="true" aria-label="Membership request received">
-  <div class="join-success__inner">
-    <div class="mark">✓</div>
-    <h2 data-success-name>You're going to feel good here.</h2>
-    <p>Your membership request has been received. A GHF fitness counselor will reach out via phone, email, or text to complete your setup — then come meet your new gym. Bring a water bottle.</p>
-    <div class="hero__actions">
-      <a class="btn btn--solid" href="index.html">Back to Home <span class="arr">→</span></a>
-      <a class="btn" href="group-fitness.html">Browse Classes <span class="arr">→</span></a>
-    </div>
-  </div>
-</div>
+<script>window.GHF_JOIN_API={JOIN_API_JSON};</script>
 <script src="assets/js/join.js?v={V}" defer></script>
 """ + cta_band(
     'Or call <span class="serif">(352) 377-4955</span> today',
@@ -2525,7 +2578,7 @@ hyrox_body = hero(
     "PLACEHOLDER COPY \u2014 replace with the real program description. Hyrox pairs running with functional workout stations, and the training that gets you there lives on our indoor turf: sled push, sled pull, farmers carry, wall balls, rowing.",
     img=f"{IMG}/GHF_Functional_Training_Turf_Indoor_Turf_Gainesville_Gyms_Strength_2025.jpg",
     crumb='Training &nbsp;/&nbsp; Hyrox',
-    actions=[("Get Pricing", "contact.html#pricing", True), ("Join GHF Online", "join.html", False)],
+    actions=[("Get Pricing", "contact.html#pricing", True), ("Join GHF Online", "join.html#start", False)],
     meta=["PLACEHOLDER", "PLACEHOLDER", "PLACEHOLDER"],
     page=True,
 ) + f"""
@@ -2562,7 +2615,7 @@ teamstrong_body = hero(
     "PLACEHOLDER COPY \u2014 replace with the real program description. Team-based strength training with coaching, structure and a group that expects you to show up.",
     img=f"{IMG}/GHF_Tribe_Tribe_Team_Training_Tribe_Fit_Strong_Tribe_Punch_2025.jpg",
     crumb='Training &nbsp;/&nbsp; Team Strong Training',
-    actions=[("Get Pricing", "contact.html#pricing", True), ("Join GHF Online", "join.html", False)],
+    actions=[("Get Pricing", "contact.html#pricing", True), ("Join GHF Online", "join.html#start", False)],
     meta=["PLACEHOLDER", "PLACEHOLDER", "PLACEHOLDER"],
     page=True,
 ) + f"""
@@ -2759,7 +2812,7 @@ guest_body = hero(
     "Workouts are better with your favorite humans. Every guest visiting with a member gets 6 free visits — classes, pool, sauna, all of it. Grab your friend; we'll handle the rest.",
     img=f"{IMG}/cycle_friends.jpg",
     crumb="Bring a Guest",
-    actions=[("Join GHF Online", "join.html", True), ("Get Pricing", "contact.html#pricing", False)],
+    actions=[("Join GHF Online", "join.html#start", True), ("Get Pricing", "contact.html#pricing", False)],
     meta=["6 free visits per guest", "Unlimited guests", "2 at a time"],
     page=True,
 ) + f"""
@@ -3546,10 +3599,34 @@ def page_sub(filename, title, desc, body):
 
 PAGES.append(("blog.html", f"Blog | GHF", "News, stories and tips from GHF.", "blog.html", blog_index_body()))
 
-for fn, title, desc, active, body in PAGES:
-    page(fn, title, desc, active, body)
+# ---- CMS-authored pages (content/pages/*.json) ---------------------------------
+CMS_PAGES = load_pages()
+_cms_filenames = {p["_filename"] for p in CMS_PAGES}
 
-print("\nDone:", len(PAGES), "pages")
+# Merge CMS pages flagged "in_nav" into the site menu (per-page nav toggle),
+# ordered by nav_order; dedupe by href so migrated pages don't double up.
+_menu_hrefs = {h for _, h in MENU}
+for p in sorted(CMS_PAGES, key=lambda x: (x.get("nav_order", 100) or 100)):
+    if p.get("in_nav") and p["_filename"] not in _menu_hrefs:
+        MENU.append((p.get("nav_label") or p.get("title") or p["_slug"], p["_filename"]))
+        _menu_hrefs.add(p["_filename"])
+
+# Build code pages, but let a CMS page override one with the same filename.
+_built = 0
+for fn, title, desc, active, body in PAGES:
+    if fn in _cms_filenames:
+        continue
+    page(fn, title, desc, active, body)
+    _built += 1
+
+# Build the CMS pages.
+for p in CMS_PAGES:
+    page(p["_filename"], p.get("title", p["_slug"]),
+         p.get("description", ""), p.get("active", p["_filename"]),
+         render_blocks(p.get("blocks")))
+    _built += 1
+
+print("\nDone:", _built, "pages", f"({len(CMS_PAGES)} from CMS)")
 for _p in POSTS:
     page_sub(f"blog/{_p['_slug']}.html", f"{_p.get('title','Post')} | GHF Blog", _p.get("excerpt","")[:160], blog_post_body(_p))
 print("blog posts:", len(POSTS))

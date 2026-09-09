@@ -1455,3 +1455,114 @@ body.chat-open .chat-panel { opacity: 1; transform: none; pointer-events: auto; 
 .post-body li::before { content: "→"; position: absolute; left: -6px; color: var(--accent); }
 .post-body strong { color: var(--white); }
 .post-body em { font-family: var(--font-serif); font-style: italic; font-size: 1.08em; }
+
+/* ==== JOIN MODULE (cart-style join, ported from intellipay/join.html — scoped under .jn) ==== */
+.jn .serif{font-family:var(--font-serif);font-style:italic;font-weight:400;color:var(--accent-soft)}
+.jn /* rail */
+.jn-rail{display:flex;gap:0;border-bottom:1px solid var(--line);background:var(--ink-2);overflow-x:auto}
+.jn .rl{flex:1;min-width:132px;padding:15px 16px;border-right:1px solid var(--line);position:relative}
+.jn .rl:last-child{border-right:0}
+.jn .rl b{display:block;font-family:var(--font-display);font-size:11px;letter-spacing:.2em;color:var(--muted);margin-bottom:3px}
+.jn .rl span{font-size:13.5px;font-weight:500;color:var(--muted)}
+.jn .rl.on{background:var(--ink-3)}
+.jn .rl.on span{color:var(--bone)}
+.jn .rl.on::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:2px;background:var(--accent)}
+.jn .rl.done span{color:var(--bone)}
+.jn .rl.done span::before{content:"✓ ";color:var(--accent-soft)}
+.jn /* layout */
+.jn-wrap{max-width:1180px;margin:0 auto;padding:clamp(28px,5vw,56px) clamp(20px,4vw,48px) 100px;
+ display:grid;grid-template-columns:1fr 352px;gap:clamp(24px,3.5vw,52px);align-items:start}
+
+.jn h1{font-family:var(--font-display);font-size:clamp(34px,5vw,54px);line-height:.98;letter-spacing:-.01em;text-transform:uppercase}
+.jn h1 .serif{text-transform:none;font-size:.92em}
+.jn .kick{font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--accent-soft);
+ font-weight:600;margin-bottom:14px;display:flex;align-items:center;gap:11px}
+.jn .kick::before{content:"";width:26px;height:1px;background:var(--accent)}
+.jn-lede{color:var(--muted);margin-top:14px;max-width:56ch;font-size:15.5px}
+.jn .panel{margin-top:30px}
+.jn /* options */
+.opt{display:block;border:1px solid var(--line);background:var(--ink-2);border-radius:3px;
+ padding:19px 21px;margin-bottom:11px;cursor:pointer;position:relative;transition:.35s var(--ease)}
+.jn .opt:hover{border-color:rgba(243,240,233,.3);transform:translateY(-1px)}
+.jn .opt.sel{border-color:var(--accent);background:linear-gradient(180deg,rgba(13,111,191,.13),rgba(13,111,191,.04))}
+.jn .opt input{position:absolute;opacity:0}
+.jn .opt .nm{font-family:var(--font-display);font-size:17px;letter-spacing:.02em;text-transform:uppercase}
+.jn .opt .pr{font-size:15px;margin-top:6px;color:var(--bone)}
+.jn .opt .pr b{color:var(--accent-soft);font-weight:600;font-size:17px}
+.jn .opt .nt{color:var(--muted);font-size:13.5px;margin-top:5px;line-height:1.5}
+.jn .opt .tick{position:absolute;top:19px;right:19px;width:19px;height:19px;border:1px solid var(--line);border-radius:50%}
+.jn .opt.sel .tick{border-color:var(--accent);background:var(--accent)}
+.jn .opt.sel .tick::after{content:"";position:absolute;left:5.5px;top:2.5px;width:5px;height:9px;
+ border:solid #fff;border-width:0 2px 2px 0;transform:rotate(45deg)}
+.jn .tag{position:absolute;top:-8px;right:16px;background:var(--accent);color:#fff;font-family:var(--font-display);
+ font-size:10px;letter-spacing:.16em;padding:4px 10px;border-radius:2px}
+.jn /* fields */
+label:not(.opt){display:block;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin:18px 0 7px;font-weight:600}
+.jn .opt{text-transform:none;letter-spacing:normal}
+.jn input, .jn select{width:100%;padding:13px 0;background:transparent;border:0;border-bottom:1px solid var(--line);
+ color:var(--bone);font:400 16px var(--font-body);transition:.3s}
+.jn input:focus, .jn select:focus{outline:none;border-bottom-color:var(--accent)}
+.jn select option{background:var(--ink-2);color:var(--bone)}
+.jn .g2{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+
+.jn /* buttons */
+.jn-btn{display:inline-flex;align-items:center;gap:11px;background:var(--accent);color:#fff;border:0;border-radius:2px;
+ padding:16px 30px;font-family:var(--font-display);font-size:14px;letter-spacing:.12em;text-transform:uppercase;
+ cursor:pointer;margin-top:26px;transition:.35s var(--ease)}
+.jn-btn:hover:not([disabled]){background:var(--brand);transform:translateY(-2px)}
+.jn-btn[disabled]{opacity:.35;cursor:not-allowed}
+.jn-btn.ghost{background:transparent;border:1px solid var(--line);color:var(--bone)}
+.jn-btn.ghost:hover{border-color:var(--accent);background:rgba(13,111,191,.1)}
+.jn /* cart */
+.jn-cart{position:sticky;top:96px;border:1px solid var(--line);background:var(--ink-2);border-radius:3px;overflow:hidden}
+.jn-cart h3{font-family:var(--font-display);font-size:12px;letter-spacing:.22em;text-transform:uppercase;
+ padding:17px 21px;border-bottom:1px solid var(--line);color:var(--muted)}
+.jn-cart .in{padding:19px 21px}
+.jn .ln{display:flex;justify-content:space-between;gap:14px;padding:8px 0;font-size:14px;color:var(--muted)}
+.jn .ln b{color:var(--bone);font-weight:600;white-space:nowrap}
+.jn .tot{display:flex;justify-content:space-between;align-items:baseline;border-top:1px solid var(--line);
+ margin-top:13px;padding-top:15px}
+.jn .tot span:first-child{font-family:var(--font-display);font-size:13px;letter-spacing:.18em;text-transform:uppercase}
+.jn .tot span:last-child{font-family:var(--font-display);font-size:31px;color:var(--bone)}
+.jn .rec{background:var(--ink-3);border-top:1px solid var(--line);padding:14px 21px;font-size:13px;color:var(--muted)}
+.jn .rec b{color:var(--accent-soft)}
+.jn /* misc */
+.jn-chip{display:inline-flex;align-items:center;gap:7px;border:1px solid var(--line);border-radius:2px;
+ padding:7px 13px;font-size:12.5px;margin:6px 7px 0 0;color:var(--muted);background:var(--ink-2)}
+.jn-chip b{color:var(--bone);font-weight:600}
+.jn-note{border-left:2px solid var(--accent);background:rgba(13,111,191,.07);padding:13px 16px;
+ font-size:13.5px;color:var(--muted);margin-top:18px;line-height:1.6}
+.jn-note.warn{border-color:#d98324;background:rgba(217,131,36,.08)}
+.jn .ok{color:var(--accent-soft);font-weight:600}
+.jn .bad{color:#e07a6f;font-weight:600}
+.jn .lock{font-size:12px;color:var(--muted);margin-top:14px;display:flex;align-items:center;gap:8px}
+.jn pre{background:#08080a;border:1px solid var(--line);color:var(--accent-soft);padding:15px;border-radius:3px;
+ overflow:auto;font-size:11.5px;line-height:1.6;margin-top:16px}
+.jn .hide{display:none}
+.jn .big{font-family:var(--font-display);font-size:44px;line-height:1;color:var(--bone)}
+/* section chrome + fields that the standalone page inherited from its own body rules */
+.jn{background:var(--ink);color:var(--bone);font-size:16px;line-height:1.6}
+.jn .jn-wrap{max-width:1180px}
+.jn .jn-btn+.jn-btn{margin-left:10px}
+.jn .field-err{color:#e07a6f;font-size:13px;margin-top:14px}
+.jn input[aria-invalid="true"]{border-bottom-color:#e07a6f}
+@media(max-width:940px){.jn aside{order:-1}.jn .jn-cart{position:static}}
+@media (max-width: 940px) { .jn .jn-wrap { grid-template-columns: 1fr; } .jn aside { order: -1; } .jn .jn-cart { position: static; } }
+@media (max-width: 600px) { .jn .g2 { grid-template-columns: 1fr; } .jn h1 { font-size: 34px; } .jn .rl { min-width: 110px; padding: 12px 12px; } }
+
+/* ---- Join pop-out: the module opens as a full-screen takeover above the page ---- */
+.jn-modal { position: fixed; inset: 0; z-index: 1500; background: var(--ink); overflow-y: auto; -webkit-overflow-scrolling: touch; overscroll-behavior: contain; }
+.jn-modal[hidden] { display: none; }
+.jn-modal.is-open { animation: jnIn .5s var(--ease-out) both; }
+@keyframes jnIn { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: none; } }
+@media (prefers-reduced-motion: reduce) { .jn-modal.is-open { animation: none; } }
+.jn-modal__bar { position: sticky; top: 0; z-index: 2; display: flex; align-items: center; gap: 18px; padding: 16px clamp(20px, 4vw, 48px); background: rgba(11,11,12,.88); backdrop-filter: blur(14px); border-bottom: 1px solid var(--line); }
+.jn-modal__brand { font-family: var(--font-display); font-size: 19px; letter-spacing: .02em; text-transform: uppercase; color: var(--bone); }
+.jn-modal__brand em { font-family: var(--font-serif); font-style: italic; text-transform: none; color: var(--accent-soft); font-size: 17px; margin-left: 7px; }
+.jn-modal__sec { margin-left: auto; font-size: 11px; letter-spacing: .18em; text-transform: uppercase; color: var(--muted); }
+.jn-modal__close { width: 44px; height: 44px; border: 1px solid var(--line); background: transparent; color: var(--bone); font-size: 26px; line-height: 1; cursor: pointer; border-radius: 2px; transition: .3s; }
+.jn-modal__close:hover, .jn-modal__close:focus-visible { border-color: var(--accent); background: rgba(13,111,191,.12); outline: none; }
+body.jn-open { overflow: hidden !important; }
+/* keep IntelliPay's Lightbox above the takeover (it uses near-max z-index already; this is belt and braces) */
+#intellipay-lightbox, .intellipay-md-modal, .intellipay-md-overlay { z-index: 2147483000; }
+@media (max-width: 600px) { .jn-modal__sec { display: none; } }

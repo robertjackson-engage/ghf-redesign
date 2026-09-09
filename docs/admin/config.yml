@@ -2,11 +2,142 @@ backend:
   name: github
   repo: robertjackson-engage/ghf-redesign
   branch: main
+# Local dev only: when the Sveltia CMS proxy server is running on localhost,
+# /admin edits local files directly with no GitHub login. Ignored in production.
+local_backend: true
 media_folder: "docs/assets/img"
 public_folder: "/assets/img"
 site_url: https://robertjackson-engage.github.io/ghf-redesign/
 publish_mode: simple
 collections:
+  - name: pages
+    label: "Pages"
+    label_singular: "Page"
+    folder: "content/pages"
+    extension: json
+    format: json
+    create: true
+    slug: "{{fields.slug}}"
+    identifier_field: title
+    summary: "{{title}}"
+    description: >
+      Build and edit full pages from the GHF design blocks. Set a URL slug, choose
+      whether it appears in the menu, then stack sections. Tip: wrap a word in
+      *asterisks* inside headlines to give it the blue serif accent.
+    fields:
+      - { name: title, label: "Page title (browser tab + SEO)", widget: string }
+      - { name: slug, label: "URL slug", widget: string, hint: "Lowercase, dashes, no spaces — e.g. 'corporate-wellness' becomes /corporate-wellness.html" }
+      - { name: description, label: "SEO description", widget: text }
+      - { name: in_nav, label: "Show in site menu", widget: boolean, default: true }
+      - { name: nav_label, label: "Menu label", widget: string, required: false, hint: "Defaults to the page title" }
+      - { name: nav_order, label: "Menu order (low = earlier)", widget: number, value_type: int, default: 100, required: false }
+      - name: blocks
+        label: "Page sections"
+        label_singular: "Section"
+        widget: list
+        types:
+          - name: hero
+            label: "Hero — top banner"
+            summary: "Hero: {{fields.lines}}"
+            fields:
+              - { name: kicker, label: "Kicker (small label above headline)", widget: string, required: false }
+              - { name: lines, label: "Headline lines", widget: list, field: { name: line, label: "Line", widget: string }, hint: "One entry per line. Wrap a word in *asterisks* for the blue serif accent." }
+              - { name: sub, label: "Subheading", widget: text, required: false }
+              - { name: image, label: "Background image", widget: image, required: false }
+              - { name: crumb, label: "Breadcrumb label", widget: string, required: false }
+              - { name: tall, label: "Full-height hero", widget: boolean, default: false, required: false }
+              - { name: meta, label: "Small facts strip (optional)", widget: list, field: { name: item, widget: string }, required: false }
+              - name: actions
+                label: "Buttons"
+                widget: list
+                required: false
+                fields:
+                  - { name: label, label: "Button text", widget: string }
+                  - { name: href, label: "Link", widget: string }
+                  - { name: solid, label: "Filled (blue) button", widget: boolean, default: true }
+          - name: split
+            label: "Image + Text"
+            summary: "Image + Text: {{fields.title}}"
+            fields:
+              - { name: eyebrow, label: "Eyebrow", widget: string, required: false }
+              - { name: num, label: "Number label (e.g. 01)", widget: string, required: false }
+              - { name: title, label: "Heading", widget: string, hint: "Accent a word with *asterisks*" }
+              - { name: paragraphs, label: "Paragraphs", widget: list, field: { name: p, label: "Paragraph", widget: text } }
+              - { name: image, label: "Image", widget: image }
+              - { name: alt, label: "Image description (accessibility)", widget: string, required: false }
+              - { name: reversed, label: "Put image on the right", widget: boolean, default: false }
+              - { name: light, label: "Light background", widget: boolean, default: false }
+              - { name: tag, label: "Image badge (optional)", widget: string, required: false }
+              - { name: cta_label, label: "Link text (optional)", widget: string, required: false }
+              - { name: cta_href, label: "Link URL (optional)", widget: string, required: false }
+          - name: checklist
+            label: "Heading + Checklist"
+            summary: "Checklist: {{fields.title}}"
+            fields:
+              - { name: num, label: "Number label", widget: string, required: false }
+              - { name: eyebrow, label: "Eyebrow", widget: string, required: false }
+              - { name: title, label: "Heading", widget: string }
+              - { name: text, label: "Intro paragraph", widget: text, required: false }
+              - { name: items, label: "Checklist items", widget: list, field: { name: item, widget: string } }
+              - { name: light, label: "Light background", widget: boolean, default: false, required: false }
+          - name: stats
+            label: "Stats band"
+            fields:
+              - name: items
+                label: "Stats"
+                widget: list
+                fields:
+                  - { name: number, label: "Number", widget: string }
+                  - { name: suffix, label: "Suffix (e.g. +, /7)", widget: string, required: false }
+                  - { name: label, label: "Label", widget: string }
+              - { name: light, label: "Light background", widget: boolean, default: false, required: false }
+          - name: cta
+            label: "Call-to-action band"
+            summary: "CTA: {{fields.title}}"
+            fields:
+              - { name: title, label: "Heading", widget: string, hint: "Accent a word with *asterisks*" }
+              - { name: text, label: "Text", widget: text }
+              - { name: image, label: "Background image", widget: image }
+              - { name: primary_label, label: "Primary button text", widget: string, default: "Claim Your Free Pass" }
+              - { name: primary_href, label: "Primary button link", widget: string, default: "contact.html#pricing" }
+              - { name: secondary_label, label: "Secondary button text", widget: string, required: false }
+              - { name: secondary_href, label: "Secondary button link", widget: string, required: false }
+          - name: accordion
+            label: "FAQ / Accordion"
+            fields:
+              - { name: num, label: "Number label", widget: string, required: false }
+              - { name: eyebrow, label: "Eyebrow", widget: string, required: false }
+              - { name: title, label: "Heading", widget: string, required: false }
+              - name: items
+                label: "Questions"
+                widget: list
+                fields:
+                  - { name: q, label: "Question", widget: string }
+                  - { name: a, label: "Answer", widget: text }
+              - { name: light, label: "Light background", widget: boolean, default: false, required: false }
+          - name: richtext
+            label: "Rich text section"
+            summary: "Text: {{fields.title}}"
+            fields:
+              - { name: num, label: "Number label", widget: string, required: false }
+              - { name: eyebrow, label: "Eyebrow", widget: string, required: false }
+              - { name: title, label: "Heading", widget: string, required: false }
+              - { name: body, label: "Content", widget: markdown }
+              - { name: light, label: "Light background", widget: boolean, default: false, required: false }
+          - name: form
+            label: "Lead capture form"
+            fields:
+              - { name: num, label: "Number label", widget: string, required: false }
+              - { name: eyebrow, label: "Eyebrow", widget: string, required: false }
+              - { name: title, label: "Heading", widget: string }
+              - { name: text, label: "Text", widget: text }
+              - { name: button, label: "Submit button text", widget: string, default: "Get Started" }
+              - { name: id, label: "Anchor id (for #links)", widget: string, default: "lead", required: false }
+          - name: marquee
+            label: "Scrolling word strip"
+            fields:
+              - { name: words, label: "Words", widget: list, field: { name: word, widget: string } }
+              - { name: accent, label: "Dark background", widget: boolean, default: false, required: false }
   - name: blog
     label: "Blog Posts"
     label_singular: "Blog Post"

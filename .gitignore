@@ -8,3 +8,5 @@ __pycache__/
 # never commit credentials
 .anthropic-key
 .env
+intellipay/.env
+.env
