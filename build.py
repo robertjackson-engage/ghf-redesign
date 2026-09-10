@@ -103,7 +103,7 @@ def trainers_section(num):
   <div class="wrap">
     <div class="cards-head">
       <div>
-        <p class="eyebrow"><span class="num">{num}</span> Meet our trainers</p>
+        <p class="eyebrow">Meet our trainers</p>
         <h2 class="h-display reveal" style="font-size:clamp(34px,4.6vw,72px)">The people you'll actually <span class="serif">work with</span></h2>
       </div>
       <p class="body-copy reveal" style="max-width:36ch">{len(TRAINERS)} certified trainers, each with their own specialties. Click anyone to see their background.</p>
@@ -482,7 +482,7 @@ def split(eyebrow, num, title, paras, img, alt, rev=False, cta=None, tag=None, l
         <img src="{img}" alt="{alt}" loading="lazy">{tag_html}
       </div>
       <div class="split__body">
-        <p class="eyebrow"><span class="num">{num}</span> {eyebrow}</p>
+        <p class="eyebrow">{eyebrow}</p>
         {heading}
         <div class="reveal">{body_paras}{cta_html}</div>
       </div>
@@ -538,7 +538,7 @@ def form_section(sec_id, num, eyebrow, title_html, text, btn, fields=None, light
   <div class="wrap">
     <div class="intro-grid">
       <div>
-        <p class="eyebrow"><span class="num">{num}</span> {eyebrow}</p>
+        <p class="eyebrow">{eyebrow}</p>
         <h2 class="h-display reveal" style="font-size:clamp(34px,4.6vw,72px)">{title_html}</h2>
         <p class="lede reveal" style="margin-top:28px">{text}</p>
         {extra}
@@ -645,8 +645,7 @@ def render_block(b):
         items = [(i.get("q", ""), _md_to_html(i.get("a", ""))) for i in (b.get("items") or [])]
         head_html = ""
         if b.get("title"):
-            head_html = (f'<div class="cards-head"><div><p class="eyebrow"><span class="num">'
-                         f'{b.get("num", "")}</span> {b.get("eyebrow", "")}</p>'
+            head_html = (f'<div class="cards-head"><div><p class="eyebrow">{b.get("eyebrow", "")}</p>'
                          f'<h2 class="h-display reveal" style="font-size:clamp(30px,3.8vw,58px)">'
                          f'{_accent(b.get("title", ""))}</h2></div></div>')
         return (f'\n<section class="section{" section--light" if b.get("light") else ""}">'
@@ -661,13 +660,13 @@ def render_block(b):
         lis = "".join(f"<li>{_inline(x)}</li>" for x in (b.get("items") or []) if x)
         return (f'\n<section class="section{" section--light" if b.get("light") else ""}">'
                 f'<div class="wrap"><div class="intro-grid"><div>'
-                f'<p class="eyebrow"><span class="num">{b.get("num", "")}</span> {b.get("eyebrow", "")}</p>'
+                f'<p class="eyebrow">{b.get("eyebrow", "")}</p>'
                 f'<h2 class="h-display reveal">{_accent(b.get("title", ""))}</h2>'
                 f'<p class="body-copy reveal" style="margin-top:26px">{b.get("text", "")}</p></div>'
                 f'<div class="intro-grid__right reveal"><ul class="checklist">{lis}</ul></div>'
                 f'</div></div></section>\n')
     if t == "richtext":
-        eyebrow = (f'<p class="eyebrow"><span class="num">{b.get("num", "")}</span> {b.get("eyebrow", "")}</p>'
+        eyebrow = (f'<p class="eyebrow">{b.get("eyebrow", "")}</p>'
                    if b.get("eyebrow") else "")
         title = (f'<h2 class="h-display reveal" style="font-size:clamp(30px,3.8vw,58px);margin-bottom:22px">'
                  f'{_accent(b.get("title", ""))}</h2>' if b.get("title") else "")
@@ -714,7 +713,7 @@ home_steps = f"""
   <div class="wrap">
     <div class="cards-head">
       <div>
-        <p class="eyebrow"><span class="num">07</span> Getting started is the easy part</p>
+        <p class="eyebrow">Getting started is the easy part</p>
         <h2 class="h-display reveal" style="font-size:clamp(34px,4.6vw,72px)">Your first visit, <span class="serif">mapped out</span></h2>
       </div>
       <p class="body-copy reveal" style="max-width:36ch">No contracts to sign, no sales pitch to survive. Just show up and see how it feels.</p>
@@ -744,7 +743,7 @@ home_body = hero(
   <div class="wrap">
     <div class="intro-grid">
       <div>
-        <p class="eyebrow"><span class="num">01</span> The reason members stay</p>
+        <p class="eyebrow">The reason members stay</p>
         <h2 class="h-display reveal">Finally, a gym that<br>doesn't leave you <span class="serif">guessing</span></h2>
       </div>
       <div class="intro-grid__right">
@@ -765,7 +764,7 @@ home_body = hero(
   <div class="wrap">
     <div class="cards-head">
       <div>
-        <p class="eyebrow"><span class="num">02</span> Find what you'll love</p>
+        <p class="eyebrow">Find what you'll love</p>
         <h2 class="h-display reveal" style="font-size:clamp(34px,4.6vw,72px)">Every way to <span class="serif">move</span></h2>
       </div>
       <a class="inline-link reveal" href="group-fitness.html">View all classes →</a>
@@ -819,7 +818,7 @@ home_body = hero(
   <div class="wrap">
     <div class="cards-head">
       <div>
-        <p class="eyebrow"><span class="num">05</span> Recover like you mean it</p>
+        <p class="eyebrow">Recover like you mean it</p>
         <h2 class="h-display reveal" style="font-size:clamp(34px,4.6vw,72px)">Soak away <span class="serif">the sore</span></h2>
       </div>
       <a class="inline-link reveal" href="recovery.html">More about recovery →</a>
@@ -843,7 +842,7 @@ home_body = hero(
   <div class="wrap">
     <div class="cards-head">
       <div>
-        <p class="eyebrow"><span class="num">06</span> When you're ready for more</p>
+        <p class="eyebrow">When you're ready for more</p>
         <h2 class="h-display reveal" style="font-size:clamp(34px,4.6vw,72px)">Go further with a <span class="serif">coach in your corner</span></h2>
       </div>
       <p class="body-copy reveal" style="max-width:34ch">Want faster results, real accountability, or a body that surprises you? Pick the program that fits your goal — your first session is free.</p>
@@ -921,7 +920,7 @@ why_body = hero(
   <div class="wrap">
     <div class="intro-grid">
       <div>
-        <p class="eyebrow"><span class="num">01</span> 45 years of helping beginners</p>
+        <p class="eyebrow">45 years of helping beginners</p>
         <h2 class="h-display reveal">You're going to feel <span class="serif">good</span> here</h2>
       </div>
       <div class="intro-grid__right">
@@ -995,7 +994,7 @@ amenities_body = hero(
   <div class="wrap">
     <div class="intro-grid">
       <div>
-        <p class="eyebrow"><span class="num">01</span> A premium fitness experience</p>
+        <p class="eyebrow">A premium fitness experience</p>
         <h2 class="h-display reveal">Beyond the <span class="serif">basics</span></h2>
       </div>
       <div class="intro-grid__right">
@@ -1041,7 +1040,7 @@ amenities_body = hero(
     <div class="split">
       <div class="split__media reveal-img"><img src="{IMG}/sports-activities-pool-wide-700x467.jpg" alt="Indoor lap pool at GHF" loading="lazy"><span class="tag">Aquix by GHF</span></div>
       <div class="split__body">
-        <p class="eyebrow"><span class="num">06</span> Aquix by GHF — Indoor Pool &amp; Spa</p>
+        <p class="eyebrow">Aquix by GHF — Indoor Pool &amp; Spa</p>
         <h2 class="h-display" style="font-size:clamp(30px,3.8vw,58px)">Dive into a world of <span class="serif">wellness</span></h2>
         <p class="body-copy reveal">The gentle embrace of water has long been revered for its healing properties. As you glide through the water, the buoyancy relieves joint stress, promoting flexibility and strengthening muscles. The hydrostatic pressure encourages blood circulation, reducing inflammation and promoting healing.</p>
         <ul class="checklist reveal" style="margin-top:26px">
@@ -1063,7 +1062,7 @@ amenities_body = hero(
   <div class="wrap">
     <div class="cards-head">
       <div>
-        <p class="eyebrow"><span class="num">07</span> And so much more</p>
+        <p class="eyebrow">And so much more</p>
         <h2 class="h-display reveal" style="font-size:clamp(34px,4.6vw,72px)">Included in your <span class="serif">membership</span></h2>
       </div>
     </div>
@@ -1125,7 +1124,7 @@ groupfit_body = hero(
   <div class="wrap">
     <div class="intro-grid">
       <div>
-        <p class="eyebrow"><span class="num">01</span> A few examples of the classes we offer</p>
+        <p class="eyebrow">A few examples of the classes we offer</p>
         <h2 class="h-display reveal">Something for <span class="serif">everyone</span></h2>
         <p class="body-copy reveal" style="margin-top:26px">From beginner to advanced — and classes are included in your membership. Come as often as you want. We're here to help you reach your potential.</p>
       </div>
@@ -1158,7 +1157,7 @@ groupfit_body = hero(
   <div class="wrap">
     <div class="cards-head">
       <div>
-        <p class="eyebrow"><span class="num">02</span> Unsure where to start?</p>
+        <p class="eyebrow">Unsure where to start?</p>
         <h2 class="h-display reveal" style="font-size:clamp(34px,4.6vw,72px)">Our most <span class="serif">popular</span> classes</h2>
       </div>
       <p class="body-copy reveal" style="max-width:38ch">We recommend trying all kinds of classes to find what best suits you, your style and your vibe. Most classes are offered at a variety of times and days with different instructors.</p>
@@ -1181,7 +1180,7 @@ groupfit_body = hero(
   <div class="wrap">
     <div class="cards-head">
       <div>
-        <p class="eyebrow"><span class="num">03</span> Class schedule</p>
+        <p class="eyebrow">Class schedule</p>
         <h2 class="h-display reveal" style="font-size:clamp(34px,4.6vw,72px)">Find your <span class="serif">class</span></h2>
       </div>
       <p class="body-copy reveal" style="max-width:38ch">Filter by location, class type, studio, day or instructor. Every class below is included in your membership.</p>
@@ -1293,7 +1292,7 @@ pt_body = hero(
   <div class="wrap">
     <div class="intro-grid">
       <div>
-        <p class="eyebrow"><span class="num">01</span> One-on-one personal training</p>
+        <p class="eyebrow">One-on-one personal training</p>
         <h2 class="h-display reveal">Make real results <span class="serif">happen</span></h2>
       </div>
       <div class="intro-grid__right">
@@ -1309,7 +1308,7 @@ pt_body = hero(
   <div class="wrap" style="padding-bottom:clamp(80px,11vw,170px)">
     <div class="cards-head">
       <div>
-        <p class="eyebrow"><span class="num">02</span> Personal training that fits your life</p>
+        <p class="eyebrow">Personal training that fits your life</p>
         <h2 class="h-display reveal" style="font-size:clamp(34px,4.6vw,72px)">Three ways to <span class="serif">train</span></h2>
       </div>
     </div>
@@ -1338,7 +1337,7 @@ pt_body = hero(
     <div class="split">
       <div class="split__media reveal-img"><img src="{IMG}/GHF_Personal_Training_Trainers_one_on_one_clients_2025-2.jpg" alt="GHF trainer working one on one with a client" loading="lazy"><span class="tag">GHF PT Studio</span></div>
       <div class="split__body">
-        <p class="eyebrow"><span class="num">03</span> Why train at GHF</p>
+        <p class="eyebrow">Why train at GHF</p>
         <h2 class="h-display" style="font-size:clamp(30px,3.8vw,58px)">The best in the <span class="serif">industry</span></h2>
         <ul class="checklist reveal" style="margin-top:10px">
           <li>40 personal trainers on staff</li>
@@ -1355,7 +1354,7 @@ pt_body = hero(
 """ + trainers_section("04") + f"""
 <section class="section">
   <div class="wrap" style="padding-left:0;padding-right:0">
-    <p class="eyebrow wrap" style="margin-bottom:clamp(30px,4vw,60px)"><span class="num">05</span> Real members. Real results.</p>
+    <p class="eyebrow wrap" style="margin-bottom:clamp(30px,4vw,60px)">Real members. Real results.</p>
     <div class="t-slider">
       <div class="t-slider__track">{slides}</div>
       <div class="t-slider__nav">
@@ -1392,7 +1391,7 @@ strength_body = hero(
   <div class="wrap">
     <div class="intro-grid">
       <div>
-        <p class="eyebrow"><span class="num">01</span> The equipment</p>
+        <p class="eyebrow">The equipment</p>
         <h2 class="h-display reveal">Train smarter, build stronger, move <span class="serif">better</span></h2>
       </div>
       <div class="intro-grid__right">
@@ -1407,7 +1406,7 @@ strength_body = hero(
   <div class="wrap">
     <div class="cards-head">
       <div>
-        <p class="eyebrow"><span class="num">02</span> Free weight &amp; functional training studio</p>
+        <p class="eyebrow">Free weight &amp; functional training studio</p>
         <h2 class="h-display reveal" style="font-size:clamp(34px,4.6vw,72px)">More steel, more space, <span class="serif">no waiting</span></h2>
       </div>
       <p class="body-copy reveal" style="max-width:38ch">We didn't just add a few plates; we doubled our footprint. GHF now offers the largest free weight selection in Gainesville, specifically designed to eliminate the "gym rush" bottlenecks.</p>
@@ -1450,7 +1449,7 @@ strength_body = hero(
   <div class="wrap">
     <div class="cards-head">
       <div>
-        <p class="eyebrow"><span class="num">06</span> Benefits of strength training</p>
+        <p class="eyebrow">Benefits of strength training</p>
         <h2 class="h-display reveal" style="font-size:clamp(34px,4.6vw,72px)">The science is <span class="serif">clear</span></h2>
       </div>
       <p class="body-copy reveal" style="max-width:40ch">Strength training is one of the most powerful tools available for transforming your health and extending your lifespan — with benefits that extend far beyond just building stronger muscles.</p>
@@ -1545,7 +1544,7 @@ pool_body = hero(
   <div class="wrap">
     <div class="cards-head">
       <div>
-        <p class="eyebrow"><span class="num">01</span> Take a close look at what awaits you</p>
+        <p class="eyebrow">Take a close look at what awaits you</p>
         <h2 class="h-display reveal" style="font-size:clamp(34px,4.6vw,72px)">Seven ways to <span class="serif">soak it in</span></h2>
       </div>
     </div>
@@ -1574,7 +1573,7 @@ pool_body = hero(
     <div class="split">
       <div class="split__media reveal-img"><img src="{IMG}/GHF_Aquix_Pool_2018.jpg" alt="Aqua group fitness class in the pool" loading="lazy"><span class="tag">GroupFit Aqua</span></div>
       <div class="split__body">
-        <p class="eyebrow"><span class="num">02</span> Aqua group classes</p>
+        <p class="eyebrow">Aqua group classes</p>
         <h2 class="h-display" style="font-size:clamp(30px,3.8vw,58px)">A few of the aqua classes we <span class="serif">offer</span></h2>
         <ul class="checklist reveal" style="margin-top:10px">
           <li>Aqua HIIT</li>
@@ -1616,7 +1615,7 @@ hotyoga_body = hero(
   <div class="wrap">
     <div class="intro-grid">
       <div>
-        <p class="eyebrow"><span class="num">01</span> Unlimited potential</p>
+        <p class="eyebrow">Unlimited potential</p>
         <h2 class="h-display reveal">The best hot yoga in <span class="serif">Gainesville</span></h2>
       </div>
       <div class="intro-grid__right">
@@ -1629,7 +1628,7 @@ hotyoga_body = hero(
 
 <section class="section section--flush">
   <div class="wrap" style="padding-bottom:clamp(80px,11vw,170px)">
-    <p class="eyebrow"><span class="num">02</span> Our three signature temperatures</p>
+    <p class="eyebrow">Our three signature temperatures</p>
     <div class="temps" data-stagger>
       <div class="temp"><span class="temp__bar"></span>
         <div class="temp__deg">85<sup>°</sup></div>
@@ -1662,7 +1661,7 @@ hotyoga_body = hero(
   <div class="wrap">
     <div class="intro-grid">
       <div>
-        <p class="eyebrow"><span class="num">03</span> Why hot yoga?</p>
+        <p class="eyebrow">Why hot yoga?</p>
         <h2 class="h-display reveal" style="font-size:clamp(34px,4.6vw,72px)">A wealth of <span class="serif">benefits</span></h2>
         <p class="body-copy reveal" style="margin-top:26px">Step into a world of profound wellness at Gainesville Health &amp; Fitness's brand-new, spacious hot yoga studio. More than just a workout, our beautifully designed sanctuary offers a unique mind/body experience that revitalizes, strengthens, and calms.</p>
       </div>
@@ -1686,7 +1685,7 @@ hotyoga_body = hero(
   <div class="wrap">
     <div class="cards-head">
       <div>
-        <p class="eyebrow"><span class="num">04</span> Before you arrive</p>
+        <p class="eyebrow">Before you arrive</p>
         <h2 class="h-display reveal" style="font-size:clamp(34px,4.6vw,72px)">Studio <span class="serif">guidelines</span></h2>
       </div>
     </div>
@@ -1745,7 +1744,7 @@ pilates_body = hero(
   <div class="wrap">
     <div class="intro-grid">
       <div>
-        <p class="eyebrow"><span class="num">01</span> The best Pilates classes in Gainesville, FL</p>
+        <p class="eyebrow">The best Pilates classes in Gainesville, FL</p>
         <h2 class="h-display reveal">An environment of complete <span class="serif">focus</span></h2>
       </div>
       <div class="intro-grid__right">
@@ -1768,7 +1767,7 @@ pilates_body = hero(
   <div class="wrap">
     <div class="cards-head">
       <div>
-        <p class="eyebrow"><span class="num">02</span> Pilates class descriptions</p>
+        <p class="eyebrow">Pilates class descriptions</p>
         <h2 class="h-display reveal" style="font-size:clamp(34px,4.6vw,72px)">Find your <span class="serif">class</span></h2>
       </div>
       <p class="body-copy reveal" style="max-width:38ch">Whether you're a beginner or advanced practitioner, you'll find a class that meets your needs.</p>
@@ -1802,7 +1801,7 @@ tribe_body = hero(
   <div class="wrap">
     <div class="cards-head">
       <div>
-        <p class="eyebrow"><span class="num">01</span> TRIBE program descriptions</p>
+        <p class="eyebrow">TRIBE program descriptions</p>
         <h2 class="h-display reveal" style="font-size:clamp(34px,4.6vw,72px)">Choose your <span class="serif">tribe</span></h2>
       </div>
       <p class="body-copy reveal" style="max-width:38ch">Each TRIBE program has a certified TRIBE Coach and up to 10 participants. The motivation and accountability you get with this team will challenge you to work harder and exceed your expectations.</p>
@@ -1877,7 +1876,7 @@ recovery_body = hero(
   <div class="wrap">
     <div class="intro-grid">
       <div>
-        <p class="eyebrow"><span class="num">01</span> The holistic recovery approach</p>
+        <p class="eyebrow">The holistic recovery approach</p>
         <h2 class="h-display reveal">That elevates every aspect of your <span class="serif">life</span></h2>
       </div>
       <div class="intro-grid__right">
@@ -1953,7 +1952,7 @@ kids_body = hero(
   <div class="wrap">
     <div class="intro-grid">
       <div>
-        <p class="eyebrow"><span class="num">01</span> Included in every membership</p>
+        <p class="eyebrow">Included in every membership</p>
         <h2 class="h-display reveal">At no extra <span class="serif">charge</span></h2>
       </div>
       <div class="intro-grid__right">
@@ -1976,7 +1975,7 @@ kids_body = hero(
   <div class="wrap">
     <div class="cards-head">
       <div>
-        <p class="eyebrow"><span class="num">02</span> Kids Club hours</p>
+        <p class="eyebrow">Kids Club hours</p>
         <h2 class="h-display reveal" style="font-size:clamp(34px,4.6vw,72px)">Three locations, all <span class="serif">covered</span></h2>
       </div>
     </div>
@@ -2175,9 +2174,8 @@ contact_body = hero(
   <div class="wrap">
     <div class="intro-grid">
       <div>
-        <p class="eyebrow"><span class="num">01</span> Request gym pricing</p>
+        <p class="eyebrow">Request gym pricing</p>
         <h2 class="h-display reveal" style="font-size:clamp(34px,4.6vw,72px)">Get pricing for Gainesville's best <span class="serif">gym</span></h2>
-        <p class="lede reveal" style="margin-top:28px">Complete the form and we will set up a convenient time to present your options. We will contact you via phone, email, or text. One gym membership. Three locations.</p>
         <ul class="checklist reveal" style="margin-top:34px">
           <li>24-hour access at GHF Main</li>
           <li>Staff to help you every time</li>
@@ -2212,7 +2210,7 @@ contact_body = hero(
           <div class="field field--full"><textarea name="msg" id="p-msg" rows="3" placeholder=" "></textarea><label for="p-msg">What are your fitness goals?</label></div>
           <button class="btn btn--dark field--full" type="submit" style="justify-content:center">Request Pricing <span class="arr">→</span></button>
         </form>
-        <p class="form-note">Ready to join GHF? We will contact you via phone, email, or text.</p>
+        <p class="form-note">Complete the form and we will set up a convenient time to present your options. We will contact you via phone, email, or text. One gym membership. Three locations.</p>
       </div>
     </div>
   </div>
@@ -2222,7 +2220,7 @@ contact_body = hero(
   <div class="wrap">
     <div class="cards-head">
       <div>
-        <p class="eyebrow"><span class="num">02</span> Directory of staff</p>
+        <p class="eyebrow">Directory of staff</p>
         <h2 class="h-display reveal" style="font-size:clamp(34px,4.6vw,72px)">Talk to a real <span class="serif">person</span></h2>
       </div>
       <p class="body-copy reveal" style="max-width:38ch">For membership inquiries please contact <a href="mailto:memberservices@ghfc.com" style="color:var(--accent)">memberservices@ghfc.com</a> or call <a href="tel:3523774955" style="color:var(--accent)">(352) 377-4955</a>.</p>
@@ -2348,7 +2346,7 @@ join_body = hero(
   <div class="wrap">
     <div class="intro-grid">
       <div>
-        <p class="eyebrow"><span class="num">01</span> Every GHF membership includes</p>
+        <p class="eyebrow">Every GHF membership includes</p>
         <h2 class="h-display reveal" style="font-size:clamp(34px,4.6vw,72px)">The benefits and amenities of Gainesville's best <span class="serif">gym</span></h2>
         <p class="body-copy reveal" style="margin-top:26px">With a strong culture of service, every employee goes above and beyond to help you reach your full potential. You're going to feel good here.</p>
       </div>
@@ -2488,7 +2486,7 @@ crossfit_body = hero(
   <div class="wrap">
     <div class="cards-head">
       <div>
-        <p class="eyebrow"><span class="num">01</span> Try a free CrossFit class</p>
+        <p class="eyebrow">Try a free CrossFit class</p>
         <h2 class="h-display reveal" style="font-size:clamp(34px,4.6vw,72px)">Your first time on the <span class="serif">turf</span></h2>
       </div>
       <p class="body-copy reveal" style="max-width:38ch">Want to see what CrossFit is all about? Try a free trial class and one of our coaches will guide you through a CrossFit workout. Here's what to expect:</p>
@@ -2552,7 +2550,7 @@ xforce_body_page = hero(
   <div class="wrap">
     <div class="intro-grid">
       <div>
-        <p class="eyebrow"><span class="num">01</span> Lose fat for good</p>
+        <p class="eyebrow">Lose fat for good</p>
         <h2 class="h-display reveal">Losing fat is the first step. Keeping it off is <span class="serif">next.</span></h2>
       </div>
       <div class="intro-grid__right">
@@ -2568,7 +2566,7 @@ xforce_body_page = hero(
   <div class="wrap">
     <div class="cards-head">
       <div>
-        <p class="eyebrow"><span class="num">02</span> Here's your fat loss plan</p>
+        <p class="eyebrow">Here's your fat loss plan</p>
         <h2 class="h-display reveal" style="font-size:clamp(34px,4.6vw,72px)">Four levers, six <span class="serif">weeks</span></h2>
       </div>
     </div>
@@ -2593,7 +2591,7 @@ xforce_body_page = hero(
   <div class="wrap">
     <div class="intro-grid">
       <div>
-        <p class="eyebrow"><span class="num">04</span> Benefits of negative-accentuated training</p>
+        <p class="eyebrow">Benefits of negative-accentuated training</p>
         <h2 class="h-display reveal" style="font-size:clamp(34px,4.6vw,72px)">More than fat <span class="serif">loss</span></h2>
       </div>
       <div class="intro-grid__right reveal">
@@ -2664,7 +2662,7 @@ hyrox_body = hero(
   <div class="wrap">
     <div class="cards-head">
       <div>
-        <p class="eyebrow"><span class="num">01</span> What is HYROX?</p>
+        <p class="eyebrow">What is HYROX?</p>
         <h2 class="h-display reveal" style="font-size:clamp(34px,4.6vw,72px)">The workout you can actually <span class="serif">measure</span></h2>
       </div>
       <p class="body-copy reveal" style="max-width:38ch">Run one kilometre, then complete a functional station. Repeat that eight times. No complex skills to learn, no intimidating movements &mdash; just work, in the same order, every time.</p>
@@ -2720,7 +2718,7 @@ hyrox_body = hero(
   <div class="wrap">
     <div class="intro-grid">
       <div>
-        <p class="eyebrow"><span class="num">06</span> Pricing</p>
+        <p class="eyebrow">Pricing</p>
         <h2 class="h-display reveal" style="font-size:clamp(34px,4.6vw,72px)">No contract. No <span class="serif">intimidation</span>.</h2>
         <p class="body-copy reveal" style="margin-top:26px">Drop into a HYROX session whenever it suits you, or commit to an eight-session pack and bring the cost per session down. Either way there is no long-term commitment &mdash; just show up and get your best results.</p>
       </div>
@@ -2742,7 +2740,7 @@ hyrox_body = hero(
   <div class="wrap">
     <div class="cards-head">
       <div>
-        <p class="eyebrow"><span class="num">07</span> Why athletes choose GHF</p>
+        <p class="eyebrow">Why athletes choose GHF</p>
         <h2 class="h-display reveal" style="font-size:clamp(34px,4.6vw,72px)">A community that pushes you without leaving you <span class="serif">behind</span></h2>
       </div>
     </div>
@@ -2759,7 +2757,7 @@ hyrox_body = hero(
   <div class="wrap">
     <div class="intro-grid">
       <div>
-        <p class="eyebrow"><span class="num">08</span> Beginner clinics</p>
+        <p class="eyebrow">Beginner clinics</p>
         <h2 class="h-display reveal" style="font-size:clamp(34px,4.6vw,72px)">Try all eight stations, <span class="serif">properly</span></h2>
         <p class="body-copy reveal" style="margin-top:26px">An interactive, hands-on session where a coach walks you through the form and technique at each of the eight HYROX stations. You get to pull the sled, throw the wall ball and get on the ski erg for the first time &mdash; safely, and with someone showing you how.</p>
         <p class="body-copy reveal" style="margin-top:18px">Clinics run regularly at GHF Main. Request a place below, or email the program director at <a href="mailto:AJ.Smith@ghfc.com" style="color:var(--accent)">AJ.Smith@ghfc.com</a> to ask about the next date.</p>
@@ -2780,7 +2778,7 @@ hyrox_body = hero(
   <div class="wrap">
     <div class="cards-head">
       <div>
-        <p class="eyebrow"><span class="num">09</span> Questions</p>
+        <p class="eyebrow">Questions</p>
         <h2 class="h-display reveal" style="font-size:clamp(34px,4.6vw,72px)">HYROX, <span class="serif">answered</span></h2>
       </div>
     </div>
@@ -2813,7 +2811,7 @@ teamstrong_body = hero(
   <div class="wrap">
     <div class="intro-grid">
       <div>
-        <p class="eyebrow"><span class="num">01</span> About the program</p>
+        <p class="eyebrow">About the program</p>
         <h2 class="h-display reveal">How Team Strong Training <span class="serif">works</span></h2>
         <p class="body-copy reveal" style="margin-top:26px">PLACEHOLDER COPY \u2014 to be written. Describe the format, team size, season length, coaching, and how this differs from TRIBE Team Training so the two programs read distinctly.</p>
       </div>
@@ -2973,7 +2971,7 @@ fitforall_body = hero(
   <div class="wrap">
     <div class="intro-grid">
       <div>
-        <p class="eyebrow"><span class="num">01</span> Program description</p>
+        <p class="eyebrow">Program description</p>
         <h2 class="h-display reveal">Fitness for those with special <span class="serif">needs</span></h2>
       </div>
       <div class="intro-grid__right">
@@ -3010,7 +3008,7 @@ guest_body = hero(
   <div class="wrap">
     <div class="intro-grid">
       <div>
-        <p class="eyebrow"><span class="num">01</span> Guidelines for guest visits</p>
+        <p class="eyebrow">Guidelines for guest visits</p>
         <h2 class="h-display reveal">Bring as many friends as you <span class="serif">like</span></h2>
         <p class="body-copy reveal" style="margin-top:26px">You may bring as many guests as you'd like during your membership (but just 2 at one time). If you and your guest are unable to work out together, you may request a guest pass. Guests are welcome to join the gym online anytime.</p>
       </div>
@@ -3053,7 +3051,7 @@ savings_body = hero(
   <div class="wrap">
     <div class="intro-grid">
       <div>
-        <p class="eyebrow"><span class="num">01</span> How it works</p>
+        <p class="eyebrow">How it works</p>
         <h2 class="h-display reveal">Save every <span class="serif">day</span></h2>
       </div>
       <div class="intro-grid__right">
@@ -3115,7 +3113,7 @@ def location_page(L):
   <div class="wrap">
     <div class="cards-head">
       <div>
-        <p class="eyebrow"><span class="num">0{L['prog_num']}</span> {L['prog_eyebrow']}</p>
+        <p class="eyebrow">{L['prog_eyebrow']}</p>
         <h2 class="h-display reveal" style="font-size:clamp(34px,4.6vw,72px)">{L['prog_title']}</h2>
       </div>
     </div>
@@ -3135,7 +3133,7 @@ def location_page(L):
   <div class="wrap">
     <div class="intro-grid">
       <div>
-        <p class="eyebrow"><span class="num">01</span> {L['intro_eyebrow']}</p>
+        <p class="eyebrow">{L['intro_eyebrow']}</p>
         <h2 class="h-display reveal">{L['intro_title']}</h2>
       </div>
       <div class="intro-grid__right">
@@ -3150,7 +3148,7 @@ def location_page(L):
   <div class="wrap">
     <div class="cards-head">
       <div>
-        <p class="eyebrow"><span class="num">02</span> Virtual tour</p>
+        <p class="eyebrow">Virtual tour</p>
         <h2 class="h-display reveal" style="font-size:clamp(34px,4.6vw,72px)">Look around before you <span class="serif">walk in</span></h2>
       </div>
       <p class="body-copy reveal" style="max-width:36ch">{L['tour_note']}</p>
@@ -3163,7 +3161,7 @@ def location_page(L):
   <div class="wrap">
     <div class="intro-grid">
       <div>
-        <p class="eyebrow"><span class="num">0{L['feat_num']}</span> What's here</p>
+        <p class="eyebrow">What's here</p>
         <h2 class="h-display reveal">{L['feat_title']}</h2>
         <p class="body-copy reveal" style="margin-top:26px">{L['feat_note']}</p>
       </div>
@@ -3178,7 +3176,7 @@ def location_page(L):
   <div class="wrap">
     <div class="cards-head">
       <div>
-        <p class="eyebrow"><span class="num">0{L['gal_num']}</span> Photo gallery</p>
+        <p class="eyebrow">Photo gallery</p>
         <h2 class="h-display reveal" style="font-size:clamp(34px,4.6vw,72px)">Inside <span class="serif">{L['short']}</span></h2>
       </div>
       <p class="body-copy reveal" style="max-width:34ch">Real photos of the floor, the studios and the spaces you'll actually use.</p>
@@ -3191,7 +3189,7 @@ def location_page(L):
   <div class="wrap">
     <div class="intro-grid">
       <div>
-        <p class="eyebrow"><span class="num">0{L['visit_num']}</span> Visit us</p>
+        <p class="eyebrow">Visit us</p>
         <h2 class="h-display reveal">Come see it for <span class="serif">yourself</span></h2>
         <p class="body-copy reveal" style="margin-top:26px">Walk in anytime we're open. Tell the front desk it's your first visit and someone will show you around &mdash; no appointment, no pressure.</p>
         <div class="hero__actions reveal" style="opacity:1;transform:none;margin-top:30px">
@@ -3421,9 +3419,8 @@ pass_form = f"""
   <div class="wrap">
     <div class="intro-grid">
       <div>
-        <p class="eyebrow"><span class="num">05</span> Request your pass</p>
+        <p class="eyebrow">Request your pass</p>
         <h2 class="h-display reveal" style="font-size:clamp(34px,4.6vw,72px)">You're one click away from the gym that helps <span class="serif">beginners</span></h2>
-        <p class="lede reveal" style="margin-top:28px">Once you've completed the form, we'll contact you by phone, text, or email to set up your pass — then send it to you by email to activate anytime by coming to the location of your choice.</p>
         <ul class="checklist reveal" style="margin-top:34px">
           <li>Full membership privileges for one day</li>
           <li>Good at any of our three locations</li>
@@ -3454,9 +3451,9 @@ pass_form = f"""
             </select>
             <label for="gp-loc">Gym you would like to visit</label>
           </div>
-          <button class="btn btn--dark field--full" type="submit" style="justify-content:center">Claim My Free Pass <span class="arr">&rarr;</span></button>
+          <button class="btn btn--dark field--full" type="submit" style="justify-content:center">Claim My Free Fitness Pass <span class="arr">&rarr;</span></button>
         </form>
-        <p class="form-note">We will contact you via phone, email, or text. There is no charge, no obligation and no risk.</p>
+        <p class="form-note">Submit the form and we&rsquo;ll be in touch by phone, text or email to set up your pass. We&rsquo;ll email it to you &mdash; just activate it by visiting the location of your choice. There is no charge, no obligation and no risk.</p>
       </div>
     </div>
   </div>
@@ -3498,7 +3495,7 @@ ghf_pass_body = hero(
   <div class="wrap">
     <div class="intro-grid">
       <div>
-        <p class="eyebrow"><span class="num">01</span> What your pass includes</p>
+        <p class="eyebrow">What your pass includes</p>
         <h2 class="h-display reveal">A full day, <span class="serif">all of it</span></h2>
         <p class="body-copy reveal" style="margin-top:26px">Feeling out of shape, not sure where to start, and afraid you won't stick with it? That's exactly who we're best at helping. Your pass isn't a tour — it's the real thing, with someone beside you.</p>
       </div>
@@ -3526,7 +3523,7 @@ ghf_pass_body = hero(
   <div class="wrap">
     <div class="cards-head">
       <div>
-        <p class="eyebrow"><span class="num">02</span> Why choose GHF</p>
+        <p class="eyebrow">Why choose GHF</p>
         <h2 class="h-display reveal" style="font-size:clamp(34px,4.6vw,72px)">More than just a <span class="serif">gym</span></h2>
       </div>
       <p class="body-copy reveal" style="max-width:38ch">First-timers and seasoned lifters train side by side here — and both walk out feeling like they belong.</p>
@@ -3544,7 +3541,7 @@ ghf_pass_body = hero(
   <div class="wrap">
     <div class="cards-head">
       <div>
-        <p class="eyebrow"><span class="num">03</span> How it works</p>
+        <p class="eyebrow">How it works</p>
         <h2 class="h-display reveal" style="font-size:clamp(34px,4.6vw,72px)">Four steps, <span class="serif">zero pressure</span></h2>
       </div>
       <p class="body-copy reveal" style="max-width:36ch">No contracts to sign, no sales pitch to survive. Just show up and see how it feels.</p>
@@ -3562,7 +3559,7 @@ ghf_pass_body = hero(
   <div class="wrap">
     <div class="cards-head">
       <div>
-        <p class="eyebrow"><span class="num">04</span> Where to use it</p>
+        <p class="eyebrow">Where to use it</p>
         <h2 class="h-display reveal" style="font-size:clamp(34px,4.6vw,72px)">Pick your <span class="serif">club</span></h2>
       </div>
       <p class="body-copy reveal" style="max-width:38ch">Your pass is good at any one of the three. Each is a little different — choose the one that fits your day.</p>
@@ -3618,7 +3615,7 @@ ghf_pass_body = hero(
   <div class="wrap">
     <div class="cards-head">
       <div>
-        <p class="eyebrow"><span class="num">06</span> Pass questions</p>
+        <p class="eyebrow">Pass questions</p>
         <h2 class="h-display reveal" style="font-size:clamp(34px,4.6vw,72px)">Before you <span class="serif">come in</span></h2>
       </div>
     </div>
@@ -3743,7 +3740,7 @@ def blog_index_body():
         actions=[("Join Now", "join.html", True)], page=True,
     ) + f"""
 <section class="section"><div class="wrap">
-  <div class="cards-head"><div><p class="eyebrow"><span class="num">01</span> Latest</p><h2 class="h-display reveal" style="font-size:clamp(34px,4.6vw,72px)">On the <span class="serif">blog</span></h2></div></div>
+  <div class="cards-head"><div><p class="eyebrow">Latest</p><h2 class="h-display reveal" style="font-size:clamp(34px,4.6vw,72px)">On the <span class="serif">blog</span></h2></div></div>
   <div class="card-grid" data-stagger>{cards}</div>
 </div></section>
 """ + cta_band('Come be part of the <span class="serif">story</span>', "There's always something happening. Come see for yourself.", f"{IMG}/GroupFit_Echo_Yoga_Class_Outdoor_Classes_2021.jpg")
@@ -3756,7 +3753,7 @@ def blog_post_body(p):
         for o in POSTS if o["_slug"] != p["_slug"])
     more = f"""
 <section class="section section--light"><div class="wrap">
-  <div class="cards-head"><div><p class="eyebrow"><span class="num">02</span> Keep reading</p><h2 class="h-display reveal" style="font-size:clamp(30px,3.4vw,52px)">More from <span class="serif">the blog</span></h2></div>
+  <div class="cards-head"><div><p class="eyebrow">Keep reading</p><h2 class="h-display reveal" style="font-size:clamp(30px,3.4vw,52px)">More from <span class="serif">the blog</span></h2></div>
   <a class="inline-link reveal" href="../blog.html">All posts →</a></div><div class="rows reveal">{others}</div>
 </div></section>""" if others else ""
     return f"""
