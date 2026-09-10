@@ -2166,6 +2166,13 @@ locations_body = hero(
 )
 
 # ============================================================ CONTACT
+# Keap / Infusionsoft endpoint for the "Request Pricing" campaign, copied from the
+# live form at ghfc.com/request-prices. That page's customFormAction carries a
+# 31-character id while its inf_form_xid is the full 32 — Keap ids are 32 hex chars
+# and the working pass form uses the xid as its action path, so we use the xid.
+KEAP_PRICING_ACTION = "https://pv228.infusionsoft.com/app/form/process/02baff34d43e7db270bb0297c1bcc05e"
+KEAP_PRICING_XID = "02baff34d43e7db270bb0297c1bcc05e"
+
 contact_body = hero(
     "Contact GHF",
     ["Let's talk", '<span class="serif">fitness</span>'],
@@ -2198,21 +2205,26 @@ contact_body = hero(
         </ul>
       </div>
       <div class="intro-grid__right reveal">
-        <form class="form-grid" data-demo>
-          <div class="field"><input type="text" name="first" id="p-first" placeholder=" " required><label for="p-first">First name</label></div>
-          <div class="field"><input type="text" name="last" id="p-last" placeholder=" " required><label for="p-last">Last name</label></div>
-          <div class="field"><input type="email" name="email" id="p-email" placeholder=" " required><label for="p-email">Email address</label></div>
-          <div class="field"><input type="tel" name="phone" id="p-phone" placeholder=" " required><label for="p-phone">Phone</label></div>
+        <form class="form-grid" method="post" action="{KEAP_PRICING_ACTION}" accept-charset="UTF-8">
+          <input type="hidden" name="inf_form_xid" value="{KEAP_PRICING_XID}">
+          <input type="hidden" name="inf_form_name" value="Request Pricing">
+          <input type="hidden" name="infusionsoft_version" value="1.70.0.119516">
+          <input type="hidden" name="inf_IntegrationName" value="pv228">
+          <input type="hidden" name="inf_CallName" value="RequestPricing">
+          <input type="hidden" name="inf_api_enabled" value="true">
+          <div class="field"><input type="text" name="inf_field_FirstName" id="p-first" placeholder=" " required><label for="p-first">First name</label></div>
+          <div class="field"><input type="text" name="inf_field_LastName" id="p-last" placeholder=" " required><label for="p-last">Last name</label></div>
+          <div class="field"><input type="email" name="inf_field_Email" id="p-email" placeholder=" " required><label for="p-email">Email address</label></div>
+          <div class="field"><input type="tel" name="inf_field_Phone1" id="p-phone" placeholder=" "><label for="p-phone">Phone</label></div>
           <div class="field field--full">
-            <select name="location" id="p-loc" aria-label="Preferred location">
+            <select name="inf_custom_Facility" id="p-loc" aria-label="Preferred location">
               <option value="">&nbsp;</option>
-              <option>GHF Main</option>
-              <option>GHF Women</option>
-              <option>GHF Tioga</option>
+              <option value="Main">GHF Main &mdash; 4820 Newberry Road</option>
+              <option value="Women&#39;s Center">GHF Women &mdash; 2441 NW 43rd Street</option>
+              <option value="Tioga">GHF Tioga &mdash; Tioga Town Center</option>
             </select>
             <label for="p-loc">Preferred location</label>
           </div>
-          <div class="field field--full"><textarea name="msg" id="p-msg" rows="3" placeholder=" "></textarea><label for="p-msg">What are your fitness goals?</label></div>
           <button class="btn btn--dark field--full" type="submit" style="justify-content:center">Request Pricing <span class="arr">→</span></button>
         </form>
         <p class="form-note">Complete the form and we will set up a convenient time to present your options. We will contact you via phone, email, or text. One gym membership. Three locations.</p>
