@@ -91,8 +91,8 @@ KEAP_PT_ACTION = "https://pv228.infusionsoft.com/app/form/process/d33934f006555a
 KEAP_PT_XID = "d33934f006555af5a3ee939461149a73"
 KEAP_PT_VERSION = "1.70.0.1003601"
 
-# Keap ships two spam traps on this form; they must be present and left empty.
-KEAP_PT_TRAPS = ('<input type="text" name="inf_eGYY1p7FcL3TD8b6" value="" tabindex="-1" autocomplete="off" style="display:none !important">'
+# Keap ships the same two spam traps on its forms; they must be present and left empty.
+KEAP_TRAPS = ('<input type="text" name="inf_eGYY1p7FcL3TD8b6" value="" tabindex="-1" autocomplete="off" style="display:none !important">'
                  '<input type="text" name="inf-sbt" value="" tabindex="-1" autocomplete="off" style="display:none !important">')
 
 
@@ -147,7 +147,7 @@ def trainers_section(num):
           <input type="hidden" name="infusionsoft_version" value="{KEAP_PT_VERSION}">
           <input type="hidden" name="inf_custom_TrainerName" data-t-trainer value="">
           <input type="hidden" name="inf_custom_SelectAProgram" value="Free Assessment">
-          {KEAP_PT_TRAPS}
+          {KEAP_TRAPS}
           <div class="field"><input type="text" name="inf_field_FirstName" id="tp-first" placeholder=" " required><label for="tp-first">First name</label></div>
           <div class="field"><input type="text" name="inf_field_LastName" id="tp-last" placeholder=" " required><label for="tp-last">Last name</label></div>
           <div class="field"><input type="email" name="inf_field_Email" id="tp-email" placeholder=" " required><label for="tp-email">Email address</label></div>
@@ -1415,7 +1415,7 @@ pt_body = hero(
           <input type="hidden" name="inf_form_xid" value="{KEAP_PT_XID}">
           <input type="hidden" name="inf_form_name" value="Web Form submitted">
           <input type="hidden" name="infusionsoft_version" value="{KEAP_PT_VERSION}">
-          {KEAP_PT_TRAPS}
+          {KEAP_TRAPS}
           <div class="field"><input type="text" name="inf_field_FirstName" id="assessment-first" placeholder=" " required><label for="assessment-first">First name</label></div>
           <div class="field"><input type="text" name="inf_field_LastName" id="assessment-last" placeholder=" " required><label for="assessment-last">Last name</label></div>
           <div class="field"><input type="email" name="inf_field_Email" id="assessment-email" placeholder=" " required><label for="assessment-email">Email address</label></div>
@@ -1854,6 +1854,12 @@ pilates_body = hero(
 )
 
 # ============================================================ TRIBE
+# Keap endpoint for TRIBE leads, from the hosted form behind the embed script. As with
+# the PT form the hosted markup writes the .app host; we use .com to match the other
+# integrations on the same pv228 tenant. Note inf_form_name carries a typo — "maseter"
+# — which is reproduced verbatim because it is the string Keap matches on.
+KEAP_TRIBE_ACTION = "https://pv228.infusionsoft.com/app/form/process/3e45803f6628cd4cd0b69b29d0350926"
+KEAP_TRIBE_XID = "3e45803f6628cd4cd0b69b29d0350926"
 tribe_body = hero(
     "TRIBE Team Training",
     ["Together we", 'achieve <span class="serif">more</span>'],
@@ -1917,12 +1923,33 @@ tribe_body = hero(
     </figure>
   </div>
 </section>
-""" + form_section(
-    "pass", "06", "Realize your greatest strength — train with a team",
-    'Get a free sesh for you <span class="serif">&amp; a friend</span>',
-    "TRIBE Team Training™ gives you a free session to see what it's all about. Pick from LIFE, CORE, PUNCH or FitSTRONG. Complete the form and we will contact you to schedule your free session. You are a click away from better results!",
-    "Claim My Free Session", light=False,
-) + cta_band(
+""" + f"""
+<section class="section" id="pass">
+  <div class="wrap">
+    <div class="intro-grid">
+      <div>
+        <p class="eyebrow">Realize your greatest strength &mdash; train with a team</p>
+        <h2 class="h-display reveal" style="font-size:clamp(34px,4.6vw,72px)">Get a free sesh for you <span class="serif">&amp; a friend</span></h2>
+        <p class="lede reveal" style="margin-top:28px">TRIBE Team Training&trade; gives you a free session to see what it's all about. Pick from LIFE, CORE, PUNCH or FitSTRONG. Complete the form and we will contact you to schedule your free session. You are a click away from better results!</p>
+      </div>
+      <div class="intro-grid__right reveal">
+        <form class="form-grid" method="post" action="{KEAP_TRIBE_ACTION}" accept-charset="UTF-8" data-thanks="thank-you-tribe.html">
+          <input type="hidden" name="inf_form_xid" value="{KEAP_TRIBE_XID}">
+          <input type="hidden" name="inf_form_name" value="tribe maseter weblead form">
+          <input type="hidden" name="infusionsoft_version" value="1.70.0.1003601">
+          {KEAP_TRAPS}
+          <div class="field"><input type="text" name="inf_field_FirstName" id="tribe-first" placeholder=" " required><label for="tribe-first">First name</label></div>
+          <div class="field"><input type="text" name="inf_field_LastName" id="tribe-last" placeholder=" " required><label for="tribe-last">Last name</label></div>
+          <div class="field"><input type="email" name="inf_field_Email" id="tribe-email" placeholder=" " required><label for="tribe-email">Email address</label></div>
+          <div class="field"><input type="tel" name="inf_field_Phone1" id="tribe-phone" placeholder=" " required><label for="tribe-phone">Phone</label></div>
+          <button class="btn field--full" type="submit" style="justify-content:center">Claim My Free Session <span class="arr">&rarr;</span></button>
+        </form>
+        <p class="form-note">We will contact you via phone, email, or text. There is no charge, no obligation and no risk.</p>
+      </div>
+    </div>
+  </div>
+</section>
+""" + cta_band(
     'One body. One unit. <span class="serif">One tribe.</span>',
     "Ready to start a more fit life? Become a GHF member today for as little as $15 per week.",
     f"{IMG}/GHF_Tribe_Tribe_Team_Training_Tribe_Fit_Strong_Tribe_Fit_2025-3.jpg",
@@ -3801,6 +3828,24 @@ thankyoupass_body = hero(
     hero_cls="hero--compact",
 )
 
+# ============================================================ THANK YOU (TRIBE)
+thankyoutribe_body = hero(
+    "Session requested",
+    ["Welcome to the", '<span class="serif">TRIBE</span>'],
+    "Congratulations on taking the first step toward a healthier, stronger you. One of our coaches "
+    "will follow up shortly to book your free session and answer any questions.<br><br>"
+    "<strong>Pick your format</strong> &mdash; LIFE, CORE, PUNCH or FitSTRONG. Your coach will help you choose.<br>"
+    "<strong>Bring a friend</strong> &mdash; your free session covers both of you."
+    "<br><br>Questions? Call <a href=\"tel:3523774955\">(352) 377-4955</a> or email "
+    "<a href=\"mailto:memberservices@ghfc.com\">memberservices@ghfc.com</a>."
+    "<br><br><strong>Your GHF Team</strong> &mdash; <em>Gainesville Strong Since 1978</em>",
+    img=f"{IMG}/GHF_Tribe_Tribe_Team_Training_Tribe_Fit_Strong_Tribe_Punch_2025.jpg",
+    crumb="Thank you",
+    actions=[("Explore Our Locations", "locations.html", True)],
+    page=True,
+    hero_cls="hero--compact",
+)
+
 # ============================================================ BUILD ALL
 PAGES = [
     ("index.html", "Gainesville Health & Fitness | The Gym That's Best At Helping Beginners", "The gym that's best at helping beginners — with staff to guide your journey. 3 locations, 900+ classes monthly, open 24/7 at GHF Main.", "", home_body),
@@ -3837,6 +3882,7 @@ PAGES = [
     ("contact.html", "Contact Us & Get Pricing | Gainesville Health & Fitness", "Let's talk fitness memberships in Gainesville — pricing packages and amenities to craft your gym experience.", "", contact_body),
     ("thank-you-pricing.html", "Thank You | Gainesville Health & Fitness", "Thanks for requesting gym pricing from Gainesville Health & Fitness. A team member will follow up shortly with membership options.", "", thankyou_body),
     ("thank-you-pass.html", "Thank You | Free Pass | Gainesville Health & Fitness", "Thanks for requesting your free all-access pass. A team member will follow up shortly to set it up.", "", thankyoupass_body),
+    ("thank-you-tribe.html", "Thank You | TRIBE Team Training | Gainesville Health & Fitness", "Thanks for requesting your free TRIBE Team Training session. A coach will follow up shortly to book it.", "", thankyoutribe_body),
 ]
 
 
