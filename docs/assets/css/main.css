@@ -1288,19 +1288,21 @@ body.menu-open .menu-list a { opacity: 1; transform: translateY(0); transition: 
 /* ---------- responsive ---------- */
 @media (max-width: 1100px) {
   .gx__selects { grid-template-columns: repeat(2, 1fr); gap: 0 22px; }
-  .gx-class__head { grid-template-columns: 150px minmax(0, 1.4fr) minmax(0, 1fr) 30px; }
-  .gx-class__site { display: none; }
+  .gx-class__head { grid-template-columns: 150px minmax(0, 1.4fr) minmax(0, 1fr) auto 30px; }
 }
 @media (max-width: 820px) {
   .gx__selects { grid-template-columns: 1fr; }
   .gx-class__head {
-    grid-template-columns: 1fr 30px; grid-template-areas: "time chev" "main main" "who who";
+    grid-template-columns: minmax(0, 1fr) auto 30px;
+    grid-template-areas: "time site chev" "main main main" "who who who";
     gap: 8px 14px; padding: 22px 0;
   }
   .gx-class__head:hover { padding-left: 0; }
-  .gx-class__time { grid-area: time; flex-direction: row; align-items: baseline; gap: 10px; }
+  .gx-class__time { grid-area: time; flex-direction: row; flex-wrap: wrap; align-items: baseline; gap: 2px 10px; }
+  .gx-class__time i { white-space: nowrap; }
   .gx-class__main { grid-area: main; }
   .gx-class__who { grid-area: who; margin-top: 2px; }
+  .gx-class__site { grid-area: site; justify-self: end; align-self: center; }
   .gx-class__chev { grid-area: chev; align-self: start; }
   .gx-class__facts { grid-template-columns: 1fr; margin-bottom: 18px; }
   .gx-cal { gap: 16px; }
