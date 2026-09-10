@@ -1005,43 +1005,48 @@ amenities_body = hero(
   </div>
 </section>
 """ + marquee(["24/7 Access", "Free Babysitting", "Indoor Pools", "Outdoor Fitness", "Basketball", "J-Bar Smoothies", "3 Locations"]) + split(
-    "GHF Main — Open 24/7", "02",
+    "Open 24/7", "02",
     'The flagship that never <span class="serif">sleeps</span>',
     ["GHF Main makes it easy to get fit, strong and lean, with 24-hour access, pool and spa studio, free babysitting, expansive cardio selections, state-of-the-art strength training equipment, the largest free weight area, access to all three facilities, and more."],
     f"{IMG}/Free_Weights_Gainesville_Health_and_Fiitness_2021_1_(1).jpg",
     "Open free weight space with benches, dumbbells, and barbells at Gainesville's largest gym",
-    cta=("Explore GHF Main", "locations.html"), tag="GHF Main",
+    cta=("Explore GHF Main", "main-center.html"), tag="GHF Main",
+    name="GHF Main", href="main-center.html",
 ) + split(
-    "GHF Women", "03",
+    "Women only", "03",
     'The only gym in Gainesville just for <span class="serif">women</span>',
     ["We believe nothing is more essential than women supporting and empowering one another. Experience and enjoy the most advanced fitness center for women in Gainesville with unique fitness classes, sauna, steam, and hot tub, free babysitting, and lots of cardio and weight equipment to lead your healthiest, happiest life and make your wellness goals come true."],
     f"{IMG}/GHF_GHF_Women_Womens_Center_SWEAT_2023_1.jpg",
     "Group fitness instructor teaching HIIT for women at the Women's Center",
-    rev=True, cta=("Explore GHF For Women", "locations.html"), tag="Women's Center",
+    rev=True, cta=("Explore GHF For Women", "womens-center.html"), tag="Women's Center",
+    name="GHF Women", href="womens-center.html",
 ) + split(
-    "GHF Tioga", "04",
+    "Tioga Town Center", "04",
     'Your family-friendly <span class="serif">gym</span>',
     ["From the moment you walk through the door, you will encounter friendly GHF Tioga staff, dedicated to making your health club experience remarkable. They will guide you to the right space whether you want to take a group fitness class, walk on the treadmill, or sweat it out on our outdoor fitness turf, there is always someone happy to show you how.",
      "Bring the kids to the Kid's Club for complimentary babysitting or to CrossFit for Kids — there's a place for everyone in the family!"],
     f"{IMG}/GHF_CrossFit_Kids_Exercise_CrossFit_for_Kids_Tioga_2026.jpg",
     "Kids CrossFit class bear crawl exercise at GHF Tioga",
-    cta=("Explore GHF Tioga", "locations.html"), tag="GHF Tioga",
+    cta=("Explore GHF Tioga", "tioga-center.html"), tag="GHF Tioga",
+    name="GHF Tioga", href="tioga-center.html",
 ) + split(
-    "Echo — Outdoor Fitness Pavilion", "05",
+    "Outdoor fitness pavilion", "05",
     'The largest open-air fitness <span class="serif">destination</span>',
     ["The largest open-air fitness destination will give you a line of new ways to move, lift, train and sweat. Located at GHF's Main campus, Echo is a multi-purpose location that offers fitness classes, functional training equipment, and community events.",
      "Echo offers specialty workshops, GroupFit classes and lifestyle events. We have open gym times for members to use the functional training equipment like tires, sleds, ropes, TRX, rowers and ski ergs, and more. These classes are included in your membership."],
     f"{IMG}/Echo_GroupFit_Outdoor_Classes_Fun_Classes_2021.jpg",
     "Fitness classes in an outdoor gym setting at Echo",
     rev=True, cta=("Try An Outdoor Workout", "group-fitness.html"), tag="Echo",
+    name="Echo Outdoor Pavilion",
 ) + f"""
 <section class="section section--light">
   <div class="wrap">
-    <div class="split">
+    <a class="split split--link" href="pool.html">
       <div class="split__media reveal-img"><img src="{IMG}/sports-activities-pool-wide-700x467.jpg" alt="Indoor lap pool at GHF" loading="lazy"><span class="tag">Aquix by GHF</span></div>
       <div class="split__body">
-        <p class="eyebrow">Aquix by GHF — Indoor Pool &amp; Spa</p>
-        <h2 class="h-display" style="font-size:clamp(30px,3.8vw,58px)">Dive into a world of <span class="serif">wellness</span></h2>
+        <p class="eyebrow">Indoor pool &amp; spa</p>
+        <h2 class="h-display split__name">Aquix</h2>
+        <p class="h-mid split__lead">Dive into a world of <span class="serif">wellness</span></p>
         <p class="body-copy reveal">The gentle embrace of water has long been revered for its healing properties. As you glide through the water, the buoyancy relieves joint stress, promoting flexibility and strengthening muscles. The hydrostatic pressure encourages blood circulation, reducing inflammation and promoting healing.</p>
         <ul class="checklist reveal" style="margin-top:26px">
           <li>75-foot Indoor Lap Pool</li>
@@ -1052,9 +1057,9 @@ amenities_body = hero(
           <li>Massage-like Hot Tub</li>
           <li>Aqua Classes</li>
         </ul>
-        <div class="split__cta"><a class="inline-link" href="pool.html">Dive Into Aquix →</a></div>
+        <div class="split__cta"><span class="inline-link">Dive Into Aquix →</span></div>
       </div>
-    </div>
+    </a>
   </div>
 </section>
 
