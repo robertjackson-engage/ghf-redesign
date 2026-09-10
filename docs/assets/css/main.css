@@ -255,6 +255,15 @@ body.menu-open .menu-list a { opacity: 1; transform: translateY(0); transition: 
 .hero--compact .hero__media::after {
   background: linear-gradient(to right, rgba(11,11,12,0.90) 0%, rgba(11,11,12,0.82) 38%, rgba(11,11,12,0.45) 75%, rgba(11,11,12,0.40) 100%);
 }
+/* short viewports (laptops, landscape phones): tighten so the whole message still
+   fits without scrolling — this is the point of the variant */
+@media (max-height: 780px) {
+  .hero--compact .hero__inner { padding-top: 104px; padding-bottom: 24px; }
+  .hero--compact .hero__kicker { margin-bottom: 12px; }
+  .hero--compact .hero__title { font-size: clamp(28px, 3.6vw, 46px); }
+  .hero--compact .hero__sub { font-size: 15px; line-height: 1.5; margin-top: 16px; }
+  .hero--compact .hero__actions { margin-top: 20px; }
+}
 .hero__media { position: absolute; inset: -1px; z-index: 0; overflow: hidden; }
 .hero__media img, .hero__media video {
   width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0;

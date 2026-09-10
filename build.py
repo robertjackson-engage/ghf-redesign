@@ -3510,7 +3510,7 @@ pass_form = f"""
         </ul>
       </div>
       <div class="intro-grid__right reveal">
-        <form class="form-grid" method="post" action="{KEAP_ACTION}" accept-charset="UTF-8">
+        <form class="form-grid" method="post" action="{KEAP_ACTION}" accept-charset="UTF-8" data-thanks="thank-you-pass.html">
           <input type="hidden" name="inf_form_xid" value="{KEAP_XID}">
           <input type="hidden" name="inf_form_name" value="All Access Pass">
           <input type="hidden" name="infusionsoft_version" value="1.70.0.60815">
@@ -3780,6 +3780,27 @@ thankyou_body = hero(
     hero_cls="hero--compact",
 )
 
+# ============================================================ THANK YOU (FREE PASS)
+# Same one-screen treatment as the pricing thank-you. The two "what to expect" points
+# are <strong> + <br> rather than a <ul>: hero() renders sub inside <p class="hero__sub">
+# and a list inside a paragraph is invalid.
+thankyoupass_body = hero(
+    "Pass requested",
+    ["Your free pass is", 'on its <span class="serif">way</span>'],
+    "Congratulations on taking the first step toward a healthier, stronger you. One of our team "
+    "members will follow up shortly to set up your pass and answer any questions.<br><br>"
+    "<strong>Check your email</strong> &mdash; look for a confirmation email or text with everything you'll need.<br>"
+    "<strong>Prepare for your visit</strong> &mdash; dress comfortably, and get ready to look around and meet the team."
+    "<br><br>Questions? Call <a href=\"tel:3523774955\">(352) 377-4955</a> or email "
+    "<a href=\"mailto:memberservices@ghfc.com\">memberservices@ghfc.com</a>."
+    "<br><br><strong>Your GHF Team</strong> &mdash; <em>Gainesville Strong Since 1978</em>",
+    img=f"{IMG}/GHF_GroupFit_SkyCycle_Classes_Cycle_Cardio_2024.jpg",
+    crumb="Thank you",
+    actions=[("Explore Our Locations", "locations.html", True)],
+    page=True,
+    hero_cls="hero--compact",
+)
+
 # ============================================================ BUILD ALL
 PAGES = [
     ("index.html", "Gainesville Health & Fitness | The Gym That's Best At Helping Beginners", "The gym that's best at helping beginners — with staff to guide your journey. 3 locations, 900+ classes monthly, open 24/7 at GHF Main.", "", home_body),
@@ -3815,6 +3836,7 @@ PAGES = [
     ("ghf-pass.html", "Free All-Access Pass | Try GHF Free | Gainesville Health & Fitness", "Try Gainesville Health & Fitness free. Your all-access pass gives you full membership privileges for one day at any of our three locations — classes, pool, sauna, weight floor and a coach to guide you. No charge, no obligation.", "", ghf_pass_body),
     ("contact.html", "Contact Us & Get Pricing | Gainesville Health & Fitness", "Let's talk fitness memberships in Gainesville — pricing packages and amenities to craft your gym experience.", "", contact_body),
     ("thank-you-pricing.html", "Thank You | Gainesville Health & Fitness", "Thanks for requesting gym pricing from Gainesville Health & Fitness. A team member will follow up shortly with membership options.", "", thankyou_body),
+    ("thank-you-pass.html", "Thank You | Free Pass | Gainesville Health & Fitness", "Thanks for requesting your free all-access pass. A team member will follow up shortly to set it up.", "", thankyoupass_body),
 ]
 
 
