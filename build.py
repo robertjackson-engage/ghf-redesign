@@ -2267,7 +2267,7 @@ contact_body = hero(
         </ul>
       </div>
       <div class="intro-grid__right reveal">
-        <form class="form-grid" method="post" action="{KEAP_PRICING_ACTION}" accept-charset="UTF-8">
+        <form class="form-grid" method="post" action="{KEAP_PRICING_ACTION}" accept-charset="UTF-8" data-thanks="thank-you-pricing.html">
           <input type="hidden" name="inf_form_xid" value="{KEAP_PRICING_XID}">
           <input type="hidden" name="inf_form_name" value="Request Pricing">
           <input type="hidden" name="infusionsoft_version" value="1.70.0.119516">
@@ -3762,6 +3762,31 @@ faq_body = hero(
     f"{IMG}/Body_Balance_Les_Mills_Yoga_Group_Fitness_Tioga_2023_2.jpg",
 )
 
+# ============================================================ THANK YOU (PRICING)
+thankyou_body = hero(
+    "Request received",
+    ["Thank you for your", 'interest in <span class="serif">GHF</span>'],
+    "Congratulations on taking the first step toward a healthier, stronger you. One of our team members will follow up with you shortly with membership options and pricing.",
+    img=f"{IMG}/Free_Weights_Gainesville_Health_and_Fiitness_2021_1_(1).jpg",
+    crumb="Thank you",
+    page=True,
+) + f"""
+<section class="section section--tight">
+  <div class="wrap" style="max-width:760px">
+    <p class="lede reveal">In the meantime, <a class="inline-link" href="locations.html">take a tour of our locations</a> and see which club suits you best.</p>
+    <p class="body-copy reveal" style="margin-top:26px">If you have other questions, email us at <a href="mailto:memberservices@ghfc.com" style="color:var(--accent)">memberservices@ghfc.com</a>.</p>
+    <p class="body-copy reveal" style="margin-top:26px"><strong>Your GHF Team</strong><br>
+    <em>Gainesville Strong Since 1978</em></p>
+  </div>
+</section>
+""" + cta_band(
+    'Three clubs. One <span class="serif">membership</span>.',
+    "Take a look around GHF Main, GHF Women and GHF Tioga — and pick the one that fits your routine.",
+    f"{IMG}/tioga_line.jpg",
+    primary=("Explore Our Locations", "locations.html"),
+    secondary=None,
+)
+
 # ============================================================ BUILD ALL
 PAGES = [
     ("index.html", "Gainesville Health & Fitness | The Gym That's Best At Helping Beginners", "The gym that's best at helping beginners — with staff to guide your journey. 3 locations, 900+ classes monthly, open 24/7 at GHF Main.", "", home_body),
@@ -3796,6 +3821,7 @@ PAGES = [
     ("faq.html", "FAQ | Get The Most Out Of Your Gym Membership | GHF", "Frequently asked questions about Gainesville Health & Fitness memberships, amenities, and getting started.", "", faq_body),
     ("ghf-pass.html", "Free All-Access Pass | Try GHF Free | Gainesville Health & Fitness", "Try Gainesville Health & Fitness free. Your all-access pass gives you full membership privileges for one day at any of our three locations — classes, pool, sauna, weight floor and a coach to guide you. No charge, no obligation.", "", ghf_pass_body),
     ("contact.html", "Contact Us & Get Pricing | Gainesville Health & Fitness", "Let's talk fitness memberships in Gainesville — pricing packages and amenities to craft your gym experience.", "", contact_body),
+    ("thank-you-pricing.html", "Thank You | Gainesville Health & Fitness", "Thanks for requesting gym pricing from Gainesville Health & Fitness. A team member will follow up shortly with membership options.", "", thankyou_body),
 ]
 
 

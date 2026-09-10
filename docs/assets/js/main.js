@@ -363,6 +363,36 @@
     show(0);
   });
 
+  /* ---------- Keap forms: post in a hidden frame, land on our own thank-you page ----------
+     Keap has no per-submission redirect field, and its thank-you page is a form-level
+     setting shared with ghfc.com — changing it there would redirect their site too.
+     Posting through a frame keeps the lead flowing to Keap while we control where the
+     visitor ends up. Progressive enhancement: target is only set here, so with JS off
+     the form posts normally and lands on Keap's own page. */
+  document.querySelectorAll("form[data-thanks]").forEach(function (f, i) {
+    var sink = document.createElement("iframe");
+    sink.name = "ghf-form-sink-" + i;
+    sink.title = "Form submission";
+    sink.setAttribute("aria-hidden", "true");
+    sink.setAttribute("tabindex", "-1");
+    sink.style.display = "none";
+    document.body.appendChild(sink);
+    f.target = sink.name;
+
+    f.addEventListener("submit", function () {
+      var dest = f.getAttribute("data-thanks");
+      var done = false;
+      function go() {
+        if (done) return;
+        done = true;
+        location.href = dest;
+      }
+      sink.addEventListener("load", go);
+      /* Keap may refuse to render in a frame; never strand anyone on a blank page */
+      setTimeout(go, 4000);
+    });
+  });
+
   /* ---------- hero video: respect data saver ---------- */
   var heroVid = document.querySelector(".hero__media video");
   if (heroVid && navigator.connection && navigator.connection.saveData) {
