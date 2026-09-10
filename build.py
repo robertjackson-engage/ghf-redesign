@@ -1134,12 +1134,11 @@ groupfit_body = hero(
           <li>Aqua Strength and Balance</li>
           <li>Les Mills classes (Body Pump, Flow, Combat, Core)</li>
           <li>Circuit Training/HIIT</li>
+          <li>Club Seniors (Sit To Be Fit, balance, gentle joints)</li>
+          <li>Hot Yoga (85&deg;, 95&deg;, 105&deg;)</li>
           <li>Pilates Mat</li>
-          <li>PiYo</li>
           <li>SkyCycle Indoor Cycling</li>
-          <li>Tai Chi</li>
           <li>Yoga</li>
-          <li>Yoga For Pregnancy (fee-based)</li>
           <li>Zumba, Cardio Party MashUp, Dance Attack</li>
         </ul>
       </div>

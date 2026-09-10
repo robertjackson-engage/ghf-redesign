@@ -568,9 +568,8 @@ a.split--link:focus-visible { outline: 2px solid var(--accent); outline-offset: 
 .gallery .g-item { overflow: hidden; position: relative; }
 .gallery .g-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 1.4s var(--ease-out), clip-path 1.2s var(--ease-power); }
 .gallery .g-item:hover img { transform: scale(1.05); }
-.g-item--a { grid-column: 1 / span 5; aspect-ratio: 4/5; }
-.g-item--b { grid-column: 6 / span 4; aspect-ratio: 4/3.4; margin-top: clamp(40px, 6vw, 110px); }
-.g-item--c { grid-column: 10 / span 3; aspect-ratio: 3/4; margin-top: clamp(20px, 3vw, 60px); }
+/* three equal frames — same width, height and top edge */
+.g-item--a, .g-item--b, .g-item--c { grid-column: span 4; aspect-ratio: 4/3; margin-top: 0; }
 
 /* ---------- accordion / FAQ ---------- */
 .acc { border-top: 1px solid var(--line); }
