@@ -204,7 +204,11 @@ def head(title, desc):
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<link rel="icon" type="image/svg+xml" href="assets/img/ghf-mark.svg">
+<link rel="icon" href="assets/img/favicon.ico?v={V}" sizes="16x16 32x32 48x48">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png?v={V}">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16.png?v={V}">
+<link rel="icon" type="image/png" sizes="192x192" href="assets/img/favicon-192.png?v={V}">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png?v={V}">
 <link rel="stylesheet" href="assets/css/main.css?v={V}">
 <script>(function(){{try{{
   if(sessionStorage.getItem("ghf-intro"))document.documentElement.classList.add("no-preloader");
