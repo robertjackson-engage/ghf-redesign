@@ -393,6 +393,20 @@ body.menu-open .menu-list a { opacity: 1; transform: translateY(0); transition: 
 .split__body .eyebrow { margin-bottom: 20px; }
 .split__cta { margin-top: 34px; }
 
+/* programme name promoted to the display heading, marketing line beneath it */
+.split__name { margin-bottom: 10px !important; }
+.split__lead { color: var(--muted); margin-bottom: 24px; }
+.section--light .split__lead { color: var(--muted-dark); }
+.split__lead .serif { font-family: var(--font-serif); font-style: italic; text-transform: none; color: var(--accent); }
+
+/* whole-block link: reuses .card's image zoom and .row-item's arrow emphasis */
+a.split--link { cursor: pointer; }
+a.split--link .split__media img { transition: transform 1.3s var(--ease-out); }
+a.split--link:hover .split__media img { transform: scale(1.06); }
+a.split--link .inline-link { transition: color .35s; }
+a.split--link:hover .inline-link { color: var(--accent); }
+a.split--link:focus-visible { outline: 2px solid var(--accent); outline-offset: 6px; }
+
 /* ---------- stat band ---------- */
 .stats { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
 .section--light .stats { border-color: var(--line-dark); }

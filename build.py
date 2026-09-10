@@ -450,23 +450,43 @@ def stats_band(items, light=False):
 """
 
 
-def split(eyebrow, num, title, paras, img, alt, rev=False, cta=None, tag=None, light=False, wide=False):
+def split(eyebrow, num, title, paras, img, alt, rev=False, cta=None, tag=None, light=False,
+          wide=False, name=None, href=None):
+    """name= promotes the program name to the display heading and demotes `title`
+    beneath it. href= makes the whole block a link — which means the CTA must stop
+    being an <a>, since nesting anchors is invalid and browsers unnest it."""
     body_paras = "".join(f'<p class="body-copy">{p}</p>' for p in paras)
-    cta_html = f'<div class="split__cta"><a class="inline-link" href="{cta[1]}">{cta[0]} →</a></div>' if cta else ""
+    if cta:
+        cta_inner = (f'<span class="inline-link">{cta[0]} →</span>' if href
+                     else f'<a class="inline-link" href="{cta[1]}">{cta[0]} →</a>')
+        cta_html = f'<div class="split__cta">{cta_inner}</div>'
+    else:
+        cta_html = ""
     tag_html = f'<span class="tag">{tag}</span>' if tag else ""
+
+    if name:
+        heading = (f'<h2 class="h-display split__name">{name}</h2>'
+                   f'<p class="h-mid split__lead">{title}</p>')
+    else:
+        heading = f'<h2 class="h-display" style="font-size:clamp(30px,3.8vw,58px)">{title}</h2>'
+
+    tag_open = f'<a class="split split--link{{rev}}" href="{href}">' if href else '<div class="split{rev}">'
+    tag_open = tag_open.format(rev=' split--rev' if rev else '')
+    tag_close = "</a>" if href else "</div>"
+
     return f"""
 <section class="section{' section--light' if light else ''}">
   <div class="wrap">
-    <div class="split{' split--rev' if rev else ''}">
+    {tag_open}
       <div class="split__media{' split__media--wide' if wide else ''} reveal-img">
         <img src="{img}" alt="{alt}" loading="lazy">{tag_html}
       </div>
       <div class="split__body">
         <p class="eyebrow"><span class="num">{num}</span> {eyebrow}</p>
-        <h2 class="h-display" style="font-size:clamp(30px,3.8vw,58px)">{title}</h2>
+        {heading}
         <div class="reveal">{body_paras}{cta_html}</div>
       </div>
-    </div>
+    {tag_close}
   </div>
 </section>
 """
@@ -2379,54 +2399,68 @@ join_body = hero(
 training_body = hero(
     "GHF Signature Training Programs",
     ["You bring the goal.", "We'll match the <span class=\"serif\">program</span>."],
-    "Five coached paths to your strongest self — one-on-one, small team, reformer, negative training, or CrossFit. Different styles, same outcome: you, with a coach, getting somewhere. First sessions are free.",
+    "Six coached paths to your strongest self — one-on-one, small team, reformer, negative training, CrossFit, or HYROX. Different styles, same outcome: you, with a coach, getting somewhere. First sessions are free.",
     img=f"{IMG}/AMPD_45_Metcon_Coached_Training_Strength_Straining_GHF_2023.jpg",
     crumb="Training",
     actions=[("Request Your Free Trial Workout", "#trial", True)],
-    meta=["5 signature programs", "Expert coaches", "Free trial session"],
+    meta=["6 signature programs", "Expert coaches", "Free trial session"],
     page=True,
 ) + split(
-    "Personal Training by GHF", "01",
+    "One-on-one coaching", "01",
     'Find motivation through customized <span class="serif">training</span>',
     ["One-on-one experts in motivation, accountability and program design to help you re-start your exercise routine, get to the gym regularly, or get in shape with orthopedic or medical limitations. A perfect choice when you need your own exercise program written every week to balance strength and weaknesses for best results.",
      "You will benefit from the combined knowledge, training and practice of 40 specialized, nationally certified Personal Trainers. Let us customize your workout to help you enjoy life to the fullest."],
     f"{IMG}/Personal_Training_Legs_Training_2021_1.jpg",
     "Personal trainer working one on one with a client",
     cta=("Get A Free Assessment", "personal-training.html"), tag="Personal Training",
+    name="Personal Training", href="personal-training.html",
 ) + split(
-    "Pilates at GHF", "02",
+    "Reformer &amp; mat", "02",
     'Sculpt your body and restore your <span class="serif">mind</span>',
     ["Pilates is a comprehensive movement program that speaks to everyone, helping clients develop proper alignment and stabilization, giving all bodies the gift of freedom in movement. A strong core radiates, bringing strength to the whole self.",
      "Develop a lean, toned body while enjoying an environment of complete focus. Our Certified Pilates Instructors will guide you towards body awareness, flexibility and strength, all while helping you achieve your fitness goals."],
     f"{IMG}/pilatescrop.jpg",
     "Private Pilates at GHF",
     rev=True, cta=("New To Pilates Package", "pilates.html"), tag="Pilates",
+    name="Pilates", href="pilates.html",
 ) + split(
-    "CrossFit at GHF", "03",
+    "Train with a community", "03",
     'Find motivation through <span class="serif">community</span>',
     ["Become a part of a fitness community that creates a balance of camaraderie and competition to help you reach your fitness goals that are difficult to achieve on your own. Our coaches are committed to making our members stronger, better, and more self-confident through their fitness journey.",
      "GHF CrossFit is now open to the community. You do not have to be a GHF member to enroll."],
     f"{IMG}/crossfitcrop.jpg",
     "CrossFit at GHF",
     cta=("Explore CrossFit During Free Trial Week", "crossfit.html"), tag="CrossFit",
+    name="CrossFit", href="crossfit.html",
 ) + split(
-    "X-Force Body at GHF", "04",
+    "Negative training", "04",
     'Shed some serious fat in 6 <span class="serif">weeks</span>',
     ["The only fat loss and muscle gain program in the country delivering results with just two 25-minute workout sessions a week. Experience a combination of negative training, carb-friendly diet plan, super-hydration, and stress reduction practices to shed fat, build muscle, and reshape your body with remarkable self-confidence.",
      "Get ready, your journey to a leaner, stronger, healthier body is beginning now."],
     f"{IMG}/xforce_body_daryl_and_client_with_logo_for_website.jpg",
     "Coach and client on X-Force negative weight machines",
     rev=True, cta=("Schedule A Discovery Session", "xforce.html"), tag="X-Force Body",
+    name="X-Force Body", href="xforce.html",
 ) + split(
-    "TRIBE Team Training at GHF", "05",
+    "Small team training", "05",
     'Find motivation through <span class="serif">teamwork</span>',
     ["TRIBE Team Training™ offers the best in small team training to deliver the promise \"together everyone will achieve more.\" You will work with a team of up to 10 members and one coach for 8 weeks to motivate and to be motivated for better results.",
      "Experience support, belonging and challenge in a dynamic motivating environment that will respect your individuality to achieve more. Choose between TRIBE Core, TRIBE Life, TRIBE Punch or TRIBE Fit."],
     f"{IMG}/tribe_line.jpg",
     "TRIBE small team training at GHF",
     cta=("Find Your Tribe", "tribe.html"), tag="TRIBE",
+    name="TRIBE Team Training", href="tribe.html",
+) + split(
+    "Official training club", "06",
+    'Run, lift, repeat — eight <span class="serif">times</span>',
+    ["Gainesville Health &amp; Fitness is an official HYROX Training Club — the world's fastest-growing fitness format, right here in Gainesville. Eight one-kilometre runs, eight functional stations, the same every time, so you always know what's coming and exactly how much you have improved.",
+     "Train on the exact equipment used on race day, coached for every level. Chasing a podium finish or just after the most effective workout you have ever done — both belong here."],
+    f"{IMG}/hyrox-sled.jpg",
+    "Athlete pushing a HYROX sled at GHF",
+    rev=True, cta=("Explore HYROX Training", "hyrox.html"), tag="HYROX",
+    name="HYROX", href="hyrox.html",
 ) + form_section(
-    "trial", "06", "Request your free trial workout",
+    "trial", "07", "Request your free trial workout",
     'Your complimentary workout is a click <span class="serif">away</span>',
     "The best way to pick the signature program best for you is to try a complimentary session. Experience the style of workout, environment, and trainer to see if it's right for you. Accelerate your results with the experts of Personal Training, X-Force Body, Pilates, CrossFit, and TRIBE Team Training. They will guide you to the results you want to reconnect with life!",
     "Request Free Trial",
@@ -2588,40 +2622,181 @@ xforce_body_page = hero(
 )
 
 # ============================================================ HYROX
+hyrox_faq = [
+    ("What is HYROX?",
+     "A fitness race that alternates a 1&nbsp;km run with a functional strength station, eight times over. Stations include sled pushes, rowing, farmer's carries and wall balls. The format is identical at every event worldwide, so you can benchmark your progress and compare your result against anyone, anywhere."),
+    ("Is HYROX good for beginners?",
+     "Yes. The movements in HYROX are deliberately basic &mdash; there are no barbell lifts, no gymnastics, and nothing that requires months of technique work. If you can walk, lunge, carry and push, you already have the foundation. What separates a beginner from an elite athlete is pacing, consistency and reps, not skill."),
+    ("What are the eight HYROX stations?",
+     "In race order: 1,000m SkiErg, 50m sled push, 50m sled pull, 80m burpee broad jumps, 1,000m row, 200m farmer's carry, 100m sandbag lunges, and 100 wall balls &mdash; with a 1&nbsp;km run before each one."),
+    ("How is HYROX different from CrossFit?",
+     "CrossFit varies every day and includes technical Olympic lifts. HYROX is the same every single time, with simple movements &mdash; and roughly half of a HYROX race is running. That repeatability is exactly what makes it useful as a training method: you always know what is coming, so you can measure whether you are getting faster."),
+    ("Do I need to be a runner?",
+     "You need basic running ability. If you can currently jog a mile without stopping, you have enough of a base to start."),
+    ("Do I have to sign up for a race to train HYROX?",
+     "No. Many GHF members train in HYROX-style classes purely as their workout of choice, with no race registration at all. If you decide later that you want to compete, you will already have the foundation to walk into your first race confident instead of overwhelmed."),
+    ("How long does it take to train for a race?",
+     "Most athletes need eight to twelve weeks of structured training for their first race."),
+    ("How long does a HYROX race take?",
+     "The average finisher completes the race in about 90 minutes, and there is no time limit."),
+    ("What race divisions are there?",
+     "Doubles, Relay and Singles, each with Open and Pro categories and five-year age brackets."),
+    ("Where is the closest race to Gainesville?",
+     "HYROX Tampa, 22&ndash;25 October 2026, at the Tampa Convention Center."),
+    ("What should I wear, and what shoes are best?",
+     "A hybrid training shoe &mdash; running cushioning with enough grip for the stations. Breathable, moisture-wicking clothing. Bring water and a towel; we provide all the equipment."),
+    ("Does GHF host race simulations?",
+     "Yes. We periodically run the GHF HYROX Simulation, an in-house event where you complete the full race format start to finish."),
+    ("How do I sign up for a class?",
+     "HYROX classes run at GHF Main, 4820 Newberry Road. Drop in for $20, or buy an eight-session pack for $119. Request a spot using the form on this page, or email the program director at <a href=\"mailto:AJ.Smith@ghfc.com\" style=\"color:var(--accent)\">AJ.Smith@ghfc.com</a>."),
+]
+
 hyrox_body = hero(
-    "Hyrox at GHF",
-    ["Train for the", 'finish <span class="serif">line</span>'],
-    "PLACEHOLDER COPY \u2014 replace with the real program description. Hyrox pairs running with functional workout stations, and the training that gets you there lives on our indoor turf: sled push, sled pull, farmers carry, wall balls, rowing.",
-    img=f"{IMG}/GHF_Functional_Training_Turf_Indoor_Turf_Gainesville_Gyms_Strength_2025.jpg",
-    crumb='Training &nbsp;/&nbsp; Hyrox',
-    actions=[("Get Pricing", "contact.html#pricing", True), ("Join GHF Online", "join.html#start", False)],
-    meta=["PLACEHOLDER", "PLACEHOLDER", "PLACEHOLDER"],
+    "Official HYROX Training Club",
+    ["Eight runs.", 'Eight <span class="serif">stations</span>.'],
+    "Gainesville Health &amp; Fitness is North Central Florida's home for official HYROX training &mdash; the world's fastest-growing fitness format. Whether you are training to compete or just want the most effective functional workout you have ever done, this is your base.",
+    img=f"{IMG}/hyrox-sled.jpg",
+    crumb='Training &nbsp;/&nbsp; HYROX',
+    actions=[("Try a Beginner Clinic", "#clinic", True), ("See The Eight Stations", "#stations", False)],
+    meta=["Official HYROX affiliate", "Race-day equipment", "Coached for all levels"],
     page=True,
 ) + f"""
-<section class="section">
+<section class="section" id="stations">
+  <div class="wrap">
+    <div class="cards-head">
+      <div>
+        <p class="eyebrow"><span class="num">01</span> What is HYROX?</p>
+        <h2 class="h-display reveal" style="font-size:clamp(34px,4.6vw,72px)">The workout you can actually <span class="serif">measure</span></h2>
+      </div>
+      <p class="body-copy reveal" style="max-width:38ch">Run one kilometre, then complete a functional station. Repeat that eight times. No complex skills to learn, no intimidating movements &mdash; just work, in the same order, every time.</p>
+    </div>
+    <div class="steps reveal">
+      <div class="step"><span class="step__num">01</span><h3>1,000m SkiErg</h3><p>Full-body pulling under fatigue, straight off your first run.</p></div>
+      <div class="step"><span class="step__num">02</span><h3>50m Sled Push</h3><p>Loaded, low and relentless &mdash; the station most first-timers remember.</p></div>
+      <div class="step"><span class="step__num">03</span><h3>50m Sled Pull</h3><p>Hand over hand, dragging the sled back to you from the floor.</p></div>
+      <div class="step"><span class="step__num">04</span><h3>80m Burpee Broad Jumps</h3><p>Down, up, jump forward. Simple to learn, hard to pace.</p></div>
+      <div class="step"><span class="step__num">05</span><h3>1,000m Row</h3><p>The halfway point, and the best chance to steady your breathing.</p></div>
+      <div class="step"><span class="step__num">06</span><h3>200m Farmer's Carry</h3><p>Two heavy kettlebells, grip and posture under pressure.</p></div>
+      <div class="step"><span class="step__num">07</span><h3>100m Sandbag Lunges</h3><p>A loaded sandbag across your shoulders, one step at a time.</p></div>
+      <div class="step"><span class="step__num">08</span><h3>100 Wall Balls</h3><p>The finish. Legs and lungs, with the line in sight.</p></div>
+    </div>
+  </div>
+</section>
+""" + split(
+    "New to HYROX", "02",
+    'Start as a total <span class="serif">beginner</span>',
+    ["At GHF, helping beginners feel confident isn't an afterthought &mdash; it's what we do best. Whether this is your first time in a gym, your first group class, or your first time hearing the word HYROX, our coaches meet you exactly where you are.",
+     "HYROX is built to be accessible. If you can walk, lunge, carry and push, you already have the foundation. The difference between a beginner and an elite athlete isn't the movements &mdash; it's pacing, consistency and reps.",
+     "Beginners typically start by learning the eight stations one at a time in a coached setting, building a base of strength and running endurance before adding intensity, practising form first and speed second, and training two to three times a week to build consistency without burnout."],
+    f"{IMG}/hyrox-wall-ball.jpg",
+    "Athlete completing wall balls in a HYROX competition",
+    cta=("Try a Beginner Clinic", "#clinic"), tag="Beginners",
+) + split(
+    "Race-day equipment", "03",
+    'Train on the <span class="serif">real</span> thing',
+    ["No guessing. No improvising. Our facility is equipped with the exact stations used at every official HYROX event &mdash; ski ergs, sleds, rowing machines, sandbags, wall balls and more.",
+     "When you train at GHF, you train like it's race day, every day. That means no surprises when you actually reach the start line, and no wasted weeks learning equipment you have never touched."],
+    f"{IMG}/hyrox-ski-erg.jpg",
+    "Athlete training on the ski erg at a HYROX event",
+    rev=True, tag="Equipment",
+) + split(
+    "For racers and everyone else", "04",
+    'HYROX for racers. HYROX for <span class="serif">life</span>.',
+    ["Chasing a podium finish? We'll get you there, with structured race preparation built around the format you'll actually face.",
+     "Prefer to skip the bib and just get an incredible workout? You belong here too. HYROX at GHF is built for both &mdash; competitive athletes who want race prep, and members who simply want a goal-driven workout that never gets old."],
+    f"{IMG}/hyrox-sandbags.jpg",
+    "Sandbags lined up for the HYROX sandbag lunge station",
+    tag="Everyone",
+) + split(
+    "Meet your coach", "05",
+    'Coached by a HYROX <span class="serif">pro</span>',
+    ["<strong>AJ Smith, Program Director.</strong> For more than 25 years AJ has dedicated his career to understanding the human body and unlocking its potential through science-based training, nutrition and performance coaching.",
+     "A current HYROX Pro Athlete and former elite cyclist with Team AEG Toshiba, AJ founded a Human Performance Studio in 2010 specialising in VO2 analysis, metabolic testing and body composition. He has coached with Gainesville Health &amp; Fitness, Life Time Fitness, Go Primal, Primal Health and Performance, and OneLife Fitness.",
+     "His mission is simple: help people understand their bodies, train with purpose, and reach a level of performance they never thought possible &mdash; from first-timers to professionals."],
+    f"{IMG}/hyrox-aj-smith.jpg",
+    "AJ Smith, HYROX Program Director at GHF",
+    rev=True, cta=("Email AJ", "mailto:AJ.Smith@ghfc.com"), tag="AJ Smith",
+) + f"""
+<section class="section section--light">
   <div class="wrap">
     <div class="intro-grid">
       <div>
-        <p class="eyebrow"><span class="num">01</span> About the program</p>
-        <h2 class="h-display reveal">What Hyrox training looks like at <span class="serif">GHF</span></h2>
-        <p class="body-copy reveal" style="margin-top:26px">PLACEHOLDER COPY \u2014 to be written. Describe how members train for Hyrox at GHF: what the sessions cover, who coaches them, where they happen, how often they run, and what someone should do to get started.</p>
+        <p class="eyebrow"><span class="num">06</span> Pricing</p>
+        <h2 class="h-display reveal" style="font-size:clamp(34px,4.6vw,72px)">No contract. No <span class="serif">intimidation</span>.</h2>
+        <p class="body-copy reveal" style="margin-top:26px">Drop into a HYROX session whenever it suits you, or commit to an eight-session pack and bring the cost per session down. Either way there is no long-term commitment &mdash; just show up and get your best results.</p>
       </div>
       <div class="intro-grid__right reveal">
         <ul class="checklist">
-          <li>PLACEHOLDER \u2014 what a session includes</li>
-          <li>PLACEHOLDER \u2014 schedule and locations</li>
-          <li>PLACEHOLDER \u2014 who it's for / fitness level</li>
-          <li>PLACEHOLDER \u2014 coaching and equipment</li>
-          <li>PLACEHOLDER \u2014 cost or membership requirement</li>
+          <li><strong>$20</strong> &mdash; single drop-in session</li>
+          <li><strong>$119</strong> &mdash; eight-session pack ($14.86 per session)</li>
+          <li>No long-term contract</li>
+          <li>All equipment provided &mdash; bring water and a towel</li>
+          <li>HYROX sessions are for GHF members</li>
+          <li>Held at GHF Main, 4820 Newberry Road</li>
         </ul>
       </div>
     </div>
   </div>
 </section>
-""" + cta_band(
-    'Ready to put it to the <span class="serif">test?</span>',
-    "PLACEHOLDER COPY \u2014 replace with the real call to action for this program.",
-    f"{IMG}/GHF_Functional_Training_Turf_Indoor_Turf_Gainesville_Gyms_Strength_2025.jpg",
+
+<section class="section">
+  <div class="wrap">
+    <div class="cards-head">
+      <div>
+        <p class="eyebrow"><span class="num">07</span> Why athletes choose GHF</p>
+        <h2 class="h-display reveal" style="font-size:clamp(34px,4.6vw,72px)">A community that pushes you without leaving you <span class="serif">behind</span></h2>
+      </div>
+    </div>
+    <div class="pillars reveal">
+      <div class="pillar"><h3>Official affiliate</h3><p>A verified, recognised HYROX Training Club &mdash; with official programming, coach education and race preparation resources.</p></div>
+      <div class="pillar"><h3>Every station</h3><p>Race-specific equipment for all eight stations, so nothing on race day is unfamiliar.</p></div>
+      <div class="pillar"><h3>All levels coached</h3><p>Sessions designed to scale, whether it is your first class or your fifth race.</p></div>
+      <div class="pillar"><h3>Right here</h3><p>In Gainesville, serving North Central Florida &mdash; no three-hour drive to train properly.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--light" id="clinic">
+  <div class="wrap">
+    <div class="intro-grid">
+      <div>
+        <p class="eyebrow"><span class="num">08</span> Beginner clinics</p>
+        <h2 class="h-display reveal" style="font-size:clamp(34px,4.6vw,72px)">Try all eight stations, <span class="serif">properly</span></h2>
+        <p class="body-copy reveal" style="margin-top:26px">An interactive, hands-on session where a coach walks you through the form and technique at each of the eight HYROX stations. You get to pull the sled, throw the wall ball and get on the ski erg for the first time &mdash; safely, and with someone showing you how.</p>
+        <p class="body-copy reveal" style="margin-top:18px">Clinics run regularly at GHF Main. Request a place below, or email the program director at <a href="mailto:AJ.Smith@ghfc.com" style="color:var(--accent)">AJ.Smith@ghfc.com</a> to ask about the next date.</p>
+      </div>
+      <div class="intro-grid__right reveal">
+        <ul class="checklist">
+          <li>Coached through all eight stations</li>
+          <li>No experience needed</li>
+          <li>Equipment provided</li>
+          <li>Held at GHF Main</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="cards-head">
+      <div>
+        <p class="eyebrow"><span class="num">09</span> Questions</p>
+        <h2 class="h-display reveal" style="font-size:clamp(34px,4.6vw,72px)">HYROX, <span class="serif">answered</span></h2>
+      </div>
+    </div>
+    {accordion(hyrox_faq)}
+  </div>
+</section>
+""" + form_section(
+    "signup", "10", "Request your clinic place",
+    'Get on the next <span class="serif">clinic</span>',
+    "Tell us how to reach you and we will get back to you with the next available beginner clinic at GHF Main, and answer anything you want to know about training HYROX before you commit.",
+    "Request My Place",
+) + cta_band(
+    'Run, lift, <span class="serif">repeat</span>.',
+    "Ready to start a more fit life? Become a GHF member today for as little as $16 per week.",
+    f"{IMG}/hyrox-wall-ball.jpg",
 )
 
 # ============================================================ TEAM STRONG TRAINING
@@ -3536,7 +3711,7 @@ PAGES = [
     ("training.html", "Signature Training Programs | GHF", "Reach a higher level of fitness with Personal Training, Pilates, CrossFit, X-Force Body, and TRIBE Team Training.", "personal-training.html", training_body),
     ("crossfit.html", "CrossFit at GHF Tioga | The Pursuit of Optimal Fitness", "GHF CrossFit is open to the community — free trial week, Olympic lifting, and youth classes.", "", crossfit_body),
     ("xforce.html", "X-Force Body | Lose Body Fat Fast | GHF", "Gainesville's top choice for accelerated fat loss — negative training, 2 × 25-minute workouts weekly.", "", xforce_body_page),
-    ("hyrox.html", "Hyrox Training at GHF | Gainesville Health & Fitness", "PLACEHOLDER — Hyrox-style functional fitness training at Gainesville Health & Fitness.", "", hyrox_body),
+    ("hyrox.html", "HYROX Training in Gainesville | Official HYROX Training Club | GHF", "Gainesville Health & Fitness is an official HYROX Training Club — eight runs, eight stations, race-day equipment and coaching for every level, at GHF Main.", "", hyrox_body),
     ("team-strong-training.html", "Team Strong Training | GHF", "PLACEHOLDER — Team-based strength training at Gainesville Health & Fitness.", "", teamstrong_body),
     ("seniors.html", "Senior Fitness Classes | Fitness For Life | GHF", "Club Seniors at GHF — resort-style amenities, senior-friendly classes, and a community of seniors just like you.", "", seniors_body),
     ("sports-activities.html", "Sports Activities at GHF | Basketball, Pool, Cycling & More", "Basketball, volleyball, lap pool, HIIT, indoor cycling and sports performance at Gainesville Health & Fitness.", "", sports_body),
