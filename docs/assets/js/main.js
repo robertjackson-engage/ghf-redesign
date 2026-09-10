@@ -275,6 +275,16 @@
         return "<div><dt>" + f[0] + "</dt><dd>" + f[1] + "</dd></div>";
       }).join("");
       facts.hidden = !(d.facts && d.facts.length);
+
+      /* one panel serves every trainer, so clear anything half-typed for the last
+         one — and reset BEFORE writing the hidden name, or reset() would wipe it */
+      var form = panel.querySelector(".trainer-panel__form");
+      if (form) {
+        form.reset();
+        form.querySelector("[data-t-trainer]").value = d.name;
+      }
+      var who = panel.querySelector("[data-t-request]");
+      if (who) who.textContent = d.name;
     }
 
     function open(card) {

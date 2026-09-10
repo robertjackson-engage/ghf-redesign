@@ -81,6 +81,21 @@ def _facts(t):
     return out
 
 
+# Keap / Infusionsoft endpoint for personal training leads. Taken from the hosted
+# form behind the embed script (form id d33934f0…, "Web Form submitted"). That form's
+# own markup writes the .app host; we use .com to match the two proven integrations on
+# the same pv228 tenant. Note it carries only three hidden inputs — the ghfc.com-sourced
+# forms add inf_IntegrationName / inf_CallName / inf_api_enabled for their custom-action
+# setup, which this one does not use.
+KEAP_PT_ACTION = "https://pv228.infusionsoft.com/app/form/process/d33934f006555af5a3ee939461149a73"
+KEAP_PT_XID = "d33934f006555af5a3ee939461149a73"
+KEAP_PT_VERSION = "1.70.0.1003601"
+
+# Keap ships two spam traps on this form; they must be present and left empty.
+KEAP_PT_TRAPS = ('<input type="text" name="inf_eGYY1p7FcL3TD8b6" value="" tabindex="-1" autocomplete="off" style="display:none !important">'
+                 '<input type="text" name="inf-sbt" value="" tabindex="-1" autocomplete="off" style="display:none !important">')
+
+
 def trainers_section(num):
     if not TRAINERS:
         return ""
@@ -123,6 +138,23 @@ def trainers_section(num):
       <blockquote class="trainer-quote" data-t-quote></blockquote>
       <div class="trainer-tags" data-t-tags></div>
       <dl class="trainer-facts" data-t-facts></dl>
+
+      <div class="trainer-panel__request">
+        <p class="eyebrow">Train with <span data-t-request></span></p>
+        <form class="form-grid trainer-panel__form" method="post" action="{KEAP_PT_ACTION}" accept-charset="UTF-8">
+          <input type="hidden" name="inf_form_xid" value="{KEAP_PT_XID}">
+          <input type="hidden" name="inf_form_name" value="Web Form submitted">
+          <input type="hidden" name="infusionsoft_version" value="{KEAP_PT_VERSION}">
+          <input type="hidden" name="inf_custom_TrainerName" data-t-trainer value="">
+          <input type="hidden" name="inf_custom_SelectAProgram" value="Free Assessment">
+          {KEAP_PT_TRAPS}
+          <div class="field"><input type="text" name="inf_field_FirstName" id="tp-first" placeholder=" " required><label for="tp-first">First name</label></div>
+          <div class="field"><input type="text" name="inf_field_LastName" id="tp-last" placeholder=" " required><label for="tp-last">Last name</label></div>
+          <div class="field"><input type="email" name="inf_field_Email" id="tp-email" placeholder=" " required><label for="tp-email">Email address</label></div>
+          <div class="field"><input type="tel" name="inf_field_Phone1" id="tp-phone" placeholder=" " required><label for="tp-phone">Phone</label></div>
+          <button class="btn field--full" type="submit" style="justify-content:center">Request This Trainer <span class="arr">&rarr;</span></button>
+        </form>
+      </div>
     </div>
   </div>
 </div>
@@ -1369,12 +1401,42 @@ pt_body = hero(
     </div>
   </div>
 </section>
-""" + form_section(
-    "assessment", "06", "Free fitness assessment &amp; training session",
-    'Your first session is on <span class="serif">us</span>',
-    "You will be matched with a certified personal trainer to assess your abilities, determine your action plan and guide your complimentary training session. Your assessment features the InBody 570 Body Composition Analyzer — a detailed snapshot of your body's makeup: body fat, lean muscle, metabolic rate, total body water, and visceral fat — helping you make informed decisions about your fitness and wellness journey.",
-    "Schedule Your Assessment",
-) + cta_band(
+""" + f"""
+<section class="section section--light" id="assessment">
+  <div class="wrap">
+    <div class="intro-grid">
+      <div>
+        <p class="eyebrow">Free fitness assessment &amp; training session</p>
+        <h2 class="h-display reveal" style="font-size:clamp(34px,4.6vw,72px)">Your first session is on <span class="serif">us</span></h2>
+        <p class="lede reveal" style="margin-top:28px">You will be matched with a certified personal trainer to assess your abilities, determine your action plan and guide your complimentary training session. Your assessment features the InBody 570 Body Composition Analyzer &mdash; a detailed snapshot of your body's makeup: body fat, lean muscle, metabolic rate, total body water, and visceral fat &mdash; helping you make informed decisions about your fitness and wellness journey.</p>
+      </div>
+      <div class="intro-grid__right reveal">
+        <form class="form-grid" method="post" action="{KEAP_PT_ACTION}" accept-charset="UTF-8">
+          <input type="hidden" name="inf_form_xid" value="{KEAP_PT_XID}">
+          <input type="hidden" name="inf_form_name" value="Web Form submitted">
+          <input type="hidden" name="infusionsoft_version" value="{KEAP_PT_VERSION}">
+          {KEAP_PT_TRAPS}
+          <div class="field"><input type="text" name="inf_field_FirstName" id="assessment-first" placeholder=" " required><label for="assessment-first">First name</label></div>
+          <div class="field"><input type="text" name="inf_field_LastName" id="assessment-last" placeholder=" " required><label for="assessment-last">Last name</label></div>
+          <div class="field"><input type="email" name="inf_field_Email" id="assessment-email" placeholder=" " required><label for="assessment-email">Email address</label></div>
+          <div class="field"><input type="tel" name="inf_field_Phone1" id="assessment-phone" placeholder=" " required><label for="assessment-phone">Phone</label></div>
+          <div class="field field--full">
+            <select name="inf_custom_SelectAProgram" id="assessment-program" aria-label="What are you interested in?">
+              <option value="Free Assessment" selected>Free Assessment</option>
+              <option value="1 on 1 Personal Training">1 on 1 Personal Training</option>
+              <option value="Semi-Private Personal Training">Semi-Private Personal Training</option>
+              <option value="Express Training Sessions">Express Training Sessions</option>
+            </select>
+            <label for="assessment-program">What are you interested in?</label>
+          </div>
+          <button class="btn btn--dark field--full" type="submit" style="justify-content:center">Schedule Your Assessment <span class="arr">&rarr;</span></button>
+        </form>
+        <p class="form-note">We will contact you via phone, email, or text. There is no charge, no obligation and no risk.</p>
+      </div>
+    </div>
+  </div>
+</section>
+""" + cta_band(
     'Now is the time. <span class="serif">Start training for life.</span>',
     "Complete the form and we will contact you via phone, email, or text. We look forward to meeting you!",
     f"{IMG}/Personal_Training_Legs_Training_2021_1.jpg",
