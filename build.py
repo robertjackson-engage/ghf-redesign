@@ -2503,7 +2503,7 @@ training_body = hero(
     "GHF Signature Training Programs",
     ["You bring the goal.", "We'll match the <span class=\"serif\">program</span>."],
     "Six coached paths to your strongest self — one-on-one, small team, reformer, negative training, CrossFit, or HYROX. Different styles, same outcome: you, with a coach, getting somewhere. First sessions are free.",
-    img=f"{IMG}/AMPD_45_Metcon_Coached_Training_Strength_Straining_GHF_2023.jpg",
+    img=f"{IMG}/GHF_Gainesville_Health_Gyms_Gainesville_Personal_Training_Training_Fitness_2026-4.jpg",
     crumb="Training",
     actions=[("Request Your Free Trial Workout", "#trial", True)],
     meta=["6 signature programs", "Expert coaches", "Free trial session"],
