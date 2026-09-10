@@ -405,7 +405,7 @@ def footer_html():
 
 
 def hero(kicker, lines, sub="", img=None, video=None, poster=None, crumb=None,
-         actions=None, meta=None, promo=None, page=False):
+         actions=None, meta=None, promo=None, page=False, hero_cls=""):
     lns = ""
     for i, ln in enumerate(lines):
         lns += f'<span class="ln"><span style="transition-delay:{0.12 + i * 0.09:.2f}s">{ln}</span></span>'
@@ -437,7 +437,7 @@ def hero(kicker, lines, sub="", img=None, video=None, poster=None, crumb=None,
                       f'<div class="hero__promo-sub">{subs}</div></div>')
     sub_html = f'<p class="hero__sub">{sub}</p>' if sub else ""
     return f"""
-<section class="hero{' hero--page' if page else ''}">
+<section class="hero{' hero--page' if page else ''}{' ' + hero_cls if hero_cls else ''}">
   <div class="hero__media">{media}</div>
   {crumb_html}
   <div class="hero__inner">
@@ -3763,28 +3763,21 @@ faq_body = hero(
 )
 
 # ============================================================ THANK YOU (PRICING)
+# Deliberately a single screen — someone who has just submitted a form should see the
+# whole message without scrolling, so everything lives in one compact hero.
 thankyou_body = hero(
     "Request received",
     ["Thank you for your", 'interest in <span class="serif">GHF</span>'],
-    "Congratulations on taking the first step toward a healthier, stronger you. One of our team members will follow up with you shortly with membership options and pricing.",
+    "Congratulations on taking the first step toward a healthier, stronger you. One of our team "
+    "members will follow up shortly with membership options and pricing.<br><br>"
+    "In the meantime, <a href=\"locations.html\">take a tour of our locations</a>. "
+    "Any other questions, email <a href=\"mailto:memberservices@ghfc.com\">memberservices@ghfc.com</a>."
+    "<br><br><strong>Your GHF Team</strong> &mdash; <em>Gainesville Strong Since 1978</em>",
     img=f"{IMG}/Free_Weights_Gainesville_Health_and_Fiitness_2021_1_(1).jpg",
     crumb="Thank you",
+    actions=[("Explore Our Locations", "locations.html", True)],
     page=True,
-) + f"""
-<section class="section section--tight">
-  <div class="wrap" style="max-width:760px">
-    <p class="lede reveal">In the meantime, <a class="inline-link" href="locations.html">take a tour of our locations</a> and see which club suits you best.</p>
-    <p class="body-copy reveal" style="margin-top:26px">If you have other questions, email us at <a href="mailto:memberservices@ghfc.com" style="color:var(--accent)">memberservices@ghfc.com</a>.</p>
-    <p class="body-copy reveal" style="margin-top:26px"><strong>Your GHF Team</strong><br>
-    <em>Gainesville Strong Since 1978</em></p>
-  </div>
-</section>
-""" + cta_band(
-    'Three clubs. One <span class="serif">membership</span>.',
-    "Take a look around GHF Main, GHF Women and GHF Tioga — and pick the one that fits your routine.",
-    f"{IMG}/tioga_line.jpg",
-    primary=("Explore Our Locations", "locations.html"),
-    secondary=None,
+    hero_cls="hero--compact",
 )
 
 # ============================================================ BUILD ALL
