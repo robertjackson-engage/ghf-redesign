@@ -2533,7 +2533,7 @@ training_body = hero(
      "GHF CrossFit is now open to the community. You do not have to be a GHF member to enroll."],
     f"{IMG}/crossfitcrop.jpg",
     "CrossFit at GHF",
-    cta=("Explore CrossFit During Free Trial Week", "crossfit.html"), tag="CrossFit",
+    cta=("Explore CrossFit — Your First Class Is Free", "crossfit.html"), tag="CrossFit",
     name="CrossFit", href="crossfit.html",
 ) + split(
     "Negative training", "04",
@@ -2578,14 +2578,20 @@ training_body = hero(
 )
 
 # ============================================================ CROSSFIT
+# Keap endpoint for CrossFit leads, from the hosted form behind the embed script. As
+# with the other integrations the hosted markup writes the .app host; we use .com to
+# match them. Note Keap marks none of these four fields required — we require all four
+# client-side anyway, since a lead with no email or phone is not actionable.
+KEAP_CF_ACTION = "https://pv228.infusionsoft.com/app/form/process/64b5d74a95b373f9169385e579053258"
+KEAP_CF_XID = "64b5d74a95b373f9169385e579053258"
 crossfit_body = hero(
     "CrossFit at GHF Tioga",
     ["The best hour of", 'your <span class="serif">day</span>'],
     "Workouts you'd never finish alone become the thing you can't stop talking about. Coaches scale every WOD to your level, and the community learns your name by week one. Open to everyone — no GHF membership required.",
     img=f"{IMG}/GHF_CrossFit_at_GHF_CrossFit_in_Gainesville_Gainesville_Gyms_Gyms_Workout_Fitness_Cardio_Strength_2025-1.jpg",
     crumb='Training &nbsp;/&nbsp; CrossFit',
-    actions=[("Your Free CrossFit Session", "#pass", True), ("What To Expect", "#expect", False)],
-    meta=["Open to the community", "Certified coaches", "Free trial week"],
+    actions=[("Try A Free Class", "#pass", True), ("What To Expect", "#expect", False)],
+    meta=["Open to the community", "Certified coaches", "Free first class"],
     page=True,
 ) + f"""
 <section class="section" id="expect">
@@ -2630,12 +2636,33 @@ crossfit_body = hero(
     f"{IMG}/GHF_CrossFit_Kids_Exercise_CrossFit_for_Kids_Tioga_2026.jpg",
     "Kids CrossFit class bear crawl exercise",
     tag="Youth Camp",
-) + form_section(
-    "pass", "05", "Your free week of CrossFit",
-    'Try CrossFit for <span class="serif">free</span>',
-    "Try CrossFit under the direction of certified CrossFit coaches to teach you the mechanics and safety of W.O.D.s. Try CrossFit in our newly renovated, covered space at GHF Tioga. New equipment and classes too. Simply complete the form and we will contact you to set up your free week.",
-    "Claim My Free Week",
-) + cta_band(
+) + f"""
+<section class="section section--light" id="pass">
+  <div class="wrap">
+    <div class="intro-grid">
+      <div>
+        <p class="eyebrow">Your free CrossFit class</p>
+        <h2 class="h-display reveal" style="font-size:clamp(34px,4.6vw,72px)">Try CrossFit for <span class="serif">free</span></h2>
+        <p class="lede reveal" style="margin-top:28px">Try CrossFit under the direction of certified CrossFit coaches to teach you the mechanics and safety of W.O.D.s. Try CrossFit in our newly renovated, covered space at GHF Tioga. New equipment and classes too. Simply complete the form and we will contact you to set up your free class.</p>
+      </div>
+      <div class="intro-grid__right reveal">
+        <form class="form-grid" method="post" action="{KEAP_CF_ACTION}" accept-charset="UTF-8" data-thanks="thank-you-crossfit.html">
+          <input type="hidden" name="inf_form_xid" value="{KEAP_CF_XID}">
+          <input type="hidden" name="inf_form_name" value="CrossFit web form">
+          <input type="hidden" name="infusionsoft_version" value="1.70.0.1003601">
+          {KEAP_TRAPS}
+          <div class="field"><input type="text" name="inf_field_FirstName" id="cf-first" placeholder=" " required><label for="cf-first">First name</label></div>
+          <div class="field"><input type="text" name="inf_field_LastName" id="cf-last" placeholder=" " required><label for="cf-last">Last name</label></div>
+          <div class="field"><input type="email" name="inf_field_Email" id="cf-email" placeholder=" " required><label for="cf-email">Email address</label></div>
+          <div class="field"><input type="tel" name="inf_field_Phone1" id="cf-phone" placeholder=" " required><label for="cf-phone">Phone</label></div>
+          <button class="btn btn--dark field--full" type="submit" style="justify-content:center">Try A Free Class <span class="arr">&rarr;</span></button>
+        </form>
+        <p class="form-note">We will contact you via phone, email, or text. There is no charge, no obligation and no risk.</p>
+      </div>
+    </div>
+  </div>
+</section>
+""" + cta_band(
     'Stronger. Fitter. More <span class="serif">confident</span>.',
     "Ready to start a more fit life? Become a GHF member today for as little as $15 per week.",
     f"{IMG}/GHF_CrossFit_Fitness_Exercise_Outdoors_Group_Fitness_Crossfit_Gainesville_2024-01_1.jpg",
@@ -3846,6 +3873,24 @@ thankyoutribe_body = hero(
     hero_cls="hero--compact",
 )
 
+# ============================================================ THANK YOU (CROSSFIT)
+thankyoucrossfit_body = hero(
+    "Class requested",
+    ["See you on", 'the <span class="serif">turf</span>'],
+    "Congratulations on taking the first step toward a healthier, stronger you. One of our "
+    "certified CrossFit coaches will follow up shortly to book your free class.<br><br>"
+    "<strong>What to bring</strong> &mdash; a water bottle, a towel, and comfortable gym clothes and shoes.<br>"
+    "<strong>Where to go</strong> &mdash; check in at the GHF Tioga lobby desk, then head out to the CrossFit turf."
+    "<br><br>Questions? Call <a href=\"tel:3523774955\">(352) 377-4955</a> or email "
+    "<a href=\"mailto:memberservices@ghfc.com\">memberservices@ghfc.com</a>."
+    "<br><br><strong>Your GHF Team</strong> &mdash; <em>Gainesville Strong Since 1978</em>",
+    img=f"{IMG}/GHF_CrossFit_Fitness_Exercise_Outdoors_Group_Fitness_Crossfit_Gainesville_2024-01_1.jpg",
+    crumb="Thank you",
+    actions=[("Explore GHF Tioga", "tioga-center.html", True)],
+    page=True,
+    hero_cls="hero--compact",
+)
+
 # ============================================================ BUILD ALL
 PAGES = [
     ("index.html", "Gainesville Health & Fitness | The Gym That's Best At Helping Beginners", "The gym that's best at helping beginners — with staff to guide your journey. 3 locations, 900+ classes monthly, open 24/7 at GHF Main.", "", home_body),
@@ -3868,7 +3913,7 @@ PAGES = [
     ("tioga-center.html", "GHF Tioga | Gym in Tioga Town Center, Newberry FL", "GHF Tioga — the most convenient gym west of I-75, with a private Pilates studio, outdoor CrossFit turf and Hydro Massage in the Chill Studio.", "locations.html", tioga_center_body),
     ("join.html", "Join Online | Gainesville's Best Gym Memberships | GHF", "Join Gainesville's best gym online — $29.99 + tax, dues every other Wednesday, no maintenance fee. 24 month, 12 month, and month-to-month agreements.", "", join_body),
     ("training.html", "Signature Training Programs | GHF", "Reach a higher level of fitness with Personal Training, Pilates, CrossFit, X-Force Body, and TRIBE Team Training.", "personal-training.html", training_body),
-    ("crossfit.html", "CrossFit at GHF Tioga | The Pursuit of Optimal Fitness", "GHF CrossFit is open to the community — free trial week, Olympic lifting, and youth classes.", "", crossfit_body),
+    ("crossfit.html", "CrossFit at GHF Tioga | The Pursuit of Optimal Fitness", "GHF CrossFit is open to the community — free first class, Olympic lifting, and youth classes.", "", crossfit_body),
     ("xforce.html", "X-Force Body | Lose Body Fat Fast | GHF", "Gainesville's top choice for accelerated fat loss — negative training, 2 × 25-minute workouts weekly.", "", xforce_body_page),
     ("hyrox.html", "HYROX Training in Gainesville | Official HYROX Training Club | GHF", "Gainesville Health & Fitness is an official HYROX Training Club — eight runs, eight stations, race-day equipment and coaching for every level, at GHF Main.", "", hyrox_body),
     ("team-strong-training.html", "Team Strong Training | GHF", "PLACEHOLDER — Team-based strength training at Gainesville Health & Fitness.", "", teamstrong_body),
@@ -3883,6 +3928,7 @@ PAGES = [
     ("thank-you-pricing.html", "Thank You | Gainesville Health & Fitness", "Thanks for requesting gym pricing from Gainesville Health & Fitness. A team member will follow up shortly with membership options.", "", thankyou_body),
     ("thank-you-pass.html", "Thank You | Free Pass | Gainesville Health & Fitness", "Thanks for requesting your free all-access pass. A team member will follow up shortly to set it up.", "", thankyoupass_body),
     ("thank-you-tribe.html", "Thank You | TRIBE Team Training | Gainesville Health & Fitness", "Thanks for requesting your free TRIBE Team Training session. A coach will follow up shortly to book it.", "", thankyoutribe_body),
+    ("thank-you-crossfit.html", "Thank You | CrossFit at GHF Tioga | Gainesville Health & Fitness", "Thanks for requesting your free CrossFit class. A coach will follow up shortly to book it at GHF Tioga.", "", thankyoucrossfit_body),
 ]
 
 
