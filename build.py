@@ -555,7 +555,8 @@ def split(eyebrow, num, title, paras, img, alt, rev=False, cta=None, tag=None, l
     else:
         heading = f'<h2 class="h-display" style="font-size:clamp(30px,3.8vw,58px)">{title}</h2>'
 
-    tag_open = f'<a class="split split--link{{rev}}" href="{href}">' if href else '<div class="split{rev}">'
+    ext = ' target="_blank" rel="noopener"' if (href or "").startswith("http") else ""
+    tag_open = (f'<a class="split split--link{{rev}}" href="{href}"{ext}>') if href else '<div class="split{rev}">'
     tag_open = tag_open.format(rev=' split--rev' if rev else '')
     tag_close = "</a>" if href else "</div>"
 
@@ -2249,21 +2250,22 @@ recovery_body = hero(
     ["Discover the restorative power of water in our newly remodeled AQUIX Studio. Swim your way fit in our indoor lap pool, take an aqua class for a joint-friendly workout, and let your muscles and mind recover in the sauna, steam, whirlpool, and cold pool."],
     f"{IMG}/sports-activities-pool-steam-room-700x467.jpg",
     "Indoor steam room at GHF",
-    cta=("Dive Into Aquix", "pool.html"), tag="Aquix Studio",
+    cta=("Dive Into Aquix", "pool.html"), href="pool.html", tag="Aquix Studio",
 ) + split(
     "Hydro massage", "03",
     'The Chill <span class="serif">Studio</span>',
     ["Relax, reduce stress, and recover from workouts and hectic schedules in our Chill Studio. Eight warm water massage lounges relax your muscles and your mind for a one-of-a-kind post-workout recovery. You will leave the gym feeling like a new person."],
     f"{IMG}/Chill_by_GHF_hydromassage_room_Gainesville_health_and_fitness_copy.jpg",
     "Hydro massage at the gym to relax and recover",
-    rev=True, cta=("Explore The Chill Studio", "chill.html"), tag="Chill by GHF",
+    rev=True, cta=("Explore The Chill Studio", "chill.html"), href="chill.html", tag="Chill by GHF",
 ) + split(
     "ReQuest Physical Therapy", "04",
     'Experts in back <span class="serif">pain</span>',
     ["Experts in back pain with highly specialized spine strengthening equipment, researched and proven, to significantly reduce and eliminate your pain."],
     f"{IMG}/ReQuest_Physical_Therapy_Physical_Therapy_Therapists_Back_Pain_Neck_Pain_Recovery.jpg",
     "ReQuest Physical Therapy",
-    tag="ReQuest PT",
+    cta=("Visit ReQuest Physical Therapy", "https://requestphysicaltherapy.com/"),
+    href="https://requestphysicaltherapy.com/", tag="ReQuest PT",
 ) + split(
     "Group exercise classes", "05",
     'Restore and <span class="serif">repair</span>',
@@ -2271,7 +2273,8 @@ recovery_body = hero(
      "You will find healing and restorative elements in all levels of Yoga, Simply Stretch, Tai Chi, Body Flow, Gentle Joints, and Breathing For Life."],
     f"{IMG}/Simply_Stretch_GHF_Tioga_GroupFit_Flexibility_2023_1_1.jpg",
     "Senior fitness stretch class",
-    rev=True, cta=("See class schedule", "group-fitness.html#schedule"), tag="GroupFit",
+    rev=True, cta=("See class schedule", "group-fitness.html#schedule"),
+    href="group-fitness.html#schedule", tag="GroupFit",
 ) + f"""
 <section class="section section--light">
   <div class="wrap">
