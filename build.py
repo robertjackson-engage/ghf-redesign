@@ -206,6 +206,7 @@ MENU = [
     ("Amenities", "amenities.html"),
     ("Pool &amp; Aqua Center", "pool.html"),
     ("Post Workout Recovery", "recovery.html"),
+    ("Chill Studio &mdash; HydroMassage &amp; CryoLounge+", "chill.html"),
     ("Strength Training Equipment", "strength-training.html"),
     ("Cardio Selections", "cardio.html"),
     ("Hot Yoga", "hot-yoga.html"),
@@ -351,6 +352,7 @@ def footer_html():
           <a href="strength-training.html">Strength Training</a>
           <a href="amenities.html">Amenities</a>
           <a href="recovery.html">Recovery</a>
+          <a href="chill.html">Chill Studio</a>
           <a href="kids-club.html">Kid's Club</a>
           <a href="member-savings.html">Member Savings</a>
           <a href="bring-a-guest.html">Bring a Guest</a>
@@ -2198,7 +2200,7 @@ recovery_body = hero(
     ["Relax, reduce stress, and recover from workouts and hectic schedules in our Chill Studio. Eight warm water massage lounges relax your muscles and your mind for a one-of-a-kind post-workout recovery. You will leave the gym feeling like a new person."],
     f"{IMG}/Chill_by_GHF_hydromassage_room_Gainesville_health_and_fitness_copy.jpg",
     "Hydro massage at the gym to relax and recover",
-    rev=True, tag="Chill by GHF",
+    rev=True, cta=("Explore The Chill Studio", "chill.html"), tag="Chill by GHF",
 ) + split(
     "ReQuest Physical Therapy", "04",
     'Experts in back <span class="serif">pain</span>',
@@ -4232,6 +4234,198 @@ thankyouxforce_body = hero(
     hero_cls="hero--compact",
 )
 
+# ============================================================ CHILL BY GHF
+# Content is GHF's own, from ghfc.com/chill. The signup and cancel forms live on
+# their own pages because they are vendor-hosted embeds (Formsite and monday.com)
+# with no documented POST target — unlike the Keap forms, they cannot be rebuilt
+# natively, so they are framed inside our chrome instead.
+# The &EmbedId= tail is not decoration: formsite's embedManager.js appends it at
+# runtime, and without it the URL returns "Missing or invalid embed id" instead of
+# the form. Framing the URL as copied from the old page renders an error page.
+CHILL_SIGNUP_EMBED = "https://fs10.formsite.com/res/showFormEmbed?EParam=B6fiTn-RcO7Cqa4xJ-PSQ8yFxcaxnyMuFzpUCZwnDno&amp;2053452483&amp;EmbedId=2053452483"
+CHILL_CANCEL_EMBED = "https://forms.monday.com/forms/embed/a181d524e6993bbd98dcbfbbda4e23eb"
+REQUEST_PT_APPT = "https://requestphysicaltherapy.com/physical-therapist-appointment/"
+
+chill_faq = [
+    ("Will I get wet using the hydro massage lounges?",
+     "No. You will receive a full body massage with the use of pressurized water. You will simply lie down on the open design bed, fully clothed, and feel the immediate benefits of the traveling jet system."),
+    ("How do I sign up for sessions?",
+     "You will sign up for a Mind/Body account which will allow you to purchase Chill by GHF. We will show you how to do this."),
+    ("How many times a week should I do hydro massage?",
+     "The frequency of use is up to you. You may use it once a day or once a week."),
+    ("How much does it cost?",
+     "Introductory pricing is 15 sessions for $15, auto-renewing monthly. Use all 15 sessions in each 30 day period &mdash; sessions do not carry over."),
+    ("Can I buy more if I use all of my sessions before 30 days?",
+     "Yes. You can buy another 15-session package, which will be non-recurring. This can be charged to your MindBody account, using the credit cards stored in the system."),
+    ("Can I buy a single session?",
+     "Single sessions are not available. You may have a complimentary session to see what it's like. If you enjoy it, you can purchase 15 sessions for $15 per month."),
+    ("How do I cancel?",
+     'Inform the desk that you would like to cancel, or <a href="chill-cancel.html">use the cancellation form</a>. You may use the balance of your sessions remaining at cancellation.'),
+    ("Is there a fee to cancel?", "No."),
+    ("Am I able to do more than 10 minutes at a time?",
+     "Yes, unless someone is waiting to use a lounge."),
+    ("Can I buy a month (or more) for someone as a gift?",
+     "Yes &mdash; the gift must be for an existing GHF member. Gift cards are available at the front desk."),
+]
+
+chill_body = hero(
+    "Chill by GHF",
+    ["Recovery is the part", 'most people <span class="serif">skip</span>'],
+    "HydroMassage lounges and CryoLounge+ recovery chairs, in a studio built to serve the whole person. Ten minutes, fully clothed, before or after your workout &mdash; and your first session is free.",
+    img=f"{IMG}/Chill_GHF_Hydromassage_Massage_Bed_Gainesville_2025-2.jpg",
+    crumb='Fitness &nbsp;/&nbsp; Chill Studio',
+    actions=[("Try A Free Session", "#begin", True), ("Pricing", "#pricing", False)],
+    meta=["GHF Main &amp; GHF Tioga", "10-minute sessions", "First session free"],
+    page=True,
+) + split(
+    "HydroMassage", "01",
+    'Technology to relax and <span class="serif">recover</span>',
+    ["The accumulated stresses of everyday life can damage your health in irreversible ways &mdash; from early aging to heart problems and long-term disability. You cannot eliminate stress, but you can manage it, and it is worth every effort to do so.",
+     "Each session is 10 minutes and will loosen up muscles, increase oxygen and blood flow into muscles, remove the lactic acid buildup that makes you sore, and deliver nutrients from your body to your muscles. You will walk out of the gym feeling like a new person."],
+    f"{IMG}/post-workout-recovery-chill-hydromassage-lounge-700x467.jpg",
+    "HydroMassage lounge in the Chill studio at GHF",
+    tag="Chill Studio",
+) + split(
+    "CryoLounge+", "02",
+    'Recover faster with <span class="serif">cold and heat</span>',
+    ["CryoLounge+ is an advanced recovery chair with complementary cold and heat zones. Cold is applied to target soreness or minor aches and pains, while heat is applied in other areas of the body for a comfortable experience.",
+     "Athletes worldwide have long relied on cold and heat therapy as essential parts of their training &mdash; ice baths, hot tubs, cryotherapy chambers and heating pads. GHF has made that way of recovering faster accessible to you. Stop by the front desk to try a free session."],
+    f"{IMG}/Chill_GHF_Hydromassage_Cryobed_Gainesville_2025-2.jpg",
+    "CryoLounge+ recovery chair at GHF",
+    rev=True, tag="CryoLounge+",
+) + f"""
+<section class="section section--light" id="pricing">
+  <div class="wrap">
+    <div class="intro-grid">
+      <div>
+        <p class="eyebrow">Pricing</p>
+        <h2 class="h-display reveal" style="font-size:clamp(34px,4.6vw,72px)">Fifteen sessions, <span class="serif">fifteen dollars</span></h2>
+        <p class="lede reveal" style="margin-top:28px">15 ten-minute sessions for $15 a month, or 30 for $25 &mdash; both including CryoLounge+. Subscriptions auto-renew monthly until cancelled, and unused sessions do not roll over to the following month. Located at GHF Main and GHF Tioga.</p>
+      </div>
+      <div class="intro-grid__right reveal">
+        <ul class="checklist">
+          <li>15 ten-minute sessions &mdash; $15 a month</li>
+          <li>30 ten-minute sessions &mdash; $25 a month</li>
+          <li>Includes two 10-minute CryoLounge+ sessions</li>
+          <li>Auto-renews monthly; unused sessions do not roll over</li>
+          <li>No fee to cancel, and you keep the sessions you have left</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="begin">
+  <div class="wrap">
+    <div class="intro-grid">
+      <div>
+        <p class="eyebrow">How to begin</p>
+        <h2 class="h-display reveal" style="font-size:clamp(34px,4.6vw,72px)">Try a complimentary <span class="serif">session</span></h2>
+        <p class="lede reveal" style="margin-top:28px">Stop by the desk before or after your workout and try it at no charge. When you are ready, sign up for Chill and we will walk you through setting up the MindBody account that carries your sessions.</p>
+      </div>
+      <div class="intro-grid__right reveal">
+        <div class="hero__actions" style="margin:0">
+          <a class="btn btn--solid" href="chill-signup.html">Sign Up For Chill <span class="arr">&rarr;</span></a>
+          <a class="btn btn--dark" href="chill-cancel.html">Cancel Chill <span class="arr">&rarr;</span></a>
+        </div>
+        <p class="form-note" style="margin-top:22px">Prefer hands-on? ReQuest Physical Therapy offers therapeutic massage inside both our Main and Tioga facilities.
+        <a href="{REQUEST_PT_APPT}" target="_blank" rel="noopener">Schedule a massage appointment &rarr;</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--light" id="faq">
+  <div class="wrap">
+    <div class="cards-head">
+      <div>
+        <p class="eyebrow">Questions</p>
+        <h2 class="h-display reveal" style="font-size:clamp(34px,4.6vw,72px)">Chill, <span class="serif">answered</span></h2>
+      </div>
+    </div>
+    {accordion(chill_faq)}
+  </div>
+</section>
+""" + f"""
+<section class="section" id="pass">
+  <div class="wrap">
+    <div class="intro-grid">
+      <div>
+        <p class="eyebrow">Request your pass</p>
+        <h2 class="h-display reveal" style="font-size:clamp(34px,4.6vw,72px)">Come try the Chill studio for <span class="serif">free</span></h2>
+        <p class="lede reveal" style="margin-top:28px">Your free all-access pass gives you full membership privileges for one day at any GHF location &mdash; the Chill studio included. No charge, no obligation and no risk.</p>
+      </div>
+      <div class="intro-grid__right reveal">
+        <form class="form-grid" method="post" action="{KEAP_ACTION}" accept-charset="UTF-8" data-thanks="thank-you-pass.html">
+          <input type="hidden" name="inf_form_xid" value="{KEAP_XID}">
+          <input type="hidden" name="inf_form_name" value="All Access Pass">
+          <input type="hidden" name="infusionsoft_version" value="1.70.0.60815">
+          <input type="hidden" name="inf_IntegrationName" value="pv228">
+          <input type="hidden" name="inf_CallName" value="allaccesspass">
+          <input type="hidden" name="inf_api_enabled" value="true">
+          <div class="field"><input type="text" name="inf_field_FirstName" id="ch-first" placeholder=" " required><label for="ch-first">First name</label></div>
+          <div class="field"><input type="text" name="inf_field_LastName" id="ch-last" placeholder=" " required><label for="ch-last">Last name</label></div>
+          <div class="field"><input type="email" name="inf_field_Email" id="ch-email" placeholder=" " required><label for="ch-email">Email address</label></div>
+          <div class="field"><input type="tel" name="inf_field_Phone1" id="ch-phone" placeholder=" " required><label for="ch-phone">Phone</label></div>
+          <div class="field field--full">
+            <select name="inf_custom_Facility" id="ch-loc" aria-label="Gym you would like to visit">
+              <option value="">&nbsp;</option>
+              <option value="Main">GHF Main &mdash; 4820 W Newberry Road</option>
+              <option value="Women's Center">GHF Women &mdash; 2441 NW 43rd Street</option>
+              <option value="Tioga">GHF Tioga &mdash; Tioga Town Center</option>
+            </select>
+            <label for="ch-loc">Gym you would like to visit</label>
+          </div>
+          <button class="btn btn--dark field--full" type="submit" style="justify-content:center">Claim My Free Fitness Pass <span class="arr">&rarr;</span></button>
+        </form>
+        <p class="form-note">Submit the form and we'll be in touch by phone, text or email to set up your pass.</p>
+      </div>
+    </div>
+  </div>
+</section>
+""" + cta_band(
+    'Train hard. <span class="serif">Recover harder.</span>',
+    "Ready to start a more fit life? Become a GHF member today for as little as $15 per week.",
+    f"{IMG}/GHF_Recovery_Workout_Recovery_Massage_Exercise_Fitness_Gyms_2025.jpg",
+)
+
+chill_signup_body = hero(
+    "Sign up for Chill",
+    ["Fifteen sessions,", '<span class="serif">fifteen dollars</span>'],
+    "Complete the form below and we will get your Chill membership set up, including the MindBody account that holds your sessions. 15 sessions for $15 a month, auto-renewing, with two 10-minute CryoLounge+ sessions included."
+    "<br><br>Not sure yet? <a href=\"chill.html#begin\">Try a complimentary session</a> at the desk first.",
+    img=f"{IMG}/Chill_GHF_Hydromassage_Massage_Bed_Gainesville_2025-2.jpg",
+    crumb='Chill &nbsp;/&nbsp; Sign Up',
+    page=True,
+    hero_cls="hero--compact",
+) + f"""
+<section class="section section--light">
+  <div class="wrap">
+    {embed(CHILL_SIGNUP_EMBED, "Sign up for Chill by GHF", tall=True)}
+    <p class="form-note" style="margin-top:24px">Trouble with the form? Call <a href="tel:3523774955">(352) 377-4955</a> or ask at the front desk &mdash; we can sign you up in person.</p>
+  </div>
+</section>
+"""
+
+chill_cancel_body = hero(
+    "Cancel Chill",
+    ["No fee, and you keep", 'the sessions you <span class="serif">have left</span>'],
+    "Cancelling Chill costs nothing, and you can still use the balance of the sessions remaining at cancellation. Complete the form below, or simply tell the front desk."
+    "<br><br>Changed your mind? <a href=\"chill.html\">Back to Chill by GHF</a>.",
+    img=f"{IMG}/Chill_by_GHF_hydromassage_room_Gainesville_health_and_fitness_copy.jpg",
+    crumb='Chill &nbsp;/&nbsp; Cancel',
+    page=True,
+    hero_cls="hero--compact",
+) + f"""
+<section class="section section--light">
+  <div class="wrap">
+    {embed(CHILL_CANCEL_EMBED, "Cancel your Chill membership", tall=True)}
+    <p class="form-note" style="margin-top:24px">You can also cancel in person &mdash; just let the front desk know. Questions? Call <a href="tel:3523774955">(352) 377-4955</a>.</p>
+  </div>
+</section>
+"""
+
+
 # ============================================================ BUILD ALL
 PAGES = [
     ("index.html", "Gainesville Health & Fitness | The Gym That's Best At Helping Beginners", "The gym that's best at helping beginners — with staff to guide your journey. 3 locations, 900+ classes monthly, open 24/7 at GHF Main.", "", home_body),
@@ -4263,6 +4457,9 @@ PAGES = [
     ("special-needs-fitness.html", "FIT for ALL | Special Needs Fitness at GHF", "Fun Inclusive Training (FIT) for ALL is a free fitness program designed for individuals with special needs.", "", fitforall_body),
     ("bring-a-guest.html", "Bring a Guest | 6 Free Visits | GHF", "The Power Of Friends Guest program — each guest visiting with a member gets 6 free visits.", "", guest_body),
     ("member-savings.html", "Member Savings Program | GHF", "Save the cost of your gym membership dues at over 100 participating local businesses.", "", savings_body),
+    ("chill.html", "Chill by GHF | HydroMassage & CryoLounge+ Recovery Studio", "HydroMassage lounges and CryoLounge+ recovery chairs at GHF Main and GHF Tioga. 15 sessions for $15 a month, first session free.", "recovery.html", chill_body),
+    ("chill-signup.html", "Sign Up For Chill | Gainesville Health & Fitness", "Sign up for Chill by GHF — 15 HydroMassage and CryoLounge+ sessions for $15 a month.", "recovery.html", chill_signup_body),
+    ("chill-cancel.html", "Cancel Chill | Gainesville Health & Fitness", "Cancel your Chill by GHF membership. No fee, and you keep the sessions you have left.", "recovery.html", chill_cancel_body),
     ("faq.html", "FAQ | Get The Most Out Of Your Gym Membership | GHF", "Frequently asked questions about Gainesville Health & Fitness memberships, amenities, and getting started.", "", faq_body),
     ("ghf-pass.html", "Free All-Access Pass | Try GHF Free | Gainesville Health & Fitness", "Try Gainesville Health & Fitness free. Your all-access pass gives you full membership privileges for one day at any of our three locations — classes, pool, sauna, weight floor and a coach to guide you. No charge, no obligation.", "", ghf_pass_body),
     ("contact.html", "Contact Us & Get Pricing | Gainesville Health & Fitness", "Let's talk fitness memberships in Gainesville — pricing packages and amenities to craft your gym experience.", "", contact_body),
