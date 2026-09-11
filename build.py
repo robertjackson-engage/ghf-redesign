@@ -450,7 +450,7 @@ def footer_html():
 
 
 def hero(kicker, lines, sub="", img=None, video=None, poster=None, crumb=None,
-         actions=None, meta=None, promo=None, page=False, hero_cls=""):
+         actions=None, meta=None, promo=None, page=False, hero_cls="", actions_mobile=None):
     lns = ""
     for i, ln in enumerate(lines):
         lns += f'<span class="ln"><span style="transition-delay:{0.12 + i * 0.09:.2f}s">{ln}</span></span>'
@@ -459,15 +459,23 @@ def hero(kicker, lines, sub="", img=None, video=None, poster=None, crumb=None,
         media = f'<video src="{video}" poster="{poster or ""}" autoplay muted loop playsinline></video>'
     elif img:
         media = f'<img src="{img}" alt="" fetchpriority="high">'
-    acts = ""
-    if actions:
-        acts = '<div class="hero__actions">'
-        for a in actions:
+    def _acts(items, cls_extra=""):
+        out = f'<div class="hero__actions{cls_extra}">'
+        for a in items:
             label, href, solid = a[0], a[1], a[2]
             extra = (" " + a[3]) if len(a) > 3 else ""
             cls = ("btn btn--solid" if solid else "btn") + extra
-            acts += f'<a class="{cls}" href="{href}">{label} <span class="arr">→</span></a>'
-        acts += "</div>"
+            out += f'<a class="{cls}" href="{href}">{label} <span class="arr">→</span></a>'
+        return out + "</div>"
+
+    acts = ""
+    if actions:
+        # actions_mobile swaps the button set below 820px — the same width at which the
+        # header's Join / Free Pass / Get Pricing buttons are hidden (main.css), so those
+        # calls to action stay reachable without opening the menu.
+        acts = _acts(actions, " hero__actions--desk" if actions_mobile else "")
+        if actions_mobile:
+            acts += _acts(actions_mobile, " hero__actions--mob")
     crumb_html = ""
     if crumb:
         crumb_html = f'<div class="hero__crumb"><div><a href="index.html">Home</a> &nbsp;/&nbsp; {crumb}</div></div>'
@@ -1002,6 +1010,11 @@ home_body = hero(
     actions=[
         ("Claim Your Free Fitness Pass", "ghf-pass.html#claim", True),
         ("See What's Inside", "amenities.html", False),
+    ],
+    actions_mobile=[
+        ("Join Online", "join.html#start", True),
+        ("Free Pass", "ghf-pass.html#claim", False),
+        ("Get Pricing", "contact.html#pricing", False),
     ],
     meta=["Free coaching on every visit", "Open 24/7 at GHF Main", "900+ classes included"],
 ) + marquee(["Strength", "Cardio", "Hot Yoga", "Pilates", "Indoor Pool", "Sauna", "Recovery", "Fitness Classes", "Personal Training"]) + f"""
