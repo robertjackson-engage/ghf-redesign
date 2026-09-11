@@ -1794,3 +1794,20 @@ body.jn-open { overflow: hidden !important; }
 }
 .section--light .note-box { border-color: var(--line-dark); border-left-color: var(--accent); background: rgba(0, 0, 0, 0.02); }
 .note-box .body-copy { font-size: 15px; }
+
+/* ---------- J-Bar menu ---------- */
+.menu-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 46px 60px; }
+.menu-cat__head {
+  font-family: var(--font-display); text-transform: uppercase; font-weight: 400;
+  font-size: clamp(19px, 1.8vw, 27px); letter-spacing: 0.02em;
+  padding-bottom: 14px; border-bottom: 1px solid var(--line-dark);
+  display: flex; align-items: baseline; justify-content: space-between; gap: 14px;
+}
+.menu-cat__n { font-family: var(--font-body); font-size: 11px; letter-spacing: 0.2em; color: var(--accent); }
+.menu-list { list-style: none; margin-top: 18px; }
+.menu-list li { padding: 11px 0; border-bottom: 1px solid rgba(0, 0, 0, 0.06); }
+.menu-list li:last-child { border-bottom: 0; }
+.menu-list strong { display: block; font-size: 15.5px; font-weight: 600; }
+.menu-list span { display: block; margin-top: 3px; font-size: 13.5px; color: var(--muted-dark); }
+
+@media (max-width: 820px) { .menu-grid { grid-template-columns: minmax(0, 1fr); gap: 38px; } }

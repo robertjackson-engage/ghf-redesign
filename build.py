@@ -204,6 +204,7 @@ MENU = [
     ("GHF Women", "womens-center.html"),
     ("GHF Tioga", "tioga-center.html"),
     ("Amenities", "amenities.html"),
+    ("J-Bar Smoothie Cafe", "jbar.html"),
     ("Pool &amp; Aqua Center", "pool.html"),
     ("Post Workout Recovery", "recovery.html"),
     ("Chill Studio &mdash; HydroMassage &amp; CryoLounge+", "chill.html"),
@@ -354,6 +355,7 @@ def footer_html():
           <a href="recovery.html">Recovery</a>
           <a href="chill.html">Chill Studio</a>
           <a href="chill-cancel.html">Cancel Chill</a>
+          <a href="jbar.html">J-Bar Smoothies</a>
           <a href="kids-club.html">Kid's Club</a>
           <a href="member-savings.html">Member Savings</a>
           <a href="bring-a-guest.html">Bring a Guest</a>
@@ -1309,11 +1311,11 @@ amenities_body = hero(
         <div class="card__label"><h3>Indoor Basketball</h3></div></div>
         <div class="card__below"><p>Regulation-size indoor basketball court with six hoops and hardwood flooring. Full-court play six days a week, half-court play every day, and volleyball twice a week (Wednesdays 6–11p &amp; Sundays 5–10p).</p></div>
       </div>
-      <div class="card">
+      <a class="card" href="jbar.html">
         <div class="card__media"><img src="{IMG}/smoothie_girls_web.png" alt="Real fruit smoothies at J Bar" loading="lazy">
         <div class="card__label"><h3>J-Bar Smoothies</h3></div></div>
-        <div class="card__below"><p>Real fruit smoothies, made to order with superior fresh ingredients — the perfect fuel for your workout or recovery.</p></div>
-      </div>
+        <div class="card__below"><p>Real fruit smoothies, made to order with superior fresh ingredients — the perfect fuel for your workout or recovery. See the full menu.</p></div>
+      </a>
       <div class="card">
         <div class="card__media"><img src="{IMG}/cropped_sauna.jpg" alt="Salt room sauna at GHF" loading="lazy">
         <div class="card__label"><h3>Sauna, Steam &amp; Spa</h3></div></div>
@@ -2221,11 +2223,11 @@ recovery_body = hero(
 <section class="section section--light">
   <div class="wrap">
     <div class="card-grid card-grid--2" data-stagger>
-      <div class="card">
+      <a class="card" href="jbar.html">
         <div class="card__media card__media--wide"><img src="{IMG}/smoothie_girls_web.png" alt="Smoothie bar at GHF" loading="lazy">
         <div class="card__label"><h3>J-Bar Smoothie Cafe</h3></div></div>
         <div class="card__below"><p>The J-Bar Smoothie Cafe menu is filled with healthy snacks, food and smoothies that make for the perfect fuel for your workout or enhance your recovery. Smoothies are made to order with superior fresh ingredients, including all real fruit. Enhancements such as whey protein and branched chain amino acids are available.</p></div>
-      </div>
+      </a>
       <div class="card">
         <div class="card__media card__media--wide"><img src="{IMG}/Javi_Percussion_Gun_Massage_Gun_Massage_Therapy_2021_2.jpg" alt="Percussion massage gun recovery" loading="lazy">
         <div class="card__label"><h3>Cancer Recovery Program</h3></div></div>
@@ -4449,6 +4451,148 @@ chill_cancel_body = hero(
 """
 
 
+# ============================================================ J-BAR
+# Menu extracted from ghfc.com/j-bar — 32 items across 5 categories, names and
+# ingredients verbatim. Two source quirks fixed rather than copied: "Berry Bowl"
+# had lost its <strong> wrapper, and their own nav links "Additional Products" to
+# #more while the anchor is #add, so that link is broken on the live site.
+JBAR_VIDEO = "https://www.youtube.com/embed/QJ36IdN_9jY"  # "The Matcha Madness Smoothie from JBar by GHF"
+
+jbar_body = hero(
+    "J-Bar by GHF",
+    ["Crafted shakes,", 'bowls &amp; <span class="serif">more</span>'],
+    "Real fruit, whey protein and a blender, inside GHF Main. Smoothies, acai bowls, parfaits and grab-and-go &mdash; and you do not need to be a member to order one.",
+    img=f"{IMG}/jbar-smoothie-collection.jpg",
+    crumb='Amenities &nbsp;/&nbsp; J-Bar',
+    actions=[("See The Menu", "#menu", True), ("Hours", "#hours", False)],
+    meta=["Inside GHF Main", "Open to everyone", "Made to order"],
+    page=True,
+) + split(
+    "Smoothies worthy of your efforts", "01",
+    'Real ingredients, <span class="serif">every time</span>',
+    ["Nestled inside GHF Main is J-Bar, your one-stop destination for all things smoothies &mdash; from delectable fruit smoothies to invigorating protein shakes. Our standout varieties include the refreshing Strawberry Banana blend and the energizing Peanut Butter Blitz.",
+     "Our acai bowls are a testament to the vibrancy of real ingredients, and the smoothie bowls offer a delightful combination of taste and texture, making them the perfect meal replacements or fulfilling snacks. For those particular about protein intake, our shakes are crafted with high-quality whey protein."],
+    f"{IMG}/jbar-counter.jpg",
+    "The J-Bar smoothie counter at GHF Main",
+    tag="GHF Main",
+) + split(
+    "Any time of day", "02",
+    'Breakfast, snack or <span class="serif">recovery</span>',
+    ["Whether you're winding down after an intense workout, looking for a healthy breakfast option, or just in the mood for a tantalizing treat, J-Bar caters to every palate and purpose. And the best part? You don't need to be a GHF member to relish our handcrafted delicacies.",
+     "We believe nutrition is the cornerstone of wellness, complementing every rep you lift, every mile you run, and every stretch you hold. We're not just a smoothie bar; we're a part of your holistic fitness story."],
+    f"{IMG}/jbar-smoothie-friends.jpg",
+    "Friends with J-Bar smoothies at GHF",
+    rev=True, tag="No membership needed",
+) + f"""
+<section class="section" id="video">
+  <div class="wrap">
+    <div class="cards-head">
+      <div>
+        <p class="eyebrow">Watch one get made</p>
+        <h2 class="h-display reveal" style="font-size:clamp(34px,4.6vw,72px)">The Matcha <span class="serif">Madness</span></h2>
+      </div>
+      <p class="body-copy reveal" style="max-width:38ch">Milk, pineapple juice, mango, whey protein, spinach and matcha powder &mdash; start to finish at the J-Bar counter.</p>
+    </div>
+    <div class="reveal">{embed(JBAR_VIDEO, "The Matcha Madness Smoothie from JBar by GHF", allow_yt=True)}</div>
+  </div>
+</section>
+
+<section class="section section--light" id="menu">
+  <div class="wrap">
+    <div class="cards-head">
+      <div>
+        <p class="eyebrow">The menu</p>
+        <h2 class="h-display reveal" style="font-size:clamp(34px,4.6vw,72px)">Thirty-two ways to <span class="serif">refuel</span></h2>
+      </div>
+      <p class="body-copy reveal" style="max-width:38ch">Every smoothie is made to order with real fruit. Add whey protein, branched-chain amino acids or a superfood boost to any of them.</p>
+    </div>
+    <div class="menu-grid reveal">
+      <div class="menu-cat">
+        <h3 class="menu-cat__head">Fruit Smoothies <span class="menu-cat__n">9</span></h3>
+        <ul class="menu-list">
+          <li><strong>Strawberry Banana</strong> <span>Strawberry Kiwi Juice | Strawberry | Banana</span></li>
+          <li><strong>Mango Blast</strong> <span>Tropical Juice | Mango | Strawberry | Whey Protein | Superfood</span></li>
+          <li><strong>In The Tropics</strong> <span>Tropical Juice | Pineapple | Banana</span></li>
+          <li><strong>Blue Heaven</strong> <span>Tropical Juice | Blueberry | Pineapple</span></li>
+          <li><strong>Berry Health Fusion</strong> <span>Four Berry Juice | Blueberry | Banana | Berry Health Fusion Mix | Whey Protein | Fish Oil</span></li>
+          <li><strong>Pineapple Recovery</strong> <span>Pineapple Juice | Pineapple | Banana | Whey Protein Isolate | BCAA</span></li>
+          <li><strong>Lean Body Maker</strong> <span>Water | Banana | Whey Protein Isolate | Superfood</span></li>
+          <li><strong>Jungle Juice</strong> <span>Pineapple Juice | Banana | Pineapple | Spinach | Whey Protein</span></li>
+          <li><strong>Matcha Madness</strong> <span>Milk | Pineapple Juice | Mango | Whey Protein | Spinach | Matcha Powder</span></li>
+        </ul>
+      </div>
+      <div class="menu-cat">
+        <h3 class="menu-cat__head">Peanut Butter Delights <span class="menu-cat__n">5</span></h3>
+        <ul class="menu-list">
+          <li><strong>Java Nut</strong> <span>Milk | Banana | Almond | Coffee | Whey Protein | Peanut Butter | Chocolate Sauce</span></li>
+          <li><strong>Peanut Butter Blitz</strong> <span>Milk | Banana | Whey Protein | Peanut Butter</span></li>
+          <li><strong>PB&amp;J</strong> <span>Four Berry Juice | Whey Protein | Blueberry | Strawberry | Peanut Butter</span></li>
+          <li><strong>Haus</strong> <span>Milk | Banana | Peanut Butter | Whey Protein | Greek Yogurt | Chocolate Sauce</span></li>
+          <li><strong>Joe's Smoothie</strong> <span>Milk | Banana | Blueberry | Peanut Butter | Whey Protein</span></li>
+        </ul>
+      </div>
+      <div class="menu-cat">
+        <h3 class="menu-cat__head">Power Parfaits <span class="menu-cat__n">4</span></h3>
+        <ul class="menu-list">
+          <li><strong>Protein Parfait</strong> <span>Greek Yogurt | Granola | Honey | Strawberry | Blueberry</span></li>
+          <li><strong>Wildberry Parfait</strong> <span>Greek Yogurt | Granola | Blackberry | Raspberry | Honey</span></li>
+          <li><strong>Four Berry Protein Parfait</strong> <span>Greek Yogurt | Granola | Blackberry | Raspberry | Blueberry | Strawberry | Honey</span></li>
+          <li><strong>Strawberry Banana Protein Parfait</strong> <span>Greek Yogurt | Granola | Strawberry | Banana | Honey</span></li>
+        </ul>
+      </div>
+      <div class="menu-cat">
+        <h3 class="menu-cat__head">Acai Bowls <span class="menu-cat__n">5</span></h3>
+        <ul class="menu-list">
+          <li><strong>Rainbowl</strong> <span>Acai | Granola | Strawberry | Kiwi | Blueberry | Banana</span></li>
+          <li><strong>J-Bowl</strong> <span>Acai | Granola | Strawberry | Banana | Honey | Almond</span></li>
+          <li><strong>Beach Bum</strong> <span>Acai | Granola | Blueberry | Banana</span></li>
+          <li><strong>PB&amp;J Bowl</strong> <span>Acai | Peanut Butter | Granola | Blueberry | Strawberry | Honey</span></li>
+          <li><strong>Berry Bowl</strong> <span>Acai | Granola | Strawberry | Blueberry | Blackberry | Raspberry | Honey</span></li>
+        </ul>
+      </div>
+      <div class="menu-cat">
+        <h3 class="menu-cat__head">Additional Products <span class="menu-cat__n">9</span></h3>
+        <ul class="menu-list">
+          <li><strong>Monster Energy Drinks</strong> <span>Assorted Flavors</span></li>
+          <li><strong>Alani Nu Energy Drinks</strong> <span>Assorted Flavors</span></li>
+          <li><strong>BUM Energy Drinks</strong> <span>Assorted Flavors</span></li>
+          <li><strong>Ghost Energy Drinks</strong> <span>Assorted Flavors</span></li>
+          <li><strong>Gorilla Mind Energy Drinks</strong> <span>Assorted Flavors</span></li>
+          <li><strong>Celcius</strong> <span>Assorted Flavors</span></li>
+          <li><strong>Core Power Ready-To-Drink Protein Shake</strong> <span>Strawberry, Chocolate, Vanilla available in 26g and 42g of protein</span></li>
+          <li><strong>Hard-Boiled Eggs</strong></li>
+          <li><strong>Sandwiches</strong></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="hours">
+  <div class="wrap">
+    <div class="intro-grid">
+      <div>
+        <p class="eyebrow">Hours</p>
+        <h2 class="h-display reveal" style="font-size:clamp(34px,4.6vw,72px)">Open early, <span class="serif">open late</span></h2>
+        <p class="lede reveal" style="margin-top:28px">You will find the J-Bar just inside GHF Main at 4820 W Newberry Road. Walk in and order &mdash; no membership, no app, no waiting on a table.</p>
+      </div>
+      <div class="intro-grid__right reveal">
+        <ul class="checklist">
+          <li><strong>Monday &ndash; Friday</strong> &nbsp; 6:00am &ndash; 9:00pm</li>
+          <li><strong>Saturday &ndash; Sunday</strong> &nbsp; 8:00am &ndash; 6:00pm</li>
+        </ul>
+        <div style="margin-top:26px"><a class="inline-link" href="main-center.html">More about GHF Main &rarr;</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+""" + cta_band(
+    'Fuel the work you just <span class="serif">put in</span>',
+    "Ready to start a more fit life? Become a GHF member today for as little as $15 per week.",
+    f"{IMG}/jbar-acai-bowl.jpg",
+)
+
+
 # ============================================================ BUILD ALL
 PAGES = [
     ("index.html", "Gainesville Health & Fitness | The Gym That's Best At Helping Beginners", "The gym that's best at helping beginners — with staff to guide your journey. 3 locations, 900+ classes monthly, open 24/7 at GHF Main.", "", home_body),
@@ -4483,6 +4627,7 @@ PAGES = [
     ("chill.html", "Chill by GHF | HydroMassage & CryoLounge+ Recovery Studio", "HydroMassage lounges and CryoLounge+ recovery chairs at GHF Main and GHF Tioga. 15 sessions for $15 a month, first session free.", "recovery.html", chill_body),
     ("chill-signup.html", "Sign Up For Chill | Gainesville Health & Fitness", "Sign up for Chill by GHF — 15 HydroMassage and CryoLounge+ sessions for $15 a month.", "recovery.html", chill_signup_body),
     ("chill-cancel.html", "Cancel Chill | Gainesville Health & Fitness", "Cancel your Chill by GHF membership. No fee — use your remaining sessions up to your renewal date.", "recovery.html", chill_cancel_body),
+    ("jbar.html", "J-Bar by GHF | Smoothies, Acai Bowls & Protein Shakes in Gainesville", "The J-Bar smoothie cafe inside GHF Main — fruit smoothies, protein shakes, acai bowls and parfaits, made to order with real fruit. No membership required.", "amenities.html", jbar_body),
     ("faq.html", "FAQ | Get The Most Out Of Your Gym Membership | GHF", "Frequently asked questions about Gainesville Health & Fitness memberships, amenities, and getting started.", "", faq_body),
     ("ghf-pass.html", "Free All-Access Pass | Try GHF Free | Gainesville Health & Fitness", "Try Gainesville Health & Fitness free. Your all-access pass gives you full membership privileges for one day at any of our three locations — classes, pool, sauna, weight floor and a coach to guide you. No charge, no obligation.", "", ghf_pass_body),
     ("contact.html", "Contact Us & Get Pricing | Gainesville Health & Fitness", "Let's talk fitness memberships in Gainesville — pricing packages and amenities to craft your gym experience.", "", contact_body),
