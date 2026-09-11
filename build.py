@@ -2820,13 +2820,30 @@ hyrox_faq = [
      "HYROX classes run at GHF Main, 4820 Newberry Road. Drop in for $20, or buy an eight-session pack for $119. Request a spot using the form on this page, or email the program director at <a href=\"mailto:AJ.Smith@ghfc.com\" style=\"color:var(--accent)\">AJ.Smith@ghfc.com</a>."),
 ]
 
+# Keap endpoint for HYROX leads, from the hosted form behind the embed script. As with
+# Pilates the version string is the newer 1.70.0.1010026, and the honeypot carries Keap's
+# current rotated name — the two traps below are what the live form actually ships. The
+# forms deployed before Pilates still send the older inf_eGYY1p7FcL3TD8b6 in KEAP_TRAPS;
+# leave them as they are.
+#
+# NOTE: reCAPTCHA (invisible, Enterprise) is enabled on this form in Keap, as it is on the
+# Pilates, TRIBE and personal-training forms. Keap's own JS mints a token on submit; a
+# hand-built POST sends none, so Keap may reject these submissions. It is OFF on the
+# CrossFit form, so it is a per-form setting — turn it off for the others, or prove with a
+# real submission that tokenless posts are accepted.
+KEAP_HYROX_ACTION = "https://pv228.infusionsoft.com/app/form/process/3fe1e83b57fa1518bb2eaabbb34fdb38"
+KEAP_HYROX_XID = "3fe1e83b57fa1518bb2eaabbb34fdb38"
+KEAP_HYROX_VERSION = "1.70.0.1010026"
+KEAP_HYROX_TRAPS = ('<input type="text" name="inf_3Ht2uaf45U0YMzrh" value="" tabindex="-1" autocomplete="off" style="display:none !important">'
+                    '<input type="text" name="inf-sbt" value="" tabindex="-1" autocomplete="off" style="display:none !important">')
+
 hyrox_body = hero(
     "Official HYROX Training Club",
     ["Eight runs.", 'Eight <span class="serif">stations</span>.'],
     "Gainesville Health &amp; Fitness is North Central Florida's home for official HYROX training &mdash; the world's fastest-growing fitness format. Whether you are training to compete or just want the most effective functional workout you have ever done, this is your base.",
     img=f"{IMG}/hyrox-sled.jpg",
     crumb='Training &nbsp;/&nbsp; HYROX',
-    actions=[("Try a Beginner Clinic", "#clinic", True), ("See The Eight Stations", "#stations", False)],
+    actions=[("Try a Class", "#first-class", True), ("See The Eight Stations", "#stations", False)],
     meta=["Official HYROX affiliate", "Race-day equipment", "Coached for all levels"],
     page=True,
 ) + f"""
@@ -2859,7 +2876,7 @@ hyrox_body = hero(
      "Beginners typically start by learning the eight stations one at a time in a coached setting, building a base of strength and running endurance before adding intensity, practising form first and speed second, and training two to three times a week to build consistency without burnout."],
     f"{IMG}/hyrox-wall-ball.jpg",
     "Athlete completing wall balls in a HYROX competition",
-    cta=("Try a Beginner Clinic", "#clinic"), tag="Beginners",
+    cta=("Try a Class", "#first-class"), tag="Beginners",
 ) + split(
     "Race-day equipment", "03",
     'Train on the <span class="serif">real</span> thing',
@@ -2925,14 +2942,14 @@ hyrox_body = hero(
   </div>
 </section>
 
-<section class="section section--light" id="clinic">
+<section class="section section--light" id="first-class">
   <div class="wrap">
     <div class="intro-grid">
       <div>
-        <p class="eyebrow">Beginner clinics</p>
+        <p class="eyebrow">Your first class</p>
         <h2 class="h-display reveal" style="font-size:clamp(34px,4.6vw,72px)">Try all eight stations, <span class="serif">properly</span></h2>
         <p class="body-copy reveal" style="margin-top:26px">An interactive, hands-on session where a coach walks you through the form and technique at each of the eight HYROX stations. You get to pull the sled, throw the wall ball and get on the ski erg for the first time &mdash; safely, and with someone showing you how.</p>
-        <p class="body-copy reveal" style="margin-top:18px">Clinics run regularly at GHF Main. Request a place below, or email the program director at <a href="mailto:AJ.Smith@ghfc.com" style="color:var(--accent)">AJ.Smith@ghfc.com</a> to ask about the next date.</p>
+        <p class="body-copy reveal" style="margin-top:18px">Classes run all week at GHF Main. Request a spot below, or email the program director at <a href="mailto:AJ.Smith@ghfc.com" style="color:var(--accent)">AJ.Smith@ghfc.com</a> to ask about times.</p>
       </div>
       <div class="intro-grid__right reveal">
         <ul class="checklist">
@@ -2957,12 +2974,33 @@ hyrox_body = hero(
     {accordion(hyrox_faq)}
   </div>
 </section>
-""" + form_section(
-    "signup", "10", "Request your clinic place",
-    'Get on the next <span class="serif">clinic</span>',
-    "Tell us how to reach you and we will get back to you with the next available beginner clinic at GHF Main, and answer anything you want to know about training HYROX before you commit.",
-    "Request My Place",
-) + cta_band(
+""" + f"""
+<section class="section section--light" id="signup">
+  <div class="wrap">
+    <div class="intro-grid">
+      <div>
+        <p class="eyebrow">Request your spot</p>
+        <h2 class="h-display reveal" style="font-size:clamp(34px,4.6vw,72px)">Get into your first <span class="serif">class</span></h2>
+        <p class="lede reveal" style="margin-top:28px">Tell us how to reach you and we will get back to you with class times at GHF Main, and answer anything you want to know about training HYROX before you commit.</p>
+      </div>
+      <div class="intro-grid__right reveal">
+        <form class="form-grid" method="post" action="{KEAP_HYROX_ACTION}" accept-charset="UTF-8" data-thanks="thank-you-hyrox.html">
+          <input type="hidden" name="inf_form_xid" value="{KEAP_HYROX_XID}">
+          <input type="hidden" name="inf_form_name" value="Web Form submitted">
+          <input type="hidden" name="infusionsoft_version" value="{KEAP_HYROX_VERSION}">
+          {KEAP_HYROX_TRAPS}
+          <div class="field"><input type="text" name="inf_field_FirstName" id="hx-first" placeholder=" " required><label for="hx-first">First name</label></div>
+          <div class="field"><input type="text" name="inf_field_LastName" id="hx-last" placeholder=" " required><label for="hx-last">Last name</label></div>
+          <div class="field"><input type="email" name="inf_field_Email" id="hx-email" placeholder=" " required><label for="hx-email">Email address</label></div>
+          <div class="field"><input type="tel" name="inf_field_Phone1" id="hx-phone" placeholder=" " required><label for="hx-phone">Phone</label></div>
+          <button class="btn btn--dark field--full" type="submit" style="justify-content:center">Try a Class <span class="arr">&rarr;</span></button>
+        </form>
+        <p class="form-note">We will contact you via phone, email, or text. There is no charge, no obligation and no risk.</p>
+      </div>
+    </div>
+  </div>
+</section>
+""" + cta_band(
     'Run, lift, <span class="serif">repeat</span>.',
     "Ready to start a more fit life? Become a GHF member today for as little as $16 per week.",
     f"{IMG}/hyrox-wall-ball.jpg",
@@ -3930,6 +3968,27 @@ thankyoucrossfit_body = hero(
     hero_cls="hero--compact",
 )
 
+# ============================================================ THANK YOU (HYROX)
+# Same one-screen rule as its siblings above. HYROX trains at GHF Main, not Tioga.
+thankyouhyrox_body = hero(
+    "Class requested",
+    ["See you on", 'the <span class="serif">floor</span>'],
+    "Congratulations on taking the first step toward a healthier, stronger you. One of our "
+    "HYROX coaches will follow up shortly to book your class at GHF Main.<br><br>"
+    "<strong>What to bring</strong> &mdash; a water bottle, a towel, and comfortable gym clothes and "
+    "training shoes. No experience with the stations needed; we start where you are.<br>"
+    "<strong>Where to go</strong> &mdash; check in at the GHF Main lobby desk and tell them you are "
+    "here for HYROX."
+    "<br><br>Questions? Call <a href=\"tel:3523774955\">(352) 377-4955</a> or email "
+    "<a href=\"mailto:AJ.Smith@ghfc.com\">AJ.Smith@ghfc.com</a>."
+    "<br><br><strong>Your GHF Team</strong> &mdash; <em>Gainesville Strong Since 1978</em>",
+    img=f"{IMG}/hyrox-sled.jpg",
+    crumb="Thank you",
+    actions=[("Explore GHF Main", "main-center.html", True)],
+    page=True,
+    hero_cls="hero--compact",
+)
+
 # ============================================================ THANK YOU (PILATES)
 thankyoupilates_body = hero(
     "Session requested",
@@ -3986,6 +4045,7 @@ PAGES = [
     ("thank-you-pass.html", "Thank You | Free Pass | Gainesville Health & Fitness", "Thanks for requesting your free all-access pass. A team member will follow up shortly to set it up.", "", thankyoupass_body),
     ("thank-you-tribe.html", "Thank You | TRIBE Team Training | Gainesville Health & Fitness", "Thanks for requesting your free TRIBE Team Training session. A coach will follow up shortly to book it.", "", thankyoutribe_body),
     ("thank-you-crossfit.html", "Thank You | CrossFit at GHF Tioga | Gainesville Health & Fitness", "Thanks for requesting your free CrossFit class. A coach will follow up shortly to book it at GHF Tioga.", "", thankyoucrossfit_body),
+    ("thank-you-hyrox.html", "Thank You | HYROX at GHF | Gainesville Health & Fitness", "Thanks for requesting your HYROX class. A coach will follow up shortly to book it at GHF Main.", "", thankyouhyrox_body),
     ("thank-you-pilates.html", "Thank You | Pilates at GHF | Gainesville Health & Fitness", "Thanks for requesting your free Pilates session. An instructor will follow up shortly to book it at GHF Main or GHF Tioga.", "", thankyoupilates_body),
 ]
 
