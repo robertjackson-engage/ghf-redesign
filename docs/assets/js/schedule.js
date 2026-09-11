@@ -6,6 +6,8 @@
   if (!root) return;
 
   var ENDPOINT = root.getAttribute("data-endpoint");
+  /* when set, the schedule is scoped to a single studio (e.g. the hot yoga page) */
+  var ONLY_ROOM = (root.getAttribute("data-room") || "").trim().toUpperCase();
   var TIMEOUT = 20000;
   var PERCH_URL = "https://app.perchteams.com/public/gx/ghf";
   var TZ = "America/New_York";
@@ -108,7 +110,10 @@
     raw.forEach(function (d, i) {
       var key = "d" + i;
       var month = monthOf(d.isoDate);
-      var list = (d.classes || []).map(function (c) {
+      var src = (d.classes || []).filter(function (c) {
+        return !ONLY_ROOM || String(c.room == null ? "" : c.room).trim().toUpperCase() === ONLY_ROOM;
+      });
+      var list = src.map(function (c) {
         var o = {
           id: clean(c.id) || (key + "-" + Math.random().toString(36).slice(2)),
           name: clean(c.name),
@@ -164,6 +169,14 @@
     elDay.innerHTML = '<option value="">All days</option>' + days.map(function (d) {
       return '<option value="' + esc(d.key) + '">' + esc(d.heading) + "</option>";
     }).join("");
+  
+    /* one studio, one site: these two filters would each offer a single option.
+       Hidden rather than removed — resetAll() still addresses both. */
+    if (ONLY_ROOM) {
+      elChips.hidden = true;
+      var roomWrap = elRoom.closest(".gx__select");
+      if (roomWrap) roomWrap.hidden = true;
+    }
   }
 
   function fillSelect(el, values, allLabel, fmt) {
@@ -551,6 +564,14 @@
     if (window.console && console.error) console.error("[gx] schedule failed:", err);
     elFilters.hidden = true;
     elDays.innerHTML = "";
+    /* the feed loaded fine, there is just nothing in this studio this week (or the
+       room was renamed upstream) — say that, rather than "we can't load it" */
+    if (err && err.message === "empty-room") {
+      setStatus('<p>No classes are scheduled in this studio this week. ' +
+        'See the <a href="group-fitness.html#schedule">full class schedule</a>, ' +
+        'or view it at <a href="' + PERCH_URL + '" rel="noopener">app.perchteams.com</a>.</p>');
+      return;
+    }
     setStatus('<p class="gx__error">We can&rsquo;t load the class schedule right now. ' +
       'You can view it at <a href="' + PERCH_URL + '" rel="noopener">app.perchteams.com</a>, ' +
       'or call us at <a href="tel:3523774955">(352) 377-4955</a> and we&rsquo;ll walk you through it.</p>');
@@ -567,7 +588,7 @@
       })
       .then(function (data) {
         parse(data);
-        if (!all.length) throw new Error("empty");
+        if (!all.length) throw new Error(ONLY_ROOM ? "empty-room" : "empty");
         buildFilters();
         bind();
         elFilters.hidden = false;

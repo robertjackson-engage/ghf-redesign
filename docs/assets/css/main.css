@@ -1151,6 +1151,9 @@ a.split--link:focus-visible { outline: 2px solid var(--accent); outline-offset: 
    ============================================================ */
 .gx { --gx-line: var(--line-dark); --gx-muted: var(--muted-dark); }
 .gx__filters[hidden], .gx__status[hidden] { display: none !important; }
+/* .gx__chips and .gx__select set their own display, which beats the hidden
+   attribute — the single-studio pages hide both via [hidden] */
+.gx__chips[hidden], .gx__select[hidden] { display: none !important; }
 
 /* ---------- filter bar ---------- */
 .gx__filters { border-top: 1px solid var(--gx-line); padding-top: 26px; margin-bottom: 34px; }
