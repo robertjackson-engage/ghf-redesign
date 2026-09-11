@@ -205,6 +205,7 @@ MENU = [
     ("GHF Tioga", "tioga-center.html"),
     ("Amenities", "amenities.html"),
     ("J-Bar Smoothie Cafe", "jbar.html"),
+    ("Court Sports &mdash; Basketball &amp; Volleyball", "court-sports.html"),
     ("Pool &amp; Aqua Center", "pool.html"),
     ("Post Workout Recovery", "recovery.html"),
     ("Chill Studio &mdash; HydroMassage &amp; CryoLounge+", "chill.html"),
@@ -356,6 +357,7 @@ def footer_html():
           <a href="chill.html">Chill Studio</a>
           <a href="chill-cancel.html">Cancel Chill</a>
           <a href="jbar.html">J-Bar Smoothies</a>
+          <a href="court-sports.html">Court Sports</a>
           <a href="kids-club.html">Kid's Club</a>
           <a href="member-savings.html">Member Savings</a>
           <a href="bring-a-guest.html">Bring a Guest</a>
@@ -1306,11 +1308,11 @@ amenities_body = hero(
         <div class="card__media"><img src="{IMG}/kids_club.jpg" alt="Kids Club at GHF" loading="lazy">
         <div class="card__label"><h3>Free Babysitting</h3><span class="go">Check out Kid's Club →</span></div></div>
       </a>
-      <div class="card">
+      <a class="card" href="court-sports.html">
         <div class="card__media"><img src="{IMG}/GHF_Basketball_5.jpg" alt="Regulation-size indoor basketball court at GHF" loading="lazy">
         <div class="card__label"><h3>Indoor Basketball</h3></div></div>
         <div class="card__below"><p>Regulation-size indoor basketball court with six hoops and hardwood flooring. Full-court play six days a week, half-court play every day, and volleyball twice a week (Wednesdays 6–11p &amp; Sundays 5–10p).</p></div>
-      </div>
+      </a>
       <a class="card" href="jbar.html">
         <div class="card__media"><img src="{IMG}/smoothie_girls_web.png" alt="Real fruit smoothies at J Bar" loading="lazy">
         <div class="card__label"><h3>J-Bar Smoothies</h3></div></div>
@@ -3329,7 +3331,7 @@ sports_body = hero(
         <span class="row-item__desc">Push your limits with HIIT classes on the GHF fitness class schedule — indoors and out.</span>
         <span class="row-item__arrow">→</span>
       </a>
-      <a class="row-item" href="amenities.html">
+      <a class="row-item" href="court-sports.html">
         <span class="row-item__idx">03</span>
         <span class="row-item__title">Basketball &amp; Volleyball</span>
         <span class="row-item__desc">Experience the thrill of our full-court basketball court — novice or seasoned, our courts cater to all levels. Volleyball is open for games every Wednesday (6-11p) and Sunday (5-10p).</span>
@@ -4593,6 +4595,108 @@ jbar_body = hero(
 )
 
 
+# ============================================================ COURT SPORTS
+# Content from ghfc.com/court-sports, image from ghfc.com/basketball.
+# NOTE: the two source pages disagree on volleyball nights — /court-sports says
+# "Wednesday 6-11p & Sunday 5-10p", /basketball says "Thursday & Sunday". We follow
+# court-sports: it carries the actual times, and it matches what this site already
+# says on amenities.html and sports-activities.html. Worth confirming with the desk.
+courtsports_body = hero(
+    "Court Sports at GHF",
+    ["Get in the", '<span class="serif">game</span>'],
+    "Want to shoot some hoops or play some volleyball? Our indoor courts are dynamic and functional for all levels of performance &mdash; and every membership includes them at no extra charge.",
+    img=f"{IMG}/GHF_Basketball_2_1.jpg",
+    crumb='Fitness &nbsp;/&nbsp; Court Sports',
+    actions=[("Get Your Free All-Access Pass", "#pass", True), ("Play Times", "#times", False)],
+    meta=["Six hoops", "Hardwood floor", "Included in membership"],
+    page=True,
+) + split(
+    "Indoor basketball and volleyball", "01",
+    'One court, <span class="serif">two games</span>',
+    ["A regulation-size indoor basketball court with six basketball hoops and hardwood flooring &mdash; the perfect game, whether you are shooting alone or running full-court with friends.",
+     "The same floor carries regulation volleyball court dimensions. All that is required is a quick set-up of the volleyball net, and game on."],
+    f"{IMG}/GHF_Basketball_5.jpg",
+    "Regulation-size indoor basketball and volleyball court at GHF",
+    tag="GHF Main",
+) + f"""
+<section class="section section--light" id="times">
+  <div class="wrap">
+    <div class="cards-head">
+      <div>
+        <p class="eyebrow">When to play</p>
+        <h2 class="h-display reveal" style="font-size:clamp(34px,4.6vw,72px)">Know before you <span class="serif">go</span></h2>
+      </div>
+      <p class="body-copy reveal" style="max-width:38ch">The court switches between full-court, half-court and volleyball through the week. Here is how it runs.</p>
+    </div>
+    <div class="rows reveal">
+      <div class="row-item">
+        <span class="row-item__idx">01</span>
+        <span class="row-item__title">Full-Court Basketball</span>
+        <span class="row-item__desc">Six days a week &mdash; weekdays 6:00&ndash;10:00am, and Sundays 11:00am&ndash;2:00pm.</span>
+      </div>
+      <div class="row-item">
+        <span class="row-item__idx">02</span>
+        <span class="row-item__title">Half-Court Basketball</span>
+        <span class="row-item__desc">Every other time the court is open. Turn up, pick a hoop and play.</span>
+      </div>
+      <div class="row-item">
+        <span class="row-item__idx">03</span>
+        <span class="row-item__title">Volleyball</span>
+        <span class="row-item__desc">Twice a week &mdash; Wednesdays 6:00&ndash;11:00pm and Sundays 5:00&ndash;10:00pm. The net goes up and the court is yours.</span>
+      </div>
+      <div class="row-item">
+        <span class="row-item__idx">04</span>
+        <span class="row-item__title">Included In Your Membership</span>
+        <span class="row-item__desc">All memberships include use of the court at no extra charge. No booking fee, no court hire.</span>
+      </div>
+    </div>
+    <div class="reveal" style="margin-top:34px"><a class="inline-link" href="main-center.html">More about GHF Main &rarr;</a></div>
+  </div>
+</section>
+
+<section class="section" id="pass">
+  <div class="wrap">
+    <div class="intro-grid">
+      <div>
+        <p class="eyebrow">Request your pass</p>
+        <h2 class="h-display reveal" style="font-size:clamp(34px,4.6vw,72px)">Come get in the <span class="serif">game</span></h2>
+        <p class="lede reveal" style="margin-top:28px">Your free all-access pass gives you full membership privileges for one day at any GHF location &mdash; the court included. No charge, no obligation and no risk.</p>
+      </div>
+      <div class="intro-grid__right reveal">
+        <form class="form-grid" method="post" action="{KEAP_ACTION}" accept-charset="UTF-8" data-thanks="thank-you-pass.html">
+          <input type="hidden" name="inf_form_xid" value="{KEAP_XID}">
+          <input type="hidden" name="inf_form_name" value="All Access Pass">
+          <input type="hidden" name="infusionsoft_version" value="1.70.0.60815">
+          <input type="hidden" name="inf_IntegrationName" value="pv228">
+          <input type="hidden" name="inf_CallName" value="allaccesspass">
+          <input type="hidden" name="inf_api_enabled" value="true">
+          <div class="field"><input type="text" name="inf_field_FirstName" id="cs-first" placeholder=" " required><label for="cs-first">First name</label></div>
+          <div class="field"><input type="text" name="inf_field_LastName" id="cs-last" placeholder=" " required><label for="cs-last">Last name</label></div>
+          <div class="field"><input type="email" name="inf_field_Email" id="cs-email" placeholder=" " required><label for="cs-email">Email address</label></div>
+          <div class="field"><input type="tel" name="inf_field_Phone1" id="cs-phone" placeholder=" " required><label for="cs-phone">Phone</label></div>
+          <div class="field field--full">
+            <select name="inf_custom_Facility" id="cs-loc" aria-label="Gym you would like to visit">
+              <option value="">&nbsp;</option>
+              <option value="Main">GHF Main &mdash; 4820 W Newberry Road</option>
+              <option value="Women's Center">GHF Women &mdash; 2441 NW 43rd Street</option>
+              <option value="Tioga">GHF Tioga &mdash; Tioga Town Center</option>
+            </select>
+            <label for="cs-loc">Gym you would like to visit</label>
+          </div>
+          <button class="btn field--full" type="submit" style="justify-content:center">Claim My Free Fitness Pass <span class="arr">&rarr;</span></button>
+        </form>
+        <p class="form-note">Submit the form and we'll be in touch by phone, text or email to set up your pass.</p>
+      </div>
+    </div>
+  </div>
+</section>
+""" + cta_band(
+    'Bring your <span class="serif">competitive streak</span>',
+    "Ready to start a more fit life? Become a GHF member today for as little as $15 per week.",
+    f"{IMG}/GHF_Basketball_5.jpg",
+)
+
+
 # ============================================================ BUILD ALL
 PAGES = [
     ("index.html", "Gainesville Health & Fitness | The Gym That's Best At Helping Beginners", "The gym that's best at helping beginners — with staff to guide your journey. 3 locations, 900+ classes monthly, open 24/7 at GHF Main.", "", home_body),
@@ -4628,6 +4732,7 @@ PAGES = [
     ("chill-signup.html", "Sign Up For Chill | Gainesville Health & Fitness", "Sign up for Chill by GHF — 15 HydroMassage and CryoLounge+ sessions for $15 a month.", "recovery.html", chill_signup_body),
     ("chill-cancel.html", "Cancel Chill | Gainesville Health & Fitness", "Cancel your Chill by GHF membership. No fee — use your remaining sessions up to your renewal date.", "recovery.html", chill_cancel_body),
     ("jbar.html", "J-Bar by GHF | Smoothies, Acai Bowls & Protein Shakes in Gainesville", "The J-Bar smoothie cafe inside GHF Main — fruit smoothies, protein shakes, acai bowls and parfaits, made to order with real fruit. No membership required.", "amenities.html", jbar_body),
+    ("court-sports.html", "Court Sports at GHF | Indoor Basketball & Volleyball in Gainesville", "Regulation-size indoor basketball court with six hoops and hardwood flooring, plus volleyball twice a week. Included with every GHF membership.", "sports-activities.html", courtsports_body),
     ("faq.html", "FAQ | Get The Most Out Of Your Gym Membership | GHF", "Frequently asked questions about Gainesville Health & Fitness memberships, amenities, and getting started.", "", faq_body),
     ("ghf-pass.html", "Free All-Access Pass | Try GHF Free | Gainesville Health & Fitness", "Try Gainesville Health & Fitness free. Your all-access pass gives you full membership privileges for one day at any of our three locations — classes, pool, sauna, weight floor and a coach to guide you. No charge, no obligation.", "", ghf_pass_body),
     ("contact.html", "Contact Us & Get Pricing | Gainesville Health & Fitness", "Let's talk fitness memberships in Gainesville — pricing packages and amenities to craft your gym experience.", "", contact_body),
