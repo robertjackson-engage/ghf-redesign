@@ -4251,7 +4251,7 @@ chill_faq = [
     ("Will I get wet using the hydro massage lounges?",
      "No. You will receive a full body massage with the use of pressurized water. You will simply lie down on the open design bed, fully clothed, and feel the immediate benefits of the traveling jet system."),
     ("How do I sign up for sessions?",
-     "You will sign up for a Mind/Body account which will allow you to purchase Chill by GHF. We will show you how to do this."),
+     'Complete the <a href="chill-signup.html">sign-up form</a> and you are done &mdash; it takes about a minute. You can also sign up at the front desk.'),
     ("How many times a week should I do hydro massage?",
      "The frequency of use is up to you. You may use it once a day or once a week."),
     ("How much does it cost?",
@@ -4322,7 +4322,7 @@ chill_body = hero(
       <div>
         <p class="eyebrow">How to begin</p>
         <h2 class="h-display reveal" style="font-size:clamp(34px,4.6vw,72px)">Try a complimentary <span class="serif">session</span></h2>
-        <p class="lede reveal" style="margin-top:28px">Stop by the desk before or after your workout and try it at no charge. When you are ready, sign up for Chill and we will walk you through setting up the MindBody account that carries your sessions.</p>
+        <p class="lede reveal" style="margin-top:28px">Stop by the desk before or after your workout and try it at no charge. When you are ready, complete the sign-up form &mdash; that is all it takes.</p>
       </div>
       <div class="intro-grid__right reveal">
         <div class="hero__actions" style="margin:0">
@@ -4401,7 +4401,7 @@ chill_body = hero(
 chill_signup_body = hero(
     "Sign up for Chill",
     ["Fifteen sessions,", '<span class="serif">fifteen dollars</span>'],
-    "Complete the form below and we will get your Chill membership set up, including the MindBody account that holds your sessions. 15 sessions for $15 a month, auto-renewing, with two 10-minute CryoLounge+ sessions included."
+    "Complete the form below and your Chill membership is set up &mdash; that is the whole process. 15 sessions for $15 a month or 30 for $25, auto-renewing, with CryoLounge+ included."
     "<br><br>Not sure yet? <a href=\"chill.html#begin\">Try a complimentary session</a> at the desk first.",
     img=f"{IMG}/Chill_GHF_Hydromassage_Massage_Bed_Gainesville_2025-2.jpg",
     crumb='Chill &nbsp;/&nbsp; Sign Up',
