@@ -211,6 +211,7 @@ NAV = [
         ("Echo Outdoor Pavilion", "echo.html"),
     ("Sky Cycle &mdash; Indoor Cycling", "cycle.html"),
     ("GHF Live &mdash; Stream Classes", "live.html"),
+    ("Cancer Recovery Program", "cancer-recovery.html"),
         ("Indoor Pools", "pool.html"),
         ("Free Babysitting", "kids-club.html"),
         ("Indoor Basketball", "court-sports.html"),
@@ -396,6 +397,7 @@ def footer_html():
           <a href="echo.html">Echo Outdoor Pavilion</a>
           <a href="cycle.html">Sky Cycle</a>
           <a href="live.html">GHF Live</a>
+          <a href="cancer-recovery.html">Cancer Recovery</a>
           <a href="kids-club.html">Kid's Club</a>
           <a href="member-savings.html">Member Savings</a>
           <a href="bring-a-guest.html">Bring a Guest</a>
@@ -2284,11 +2286,11 @@ recovery_body = hero(
         <div class="card__label"><h3>J-Bar Smoothie Cafe</h3></div></div>
         <div class="card__below"><p>The J-Bar Smoothie Cafe menu is filled with healthy snacks, food and smoothies that make for the perfect fuel for your workout or enhance your recovery. Smoothies are made to order with superior fresh ingredients, including all real fruit. Enhancements such as whey protein and branched chain amino acids are available.</p></div>
       </a>
-      <div class="card">
+      <a class="card" href="cancer-recovery.html">
         <div class="card__media card__media--wide"><img src="{IMG}/Javi_Percussion_Gun_Massage_Gun_Massage_Therapy_2021_2.jpg" alt="Percussion massage gun recovery" loading="lazy">
         <div class="card__label"><h3>Cancer Recovery Program</h3></div></div>
         <div class="card__below"><p>Your no-charge cancer recovery program is designed to improve your physical strength and endurance and empower you to gain control of your life. You will be introduced to strength training, aerobic, and flexibility training at a gradual pace as you work with a fitness counselor to monitor your progress.</p></div>
-      </div>
+      </a>
     </div>
   </div>
 </section>
@@ -5048,6 +5050,97 @@ live_body = hero(
 )
 
 
+# ============================================================ CANCER RECOVERY
+# Content from ghfc.com/cancer-recovery, their own words — the benefit claims are
+# health claims, so they are reproduced verbatim rather than paraphrased. The only
+# edit is a typo in the source ("designed improve" -> "designed to improve").
+#
+# Deliberately NO free-pass form here. Every other page ends with one, but this
+# programme is no-charge with its own intake: you call Debbie Lee and are cleared by
+# your physician first. Dropping a generic "claim your free fitness pass" form on it
+# would cut across that path and read as a sales funnel on a page for people
+# recovering from cancer treatment.
+cancer_body = hero(
+    "Cancer Recovery at GHF",
+    ["A path to recovery,", 'strength and <span class="serif">renewal</span>'],
+    "Cancer-related fatigue is a side effect of cancer therapies that leaves you with a whole-body tiredness not relieved by rest or sleep. Your healing journey continues with regular exercise &mdash; to reduce the symptoms of treatment, and to build the strength, well-being and energy you need to live vibrantly.",
+    img=f"{IMG}/cancer-recovery-flowers.jpg",
+    crumb='Fitness &nbsp;/&nbsp; Cancer Recovery',
+    actions=[("How To Begin", "#how-to-begin", True)],
+    meta=["No charge", "One-to-one fitness counselor", "At your own pace"],
+    page=True,
+) + f"""
+<section class="section" id="why">
+  <div class="wrap">
+    <div class="intro-grid">
+      <div>
+        <p class="eyebrow">Why it matters</p>
+        <h2 class="h-display reveal" style="font-size:clamp(34px,4.6vw,72px)">Physical activity for cancer <span class="serif">survivors</span></h2>
+        <p class="lede reveal" style="margin-top:28px">When you have completed treatment for cancer, your body and mind may still feel the effects: fatigue lingers, strength may be reduced, and recovery of routine life can feel slow. The good news is that research shows exercise after cancer treatment can improve many of these challenges, and even influence long-term outcomes.</p>
+      </div>
+      <div class="intro-grid__right reveal">
+        <ul class="checklist">
+          <li>Exercise helps reduce treatment-related fatigue, a common symptom for survivors</li>
+          <li>Physical activity increases strength, endurance and mobility &mdash; helping you regain confidence and function in everyday life</li>
+          <li>It promotes better mental-health outcomes: reduced anxiety and depression, improved mood, better sleep and higher self-esteem</li>
+          <li>It may help reduce the risk of cancer recurrence and death for certain cancer types when done consistently</li>
+          <li>Beyond cancer, exercise supports heart health, bone strength and weight management, and lowers the risk of other chronic illnesses</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--flush">
+  <div class="gallery wrap">
+    <div class="g-item g-item--a reveal-img"><img src="{IMG}/cancer-recovery-strength.jpg" alt="Strength training during cancer recovery at GHF" loading="lazy"></div>
+    <div class="g-item g-item--b reveal-img"><img src="{IMG}/cancer-recovery-couple.jpg" alt="Members of the GHF cancer recovery programme" loading="lazy"></div>
+    <div class="g-item g-item--c reveal-img"><img src="{IMG}/cancer-recovery-flowers.jpg" alt="Cancer recovery at Gainesville Health and Fitness" loading="lazy"></div>
+  </div>
+</section>
+
+<section class="section section--light" id="how-to-begin">
+  <div class="wrap">
+    <div class="cards-head">
+      <div>
+        <p class="eyebrow">How to begin</p>
+        <h2 class="h-display reveal" style="font-size:clamp(34px,4.6vw,72px)">Three steps, at <span class="serif">your pace</span></h2>
+      </div>
+      <p class="body-copy reveal" style="max-width:38ch">Your <strong>no-charge</strong> cancer recovery program is designed to improve your physical strength and endurance, and to empower you to gain control of your life. You will be introduced to strength training, aerobic and flexibility training at a gradual pace, working with a fitness counselor who monitors your progress.</p>
+    </div>
+    <div class="steps reveal">
+      <div class="step">
+        <span class="step__n">01</span>
+        <h3>Call to arrange an orientation</h3>
+        <p>Call Debbie Lee at <a href="tel:3526922115">(352) 692-2115</a> or email
+        <a href="mailto:debbie.lee@ghfc.com">debbie.lee@ghfc.com</a> to make an appointment.
+        <strong>You should be cleared for physical activity by your physician first.</strong></p>
+      </div>
+      <div class="step">
+        <span class="step__n">02</span>
+        <h3>Meet your fitness counselor</h3>
+        <p>At orientation you will decide on your fitness goals, receive a structured exercise plan and set up your schedule. You will also learn how to access the gym locations, where everything is, and how the staff will help you each time you come in.</p>
+      </div>
+      <div class="step">
+        <span class="step__n">03</span>
+        <h3>Progress at your own pace</h3>
+        <p>You will work through the four weeks at your own pace, with regular communication and check-ups with your fitness counselor.</p>
+      </div>
+    </div>
+    <div class="note-box" style="margin-top:38px">
+      <p class="eyebrow" style="margin-bottom:10px">Ready to start?</p>
+      <p class="body-copy">Call Debbie Lee on <a href="tel:3526922115">(352) 692-2115</a> or email
+      <a href="mailto:debbie.lee@ghfc.com">debbie.lee@ghfc.com</a>. There is no charge for this program.</p>
+    </div>
+  </div>
+</section>
+""" + cta_band(
+    'Your healing journey <span class="serif">continues</span>',
+    "Recovery is part of the work at GHF — pool and spa, hydro massage, restorative classes and on-site physical therapy.",
+    f"{IMG}/Simply_Stretch_GHF_Tioga_GroupFit_Flexibility_2023_1_1.jpg",
+)
+
+
 # ============================================================ BUILD ALL
 PAGES = [
     ("index.html", "Gainesville Health & Fitness | The Gym That's Best At Helping Beginners", "The gym that's best at helping beginners — with staff to guide your journey. 3 locations, 900+ classes monthly, open 24/7 at GHF Main.", "", home_body),
@@ -5087,6 +5180,7 @@ PAGES = [
     ("echo.html", "Echo Outdoor Pavilion | Outdoor Gym at GHF Main | Gainesville", "Six thousand square feet of open-air training at GHF Main — functional equipment, outdoor classes, workshops and community events. Included in your membership.", "amenities.html", echo_body),
     ("cycle.html", "Sky Cycle | Indoor Cycling Classes in Gainesville | GHF", "The Sky Cycle studio at GHF Main — 40 bikes, stadium seating, My Ride technology, and cycle classes from 30 to 60 minutes. Included in your membership.", "group-fitness.html", cycle_body),
     ("live.html", "GHF Live | Stream GroupFit Classes at Home | Gainesville", "Stream GHF GroupFit classes live or watch them later. Included with your membership.", "group-fitness.html", live_body),
+    ("cancer-recovery.html", "Cancer Recovery at GHF | Exercise After Cancer Treatment", "A no-charge cancer recovery program at Gainesville Health & Fitness — strength, aerobic and flexibility training at your own pace with a fitness counselor.", "recovery.html", cancer_body),
     ("faq.html", "FAQ | Get The Most Out Of Your Gym Membership | GHF", "Frequently asked questions about Gainesville Health & Fitness memberships, amenities, and getting started.", "", faq_body),
     ("ghf-pass.html", "Free All-Access Pass | Try GHF Free | Gainesville Health & Fitness", "Try Gainesville Health & Fitness free. Your all-access pass gives you full membership privileges for one day at any of our three locations — classes, pool, sauna, weight floor and a coach to guide you. No charge, no obligation.", "", ghf_pass_body),
     ("contact.html", "Contact Us & Get Pricing | Gainesville Health & Fitness", "Let's talk fitness memberships in Gainesville — pricing packages and amenities to craft your gym experience.", "", contact_body),
