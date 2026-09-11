@@ -206,6 +206,7 @@ MENU = [
     ("Amenities", "amenities.html"),
     ("J-Bar Smoothie Cafe", "jbar.html"),
     ("Court Sports &mdash; Basketball &amp; Volleyball", "court-sports.html"),
+    ("Echo Outdoor Pavilion", "echo.html"),
     ("Pool &amp; Aqua Center", "pool.html"),
     ("Post Workout Recovery", "recovery.html"),
     ("Chill Studio &mdash; HydroMassage &amp; CryoLounge+", "chill.html"),
@@ -358,6 +359,7 @@ def footer_html():
           <a href="chill-cancel.html">Cancel Chill</a>
           <a href="jbar.html">J-Bar Smoothies</a>
           <a href="court-sports.html">Court Sports</a>
+          <a href="echo.html">Echo Outdoor Pavilion</a>
           <a href="kids-club.html">Kid's Club</a>
           <a href="member-savings.html">Member Savings</a>
           <a href="bring-a-guest.html">Bring a Guest</a>
@@ -1264,7 +1266,7 @@ amenities_body = hero(
      "Echo offers specialty workshops, GroupFit classes and lifestyle events. We have open gym times for members to use the functional training equipment like tires, sleds, ropes, TRX, rowers and ski ergs, and more. These classes are included in your membership."],
     f"{IMG}/Echo_GroupFit_Outdoor_Classes_Fun_Classes_2021.jpg",
     "Fitness classes in an outdoor gym setting at Echo",
-    rev=True, cta=("Try An Outdoor Workout", "group-fitness.html"), tag="Echo",
+    rev=True, cta=("Explore Echo", "echo.html"), href="echo.html", tag="Echo",
     name="Echo Outdoor Pavilion",
 ) + f"""
 <section class="section section--light">
@@ -4697,6 +4699,131 @@ courtsports_body = hero(
 )
 
 
+# ============================================================ ECHO
+# Content from ghfc.com/echo. The schedule is scoped to Perch's OUTDOOR/LOBBY room —
+# the feed has no Echo or pavilion room at all, and 4 of its 5 outdoor classes are at
+# Tioga, so the section is headed "outdoor classes across GHF" rather than presented as
+# Echo's own. Tagging Echo classes in Perch would make it fill in automatically.
+ECHO_VIDEO = "https://www.youtube.com/embed/rw-fEoJXjHg"  # "The Story of Echo of GHF"
+
+echo_body = hero(
+    "Echo Outdoor Pavilion",
+    ["Gainesville's largest", 'outdoor <span class="serif">gym</span>'],
+    "Six thousand square feet of open-air training at GHF Main &mdash; tires, sleds, ropes, TRX and rigs under cover, plus classes, workshops and community events. Included in your membership.",
+    img=f"{IMG}/echo-pavilion.jpg",
+    crumb='Amenities &nbsp;/&nbsp; Echo',
+    actions=[("Outdoor Classes", "#classes", True), ("What Else Runs Here", "#expect", False)],
+    meta=["6,000 sq ft", "At GHF Main", "Included in membership"],
+    page=True,
+) + split(
+    "What to expect", "01",
+    'Make up your own <span class="serif">workout</span>',
+    ["The outdoor fitness pavilion offers functional training workout space, specialty workshops, GroupFit classes and lifestyle events. You have access to open gym times to use tires, sleds, ropes, TRX, dumbbells, rowers, bikes, ski ergs and more.",
+     "It's the perfect open-air space to make up your own workouts. Bring a towel and water."],
+    f"{IMG}/echo-functional-training.jpg",
+    "Functional training at the Echo outdoor pavilion",
+    tag="Echo",
+) + f"""
+<section class="section section--light" id="story">
+  <div class="wrap">
+    <div class="cards-head">
+      <div>
+        <p class="eyebrow">The story behind Echo</p>
+        <h2 class="h-display reveal" style="font-size:clamp(34px,4.6vw,72px)">How it came to <span class="serif">be</span></h2>
+      </div>
+      <p class="body-copy reveal" style="max-width:38ch">Gainesville's largest open-air training destination, and why GHF built it.</p>
+    </div>
+    <div class="reveal">{embed(ECHO_VIDEO, "The Story of Echo of GHF", allow_yt=True)}</div>
+  </div>
+</section>
+""" + schedule_block("classes", "Outdoor classes across GHF",
+                 'Train under the <span class="serif">open sky</span>',
+                 "Every class Perch lists outdoors, live. Filter by location, class type, day or instructor &mdash; all of them are included in your membership.",
+                 room="OUTDOOR/LOBBY") + f"""
+<section class="section" id="expect">
+  <div class="wrap">
+    <div class="cards-head">
+      <div>
+        <p class="eyebrow">More than classes</p>
+        <h2 class="h-display reveal" style="font-size:clamp(34px,4.6vw,72px)">What else runs <span class="serif">out here</span></h2>
+      </div>
+    </div>
+    <div class="rows reveal">
+      <a class="row-item" href="team-strong-training.html">
+        <span class="row-item__idx">01</span>
+        <span class="row-item__title">TEAM Strong Punch</span>
+        <span class="row-item__desc">A high-energy workout that burns calories, boosts endurance, sculpts muscles and builds confidence &mdash; aimed at agility, strength and cardiovascular fitness.</span>
+        <span class="row-item__arrow">&rarr;</span>
+      </a>
+      <a class="row-item" href="hyrox.html">
+        <span class="row-item__idx">02</span>
+        <span class="row-item__title">HYROX Training</span>
+        <span class="row-item__desc">GHF is an official HYROX Training Club, bringing the world's fastest-growing fitness format to Gainesville &mdash; whether you are training to compete or just want the most effective functional workout you have done.</span>
+        <span class="row-item__arrow">&rarr;</span>
+      </a>
+      <a class="row-item" href="group-fitness.html#schedule">
+        <span class="row-item__idx">03</span>
+        <span class="row-item__title">Specialty Wellness Workshops</span>
+        <span class="row-item__desc">Each workshop is created to expand your mind, stretch, strengthen or tone your body, and enhance your soul.</span>
+        <span class="row-item__arrow">&rarr;</span>
+      </a>
+      <div class="row-item">
+        <span class="row-item__idx">04</span>
+        <span class="row-item__title">Member Workout Hours</span>
+        <span class="row-item__desc">6,000 sq ft of tires, sleds, ropes, cardio equipment and TRX during designated open gym times. Use of the outdoor pavilion is included in your membership.</span>
+      </div>
+      <div class="row-item">
+        <span class="row-item__idx">05</span>
+        <span class="row-item__title">Community Events</span>
+        <span class="row-item__desc">Farmers markets, lululemon shop events, Gator game tailgates, Halloween trick-or-treat, pictures with Santa, cook outs, craft fairs and family fitness events.</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--light" id="pass">
+  <div class="wrap">
+    <div class="intro-grid">
+      <div>
+        <p class="eyebrow">Request your pass</p>
+        <h2 class="h-display reveal" style="font-size:clamp(34px,4.6vw,72px)">Come train <span class="serif">outside</span></h2>
+        <p class="lede reveal" style="margin-top:28px">Your free all-access pass gives you full membership privileges for one day at any GHF location &mdash; Echo included. No charge, no obligation and no risk.</p>
+      </div>
+      <div class="intro-grid__right reveal">
+        <form class="form-grid" method="post" action="{KEAP_ACTION}" accept-charset="UTF-8" data-thanks="thank-you-pass.html">
+          <input type="hidden" name="inf_form_xid" value="{KEAP_XID}">
+          <input type="hidden" name="inf_form_name" value="All Access Pass">
+          <input type="hidden" name="infusionsoft_version" value="1.70.0.60815">
+          <input type="hidden" name="inf_IntegrationName" value="pv228">
+          <input type="hidden" name="inf_CallName" value="allaccesspass">
+          <input type="hidden" name="inf_api_enabled" value="true">
+          <div class="field"><input type="text" name="inf_field_FirstName" id="ec-first" placeholder=" " required><label for="ec-first">First name</label></div>
+          <div class="field"><input type="text" name="inf_field_LastName" id="ec-last" placeholder=" " required><label for="ec-last">Last name</label></div>
+          <div class="field"><input type="email" name="inf_field_Email" id="ec-email" placeholder=" " required><label for="ec-email">Email address</label></div>
+          <div class="field"><input type="tel" name="inf_field_Phone1" id="ec-phone" placeholder=" " required><label for="ec-phone">Phone</label></div>
+          <div class="field field--full">
+            <select name="inf_custom_Facility" id="ec-loc" aria-label="Gym you would like to visit">
+              <option value="">&nbsp;</option>
+              <option value="Main">GHF Main &mdash; 4820 W Newberry Road</option>
+              <option value="Women's Center">GHF Women &mdash; 2441 NW 43rd Street</option>
+              <option value="Tioga">GHF Tioga &mdash; Tioga Town Center</option>
+            </select>
+            <label for="ec-loc">Gym you would like to visit</label>
+          </div>
+          <button class="btn btn--dark field--full" type="submit" style="justify-content:center">Claim My Free Fitness Pass <span class="arr">&rarr;</span></button>
+        </form>
+        <p class="form-note">Submit the form and we will be in touch by phone, text or email to set up your pass.</p>
+      </div>
+    </div>
+  </div>
+</section>
+""" + cta_band(
+    'Training, <span class="serif">outdoors</span>',
+    "Ready to start a more fit life? Become a GHF member today for as little as $15 per week.",
+    f"{IMG}/echo-outdoor-yoga.jpg",
+)
+
+
 # ============================================================ BUILD ALL
 PAGES = [
     ("index.html", "Gainesville Health & Fitness | The Gym That's Best At Helping Beginners", "The gym that's best at helping beginners — with staff to guide your journey. 3 locations, 900+ classes monthly, open 24/7 at GHF Main.", "", home_body),
@@ -4733,6 +4860,7 @@ PAGES = [
     ("chill-cancel.html", "Cancel Chill | Gainesville Health & Fitness", "Cancel your Chill by GHF membership. No fee — use your remaining sessions up to your renewal date.", "recovery.html", chill_cancel_body),
     ("jbar.html", "J-Bar by GHF | Smoothies, Acai Bowls & Protein Shakes in Gainesville", "The J-Bar smoothie cafe inside GHF Main — fruit smoothies, protein shakes, acai bowls and parfaits, made to order with real fruit. No membership required.", "amenities.html", jbar_body),
     ("court-sports.html", "Court Sports at GHF | Indoor Basketball & Volleyball in Gainesville", "Regulation-size indoor basketball court with six hoops and hardwood flooring, plus volleyball twice a week. Included with every GHF membership.", "sports-activities.html", courtsports_body),
+    ("echo.html", "Echo Outdoor Pavilion | Outdoor Gym at GHF Main | Gainesville", "Six thousand square feet of open-air training at GHF Main — functional equipment, outdoor classes, workshops and community events. Included in your membership.", "amenities.html", echo_body),
     ("faq.html", "FAQ | Get The Most Out Of Your Gym Membership | GHF", "Frequently asked questions about Gainesville Health & Fitness memberships, amenities, and getting started.", "", faq_body),
     ("ghf-pass.html", "Free All-Access Pass | Try GHF Free | Gainesville Health & Fitness", "Try Gainesville Health & Fitness free. Your all-access pass gives you full membership privileges for one day at any of our three locations — classes, pool, sauna, weight floor and a coach to guide you. No charge, no obligation.", "", ghf_pass_body),
     ("contact.html", "Contact Us & Get Pricing | Gainesville Health & Fitness", "Let's talk fitness memberships in Gainesville — pricing packages and amenities to craft your gym experience.", "", contact_body),
