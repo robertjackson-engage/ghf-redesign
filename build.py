@@ -196,6 +196,7 @@ NAV = [
         ("Class Schedule", "group-fitness.html#schedule"),
         ("Hot Yoga", "hot-yoga.html"),
         ("Outdoor Classes", "echo.html#classes"),
+        ("Cycle Classes", "cycle.html"),
     ]),
     ("Training", "training.html", [
         ("Personal Training", "personal-training.html"),
@@ -207,6 +208,8 @@ NAV = [
     ]),
     ("Amenities", "amenities.html", [
         ("Echo Outdoor Pavilion", "echo.html"),
+    ("Sky Cycle &mdash; Indoor Cycling", "cycle.html"),
+    ("GHF Live &mdash; Stream Classes", "live.html"),
         ("Indoor Pools", "pool.html"),
         ("Free Babysitting", "kids-club.html"),
         ("Indoor Basketball", "court-sports.html"),
@@ -390,6 +393,8 @@ def footer_html():
           <a href="jbar.html">J-Bar Smoothies</a>
           <a href="court-sports.html">Court Sports</a>
           <a href="echo.html">Echo Outdoor Pavilion</a>
+          <a href="cycle.html">Sky Cycle</a>
+          <a href="live.html">GHF Live</a>
           <a href="kids-club.html">Kid's Club</a>
           <a href="member-savings.html">Member Savings</a>
           <a href="bring-a-guest.html">Bring a Guest</a>
@@ -4854,6 +4859,178 @@ echo_body = hero(
 )
 
 
+# ============================================================ SKY CYCLE
+# Content from ghfc.com/cycle. Schedule scoped to Perch's SKY CYCLE STUDIO room —
+# one site and one room, so the chips and studio select hide themselves.
+CYCLE_VIDEO = "https://www.youtube.com/embed/kDZFTFjdip8"
+
+cycle_body = hero(
+    "Sky Cycle at GHF Main",
+    ["Kick it into", 'high <span class="serif">gear</span>'],
+    "Stadium seating, 40 bikes and a video wall that takes you on rides around the world. Themed classes with music, virtual rides, or ride at your own pace outside class times &mdash; all included in your membership.",
+    img=f"{IMG}/skycycle-class.jpg",
+    crumb='Classes &nbsp;/&nbsp; Indoor Cycling',
+    actions=[("See The Schedule", "#schedule", True), ("Class Styles", "#fusion", False)],
+    meta=["40 bikes", "My Ride technology", "30 to 60 minutes"],
+    page=True,
+) + split(
+    "Ignite your inner beast", "01",
+    'A different kind of indoor <span class="serif">cycling</span>',
+    ["Featuring stadium seating, 40 bikes, My Ride technology, and a state-of-the-art video projection and sound system that takes you on rides around the world. More classes, more instructors, and more variety than any other cycle studio.",
+     "Our Sky Cycle instructors are dedicated to igniting your inner beast as you experience climbs, sprints and a feeling of accomplishment. Choose between classes of 30, 45, 50 and 60 minutes &mdash; fast-paced, low-impact cardio that accommodates beginners and experienced riders alike."],
+    f"{IMG}/skycycle-pano.jpg",
+    "The Sky Cycle studio at GHF Main",
+    tag="Second floor, GHF Main",
+) + f"""
+<section class="section section--light" id="video">
+  <div class="wrap">
+    <div class="cards-head">
+      <div>
+        <p class="eyebrow">Inside the studio</p>
+        <h2 class="h-display reveal" style="font-size:clamp(34px,4.6vw,72px)">See it for <span class="serif">yourself</span></h2>
+      </div>
+      <p class="body-copy reveal" style="max-width:38ch">What a ride in the Sky Cycle studio actually looks like.</p>
+    </div>
+    <div class="reveal">{embed(CYCLE_VIDEO, "Sky Cycle at Gainesville Health & Fitness", allow_yt=True)}</div>
+  </div>
+</section>
+
+<section class="section" id="fusion">
+  <div class="wrap">
+    <div class="cards-head">
+      <div>
+        <p class="eyebrow">Cycle Fusion</p>
+        <h2 class="h-display reveal" style="font-size:clamp(34px,4.6vw,72px)">Cycling, and then <span class="serif">some</span></h2>
+      </div>
+      <p class="body-copy reveal" style="max-width:38ch">Fusion classes combine the intensity of indoor cycling with other disciplines &mdash; strength, flexibility and mindfulness in one session.</p>
+    </div>
+    <div class="rows reveal">
+      <div class="row-item">
+        <span class="row-item__idx">01</span>
+        <span class="row-item__title">Cycle Fusion</span>
+        <span class="row-item__desc">A carefully curated blend of cycling, strength training, flexibility work and mindfulness techniques &mdash; a comprehensive programme that helps you hit your goals and enhances your overall well-being.</span>
+      </div>
+      <div class="row-item">
+        <span class="row-item__idx">02</span>
+        <span class="row-item__title">Cycle Flow</span>
+        <span class="row-item__desc">The perfect harmony of cycling and yoga. Pedal through an exhilarating cardio session, then transition into a yoga flow to stretch, unwind and find balance &mdash; endurance and flexibility together.</span>
+      </div>
+      <div class="row-item">
+        <span class="row-item__idx">03</span>
+        <span class="row-item__title">Cycle Sculpt</span>
+        <span class="row-item__desc">Cycling with weight training. Pedal to the beat engaging legs and core, then pick up dumbbells, bands or sliders to target specific muscle groups. Builds strength, tones and boosts metabolism.</span>
+      </div>
+      <div class="row-item">
+        <span class="row-item__idx">04</span>
+        <span class="row-item__title">Cycle Core</span>
+        <span class="row-item__desc">Strengthens your abdominal muscles while you ride. Guided through core exercises targeting abs, obliques and lower back &mdash; a dynamic, calorie-burning alternative to mundane ab workouts.</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--light" id="thetrip">
+  <div class="wrap">
+    <div class="intro-grid">
+      <div>
+        <p class="eyebrow">THE TRIP</p>
+        <h2 class="h-display reveal" style="font-size:clamp(34px,4.6vw,72px)">A new way to <span class="serif">cycle</span></h2>
+        <p class="lede reveal" style="margin-top:28px">Where the mind goes, the body will follow. That is the philosophy behind THE TRIP, a workout powered by Les Mills&rsquo; IMMERSIVE FITNESS innovation.</p>
+      </div>
+      <div class="intro-grid__right reveal">
+        <p class="body-copy">Inspired by cinema, live concert experiences and interactive gaming, IMMERSIVE FITNESS combines purpose-built studios and live instructors with immersive video.</p>
+        <p class="body-copy" style="margin-top:14px">Much more than an exercise class &mdash; an immersive sensory experience that pushes your fitness into a new dimension.</p>
+      </div>
+    </div>
+  </div>
+</section>
+""" + schedule_block("schedule", "Sky Cycle schedule",
+                 'Find your <span class="serif">ride</span>',
+                 "Every cycle class in the Sky Cycle studio at GHF Main, live. Filter by class type, day or instructor &mdash; all of them are included in your membership.",
+                 room="SKY CYCLE STUDIO") + f"""
+<section class="section" id="pass">
+  <div class="wrap">
+    <div class="intro-grid">
+      <div>
+        <p class="eyebrow">Request your pass</p>
+        <h2 class="h-display reveal" style="font-size:clamp(34px,4.6vw,72px)">Take a ride on <span class="serif">us</span></h2>
+        <p class="lede reveal" style="margin-top:28px">Your free all-access pass gives you full membership privileges for one day at any GHF location &mdash; the Sky Cycle studio included. No charge, no obligation and no risk.</p>
+      </div>
+      <div class="intro-grid__right reveal">
+        <form class="form-grid" method="post" action="{KEAP_ACTION}" accept-charset="UTF-8" data-thanks="thank-you-pass.html">
+          <input type="hidden" name="inf_form_xid" value="{KEAP_XID}">
+          <input type="hidden" name="inf_form_name" value="All Access Pass">
+          <input type="hidden" name="infusionsoft_version" value="1.70.0.60815">
+          <input type="hidden" name="inf_IntegrationName" value="pv228">
+          <input type="hidden" name="inf_CallName" value="allaccesspass">
+          <input type="hidden" name="inf_api_enabled" value="true">
+          <div class="field"><input type="text" name="inf_field_FirstName" id="cy-first" placeholder=" " required><label for="cy-first">First name</label></div>
+          <div class="field"><input type="text" name="inf_field_LastName" id="cy-last" placeholder=" " required><label for="cy-last">Last name</label></div>
+          <div class="field"><input type="email" name="inf_field_Email" id="cy-email" placeholder=" " required><label for="cy-email">Email address</label></div>
+          <div class="field"><input type="tel" name="inf_field_Phone1" id="cy-phone" placeholder=" " required><label for="cy-phone">Phone</label></div>
+          <div class="field field--full">
+            <select name="inf_custom_Facility" id="cy-loc" aria-label="Gym you would like to visit">
+              <option value="">&nbsp;</option>
+              <option value="Main">GHF Main &mdash; 4820 W Newberry Road</option>
+              <option value="Women's Center">GHF Women &mdash; 2441 NW 43rd Street</option>
+              <option value="Tioga">GHF Tioga &mdash; Tioga Town Center</option>
+            </select>
+            <label for="cy-loc">Gym you would like to visit</label>
+          </div>
+          <button class="btn field--full" type="submit" style="justify-content:center">Claim My Free Fitness Pass <span class="arr">&rarr;</span></button>
+        </form>
+        <p class="form-note">Submit the form and we will be in touch by phone, text or email to set up your pass.</p>
+      </div>
+    </div>
+  </div>
+</section>
+""" + cta_band(
+    'Clip in. <span class="serif">Ride out.</span>',
+    "Ready to start a more fit life? Become a GHF member today for as little as $15 per week.",
+    f"{IMG}/cycle_friends.jpg",
+)
+
+# ============================================================ GHF LIVE
+# The source page's substance is a BoxCast player. Its own markup has an unterminated
+# src (ending "playInline=0 frameBorder=") which swallows the next attribute, and its
+# "Go To Classes" button points at /live#classes, an anchor that does not exist on
+# that page. Both are fixed here rather than reproduced.
+LIVE_EMBED = ("https://boxcast.tv/view-embed/kx6ku4pfdd9q3vthvfe0"
+              "?showTitle=1&amp;showDescription=1&amp;showHighlights=1&amp;showRelated=1"
+              "&amp;defaultVideo=next&amp;market=smb&amp;showCountdown=1&amp;showDocuments=1"
+              "&amp;showIndex=1&amp;showDonations=0&amp;playInline=0")
+
+live_body = hero(
+    "GHF Live",
+    ["All your favorite classes,", 'right at your <span class="serif">fingertips</span>'],
+    "Don't miss a GroupFit class again. Stream live or watch later, whenever it suits you &mdash; GHF Live is included with your membership.",
+    img=f"{IMG}/GroupFit_Echo_Yoga_Class_Outdoor_Classes_2021.jpg",
+    crumb='Classes &nbsp;/&nbsp; GHF Live',
+    actions=[("Go To Classes", "#classes", True), ("In-Studio Schedule", "group-fitness.html#schedule", False)],
+    meta=["Live or on demand", "Included with membership"],
+    page=True,
+) + f"""
+<section class="section section--light" id="classes">
+  <div class="wrap">
+    <div class="cards-head">
+      <div>
+        <p class="eyebrow">Watch now</p>
+        <h2 class="h-display reveal" style="font-size:clamp(34px,4.6vw,72px)">Live and <span class="serif">on demand</span></h2>
+      </div>
+      <p class="body-copy reveal" style="max-width:38ch">Pick a class to stream now, catch the next broadcast, or work through the library at your own pace.</p>
+    </div>
+    <div class="reveal">{embed(LIVE_EMBED, "GHF Live class player", tall=True)}</div>
+    <p class="form-note" style="margin-top:24px">Prefer the room to the screen? See the
+    <a href="group-fitness.html#schedule">in-studio class schedule</a> &mdash; 900+ classes a month across all three locations.</p>
+  </div>
+</section>
+""" + cta_band(
+    'Your class, <span class="serif">your schedule</span>',
+    "Ready to start a more fit life? Become a GHF member today for as little as $15 per week.",
+    f"{IMG}/GHF_GroupFit_Les_Mills_Body_Pump_Squats.jpg",
+)
+
+
 # ============================================================ BUILD ALL
 PAGES = [
     ("index.html", "Gainesville Health & Fitness | The Gym That's Best At Helping Beginners", "The gym that's best at helping beginners — with staff to guide your journey. 3 locations, 900+ classes monthly, open 24/7 at GHF Main.", "", home_body),
@@ -4891,6 +5068,8 @@ PAGES = [
     ("jbar.html", "J-Bar by GHF | Smoothies, Acai Bowls & Protein Shakes in Gainesville", "The J-Bar smoothie cafe inside GHF Main — fruit smoothies, protein shakes, acai bowls and parfaits, made to order with real fruit. No membership required.", "amenities.html", jbar_body),
     ("court-sports.html", "Court Sports at GHF | Indoor Basketball & Volleyball in Gainesville", "Regulation-size indoor basketball court with six hoops and hardwood flooring, plus volleyball twice a week. Included with every GHF membership.", "sports-activities.html", courtsports_body),
     ("echo.html", "Echo Outdoor Pavilion | Outdoor Gym at GHF Main | Gainesville", "Six thousand square feet of open-air training at GHF Main — functional equipment, outdoor classes, workshops and community events. Included in your membership.", "amenities.html", echo_body),
+    ("cycle.html", "Sky Cycle | Indoor Cycling Classes in Gainesville | GHF", "The Sky Cycle studio at GHF Main — 40 bikes, stadium seating, My Ride technology, and cycle classes from 30 to 60 minutes. Included in your membership.", "group-fitness.html", cycle_body),
+    ("live.html", "GHF Live | Stream GroupFit Classes at Home | Gainesville", "Stream GHF GroupFit classes live or watch them later. Included with your membership.", "group-fitness.html", live_body),
     ("faq.html", "FAQ | Get The Most Out Of Your Gym Membership | GHF", "Frequently asked questions about Gainesville Health & Fitness memberships, amenities, and getting started.", "", faq_body),
     ("ghf-pass.html", "Free All-Access Pass | Try GHF Free | Gainesville Health & Fitness", "Try Gainesville Health & Fitness free. Your all-access pass gives you full membership privileges for one day at any of our three locations — classes, pool, sauna, weight floor and a coach to guide you. No charge, no obligation.", "", ghf_pass_body),
     ("contact.html", "Contact Us & Get Pricing | Gainesville Health & Fitness", "Let's talk fitness memberships in Gainesville — pricing packages and amenities to craft your gym experience.", "", contact_body),
