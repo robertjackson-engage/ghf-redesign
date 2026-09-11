@@ -92,6 +92,23 @@
     }
   }
 
+  /* the gym's calendar date for an instant, as sortable YYYY-MM-DD. formatToParts
+     rather than a locale string so the ordering can't shift under us. Returns ""
+     if the runtime can't do timezones — callers must then skip filtering rather
+     than guess, so an old browser shows a stale day instead of hiding a real one. */
+  function localDate(ms) {
+    try {
+      var parts = new Intl.DateTimeFormat("en-US", {
+        timeZone: TZ, year: "numeric", month: "2-digit", day: "2-digit"
+      }).formatToParts(new Date(ms));
+      var o = {};
+      for (var i = 0; i < parts.length; i++) o[parts[i].type] = parts[i].value;
+      return (o.year && o.month && o.day) ? o.year + "-" + o.month + "-" + o.day : "";
+    } catch (e) {
+      return "";
+    }
+  }
+
   function uniqSorted(list) {
     var seen = {}, out = [];
     list.forEach(function (v) {
@@ -107,8 +124,19 @@
     days = [];
     all = [];
 
+    /* Perch's window opens in the past: it can include yesterday's last class or
+       two. Drop any day that is already over in the gym's timezone. Today's own
+       earlier classes stay — they render dimmed via .is-past, which is deliberate.
+       The date comes from the first class's startTime, NOT d.isoDate: isoDate is
+       that same start time, not the day's midnight, so it is not a day boundary. */
+    var today = localDate(Date.now());
+
     raw.forEach(function (d, i) {
       var key = "d" + i;
+      var first = (d.classes || [])[0];
+      var dayDate = first ? localDate(Date.parse(first.startTime)) : "";
+      if (today && dayDate && dayDate < today) return;
+
       var month = monthOf(d.isoDate);
       var src = (d.classes || []).filter(function (c) {
         return !ONLY_ROOM || String(c.room == null ? "" : c.room).trim().toUpperCase() === ONLY_ROOM;
