@@ -173,10 +173,14 @@
       parent.querySelectorAll(".acc__item.is-open").forEach(function (o) {
         o.classList.remove("is-open");
         o.querySelector(".acc__body").style.maxHeight = "0px";
+        /* the markup ships aria-expanded, so it has to track the state — without
+           this a screen reader is told "collapsed" on an open panel */
+        o.querySelector(".acc__head").setAttribute("aria-expanded", "false");
       });
       if (!isOpen) {
         item.classList.add("is-open");
         body.style.maxHeight = body.scrollHeight + "px";
+        head.setAttribute("aria-expanded", "true");
       }
     });
   });

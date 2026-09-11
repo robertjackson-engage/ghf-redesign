@@ -627,6 +627,45 @@ a.split--link:focus-visible { outline: 2px solid var(--accent); outline-offset: 
 .acc__body-inner li { padding: 7px 0 7px 24px; position: relative; }
 .acc__body-inner li::before { content: ""; position: absolute; left: 0; top: 16px; width: 10px; height: 1px; background: var(--accent); }
 
+/* ---------- .acc--rows: numbered rows that open ----------
+   Same markup and JS as .acc, restyled so the heads read like .row-item.
+   Everything here is scoped to .acc--rows so the FAQ accordions are untouched. */
+.acc--rows .acc__head {
+  display: grid; grid-template-columns: 44px minmax(0, 1.1fr) minmax(0, 1.6fr) 44px;
+  gap: 26px; align-items: center; padding: clamp(20px, 2.2vw, 30px) 0;
+  transition: padding-left .35s var(--ease-power);
+}
+.acc--rows .acc__head:hover { padding-left: 18px; }
+.acc__idx { font-size: 12px; letter-spacing: 0.2em; color: var(--accent); }
+.acc__row-title {
+  font-family: var(--font-display); text-transform: uppercase; font-weight: 400;
+  font-size: clamp(17px, 1.7vw, 26px); line-height: 1.15; letter-spacing: 0.02em;
+}
+.acc__row-desc { color: var(--muted); font-size: 15px; }
+.section--light .acc__row-desc { color: var(--muted-dark); }
+.acc--rows .acc__body-inner {
+  display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr);
+  gap: clamp(20px, 3vw, 44px); max-width: none; padding: 0 0 40px;
+}
+.acc--rows .acc__media img { width: 100%; height: auto; display: block; }
+.acc--rows .acc__text { max-width: 62ch; }
+.acc--rows .acc__text .body-copy + .body-copy { margin-top: 14px; }
+
+@media (max-width: 900px) {
+  /* single column, and the icon stays — unlike .row-item__arrow, it is the
+     only affordance telling you these open */
+  .acc--rows .acc__head {
+    grid-template-columns: 1fr 44px; grid-template-areas: "title icon" "desc desc";
+    gap: 10px 16px; padding: 24px 0;
+  }
+  .acc--rows .acc__head:hover { padding-left: 0; }
+  .acc__idx { display: none; }
+  .acc__row-title { grid-area: title; }
+  .acc__row-desc { grid-area: desc; }
+  .acc--rows .acc__icon { grid-area: icon; }
+  .acc--rows .acc__body-inner { grid-template-columns: minmax(0, 1fr); }
+}
+
 /* ---------- checklist ---------- */
 .checklist { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0 clamp(30px, 4vw, 70px); }
 .checklist li {

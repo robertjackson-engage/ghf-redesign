@@ -699,6 +699,34 @@ def accordion(items, open_first=True):
     return out
 
 
+def rows_expand(items):
+    """Numbered rows that open to a photo and fuller copy. Emits the class names
+    main.js's accordion already binds (.acc / .acc__item / .acc__head / .acc__body),
+    so no new JS — .acc--rows only restyles the heads as rows.
+
+    Panel images carry explicit width/height on purpose: main.js sizes an open
+    panel from body.scrollHeight at click time, and an unsized image that hasn't
+    loaded yet measures ~0, which opens the panel clipped."""
+    out = '<div class="acc acc--rows reveal">'
+    for i, it in enumerate(items, 1):
+        title, teaser, img, alt, w, h, body = it
+        out += f"""
+      <div class="acc__item">
+        <button class="acc__head" aria-expanded="false">
+          <span class="acc__idx">{i:02d}</span>
+          <span class="acc__row-title">{title}</span>
+          <span class="acc__row-desc">{teaser}</span>
+          <span class="acc__icon"></span>
+        </button>
+        <div class="acc__body"><div class="acc__body-inner">
+          <div class="acc__media"><img src="{img}" alt="{alt}" width="{w}" height="{h}" loading="lazy"></div>
+          <div class="acc__text">{body}</div>
+        </div></div>
+      </div>"""
+    out += "</div>"
+    return out
+
+
 def page(filename, title, desc, active, body):
     html = head(title, desc) + header_html(active) + body + footer_html()
     with open(os.path.join(OUT, filename), "w") as f:
@@ -1610,6 +1638,49 @@ cardio_body = hero(
 )
 
 # ============================================================ POOL / AQUA
+# The seven Aquix spaces. Long copy is GHF's own, from ghfc.com/pool — our page had
+# condensed it, and the detail it dropped is exactly the benefit detail worth surfacing.
+# NOTE: 05 and 06 are both warm-water shots; 05 keeps the file this page already
+# captioned "Warm therapy pool at GHF". Worth a human eye on which pool is which.
+POOL_SPACES = [
+    ("75-Foot Indoor Lap Pool",
+     "Lap swimming, technique work and endurance, all year round.",
+     f"{IMG}/sports-activities-pool-wide-700x467.jpg", "The 75-foot indoor lap pool at GHF", 700, 467,
+     "<p class=\"body-copy\">Dive into a world-class swimming experience with our 75-foot indoor lap pool. Whether you're a seasoned swimmer or just starting out, our pool provides the perfect environment to improve your technique, build endurance, and achieve your aquatic fitness goals.</p>"
+     "<p class=\"body-copy\">Indoors and heated, so the weather never costs you a session.</p>"),
+    ("Himalayan Salt Wall Sauna",
+     "Dry heat and a wall of Himalayan salt.",
+     f"{IMG}/sports-activities-pool-sauna-700x467.jpg", "Himalayan salt wall sauna at GHF", 700, 467,
+     "<p class=\"body-copy\">Indulge in the soothing warmth of our Himalayan Salt Wall Sauna. With its dry heat, this sauna offers a rejuvenating experience that can help alleviate chronic pain, reduce joint stiffness, and strengthen your immune system.</p>"
+     "<p class=\"body-copy\">Step inside and let the natural properties of Himalayan salt envelop you in relaxation.</p>"),
+    ("Cleansing Steam Room",
+     "Warm steam to open up and clear out.",
+     f"{IMG}/sports-activities-pool-steam-room-700x467.jpg", "Steam room at GHF", 700, 467,
+     "<p class=\"body-copy\">Experience the cleansing power of our steam room. Set at a comfortable temperature, our steam room promotes circulation, lowers blood pressure, reduces stress, and clears congestion.</p>"
+     "<p class=\"body-copy\">It's the perfect place to unwind and let the healing steam envelop your body, leaving you refreshed and revitalized.</p>"),
+    ("Arctic Cold Pool",
+     "A cold plunge for recovery and a genuine jolt of energy.",
+     f"{IMG}/Aqua_GHF_Aquix_Cold_Plunge_Cold_Therapy_Pool_2023_1.jpg", "Cold plunge pool at GHF", 1800, 1199,
+     "<p class=\"body-copy\">Awaken your senses and elevate your energy with a plunge into our invigorating cold pool. Cold plunging is known to provide an instant pick-me-up, increase your baseline dopamine levels, aid in muscle recovery, support your immune system, and provide relief from pain.</p>"
+     "<p class=\"body-copy\">Embrace the chill and discover the numerous benefits of cold water therapy.</p>"),
+    ("Warm Thermal Pool",
+     "Therapeutic warmth for joints, injuries and low-impact movement.",
+     f"{IMG}/sports-activities-pool-hot-tub-700x467.jpg", "Warm thermal pool at GHF", 700, 467,
+     "<p class=\"body-copy\">Immerse yourself in our warm thermal pool, where therapeutic benefits abound. The warm water helps relax muscles, increases blood flow to injured areas, and provides a low-impact environment for exercise.</p>"
+     "<p class=\"body-copy\">Whether you're seeking relief from muscle spasms, back pain, arthritis, or fibromyalgia, our warm thermal pool is a haven of healing.</p>"),
+    ("Hot Whirlpool",
+     "Heat plus massaging jets, at the end of a long day.",
+     f"{IMG}/Aqua_GHF_Aquix_Hot_Tube_Pool_2023_1.jpg", "Hot whirlpool at GHF", 1800, 1199,
+     "<p class=\"body-copy\">Melt away the stresses of the day in our hot whirlpool. The soothing warmth and massaging action offer a sanctuary for physical, emotional, and mental relaxation.</p>"
+     "<p class=\"body-copy\">Indulge in the therapeutic benefits as the hot water eases tension, promotes muscle relaxation, relieves pain, and improves sleep. Let the whirlpool become your personal oasis of tranquility.</p>"),
+    ("Aqua Classes &amp; Swimming",
+     "Low-impact training for every age and ability.",
+     f"{IMG}/GHF_Aquix_Pool_2018.jpg", "Aqua group fitness class in the pool at GHF", 1200, 800,
+     "<p class=\"body-copy\">Dive into the refreshing world of aqua fitness and swimming. The buoyancy of water reduces joint impact, making it an ideal low-impact exercise for all ages and abilities.</p>"
+     "<p class=\"body-copy\">Whether you're looking to improve flexibility, build cardiovascular endurance, strengthen your core, or simply enjoy the supportive community, our aqua classes and swimming opportunities will leave you feeling energized and accomplished.</p>"),
+]
+
+
 pool_body = hero(
     "Aquix by GHF",
     ["The spa day hiding in your", '<span class="serif">gym membership</span>'],
@@ -1628,15 +1699,7 @@ pool_body = hero(
         <h2 class="h-display reveal" style="font-size:clamp(34px,4.6vw,72px)">Seven ways to <span class="serif">soak it in</span></h2>
       </div>
     </div>
-    <div class="rows reveal">
-      <div class="row-item"><span class="row-item__idx">01</span><span class="row-item__title">75-Foot Indoor Lap Pool</span><span class="row-item__desc">Dive into a world-class swimming experience. Whether you're a seasoned swimmer or just starting out, our pool provides the perfect environment to improve your technique, build endurance, and achieve your aquatic fitness goals.</span><span class="row-item__arrow">→</span></div>
-      <div class="row-item"><span class="row-item__idx">02</span><span class="row-item__title">Himalayan Salt Wall Sauna</span><span class="row-item__desc">Indulge in the soothing warmth of dry heat that can help alleviate chronic pain, reduce joint stiffness, and strengthen your immune system. Step inside and let the natural properties of Himalayan salt envelop you in relaxation.</span><span class="row-item__arrow">→</span></div>
-      <div class="row-item"><span class="row-item__idx">03</span><span class="row-item__title">Cleansing Steam Room</span><span class="row-item__desc">Let the warm steam open your pores, clear your airways, and melt the day away.</span><span class="row-item__arrow">→</span></div>
-      <div class="row-item"><span class="row-item__idx">04</span><span class="row-item__title">Arctic Cold Pool</span><span class="row-item__desc">Awaken your senses and elevate your energy with a plunge into our invigorating cold pool. Cold plunging is known to provide an instant pick-me-up, increase your baseline dopamine levels, aid in muscle recovery, support your immune system, and provide relief from pain.</span><span class="row-item__arrow">→</span></div>
-      <div class="row-item"><span class="row-item__idx">05</span><span class="row-item__title">Warm Thermal Pool</span><span class="row-item__desc">Gentle warmth for joint-friendly movement and deep relaxation.</span><span class="row-item__arrow">→</span></div>
-      <div class="row-item"><span class="row-item__idx">06</span><span class="row-item__title">Hot Whirlpool</span><span class="row-item__desc">Melt away the stresses of the day. The soothing warmth and massaging action offer a sanctuary for physical, emotional, and mental relaxation — easing tension, promoting muscle relaxation, relieving pain, and improving sleep.</span><span class="row-item__arrow">→</span></div>
-      <div class="row-item"><span class="row-item__idx">07</span><span class="row-item__title">Aqua Classes &amp; Swimming</span><span class="row-item__desc">The buoyancy of water reduces joint impact, making it an ideal low-impact exercise for all ages and abilities — improve flexibility, build cardiovascular endurance, strengthen your core, or simply enjoy the supportive community.</span><span class="row-item__arrow">→</span></div>
-    </div>
+    {rows_expand(POOL_SPACES)}
   </div>
 </section>
 
@@ -1669,7 +1732,10 @@ pool_body = hero(
     </div>
   </div>
 </section>
-""" + form_section(
+""" + schedule_block("schedule", "In the water this week",
+                 'Every class in the <span class="serif">pool</span>',
+                 "The live schedule for our lap pool and warm therapy pool at GHF Main. Filter by class type, studio, day or instructor &mdash; every class is included in your membership.",
+                 room="LAP POOL,WARM THERAPY POOL") + form_section(
     "pass", "03", "Your relaxation experience is a click away",
     'Your free guest pass is <span class="serif">waiting</span>',
     "Your guest pass gives you one day privileges to check out the recovery services and studios and gives you access to each gym to try out GHF. There is no charge, no obligation and no risk. There is, however, a chance that you will be inspired.",

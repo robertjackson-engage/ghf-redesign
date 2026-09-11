@@ -6,8 +6,11 @@
   if (!root) return;
 
   var ENDPOINT = root.getAttribute("data-endpoint");
-  /* when set, the schedule is scoped to a single studio (e.g. the hot yoga page) */
-  var ONLY_ROOM = (root.getAttribute("data-room") || "").trim().toUpperCase();
+  /* when set, the schedule is scoped to these studios (e.g. hot yoga, the pools).
+     Comma-separated, so a page can scope to more than one room. */
+  var ONLY_ROOMS = (root.getAttribute("data-room") || "").split(",")
+    .map(function (r) { return r.trim().toUpperCase(); })
+    .filter(function (r) { return !!r; });
   var TIMEOUT = 20000;
   var PERCH_URL = "https://app.perchteams.com/public/gx/ghf";
   var TZ = "America/New_York";
@@ -139,7 +142,8 @@
 
       var month = monthOf(d.isoDate);
       var src = (d.classes || []).filter(function (c) {
-        return !ONLY_ROOM || String(c.room == null ? "" : c.room).trim().toUpperCase() === ONLY_ROOM;
+        if (!ONLY_ROOMS.length) return true;
+        return ONLY_ROOMS.indexOf(String(c.room == null ? "" : c.room).trim().toUpperCase()) !== -1;
       });
       var list = src.map(function (c) {
         var o = {
@@ -198,13 +202,14 @@
       return '<option value="' + esc(d.key) + '">' + esc(d.heading) + "</option>";
     }).join("");
   
-    /* one studio, one site: these two filters would each offer a single option.
-       Hidden rather than removed — resetAll() still addresses both. */
-    if (ONLY_ROOM) {
-      elChips.hidden = true;
-      var roomWrap = elRoom.closest(".gx__select");
-      if (roomWrap) roomWrap.hidden = true;
-    }
+    /* A filter offering a single choice is just noise — hide it. Driven by what
+       actually survived the room scope, not by whether a scope was set: the hot
+       yoga page has one studio and hides it, the pool page has two and keeps it.
+       Hidden rather than removed, since resetAll() still addresses both. */
+    elChips.hidden = elChips.querySelectorAll(".gx__chip").length < 2;
+    var roomWrap = elRoom.closest(".gx__select");
+    /* -1 for the "All studios" option */
+    if (roomWrap) roomWrap.hidden = (elRoom.options.length - 1) < 2;
   }
 
   function fillSelect(el, values, allLabel, fmt) {
@@ -616,7 +621,7 @@
       })
       .then(function (data) {
         parse(data);
-        if (!all.length) throw new Error(ONLY_ROOM ? "empty-room" : "empty");
+        if (!all.length) throw new Error(ONLY_ROOMS.length ? "empty-room" : "empty");
         buildFilters();
         bind();
         elFilters.hidden = false;
