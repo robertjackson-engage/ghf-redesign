@@ -1786,3 +1786,11 @@ body.jn-open { overflow: hidden !important; }
   .sv__grid { grid-template-columns: minmax(0, 1fr); }
   .sv__cat { max-width: none; }
 }
+
+/* ---------- note-box: a callout that must not be missed ---------- */
+.note-box {
+  border: 1px solid var(--line); border-left: 3px solid var(--accent);
+  padding: 22px 24px; background: rgba(255, 255, 255, 0.03);
+}
+.section--light .note-box { border-color: var(--line-dark); border-left-color: var(--accent); background: rgba(0, 0, 0, 0.02); }
+.note-box .body-copy { font-size: 15px; }

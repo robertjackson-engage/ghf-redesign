@@ -353,6 +353,7 @@ def footer_html():
           <a href="amenities.html">Amenities</a>
           <a href="recovery.html">Recovery</a>
           <a href="chill.html">Chill Studio</a>
+          <a href="chill-cancel.html">Cancel Chill</a>
           <a href="kids-club.html">Kid's Club</a>
           <a href="member-savings.html">Member Savings</a>
           <a href="bring-a-guest.html">Bring a Guest</a>
@@ -4326,9 +4327,17 @@ chill_body = hero(
       <div class="intro-grid__right reveal">
         <div class="hero__actions" style="margin:0">
           <a class="btn btn--solid" href="chill-signup.html">Sign Up For Chill <span class="arr">&rarr;</span></a>
-          <a class="btn btn--dark" href="chill-cancel.html">Cancel Chill <span class="arr">&rarr;</span></a>
         </div>
-        <p class="form-note" style="margin-top:22px">Prefer hands-on? ReQuest Physical Therapy offers therapeutic massage inside both our Main and Tioga facilities.
+        <!-- Cancelling gets its own labelled block, not a greyed sibling of Sign Up:
+             nobody should have to hunt for how to stop paying. -->
+        <div class="note-box" style="margin-top:30px">
+          <p class="eyebrow" style="margin-bottom:10px">Already a Chill member?</p>
+          <p class="body-copy"><strong>You can cancel any time &mdash; there is no fee</strong>, and you keep the balance of the sessions you have left. Tell the front desk, or do it online in under a minute.</p>
+          <div class="hero__actions" style="margin-top:20px">
+            <a class="btn" href="chill-cancel.html">Cancel Chill <span class="arr">&rarr;</span></a>
+          </div>
+        </div>
+        <p class="form-note" style="margin-top:26px">Prefer hands-on? ReQuest Physical Therapy offers therapeutic massage inside both our Main and Tioga facilities.
         <a href="{REQUEST_PT_APPT}" target="_blank" rel="noopener">Schedule a massage appointment &rarr;</a></p>
       </div>
     </div>
@@ -4376,7 +4385,7 @@ chill_body = hero(
             </select>
             <label for="ch-loc">Gym you would like to visit</label>
           </div>
-          <button class="btn btn--dark field--full" type="submit" style="justify-content:center">Claim My Free Fitness Pass <span class="arr">&rarr;</span></button>
+          <button class="btn field--full" type="submit" style="justify-content:center">Claim My Free Fitness Pass <span class="arr">&rarr;</span></button>
         </form>
         <p class="form-note">Submit the form and we'll be in touch by phone, text or email to set up your pass.</p>
       </div>
