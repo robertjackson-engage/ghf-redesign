@@ -4261,7 +4261,7 @@ chill_faq = [
     ("Can I buy a single session?",
      "Single sessions are not available. You may have a complimentary session to see what it's like. If you enjoy it, you can purchase 15 sessions for $15 per month."),
     ("How do I cancel?",
-     'Inform the desk that you would like to cancel, or <a href="chill-cancel.html">use the cancellation form</a>. You may use the balance of your sessions remaining at cancellation.'),
+     'Inform the desk that you would like to cancel, or <a href="chill-cancel.html">use the cancellation form</a>. You can keep using your remaining sessions until the date your membership would have renewed &mdash; after that they expire.'),
     ("Is there a fee to cancel?", "No."),
     ("Am I able to do more than 10 minutes at a time?",
      "Yes, unless someone is waiting to use a lounge."),
@@ -4309,7 +4309,7 @@ chill_body = hero(
           <li>30 ten-minute sessions &mdash; $25 a month</li>
           <li>Includes two 10-minute CryoLounge+ sessions</li>
           <li>Auto-renews monthly; unused sessions do not roll over</li>
-          <li>No fee to cancel, and you keep the sessions you have left</li>
+          <li>No fee to cancel &mdash; use your remaining sessions up to your renewal date</li>
         </ul>
       </div>
     </div>
@@ -4332,7 +4332,7 @@ chill_body = hero(
              nobody should have to hunt for how to stop paying. -->
         <div class="note-box" style="margin-top:30px">
           <p class="eyebrow" style="margin-bottom:10px">Already a Chill member?</p>
-          <p class="body-copy"><strong>You can cancel any time &mdash; there is no fee</strong>, and you keep the balance of the sessions you have left. Tell the front desk, or do it online in under a minute.</p>
+          <p class="body-copy"><strong>You can cancel any time, and there is no fee.</strong> Cancelling stops the next renewal &mdash; your remaining sessions stay usable until the date it would have renewed, and expire after that. Tell the front desk, or do it online in under a minute.</p>
           <div class="hero__actions" style="margin-top:20px">
             <a class="btn" href="chill-cancel.html">Cancel Chill <span class="arr">&rarr;</span></a>
           </div>
@@ -4418,8 +4418,8 @@ chill_signup_body = hero(
 
 chill_cancel_body = hero(
     "Cancel Chill",
-    ["No fee, and you keep", 'the sessions you <span class="serif">have left</span>'],
-    "Cancelling Chill costs nothing, and you can still use the balance of the sessions remaining at cancellation. Complete the form below, or simply tell the front desk."
+    ["No fee. Use your sessions", 'up to your <span class="serif">renewal date</span>'],
+    "Cancelling Chill costs nothing. It stops your next renewal &mdash; you can keep using the sessions you have left up to the date it would have renewed, and they expire after that. Complete the form below, or simply tell the front desk."
     "<br><br>Changed your mind? <a href=\"chill.html\">Back to Chill by GHF</a>.",
     img=f"{IMG}/Chill_by_GHF_hydromassage_room_Gainesville_health_and_fitness_copy.jpg",
     crumb='Chill &nbsp;/&nbsp; Cancel',
@@ -4468,7 +4468,7 @@ PAGES = [
     ("member-savings.html", "Member Savings Program | GHF", "Save the cost of your gym membership dues at over 100 participating local businesses.", "", savings_body),
     ("chill.html", "Chill by GHF | HydroMassage & CryoLounge+ Recovery Studio", "HydroMassage lounges and CryoLounge+ recovery chairs at GHF Main and GHF Tioga. 15 sessions for $15 a month, first session free.", "recovery.html", chill_body),
     ("chill-signup.html", "Sign Up For Chill | Gainesville Health & Fitness", "Sign up for Chill by GHF — 15 HydroMassage and CryoLounge+ sessions for $15 a month.", "recovery.html", chill_signup_body),
-    ("chill-cancel.html", "Cancel Chill | Gainesville Health & Fitness", "Cancel your Chill by GHF membership. No fee, and you keep the sessions you have left.", "recovery.html", chill_cancel_body),
+    ("chill-cancel.html", "Cancel Chill | Gainesville Health & Fitness", "Cancel your Chill by GHF membership. No fee — use your remaining sessions up to your renewal date.", "recovery.html", chill_cancel_body),
     ("faq.html", "FAQ | Get The Most Out Of Your Gym Membership | GHF", "Frequently asked questions about Gainesville Health & Fitness memberships, amenities, and getting started.", "", faq_body),
     ("ghf-pass.html", "Free All-Access Pass | Try GHF Free | Gainesville Health & Fitness", "Try Gainesville Health & Fitness free. Your all-access pass gives you full membership privileges for one day at any of our three locations — classes, pool, sauna, weight floor and a coach to guide you. No charge, no obligation.", "", ghf_pass_body),
     ("contact.html", "Contact Us & Get Pricing | Gainesville Health & Fitness", "Let's talk fitness memberships in Gainesville — pricing packages and amenities to craft your gym experience.", "", contact_body),
