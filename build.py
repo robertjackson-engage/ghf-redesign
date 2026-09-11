@@ -1318,16 +1318,16 @@ amenities_body = hero(
         <div class="card__label"><h3>J-Bar Smoothies</h3></div></div>
         <div class="card__below"><p>Real fruit smoothies, made to order with superior fresh ingredients — the perfect fuel for your workout or recovery. See the full menu.</p></div>
       </a>
-      <div class="card">
+      <a class="card" href="pool.html">
         <div class="card__media"><img src="{IMG}/cropped_sauna.jpg" alt="Salt room sauna at GHF" loading="lazy">
         <div class="card__label"><h3>Sauna, Steam &amp; Spa</h3></div></div>
         <div class="card__below"><p>Relax and recover in our sauna, steam room, hot tub — or experience our cold plunge and warm therapy pools.</p></div>
-      </div>
-      <div class="card">
+      </a>
+      <a class="card" href="member-savings.html">
         <div class="card__media"><img src="{IMG}/Family_Membership_Plans.jpg" alt="Member savings program" loading="lazy">
         <div class="card__label"><h3>Member Savings</h3></div></div>
-        <div class="card__below"><p>The Member Savings Program offers GHF members discounts at many local businesses — to save the cost of your dues. Simply show your GHF membership card and start saving.</p></div>
-      </div>
+        <div class="card__below"><p>The Member Savings Program offers GHF members discounts at many local businesses — to save the cost of your dues. See all 136 participating businesses.</p></div>
+      </a>
     </div>
   </div>
 </section>
