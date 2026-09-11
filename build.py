@@ -188,11 +188,37 @@ def brand_logo(src=LOGO_MARK, cls=""):
     return (f'<img class="brand__logo {cls}" src="{src}?v={V}" '
             f'alt="Gainesville Health &amp; Fitness" width="{w}" height="{h}" />')
 
+# (label, href, children) — children render as a hover/focus dropdown in the desktop
+# nav. The parent stays a real link, so clicking it still reaches the hub page.
+# Cycle Classes joins the Classes menu when cycle.html exists.
 NAV = [
-    ("Classes", "group-fitness.html"),
-    ("Training", "training.html"),
-    ("Amenities", "amenities.html"),
-    ("Locations", "locations.html"),
+    ("Classes", "group-fitness.html", [
+        ("Class Schedule", "group-fitness.html#schedule"),
+        ("Hot Yoga", "hot-yoga.html"),
+        ("Outdoor Classes", "echo.html#classes"),
+    ]),
+    ("Training", "training.html", [
+        ("Personal Training", "personal-training.html"),
+        ("Pilates", "pilates.html"),
+        ("X-Force Body", "xforce.html"),
+        ("CrossFit", "crossfit.html"),
+        ("TRIBE Team Training", "tribe.html"),
+        ("HYROX", "hyrox.html"),
+    ]),
+    ("Amenities", "amenities.html", [
+        ("Echo Outdoor Pavilion", "echo.html"),
+        ("Indoor Pools", "pool.html"),
+        ("Free Babysitting", "kids-club.html"),
+        ("Indoor Basketball", "court-sports.html"),
+        ("Member Savings", "member-savings.html"),
+        ("J-Bar Smoothies", "jbar.html"),
+        ("Chill Studio", "chill.html"),
+    ]),
+    ("Locations", "locations.html", [
+        ("GHF Main", "main-center.html"),
+        ("GHF Women", "womens-center.html"),
+        ("GHF Tioga", "tioga-center.html"),
+    ]),
 ]
 
 MENU = [
@@ -261,9 +287,13 @@ def head(title, desc):
 
 def header_html(active=""):
     links = ""
-    for label, href in NAV:
+    for label, href, children in NAV:
         cls = ' class="is-active"' if href == active else ""
-        links += f'<a href="{href}"{cls}>{label}</a>'
+        drop = ""
+        if children:
+            kids = "".join(f'<a href="{ch}">{cl}</a>' for cl, ch in children)
+            drop = f'<div class="nav-drop"><div class="nav-drop__inner">{kids}</div></div>'
+        links += f'<div class="nav-item"><a href="{href}"{cls}>{label}</a>{drop}</div>'
     menu_links = ""
     for i, (label, href) in enumerate(MENU, 1):
         menu_links += f'<a href="{href}"><span class="idx">{i:02d}</span>{label}</a>'
