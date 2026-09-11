@@ -4246,6 +4246,7 @@ thankyouxforce_body = hero(
 CHILL_SIGNUP_EMBED = "https://fs10.formsite.com/res/showFormEmbed?EParam=B6fiTn-RcO7Cqa4xJ-PSQ8yFxcaxnyMuFzpUCZwnDno&amp;2053452483&amp;EmbedId=2053452483"
 CHILL_CANCEL_EMBED = "https://forms.monday.com/forms/embed/a181d524e6993bbd98dcbfbbda4e23eb"
 REQUEST_PT_APPT = "https://requestphysicaltherapy.com/physical-therapist-appointment/"
+CHILL_VIDEO = "https://www.youtube.com/embed/1nn1R4JJxDs"  # "The Chill by GHF Experience"
 
 chill_faq = [
     ("Will I get wet using the hydro massage lounges?",
@@ -4295,6 +4296,19 @@ chill_body = hero(
     "CryoLounge+ recovery chair at GHF",
     rev=True, tag="CryoLounge+",
 ) + f"""
+<section class="section" id="video">
+  <div class="wrap">
+    <div class="cards-head">
+      <div>
+        <p class="eyebrow">See it for yourself</p>
+        <h2 class="h-display reveal" style="font-size:clamp(34px,4.6vw,72px)">The Chill <span class="serif">experience</span></h2>
+      </div>
+      <p class="body-copy reveal" style="max-width:38ch">Ten minutes in the studio, start to finish &mdash; what a session actually looks like before you book one.</p>
+    </div>
+    <div class="reveal">{embed(CHILL_VIDEO, "The Chill by GHF Experience", allow_yt=True)}</div>
+  </div>
+</section>
+
 <section class="section section--light" id="pricing">
   <div class="wrap">
     <div class="intro-grid">
