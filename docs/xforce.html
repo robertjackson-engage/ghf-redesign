@@ -8,19 +8,19 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<link rel="icon" href="assets/img/favicon.ico?v=1789140042" sizes="16x16 32x32 48x48">
-<link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png?v=1789140042">
-<link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16.png?v=1789140042">
-<link rel="icon" type="image/png" sizes="192x192" href="assets/img/favicon-192.png?v=1789140042">
-<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png?v=1789140042">
-<link rel="stylesheet" href="assets/css/main.css?v=1789140042">
+<link rel="icon" href="assets/img/favicon.ico?v=1789140593" sizes="16x16 32x32 48x48">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png?v=1789140593">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16.png?v=1789140593">
+<link rel="icon" type="image/png" sizes="192x192" href="assets/img/favicon-192.png?v=1789140593">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png?v=1789140593">
+<link rel="stylesheet" href="assets/css/main.css?v=1789140593">
 <script>(function(){try{
   if(sessionStorage.getItem("ghf-intro"))document.documentElement.classList.add("no-preloader");
 }catch(e){}})();</script>
 </head>
 <body>
 <div class="preloader" aria-hidden="true">
-  <img class="preloader__logo" src="assets/img/brand/logo-mark.png?v=1789140042" alt="Gainesville Health &amp; Fitness" width="1000" height="400" />
+  <img class="preloader__logo" src="assets/img/brand/logo-mark.png?v=1789140593" alt="Gainesville Health &amp; Fitness" width="1000" height="400" />
   <div class="preloader__bar"><i></i></div>
   <div class="preloader__count">0</div>
 </div>
@@ -28,7 +28,7 @@
 <header class="site-header">
   <div class="site-header__inner">
     <a class="brand" href="index.html" aria-label="Gainesville Health &amp; Fitness — home">
-      <img class="brand__logo " src="assets/img/brand/logo-mark.png?v=1789140042" alt="Gainesville Health &amp; Fitness" width="1000" height="400" />
+      <img class="brand__logo " src="assets/img/brand/logo-mark.png?v=1789140593" alt="Gainesville Health &amp; Fitness" width="1000" height="400" />
     </a>
     <nav class="nav-desktop" aria-label="Primary"><a href="group-fitness.html">Classes</a><a href="training.html">Training</a><a href="amenities.html">Amenities</a><a href="locations.html">Locations</a></nav>
     <div class="header-cta">
@@ -169,25 +169,18 @@
         <p class="eyebrow">Schedule a free discovery session</p>
         <h2 class="h-display reveal" style="font-size:clamp(34px,4.6vw,72px)">Your first step to weight <span class="serif">loss</span></h2>
         <p class="lede reveal" style="margin-top:28px">Find out how you can build the most muscle and burn the most fat in 25 minutes twice per week. Complete the form and we will contact you to set up your session.</p>
-        
       </div>
       <div class="intro-grid__right reveal">
-        <form class="form-grid" data-demo>
-          
-        <div class="field"><input type="text" name="first" id="discovery-first" placeholder=" " required><label for="discovery-first">First name</label></div>
-        <div class="field"><input type="text" name="last" id="discovery-last" placeholder=" " required><label for="discovery-last">Last name</label></div>
-        <div class="field"><input type="email" name="email" id="discovery-email" placeholder=" " required><label for="discovery-email">Email address</label></div>
-        <div class="field"><input type="tel" name="phone" id="discovery-phone" placeholder=" " required><label for="discovery-phone">Phone</label></div>
-          <div class="field field--full">
-            <select name="location" id="discovery-loc" aria-label="Preferred location">
-              <option value="">&nbsp;</option>
-              <option>GHF Main</option>
-              <option>GHF Women</option>
-              <option>GHF Tioga</option>
-            </select>
-            <label for="discovery-loc">Preferred location</label>
-          </div>
-          <button class="btn btn--dark field--full" type="submit" style="justify-content:center">Book My Discovery Session <span class="arr">→</span></button>
+        <form class="form-grid" method="post" action="https://pv228.infusionsoft.com/app/form/process/cc18df1fd187e78148222ce4891a4e53" accept-charset="UTF-8" data-thanks="thank-you-xforce.html">
+          <input type="hidden" name="inf_form_xid" value="cc18df1fd187e78148222ce4891a4e53">
+          <input type="hidden" name="inf_form_name" value="x-force web form">
+          <input type="hidden" name="infusionsoft_version" value="1.70.0.1010026">
+          <input type="text" name="inf_3Ht2uaf45U0YMzrh" value="" tabindex="-1" autocomplete="off" style="display:none !important"><input type="text" name="inf-sbt" value="" tabindex="-1" autocomplete="off" style="display:none !important">
+          <div class="field"><input type="text" name="inf_field_FirstName" id="xf-first" placeholder=" " required><label for="xf-first">First name</label></div>
+          <div class="field"><input type="text" name="inf_field_LastName" id="xf-last" placeholder=" " required><label for="xf-last">Last name</label></div>
+          <div class="field"><input type="email" name="inf_field_Email" id="xf-email" placeholder=" " required><label for="xf-email">Email address</label></div>
+          <div class="field"><input type="tel" name="inf_field_Phone1" id="xf-phone" placeholder=" " required><label for="xf-phone">Phone</label></div>
+          <button class="btn btn--dark field--full" type="submit" style="justify-content:center">Book My Discovery Session <span class="arr">&rarr;</span></button>
         </form>
         <p class="form-note">We will contact you via phone, email, or text. There is no charge, no obligation and no risk.</p>
       </div>
@@ -213,7 +206,7 @@
     <div class="site-footer__top">
       <div class="site-footer__brand">
         <a class="brand brand--footer" href="index.html">
-          <img class="brand__logo " src="assets/img/brand/logo-lockup.png?v=1789140042" alt="Gainesville Health &amp; Fitness" width="1000" height="451" />
+          <img class="brand__logo " src="assets/img/brand/logo-lockup.png?v=1789140593" alt="Gainesville Health &amp; Fitness" width="1000" height="451" />
         </a>
         <p>The gym that's best at helping beginners — with staff to guide your journey. One membership, three locations.</p>
         <div class="socials">
@@ -280,8 +273,8 @@
     </div>
   </div>
 </footer>
-<script src="assets/js/main.js?v=1789140042"></script>
-<script src="assets/js/chat-config.js?v=1789140042"></script>
-<script src="assets/js/chat.js?v=1789140042" defer></script>
+<script src="assets/js/main.js?v=1789140593"></script>
+<script src="assets/js/chat-config.js?v=1789140593"></script>
+<script src="assets/js/chat.js?v=1789140593" defer></script>
 </body>
 </html>

@@ -2708,6 +2708,21 @@ crossfit_body = hero(
 )
 
 # ============================================================ X-FORCE
+# Keap endpoint for X-Force leads, from the hosted form behind ghfc.com/xforce-workout.
+# Note that page posts to a DIFFERENT form than it declares: its customFormAction points at
+# 2beb523a… ("Try Us For Free") while its inf_form_xid is cc18df1f… ("x-force web form").
+# We post to the x-force form's own endpoint, which is what inf_form_xid names and what the
+# other integrations here do. Its embedded version string (1.70.0.561498) is also stale; the
+# live hosted form serves 1.70.0.1010026, used below.
+#
+# Keap marks none of the four fields required — we require all four client-side anyway, as
+# on CrossFit. Unlike Pilates/TRIBE/HYROX, reCAPTCHA is NOT enabled on this form.
+KEAP_XF_ACTION = "https://pv228.infusionsoft.com/app/form/process/cc18df1fd187e78148222ce4891a4e53"
+KEAP_XF_XID = "cc18df1fd187e78148222ce4891a4e53"
+KEAP_XF_VERSION = "1.70.0.1010026"
+KEAP_XF_TRAPS = ('<input type="text" name="inf_3Ht2uaf45U0YMzrh" value="" tabindex="-1" autocomplete="off" style="display:none !important">'
+                 '<input type="text" name="inf-sbt" value="" tabindex="-1" autocomplete="off" style="display:none !important">')
+
 xforce_body_page = hero(
     "X-Force Body",
     ["Twenty minutes.", 'Twice a <span class="serif">week</span>.'],
@@ -2779,12 +2794,33 @@ xforce_body_page = hero(
     </div>
   </div>
 </section>
-""" + form_section(
-    "discovery", "05", "Schedule a free discovery session",
-    'Your first step to weight <span class="serif">loss</span>',
-    "Find out how you can build the most muscle and burn the most fat in 25 minutes twice per week. Complete the form and we will contact you to set up your session.",
-    "Book My Discovery Session",
-) + cta_band(
+""" + f"""
+<section class="section section--light" id="discovery">
+  <div class="wrap">
+    <div class="intro-grid">
+      <div>
+        <p class="eyebrow">Schedule a free discovery session</p>
+        <h2 class="h-display reveal" style="font-size:clamp(34px,4.6vw,72px)">Your first step to weight <span class="serif">loss</span></h2>
+        <p class="lede reveal" style="margin-top:28px">Find out how you can build the most muscle and burn the most fat in 25 minutes twice per week. Complete the form and we will contact you to set up your session.</p>
+      </div>
+      <div class="intro-grid__right reveal">
+        <form class="form-grid" method="post" action="{KEAP_XF_ACTION}" accept-charset="UTF-8" data-thanks="thank-you-xforce.html">
+          <input type="hidden" name="inf_form_xid" value="{KEAP_XF_XID}">
+          <input type="hidden" name="inf_form_name" value="x-force web form">
+          <input type="hidden" name="infusionsoft_version" value="{KEAP_XF_VERSION}">
+          {KEAP_XF_TRAPS}
+          <div class="field"><input type="text" name="inf_field_FirstName" id="xf-first" placeholder=" " required><label for="xf-first">First name</label></div>
+          <div class="field"><input type="text" name="inf_field_LastName" id="xf-last" placeholder=" " required><label for="xf-last">Last name</label></div>
+          <div class="field"><input type="email" name="inf_field_Email" id="xf-email" placeholder=" " required><label for="xf-email">Email address</label></div>
+          <div class="field"><input type="tel" name="inf_field_Phone1" id="xf-phone" placeholder=" " required><label for="xf-phone">Phone</label></div>
+          <button class="btn btn--dark field--full" type="submit" style="justify-content:center">Book My Discovery Session <span class="arr">&rarr;</span></button>
+        </form>
+        <p class="form-note">We will contact you via phone, email, or text. There is no charge, no obligation and no risk.</p>
+      </div>
+    </div>
+  </div>
+</section>
+""" + cta_band(
     'Is X-Force Body right for <span class="serif">you?</span>',
     "Try a free X-Force Body session and see if it's right for you.",
     f"{IMG}/XForce_XForce_Body_GHF_Gain_Muscle_Leg_Exercises_2023.jpg",
@@ -4007,6 +4043,28 @@ thankyoupilates_body = hero(
     hero_cls="hero--compact",
 )
 
+# ============================================================ THANK YOU (X-FORCE)
+# X-Force runs at GHF Main — it is the only location that lists the negative-only
+# training center among its amenities.
+thankyouxforce_body = hero(
+    "Session requested",
+    ["See you in the", '<span class="serif">studio</span>'],
+    "Congratulations on taking the first step toward a healthier, stronger you. One of our "
+    "X-Force coaches will follow up shortly to book your free discovery session.<br><br>"
+    "<strong>What to expect</strong> &mdash; two 25-minute workouts a week on the X-Force "
+    "negative-training machines, with a coach beside you and a carb-smart eating plan to match.<br>"
+    "<strong>Where to go</strong> &mdash; the X-Force training center at GHF Main. Check in at the "
+    "lobby desk and tell them you are here for X-Force."
+    "<br><br>Questions? Call <a href=\"tel:3523774955\">(352) 377-4955</a> or email "
+    "<a href=\"mailto:memberservices@ghfc.com\">memberservices@ghfc.com</a>."
+    "<br><br><strong>Your GHF Team</strong> &mdash; <em>Gainesville Strong Since 1978</em>",
+    img=f"{IMG}/XForce_XForce_Body_GHF_Gain_Muscle_Leg_Exercises_2023.jpg",
+    crumb="Thank you",
+    actions=[("Explore GHF Main", "main-center.html", True)],
+    page=True,
+    hero_cls="hero--compact",
+)
+
 # ============================================================ BUILD ALL
 PAGES = [
     ("index.html", "Gainesville Health & Fitness | The Gym That's Best At Helping Beginners", "The gym that's best at helping beginners — with staff to guide your journey. 3 locations, 900+ classes monthly, open 24/7 at GHF Main.", "", home_body),
@@ -4047,6 +4105,7 @@ PAGES = [
     ("thank-you-crossfit.html", "Thank You | CrossFit at GHF Tioga | Gainesville Health & Fitness", "Thanks for requesting your free CrossFit class. A coach will follow up shortly to book it at GHF Tioga.", "", thankyoucrossfit_body),
     ("thank-you-hyrox.html", "Thank You | HYROX at GHF | Gainesville Health & Fitness", "Thanks for requesting your HYROX class. A coach will follow up shortly to book it at GHF Main.", "", thankyouhyrox_body),
     ("thank-you-pilates.html", "Thank You | Pilates at GHF | Gainesville Health & Fitness", "Thanks for requesting your free Pilates session. An instructor will follow up shortly to book it at GHF Main or GHF Tioga.", "", thankyoupilates_body),
+    ("thank-you-xforce.html", "Thank You | X-Force Body | Gainesville Health & Fitness", "Thanks for requesting your free X-Force Body discovery session. A coach will follow up shortly to book it at GHF Main.", "", thankyouxforce_body),
 ]
 
 
