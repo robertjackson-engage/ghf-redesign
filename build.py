@@ -197,6 +197,7 @@ NAV = [
         ("Hot Yoga", "hot-yoga.html"),
         ("Outdoor Classes", "echo.html#classes"),
         ("Cycle Classes", "cycle.html"),
+        ("GHF Live", "live.html"),
     ]),
     ("Training", "training.html", [
         ("Personal Training", "personal-training.html"),
