@@ -4276,7 +4276,7 @@ chill_body = hero(
     "HydroMassage lounges and CryoLounge+ recovery chairs, in a studio built to serve the whole person. Ten minutes, fully clothed, before or after your workout &mdash; and your first session is free.",
     img=f"{IMG}/Chill_GHF_Hydromassage_Massage_Bed_Gainesville_2025-2.jpg",
     crumb='Fitness &nbsp;/&nbsp; Chill Studio',
-    actions=[("Try A Free Session", "#begin", True), ("Pricing", "#pricing", False)],
+    actions=[("Sign Up For Chill", "chill-signup.html", True), ("Cancel Chill", "chill-cancel.html", False)],
     meta=["GHF Main &amp; GHF Tioga", "10-minute sessions", "First session free"],
     page=True,
 ) + split(
