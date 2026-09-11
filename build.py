@@ -1797,6 +1797,16 @@ pilates_classes = [
     ("Pilates Suspension Circuit", "Strengthen and challenge your body in a 50-minute Pilates suspension training class using Bodhi suspension straps, Pilates ring, and apparatus like the Reformer, Chair, and Tower."),
     ("Pilates Stretch and Recover", "A gentle 50-minute Pilates stretch class designed for mobility, relaxation, and pain relief. Great for recovery days and self-care. It is a perfect addition to any workout."),
 ]
+# Keap endpoint for Pilates leads, from the hosted form behind the embed script. Two
+# things here differ from the other integrations and must not be "tidied" into the
+# shared constants: the version string is newer, and Keap's honeypot field name has
+# rotated tenant-wide. The five forms deployed before this one still send the older
+# inf_eGYY1p7FcL3TD8b6 in KEAP_TRAPS; leave them as they are.
+KEAP_PILATES_ACTION = "https://pv228.infusionsoft.com/app/form/process/811a031399f3283a80897d00234b1b59"
+KEAP_PILATES_XID = "811a031399f3283a80897d00234b1b59"
+KEAP_PILATES_VERSION = "1.70.0.1010026"
+KEAP_PILATES_TRAPS = ('<input type="text" name="inf_3Ht2uaf45U0YMzrh" value="" tabindex="-1" autocomplete="off" style="display:none !important">'
+                      '<input type="text" name="inf-sbt" value="" tabindex="-1" autocomplete="off" style="display:none !important">')
 pilates_body = hero(
     "Pilates at GHF",
     ["Stand taller.", 'Move <span class="serif">easier</span>.'],
@@ -1842,12 +1852,41 @@ pilates_body = hero(
     {accordion(pilates_classes)}
   </div>
 </section>
-""" + form_section(
-    "pass", "03", "Try Pilates — first session free!",
-    'Experience the Pilates <span class="serif">difference</span>',
-    "Try the Pilates Reformer under the direction of our trained Pilates instructors. They will teach you how to use the reformer, the best technique, and ways to adjust the workout to your own level. Pilates studios are located at GHF Main and GHF Tioga. Complete this form and we will be in touch to schedule your first session.",
-    "Book My Free Session",
-) + cta_band(
+""" + f"""
+<section class="section section--light" id="pass">
+  <div class="wrap">
+    <div class="intro-grid">
+      <div>
+        <p class="eyebrow">Try Pilates &mdash; first session free!</p>
+        <h2 class="h-display reveal" style="font-size:clamp(34px,4.6vw,72px)">Experience the Pilates <span class="serif">difference</span></h2>
+        <p class="lede reveal" style="margin-top:28px">Try the Pilates Reformer under the direction of our trained Pilates instructors. They will teach you how to use the reformer, the best technique, and ways to adjust the workout to your own level. Pilates studios are located at GHF Main and GHF Tioga. Complete this form and we will be in touch to schedule your first session.</p>
+      </div>
+      <div class="intro-grid__right reveal">
+        <form class="form-grid" method="post" action="{KEAP_PILATES_ACTION}" accept-charset="UTF-8" data-thanks="thank-you-pilates.html">
+          <input type="hidden" name="inf_form_xid" value="{KEAP_PILATES_XID}">
+          <input type="hidden" name="inf_form_name" value="NEW - pilates - master">
+          <input type="hidden" name="infusionsoft_version" value="{KEAP_PILATES_VERSION}">
+          {KEAP_PILATES_TRAPS}
+          <div class="field"><input type="text" name="inf_field_FirstName" id="pil-first" placeholder=" " required><label for="pil-first">First name</label></div>
+          <div class="field"><input type="text" name="inf_field_LastName" id="pil-last" placeholder=" " required><label for="pil-last">Last name</label></div>
+          <div class="field"><input type="email" name="inf_field_Email" id="pil-email" placeholder=" " required><label for="pil-email">Email address</label></div>
+          <div class="field"><input type="tel" name="inf_field_Phone1" id="pil-phone" placeholder=" " required><label for="pil-phone">Phone</label></div>
+          <div class="field field--full">
+            <select name="inf_option_PickYourPilatesLocation" id="pil-loc" aria-label="Pick your Pilates location">
+              <option value="">&nbsp;</option>
+              <option value="3216">GHF Main &mdash; 4820 W Newberry Road</option>
+              <option value="3218">GHF Tioga &mdash; Tioga Town Center</option>
+            </select>
+            <label for="pil-loc">Pick your Pilates location</label>
+          </div>
+          <button class="btn btn--dark field--full" type="submit" style="justify-content:center">Book My Free Session <span class="arr">&rarr;</span></button>
+        </form>
+        <p class="form-note">We will contact you via phone, email, or text. There is no charge, no obligation and no risk.</p>
+      </div>
+    </div>
+  </div>
+</section>
+""" + cta_band(
     'Love the way your body <span class="serif">feels</span>',
     "Ready to start a more fit life? Become a GHF member today for as little as $15 per week.",
     f"{IMG}/GHF_Pilates_Pilates_at_GHF_Pilates_GHF_Main_Gyms_with_Pilates_Pilates_Studio_2025-3.jpg",
@@ -3891,6 +3930,24 @@ thankyoucrossfit_body = hero(
     hero_cls="hero--compact",
 )
 
+# ============================================================ THANK YOU (PILATES)
+thankyoupilates_body = hero(
+    "Session requested",
+    ["See you on the", '<span class="serif">reformer</span>'],
+    "Congratulations on taking the first step toward a healthier, stronger you. One of our "
+    "certified Pilates instructors will follow up shortly to book your first session.<br><br>"
+    "<strong>Pick your studio</strong> &mdash; Main or Tioga, both fully equipped with Reformer, Tower, Chair and suspension straps.<br>"
+    "<strong>Start with Foundations</strong> &mdash; our 50-minute Reformer class built for beginners. Your instructor will steer you to the right level."
+    "<br><br>Questions? Call <a href=\"tel:3523774955\">(352) 377-4955</a> or email "
+    "<a href=\"mailto:memberservices@ghfc.com\">memberservices@ghfc.com</a>."
+    "<br><br><strong>Your GHF Team</strong> &mdash; <em>Gainesville Strong Since 1978</em>",
+    img=f"{IMG}/GHF_Pilates_Pilates_at_GHF_Pilates_GHF_Main_Gyms_with_Pilates_Pilates_Studio_2025-4.jpg",
+    crumb="Thank you",
+    actions=[("Explore Our Locations", "locations.html", True)],
+    page=True,
+    hero_cls="hero--compact",
+)
+
 # ============================================================ BUILD ALL
 PAGES = [
     ("index.html", "Gainesville Health & Fitness | The Gym That's Best At Helping Beginners", "The gym that's best at helping beginners — with staff to guide your journey. 3 locations, 900+ classes monthly, open 24/7 at GHF Main.", "", home_body),
@@ -3929,6 +3986,7 @@ PAGES = [
     ("thank-you-pass.html", "Thank You | Free Pass | Gainesville Health & Fitness", "Thanks for requesting your free all-access pass. A team member will follow up shortly to set it up.", "", thankyoupass_body),
     ("thank-you-tribe.html", "Thank You | TRIBE Team Training | Gainesville Health & Fitness", "Thanks for requesting your free TRIBE Team Training session. A coach will follow up shortly to book it.", "", thankyoutribe_body),
     ("thank-you-crossfit.html", "Thank You | CrossFit at GHF Tioga | Gainesville Health & Fitness", "Thanks for requesting your free CrossFit class. A coach will follow up shortly to book it at GHF Tioga.", "", thankyoucrossfit_body),
+    ("thank-you-pilates.html", "Thank You | Pilates at GHF | Gainesville Health & Fitness", "Thanks for requesting your free Pilates session. An instructor will follow up shortly to book it at GHF Main or GHF Tioga.", "", thankyoupilates_body),
 ]
 
 
