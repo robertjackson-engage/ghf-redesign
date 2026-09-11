@@ -1726,3 +1726,63 @@ body.jn-open { overflow: hidden !important; }
 /* keep IntelliPay's Lightbox above the takeover (it uses near-max z-index already; this is belt and braces) */
 #intellipay-lightbox, .intellipay-md-modal, .intellipay-md-overlay { z-index: 2147483000; }
 @media (max-width: 600px) { .jn-modal__sec { display: none; } }
+
+
+/* ---------- member savings directory ---------- */
+.sv__filters { border-top: 1px solid var(--line-dark); padding-top: 26px; margin-bottom: 30px; }
+.sv__search { position: relative; margin-bottom: 20px; }
+.sv__search input {
+  width: 100%; background: transparent; border: none;
+  border-bottom: 1px solid var(--line-dark); padding: 12px 34px 12px 0;
+  font: inherit; font-size: 17px; color: var(--ink);
+}
+.sv__search input::placeholder { color: var(--muted-dark); }
+.sv__search input:focus { border-color: var(--accent); }
+.sv__search input::-webkit-search-cancel-button { display: none; }
+.sv__clear {
+  position: absolute; right: 0; top: 50%; transform: translateY(-50%);
+  font-size: 22px; line-height: 1; color: var(--muted-dark); background: none; border: 0;
+}
+.sv__clear:hover { color: var(--accent); }
+.sv__cat { max-width: 340px; }
+.sv__bar {
+  display: flex; align-items: center; justify-content: space-between; gap: 18px;
+  margin-top: 22px; padding-top: 16px; border-top: 1px solid var(--line-dark);
+}
+.sv__count { font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted-dark); }
+.sv__reset {
+  font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--accent); background: none; border: 0; padding: 0;
+}
+.sv__reset:hover { text-decoration: underline; }
+.sv__empty { padding: 40px 0; color: var(--muted-dark); }
+.sv__grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1px; background: var(--line-dark); }
+.biz {
+  display: grid; grid-template-columns: 74px minmax(0, 1fr); gap: 16px; align-items: start;
+  padding: 24px; background: var(--paper);
+}
+.biz--nologo { grid-template-columns: minmax(0, 1fr); }
+.biz[hidden] { display: none !important; }
+.biz__logo {
+  width: 74px; aspect-ratio: 1; display: flex; align-items: center; justify-content: center;
+  background: #fff; border: 1px solid var(--line-dark); padding: 6px;
+}
+.biz__logo img { max-width: 100%; max-height: 100%; width: auto; height: auto; object-fit: contain; }
+.biz__cat { font-size: 9.5px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--accent); margin-bottom: 6px; }
+.biz__name {
+  font-family: var(--font-display); text-transform: uppercase; font-weight: 400;
+  font-size: 18px; line-height: 1.15; letter-spacing: 0.02em;
+}
+.biz__offers { list-style: none; margin: 10px 0 0; }
+.biz__offers li { position: relative; padding: 3px 0 3px 15px; font-size: 14.5px; color: var(--ink); }
+.biz__offers li::before { content: ""; position: absolute; left: 0; top: 13px; width: 8px; height: 1px; background: var(--accent); }
+.biz__meta { margin-top: 12px; font-size: 13px; color: var(--muted-dark); line-height: 1.7; }
+.biz__meta a { color: var(--muted-dark); text-decoration: underline; text-underline-offset: 3px; }
+.biz__meta a:hover { color: var(--accent); }
+.biz__meta i { font-style: normal; opacity: .45; margin: 0 5px; }
+
+@media (max-width: 1000px) { .sv__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 640px) {
+  .sv__grid { grid-template-columns: minmax(0, 1fr); }
+  .sv__cat { max-width: none; }
+}

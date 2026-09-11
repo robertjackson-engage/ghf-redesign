@@ -1,0 +1,1668 @@
+[
+  {
+    "name": "A Automotive Electric Specialist",
+    "slug": "a-automotive-electric-specialist",
+    "category": "Auto",
+    "offers": [
+      "25% off diagnostic fee"
+    ],
+    "phone": "(352)338-3513",
+    "address": "2948 NE 21st Way",
+    "website": "",
+    "logo": ""
+  },
+  {
+    "name": "Ahrens Auto",
+    "slug": "ahrens-auto",
+    "category": "Auto",
+    "offers": [
+      "10% off scheduled maintenance labor"
+    ],
+    "phone": "(352)378-5710",
+    "address": "604 SE 2nd St",
+    "website": "http://www.ahrensauto.com",
+    "logo": "ahrens-auto.jpg"
+  },
+  {
+    "name": "Campus Scooters",
+    "slug": "campus-scooters",
+    "category": "Auto",
+    "offers": [
+      "30% off oil change service package",
+      "Buy one eye wear get one eye wear FREE (of equal or lesser value)"
+    ],
+    "phone": "(352)263-0425",
+    "address": "3219 SW 40th Blvd",
+    "website": "",
+    "logo": ""
+  },
+  {
+    "name": "Continental Imports MV#11119",
+    "slug": "continental-imports-mv-11119",
+    "category": "Auto",
+    "offers": [
+      "10% off labor (up to $50)"
+    ],
+    "phone": "(352)377-6604",
+    "address": "1219 South Main Street",
+    "website": "http://continentalimports.com",
+    "logo": "continental-imports-mv-11119.jpg"
+  },
+  {
+    "name": "Custom Glass Tinting",
+    "slug": "custom-glass-tinting",
+    "category": "Auto",
+    "offers": [
+      "Auto - 15% Off Comfort and Pinnacle Series",
+      "Residential - $50 off Home Window Tinting (Minimum $300 residential purchase)"
+    ],
+    "phone": "(352)377-8468",
+    "address": "1605 NW 6th St.",
+    "website": "http://www.customglasstint.com/index.html",
+    "logo": "custom-glass-tinting.png"
+  },
+  {
+    "name": "Gainesville Detailing",
+    "slug": "gainesville-detailing",
+    "category": "Auto",
+    "offers": [
+      "15% Off Any Service or Detailing"
+    ],
+    "phone": "(352)215-0026",
+    "address": "",
+    "website": "http://www.gainesvilledetailing.com",
+    "logo": "gainesville-detailing.jpg"
+  },
+  {
+    "name": "Gainesville Nissan",
+    "slug": "gainesville-nissan",
+    "category": "Auto",
+    "offers": [
+      "$100 under dealer invoice, plus all applicable rebates",
+      "Free car washes",
+      "$19.95 oil changes (up to 5 quarts conventional oil)"
+    ],
+    "phone": "(352)371-2023",
+    "address": "3915 N. Main Street",
+    "website": "http://www.gainesvillenissan.com/index.htm",
+    "logo": "gainesville-nissan.jpg"
+  },
+  {
+    "name": "Honda of Gainesville",
+    "slug": "honda-of-gainesville",
+    "category": "Auto",
+    "offers": [
+      "Free car wash for 2 yrs and free maintenance. New cars and Trucks: 1 % over invoice. Used Cars: 2% over cost. Call James Quesenberry for details 352-372-2329 ext 440.",
+      "Express Service Oil Change only $17.95. *Hybrids, Synthetics and Diesels price higher. Up to 5 quarts standard oil. (free car wash and multi point inspection)"
+    ],
+    "phone": "(352)372-2329 x440",
+    "address": "3801 N. Main Street",
+    "website": "http://www.hondaofgainesville.com/index.htm",
+    "logo": "honda-of-gainesville.jpg"
+  },
+  {
+    "name": "Next Generation Detailing, LLC",
+    "slug": "next-generation-detailing-llc",
+    "category": "Auto",
+    "offers": [
+      "10% off any service or detailing. Not valid with other offers or discounts."
+    ],
+    "phone": "(888)746-7179",
+    "address": "",
+    "website": "",
+    "logo": "next-generation-detailing-llc.jpg"
+  },
+  {
+    "name": "Park Place Car Wash",
+    "slug": "park-place-car-wash",
+    "category": "Auto",
+    "offers": [
+      "$5.00 off The Superior Car Wash only!",
+      "Not applicable to other services."
+    ],
+    "phone": "(352)331-5588",
+    "address": "7404 NW 4th Blvd",
+    "website": "http://parkplacecarwash.com/",
+    "logo": "park-place-car-wash.jpg"
+  },
+  {
+    "name": "Sha's Car Detailing",
+    "slug": "shas-car-detailing",
+    "category": "Auto",
+    "offers": [
+      "15% off any service"
+    ],
+    "phone": "(352)626-8605",
+    "address": "Mobile",
+    "website": "http://www.shascardetailing.com/",
+    "logo": "shas-car-detailing.jpeg"
+  },
+  {
+    "name": "Tire Kingdom",
+    "slug": "tire-kingdom",
+    "category": "Auto",
+    "offers": [
+      "10% off Tires, Wheels, & Mechanical Services",
+      "Free Flat Repair or Tire Rotation",
+      "$7 off any oil change"
+    ],
+    "phone": "",
+    "address": "",
+    "website": "http://www.tirekingdom.com",
+    "logo": "tire-kingdom.jpg"
+  },
+  {
+    "name": "Tomlinson Motor Company",
+    "slug": "tomlinson-motor-company",
+    "category": "Auto",
+    "offers": [
+      "$100 off the purchase price of any vehicle for current GHF members"
+    ],
+    "phone": "(352)372-0313",
+    "address": "3580 N Main St",
+    "website": "http://www.tomlinsonmotorco.com/",
+    "logo": "tomlinson-motor-company.png"
+  },
+  {
+    "name": "Accent Plastic Surgery & Aesthetics",
+    "slug": "accent-plastic-surgery-aesthetics",
+    "category": "Beauty & Spa",
+    "offers": [
+      "10% off laser hair removal packages (doesn't apply to single sessions)",
+      "10% off corrective facials"
+    ],
+    "phone": "(352)271-5388",
+    "address": "4340 Newberry Road, Suite 301",
+    "website": "http://www.accentmd.com/florida-cosmetic-surgery/",
+    "logo": "accent-plastic-surgery-aesthetics.png"
+  },
+  {
+    "name": "Ciao Bella Salon",
+    "slug": "ciao-bella-salon",
+    "category": "Beauty & Spa",
+    "offers": [
+      "10% off any service!"
+    ],
+    "phone": "(352)379-9200",
+    "address": "235 S. Main Street, Ste. 102",
+    "website": "http://www.ciaobellahairsalon.com/",
+    "logo": "ciao-bella-salon.jpg"
+  },
+  {
+    "name": "Dermacare Laser and Skin Care Clinics",
+    "slug": "dermacare-laser-and-skin-care-clinics",
+    "category": "Beauty & Spa",
+    "offers": [
+      "10% off treatments and products. Includes laser tattoo removal, chemical peels, laser hair removal, facials, electrolysis, Obagi, and more (excludes Botox and fillers)."
+    ],
+    "phone": "(352)331-5355",
+    "address": "101 NW 75th Street, Suite 3",
+    "website": "http://www.dermacaregainesville.com",
+    "logo": "dermacare-laser-and-skin-care-clinics.jpg"
+  },
+  {
+    "name": "Eden Michele Salon",
+    "slug": "eden-michele-salon",
+    "category": "Beauty & Spa",
+    "offers": [
+      "10% off hair services (select stylists) & retail"
+    ],
+    "phone": "(352)888-7528",
+    "address": "2441 NW 43rd St #2b",
+    "website": "https://www.edenmichelesalon.com",
+    "logo": "eden-michele-salon.png"
+  },
+  {
+    "name": "Elegance Studio",
+    "slug": "elegance-studio",
+    "category": "Beauty & Spa",
+    "offers": [
+      "$10 off any cut or color service.",
+      "$25 off organic keratin treatment."
+    ],
+    "phone": "(352)376-1000",
+    "address": "4040 Newberry Road",
+    "website": "http://www.elegancestudio.net",
+    "logo": "elegance-studio.jpg"
+  },
+  {
+    "name": "Floating Lotus Spa",
+    "slug": "floating-lotus-spa",
+    "category": "Beauty & Spa",
+    "offers": [
+      "10% off your purchase"
+    ],
+    "phone": "(352)378-8125",
+    "address": "2441 NW 43rd Street, Suite 9",
+    "website": "http://thefloatinglotusspa.com",
+    "logo": "floating-lotus-spa.jpg"
+  },
+  {
+    "name": "Gainesville Dermatology Aesthetic Center",
+    "slug": "gainesville-dermatology-aesthetic-center",
+    "category": "Beauty & Spa",
+    "offers": [
+      "10% off services and products (excluding Sculptra and Fraxel)"
+    ],
+    "phone": "(352)333-3223",
+    "address": "120 NW 76th Dr",
+    "website": "http://gainesvilledermatologyaestheticcenter.com",
+    "logo": "gainesville-dermatology-aesthetic-center.jpg"
+  },
+  {
+    "name": "Gainesville Med Spa",
+    "slug": "gainesville-med-spa",
+    "category": "Beauty & Spa",
+    "offers": [
+      "OFFER: Free half hour massage with purchase of an hour"
+    ],
+    "phone": "(352)374-0909",
+    "address": "4061 NW 43 St Ste. 16",
+    "website": "http://GAINESVILLEMEDSPA.COM",
+    "logo": "gainesville-med-spa.jpg"
+  },
+  {
+    "name": "GatorBrite Teeth Whitening",
+    "slug": "gatorbrite-teeth-whitening",
+    "category": "Beauty & Spa",
+    "offers": [
+      "$15 off Teeth Whitening for all members"
+    ],
+    "phone": "(352)505-6886",
+    "address": "2725 SW 91st Street, Suite 120",
+    "website": "http://www.gatorbrite.com",
+    "logo": "gatorbrite-teeth-whitening.jpg"
+  },
+  {
+    "name": "LAE Beauty Tanning & Medispa",
+    "slug": "lae-beauty-tanning-medispa",
+    "category": "Beauty & Spa",
+    "offers": [
+      "10% Off All Services"
+    ],
+    "phone": "(352)331-9693",
+    "address": "618 NW 60th Street, Suite I",
+    "website": "http://www.laebeauty.com",
+    "logo": "lae-beauty-tanning-medispa.jpg"
+  },
+  {
+    "name": "Let's GoTattless",
+    "slug": "lets-gotattless",
+    "category": "Beauty & Spa",
+    "offers": [
+      "15% OFF on all services",
+      "Includes a free consultation"
+    ],
+    "phone": "(352)538-9198",
+    "address": "4131 NW 28th Lane, Suite 3B",
+    "website": "http://letsgotattless.com/",
+    "logo": "lets-gotattless.jpg"
+  },
+  {
+    "name": "Modern Nails & Day Spa",
+    "slug": "modern-nails-day-spa",
+    "category": "Beauty & Spa",
+    "offers": [
+      "$5 Off - Spa Mani & Spa Pedi with French / Acrylic Full Set with White Tips / Pink & White Full Set",
+      "10% Off - Eyelash Extension / Facials / Waxing",
+      "$15 Off - Teeth Whitening"
+    ],
+    "phone": "(352)332-1555",
+    "address": "Inside the Oaks Mall in front of Macy's",
+    "website": "",
+    "logo": ""
+  },
+  {
+    "name": "Perfume Experts LLC",
+    "slug": "perfume-experts-llc",
+    "category": "Beauty & Spa",
+    "offers": [
+      "20% off select perfumes"
+    ],
+    "phone": "(352)332-2000",
+    "address": "",
+    "website": "",
+    "logo": "perfume-experts-llc.png"
+  },
+  {
+    "name": "Polish Lounge Nail Spa",
+    "slug": "polish-lounge-nail-spa",
+    "category": "Beauty & Spa",
+    "offers": [
+      "10% off any services $35+"
+    ],
+    "phone": "(352)331-0006",
+    "address": "7321 NW 4th Blvd",
+    "website": "https://www.polishlounge352.com",
+    "logo": "polish-lounge-nail-spa.png"
+  },
+  {
+    "name": "PRP Regeneration Specialists, LLC",
+    "slug": "prp-regeneration-specialists-llc",
+    "category": "Beauty & Spa",
+    "offers": [
+      "10% off any Platelet Rich Plasma Treatment"
+    ],
+    "phone": "(352)260-4061",
+    "address": "9149 SW 49th Place",
+    "website": "http://www.prpregen.com",
+    "logo": "prp-regeneration-specialists-llc.png"
+  },
+  {
+    "name": "Pure Aesthetics",
+    "slug": "pure-aesthetics",
+    "category": "Beauty & Spa",
+    "offers": [
+      "15% off skin care, hair removal, cool sculpting."
+    ],
+    "phone": "(352)332-7873",
+    "address": "108 NW 76th Dr. Ste A Gainesville, FL 32607",
+    "website": "http://www.pureaestheticsgainesville.com/",
+    "logo": "pure-aesthetics.jpg"
+  },
+  {
+    "name": "Tan USA",
+    "slug": "tan-usa",
+    "category": "Beauty & Spa",
+    "offers": [
+      "$14.95 Mystic Tan Mondays (Level 2 - 1 per customer, must be used same day)"
+    ],
+    "phone": "(352)331-8266",
+    "address": "Oaks Mall Plaza",
+    "website": "",
+    "logo": "tan-usa.jpg"
+  },
+  {
+    "name": "Capes & Tiaras, LLC",
+    "slug": "capes-tiaras-llc",
+    "category": "Children's Services",
+    "offers": [
+      "GHF members get 1.5 hours of our character impersonator services for $100 ($25-$50 savings!)"
+    ],
+    "phone": "(352)575-6155",
+    "address": "5825 SE County Rd",
+    "website": "http://www.capesntiaras.com/",
+    "logo": "capes-tiaras-llc.png"
+  },
+  {
+    "name": "Jordan Glen School & Summer Camp",
+    "slug": "jordan-glen-school-summer-camp",
+    "category": "Children's Services",
+    "offers": [
+      "$25 off one camp tuition"
+    ],
+    "phone": "(352)495-2728",
+    "address": "12425 SW 154th Street",
+    "website": "http://www.JordanGlen.org",
+    "logo": "jordan-glen-school-summer-camp.jpg"
+  },
+  {
+    "name": "O2B Kids!",
+    "slug": "o2b-kids",
+    "category": "Children's Services",
+    "offers": [
+      "Buy One, Get One FREE Parent's Night Out! (Supercenter location only)"
+    ],
+    "phone": "(352)332-5500",
+    "address": "6680 W Newberry Road",
+    "website": "http://www.o2bkids.com/",
+    "logo": "o2b-kids.jpg"
+  },
+  {
+    "name": "Big Island Bowls",
+    "slug": "big-island-bowls",
+    "category": "Dining",
+    "offers": [
+      "Free Yerba Mate Tea with Purchase of a Bowl"
+    ],
+    "phone": "(631)338-5527",
+    "address": "Tioga Town Center",
+    "website": "http://bigislandbowls.com",
+    "logo": "big-island-bowls.png"
+  },
+  {
+    "name": "Blackadder Brewing Company",
+    "slug": "blackadder-brewing-company",
+    "category": "Dining",
+    "offers": [
+      "10% off purchase"
+    ],
+    "phone": "(352)339-0324",
+    "address": "618-A NW 60th St",
+    "website": "http://www.blackadderbrewing.com",
+    "logo": "blackadder-brewing-company.png"
+  },
+  {
+    "name": "Burger King",
+    "slug": "burger-king",
+    "category": "Dining",
+    "offers": [
+      "10% Off Total Food Purchase"
+    ],
+    "phone": "",
+    "address": "*multiple locations",
+    "website": "http://www.bk.com/",
+    "logo": "burger-king.jpg"
+  },
+  {
+    "name": "Chef Ami",
+    "slug": "chef-ami",
+    "category": "Dining",
+    "offers": [
+      "Get your first 2 Meals FREE",
+      "Use Coupon Code: GHFC ($57.63 value)",
+      "2 Meals for 2 People = $57.63",
+      "3 Meals for 2 People = $74.95"
+    ],
+    "phone": "(352)363-1108",
+    "address": "4101 NW 6th St.",
+    "website": "http://www.chefami.com",
+    "logo": "chef-ami.png"
+  },
+  {
+    "name": "D'Lites Emporium",
+    "slug": "dlites-emporium",
+    "category": "Dining",
+    "offers": [
+      "10% Off with Presentation of Membership Card"
+    ],
+    "phone": "(352)375-4484",
+    "address": "Two convenient locations",
+    "website": "http://www.gatordlites.com",
+    "logo": "dlites-emporium.jpg"
+  },
+  {
+    "name": "David's Real Pit BBQ",
+    "slug": "davids-real-pit-bbq",
+    "category": "Dining",
+    "offers": [
+      "FREE Dessert with purchase of adult BBQ dinner plate! (excludes $5.99 Wed/Thurs & other specials)"
+    ],
+    "phone": "(352)373-2002",
+    "address": "5121-A NW 39th Ave",
+    "website": "http://davidsbbq.com/",
+    "logo": "davids-real-pit-bbq.jpg"
+  },
+  {
+    "name": "Donut Connection",
+    "slug": "donut-connection",
+    "category": "Dining",
+    "offers": [
+      "10% discount on all items for GHF members."
+    ],
+    "phone": "(352)375-0376",
+    "address": "5205A NW 39th Ave",
+    "website": "http://www.donutconnection.com/",
+    "logo": "donut-connection.jpg"
+  },
+  {
+    "name": "Eat The 80",
+    "slug": "eat-the-80",
+    "category": "Dining",
+    "offers": [
+      "10% off Weekly Meal Delivery"
+    ],
+    "phone": "(352)234-2408",
+    "address": "1527 NW 6th Street",
+    "website": "http://www.eatthe80.com",
+    "logo": ""
+  },
+  {
+    "name": "Just Salad",
+    "slug": "just-salad",
+    "category": "Dining",
+    "offers": [
+      "10% off"
+    ],
+    "phone": "(866)673-3757",
+    "address": "1404 W University Ave",
+    "website": "http://www.justsalad.com",
+    "logo": "just-salad.jpg"
+  },
+  {
+    "name": "Muscle Meals 2 Go",
+    "slug": "muscle-meals-2-go",
+    "category": "Dining",
+    "offers": [
+      "Enjoy 10% off of your order. Use promo code GHF10."
+    ],
+    "phone": "(352)445-4578",
+    "address": "1521 S Pine Ave",
+    "website": "http://www.musclemeals2go.com",
+    "logo": "muscle-meals-2-go.jpg"
+  },
+  {
+    "name": "Pizza Hut",
+    "slug": "pizza-hut",
+    "category": "Dining",
+    "offers": [
+      "$3.00 Off Any Large Pizza! (Not valid with other offers/coupons)"
+    ],
+    "phone": "(352)374-4440",
+    "address": "",
+    "website": "http://wwww.pizzahut.com",
+    "logo": "pizza-hut.jpg"
+  },
+  {
+    "name": "Saporito",
+    "slug": "saporito",
+    "category": "Dining",
+    "offers": [
+      "10% Off any Extra Virgin Olive Oil or Balsamic Vinegar (Not valid with other offers or specials)"
+    ],
+    "phone": "(352)745-7886",
+    "address": "4401 NW 25th Place",
+    "website": "http://www.saporitoovs.com",
+    "logo": "saporito.png"
+  },
+  {
+    "name": "The Bagel Bakery",
+    "slug": "the-bagel-bakery",
+    "category": "Dining",
+    "offers": [
+      "10% Off All Purchases!"
+    ],
+    "phone": "(352)384-9110",
+    "address": "4113 NW 16th Blvd (Publix Center)",
+    "website": "http://www.facebook.com/bagelbakery",
+    "logo": "the-bagel-bakery.jpg"
+  },
+  {
+    "name": "The Pita Pit",
+    "slug": "the-pita-pit",
+    "category": "Dining",
+    "offers": [
+      "10% Off Entire Ticket. *Must Present Membership Card"
+    ],
+    "phone": "(352)692-4400",
+    "address": "1702 W. University Ave",
+    "website": "http://pitapitusa.com",
+    "logo": "the-pita-pit.jpg"
+  },
+  {
+    "name": "Candies Limousines & Motorcoaches",
+    "slug": "candies-limousines-motorcoaches",
+    "category": "Event Services",
+    "offers": [
+      "15% OFF any single day VIP Charter Tour Bus for your next event",
+      "15% OFF any VIP Limousine for your next event"
+    ],
+    "phone": "(352)332-4334",
+    "address": "",
+    "website": "http://www.candieslimo.com",
+    "logo": "candies-limousines-motorcoaches.jpg"
+  },
+  {
+    "name": "Legendary Coaches",
+    "slug": "legendary-coaches",
+    "category": "Event Services",
+    "offers": [
+      "Receive 25% OFF any single day VIP Tour Bus for your next event: Wedding, Graduations, Birthdays, Game-Days or any other special event."
+    ],
+    "phone": "(352)317-8326",
+    "address": "",
+    "website": "http://www.legendarycoaches.com",
+    "logo": "legendary-coaches.jpg"
+  },
+  {
+    "name": "Solutions Bridal Designer House",
+    "slug": "solutions-bridal-designer-house",
+    "category": "Event Services",
+    "offers": [
+      "Receive 10% off any purchase of one item for new brides.  Must show GHF membership card (some restrictions may apply)"
+    ],
+    "phone": "(352)367-0070",
+    "address": "6450 SW Archer Rd, Suite 230",
+    "website": "",
+    "logo": "solutions-bridal-designer-house.jpg"
+  },
+  {
+    "name": "Ultimate Party Bus",
+    "slug": "ultimate-party-bus",
+    "category": "Event Services",
+    "offers": [
+      "Receive one hour free with any party bus booking of five hours or more."
+    ],
+    "phone": "(352)505-4466",
+    "address": "3335 N Main Terrace",
+    "website": "",
+    "logo": "ultimate-party-bus.jpg"
+  },
+  {
+    "name": "MALGORZATA'S",
+    "slug": "malgorzatas",
+    "category": "Fashion",
+    "offers": [
+      "10% OFF First Purchase with FREE membership in the 200 Club.",
+      "200 Club provides 10% savings on cumulative spending of $200 or more.",
+      "Located in the beautiful Thornebrook Village near the Women's Center."
+    ],
+    "phone": "(352)215-8689",
+    "address": "2441 NW 43rd Street #9",
+    "website": "http://www.malgorzatas.com",
+    "logo": "malgorzatas.jpg"
+  },
+  {
+    "name": "Creative Workshop",
+    "slug": "creative-workshop",
+    "category": "Framing & Art",
+    "offers": [
+      "10% Off Custom Picture Framing Under $500, That Day",
+      "15% Off Custom Picture Framing Over $500, That Day"
+    ],
+    "phone": "(352)376-7204",
+    "address": "2035 NW 13th St",
+    "website": "http://www.creativeworkshop.net/",
+    "logo": "creative-workshop.jpg"
+  },
+  {
+    "name": "Studio T/M Ceramics",
+    "slug": "studio-t-m-ceramics",
+    "category": "Framing & Art",
+    "offers": [],
+    "phone": "(352)284-2206",
+    "address": "1854 NE 2nd St",
+    "website": "https://www.studiotmceramics.com",
+    "logo": "studio-t-m-ceramics.png"
+  },
+  {
+    "name": "Talking Walls",
+    "slug": "talking-walls",
+    "category": "Framing & Art",
+    "offers": [
+      "30% Off Your Entire Order on Custom Framing!"
+    ],
+    "phone": "(352)376-0077",
+    "address": "Reitz Union @ UF",
+    "website": "",
+    "logo": "talking-walls.jpg"
+  },
+  {
+    "name": "Edible Arrangements",
+    "slug": "edible-arrangements",
+    "category": "Gifts",
+    "offers": [
+      "$3.00 Off Any Order Of $25.00 Or More! (Mention GHFC0846 when ordering)"
+    ],
+    "phone": "(352)378-2400",
+    "address": "7050 Archer Road Ste 4101A",
+    "website": "http://www.ediblearrangements.com/",
+    "logo": "edible-arrangements.jpg"
+  },
+  {
+    "name": "Lang Jewelers",
+    "slug": "lang-jewelers",
+    "category": "Gifts",
+    "offers": [
+      "20% OFF Jewelry & Watch Repair. Select member offers - see store for details."
+    ],
+    "phone": "(352)672-6299",
+    "address": "12921 SW 1st Road, Suite 115 Town of Tioga",
+    "website": "http://www.langjewelers.com/",
+    "logo": "lang-jewelers.jpg"
+  },
+  {
+    "name": "A Team Emergency Dentistry",
+    "slug": "a-team-emergency-dentistry",
+    "category": "Health & Wellness",
+    "offers": [
+      "Free Exams & 10% Discount Off Our Fees"
+    ],
+    "phone": "(352)681-2200",
+    "address": "4031 NW 43rd St.",
+    "website": "http://www.ateamdentistry.com",
+    "logo": "a-team-emergency-dentistry.jpg"
+  },
+  {
+    "name": "B-12 RX & MORE",
+    "slug": "b-12-rx-more",
+    "category": "Health & Wellness",
+    "offers": [
+      "25% Off All Injections For GHF Members"
+    ],
+    "phone": "(352)213-5118",
+    "address": "6419 W Newberry Rd Unit F9, Gainesville, FL 32605",
+    "website": "https://b12rxandmore.com/",
+    "logo": "b-12-rx-more.png"
+  },
+  {
+    "name": "Celebrate Primary Care",
+    "slug": "celebrate-primary-care",
+    "category": "Health & Wellness",
+    "offers": [
+      "10% off monthly membership."
+    ],
+    "phone": "(352)474-8686",
+    "address": "4400 NW 23 Ave, Gainesville, FL 32606",
+    "website": "http://www.celebrateprimarycare.com/",
+    "logo": "celebrate-primary-care.png"
+  },
+  {
+    "name": "Gator CPR",
+    "slug": "gator-cpr",
+    "category": "Health & Wellness",
+    "offers": [
+      "15% off all CPR and First Aid Training (Classroom only)"
+    ],
+    "phone": "(352)727-4733",
+    "address": "1029 NW 23rd Ave",
+    "website": "http://www.gatorcpr.com",
+    "logo": "gator-cpr.jpeg"
+  },
+  {
+    "name": "Happiness Coach Angela",
+    "slug": "happiness-coach-angela",
+    "category": "Health & Wellness",
+    "offers": [
+      "Buy one happiness coaching session, get one free ($100 value)"
+    ],
+    "phone": "(352)888-4834",
+    "address": "410 NW 4th Street",
+    "website": "http://www.happinesscoachangela.com",
+    "logo": "happiness-coach-angela.png"
+  },
+  {
+    "name": "Lion Lady Fitness",
+    "slug": "lion-lady-fitness",
+    "category": "Health & Wellness",
+    "offers": [
+      "10% off any program"
+    ],
+    "phone": "(352)278-7074",
+    "address": "5200 W Newberry Rd",
+    "website": "https://www.lionladyfitness.com",
+    "logo": "lion-lady-fitness.jpeg"
+  },
+  {
+    "name": "Physique Nutrition",
+    "slug": "physique-nutrition",
+    "category": "Health & Wellness",
+    "offers": [
+      "10% Off for GHF Members & Staff"
+    ],
+    "phone": "(352)213-2679",
+    "address": "6275 West Newberry Road",
+    "website": "http://www.physiquenutritionfl.com",
+    "logo": "physique-nutrition.jpg"
+  },
+  {
+    "name": "Rejuvenation Station",
+    "slug": "rejuvenation-station",
+    "category": "Health & Wellness",
+    "offers": [
+      "Get 20% off any IV Therapy session (applicable for all IV therapy menu options, not including custom therapies) and free oxygen therapy with any purchase."
+    ],
+    "phone": "(352)261-0946",
+    "address": "194 NW 137th Drive, Suite 300",
+    "website": "http://www.rs.comfortcompass.com",
+    "logo": "rejuvenation-station.jpg"
+  },
+  {
+    "name": "Revival IV Lounge",
+    "slug": "revival-iv-lounge",
+    "category": "Health & Wellness",
+    "offers": [
+      "20% off your first visit"
+    ],
+    "phone": "(352)792-6811",
+    "address": "3300 SW Archer Rd. Suite 110",
+    "website": "http://revivalivlounge.com",
+    "logo": "revival-iv-lounge.png"
+  },
+  {
+    "name": "The BioMat Company",
+    "slug": "the-biomat-company",
+    "category": "Health & Wellness",
+    "offers": [
+      "Free Shipping (a $20 - $160) & $100 Discount with License or Certification in Health or Wellness Industry"
+    ],
+    "phone": "",
+    "address": "",
+    "website": "http://biomatworld.com",
+    "logo": "the-biomat-company.jpg"
+  },
+  {
+    "name": "Total Nutrition Gainesville",
+    "slug": "total-nutrition-gainesville",
+    "category": "Health & Wellness",
+    "offers": [
+      "20% off to all GHF members on non sale items",
+      "Free shaker cups and t-shirts with purchase"
+    ],
+    "phone": "(352)225-3074",
+    "address": "3443 SW Archer Road #A-4",
+    "website": "http://totalnutritiongainesville.com",
+    "logo": "total-nutrition-gainesville.jpg"
+  },
+  {
+    "name": "Zenful Accupuncture",
+    "slug": "zenful-accupuncture",
+    "category": "Health & Wellness",
+    "offers": [
+      "30% off New Patient Appointment and voucher for one complementary cupping session; 20% off Follow up appointments"
+    ],
+    "phone": "(727)688-1590",
+    "address": "920 NW 8th Ave A, Gainesville FL 32601",
+    "website": "http://zenfulacupuncture.wixsite.com",
+    "logo": "zenful-accupuncture.png"
+  },
+  {
+    "name": "Absolute Quality Tree Service",
+    "slug": "absolute-quality-tree-service",
+    "category": "Home Improvement & Furnishings",
+    "offers": [
+      "10% Off All Services"
+    ],
+    "phone": "(352)246-8183",
+    "address": "",
+    "website": "",
+    "logo": "absolute-quality-tree-service.jpg"
+  },
+  {
+    "name": "ADT Security",
+    "slug": "adt-security",
+    "category": "Home Improvement & Furnishings",
+    "offers": [
+      "CALL: John J at 352-575-0031 - Using The Code A202864 for Your GHFC 20% OFF"
+    ],
+    "phone": "(352)575-0031",
+    "address": "",
+    "website": "http://www.adt.com",
+    "logo": "adt-security.jpg"
+  },
+  {
+    "name": "Bath Fitter",
+    "slug": "bath-fitter",
+    "category": "Home Improvement & Furnishings",
+    "offers": [
+      "Free Safety Bar or Soap Dish with Purchase of Bathfitter System!"
+    ],
+    "phone": "(352)624-8827",
+    "address": "",
+    "website": "http://www.bathfitter.com/",
+    "logo": "bath-fitter.jpg"
+  },
+  {
+    "name": "Brehm Roofing and Restoration",
+    "slug": "brehm-roofing-and-restoration",
+    "category": "Home Improvement & Furnishings",
+    "offers": [
+      "The offer is as follows: 5% off of a roof repair (insurance claims excluded)."
+    ],
+    "phone": "(352)664-8585",
+    "address": "1344 NW 121st Way",
+    "website": "https://brehmroofing.com/",
+    "logo": "brehm-roofing-and-restoration.jpg"
+  },
+  {
+    "name": "Corda-Roy's Bean Bag Beds",
+    "slug": "corda-roys-bean-bag-beds",
+    "category": "Home Improvement & Furnishings",
+    "offers": [
+      "20% Off Purchases For All Members. (Does not include other offers or sale items)"
+    ],
+    "phone": "(352)332-1837",
+    "address": "5310 NW 8th Ave",
+    "website": "http://cordaroys.com",
+    "logo": "corda-roys-bean-bag-beds.jpg"
+  },
+  {
+    "name": "Curb Appeal Lawn Services",
+    "slug": "curb-appeal-lawn-services",
+    "category": "Home Improvement & Furnishings",
+    "offers": [
+      "10% off 1 year lawn care contract",
+      "20% off 1 year gardener contract"
+    ],
+    "phone": "(352)505-0917",
+    "address": "",
+    "website": "",
+    "logo": ""
+  },
+  {
+    "name": "Liberty Air",
+    "slug": "liberty-air",
+    "category": "Home Improvement & Furnishings",
+    "offers": [
+      "$50 off repairs or $200 off new system. Offer applies to new customers residing in Alachua County."
+    ],
+    "phone": "(352)333-1985",
+    "address": "",
+    "website": "http://www.libertyairac.com",
+    "logo": "liberty-air.jpg"
+  },
+  {
+    "name": "Mr Tree and Lawn Services, LLC",
+    "slug": "mr-tree-and-lawn-services-llc",
+    "category": "Home Improvement & Furnishings",
+    "offers": [
+      "5% off for members of GHF"
+    ],
+    "phone": "(352)682-4444",
+    "address": "1410 NW 13th St. Suite 3",
+    "website": "http://mrtreeandlawnservice.com/",
+    "logo": "mr-tree-and-lawn-services-llc.jpg"
+  },
+  {
+    "name": "Natural Element Painting & Repair",
+    "slug": "natural-element-painting-repair",
+    "category": "Home Improvement & Furnishings",
+    "offers": [
+      "One Free Exterior Home Pressure Washing (a $125 value), with purchase of $1,000 painting, wall covering and/or repair job."
+    ],
+    "phone": "(352)514-0005",
+    "address": "2510 NW 90th Terrace",
+    "website": "http://naturalelementspainting.com/",
+    "logo": "natural-element-painting-repair.jpg"
+  },
+  {
+    "name": "Pro'Scape Professional Lawn & Landscaping Service",
+    "slug": "proscape-professional-lawn-landscaping-service",
+    "category": "Home Improvement & Furnishings",
+    "offers": [
+      "First month free yard service with one year agreement OR",
+      "15% off pressure washing service"
+    ],
+    "phone": "(352)222-5027",
+    "address": "",
+    "website": "",
+    "logo": ""
+  },
+  {
+    "name": "Real Deal Handyman & Lawn Services",
+    "slug": "real-deal-handyman-lawn-services",
+    "category": "Home Improvement & Furnishings",
+    "offers": [
+      "20% off any services of $150 or more",
+      "15% off any 1 Year Lawn or Maintenance Contract"
+    ],
+    "phone": "(850)459-9852",
+    "address": "",
+    "website": "",
+    "logo": "real-deal-handyman-lawn-services.jpg"
+  },
+  {
+    "name": "Screen Doctors, LLC",
+    "slug": "screen-doctors-llc",
+    "category": "Home Improvement & Furnishings",
+    "offers": [
+      "FREE Driveway Cleaning with Pressure Wash of Home, a $100 value!"
+    ],
+    "phone": "(352)339-3789",
+    "address": "",
+    "website": "http://www.screendoctorsllc.com/",
+    "logo": "screen-doctors-llc.jpg"
+  },
+  {
+    "name": "Sears Carpet & Air Duct Cleaning",
+    "slug": "sears-carpet-air-duct-cleaning",
+    "category": "Home Improvement & Furnishings",
+    "offers": [
+      "10% off any services.  Minimum order $125.  Cannot be combined with other discounts."
+    ],
+    "phone": "(352)377-1715",
+    "address": "",
+    "website": "http://searsclean.com/gainesville-fl",
+    "logo": "sears-carpet-air-duct-cleaning.jpg"
+  },
+  {
+    "name": "Sears Garage Doors",
+    "slug": "sears-garage-doors",
+    "category": "Home Improvement & Furnishings",
+    "offers": [
+      "$25 off any service. Minimum order $199. Cannot be combined with other offers or discounts."
+    ],
+    "phone": "(352)377-1715",
+    "address": "",
+    "website": "http://www.searsgaragedoors.com/gainesville-fl",
+    "logo": "sears-garage-doors.jpg"
+  },
+  {
+    "name": "Sleep Center Superstores",
+    "slug": "sleep-center-superstores",
+    "category": "Home Improvement & Furnishings",
+    "offers": [
+      "10% off any mattress set over $499 (*some exclusions apply, see store for details)"
+    ],
+    "phone": "(352)872-5668",
+    "address": "4994 NW 39th Ave - A",
+    "website": "",
+    "logo": "sleep-center-superstores.jpeg"
+  },
+  {
+    "name": "Wood You Furniture",
+    "slug": "wood-you-furniture",
+    "category": "Home Improvement & Furnishings",
+    "offers": [
+      "10% Off Any Purchase Under $500.00",
+      "15% Off Any Purchase Over $500.00"
+    ],
+    "phone": "(352)373-1107",
+    "address": "1601 N Main St",
+    "website": "http://www.woodyougainesville.com/",
+    "logo": "wood-you-furniture.jpg"
+  },
+  {
+    "name": "Allison Ables Property Management",
+    "slug": "allison-ables-property-management",
+    "category": "Homes/Apartments",
+    "offers": [
+      "50% Off Leasing Fee for GHF members who sign a new property management agreement"
+    ],
+    "phone": "(352)371-1828",
+    "address": "2725 SW 91st Street, Suite 120",
+    "website": "http://allisonables.com/management",
+    "logo": "allison-ables-property-management.jpg"
+  },
+  {
+    "name": "Allison Ables Real Estate",
+    "slug": "allison-ables-real-estate",
+    "category": "Homes/Apartments",
+    "offers": [
+      "Free home inspection ($350 value) when GHF members purchase with one of our agents."
+    ],
+    "phone": "(352)371-1828",
+    "address": "2725 SW 91st Street, Suite 120",
+    "website": "http://allisonables.com/",
+    "logo": "allison-ables-real-estate.jpg"
+  },
+  {
+    "name": "Amira Custom Homes",
+    "slug": "amira-custom-homes",
+    "category": "Homes/Apartments",
+    "offers": [
+      "10% off custom home plan design services"
+    ],
+    "phone": "(352)327-4409",
+    "address": "14901 Main Street",
+    "website": "https://amiracustomhomes.com",
+    "logo": "amira-custom-homes.jpg"
+  },
+  {
+    "name": "Gainesville Self Storage",
+    "slug": "gainesville-self-storage",
+    "category": "Homes/Apartments",
+    "offers": [
+      "$25 off a move-in for members and employees"
+    ],
+    "phone": "(352)462-4215",
+    "address": "4500 SW 41 Blvd.",
+    "website": "http://www.gainesvilleselfstorage.com",
+    "logo": "gainesville-self-storage.jpg"
+  },
+  {
+    "name": "Life Storage",
+    "slug": "life-storage",
+    "category": "Homes/Apartments",
+    "offers": [
+      "$35 credit at move-in for members and employees. (Cannot be combined with any other offers.)"
+    ],
+    "phone": "(352)218-0062",
+    "address": "6589 SW Archer Rd.",
+    "website": "http://www.lifestorage.com",
+    "logo": "life-storage.png"
+  },
+  {
+    "name": "Noble On Newberry",
+    "slug": "noble-on-newberry",
+    "category": "Homes/Apartments",
+    "offers": [
+      "10% off monthly storage unit or private office rental"
+    ],
+    "phone": "(352)451-4157",
+    "address": "658 NW 120th Terr.",
+    "website": "http://nobleonnewberry.com",
+    "logo": "noble-on-newberry.jpg"
+  },
+  {
+    "name": "Sapphire Builders LLC",
+    "slug": "sapphire-builders-llc",
+    "category": "Homes/Apartments",
+    "offers": [
+      "$1,000 off any upgrade on one of our homes"
+    ],
+    "phone": "(352)331-3343",
+    "address": "124 Southwest 62nd Street",
+    "website": "",
+    "logo": "sapphire-builders-llc.jpg"
+  },
+  {
+    "name": "Skobel Homes",
+    "slug": "skobel-homes",
+    "category": "Homes/Apartments",
+    "offers": [
+      "$1,000 towards Options when you purchase a new Skobel Home."
+    ],
+    "phone": "(352)505-9100",
+    "address": "",
+    "website": "http://www.skobel.com",
+    "logo": "skobel-homes.jpg"
+  },
+  {
+    "name": "Carrie Chauhan Acupuncture & Herbal Medicine LLC",
+    "slug": "carrie-chauhan-acupuncture-herbal-medicine-llc",
+    "category": "Medical Services",
+    "offers": [
+      "Free 30-minute consultation and 20% off acupuncture treatments and/or herbal consultations."
+    ],
+    "phone": "(352)260-5111",
+    "address": "3600 NW 43rd Street, E-4",
+    "website": "",
+    "logo": "carrie-chauhan-acupuncture-herbal-medicine-llc.jpg"
+  },
+  {
+    "name": "Comfort Keepers",
+    "slug": "comfort-keepers",
+    "category": "Medical Services",
+    "offers": [
+      "$150 set-up fee is waived for all GHF members."
+    ],
+    "phone": "(352)331-7760",
+    "address": "1035 NW 57th St",
+    "website": "http://www.comfortkeepers.com/office-546/gainesvil",
+    "logo": "comfort-keepers.png"
+  },
+  {
+    "name": "Cruz Davis Family & Cosmetic Dentistry",
+    "slug": "cruz-davis-family-cosmetic-dentistry",
+    "category": "Medical Services",
+    "offers": [
+      "$25 off New Patient Exam (Comprehensive Oral Evaluation, ADA code D0150)"
+    ],
+    "phone": "(352)384-0050",
+    "address": "2845 NW 41st Street",
+    "website": "http://www.CruzDavisDental.com",
+    "logo": "cruz-davis-family-cosmetic-dentistry.jpg"
+  },
+  {
+    "name": "Eileen C Golway DMD, PA",
+    "slug": "eileen-c-golway-dmd-pa",
+    "category": "Medical Services",
+    "offers": [
+      "$50 off New Patient Appointment"
+    ],
+    "phone": "(352)333-3683",
+    "address": "6801 NW 9th Blvd",
+    "website": "http://www.teethelite.com",
+    "logo": "eileen-c-golway-dmd-pa.png"
+  },
+  {
+    "name": "Gainesville OB/GYN",
+    "slug": "gainesville-ob-gyn",
+    "category": "Medical Services",
+    "offers": [
+      "15% discount on all Obagi skin care products and Botox by mentioning this ad."
+    ],
+    "phone": "(352)371-2011",
+    "address": "6400 W. Newberry Road, Suite 207",
+    "website": "http://www.gvilleobgyn.com",
+    "logo": "gainesville-ob-gyn.png"
+  },
+  {
+    "name": "Gentle Dental Care",
+    "slug": "gentle-dental-care",
+    "category": "Medical Services",
+    "offers": [
+      "NEW PATIENT SPECIAL $140 includes: A comprehensive oral exam, complete set of x-rays, and a regular cleaning. (please mention: SPECIAL11 when scheduling)"
+    ],
+    "phone": "(352)378-2555",
+    "address": "3655 SW 2nd Ave",
+    "website": "http://www.gainesvilledentist.com",
+    "logo": "gentle-dental-care.jpg"
+  },
+  {
+    "name": "Magnolia Family Dental",
+    "slug": "magnolia-family-dental",
+    "category": "Medical Services",
+    "offers": [
+      "Free bleaching with new patient comprehensive exam, full-mouth X-rays, and dental cleaning. A $372 value."
+    ],
+    "phone": "(352)373-7361",
+    "address": "4121-A NW 37 Place",
+    "website": "http://www.magnoliafamilydental.com",
+    "logo": "magnolia-family-dental.jpg"
+  },
+  {
+    "name": "Medi-Weightloss Clinic",
+    "slug": "medi-weightloss-clinic",
+    "category": "Medical Services",
+    "offers": [
+      "GHF members receive 20% off their initial visit and 10% off follow-up visits."
+    ],
+    "phone": "(352)224-1177",
+    "address": "1143 NW 64th Terrace",
+    "website": "http://www.mediweightlossclinics.com/",
+    "logo": "medi-weightloss-clinic.jpg"
+  },
+  {
+    "name": "Millhopper Family Dentistry",
+    "slug": "millhopper-family-dentistry",
+    "category": "Medical Services",
+    "offers": [
+      "$50 off 1st new patient visit"
+    ],
+    "phone": "(352)240-3114",
+    "address": "3510 NW 43rd Street",
+    "website": "http://millhopperfamilydentistry.com",
+    "logo": "millhopper-family-dentistry.gif"
+  },
+  {
+    "name": "Mode Salon",
+    "slug": "mode-salon",
+    "category": "Other",
+    "offers": [
+      "Receive 10% of any service at Mode Salon, Full Skin Care, Waxing, Nails & Hair (Gainesville only)"
+    ],
+    "phone": "",
+    "address": "603 E. University Ave.",
+    "website": "http://amodesalon.com",
+    "logo": "mode-salon.jpg"
+  },
+  {
+    "name": "Northwood Oaks Veterinary Hospital",
+    "slug": "northwood-oaks-veterinary-hospital",
+    "category": "Other",
+    "offers": [
+      "10% Discount Off Select Items"
+    ],
+    "phone": "(352)373-7387",
+    "address": "5331 NW 34th Blvd",
+    "website": "http://www.nwoaksvet.com",
+    "logo": "northwood-oaks-veterinary-hospital.png"
+  },
+  {
+    "name": "A Dog's Life",
+    "slug": "a-dogs-life",
+    "category": "Pet Care",
+    "offers": [
+      "10% off pet sitting services for 7 consecutive visits or more"
+    ],
+    "phone": "(352)262-1587",
+    "address": "11494 NE 110 Ave Archer, Fl 32618",
+    "website": "https://www.adogslifepetsitting.com",
+    "logo": "a-dogs-life.jpg"
+  },
+  {
+    "name": "Earth Pets Natural Pet Market",
+    "slug": "earth-pets-natural-pet-market",
+    "category": "Pet Care",
+    "offers": [
+      "FREE 1/2 Pound of Dog Biscuits with any Purchase! Not Valid with other offers."
+    ],
+    "phone": "(352)331-5123",
+    "address": "500 NW 60th St (By Yamato's)",
+    "website": "http://www.earthpetsflorida.com",
+    "logo": "earth-pets-natural-pet-market.jpg"
+  },
+  {
+    "name": "Earth Vets",
+    "slug": "earth-vets",
+    "category": "Pet Care",
+    "offers": [
+      "Free Exam For New Customer (one per family)",
+      "Existing Clients - 10% Discount for Professional Services"
+    ],
+    "phone": "(352)332-9991",
+    "address": "500 NW 60th St (Next to Yamatos)",
+    "website": "http://www.earthvets.com",
+    "logo": "earth-vets.jpg"
+  },
+  {
+    "name": "Gainesville Pet Sitter",
+    "slug": "gainesville-pet-sitter",
+    "category": "Pet Care",
+    "offers": [
+      "One complimentary visit for GHF members. ($17 value - Dogs, $15 value - Cats)"
+    ],
+    "phone": "(904)635-3039",
+    "address": "2246 SW 43rd Pl",
+    "website": "http://gainesvillepetsitter.com/",
+    "logo": "gainesville-pet-sitter.jpg"
+  },
+  {
+    "name": "Paws at Home",
+    "slug": "paws-at-home",
+    "category": "Pet Care",
+    "offers": [
+      "10% off pet services"
+    ],
+    "phone": "(386)462-0020",
+    "address": "",
+    "website": "http://www.pawsathomefl.com/",
+    "logo": "paws-at-home.jpg"
+  },
+  {
+    "name": "Alachua Fire Extinguisher",
+    "slug": "alachua-fire-extinguisher",
+    "category": "Professional Services",
+    "offers": [
+      "10% off all in-store purchases"
+    ],
+    "phone": "(352)377-3473",
+    "address": "2939 SW Williston Road",
+    "website": "",
+    "logo": ""
+  },
+  {
+    "name": "Allen Law Firm, P.A.",
+    "slug": "allen-law-firm-p-a",
+    "category": "Professional Services",
+    "offers": [
+      "5% off trial fee & 5% off non-trial fee"
+    ],
+    "phone": "(877)241-1933",
+    "address": "2550 SW 76th St #150",
+    "website": "http://www.billallenlaw.com/",
+    "logo": "allen-law-firm-p-a.png"
+  },
+  {
+    "name": "Allstate - Judy Locascio Agency",
+    "slug": "allstate-judy-locascio-agency",
+    "category": "Professional Services",
+    "offers": [
+      "$10 VISA gift card with any auto or life insurance quote",
+      "FREE Insurance Reviews",
+      "Located just east of GHF Main and 43rd Street"
+    ],
+    "phone": "(352)335-2505",
+    "address": "4056 Newberry Road",
+    "website": "",
+    "logo": "allstate-judy-locascio-agency.jpg"
+  },
+  {
+    "name": "Aqua-Caribbean Swimming Pool Service",
+    "slug": "aqua-caribbean-swimming-pool-service",
+    "category": "Professional Services",
+    "offers": [
+      "10% off weekly residential pool service (current year service rate) with your GHF membership card."
+    ],
+    "phone": "(352)505-0859",
+    "address": "3324 W. University Ave. Suite 225",
+    "website": "http://www.aqua-caribbean.com",
+    "logo": "aqua-caribbean-swimming-pool-service.jpeg"
+  },
+  {
+    "name": "Be Secure Locksmith",
+    "slug": "be-secure-locksmith",
+    "category": "Professional Services",
+    "offers": [
+      "10% car key duplication and emergency lockout services"
+    ],
+    "phone": "(352)414-5351",
+    "address": "3438 SW 24th Ave",
+    "website": "http://www.locksmithgainesvillefl.net",
+    "logo": "be-secure-locksmith.png"
+  },
+  {
+    "name": "C Squared Wireless",
+    "slug": "c-squared-wireless",
+    "category": "Professional Services",
+    "offers": [
+      "10% off phones, services and accessories (authorized Boost Mobile/Virgin Wireless Dealer)"
+    ],
+    "phone": "(352)333-7564",
+    "address": "7349 W Newberry",
+    "website": "",
+    "logo": "c-squared-wireless.jpg"
+  },
+  {
+    "name": "Fine, Farkash, & Parlapiano P.A.",
+    "slug": "fine-farkash-parlapiano-p-a",
+    "category": "Professional Services",
+    "offers": [
+      "10% off the non trial fee",
+      "10% off the trial fee"
+    ],
+    "phone": "(352)376-6046",
+    "address": "622 NE 1st St.",
+    "website": "http://www.ffplaw.com",
+    "logo": "fine-farkash-parlapiano-p-a.png"
+  },
+  {
+    "name": "Florida Uniforms & Supplies",
+    "slug": "florida-uniforms-supplies",
+    "category": "Professional Services",
+    "offers": [
+      "10% Off Any Purchase! (Excludes Sale Prices and Littmans)"
+    ],
+    "phone": "(352)367-9060",
+    "address": "Oaks Mall Plaza, 2nd Floor",
+    "website": "",
+    "logo": "florida-uniforms-supplies.jpg"
+  },
+  {
+    "name": "Gadget Guys",
+    "slug": "gadget-guys",
+    "category": "Professional Services",
+    "offers": [
+      "10% off all services and accessories"
+    ],
+    "phone": "(352)421-5409",
+    "address": "3147 SW 45th St #20, Gainesville, FL 32608",
+    "website": "http://www.gadgetguyrepairs.com",
+    "logo": "gadget-guys.png"
+  },
+  {
+    "name": "GatorTec",
+    "slug": "gatortec",
+    "category": "Professional Services",
+    "offers": [
+      "10% off of in-store computer service (labor only, parts excluded)"
+    ],
+    "phone": "(352)505-7582",
+    "address": "13005 SW 1st Road",
+    "website": "http://www.gatortec.com",
+    "logo": "gatortec.jpg"
+  },
+  {
+    "name": "Huntington Learning Center",
+    "slug": "huntington-learning-center",
+    "category": "Professional Services",
+    "offers": [
+      "$79 for academic evaluation (regular service $195) & 10% off tuition."
+    ],
+    "phone": "(352)448-6888",
+    "address": "3822 W. Newberry Rd. Ste A",
+    "website": "http://www.huntingtonhelps.com/",
+    "logo": "huntington-learning-center.jpg"
+  },
+  {
+    "name": "Jani King",
+    "slug": "jani-king",
+    "category": "Professional Services",
+    "offers": [
+      "Free deep impact initial clean with a 12 month agreement"
+    ],
+    "phone": "(352)792-6061",
+    "address": "408 W. University Ave #203",
+    "website": "http://www.janiking.com",
+    "logo": "jani-king.png"
+  },
+  {
+    "name": "KAPLAN Test Prep and Admissions",
+    "slug": "kaplan-test-prep-and-admissions",
+    "category": "Professional Services",
+    "offers": [
+      "10% Off for Gainesville Health & Fitness Members"
+    ],
+    "phone": "(352)377-0804",
+    "address": "686 Museum Road",
+    "website": "http://www.kaptest.com",
+    "logo": "kaplan-test-prep-and-admissions.jpg"
+  },
+  {
+    "name": "LegalShield & IDShield",
+    "slug": "legalshield-idshield",
+    "category": "Professional Services",
+    "offers": [
+      "Discounted Group Pricing for LegalShield and/or IDShield Individual and Family Plans",
+      "Small Business Legal Plans",
+      "Discounted Group Pricing for Commercial Drivers Legal Plan",
+      "All Plans Month-to-Month"
+    ],
+    "phone": "(352)317-7500",
+    "address": "",
+    "website": "http://www.legalshield.com/info/ghf",
+    "logo": "legalshield-idshield.png"
+  },
+  {
+    "name": "Merry Maids",
+    "slug": "merry-maids",
+    "category": "Professional Services",
+    "offers": [
+      "We want to offer 10% off all services AND $100 off! $20 off 5 cleans for new ongoing clients.",
+      "owner4683@merrymaids.net"
+    ],
+    "phone": "(352)727-4400",
+    "address": "4585 NW 6th St. STE D",
+    "website": "http://www.merrymaidsofgainesville.com",
+    "logo": "merry-maids.jpg"
+  },
+  {
+    "name": "Online Potential",
+    "slug": "online-potential",
+    "category": "Professional Services",
+    "offers": [
+      "Enjoy a 25% Discount on any web marketing services"
+    ],
+    "phone": "(352)234-4372",
+    "address": "",
+    "website": "http://gainesville-marketing.com/",
+    "logo": "online-potential.jpg"
+  },
+  {
+    "name": "Simplify Home Organizing",
+    "slug": "simplify-home-organizing",
+    "category": "Professional Services",
+    "offers": [
+      "20% off your first virtual home organizing session"
+    ],
+    "phone": "(352)888-4834",
+    "address": "410 NW 4th Street",
+    "website": "http://www.simplifyhomeorganizing.com",
+    "logo": "simplify-home-organizing.jpg"
+  },
+  {
+    "name": "SparkIt Creative",
+    "slug": "sparkit-creative",
+    "category": "Professional Services",
+    "offers": [
+      "Additional 15% off any contract or non-contract service.",
+      "Can be paired with other discounts"
+    ],
+    "phone": "(239)980-6995",
+    "address": "2700 SW 13th Street",
+    "website": "http://sparkitcreative.org",
+    "logo": ""
+  },
+  {
+    "name": "Studio Olivia",
+    "slug": "studio-olivia",
+    "category": "Professional Services",
+    "offers": [
+      "15% off all packages and free DVD of photos"
+    ],
+    "phone": "(352)514-9973",
+    "address": "",
+    "website": "http://www.studioolivia.com",
+    "logo": "studio-olivia.jpg"
+  },
+  {
+    "name": "The Tutoring Company",
+    "slug": "the-tutoring-company",
+    "category": "Professional Services",
+    "offers": [
+      "10% off tutoring sessions"
+    ],
+    "phone": "(352)328-1993",
+    "address": "909 NW 101 Drive",
+    "website": "http://thetutoringwebsite.com",
+    "logo": "the-tutoring-company.png"
+  },
+  {
+    "name": "UF Mover Guys",
+    "slug": "uf-mover-guys",
+    "category": "Professional Services",
+    "offers": [
+      "10% off your entire move"
+    ],
+    "phone": "(352)415-0886",
+    "address": "4001 W Newberry Road",
+    "website": "http://www.ufmoverguys.com",
+    "logo": "uf-mover-guys.jpg"
+  },
+  {
+    "name": "Chain Reaction",
+    "slug": "chain-reaction",
+    "category": "Sports",
+    "offers": [
+      "20% off labor, parts and accessories",
+      "10% off new bikes"
+    ],
+    "phone": "(352)373-4052",
+    "address": "1630 W. University Ave",
+    "website": "http://www.chainreactionbikes.com/",
+    "logo": "chain-reaction.jpg"
+  },
+  {
+    "name": "Fencers' Club Gainesville",
+    "slug": "fencers-club-gainesville",
+    "category": "Sports",
+    "offers": [
+      "First month of classes FREE"
+    ],
+    "phone": "(386)853-0717",
+    "address": "22 NE 11th St",
+    "website": "http://www.fencersclubgainesville.com/",
+    "logo": "fencers-club-gainesville.jpg"
+  },
+  {
+    "name": "Lloyd Clarke Sports",
+    "slug": "lloyd-clarke-sports",
+    "category": "Sports",
+    "offers": [
+      "10% off any regular priced merchandise"
+    ],
+    "phone": "(352)372-7836",
+    "address": "1504 NW 13th St",
+    "website": "http://www.lloydclarkesports.com/",
+    "logo": "lloyd-clarke-sports.jpg"
+  },
+  {
+    "name": "Meadowbrook Golf Club",
+    "slug": "meadowbrook-golf-club",
+    "category": "Sports",
+    "offers": [
+      "FREE lunch and a FREE warm up bucket of range balls with every 18 hole round of of golf purchased. $10 value"
+    ],
+    "phone": "(352)332-0577",
+    "address": "3200 NW 98th St",
+    "website": "http://www.playmeadowbrook.com",
+    "logo": "meadowbrook-golf-club.jpg"
+  },
+  {
+    "name": "The Super Cool Bike Shop",
+    "slug": "the-super-cool-bike-shop",
+    "category": "Sports",
+    "offers": [
+      "10% Off Spin Shoes, Clothing Parts & Accessories",
+      "5% Off All Bikes"
+    ],
+    "phone": "(352)371-2453",
+    "address": "3460 W University Ave",
+    "website": "http://www.supercoolbikeshop.com",
+    "logo": "the-super-cool-bike-shop.jpg"
+  },
+  {
+    "name": "Anderson's Outdoor Adventures",
+    "slug": "andersons-outdoor-adventures",
+    "category": "Travel & Adventure",
+    "offers": [
+      "15% Off Any Rental At Any Of Our 4 Locations"
+    ],
+    "phone": "(352)507-0059",
+    "address": "8500 NE SR 47 High Springs, FL",
+    "website": "http://www.aoafun.com",
+    "logo": "andersons-outdoor-adventures.png"
+  }
+]

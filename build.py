@@ -727,6 +727,89 @@ def rows_expand(items):
     return out
 
 
+SAVINGS = json.load(open(os.path.join(CONTENT, "member-savings.json"))) \
+    if os.path.exists(os.path.join(CONTENT, "member-savings.json")) else []
+
+
+def esc_attr(v):
+    return (str(v or "").replace("&", "&amp;").replace('"', "&quot;")
+            .replace("<", "&lt;").replace(">", "&gt;"))
+
+
+def savings_directory(items):
+    """The Member Savings partner directory.
+
+    Every business is rendered into the HTML — the category select and the search
+    box only show and hide, so with JavaScript off this is still the complete,
+    readable directory rather than an empty shell."""
+    if not items:
+        return ""
+    cats = sorted({b["category"] for b in items}, key=str.lower)
+    opts = "".join(f'<option value="{esc_attr(c)}">{c}</option>' for c in cats)
+
+    cards = ""
+    for b in items:
+        logo = (f'<div class="biz__logo"><img src="{IMG}/savings/{b["logo"]}" alt="" '
+                f'loading="lazy" decoding="async"></div>') if b.get("logo") else ""
+        offers = "".join(f'<li>{o}</li>' for o in b["offers"])
+        offers_html = f'<ul class="biz__offers">{offers}</ul>' if offers else ""
+        meta = []
+        if b.get("phone"):
+            tel = _re.sub(r"[^0-9]", "", b["phone"])
+            meta.append(f'<a href="tel:{tel}">{b["phone"]}</a>')
+        if b.get("address"):
+            meta.append(f'<span>{b["address"]}</span>')
+        if b.get("website"):
+            meta.append(f'<a href="{esc_attr(b["website"])}" target="_blank" rel="noopener">Visit website</a>')
+        meta_html = f'<p class="biz__meta">{" <i>&middot;</i> ".join(meta)}</p>' if meta else ""
+        # without a logo the body would otherwise land in the 74px logo column
+        nologo = "" if b.get("logo") else " biz--nologo"
+        cards += f"""
+        <article class="biz{nologo}" data-cat="{esc_attr(b["category"])}" data-find="{esc_attr((b["name"] + " " + " ".join(b["offers"]) + " " + b["category"]).lower())}">
+          {logo}
+          <div class="biz__body">
+            <p class="biz__cat">{b["category"]}</p>
+            <h3 class="biz__name">{b["name"]}</h3>
+            {offers_html}
+            {meta_html}
+          </div>
+        </article>"""
+
+    return f"""
+<section class="section section--light" id="directory">
+  <div class="wrap">
+    <div class="cards-head">
+      <div>
+        <p class="eyebrow">Participating businesses</p>
+        <h2 class="h-display reveal" style="font-size:clamp(34px,4.6vw,72px)">Where your card <span class="serif">works</span></h2>
+      </div>
+      <p class="body-copy reveal" style="max-width:38ch">Show your GHF membership card to claim these offers. No coupons, no apps &mdash; just your card.</p>
+    </div>
+
+    <div class="sv" data-total="{len(items)}">
+      <div class="sv__filters">
+        <div class="sv__search">
+          <input type="search" id="svSearch" placeholder="Search a business, an offer or a category" aria-label="Search participating businesses" autocomplete="off">
+          <button type="button" class="sv__clear" aria-label="Clear search" hidden>&times;</button>
+        </div>
+        <label class="gx__select sv__cat"><span>Category</span>
+          <select id="svCat" aria-label="Filter by category"><option value="">All categories</option>{opts}</select>
+        </label>
+        <div class="sv__bar">
+          <p class="sv__count" aria-live="polite">{len(items)} businesses</p>
+          <button type="button" class="sv__reset" hidden>Clear filters</button>
+        </div>
+      </div>
+      <p class="sv__empty" hidden>No businesses match that search. <button type="button" class="gx__link" data-sv-reset>Clear it</button> to see all {len(items)}.</p>
+      <div class="sv__grid">{cards}
+      </div>
+    </div>
+  </div>
+  <script src="assets/js/savings.js?v={V}" defer></script>
+</section>
+"""
+
+
 def page(filename, title, desc, active, body):
     html = head(title, desc) + header_html(active) + body + footer_html()
     with open(os.path.join(OUT, filename), "w") as f:
@@ -3392,7 +3475,7 @@ savings_body = hero(
     </div>
   </div>
 </section>
-""" + cta_band(
+""" + savings_directory(SAVINGS) + cta_band(
     'Your membership pays you <span class="serif">back</span>',
     "Ready to start a more fit life? Become a GHF member today for as little as $15 per week.",
     f"{IMG}/Family_Membership_Plans.jpg",
