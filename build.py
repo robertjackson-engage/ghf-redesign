@@ -2843,7 +2843,7 @@ hyrox_body = hero(
     "Gainesville Health &amp; Fitness is North Central Florida's home for official HYROX training &mdash; the world's fastest-growing fitness format. Whether you are training to compete or just want the most effective functional workout you have ever done, this is your base.",
     img=f"{IMG}/hyrox-sled.jpg",
     crumb='Training &nbsp;/&nbsp; HYROX',
-    actions=[("Try a Class", "#first-class", True), ("See The Eight Stations", "#stations", False)],
+    actions=[("Try a Class", "#pass", True), ("See The Eight Stations", "#stations", False)],
     meta=["Official HYROX affiliate", "Race-day equipment", "Coached for all levels"],
     page=True,
 ) + f"""
@@ -2876,7 +2876,7 @@ hyrox_body = hero(
      "Beginners typically start by learning the eight stations one at a time in a coached setting, building a base of strength and running endurance before adding intensity, practising form first and speed second, and training two to three times a week to build consistency without burnout."],
     f"{IMG}/hyrox-wall-ball.jpg",
     "Athlete completing wall balls in a HYROX competition",
-    cta=("Try a Class", "#first-class"), tag="Beginners",
+    cta=("Try a Class", "#pass"), tag="Beginners",
 ) + split(
     "Race-day equipment", "03",
     'Train on the <span class="serif">real</span> thing',
@@ -2975,7 +2975,7 @@ hyrox_body = hero(
   </div>
 </section>
 """ + f"""
-<section class="section section--light" id="signup">
+<section class="section section--light" id="pass">
   <div class="wrap">
     <div class="intro-grid">
       <div>
