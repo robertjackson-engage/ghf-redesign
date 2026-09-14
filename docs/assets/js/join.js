@@ -116,7 +116,7 @@
   }
 
   /* ---------- cart ---------- */
-  var planChosen = false;
+  var planChosen = false, terminalReady = false;
   var quoteSeq = 0;
   function quoteNow() {
     var seq = ++quoteSeq;   /* ignore responses that arrive out of order */
@@ -202,7 +202,7 @@
       armCharge();
       var tries = 0, rv = setInterval(function () {
         tries++;
-        if (intellipay.isReady) { clearInterval(rv); var b = $("#payNow"); if (b) b.disabled = false; status("ok", "Secure window ready"); }
+        if (intellipay.isReady) { clearInterval(rv); terminalReady = true; syncPayBtn(); }
         else if (tries > 80) { clearInterval(rv); status("bad", "Secure window didn't respond. Reload and try again."); }
       }, 250);
     }).catch(function (e) { status("bad", "Secure window unavailable: " + e.message); });
@@ -232,29 +232,49 @@
   /* ---------- step 4: one card, charged today AND kept for dues ---------- */
   function armCharge() {
     if (typeof intellipay === "undefined" || !terminalLoaded) return;
+    /* coming back to this step must not leave Pay stuck disabled: the readiness
+       poll only runs on first load, so re-check the flag here too. */
+    if (intellipay.isReady) { terminalReady = true; syncPayBtn(); }
     try { intellipay.setStoreOnly(false); intellipay.setACHAvailable(false); intellipay.setCCAvailable(true); } catch (e) {}
     $("#ipay-amount").value = Number(rec.dueToday).toFixed(2);
     brandLightbox("today");
     intellipay.runOnApproval(onPaid);
     intellipay.runOnNonApproval(function (r) {
       $("#payOut").innerHTML = '<div class="jn-note warn">' + ((r && r.declinereason) || "That card was declined.") + " Please try another.</div>";
-      var b = $("#payNow"); if (b) b.disabled = false;
+      syncPayBtn();
     });
   }
 
+  function syncPayBtn() {
+    var b = $("#payNow"), ack = $("#ackDues");
+    if (!b) return;
+    var acked = !!(ack && ack.checked);
+    b.disabled = !(terminalReady && acked);
+    /* a greyed button next to "Secure window ready" reads as broken — say which of
+       the two conditions is actually missing. */
+    if (terminalReady) status(acked ? "ok" : "", acked ? "Secure window ready"
+      : "Tick the box above to enable payment.");
+  }
+
   function renderToday() {
-    var a = money(rec.dueToday);
+    var a = money(rec.dueToday), r = money(member.recurringWithTax);
     $("#todayBox").innerHTML =
       '<p class="jn-lede" style="margin:0 0 8px">One charge today, then you\'re set.</p>' +
       '<div class="big">' + a + "</div>" +
       '<div class="jn-note"><b>This same card becomes your recurring dues method.</b> Your dues draft ' +
-      money(member.recurringWithTax) + ' every other Wednesday from the card you pay with now. ' +
+      r + ' every other Wednesday from the card you pay with now. ' +
       'You can switch it to a different card or your bank account on the next screen.</div>' +
+      '<label class="ack" for="ackDues"><input type="checkbox" id="ackDues">' +
+      '<span>I understand that after today\'s ' + a + ', my dues of <b>' + r + '</b> will be charged ' +
+      'automatically every other Wednesday to this same payment method until I cancel.</span></label>' +
       '<button class="jn-btn" type="button" id="payNow" disabled>Pay ' + a + "</button>";
+    $("#ackDues").addEventListener("change", syncPayBtn);
     $("#payNow").addEventListener("click", function () {
+      if (this.disabled) return;
       this.disabled = true; $("#payOut").innerHTML = '<p class="lock">Opening secure window\u2026</p>';
       if (typeof intellipay !== "undefined") intellipay.onSubmit();
     });
+    syncPayBtn();
   }
 
   /* The card that paid today is ALSO registered as the recurring method. Both calls matter:

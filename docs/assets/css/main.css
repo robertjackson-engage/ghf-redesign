@@ -1731,6 +1731,15 @@ label:not(.opt){display:block;font-size:11px;letter-spacing:.16em;text-transform
 .jn-note{border-left:2px solid var(--accent);background:rgba(13,111,191,.07);padding:13px 16px;
  font-size:13.5px;color:var(--muted);margin-top:18px;line-height:1.6}
 .jn-note.warn{border-color:#d98324;background:rgba(217,131,36,.08)}
+/* consent to recurring dues — required before the pay button unlocks, so it has to
+   read as a control, not as more fine print sitting under the note above it. */
+.jn label.ack{display:flex;gap:12px;align-items:flex-start;margin:18px 0 22px;padding:14px 16px;
+ border:1px solid var(--line);border-radius:3px;background:rgba(255,255,255,.02);
+ font-size:13.5px;line-height:1.55;color:var(--bone);cursor:pointer;
+ text-transform:none;letter-spacing:normal;font-weight:400}
+.jn label.ack:hover{border-color:var(--accent)}
+.jn label.ack input{flex:0 0 auto;width:20px;height:20px;margin:1px 0 0;accent-color:var(--accent);cursor:pointer}
+.jn label.ack b{color:var(--bone);font-weight:700}
 .jn .ok{color:var(--accent-soft);font-weight:600}
 .jn .bad{color:#e07a6f;font-weight:600}
 .jn .lock{font-size:12px;color:var(--muted);margin-top:14px;display:flex;align-items:center;gap:8px}

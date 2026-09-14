@@ -1,0 +1,263 @@
+- generic [ref=f25e1]:
+  - banner [ref=f25e2]:
+    - generic [ref=f25e3]:
+      - link "Gainesville Health & Fitness — home" [ref=f25e4] [cursor=pointer]:
+        - /url: index.html
+        - img "Gainesville Health & Fitness" [ref=f25e5]
+      - button "Open menu" [ref=f25e7] [cursor=pointer]:
+        - generic [ref=f25e8]: Menu
+  - main [ref=f25e12]:
+    - generic [ref=f25e13]:
+      - generic [ref=f25e16]:
+        - link "Home" [ref=f25e17] [cursor=pointer]:
+          - /url: index.html
+        - text: / Join Online
+      - generic [ref=f25e18]:
+        - paragraph [ref=f25e19]: Join Online — Memberships from $29.99 + tax
+        - heading "Join Gainesville's best gym — online" [level=1] [ref=f25e20]:
+          - generic [ref=f25e21]: Join Gainesville's
+          - generic [ref=f25e23]: best gym — online
+        - paragraph [ref=f25e25]:
+          - text: Be part of Gainesville's largest, state-of-the-art fitness community, where your membership connects you to expert guidance, innovative programs, and top-tier amenities for both physical and mental well-being.
+          - emphasis [ref=f25e26]:
+            - text: Must be 18 years or older to join without parent or guardian. Not quite ready to join?
+            - link "Try GHF with a free gym pass" [ref=f25e27] [cursor=pointer]:
+              - /url: ghf-pass.html#claim
+            - text: .
+        - generic [ref=f25e28]:
+          - paragraph [ref=f25e29]:
+            - text: All memberships are less than
+            - strong [ref=f25e30]: $16
+            - text: a week
+          - generic [ref=f25e31]: One membership, 3 locations
+        - generic [ref=f25e33]:
+          - link "Start My Membership →" [ref=f25e34] [cursor=pointer]:
+            - /url: "#start"
+            - text: Start My Membership
+            - generic [ref=f25e35]: →
+          - link "Or Call (352) 377-4955 →" [ref=f25e36] [cursor=pointer]:
+            - /url: tel:3523774955
+            - text: Or Call (352) 377-4955
+            - generic [ref=f25e37]: →
+    - dialog "Join online" [ref=f25e39]:
+      - generic [ref=f25e40]:
+        - generic [ref=f25e41]:
+          - text: Gainesville Health & Fitness
+          - emphasis [ref=f25e42]: join
+        - button "Close" [ref=f25e43] [cursor=pointer]: ×
+      - region "Join online" [ref=f25e44]:
+        - list "Steps" [ref=f25e45]:
+          - listitem [ref=f25e46]:
+            - generic [ref=f25e47]: "01"
+            - text: ✓ Your details
+          - listitem [ref=f25e48]:
+            - generic [ref=f25e49]: "02"
+            - text: ✓ Home club
+          - listitem [ref=f25e50]:
+            - generic [ref=f25e51]: "03"
+            - text: ✓ Membership
+          - listitem [ref=f25e52]:
+            - generic [ref=f25e53]: "04"
+            - text: Due today
+        - generic [ref=f25e54]:
+          - generic [ref=f25e189]:
+            - paragraph [ref=f25e190]: Step four
+            - heading "Total due today" [level=1] [ref=f25e191]
+            - generic [ref=f25e192]:
+              - paragraph [ref=f25e193]: One charge today, then you're set.
+              - generic [ref=f25e194]: $191.52
+              - generic [ref=f25e195]: This same card becomes your recurring dues method. Your dues draft $32.09 every other Wednesday from the card you pay with now. You can switch it to a different card or your bank account on the next screen.
+              - generic [ref=f25e196] [cursor=pointer]:
+                - checkbox "I understand that after today's $191.52, my dues of $32.09 will be charged automatically every other Wednesday to this same payment method until I cancel." [checked] [active] [ref=f25e197]
+                - generic [ref=f25e198]: I understand that after today's $191.52, my dues of $32.09 will be charged automatically every other Wednesday to this same payment method until I cancel.
+              - button "Pay $191.52" [ref=f25e199] [cursor=pointer]
+            - generic [ref=f25e200]: Secure window ready
+            - paragraph [ref=f25e202]: 🔒 Entered directly with our payment processor. GHF never sees your card number.
+            - button "Back" [ref=f25e203] [cursor=pointer]
+          - complementary [ref=f25e204]:
+            - generic [ref=f25e205]:
+              - heading "Your cart" [level=3] [ref=f25e206]
+              - generic [ref=f25e207]:
+                - generic [ref=f25e208]:
+                  - text: Month-to-Month — starting fee
+                  - generic [ref=f25e209]: $149.00
+                - generic [ref=f25e210]:
+                  - text: First dues installment
+                  - generic [ref=f25e211]: $29.99
+                - generic [ref=f25e212]:
+                  - text: Sales tax (7%)
+                  - generic [ref=f25e213]: $12.53
+                - generic [ref=f25e214]:
+                  - generic [ref=f25e215]: Due today
+                  - generic [ref=f25e216]: $191.52
+                - generic [ref=f25e217]: Then $32.09 every other Wednesday (includes tax).
+    - generic [ref=f25e78]:
+      - generic [ref=f25e79]:
+        - paragraph [ref=f25e80]: Every GHF membership includes
+        - heading "The benefits and amenities of Gainesville's best gym" [level=2] [ref=f25e81]
+        - paragraph [ref=f25e82]: With a strong culture of service, every employee goes above and beyond to help you reach your full potential. You're going to feel good here.
+      - list [ref=f25e84]:
+        - listitem [ref=f25e85]: → 24-hour access at GHF Main
+        - listitem [ref=f25e86]: → Fitness staff to help you every time
+        - listitem [ref=f25e87]: → 900+ free fitness classes each month
+        - listitem [ref=f25e88]: → Free hot yoga classes
+        - listitem [ref=f25e89]: → Largest variety of cardio & weight training machines
+        - listitem [ref=f25e90]: → One membership, 3 locations
+        - listitem [ref=f25e91]: → GHF Women only fitness location
+        - listitem [ref=f25e92]: → Indoor basketball and volleyball
+        - listitem [ref=f25e93]: → Renovated indoor heated pools
+        - listitem [ref=f25e94]: → Sauna, steam, hot tub, cold pool
+        - listitem [ref=f25e95]: → Full-time housekeeping
+        - listitem [ref=f25e96]: → Free lockers
+        - listitem [ref=f25e97]: → Free babysitting
+        - listitem [ref=f25e98]: → Member savings program
+    - generic [ref=f25e101]:
+      - generic [ref=f25e102]:
+        - generic [ref=f25e103]: Our Expertise
+        - heading "Helping beginners get started" [level=3] [ref=f25e104]
+      - generic [ref=f25e105]:
+        - generic [ref=f25e106]: Our Passion
+        - heading "Guiding you to break out of your comfort zone and unleash your fullest potential" [level=3] [ref=f25e107]
+      - generic [ref=f25e108]:
+        - generic [ref=f25e109]: Our Promise
+        - heading "You're going to feel good here" [level=3] [ref=f25e110]
+    - generic [ref=f25e113]:
+      - heading "Or call (352) 377-4955 today" [level=2] [ref=f25e114]
+      - paragraph [ref=f25e115]: Not quite ready to join? Try GHF with a free gym pass — there is no charge, no obligation and no risk.
+      - generic [ref=f25e116]:
+        - link "Try GHF For Free →" [ref=f25e117] [cursor=pointer]:
+          - /url: ghf-pass.html#claim
+          - text: Try GHF For Free
+          - generic [ref=f25e118]: →
+        - link "Request Pricing & More Info →" [ref=f25e119] [cursor=pointer]:
+          - /url: contact.html#pricing
+          - text: Request Pricing & More Info
+          - generic [ref=f25e120]: →
+  - contentinfo [ref=f25e121]:
+    - generic [ref=f25e123]:
+      - generic [ref=f25e124]:
+        - link [ref=f25e125] [cursor=pointer]:
+          - /url: index.html
+          - img "Gainesville Health & Fitness" [ref=f25e126]
+        - paragraph [ref=f25e127]: The gym that's best at helping beginners — with staff to guide your journey. One membership, three locations.
+        - generic [ref=f25e128]:
+          - link "Facebook" [ref=f25e129] [cursor=pointer]:
+            - /url: https://www.facebook.com/gainesvillefit
+            - text: FB
+          - link "Instagram" [ref=f25e130] [cursor=pointer]:
+            - /url: https://www.instagram.com/gainesvillehealth
+            - text: IG
+          - link "YouTube" [ref=f25e131] [cursor=pointer]:
+            - /url: https://www.youtube.com/user/GHFCadmin
+            - text: YT
+          - link "LinkedIn" [ref=f25e132] [cursor=pointer]:
+            - /url: https://www.linkedin.com/company/gainesville-health-&-fitness
+            - text: IN
+      - generic [ref=f25e133]:
+        - heading "Explore" [level=5] [ref=f25e134]
+        - generic [ref=f25e135]:
+          - link "Join Online" [ref=f25e136] [cursor=pointer]:
+            - /url: join.html
+          - link "Free All-Access Pass" [ref=f25e137] [cursor=pointer]:
+            - /url: ghf-pass.html#claim
+          - link "Blog" [ref=f25e138] [cursor=pointer]:
+            - /url: blog.html
+          - link "Why GHF" [ref=f25e139] [cursor=pointer]:
+            - /url: why-ghf.html
+          - link "Group Classes" [ref=f25e140] [cursor=pointer]:
+            - /url: group-fitness.html
+          - link "Personal Training" [ref=f25e141] [cursor=pointer]:
+            - /url: personal-training.html
+          - link "Strength Training" [ref=f25e142] [cursor=pointer]:
+            - /url: strength-training.html
+          - link "Amenities" [ref=f25e143] [cursor=pointer]:
+            - /url: amenities.html
+          - link "Recovery" [ref=f25e144] [cursor=pointer]:
+            - /url: recovery.html
+          - link "Chill Studio" [ref=f25e145] [cursor=pointer]:
+            - /url: chill.html
+          - link "Cancel Chill" [ref=f25e146] [cursor=pointer]:
+            - /url: chill-cancel.html
+          - link "J-Bar Smoothies" [ref=f25e147] [cursor=pointer]:
+            - /url: jbar.html
+          - link "Court Sports" [ref=f25e148] [cursor=pointer]:
+            - /url: court-sports.html
+          - link "Echo Outdoor Pavilion" [ref=f25e149] [cursor=pointer]:
+            - /url: echo.html
+          - link "Sky Cycle" [ref=f25e150] [cursor=pointer]:
+            - /url: cycle.html
+          - link "GHF Live" [ref=f25e151] [cursor=pointer]:
+            - /url: live.html
+          - link "Cancer Recovery" [ref=f25e152] [cursor=pointer]:
+            - /url: cancer-recovery.html
+          - link "Kid's Club" [ref=f25e153] [cursor=pointer]:
+            - /url: kids-club.html
+          - link "Member Savings" [ref=f25e154] [cursor=pointer]:
+            - /url: member-savings.html
+          - link "Bring a Guest" [ref=f25e155] [cursor=pointer]:
+            - /url: bring-a-guest.html
+          - link "FAQ" [ref=f25e156] [cursor=pointer]:
+            - /url: faq.html
+      - generic [ref=f25e157]:
+        - heading "Programs" [level=5] [ref=f25e158]
+        - generic [ref=f25e159]:
+          - link "Signature Training" [ref=f25e160] [cursor=pointer]:
+            - /url: training.html
+          - link "Hot Yoga" [ref=f25e161] [cursor=pointer]:
+            - /url: hot-yoga.html
+          - link "Pilates" [ref=f25e162] [cursor=pointer]:
+            - /url: pilates.html
+          - link "TRIBE Team Training" [ref=f25e163] [cursor=pointer]:
+            - /url: tribe.html
+          - link "CrossFit" [ref=f25e164] [cursor=pointer]:
+            - /url: crossfit.html
+          - link "X-Force Body" [ref=f25e165] [cursor=pointer]:
+            - /url: xforce.html
+          - link "Seniors" [ref=f25e166] [cursor=pointer]:
+            - /url: seniors.html
+          - link "Pool & Aqua Center" [ref=f25e167] [cursor=pointer]:
+            - /url: pool.html
+          - link "Locations & Hours" [ref=f25e168] [cursor=pointer]:
+            - /url: locations.html
+      - generic [ref=f25e169]:
+        - heading "Stay connected with GHF" [level=5] [ref=f25e170]
+        - link "(352) 377-4955" [ref=f25e171] [cursor=pointer]:
+          - /url: tel:3523774955
+        - link "memberservices@ghfc.com" [ref=f25e172] [cursor=pointer]:
+          - /url: mailto:memberservices@ghfc.com
+        - link "Email Directory" [ref=f25e173] [cursor=pointer]:
+          - /url: contact.html
+        - generic [ref=f25e174]:
+          - textbox "Email address" [ref=f25e175]:
+            - /placeholder: Sign up for our newsletter
+          - button "Join" [ref=f25e176] [cursor=pointer]
+    - generic [aria-hidden]: GAINESVILLE
+    - generic [ref=f25e178]:
+      - generic [ref=f25e179]: ©2026 Gainesville Health & Fitness. All Rights Reserved.
+      - generic [ref=f25e180]:
+        - link "Contact Us" [ref=f25e181] [cursor=pointer]:
+          - /url: contact.html
+        - link "Careers" [ref=f25e182] [cursor=pointer]:
+          - /url: contact.html
+        - link "Privacy Policy" [ref=f25e183] [cursor=pointer]:
+          - /url: contact.html
+        - link "Accessibility" [ref=f25e184] [cursor=pointer]:
+          - /url: contact.html
+  - generic:
+    - button "Chat with GHF Coach" [ref=f25e185] [cursor=pointer]
+    - button "Have questions? I'm here to help. Dismiss":
+      - generic:
+        - emphasis: Have questions?
+        - text: I'm here to help.
+      - button "Dismiss": ✕
+    - dialog "GHF Coach chat":
+      - generic:
+        - generic:
+          - generic: GHF Coach
+          - generic: AI Concierge · Powered by Claude
+        - button "Close chat": ✕
+      - generic:
+        - textbox "Message":
+          - /placeholder: Ask about classes, pricing, hours…
+        - button "Send": →
+      - generic: GHF Coach is an AI assistant — for account questions call (352) 377-4955.
