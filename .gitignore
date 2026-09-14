@@ -10,3 +10,6 @@ __pycache__/
 .env
 intellipay/.env
 .env
+
+# browser-test scratch output
+.playwright-mcp/
