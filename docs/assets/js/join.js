@@ -89,7 +89,7 @@
     club = c.clubs[0];
     $("#plans").innerHTML = Object.keys(c.plans).map(function (k, i) {
       var v = c.plans[k];
-      return '<label class="opt' + (i ? "" : " sel") + '" data-p="' + k + '"><span class="tick"></span>' +
+      return '<label class="opt" data-p="' + k + '"><span class="tick"></span>' +
         (v.badge ? '<span class="tag">' + v.badge + "</span>" : "") +
         '<div class="nm">' + v.name + "</div>" +
         '<div class="pr"><b>' + money(v.dues) + "</b> + tax every other Wednesday · " + money(v.startFee) + " to start</div>" +
@@ -97,7 +97,7 @@
     }).join("");
     /* add-ons are intentionally not offered in the join flow — three plans only.
        They remain in the server catalog for later use. */
-    wire(); quoteNow();
+    wire();   /* no quoteNow() here — the cart stays hidden until a plan is picked */
   }).catch(function (e) {
     $("#clubs").innerHTML = '<div class="jn-note warn">We couldn\'t load membership options right now (' + e.message + '). Please try again in a moment or call (352) 377-4955.</div>';
   });
@@ -112,15 +112,18 @@
   }
   function wire() {
     pick("[data-v]", function (e) { club = e.dataset.v; });
-    pick("[data-p]", function (e) { plan = e.dataset.p; quoteNow(); });
+    pick("[data-p]", function (e) { plan = e.dataset.p; planChosen = true; $("#mOut").innerHTML = ""; quoteNow(); });
   }
 
   /* ---------- cart ---------- */
+  var planChosen = false;
   var quoteSeq = 0;
   function quoteNow() {
     var seq = ++quoteSeq;   /* ignore responses that arrive out of order */
+    if (!planChosen) return;          /* nothing to show until step 3 is answered */
     api("/api/quote?plan=" + encodeURIComponent(plan) + "&addons=").then(function (q) {
       if (seq !== quoteSeq) return;
+      $("#cartSide").hidden = false;
       $("#cart").innerHTML =
         q.lines.map(function (l) { return '<div class="ln">' + l.label + "<b>" + money(l.amount) + "</b></div>"; }).join("") +
         '<div class="ln">Sales tax (' + (CAT.taxRate * 100).toFixed(0) + "%)<b>" + money(q.tax) + "</b></div>" +
@@ -155,6 +158,10 @@
 
   /* step 3: plan and club are both known — create the member, then go and take payment */
   $("#toPay").addEventListener("click", function () {
+    if (!planChosen) {
+      $("#mOut").innerHTML = '<div class="jn-note warn">Please choose a membership to continue.</div>';
+      return;
+    }
     var btn = this; btn.disabled = true; $("#mOut").innerHTML = "";
     api("/api/member", { firstName: $("#firstName").value.trim(), lastName: $("#lastName").value.trim(),
       email: $("#email").value.trim(), phone: $("#phone").value.trim(), club: club, plan: plan, addons: [] })

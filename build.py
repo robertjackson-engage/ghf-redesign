@@ -2705,7 +2705,7 @@ join_body = hero(
         <a class="jn-btn" href="group-fitness.html">Browse classes</a>
         <a class="jn-btn ghost" href="index.html">Back to home</a></section>
     </div>
-    <aside><div class="jn-cart"><h3>Your cart</h3><div class="in" id="cart"><div class="ln">Pick a plan to see today's total</div></div></div></aside>
+    <aside id="cartSide" hidden><div class="jn-cart"><h3>Your cart</h3><div class="in" id="cart"></div></div></aside>
   </div>
 </section>
 </div>
