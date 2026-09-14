@@ -2643,29 +2643,14 @@ join_body = hero(
   </div>
 <section class="jn" id="wizard" aria-label="Join online">
   <div class="jn-rail" role="list" aria-label="Steps">
-    <div class="rl on" id="s1" role="listitem"><b>01</b><span>Home club</span></div>
-    <div class="rl" id="s2" role="listitem"><b>02</b><span>Membership</span></div>
-    <div class="rl" id="s3" role="listitem"><b>03</b><span>Your details</span></div>
-    <div class="rl" id="s4" role="listitem"><b>04</b><span>Recurring dues</span></div>
-    <div class="rl" id="s5" role="listitem"><b>05</b><span>Due today</span></div>
+    <div class="rl on" id="s1" role="listitem"><b>01</b><span>Your details</span></div>
+    <div class="rl" id="s2" role="listitem"><b>02</b><span>Home club</span></div>
+    <div class="rl" id="s3" role="listitem"><b>03</b><span>Membership</span></div>
+    <div class="rl" id="s4" role="listitem"><b>04</b><span>Due today</span></div>
   </div>
   <div class="jn-wrap">
     <div>
       <section id="c1"><p class="kick">Step one</p>
-        <h1>Pick your <span class="serif">home</span> club</h1>
-        <p class="jn-lede">One membership opens all three. Train wherever the day takes you.</p>
-        <div class="panel" id="clubs"></div>
-        <button class="jn-btn" type="button" data-go="2">Continue</button></section>
-
-      <section id="c2" class="hide"><p class="kick">Step two</p>
-        <h1>Choose your <span class="serif">membership</span></h1>
-        <p class="jn-lede">Every plan is $29.99 + tax every other Wednesday — and there is no maintenance fee, ever.</p>
-        <div class="panel" id="plans"></div>
-        <p class="kick" style="margin-top:34px">Optional add-ons</p><div id="addons"></div>
-        <button class="jn-btn ghost" type="button" data-go="1">Back</button>
-        <button class="jn-btn" type="button" data-go="3">Continue</button></section>
-
-      <section id="c3" class="hide"><p class="kick">Step three</p>
         <h1>Tell us <span class="serif">about you</span></h1>
         <p class="jn-lede">Must be 18 years or older to join without a parent or guardian.</p>
         <form class="panel" id="detailsForm" novalidate>
@@ -2675,21 +2660,26 @@ join_body = hero(
             <div><label for="phone">Mobile</label><input id="phone" name="phone" type="tel" autocomplete="tel" required></div></div>
         </form>
         <div class="field-err" id="detailsErr" hidden></div>
+        <button class="jn-btn" type="button" id="toClub">Continue</button></section>
+
+      <section id="c2" class="hide"><p class="kick">Step two</p>
+        <h1>Pick your <span class="serif">home</span> club</h1>
+        <p class="jn-lede">One membership opens all three. Train wherever the day takes you.</p>
+        <div class="panel" id="clubs"></div>
+        <button class="jn-btn ghost" type="button" data-go="1">Back</button>
+        <button class="jn-btn" type="button" data-go="3">Continue</button></section>
+
+      <section id="c3" class="hide"><p class="kick">Step three</p>
+        <h1>Choose your <span class="serif">membership</span></h1>
+        <p class="jn-lede">Every plan is $29.99 + tax every other Wednesday &mdash; and there is no maintenance fee, ever.</p>
+        <div class="panel" id="plans"></div>
         <button class="jn-btn ghost" type="button" data-go="2">Back</button>
-        <button class="jn-btn" type="button" id="toPay">Continue to payment</button>
+        <button class="jn-btn" type="button" id="toPay">Continue</button>
         <div id="mOut"></div></section>
 
-      <section id="c4" class="hide"><p class="kick">Step four · nothing is charged now</p>
-        <h1>Set up your <span class="serif">recurring</span> dues</h1>
-        <p class="jn-lede">Choose how we draft your dues every other Wednesday. You'll pay today's total on the next step.</p>
-        <div class="panel" id="recChoice">
-          <label class="opt sel" data-m="CC"><span class="tick"></span>
-            <div class="nm">Credit / debit card</div>
-            <div class="nt">Can also cover today's total — nothing to re-enter.</div></label>
-          <label class="opt" data-m="ACH"><span class="tick"></span>
-            <div class="nm">Bank draft · ACH</div>
-            <div class="nt">Simplest for ongoing dues. A card is still required for today's total.</div></label>
-        </div>
+      <section id="c4" class="hide"><p class="kick">Step four</p>
+        <h1>Total due <span class="serif">today</span></h1>
+        <div class="panel" id="todayBox"></div>
         <input class="ipayfield" data-ipayname="account"   type="hidden" id="ipay-account">
         <input class="ipayfield" data-ipayname="amount"    type="hidden" id="ipay-amount" value="0.00">
         <input class="ipayfield" data-ipayname="firstname" type="hidden" id="ipay-first">
@@ -2697,18 +2687,21 @@ join_body = hero(
         <input class="ipayfield" data-ipayname="email"     type="hidden" id="ipay-email">
         <input class="ipayfield" data-ipayname="phone"     type="hidden" id="ipay-phone">
         <input class="ipayfield" data-ipayname="invoice"   type="hidden" id="ipay-invoice">
-        <button class="jn-btn" type="button" id="vaultBtn" disabled>Save payment method</button>
-        <div class="lock"><span id="tstatus">Preparing secure window…</span></div>
-        <p class="lock">🔒 Entered directly with our payment processor. GHF never sees your card or account number.</p>
-        <div id="recOut"></div></section>
+        <div class="lock"><span id="tstatus">Preparing secure window&hellip;</span></div>
+        <p class="lock">&#128274; Entered directly with our payment processor. GHF never sees your card number.</p>
+        <button class="jn-btn ghost" type="button" data-go="3">Back</button>
+        <div id="payOut"></div></section>
 
-      <section id="c5" class="hide"><p class="kick">Step five</p>
-        <h1>Total due <span class="serif">today</span></h1>
-        <div class="panel" id="todayBox"></div><div id="payOut"></div></section>
-
-      <section id="c6" class="hide"><p class="kick">Welcome to GHF</p>
+      <section id="c5" class="hide"><p class="kick">Welcome to GHF</p>
         <h1>You're <span class="serif">in</span>.</h1>
         <div class="panel" id="done"></div>
+        <div class="panel" id="changeRec" hidden>
+          <p class="kick" style="margin-top:0">Recurring dues</p>
+          <p class="jn-lede" id="recLine" style="margin-bottom:18px"></p>
+          <p class="jn-note">Prefer your dues to come from a different card, or from your bank account? You can switch now &mdash; today's payment is already done and will not be affected.</p>
+          <button class="jn-btn ghost" type="button" id="changeRecBtn">Use a different method</button>
+          <div id="recOut"></div>
+        </div>
         <a class="jn-btn" href="group-fitness.html">Browse classes</a>
         <a class="jn-btn ghost" href="index.html">Back to home</a></section>
     </div>
