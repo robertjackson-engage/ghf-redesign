@@ -60,10 +60,11 @@ CLUBS = ["GHF Main — 4820 W Newberry Rd (open 24/7)",
 
 PLANS = {
   "24mo": {"name":"24-Month Agreement","startFee":49.00,"dues":29.99,"badge":"BEST VALUE",
+           "term":24,"afterDues":20.99,
            "note":"After 24 months dues drop to $20.99 + tax."},
   "12mo": {"name":"12-Month Agreement","startFee":49.00,"dues":29.99,"badge":"",
            "note":"After 12 months stays $29.99 + tax, renews month-to-month."},
-  "m2m":  {"name":"Month-to-Month","startFee":149.00,"dues":29.99,"badge":"MOST FLEXIBLE",
+  "m2m":  {"name":"Month-to-Month","startFee":149.00,"dues":29.99,"badge":"",
            "note":"Cancel anytime with 30 days' notice."},
 }
 ADDONS = {

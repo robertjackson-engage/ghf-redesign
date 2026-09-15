@@ -78,6 +78,52 @@
     b.addEventListener("click", function () { go(+b.dataset.go); });
   });
 
+  /* ---------- plan cards ---------- */
+  /* The badge and the value copy are decided HERE, not taken from the catalog. The live
+     site reads its catalog from the deployed API, so anything driven by a server field
+     (v.badge, which still says "MOST FLEXIBLE") would need that service redeployed before
+     it could change. Deciding it client-side means this ships with the static site.
+     Every figure below is derived from prices in the catalog — none is retyped, so a card
+     cannot drift from what the cart actually charges. */
+  var BEST = "24mo";
+  var DRAFTS_PER_YEAR = 26;   /* dues draft every other Wednesday */
+
+  function win(t) { return "<li>" + t + "</li>"; }
+  function saving(n) { return n % 1 === 0 ? "$" + n : money(n); }
+
+  function planCard(k, v, all) {
+    var feat = k === BEST;
+    var dearest = 0;
+    Object.keys(all).forEach(function (x) { if (all[x].startFee > dearest) dearest = all[x].startFee; });
+
+    /* the struck anchor only appears when another plan genuinely costs more to start */
+    var start = (feat && dearest > v.startFee)
+      ? '<s>' + money(dearest) + "</s> " + money(v.startFee) + " to start"
+      : money(v.startFee) + " to start";
+
+    var body = '<div class="nm">' + v.name + "</div>" +
+      '<div class="pr"><b>' + money(v.dues) + "</b> + tax every other Wednesday · " + start + "</div>";
+
+    if (!feat) {
+      return '<label class="opt" data-p="' + k + '" role="radio" tabindex="0" aria-checked="false">' +
+        '<span class="tick"></span>' + body + '<div class="nt">' + v.note + "</div></label>";
+    }
+
+    var wins = "";
+    if (dearest > v.startFee) wins += win("Save <b>" + saving(dearest - v.startFee) + "</b> today versus month-to-month");
+    if (v.note) wins += win(v.note);
+    /* rendered only when the catalog carries the structured figure, so the saving is
+       never a number typed in by hand */
+    if (v.afterDues && v.afterDues < v.dues)
+      wins += win("That’s about <b>" + saving(Math.round((v.dues - v.afterDues) * DRAFTS_PER_YEAR * 100) / 100) + " a year</b> you keep, for good");
+    wins += win("No maintenance fee, ever");
+
+    return '<label class="opt opt--feat sel" data-p="' + k + '" role="radio" tabindex="0" aria-checked="true">' +
+      '<div class="opt__flag">Best value — most members choose</div>' +
+      '<span class="tick"></span>' + body +
+      '<ul class="opt__wins">' + wins + "</ul></label>";
+  }
+
   /* ---------- catalog → clubs, plans, add-ons ---------- */
   api("/api/catalog").then(function (c) {
     CAT = c;
@@ -87,26 +133,34 @@
         '<div class="nm">' + parts[0].trim() + '</div><div class="nt">' + (parts[1] || "").trim() + "</div></label>";
     }).join("");
     club = c.clubs[0];
-    $("#plans").innerHTML = Object.keys(c.plans).map(function (k, i) {
-      var v = c.plans[k];
-      return '<label class="opt" data-p="' + k + '"><span class="tick"></span>' +
-        (v.badge ? '<span class="tag">' + v.badge + "</span>" : "") +
-        '<div class="nm">' + v.name + "</div>" +
-        '<div class="pr"><b>' + money(v.dues) + "</b> + tax every other Wednesday · " + money(v.startFee) + " to start</div>" +
-        '<div class="nt">' + v.note + "</div></label>";
+    $("#plans").innerHTML = Object.keys(c.plans).map(function (k) {
+      return planCard(k, c.plans[k], c.plans);
     }).join("");
     /* add-ons are intentionally not offered in the join flow — three plans only.
        They remain in the server catalog for later use. */
-    wire();   /* no quoteNow() here — the cart stays hidden until a plan is picked */
+    wire();
+    /* the featured plan starts selected, so the cart shows a real number on arrival */
+    plan = BEST; planChosen = true; quoteNow();
   }).catch(function (e) {
     $("#clubs").innerHTML = '<div class="jn-note warn">We couldn\'t load membership options right now (' + e.message + '). Please try again in a moment or call (352) 377-4955.</div>';
   });
 
   function pick(sel, fn) {
     root.querySelectorAll(sel).forEach(function (e) {
-      e.addEventListener("click", function () {
-        root.querySelectorAll(sel).forEach(function (x) { x.classList.remove("sel"); });
-        e.classList.add("sel"); fn(e);
+      function choose() {
+        root.querySelectorAll(sel).forEach(function (x) {
+          x.classList.remove("sel");
+          if (x.hasAttribute("aria-checked")) x.setAttribute("aria-checked", "false");
+        });
+        e.classList.add("sel");
+        if (e.hasAttribute("aria-checked")) e.setAttribute("aria-checked", "true");
+        fn(e);
+      }
+      e.addEventListener("click", choose);
+      /* the options are labels with no input behind them, so without this the step that
+         takes payment cannot be operated from the keyboard at all */
+      e.addEventListener("keydown", function (ev) {
+        if (ev.key === "Enter" || ev.key === " " || ev.key === "Spacebar") { ev.preventDefault(); choose(); }
       });
     });
   }

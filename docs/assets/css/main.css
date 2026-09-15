@@ -1694,6 +1694,36 @@ body.chat-open .chat-panel { opacity: 1; transform: none; pointer-events: auto; 
  border:solid #fff;border-width:0 2px 2px 0;transform:rotate(45deg)}
 .jn .tag{position:absolute;top:-8px;right:16px;background:var(--accent);color:#fff;font-family:var(--font-display);
  font-size:10px;letter-spacing:.16em;padding:4px 10px;border-radius:2px}
+/* featured plan — every card quotes the same $29.99, so the best value has to be carried
+   by weight and the savings list rather than by the headline price. Always scope these to
+   .jn: the base .opt rule above is written on a line whose comment swallows its selector,
+   so it is easy to leak option styling off the join page. */
+.jn .opt--feat{border-color:var(--accent);padding:0 0 21px;overflow:hidden;
+ background:linear-gradient(180deg,rgba(13,111,191,.16),rgba(13,111,191,.03));
+ box-shadow:0 14px 40px rgba(13,111,191,.16);transition:.35s var(--ease-out)}
+.jn .opt--feat:hover{border-color:var(--accent);transform:translateY(-2px)}
+.jn .opt--feat .opt__flag{background:var(--accent);color:#fff;font-family:var(--font-display);
+ font-size:11px;letter-spacing:.16em;text-transform:uppercase;padding:7px 21px;margin-bottom:19px}
+.jn .opt--feat .nm,.jn .opt--feat .pr,.jn .opt--feat .opt__wins{padding-left:21px;padding-right:21px}
+.jn .opt--feat .nm{font-size:22px}
+.jn .opt--feat .pr b{font-size:20px}
+.jn .opt--feat .pr s{color:var(--muted);text-decoration-thickness:1px;margin-right:6px;font-size:14px}
+.jn .opt--feat .tick{top:52px}
+.jn .opt__wins{list-style:none;margin:15px 0 0;padding:0;display:grid;gap:8px}
+.jn .opt__wins li{position:relative;padding-left:25px;font-size:14px;line-height:1.5;color:var(--bone)}
+.jn .opt__wins li b{color:var(--accent-soft);font-weight:700}
+.jn .opt__wins li::before{content:"";position:absolute;left:4px;top:4px;width:5px;height:10px;
+ border:solid var(--accent-soft);border-width:0 2px 2px 0;transform:rotate(45deg)}
+/* the two ordinary plans step back so the hierarchy reads at a glance */
+.jn .opt:not(.opt--feat) .nm{font-size:15px;color:var(--muted)}
+.jn .opt:not(.opt--feat) .pr{font-size:14px;color:var(--muted)}
+.jn .opt:not(.opt--feat) .pr b{font-size:15px;color:var(--bone)}
+.jn .opt:not(.opt--feat){padding:16px 21px}
+.jn .opt:focus-visible{outline:2px solid var(--accent-soft);outline-offset:3px}
+@media(max-width:560px){
+  .jn .opt--feat .nm{font-size:19px}
+  .jn .opt--feat .tick{top:48px}
+}
 .jn /* fields */
 label:not(.opt){display:block;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin:18px 0 7px;font-weight:600}
 .jn .opt{text-transform:none;letter-spacing:normal}
