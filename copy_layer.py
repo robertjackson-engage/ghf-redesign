@@ -140,11 +140,34 @@ def compose(filename, head_html, header, footer, body, manifest=True):
     header/footer under _site) and apply any edits. Returns the final HTML."""
     header, footer = _chrome(header, footer)
     if manifest:
-        scope = re.sub(r"\.html$", "", filename).replace("/", "__")
+        scope = scope_of(filename)
         counter, hs = {}, {"h": ""}
         head_entries = _extract(head_html, scope, counter, hs)
         body_entries = _extract(body, scope, counter, hs)
         overrides = _sync_manifest(scope, head_entries + body_entries)
         head_html = _apply(head_html, head_entries, overrides)
         body = _apply(body, body_entries, overrides)
-    return head_html + header + body + footer
+    # Invisible scope markers let the visual editor (docs/admin/edit.html) tell shared text from page text.
+    return (head_html + "<!--copy:_site-->" + header + "<!--/copy-->" + body
+            + "<!--copy:_site-->" + footer + "<!--/copy-->")
+
+
+def scope_of(filename):
+    return re.sub(r"\.html$", "", filename).replace("/", "__")
+
+
+def publish(out_dir, pages, repo, branch):
+    """Copy the catalogues (and a page index) into the built site so the visual editor can load them."""
+    import glob, shutil
+    dst = os.path.join(out_dir, "admin", "copy")
+    os.makedirs(dst, exist_ok=True)
+    for f in glob.glob(os.path.join(COPY_DIR, "*.json")):
+        shutil.copy(f, dst)
+    index = {"repo": repo, "branch": branch, "pages": []}
+    for fn, title in pages:
+        sc = scope_of(fn)
+        if os.path.exists(os.path.join(COPY_DIR, sc + ".json")):
+            index["pages"].append({"scope": sc, "file": fn, "title": title})
+    index["pages"].sort(key=lambda x: (x["file"] != "index.html", x["title"].lower()))
+    with open(os.path.join(dst, "pages.json"), "w", encoding="utf-8") as fh:
+        json.dump(index, fh, ensure_ascii=False, indent=1)

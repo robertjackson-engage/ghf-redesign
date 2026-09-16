@@ -1,0 +1,419 @@
+{
+ "page": "kids-club",
+ "items": [
+  {
+   "id": "38de690e66",
+   "where": "Browser tab title",
+   "original": "Kid's Club at GHF | Free Babysitting While You Work Out",
+   "text": "Kid's Club at GHF | Free Babysitting While You Work Out"
+  },
+  {
+   "id": "27f2f3f4d5",
+   "where": "Search-engine description",
+   "original": "Free babysitting as a member benefit while you workout at any of our three fitness centers.",
+   "text": "Free babysitting as a member benefit while you workout at any of our three fitness centers."
+  },
+  {
+   "id": "a03894de63",
+   "where": "a",
+   "original": "Home",
+   "text": "Home"
+  },
+  {
+   "id": "53d5371303",
+   "where": "text",
+   "original": "/ Kid's Club",
+   "text": "/ Kid's Club"
+  },
+  {
+   "id": "d290a58318",
+   "where": "p",
+   "original": "Kid's Club at GHF",
+   "text": "Kid's Club at GHF"
+  },
+  {
+   "id": "7e5d930565",
+   "where": "span",
+   "original": "You work out.",
+   "text": "You work out."
+  },
+  {
+   "id": "4c3dc41b37",
+   "where": "span",
+   "original": "We've got the",
+   "text": "We've got the"
+  },
+  {
+   "id": "966c794824",
+   "where": "span",
+   "original": "kids",
+   "text": "kids"
+  },
+  {
+   "id": "5135ad28a4",
+   "where": "p",
+   "original": "Two free hours of trained, attentive childcare every day, at all three clubs — ages 6 weeks to 12 years. The class, the weights, the sauna: they're yours again. Included with every membership.",
+   "text": "Two free hours of trained, attentive childcare every day, at all three clubs — ages 6 weeks to 12 years. The class, the weights, the sauna: they're yours again. Included with every membership."
+  },
+  {
+   "id": "3c3c15b02d",
+   "where": "a",
+   "original": "Get Your Free Pass",
+   "text": "Get Your Free Pass"
+  },
+  {
+   "id": "e9d7b704bb",
+   "where": "a",
+   "original": "Kids Club Hours",
+   "text": "Kids Club Hours"
+  },
+  {
+   "id": "a1764caa69",
+   "where": "span",
+   "original": "Ages 6 weeks – 12 years",
+   "text": "Ages 6 weeks – 12 years"
+  },
+  {
+   "id": "bdc7a45970",
+   "where": "span",
+   "original": "Up to 2 hours per day",
+   "text": "Up to 2 hours per day"
+  },
+  {
+   "id": "80a334ffac",
+   "where": "span",
+   "original": "No extra charge",
+   "text": "No extra charge"
+  },
+  {
+   "id": "7c39f54235",
+   "where": "p",
+   "original": "Included in every membership",
+   "text": "Included in every membership"
+  },
+  {
+   "id": "062e858ee7",
+   "where": "h2",
+   "original": "At no extra",
+   "text": "At no extra"
+  },
+  {
+   "id": "7b4ae5e7c1",
+   "where": "span · At no extra",
+   "original": "charge",
+   "text": "charge"
+  },
+  {
+   "id": "d8d5cc24de",
+   "where": "p · At no extra",
+   "original": "GHF Kid's Club is a fun, active space your kids will look forward to visiting. Kid's Club staff are specially trained to provide a caring and educational environment. Every precaution is taken to ensure your children will be safe and well cared for.",
+   "text": "GHF Kid's Club is a fun, active space your kids will look forward to visiting. Kid's Club staff are specially trained to provide a caring and educational environment. Every precaution is taken to ensure your children will be safe and well cared for."
+  },
+  {
+   "id": "14ff55dbe4",
+   "where": "p · At no extra",
+   "original": "As a GHF member, Kid's Club rules allow your children ages 6-weeks to 12-years-old to enjoy the Kid's Club for up to two hours per day while you take advantage of the other amenities of our world-class fitness facility.",
+   "text": "As a GHF member, Kid's Club rules allow your children ages 6-weeks to 12-years-old to enjoy the Kid's Club for up to two hours per day while you take advantage of the other amenities of our world-class fitness facility."
+  },
+  {
+   "id": "26b5291b93",
+   "where": "p · At no extra",
+   "original": "Kids Club hours",
+   "text": "Kids Club hours"
+  },
+  {
+   "id": "5874d66e04",
+   "where": "h2 · At no extra",
+   "original": "Three locations, all",
+   "text": "Three locations, all"
+  },
+  {
+   "id": "ef3d1e1737",
+   "where": "span · Three locations, all",
+   "original": "covered",
+   "text": "covered"
+  },
+  {
+   "id": "07a6714898",
+   "where": "h4 · Three locations, all",
+   "original": "GHF Main",
+   "text": "GHF Main"
+  },
+  {
+   "id": "50b277a21d",
+   "where": "span · Three locations, all",
+   "original": "4820 W Newberry Road",
+   "text": "4820 W Newberry Road"
+  },
+  {
+   "id": "63a75b5ce5",
+   "where": "dt · Three locations, all",
+   "original": "Mon–Fri",
+   "text": "Mon–Fri"
+  },
+  {
+   "id": "637807acc7",
+   "where": "dd · Three locations, all",
+   "original": "8am–1pm, 3pm–8:30pm",
+   "text": "8am–1pm, 3pm–8:30pm"
+  },
+  {
+   "id": "13928e5302",
+   "where": "dt · Three locations, all",
+   "original": "Saturday",
+   "text": "Saturday"
+  },
+  {
+   "id": "afe048e000",
+   "where": "dd · Three locations, all",
+   "original": "8am–2pm",
+   "text": "8am–2pm"
+  },
+  {
+   "id": "5a3aa2d770",
+   "where": "dt · Three locations, all",
+   "original": "Sunday",
+   "text": "Sunday"
+  },
+  {
+   "id": "6080ff6aca",
+   "where": "dd · Three locations, all",
+   "original": "10am–5pm",
+   "text": "10am–5pm"
+  },
+  {
+   "id": "965ef22df7",
+   "where": "h4 · Three locations, all",
+   "original": "GHF Tioga",
+   "text": "GHF Tioga"
+  },
+  {
+   "id": "0f02a1e2fe",
+   "where": "span · Three locations, all",
+   "original": "12830 SW 1st Lane",
+   "text": "12830 SW 1st Lane"
+  },
+  {
+   "id": "5b32bf2308",
+   "where": "dt · Three locations, all",
+   "original": "Mon–Fri",
+   "text": "Mon–Fri"
+  },
+  {
+   "id": "c6da71ddca",
+   "where": "dd · Three locations, all",
+   "original": "8am–1pm, 3pm–8pm",
+   "text": "8am–1pm, 3pm–8pm"
+  },
+  {
+   "id": "6e65e16229",
+   "where": "dt · Three locations, all",
+   "original": "Saturday",
+   "text": "Saturday"
+  },
+  {
+   "id": "d620c10c7b",
+   "where": "dd · Three locations, all",
+   "original": "8am–3pm",
+   "text": "8am–3pm"
+  },
+  {
+   "id": "63082e5911",
+   "where": "dt · Three locations, all",
+   "original": "Sunday",
+   "text": "Sunday"
+  },
+  {
+   "id": "ee42c424c6",
+   "where": "dd · Three locations, all",
+   "original": "10am–5pm",
+   "text": "10am–5pm"
+  },
+  {
+   "id": "868c156cc7",
+   "where": "h4 · Three locations, all",
+   "original": "GHF Women",
+   "text": "GHF Women"
+  },
+  {
+   "id": "0b24fcffb9",
+   "where": "span · Three locations, all",
+   "original": "2441 NW 43rd Street",
+   "text": "2441 NW 43rd Street"
+  },
+  {
+   "id": "fbe34721bb",
+   "where": "dt · Three locations, all",
+   "original": "Mon–Thu",
+   "text": "Mon–Thu"
+  },
+  {
+   "id": "40d6bedfce",
+   "where": "dd · Three locations, all",
+   "original": "8am–1pm, 3pm–8pm",
+   "text": "8am–1pm, 3pm–8pm"
+  },
+  {
+   "id": "620f31661c",
+   "where": "dt · Three locations, all",
+   "original": "Friday",
+   "text": "Friday"
+  },
+  {
+   "id": "f4ec2f5e61",
+   "where": "dd · Three locations, all",
+   "original": "8am–1pm, 3pm–7pm",
+   "text": "8am–1pm, 3pm–7pm"
+  },
+  {
+   "id": "902bdd3b88",
+   "where": "dt · Three locations, all",
+   "original": "Saturday",
+   "text": "Saturday"
+  },
+  {
+   "id": "35bd6b9ffe",
+   "where": "dd · Three locations, all",
+   "original": "8am–1pm",
+   "text": "8am–1pm"
+  },
+  {
+   "id": "1a24741998",
+   "where": "dt · Three locations, all",
+   "original": "Sunday",
+   "text": "Sunday"
+  },
+  {
+   "id": "15a6879859",
+   "where": "dd · Three locations, all",
+   "original": "Closed",
+   "text": "Closed"
+  },
+  {
+   "id": "0aa97c96df",
+   "where": "p · Three locations, all",
+   "original": "Request your free guest pass",
+   "text": "Request your free guest pass"
+  },
+  {
+   "id": "bcc941ba14",
+   "where": "h2 · Three locations, all",
+   "original": "Your free all-access pass is",
+   "text": "Your free all-access pass is"
+  },
+  {
+   "id": "8f77483c77",
+   "where": "span · Your free all-access pass is",
+   "original": "waiting",
+   "text": "waiting"
+  },
+  {
+   "id": "38b2e4949c",
+   "where": "p · Your free all-access pass is",
+   "original": "With your free all-access pass, you will have full membership privileges for one day at any Gainesville Health & Fitness location. There is no charge, no obligation and no risk. There is, however, a chance that you will be inspired.",
+   "text": "With your free all-access pass, you will have full membership privileges for one day at any Gainesville Health & Fitness location. There is no charge, no obligation and no risk. There is, however, a chance that you will be inspired."
+  },
+  {
+   "id": "2d37d85d55",
+   "where": "label · Your free all-access pass is",
+   "original": "First name",
+   "text": "First name"
+  },
+  {
+   "id": "20512a1cf4",
+   "where": "label · Your free all-access pass is",
+   "original": "Last name",
+   "text": "Last name"
+  },
+  {
+   "id": "189858ad52",
+   "where": "label · Your free all-access pass is",
+   "original": "Email address",
+   "text": "Email address"
+  },
+  {
+   "id": "b9baa5881b",
+   "where": "label · Your free all-access pass is",
+   "original": "Phone",
+   "text": "Phone"
+  },
+  {
+   "id": "c2b4af36ef",
+   "where": "option · Your free all-access pass is",
+   "original": "",
+   "text": ""
+  },
+  {
+   "id": "c812323c6f",
+   "where": "option · Your free all-access pass is",
+   "original": "GHF Main",
+   "text": "GHF Main"
+  },
+  {
+   "id": "355cb62423",
+   "where": "option · Your free all-access pass is",
+   "original": "GHF Women",
+   "text": "GHF Women"
+  },
+  {
+   "id": "9e2eb77448",
+   "where": "option · Your free all-access pass is",
+   "original": "GHF Tioga",
+   "text": "GHF Tioga"
+  },
+  {
+   "id": "0497a165d8",
+   "where": "label · Your free all-access pass is",
+   "original": "Preferred location",
+   "text": "Preferred location"
+  },
+  {
+   "id": "93a19db045",
+   "where": "button · Your free all-access pass is",
+   "original": "Claim My Free Pass",
+   "text": "Claim My Free Pass"
+  },
+  {
+   "id": "0de4aae83d",
+   "where": "p · Your free all-access pass is",
+   "original": "We will contact you via phone, email, or text. There is no charge, no obligation and no risk.",
+   "text": "We will contact you via phone, email, or text. There is no charge, no obligation and no risk."
+  },
+  {
+   "id": "66ff29d3b2",
+   "where": "h2 · Your free all-access pass is",
+   "original": "Your kids will bring",
+   "text": "Your kids will bring"
+  },
+  {
+   "id": "9e1e5574d7",
+   "where": "span · Your kids will bring",
+   "original": "you",
+   "text": "you"
+  },
+  {
+   "id": "567e0644a7",
+   "where": "text · Your kids will bring",
+   "original": "to the gym",
+   "text": "to the gym"
+  },
+  {
+   "id": "74ed48a80d",
+   "where": "p · Your kids will bring",
+   "original": "Ready to start a more fit life? Become a GHF member today for as little as $15 per week.",
+   "text": "Ready to start a more fit life? Become a GHF member today for as little as $15 per week."
+  },
+  {
+   "id": "2ee7adcaa4",
+   "where": "a · Your kids will bring",
+   "original": "Claim Your Free Pass",
+   "text": "Claim Your Free Pass"
+  },
+  {
+   "id": "9fe6df8314",
+   "where": "a · Your kids will bring",
+   "original": "Free All-Access Pass",
+   "text": "Free All-Access Pass"
+  }
+ ]
+}

@@ -95,3 +95,19 @@ for that sentence stops applying and the new sentence appears ready to edit.
 
 Local editing: `python3 serve.py`, open http://localhost:4173/admin/, choose **Work with Local
 Repository** and pick the repo folder — edits write straight to `content/copy/`; run the build to see them.
+
+## Visual text editor — click any text on the page to change it
+
+Open **/admin/edit.html** (there is also a "Visual text editor" button on the /admin login screen).
+
+- Pick a page from the dropdown. The live page loads in the preview; hover any text and it outlines.
+- **Click** a sentence, heading, button or menu item → it appears in the side panel. Type the new text;
+  the preview updates as you type. **Find text on this page** jumps to a phrase if it's easier.
+- Text shared by every page (header, menus, footer) is marked *Shared on every page*.
+- **Save & publish** writes the changes to the text catalogue in GitHub; the site rebuilds and goes
+  live in about a minute. The first time, it asks for a GitHub access token with write access to the
+  repo (fine-grained token, *Contents: Read and write*); it's kept only in that browser.
+- Working locally (`python3 serve.py`), Save writes straight to `content/copy/` and rebuilds the site.
+
+Under the hood this is the same Site Text catalogue as the CMS collection — the editor is just a
+friendlier way to find the entry. Both stay in sync.

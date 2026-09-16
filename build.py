@@ -5295,6 +5295,8 @@ for p in CMS_PAGES:
          render_blocks(p.get("blocks")))
     _built += 1
 
+copy_layer.publish(OUT, [(fn, title) for fn, title, _d, _a, _b in PAGES if fn not in _cms_filenames],
+                   "robertjackson-engage/ghf-redesign", "main")
 print("\nDone:", _built, "pages", f"({len(CMS_PAGES)} from CMS)")
 for _p in POSTS:
     page_sub(f"blog/{_p['_slug']}.html", f"{_p.get('title','Post')} | GHF Blog", _p.get("excerpt","")[:160], blog_post_body(_p))

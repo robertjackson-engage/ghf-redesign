@@ -1,0 +1,647 @@
+{
+ "page": "amenities",
+ "items": [
+  {
+   "id": "e236609b99",
+   "where": "Browser tab title",
+   "original": "Best Gym Amenities In One Place | GHF",
+   "text": "Best Gym Amenities In One Place | GHF"
+  },
+  {
+   "id": "2fa2349451",
+   "where": "Search-engine description",
+   "original": "More amenities. More support. More results. 24/7 access at Gainesville Health & Fitness.",
+   "text": "More amenities. More support. More results. 24/7 access at Gainesville Health & Fitness."
+  },
+  {
+   "id": "47997f00af",
+   "where": "a",
+   "original": "Home",
+   "text": "Home"
+  },
+  {
+   "id": "fa2d55f307",
+   "where": "text",
+   "original": "/ Amenities",
+   "text": "/ Amenities"
+  },
+  {
+   "id": "bd08636bfb",
+   "where": "p",
+   "original": "Amenities",
+   "text": "Amenities"
+  },
+  {
+   "id": "203154b7ad",
+   "where": "span",
+   "original": "Everything you'd pay extra for,",
+   "text": "Everything you'd pay extra for,"
+  },
+  {
+   "id": "c2467a0f1c",
+   "where": "span",
+   "original": "included",
+   "text": "included"
+  },
+  {
+   "id": "6804a54966",
+   "where": "p",
+   "original": "Hot yoga studio. Cold plunge. Sauna, steam and hot tub. A 75-foot pool. Free babysitting. Basketball. 900+ classes. Stop piecing together five subscriptions — one membership covers it all.",
+   "text": "Hot yoga studio. Cold plunge. Sauna, steam and hot tub. A 75-foot pool. Free babysitting. Basketball. 900+ classes. Stop piecing together five subscriptions — one membership covers it all."
+  },
+  {
+   "id": "4836dacd7d",
+   "where": "a",
+   "original": "Try Our Amenities for Free",
+   "text": "Try Our Amenities for Free"
+  },
+  {
+   "id": "9d7324dfb6",
+   "where": "p",
+   "original": "A premium fitness experience",
+   "text": "A premium fitness experience"
+  },
+  {
+   "id": "25108b095f",
+   "where": "h2",
+   "original": "Beyond the",
+   "text": "Beyond the"
+  },
+  {
+   "id": "11a2fa5b86",
+   "where": "span · Beyond the",
+   "original": "basics",
+   "text": "basics"
+  },
+  {
+   "id": "68beda760e",
+   "where": "p · Beyond the",
+   "original": "Your membership isn't a key card — it's an all-access pass. Train, take a class, drop the kids at Kid's Club, shoot hoops, then end in the sauna with a smoothie on the way out.",
+   "text": "Your membership isn't a key card — it's an all-access pass. Train, take a class, drop the kids at Kid's Club, shoot hoops, then end in the sauna with a smoothie on the way out."
+  },
+  {
+   "id": "bc85ab9485",
+   "where": "p · Beyond the",
+   "original": "Add it up elsewhere and you'd need a gym, a yoga studio, a spa, a pool membership and a babysitter. Here it's one roof, one price, three locations — with a staffed Kid's Club while you train, 24/7 access at Main, indoor courts, an outdoor fitness pavilion, and a full recovery suite of sauna, steam, hot tub, cold plunge and warm therapy pools.",
+   "text": "Add it up elsewhere and you'd need a gym, a yoga studio, a spa, a pool membership and a babysitter. Here it's one roof, one price, three locations — with a staffed Kid's Club while you train, 24/7 access at Main, indoor courts, an outdoor fitness pavilion, and a full recovery suite of sauna, steam, hot tub, cold plunge and warm therapy pools."
+  },
+  {
+   "id": "90f0c4d858",
+   "where": "span · Beyond the",
+   "original": "24/7 Access",
+   "text": "24/7 Access"
+  },
+  {
+   "id": "ae02262921",
+   "where": "span · Beyond the",
+   "original": "Free Babysitting",
+   "text": "Free Babysitting"
+  },
+  {
+   "id": "fad52b6d97",
+   "where": "span · Beyond the",
+   "original": "Indoor Pools",
+   "text": "Indoor Pools"
+  },
+  {
+   "id": "13865c8665",
+   "where": "span · Beyond the",
+   "original": "Outdoor Fitness",
+   "text": "Outdoor Fitness"
+  },
+  {
+   "id": "52da80ebc3",
+   "where": "span · Beyond the",
+   "original": "Basketball",
+   "text": "Basketball"
+  },
+  {
+   "id": "2da4ef8224",
+   "where": "span · Beyond the",
+   "original": "J-Bar Smoothies",
+   "text": "J-Bar Smoothies"
+  },
+  {
+   "id": "b126320cf7",
+   "where": "span · Beyond the",
+   "original": "3 Locations",
+   "text": "3 Locations"
+  },
+  {
+   "id": "f025093a6a",
+   "where": "span · Beyond the",
+   "original": "24/7 Access",
+   "text": "24/7 Access"
+  },
+  {
+   "id": "85c4a2c1d0",
+   "where": "span · Beyond the",
+   "original": "Free Babysitting",
+   "text": "Free Babysitting"
+  },
+  {
+   "id": "8d7f4e2c75",
+   "where": "span · Beyond the",
+   "original": "Indoor Pools",
+   "text": "Indoor Pools"
+  },
+  {
+   "id": "3c0412871a",
+   "where": "span · Beyond the",
+   "original": "Outdoor Fitness",
+   "text": "Outdoor Fitness"
+  },
+  {
+   "id": "bbe48d9382",
+   "where": "span · Beyond the",
+   "original": "Basketball",
+   "text": "Basketball"
+  },
+  {
+   "id": "314070ad6a",
+   "where": "span · Beyond the",
+   "original": "J-Bar Smoothies",
+   "text": "J-Bar Smoothies"
+  },
+  {
+   "id": "e3cb2a862c",
+   "where": "span · Beyond the",
+   "original": "3 Locations",
+   "text": "3 Locations"
+  },
+  {
+   "id": "d6af2efe53",
+   "where": "span · Beyond the",
+   "original": "GHF Main",
+   "text": "GHF Main"
+  },
+  {
+   "id": "f67dc467e0",
+   "where": "p · Beyond the",
+   "original": "Open 24/7",
+   "text": "Open 24/7"
+  },
+  {
+   "id": "73076c5527",
+   "where": "h2 · Beyond the",
+   "original": "GHF Main",
+   "text": "GHF Main"
+  },
+  {
+   "id": "2c9d24efd1",
+   "where": "p · GHF Main",
+   "original": "The flagship that never",
+   "text": "The flagship that never"
+  },
+  {
+   "id": "8ff0cc634b",
+   "where": "span · GHF Main",
+   "original": "sleeps",
+   "text": "sleeps"
+  },
+  {
+   "id": "7963423255",
+   "where": "p · GHF Main",
+   "original": "GHF Main makes it easy to get fit, strong and lean, with 24-hour access, pool and spa studio, free babysitting, expansive cardio selections, state-of-the-art strength training equipment, the largest free weight area, access to all three facilities, and more.",
+   "text": "GHF Main makes it easy to get fit, strong and lean, with 24-hour access, pool and spa studio, free babysitting, expansive cardio selections, state-of-the-art strength training equipment, the largest free weight area, access to all three facilities, and more."
+  },
+  {
+   "id": "50b3e52b38",
+   "where": "span · GHF Main",
+   "original": "Explore GHF Main →",
+   "text": "Explore GHF Main →"
+  },
+  {
+   "id": "6cc568840a",
+   "where": "span · GHF Main",
+   "original": "Women's Center",
+   "text": "Women's Center"
+  },
+  {
+   "id": "dc328674f4",
+   "where": "p · GHF Main",
+   "original": "Women only",
+   "text": "Women only"
+  },
+  {
+   "id": "c11bd4a918",
+   "where": "h2 · GHF Main",
+   "original": "GHF Women",
+   "text": "GHF Women"
+  },
+  {
+   "id": "41639c1ab5",
+   "where": "p · GHF Women",
+   "original": "The only gym in Gainesville just for",
+   "text": "The only gym in Gainesville just for"
+  },
+  {
+   "id": "67f4a6079d",
+   "where": "span · GHF Women",
+   "original": "women",
+   "text": "women"
+  },
+  {
+   "id": "ddf970525a",
+   "where": "p · GHF Women",
+   "original": "We believe nothing is more essential than women supporting and empowering one another. Experience and enjoy the most advanced fitness center for women in Gainesville with unique fitness classes, sauna, steam, and hot tub, free babysitting, and lots of cardio and weight equipment to lead your healthiest, happiest life and make your wellness goals come true.",
+   "text": "We believe nothing is more essential than women supporting and empowering one another. Experience and enjoy the most advanced fitness center for women in Gainesville with unique fitness classes, sauna, steam, and hot tub, free babysitting, and lots of cardio and weight equipment to lead your healthiest, happiest life and make your wellness goals come true."
+  },
+  {
+   "id": "a2538798a5",
+   "where": "span · GHF Women",
+   "original": "Explore GHF For Women →",
+   "text": "Explore GHF For Women →"
+  },
+  {
+   "id": "a2c33594d6",
+   "where": "span · GHF Women",
+   "original": "GHF Tioga",
+   "text": "GHF Tioga"
+  },
+  {
+   "id": "9788904859",
+   "where": "p · GHF Women",
+   "original": "Tioga Town Center",
+   "text": "Tioga Town Center"
+  },
+  {
+   "id": "d396aacc92",
+   "where": "h2 · GHF Women",
+   "original": "GHF Tioga",
+   "text": "GHF Tioga"
+  },
+  {
+   "id": "8dda4c7e85",
+   "where": "p · GHF Tioga",
+   "original": "Your family-friendly",
+   "text": "Your family-friendly"
+  },
+  {
+   "id": "9f3994fb1f",
+   "where": "span · GHF Tioga",
+   "original": "gym",
+   "text": "gym"
+  },
+  {
+   "id": "b887812401",
+   "where": "p · GHF Tioga",
+   "original": "From the moment you walk through the door, you will encounter friendly GHF Tioga staff, dedicated to making your health club experience remarkable. They will guide you to the right space whether you want to take a group fitness class, walk on the treadmill, or sweat it out on our outdoor fitness turf, there is always someone happy to show you how.",
+   "text": "From the moment you walk through the door, you will encounter friendly GHF Tioga staff, dedicated to making your health club experience remarkable. They will guide you to the right space whether you want to take a group fitness class, walk on the treadmill, or sweat it out on our outdoor fitness turf, there is always someone happy to show you how."
+  },
+  {
+   "id": "3a85bc4dcc",
+   "where": "p · GHF Tioga",
+   "original": "Bring the kids to the Kid's Club for complimentary babysitting or to CrossFit for Kids — there's a place for everyone in the family!",
+   "text": "Bring the kids to the Kid's Club for complimentary babysitting or to CrossFit for Kids — there's a place for everyone in the family!"
+  },
+  {
+   "id": "a247b21295",
+   "where": "span · GHF Tioga",
+   "original": "Explore GHF Tioga →",
+   "text": "Explore GHF Tioga →"
+  },
+  {
+   "id": "ffb767ca0c",
+   "where": "span · GHF Tioga",
+   "original": "Echo",
+   "text": "Echo"
+  },
+  {
+   "id": "6b7f78e4fe",
+   "where": "p · GHF Tioga",
+   "original": "Outdoor fitness pavilion",
+   "text": "Outdoor fitness pavilion"
+  },
+  {
+   "id": "75764c006a",
+   "where": "h2 · GHF Tioga",
+   "original": "Echo Outdoor Pavilion",
+   "text": "Echo Outdoor Pavilion"
+  },
+  {
+   "id": "eb5809f782",
+   "where": "p · Echo Outdoor Pavilion",
+   "original": "The largest open-air fitness",
+   "text": "The largest open-air fitness"
+  },
+  {
+   "id": "c9ce7f5882",
+   "where": "span · Echo Outdoor Pavilion",
+   "original": "destination",
+   "text": "destination"
+  },
+  {
+   "id": "8ca8ccd899",
+   "where": "p · Echo Outdoor Pavilion",
+   "original": "The largest open-air fitness destination will give you a line of new ways to move, lift, train and sweat. Located at GHF's Main campus, Echo is a multi-purpose location that offers fitness classes, functional training equipment, and community events.",
+   "text": "The largest open-air fitness destination will give you a line of new ways to move, lift, train and sweat. Located at GHF's Main campus, Echo is a multi-purpose location that offers fitness classes, functional training equipment, and community events."
+  },
+  {
+   "id": "3949f541a0",
+   "where": "p · Echo Outdoor Pavilion",
+   "original": "Echo offers specialty workshops, GroupFit classes and lifestyle events. We have open gym times for members to use the functional training equipment like tires, sleds, ropes, TRX, rowers and ski ergs, and more. These classes are included in your membership.",
+   "text": "Echo offers specialty workshops, GroupFit classes and lifestyle events. We have open gym times for members to use the functional training equipment like tires, sleds, ropes, TRX, rowers and ski ergs, and more. These classes are included in your membership."
+  },
+  {
+   "id": "1de597be09",
+   "where": "span · Echo Outdoor Pavilion",
+   "original": "Explore Echo →",
+   "text": "Explore Echo →"
+  },
+  {
+   "id": "25e74401b4",
+   "where": "span · Echo Outdoor Pavilion",
+   "original": "Aquix by GHF",
+   "text": "Aquix by GHF"
+  },
+  {
+   "id": "4a89b44f19",
+   "where": "p · Echo Outdoor Pavilion",
+   "original": "Indoor pool & spa",
+   "text": "Indoor pool & spa"
+  },
+  {
+   "id": "9cdd11266a",
+   "where": "h2 · Echo Outdoor Pavilion",
+   "original": "Aquix",
+   "text": "Aquix"
+  },
+  {
+   "id": "3d1d287af8",
+   "where": "p · Aquix",
+   "original": "Dive into a world of",
+   "text": "Dive into a world of"
+  },
+  {
+   "id": "60def9fdca",
+   "where": "span · Aquix",
+   "original": "wellness",
+   "text": "wellness"
+  },
+  {
+   "id": "bf6d6a397d",
+   "where": "p · Aquix",
+   "original": "The gentle embrace of water has long been revered for its healing properties. As you glide through the water, the buoyancy relieves joint stress, promoting flexibility and strengthening muscles. The hydrostatic pressure encourages blood circulation, reducing inflammation and promoting healing.",
+   "text": "The gentle embrace of water has long been revered for its healing properties. As you glide through the water, the buoyancy relieves joint stress, promoting flexibility and strengthening muscles. The hydrostatic pressure encourages blood circulation, reducing inflammation and promoting healing."
+  },
+  {
+   "id": "2fc779afaf",
+   "where": "li · Aquix",
+   "original": "75-foot Indoor Lap Pool",
+   "text": "75-foot Indoor Lap Pool"
+  },
+  {
+   "id": "8f9465381e",
+   "where": "li · Aquix",
+   "original": "Himalayan Salt Wall Sauna",
+   "text": "Himalayan Salt Wall Sauna"
+  },
+  {
+   "id": "fc224e8850",
+   "where": "li · Aquix",
+   "original": "Cleansing Steam Room",
+   "text": "Cleansing Steam Room"
+  },
+  {
+   "id": "051f735c32",
+   "where": "li · Aquix",
+   "original": "Arctic Cold Pool",
+   "text": "Arctic Cold Pool"
+  },
+  {
+   "id": "9106f0d2a0",
+   "where": "li · Aquix",
+   "original": "Warm Thermal Pool",
+   "text": "Warm Thermal Pool"
+  },
+  {
+   "id": "99184cfc9c",
+   "where": "li · Aquix",
+   "original": "Massage-like Hot Tub",
+   "text": "Massage-like Hot Tub"
+  },
+  {
+   "id": "3af820e25d",
+   "where": "li · Aquix",
+   "original": "Aqua Classes",
+   "text": "Aqua Classes"
+  },
+  {
+   "id": "547e8d21bc",
+   "where": "span · Aquix",
+   "original": "Dive Into Aquix →",
+   "text": "Dive Into Aquix →"
+  },
+  {
+   "id": "520ed516ea",
+   "where": "p · Aquix",
+   "original": "And so much more",
+   "text": "And so much more"
+  },
+  {
+   "id": "9bbed5e2a3",
+   "where": "h2 · Aquix",
+   "original": "Included in your",
+   "text": "Included in your"
+  },
+  {
+   "id": "873b769eaf",
+   "where": "span · Included in your",
+   "original": "membership",
+   "text": "membership"
+  },
+  {
+   "id": "82fd750bd6",
+   "where": "h3 · Included in your",
+   "original": "800+ Classes Monthly",
+   "text": "800+ Classes Monthly"
+  },
+  {
+   "id": "0e80ccd29b",
+   "where": "span · 800+ Classes Monthly",
+   "original": "See the classes →",
+   "text": "See the classes →"
+  },
+  {
+   "id": "fe8bd08ef7",
+   "where": "h3 · 800+ Classes Monthly",
+   "original": "Free Babysitting",
+   "text": "Free Babysitting"
+  },
+  {
+   "id": "533c7deb5c",
+   "where": "span · Free Babysitting",
+   "original": "Check out Kid's Club →",
+   "text": "Check out Kid's Club →"
+  },
+  {
+   "id": "8577ebc9f6",
+   "where": "h3 · Free Babysitting",
+   "original": "Indoor Basketball",
+   "text": "Indoor Basketball"
+  },
+  {
+   "id": "b90ebe5aad",
+   "where": "p · Indoor Basketball",
+   "original": "Regulation-size indoor basketball court with six hoops and hardwood flooring. Full-court play six days a week, half-court play every day, and volleyball twice a week (Wednesdays 6–11p & Sundays 5–10p).",
+   "text": "Regulation-size indoor basketball court with six hoops and hardwood flooring. Full-court play six days a week, half-court play every day, and volleyball twice a week (Wednesdays 6–11p & Sundays 5–10p)."
+  },
+  {
+   "id": "dd3a10c98c",
+   "where": "h3 · Indoor Basketball",
+   "original": "J-Bar Smoothies",
+   "text": "J-Bar Smoothies"
+  },
+  {
+   "id": "689ca1e5ff",
+   "where": "p · J-Bar Smoothies",
+   "original": "Real fruit smoothies, made to order with superior fresh ingredients — the perfect fuel for your workout or recovery. See the full menu.",
+   "text": "Real fruit smoothies, made to order with superior fresh ingredients — the perfect fuel for your workout or recovery. See the full menu."
+  },
+  {
+   "id": "2bf188a01c",
+   "where": "h3 · J-Bar Smoothies",
+   "original": "Sauna, Steam & Spa",
+   "text": "Sauna, Steam & Spa"
+  },
+  {
+   "id": "595dc356a3",
+   "where": "p · Sauna, Steam & Spa",
+   "original": "Relax and recover in our sauna, steam room, hot tub — or experience our cold plunge and warm therapy pools.",
+   "text": "Relax and recover in our sauna, steam room, hot tub — or experience our cold plunge and warm therapy pools."
+  },
+  {
+   "id": "0d6af66ee0",
+   "where": "h3 · Sauna, Steam & Spa",
+   "original": "Member Savings",
+   "text": "Member Savings"
+  },
+  {
+   "id": "4bd68a3741",
+   "where": "p · Member Savings",
+   "original": "The Member Savings Program offers GHF members discounts at many local businesses — to save the cost of your dues. See all 136 participating businesses.",
+   "text": "The Member Savings Program offers GHF members discounts at many local businesses — to save the cost of your dues. See all 136 participating businesses."
+  },
+  {
+   "id": "346b578b59",
+   "where": "p · Member Savings",
+   "original": "Request your free guest pass",
+   "text": "Request your free guest pass"
+  },
+  {
+   "id": "ada6765679",
+   "where": "h2 · Member Savings",
+   "original": "Your free gym pass is",
+   "text": "Your free gym pass is"
+  },
+  {
+   "id": "32f2e24083",
+   "where": "span · Your free gym pass is",
+   "original": "waiting",
+   "text": "waiting"
+  },
+  {
+   "id": "76f6d3ca90",
+   "where": "p · Your free gym pass is",
+   "original": "With your free guest pass, you will have full membership privileges for one day at any Gainesville Health & Fitness location. There is no charge, no obligation and no risk. There is, however, a chance that you will be inspired.",
+   "text": "With your free guest pass, you will have full membership privileges for one day at any Gainesville Health & Fitness location. There is no charge, no obligation and no risk. There is, however, a chance that you will be inspired."
+  },
+  {
+   "id": "e137ea13ce",
+   "where": "label · Your free gym pass is",
+   "original": "First name",
+   "text": "First name"
+  },
+  {
+   "id": "b5005b3f90",
+   "where": "label · Your free gym pass is",
+   "original": "Last name",
+   "text": "Last name"
+  },
+  {
+   "id": "b47869af21",
+   "where": "label · Your free gym pass is",
+   "original": "Email address",
+   "text": "Email address"
+  },
+  {
+   "id": "4166e7602f",
+   "where": "label · Your free gym pass is",
+   "original": "Phone",
+   "text": "Phone"
+  },
+  {
+   "id": "09242e25c1",
+   "where": "option · Your free gym pass is",
+   "original": "",
+   "text": ""
+  },
+  {
+   "id": "9bb8f02657",
+   "where": "option · Your free gym pass is",
+   "original": "GHF Main",
+   "text": "GHF Main"
+  },
+  {
+   "id": "58594aba31",
+   "where": "option · Your free gym pass is",
+   "original": "GHF Women",
+   "text": "GHF Women"
+  },
+  {
+   "id": "b568e1e5c2",
+   "where": "option · Your free gym pass is",
+   "original": "GHF Tioga",
+   "text": "GHF Tioga"
+  },
+  {
+   "id": "665f046079",
+   "where": "label · Your free gym pass is",
+   "original": "Preferred location",
+   "text": "Preferred location"
+  },
+  {
+   "id": "1c39690428",
+   "where": "button · Your free gym pass is",
+   "original": "Claim Your Free Pass",
+   "text": "Claim Your Free Pass"
+  },
+  {
+   "id": "dd893d944d",
+   "where": "p · Your free gym pass is",
+   "original": "We will contact you via phone, email, or text. There is no charge, no obligation and no risk.",
+   "text": "We will contact you via phone, email, or text. There is no charge, no obligation and no risk."
+  },
+  {
+   "id": "16ae72b18f",
+   "where": "h2 · Your free gym pass is",
+   "original": "More of",
+   "text": "More of"
+  },
+  {
+   "id": "7a4ad3b61c",
+   "where": "span · More of",
+   "original": "everything",
+   "text": "everything"
+  },
+  {
+   "id": "9dcc043b56",
+   "where": "p · More of",
+   "original": "Ready to start a more fit life? Become a GHF member today for $15 per week.",
+   "text": "Ready to start a more fit life? Become a GHF member today for $15 per week."
+  },
+  {
+   "id": "26d3c548a4",
+   "where": "a · More of",
+   "original": "Claim Your Free Pass",
+   "text": "Claim Your Free Pass"
+  },
+  {
+   "id": "ecacebda81",
+   "where": "a · More of",
+   "original": "Free All-Access Pass",
+   "text": "Free All-Access Pass"
+  }
+ ]
+}

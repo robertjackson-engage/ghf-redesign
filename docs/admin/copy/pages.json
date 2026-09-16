@@ -1,0 +1,246 @@
+{
+ "repo": "robertjackson-engage/ghf-redesign",
+ "branch": "main",
+ "pages": [
+  {
+   "scope": "index",
+   "file": "index.html",
+   "title": "Gainesville Health & Fitness | The Gym That's Best At Helping Beginners"
+  },
+  {
+   "scope": "amenities",
+   "file": "amenities.html",
+   "title": "Best Gym Amenities In One Place | GHF"
+  },
+  {
+   "scope": "blog",
+   "file": "blog.html",
+   "title": "Blog | GHF"
+  },
+  {
+   "scope": "chill-cancel",
+   "file": "chill-cancel.html",
+   "title": "Cancel Chill | Gainesville Health & Fitness"
+  },
+  {
+   "scope": "cancer-recovery",
+   "file": "cancer-recovery.html",
+   "title": "Cancer Recovery at GHF | Exercise After Cancer Treatment"
+  },
+  {
+   "scope": "cardio",
+   "file": "cardio.html",
+   "title": "Cardio Fitness at GHF | Gainesville Health & Fitness"
+  },
+  {
+   "scope": "chill",
+   "file": "chill.html",
+   "title": "Chill by GHF | HydroMassage & CryoLounge+ Recovery Studio"
+  },
+  {
+   "scope": "contact",
+   "file": "contact.html",
+   "title": "Contact Us & Get Pricing | Gainesville Health & Fitness"
+  },
+  {
+   "scope": "court-sports",
+   "file": "court-sports.html",
+   "title": "Court Sports at GHF | Indoor Basketball & Volleyball in Gainesville"
+  },
+  {
+   "scope": "crossfit",
+   "file": "crossfit.html",
+   "title": "CrossFit at GHF Tioga | The Pursuit of Optimal Fitness"
+  },
+  {
+   "scope": "echo",
+   "file": "echo.html",
+   "title": "Echo Outdoor Pavilion | Outdoor Gym at GHF Main | Gainesville"
+  },
+  {
+   "scope": "faq",
+   "file": "faq.html",
+   "title": "FAQ | Get The Most Out Of Your Gym Membership | GHF"
+  },
+  {
+   "scope": "special-needs-fitness",
+   "file": "special-needs-fitness.html",
+   "title": "FIT for ALL | Special Needs Fitness at GHF"
+  },
+  {
+   "scope": "group-fitness",
+   "file": "group-fitness.html",
+   "title": "Fitness Classes at GHF | 900+ Group Classes Monthly"
+  },
+  {
+   "scope": "ghf-pass",
+   "file": "ghf-pass.html",
+   "title": "Free All-Access Pass | Try GHF Free | Gainesville Health & Fitness"
+  },
+  {
+   "scope": "live",
+   "file": "live.html",
+   "title": "GHF Live | Stream GroupFit Classes at Home | Gainesville"
+  },
+  {
+   "scope": "main-center",
+   "file": "main-center.html",
+   "title": "GHF Main | 24/7 Gym in Gainesville, FL"
+  },
+  {
+   "scope": "tioga-center",
+   "file": "tioga-center.html",
+   "title": "GHF Tioga | Gym in Tioga Town Center, Newberry FL"
+  },
+  {
+   "scope": "womens-center",
+   "file": "womens-center.html",
+   "title": "GHF Women | Women-Only Gym in Gainesville, FL"
+  },
+  {
+   "scope": "hot-yoga",
+   "file": "hot-yoga.html",
+   "title": "Hot Yoga Classes | Three Temperatures, One Stunning Studio | GHF"
+  },
+  {
+   "scope": "hyrox",
+   "file": "hyrox.html",
+   "title": "HYROX Training in Gainesville | Official HYROX Training Club | GHF"
+  },
+  {
+   "scope": "pool",
+   "file": "pool.html",
+   "title": "Indoor Aqua Center | Aquix by GHF"
+  },
+  {
+   "scope": "jbar",
+   "file": "jbar.html",
+   "title": "J-Bar by GHF | Smoothies, Acai Bowls & Protein Shakes in Gainesville"
+  },
+  {
+   "scope": "join",
+   "file": "join.html",
+   "title": "Join Online | Gainesville's Best Gym Memberships | GHF"
+  },
+  {
+   "scope": "kids-club",
+   "file": "kids-club.html",
+   "title": "Kid's Club at GHF | Free Babysitting While You Work Out"
+  },
+  {
+   "scope": "locations",
+   "file": "locations.html",
+   "title": "Locations & Hours | One Membership, Three Locations | GHF"
+  },
+  {
+   "scope": "member-savings",
+   "file": "member-savings.html",
+   "title": "Member Savings Program | GHF"
+  },
+  {
+   "scope": "personal-training",
+   "file": "personal-training.html",
+   "title": "Personal Training | I Train For Life | GHF"
+  },
+  {
+   "scope": "pilates",
+   "file": "pilates.html",
+   "title": "Pilates Classes in Gainesville, FL | GHF"
+  },
+  {
+   "scope": "recovery",
+   "file": "recovery.html",
+   "title": "Recovery at GHF | The Holistic Recovery Approach"
+  },
+  {
+   "scope": "seniors",
+   "file": "seniors.html",
+   "title": "Senior Fitness Classes | Fitness For Life | GHF"
+  },
+  {
+   "scope": "chill-signup",
+   "file": "chill-signup.html",
+   "title": "Sign Up For Chill | Gainesville Health & Fitness"
+  },
+  {
+   "scope": "training",
+   "file": "training.html",
+   "title": "Signature Training Programs | GHF"
+  },
+  {
+   "scope": "cycle",
+   "file": "cycle.html",
+   "title": "Sky Cycle | Indoor Cycling Classes in Gainesville | GHF"
+  },
+  {
+   "scope": "sports-activities",
+   "file": "sports-activities.html",
+   "title": "Sports Activities at GHF | Basketball, Pool, Cycling & More"
+  },
+  {
+   "scope": "strength-training",
+   "file": "strength-training.html",
+   "title": "Strength Training at GHF | Largest Strength Gym in Gainesville"
+  },
+  {
+   "scope": "team-strong-training",
+   "file": "team-strong-training.html",
+   "title": "Team Strong Training | GHF"
+  },
+  {
+   "scope": "thank-you-crossfit",
+   "file": "thank-you-crossfit.html",
+   "title": "Thank You | CrossFit at GHF Tioga | Gainesville Health & Fitness"
+  },
+  {
+   "scope": "thank-you-pass",
+   "file": "thank-you-pass.html",
+   "title": "Thank You | Free Pass | Gainesville Health & Fitness"
+  },
+  {
+   "scope": "thank-you-pricing",
+   "file": "thank-you-pricing.html",
+   "title": "Thank You | Gainesville Health & Fitness"
+  },
+  {
+   "scope": "thank-you-hyrox",
+   "file": "thank-you-hyrox.html",
+   "title": "Thank You | HYROX at GHF | Gainesville Health & Fitness"
+  },
+  {
+   "scope": "thank-you-pilates",
+   "file": "thank-you-pilates.html",
+   "title": "Thank You | Pilates at GHF | Gainesville Health & Fitness"
+  },
+  {
+   "scope": "thank-you-tribe",
+   "file": "thank-you-tribe.html",
+   "title": "Thank You | TRIBE Team Training | Gainesville Health & Fitness"
+  },
+  {
+   "scope": "thank-you-xforce",
+   "file": "thank-you-xforce.html",
+   "title": "Thank You | X-Force Body | Gainesville Health & Fitness"
+  },
+  {
+   "scope": "tribe",
+   "file": "tribe.html",
+   "title": "TRIBE Team Training | Small Team Training at GHF"
+  },
+  {
+   "scope": "weight-loss",
+   "file": "weight-loss.html",
+   "title": "Weight Loss at GHF | Accelerate Your Results"
+  },
+  {
+   "scope": "why-ghf",
+   "file": "why-ghf.html",
+   "title": "Why GHF? | Gainesville Health & Fitness"
+  },
+  {
+   "scope": "xforce",
+   "file": "xforce.html",
+   "title": "X-Force Body | Lose Body Fat Fast | GHF"
+  }
+ ]
+}

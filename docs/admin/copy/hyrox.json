@@ -1,0 +1,869 @@
+{
+ "page": "hyrox",
+ "items": [
+  {
+   "id": "52dc8d2d98",
+   "where": "Browser tab title",
+   "original": "HYROX Training in Gainesville | Official HYROX Training Club | GHF",
+   "text": "HYROX Training in Gainesville | Official HYROX Training Club | GHF"
+  },
+  {
+   "id": "2b6b72cda4",
+   "where": "Search-engine description",
+   "original": "Gainesville Health & Fitness is an official HYROX Training Club — eight runs, eight stations, race-day equipment and coaching for every level, at GHF Main.",
+   "text": "Gainesville Health & Fitness is an official HYROX Training Club — eight runs, eight stations, race-day equipment and coaching for every level, at GHF Main."
+  },
+  {
+   "id": "2c2603a353",
+   "where": "a",
+   "original": "Home",
+   "text": "Home"
+  },
+  {
+   "id": "bfdad6b189",
+   "where": "text",
+   "original": "/ Training / HYROX",
+   "text": "/ Training / HYROX"
+  },
+  {
+   "id": "9bac9ddb89",
+   "where": "p",
+   "original": "Official HYROX Training Club",
+   "text": "Official HYROX Training Club"
+  },
+  {
+   "id": "ca3fa734e0",
+   "where": "span",
+   "original": "Eight runs.",
+   "text": "Eight runs."
+  },
+  {
+   "id": "98822f4684",
+   "where": "span",
+   "original": "Eight",
+   "text": "Eight"
+  },
+  {
+   "id": "0b4c2ee8f0",
+   "where": "span",
+   "original": "stations",
+   "text": "stations"
+  },
+  {
+   "id": "d6e226b89f",
+   "where": "p",
+   "original": "Gainesville Health & Fitness is North Central Florida's home for official HYROX training — the world's fastest-growing fitness format. Whether you are training to compete or just want the most effective functional workout you have ever done, this is your base.",
+   "text": "Gainesville Health & Fitness is North Central Florida's home for official HYROX training — the world's fastest-growing fitness format. Whether you are training to compete or just want the most effective functional workout you have ever done, this is your base."
+  },
+  {
+   "id": "e49283d9bf",
+   "where": "a",
+   "original": "Try a Class",
+   "text": "Try a Class"
+  },
+  {
+   "id": "1cbab47189",
+   "where": "a",
+   "original": "See The Eight Stations",
+   "text": "See The Eight Stations"
+  },
+  {
+   "id": "bf3a7f36b4",
+   "where": "span",
+   "original": "Official HYROX affiliate",
+   "text": "Official HYROX affiliate"
+  },
+  {
+   "id": "7c0840968d",
+   "where": "span",
+   "original": "Race-day equipment",
+   "text": "Race-day equipment"
+  },
+  {
+   "id": "f9bcaab27b",
+   "where": "span",
+   "original": "Coached for all levels",
+   "text": "Coached for all levels"
+  },
+  {
+   "id": "4f30826df6",
+   "where": "p",
+   "original": "What is HYROX?",
+   "text": "What is HYROX?"
+  },
+  {
+   "id": "6dc6e70db0",
+   "where": "h2",
+   "original": "The workout you can actually",
+   "text": "The workout you can actually"
+  },
+  {
+   "id": "b3d924312c",
+   "where": "span · The workout you can actually",
+   "original": "measure",
+   "text": "measure"
+  },
+  {
+   "id": "8e204d2f79",
+   "where": "p · The workout you can actually",
+   "original": "Run one kilometre, then complete a functional station. Repeat that eight times. No complex skills to learn, no intimidating movements — just work, in the same order, every time.",
+   "text": "Run one kilometre, then complete a functional station. Repeat that eight times. No complex skills to learn, no intimidating movements — just work, in the same order, every time."
+  },
+  {
+   "id": "311b14efee",
+   "where": "h3 · The workout you can actually",
+   "original": "1,000m SkiErg",
+   "text": "1,000m SkiErg"
+  },
+  {
+   "id": "a0ea76027e",
+   "where": "p · 1,000m SkiErg",
+   "original": "Full-body pulling under fatigue, straight off your first run.",
+   "text": "Full-body pulling under fatigue, straight off your first run."
+  },
+  {
+   "id": "63e3418aff",
+   "where": "h3 · 1,000m SkiErg",
+   "original": "50m Sled Push",
+   "text": "50m Sled Push"
+  },
+  {
+   "id": "1d24d1af52",
+   "where": "p · 50m Sled Push",
+   "original": "Loaded, low and relentless — the station most first-timers remember.",
+   "text": "Loaded, low and relentless — the station most first-timers remember."
+  },
+  {
+   "id": "819880f2af",
+   "where": "h3 · 50m Sled Push",
+   "original": "50m Sled Pull",
+   "text": "50m Sled Pull"
+  },
+  {
+   "id": "651a4a5163",
+   "where": "p · 50m Sled Pull",
+   "original": "Hand over hand, dragging the sled back to you from the floor.",
+   "text": "Hand over hand, dragging the sled back to you from the floor."
+  },
+  {
+   "id": "28cd2c9aee",
+   "where": "h3 · 50m Sled Pull",
+   "original": "80m Burpee Broad Jumps",
+   "text": "80m Burpee Broad Jumps"
+  },
+  {
+   "id": "833341e152",
+   "where": "p · 80m Burpee Broad Jumps",
+   "original": "Down, up, jump forward. Simple to learn, hard to pace.",
+   "text": "Down, up, jump forward. Simple to learn, hard to pace."
+  },
+  {
+   "id": "ee01795d33",
+   "where": "h3 · 80m Burpee Broad Jumps",
+   "original": "1,000m Row",
+   "text": "1,000m Row"
+  },
+  {
+   "id": "0b06745018",
+   "where": "p · 1,000m Row",
+   "original": "The halfway point, and the best chance to steady your breathing.",
+   "text": "The halfway point, and the best chance to steady your breathing."
+  },
+  {
+   "id": "1499c6147a",
+   "where": "h3 · 1,000m Row",
+   "original": "200m Farmer's Carry",
+   "text": "200m Farmer's Carry"
+  },
+  {
+   "id": "ffa84e405a",
+   "where": "p · 200m Farmer's Carry",
+   "original": "Two heavy kettlebells, grip and posture under pressure.",
+   "text": "Two heavy kettlebells, grip and posture under pressure."
+  },
+  {
+   "id": "79b7277265",
+   "where": "h3 · 200m Farmer's Carry",
+   "original": "100m Sandbag Lunges",
+   "text": "100m Sandbag Lunges"
+  },
+  {
+   "id": "6608f904ab",
+   "where": "p · 100m Sandbag Lunges",
+   "original": "A loaded sandbag across your shoulders, one step at a time.",
+   "text": "A loaded sandbag across your shoulders, one step at a time."
+  },
+  {
+   "id": "8129049e3f",
+   "where": "h3 · 100m Sandbag Lunges",
+   "original": "100 Wall Balls",
+   "text": "100 Wall Balls"
+  },
+  {
+   "id": "6d7dca4233",
+   "where": "p · 100 Wall Balls",
+   "original": "The finish. Legs and lungs, with the line in sight.",
+   "text": "The finish. Legs and lungs, with the line in sight."
+  },
+  {
+   "id": "f8bb76278b",
+   "where": "span · 100 Wall Balls",
+   "original": "Beginners",
+   "text": "Beginners"
+  },
+  {
+   "id": "a4f8a0eb81",
+   "where": "p · 100 Wall Balls",
+   "original": "New to HYROX",
+   "text": "New to HYROX"
+  },
+  {
+   "id": "3e86fe1be4",
+   "where": "h2 · 100 Wall Balls",
+   "original": "Start as a total",
+   "text": "Start as a total"
+  },
+  {
+   "id": "d9aff8f7eb",
+   "where": "span · Start as a total",
+   "original": "beginner",
+   "text": "beginner"
+  },
+  {
+   "id": "d32d8ea499",
+   "where": "p · Start as a total",
+   "original": "At GHF, helping beginners feel confident isn't an afterthought — it's what we do best. Whether this is your first time in a gym, your first group class, or your first time hearing the word HYROX, our coaches meet you exactly where you are.",
+   "text": "At GHF, helping beginners feel confident isn't an afterthought — it's what we do best. Whether this is your first time in a gym, your first group class, or your first time hearing the word HYROX, our coaches meet you exactly where you are."
+  },
+  {
+   "id": "eb6ad70c69",
+   "where": "p · Start as a total",
+   "original": "HYROX is built to be accessible. If you can walk, lunge, carry and push, you already have the foundation. The difference between a beginner and an elite athlete isn't the movements — it's pacing, consistency and reps.",
+   "text": "HYROX is built to be accessible. If you can walk, lunge, carry and push, you already have the foundation. The difference between a beginner and an elite athlete isn't the movements — it's pacing, consistency and reps."
+  },
+  {
+   "id": "9e04096c6c",
+   "where": "p · Start as a total",
+   "original": "Beginners typically start by learning the eight stations one at a time in a coached setting, building a base of strength and running endurance before adding intensity, practising form first and speed second, and training two to three times a week to build consistency without burnout.",
+   "text": "Beginners typically start by learning the eight stations one at a time in a coached setting, building a base of strength and running endurance before adding intensity, practising form first and speed second, and training two to three times a week to build consistency without burnout."
+  },
+  {
+   "id": "25655458e8",
+   "where": "a · Start as a total",
+   "original": "Try a Class →",
+   "text": "Try a Class →"
+  },
+  {
+   "id": "e7abac925c",
+   "where": "span · Start as a total",
+   "original": "Equipment",
+   "text": "Equipment"
+  },
+  {
+   "id": "c385927c8d",
+   "where": "p · Start as a total",
+   "original": "Race-day equipment",
+   "text": "Race-day equipment"
+  },
+  {
+   "id": "01411280ca",
+   "where": "h2 · Start as a total",
+   "original": "Train on the",
+   "text": "Train on the"
+  },
+  {
+   "id": "628fc32552",
+   "where": "span · Train on the",
+   "original": "real",
+   "text": "real"
+  },
+  {
+   "id": "14c8cbd321",
+   "where": "text · Train on the",
+   "original": "thing",
+   "text": "thing"
+  },
+  {
+   "id": "6e50db4a68",
+   "where": "p · Train on the",
+   "original": "No guessing. No improvising. Our facility is equipped with the exact stations used at every official HYROX event — ski ergs, sleds, rowing machines, sandbags, wall balls and more.",
+   "text": "No guessing. No improvising. Our facility is equipped with the exact stations used at every official HYROX event — ski ergs, sleds, rowing machines, sandbags, wall balls and more."
+  },
+  {
+   "id": "75862f4cc0",
+   "where": "p · Train on the",
+   "original": "When you train at GHF, you train like it's race day, every day. That means no surprises when you actually reach the start line, and no wasted weeks learning equipment you have never touched.",
+   "text": "When you train at GHF, you train like it's race day, every day. That means no surprises when you actually reach the start line, and no wasted weeks learning equipment you have never touched."
+  },
+  {
+   "id": "110434db79",
+   "where": "span · Train on the",
+   "original": "Everyone",
+   "text": "Everyone"
+  },
+  {
+   "id": "f98e9b1180",
+   "where": "p · Train on the",
+   "original": "For racers and everyone else",
+   "text": "For racers and everyone else"
+  },
+  {
+   "id": "1f96ea45a3",
+   "where": "h2 · Train on the",
+   "original": "HYROX for racers. HYROX for",
+   "text": "HYROX for racers. HYROX for"
+  },
+  {
+   "id": "e15691bf5c",
+   "where": "span · HYROX for racers. HYROX for",
+   "original": "life",
+   "text": "life"
+  },
+  {
+   "id": "dd35579888",
+   "where": "p · HYROX for racers. HYROX for",
+   "original": "Chasing a podium finish? We'll get you there, with structured race preparation built around the format you'll actually face.",
+   "text": "Chasing a podium finish? We'll get you there, with structured race preparation built around the format you'll actually face."
+  },
+  {
+   "id": "46ddb21bae",
+   "where": "p · HYROX for racers. HYROX for",
+   "original": "Prefer to skip the bib and just get an incredible workout? You belong here too. HYROX at GHF is built for both — competitive athletes who want race prep, and members who simply want a goal-driven workout that never gets old.",
+   "text": "Prefer to skip the bib and just get an incredible workout? You belong here too. HYROX at GHF is built for both — competitive athletes who want race prep, and members who simply want a goal-driven workout that never gets old."
+  },
+  {
+   "id": "e5f0d8be6f",
+   "where": "span · HYROX for racers. HYROX for",
+   "original": "AJ Smith",
+   "text": "AJ Smith"
+  },
+  {
+   "id": "0fdcf863ef",
+   "where": "p · HYROX for racers. HYROX for",
+   "original": "Meet your coach",
+   "text": "Meet your coach"
+  },
+  {
+   "id": "c970097a42",
+   "where": "h2 · HYROX for racers. HYROX for",
+   "original": "Coached by a HYROX",
+   "text": "Coached by a HYROX"
+  },
+  {
+   "id": "c2798b97c9",
+   "where": "span · Coached by a HYROX",
+   "original": "pro",
+   "text": "pro"
+  },
+  {
+   "id": "609734f898",
+   "where": "strong · Coached by a HYROX",
+   "original": "AJ Smith, Program Director.",
+   "text": "AJ Smith, Program Director."
+  },
+  {
+   "id": "96f1e358a5",
+   "where": "text · Coached by a HYROX",
+   "original": "For more than 25 years AJ has dedicated his career to understanding the human body and unlocking its potential through science-based training, nutrition and performance coaching.",
+   "text": "For more than 25 years AJ has dedicated his career to understanding the human body and unlocking its potential through science-based training, nutrition and performance coaching."
+  },
+  {
+   "id": "a9e5c4ac9e",
+   "where": "p · Coached by a HYROX",
+   "original": "A current HYROX Pro Athlete and former elite cyclist with Team AEG Toshiba, AJ founded a Human Performance Studio in 2010 specialising in VO2 analysis, metabolic testing and body composition. He has coached with Gainesville Health & Fitness, Life Time Fitness, Go Primal, Primal Health and Performance, and OneLife Fitness.",
+   "text": "A current HYROX Pro Athlete and former elite cyclist with Team AEG Toshiba, AJ founded a Human Performance Studio in 2010 specialising in VO2 analysis, metabolic testing and body composition. He has coached with Gainesville Health & Fitness, Life Time Fitness, Go Primal, Primal Health and Performance, and OneLife Fitness."
+  },
+  {
+   "id": "765445bd07",
+   "where": "p · Coached by a HYROX",
+   "original": "His mission is simple: help people understand their bodies, train with purpose, and reach a level of performance they never thought possible — from first-timers to professionals.",
+   "text": "His mission is simple: help people understand their bodies, train with purpose, and reach a level of performance they never thought possible — from first-timers to professionals."
+  },
+  {
+   "id": "cacb0206cd",
+   "where": "a · Coached by a HYROX",
+   "original": "Email AJ →",
+   "text": "Email AJ →"
+  },
+  {
+   "id": "9a27727de7",
+   "where": "p · Coached by a HYROX",
+   "original": "Pricing",
+   "text": "Pricing"
+  },
+  {
+   "id": "a6b13c6412",
+   "where": "h2 · Coached by a HYROX",
+   "original": "No contract. No",
+   "text": "No contract. No"
+  },
+  {
+   "id": "740708f906",
+   "where": "span · No contract. No",
+   "original": "intimidation",
+   "text": "intimidation"
+  },
+  {
+   "id": "44b80b5866",
+   "where": "p · No contract. No",
+   "original": "Drop into a HYROX session whenever it suits you, or commit to an eight-session pack and bring the cost per session down. Either way there is no long-term commitment — just show up and get your best results.",
+   "text": "Drop into a HYROX session whenever it suits you, or commit to an eight-session pack and bring the cost per session down. Either way there is no long-term commitment — just show up and get your best results."
+  },
+  {
+   "id": "2d375e6ff4",
+   "where": "strong · No contract. No",
+   "original": "$20",
+   "text": "$20"
+  },
+  {
+   "id": "f2179efa39",
+   "where": "text · No contract. No",
+   "original": "— single drop-in session",
+   "text": "— single drop-in session"
+  },
+  {
+   "id": "9cd497bb50",
+   "where": "strong · No contract. No",
+   "original": "$119",
+   "text": "$119"
+  },
+  {
+   "id": "b603f31135",
+   "where": "text · No contract. No",
+   "original": "— eight-session pack ($14.86 per session)",
+   "text": "— eight-session pack ($14.86 per session)"
+  },
+  {
+   "id": "ef342818de",
+   "where": "li · No contract. No",
+   "original": "No long-term contract",
+   "text": "No long-term contract"
+  },
+  {
+   "id": "a54661f199",
+   "where": "li · No contract. No",
+   "original": "All equipment provided — bring water and a towel",
+   "text": "All equipment provided — bring water and a towel"
+  },
+  {
+   "id": "696646c2a0",
+   "where": "li · No contract. No",
+   "original": "HYROX sessions are for GHF members",
+   "text": "HYROX sessions are for GHF members"
+  },
+  {
+   "id": "7df8563bf4",
+   "where": "li · No contract. No",
+   "original": "Held at GHF Main, 4820 Newberry Road",
+   "text": "Held at GHF Main, 4820 Newberry Road"
+  },
+  {
+   "id": "adf41ce677",
+   "where": "p · No contract. No",
+   "original": "Why athletes choose GHF",
+   "text": "Why athletes choose GHF"
+  },
+  {
+   "id": "430c624163",
+   "where": "h2 · No contract. No",
+   "original": "A community that pushes you without leaving you",
+   "text": "A community that pushes you without leaving you"
+  },
+  {
+   "id": "5201f83797",
+   "where": "span · A community that pushes you without leaving you",
+   "original": "behind",
+   "text": "behind"
+  },
+  {
+   "id": "a90a665198",
+   "where": "h3 · A community that pushes you without leaving you",
+   "original": "Official affiliate",
+   "text": "Official affiliate"
+  },
+  {
+   "id": "73a20ce3f4",
+   "where": "p · Official affiliate",
+   "original": "A verified, recognised HYROX Training Club — with official programming, coach education and race preparation resources.",
+   "text": "A verified, recognised HYROX Training Club — with official programming, coach education and race preparation resources."
+  },
+  {
+   "id": "d804b95948",
+   "where": "h3 · Official affiliate",
+   "original": "Every station",
+   "text": "Every station"
+  },
+  {
+   "id": "b536721721",
+   "where": "p · Every station",
+   "original": "Race-specific equipment for all eight stations, so nothing on race day is unfamiliar.",
+   "text": "Race-specific equipment for all eight stations, so nothing on race day is unfamiliar."
+  },
+  {
+   "id": "b2dc6256e6",
+   "where": "h3 · Every station",
+   "original": "All levels coached",
+   "text": "All levels coached"
+  },
+  {
+   "id": "a73f29cfe9",
+   "where": "p · All levels coached",
+   "original": "Sessions designed to scale, whether it is your first class or your fifth race.",
+   "text": "Sessions designed to scale, whether it is your first class or your fifth race."
+  },
+  {
+   "id": "e6544124f1",
+   "where": "h3 · All levels coached",
+   "original": "Right here",
+   "text": "Right here"
+  },
+  {
+   "id": "c5c28b7c2e",
+   "where": "p · Right here",
+   "original": "In Gainesville, serving North Central Florida — no three-hour drive to train properly.",
+   "text": "In Gainesville, serving North Central Florida — no three-hour drive to train properly."
+  },
+  {
+   "id": "ccefb62e15",
+   "where": "p · Right here",
+   "original": "Your first class",
+   "text": "Your first class"
+  },
+  {
+   "id": "58af914ccb",
+   "where": "h2 · Right here",
+   "original": "Try all eight stations,",
+   "text": "Try all eight stations,"
+  },
+  {
+   "id": "742a21ce85",
+   "where": "span · Try all eight stations,",
+   "original": "properly",
+   "text": "properly"
+  },
+  {
+   "id": "0ce39748c8",
+   "where": "p · Try all eight stations,",
+   "original": "An interactive, hands-on session where a coach walks you through the form and technique at each of the eight HYROX stations. You get to pull the sled, throw the wall ball and get on the ski erg for the first time — safely, and with someone showing you how.",
+   "text": "An interactive, hands-on session where a coach walks you through the form and technique at each of the eight HYROX stations. You get to pull the sled, throw the wall ball and get on the ski erg for the first time — safely, and with someone showing you how."
+  },
+  {
+   "id": "0d64b84fa1",
+   "where": "p · Try all eight stations,",
+   "original": "Classes run all week at GHF Main. Request a spot below, or email the program director at",
+   "text": "Classes run all week at GHF Main. Request a spot below, or email the program director at"
+  },
+  {
+   "id": "942afdbe2b",
+   "where": "a · Try all eight stations,",
+   "original": "AJ.Smith@ghfc.com",
+   "text": "AJ.Smith@ghfc.com"
+  },
+  {
+   "id": "b1087393bb",
+   "where": "text · Try all eight stations,",
+   "original": "to ask about times.",
+   "text": "to ask about times."
+  },
+  {
+   "id": "8ffbbfdf76",
+   "where": "li · Try all eight stations,",
+   "original": "Coached through all eight stations",
+   "text": "Coached through all eight stations"
+  },
+  {
+   "id": "afc865813f",
+   "where": "li · Try all eight stations,",
+   "original": "No experience needed",
+   "text": "No experience needed"
+  },
+  {
+   "id": "16c1e34191",
+   "where": "li · Try all eight stations,",
+   "original": "Equipment provided",
+   "text": "Equipment provided"
+  },
+  {
+   "id": "45a2510988",
+   "where": "li · Try all eight stations,",
+   "original": "Held at GHF Main",
+   "text": "Held at GHF Main"
+  },
+  {
+   "id": "aee47b27e5",
+   "where": "p · Try all eight stations,",
+   "original": "Questions",
+   "text": "Questions"
+  },
+  {
+   "id": "32d237e1d9",
+   "where": "h2 · Try all eight stations,",
+   "original": "HYROX,",
+   "text": "HYROX,"
+  },
+  {
+   "id": "3e38e9d315",
+   "where": "span · HYROX,",
+   "original": "answered",
+   "text": "answered"
+  },
+  {
+   "id": "47b40cd5e0",
+   "where": "h3 · HYROX,",
+   "original": "What is HYROX?",
+   "text": "What is HYROX?"
+  },
+  {
+   "id": "38b46cc301",
+   "where": "div · What is HYROX?",
+   "original": "A fitness race that alternates a 1 km run with a functional strength station, eight times over. Stations include sled pushes, rowing, farmer's carries and wall balls. The format is identical at every event worldwide, so you can benchmark your progress and compare your result against anyone, anywhere.",
+   "text": "A fitness race that alternates a 1 km run with a functional strength station, eight times over. Stations include sled pushes, rowing, farmer's carries and wall balls. The format is identical at every event worldwide, so you can benchmark your progress and compare your result against anyone, anywhere."
+  },
+  {
+   "id": "ddd6b73096",
+   "where": "h3 · What is HYROX?",
+   "original": "Is HYROX good for beginners?",
+   "text": "Is HYROX good for beginners?"
+  },
+  {
+   "id": "00ee2f017a",
+   "where": "div · Is HYROX good for beginners?",
+   "original": "Yes. The movements in HYROX are deliberately basic — there are no barbell lifts, no gymnastics, and nothing that requires months of technique work. If you can walk, lunge, carry and push, you already have the foundation. What separates a beginner from an elite athlete is pacing, consistency and reps, not skill.",
+   "text": "Yes. The movements in HYROX are deliberately basic — there are no barbell lifts, no gymnastics, and nothing that requires months of technique work. If you can walk, lunge, carry and push, you already have the foundation. What separates a beginner from an elite athlete is pacing, consistency and reps, not skill."
+  },
+  {
+   "id": "b14f88573b",
+   "where": "h3 · Is HYROX good for beginners?",
+   "original": "What are the eight HYROX stations?",
+   "text": "What are the eight HYROX stations?"
+  },
+  {
+   "id": "85a0fab28e",
+   "where": "div · What are the eight HYROX stations?",
+   "original": "In race order: 1,000m SkiErg, 50m sled push, 50m sled pull, 80m burpee broad jumps, 1,000m row, 200m farmer's carry, 100m sandbag lunges, and 100 wall balls — with a 1 km run before each one.",
+   "text": "In race order: 1,000m SkiErg, 50m sled push, 50m sled pull, 80m burpee broad jumps, 1,000m row, 200m farmer's carry, 100m sandbag lunges, and 100 wall balls — with a 1 km run before each one."
+  },
+  {
+   "id": "61430665ad",
+   "where": "h3 · What are the eight HYROX stations?",
+   "original": "How is HYROX different from CrossFit?",
+   "text": "How is HYROX different from CrossFit?"
+  },
+  {
+   "id": "3fca096870",
+   "where": "div · How is HYROX different from CrossFit?",
+   "original": "CrossFit varies every day and includes technical Olympic lifts. HYROX is the same every single time, with simple movements — and roughly half of a HYROX race is running. That repeatability is exactly what makes it useful as a training method: you always know what is coming, so you can measure whether you are getting faster.",
+   "text": "CrossFit varies every day and includes technical Olympic lifts. HYROX is the same every single time, with simple movements — and roughly half of a HYROX race is running. That repeatability is exactly what makes it useful as a training method: you always know what is coming, so you can measure whether you are getting faster."
+  },
+  {
+   "id": "44a5d5efc1",
+   "where": "h3 · How is HYROX different from CrossFit?",
+   "original": "Do I need to be a runner?",
+   "text": "Do I need to be a runner?"
+  },
+  {
+   "id": "cb6b1a68f7",
+   "where": "div · Do I need to be a runner?",
+   "original": "You need basic running ability. If you can currently jog a mile without stopping, you have enough of a base to start.",
+   "text": "You need basic running ability. If you can currently jog a mile without stopping, you have enough of a base to start."
+  },
+  {
+   "id": "557002035c",
+   "where": "h3 · Do I need to be a runner?",
+   "original": "Do I have to sign up for a race to train HYROX?",
+   "text": "Do I have to sign up for a race to train HYROX?"
+  },
+  {
+   "id": "732224ff4e",
+   "where": "div · Do I have to sign up for a race to train HYROX?",
+   "original": "No. Many GHF members train in HYROX-style classes purely as their workout of choice, with no race registration at all. If you decide later that you want to compete, you will already have the foundation to walk into your first race confident instead of overwhelmed.",
+   "text": "No. Many GHF members train in HYROX-style classes purely as their workout of choice, with no race registration at all. If you decide later that you want to compete, you will already have the foundation to walk into your first race confident instead of overwhelmed."
+  },
+  {
+   "id": "03e11eb24f",
+   "where": "h3 · Do I have to sign up for a race to train HYROX?",
+   "original": "How long does it take to train for a race?",
+   "text": "How long does it take to train for a race?"
+  },
+  {
+   "id": "6ed3a41fac",
+   "where": "div · How long does it take to train for a race?",
+   "original": "Most athletes need eight to twelve weeks of structured training for their first race.",
+   "text": "Most athletes need eight to twelve weeks of structured training for their first race."
+  },
+  {
+   "id": "9ddb320646",
+   "where": "h3 · How long does it take to train for a race?",
+   "original": "How long does a HYROX race take?",
+   "text": "How long does a HYROX race take?"
+  },
+  {
+   "id": "fcde2f2388",
+   "where": "div · How long does a HYROX race take?",
+   "original": "The average finisher completes the race in about 90 minutes, and there is no time limit.",
+   "text": "The average finisher completes the race in about 90 minutes, and there is no time limit."
+  },
+  {
+   "id": "2b3cb9b2cf",
+   "where": "h3 · How long does a HYROX race take?",
+   "original": "What race divisions are there?",
+   "text": "What race divisions are there?"
+  },
+  {
+   "id": "0081005c49",
+   "where": "div · What race divisions are there?",
+   "original": "Doubles, Relay and Singles, each with Open and Pro categories and five-year age brackets.",
+   "text": "Doubles, Relay and Singles, each with Open and Pro categories and five-year age brackets."
+  },
+  {
+   "id": "cd0da5209e",
+   "where": "h3 · What race divisions are there?",
+   "original": "Where is the closest race to Gainesville?",
+   "text": "Where is the closest race to Gainesville?"
+  },
+  {
+   "id": "6eb2ff6c08",
+   "where": "div · Where is the closest race to Gainesville?",
+   "original": "HYROX Tampa, 22–25 October 2026, at the Tampa Convention Center.",
+   "text": "HYROX Tampa, 22–25 October 2026, at the Tampa Convention Center."
+  },
+  {
+   "id": "7c27bd2935",
+   "where": "h3 · Where is the closest race to Gainesville?",
+   "original": "What should I wear, and what shoes are best?",
+   "text": "What should I wear, and what shoes are best?"
+  },
+  {
+   "id": "aab1dab0e0",
+   "where": "div · What should I wear, and what shoes are best?",
+   "original": "A hybrid training shoe — running cushioning with enough grip for the stations. Breathable, moisture-wicking clothing. Bring water and a towel; we provide all the equipment.",
+   "text": "A hybrid training shoe — running cushioning with enough grip for the stations. Breathable, moisture-wicking clothing. Bring water and a towel; we provide all the equipment."
+  },
+  {
+   "id": "260b2042f8",
+   "where": "h3 · What should I wear, and what shoes are best?",
+   "original": "Does GHF host race simulations?",
+   "text": "Does GHF host race simulations?"
+  },
+  {
+   "id": "aaa64ce6ce",
+   "where": "div · Does GHF host race simulations?",
+   "original": "Yes. We periodically run the GHF HYROX Simulation, an in-house event where you complete the full race format start to finish.",
+   "text": "Yes. We periodically run the GHF HYROX Simulation, an in-house event where you complete the full race format start to finish."
+  },
+  {
+   "id": "f5449062ca",
+   "where": "h3 · Does GHF host race simulations?",
+   "original": "How do I sign up for a class?",
+   "text": "How do I sign up for a class?"
+  },
+  {
+   "id": "c2f2dd670a",
+   "where": "div · How do I sign up for a class?",
+   "original": "HYROX classes run at GHF Main, 4820 Newberry Road. Drop in for $20, or buy an eight-session pack for $119. Request a spot using the form on this page, or email the program director at",
+   "text": "HYROX classes run at GHF Main, 4820 Newberry Road. Drop in for $20, or buy an eight-session pack for $119. Request a spot using the form on this page, or email the program director at"
+  },
+  {
+   "id": "296e663a89",
+   "where": "a · How do I sign up for a class?",
+   "original": "AJ.Smith@ghfc.com",
+   "text": "AJ.Smith@ghfc.com"
+  },
+  {
+   "id": "ad07b8f2bf",
+   "where": "p · How do I sign up for a class?",
+   "original": "Request your spot",
+   "text": "Request your spot"
+  },
+  {
+   "id": "05ab3d2c43",
+   "where": "h2 · How do I sign up for a class?",
+   "original": "Get into your first",
+   "text": "Get into your first"
+  },
+  {
+   "id": "cbaf06c06c",
+   "where": "span · Get into your first",
+   "original": "class",
+   "text": "class"
+  },
+  {
+   "id": "60467e7c9f",
+   "where": "p · Get into your first",
+   "original": "Tell us how to reach you and we will get back to you with class times at GHF Main, and answer anything you want to know about training HYROX before you commit.",
+   "text": "Tell us how to reach you and we will get back to you with class times at GHF Main, and answer anything you want to know about training HYROX before you commit."
+  },
+  {
+   "id": "44135a0188",
+   "where": "label · Get into your first",
+   "original": "First name",
+   "text": "First name"
+  },
+  {
+   "id": "9acd4897e1",
+   "where": "label · Get into your first",
+   "original": "Last name",
+   "text": "Last name"
+  },
+  {
+   "id": "6a383534d4",
+   "where": "label · Get into your first",
+   "original": "Email address",
+   "text": "Email address"
+  },
+  {
+   "id": "d5159c11a5",
+   "where": "label · Get into your first",
+   "original": "Phone",
+   "text": "Phone"
+  },
+  {
+   "id": "ada0dce35d",
+   "where": "button · Get into your first",
+   "original": "Try a Class",
+   "text": "Try a Class"
+  },
+  {
+   "id": "f4a68bc7ce",
+   "where": "span · Get into your first",
+   "original": "→",
+   "text": "→"
+  },
+  {
+   "id": "f1b513bdd0",
+   "where": "p · Get into your first",
+   "original": "We will contact you via phone, email, or text. There is no charge, no obligation and no risk.",
+   "text": "We will contact you via phone, email, or text. There is no charge, no obligation and no risk."
+  },
+  {
+   "id": "b44117da85",
+   "where": "h2 · Get into your first",
+   "original": "Run, lift,",
+   "text": "Run, lift,"
+  },
+  {
+   "id": "8e0fda544b",
+   "where": "span · Run, lift,",
+   "original": "repeat",
+   "text": "repeat"
+  },
+  {
+   "id": "481acfb844",
+   "where": "p · Run, lift,",
+   "original": "Ready to start a more fit life? Become a GHF member today for as little as $16 per week.",
+   "text": "Ready to start a more fit life? Become a GHF member today for as little as $16 per week."
+  },
+  {
+   "id": "cc89b01a86",
+   "where": "a · Run, lift,",
+   "original": "Claim Your Free Pass",
+   "text": "Claim Your Free Pass"
+  },
+  {
+   "id": "fad44dcc75",
+   "where": "a · Run, lift,",
+   "original": "Free All-Access Pass",
+   "text": "Free All-Access Pass"
+  }
+ ]
+}

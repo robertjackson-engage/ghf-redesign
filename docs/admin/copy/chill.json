@@ -1,0 +1,605 @@
+{
+ "page": "chill",
+ "items": [
+  {
+   "id": "2e3b93253b",
+   "where": "Browser tab title",
+   "original": "Chill by GHF | HydroMassage & CryoLounge+ Recovery Studio",
+   "text": "Chill by GHF | HydroMassage & CryoLounge+ Recovery Studio"
+  },
+  {
+   "id": "1a1cb1b2fd",
+   "where": "Search-engine description",
+   "original": "HydroMassage lounges and CryoLounge+ recovery chairs at GHF Main and GHF Tioga. 15 sessions for $15 a month, first session free.",
+   "text": "HydroMassage lounges and CryoLounge+ recovery chairs at GHF Main and GHF Tioga. 15 sessions for $15 a month, first session free."
+  },
+  {
+   "id": "4c51f146be",
+   "where": "a",
+   "original": "Home",
+   "text": "Home"
+  },
+  {
+   "id": "3cc8711f88",
+   "where": "text",
+   "original": "/ Fitness / Chill Studio",
+   "text": "/ Fitness / Chill Studio"
+  },
+  {
+   "id": "c7f9917f6a",
+   "where": "p",
+   "original": "Chill by GHF",
+   "text": "Chill by GHF"
+  },
+  {
+   "id": "b19334e2a4",
+   "where": "span",
+   "original": "Recovery is the part",
+   "text": "Recovery is the part"
+  },
+  {
+   "id": "bcaa18e749",
+   "where": "span",
+   "original": "most people",
+   "text": "most people"
+  },
+  {
+   "id": "a1be79fd48",
+   "where": "span",
+   "original": "skip",
+   "text": "skip"
+  },
+  {
+   "id": "f0065159d0",
+   "where": "p",
+   "original": "HydroMassage lounges and CryoLounge+ recovery chairs, in a studio built to serve the whole person. Ten minutes, fully clothed, before or after your workout — and your first session is free.",
+   "text": "HydroMassage lounges and CryoLounge+ recovery chairs, in a studio built to serve the whole person. Ten minutes, fully clothed, before or after your workout — and your first session is free."
+  },
+  {
+   "id": "84ce592613",
+   "where": "a",
+   "original": "Sign Up For Chill",
+   "text": "Sign Up For Chill"
+  },
+  {
+   "id": "019e2da9b3",
+   "where": "a",
+   "original": "Cancel Chill",
+   "text": "Cancel Chill"
+  },
+  {
+   "id": "cfbf1b4571",
+   "where": "span",
+   "original": "GHF Main & GHF Tioga",
+   "text": "GHF Main & GHF Tioga"
+  },
+  {
+   "id": "ac997c72d2",
+   "where": "span",
+   "original": "10-minute sessions",
+   "text": "10-minute sessions"
+  },
+  {
+   "id": "a56b4d242a",
+   "where": "span",
+   "original": "First session free",
+   "text": "First session free"
+  },
+  {
+   "id": "f7456bb1db",
+   "where": "span",
+   "original": "Chill Studio",
+   "text": "Chill Studio"
+  },
+  {
+   "id": "717a9447d2",
+   "where": "p",
+   "original": "HydroMassage",
+   "text": "HydroMassage"
+  },
+  {
+   "id": "85db77f17b",
+   "where": "h2",
+   "original": "Technology to relax and",
+   "text": "Technology to relax and"
+  },
+  {
+   "id": "dd58be7adb",
+   "where": "span · Technology to relax and",
+   "original": "recover",
+   "text": "recover"
+  },
+  {
+   "id": "634b1e7a60",
+   "where": "p · Technology to relax and",
+   "original": "The accumulated stresses of everyday life can damage your health in irreversible ways — from early aging to heart problems and long-term disability. You cannot eliminate stress, but you can manage it, and it is worth every effort to do so.",
+   "text": "The accumulated stresses of everyday life can damage your health in irreversible ways — from early aging to heart problems and long-term disability. You cannot eliminate stress, but you can manage it, and it is worth every effort to do so."
+  },
+  {
+   "id": "167ebf7361",
+   "where": "p · Technology to relax and",
+   "original": "Each session is 10 minutes and will loosen up muscles, increase oxygen and blood flow into muscles, remove the lactic acid buildup that makes you sore, and deliver nutrients from your body to your muscles. You will walk out of the gym feeling like a new person.",
+   "text": "Each session is 10 minutes and will loosen up muscles, increase oxygen and blood flow into muscles, remove the lactic acid buildup that makes you sore, and deliver nutrients from your body to your muscles. You will walk out of the gym feeling like a new person."
+  },
+  {
+   "id": "14ca49a0af",
+   "where": "span · Technology to relax and",
+   "original": "CryoLounge+",
+   "text": "CryoLounge+"
+  },
+  {
+   "id": "6551071d60",
+   "where": "p · Technology to relax and",
+   "original": "CryoLounge+",
+   "text": "CryoLounge+"
+  },
+  {
+   "id": "aeb4832dbd",
+   "where": "h2 · Technology to relax and",
+   "original": "Recover faster with",
+   "text": "Recover faster with"
+  },
+  {
+   "id": "20544945ed",
+   "where": "span · Recover faster with",
+   "original": "cold and heat",
+   "text": "cold and heat"
+  },
+  {
+   "id": "33ba396e68",
+   "where": "p · Recover faster with",
+   "original": "CryoLounge+ is an advanced recovery chair with complementary cold and heat zones. Cold is applied to target soreness or minor aches and pains, while heat is applied in other areas of the body for a comfortable experience.",
+   "text": "CryoLounge+ is an advanced recovery chair with complementary cold and heat zones. Cold is applied to target soreness or minor aches and pains, while heat is applied in other areas of the body for a comfortable experience."
+  },
+  {
+   "id": "5733f4fbd8",
+   "where": "p · Recover faster with",
+   "original": "Athletes worldwide have long relied on cold and heat therapy as essential parts of their training — ice baths, hot tubs, cryotherapy chambers and heating pads. GHF has made that way of recovering faster accessible to you. Stop by the front desk to try a free session.",
+   "text": "Athletes worldwide have long relied on cold and heat therapy as essential parts of their training — ice baths, hot tubs, cryotherapy chambers and heating pads. GHF has made that way of recovering faster accessible to you. Stop by the front desk to try a free session."
+  },
+  {
+   "id": "e374f2b975",
+   "where": "p · Recover faster with",
+   "original": "See it for yourself",
+   "text": "See it for yourself"
+  },
+  {
+   "id": "97e2e544aa",
+   "where": "h2 · Recover faster with",
+   "original": "The Chill",
+   "text": "The Chill"
+  },
+  {
+   "id": "38c9e20662",
+   "where": "span · The Chill",
+   "original": "experience",
+   "text": "experience"
+  },
+  {
+   "id": "7ed99b644e",
+   "where": "p · The Chill",
+   "original": "Ten minutes in the studio, start to finish — what a session actually looks like before you book one.",
+   "text": "Ten minutes in the studio, start to finish — what a session actually looks like before you book one."
+  },
+  {
+   "id": "b494f3bc06",
+   "where": "p · The Chill",
+   "original": "Pricing",
+   "text": "Pricing"
+  },
+  {
+   "id": "e9ce58c42f",
+   "where": "h2 · The Chill",
+   "original": "Fifteen sessions,",
+   "text": "Fifteen sessions,"
+  },
+  {
+   "id": "245d7a6a85",
+   "where": "span · Fifteen sessions,",
+   "original": "fifteen dollars",
+   "text": "fifteen dollars"
+  },
+  {
+   "id": "b2965493a9",
+   "where": "p · Fifteen sessions,",
+   "original": "15 ten-minute sessions for $15 a month, or 30 for $25 — both including CryoLounge+. Subscriptions auto-renew monthly until cancelled, and unused sessions do not roll over to the following month. Located at GHF Main and GHF Tioga.",
+   "text": "15 ten-minute sessions for $15 a month, or 30 for $25 — both including CryoLounge+. Subscriptions auto-renew monthly until cancelled, and unused sessions do not roll over to the following month. Located at GHF Main and GHF Tioga."
+  },
+  {
+   "id": "97849b9359",
+   "where": "li · Fifteen sessions,",
+   "original": "15 ten-minute sessions — $15 a month",
+   "text": "15 ten-minute sessions — $15 a month"
+  },
+  {
+   "id": "bec9544df1",
+   "where": "li · Fifteen sessions,",
+   "original": "30 ten-minute sessions — $25 a month",
+   "text": "30 ten-minute sessions — $25 a month"
+  },
+  {
+   "id": "d79d5a5486",
+   "where": "li · Fifteen sessions,",
+   "original": "Includes two 10-minute CryoLounge+ sessions",
+   "text": "Includes two 10-minute CryoLounge+ sessions"
+  },
+  {
+   "id": "1119eb7dfb",
+   "where": "li · Fifteen sessions,",
+   "original": "Auto-renews monthly; unused sessions do not roll over",
+   "text": "Auto-renews monthly; unused sessions do not roll over"
+  },
+  {
+   "id": "3b295c64bb",
+   "where": "li · Fifteen sessions,",
+   "original": "No fee to cancel — use your remaining sessions up to your renewal date",
+   "text": "No fee to cancel — use your remaining sessions up to your renewal date"
+  },
+  {
+   "id": "691305ba1c",
+   "where": "p · Fifteen sessions,",
+   "original": "How to begin",
+   "text": "How to begin"
+  },
+  {
+   "id": "a0c6ce7e64",
+   "where": "h2 · Fifteen sessions,",
+   "original": "Try a complimentary",
+   "text": "Try a complimentary"
+  },
+  {
+   "id": "e526ccb316",
+   "where": "span · Try a complimentary",
+   "original": "session",
+   "text": "session"
+  },
+  {
+   "id": "5b7bbbbf5f",
+   "where": "p · Try a complimentary",
+   "original": "Stop by the desk before or after your workout and try it at no charge. When you are ready, complete the sign-up form — that is all it takes.",
+   "text": "Stop by the desk before or after your workout and try it at no charge. When you are ready, complete the sign-up form — that is all it takes."
+  },
+  {
+   "id": "307de8fece",
+   "where": "a · Try a complimentary",
+   "original": "Sign Up For Chill",
+   "text": "Sign Up For Chill"
+  },
+  {
+   "id": "51aaf2025f",
+   "where": "span · Try a complimentary",
+   "original": "→",
+   "text": "→"
+  },
+  {
+   "id": "7ff3cc2d68",
+   "where": "p · Try a complimentary",
+   "original": "Already a Chill member?",
+   "text": "Already a Chill member?"
+  },
+  {
+   "id": "0c0d166d29",
+   "where": "strong · Try a complimentary",
+   "original": "You can cancel any time, and there is no fee.",
+   "text": "You can cancel any time, and there is no fee."
+  },
+  {
+   "id": "aba32e5be4",
+   "where": "text · Try a complimentary",
+   "original": "Cancelling stops the next renewal — your remaining sessions stay usable until the date it would have renewed, and expire after that. Tell the front desk, or do it online in under a minute.",
+   "text": "Cancelling stops the next renewal — your remaining sessions stay usable until the date it would have renewed, and expire after that. Tell the front desk, or do it online in under a minute."
+  },
+  {
+   "id": "258d1189b4",
+   "where": "a · Try a complimentary",
+   "original": "Cancel Chill",
+   "text": "Cancel Chill"
+  },
+  {
+   "id": "f2a0d2b264",
+   "where": "span · Try a complimentary",
+   "original": "→",
+   "text": "→"
+  },
+  {
+   "id": "a405732ccf",
+   "where": "p · Try a complimentary",
+   "original": "Prefer hands-on? ReQuest Physical Therapy offers therapeutic massage inside both our Main and Tioga facilities.",
+   "text": "Prefer hands-on? ReQuest Physical Therapy offers therapeutic massage inside both our Main and Tioga facilities."
+  },
+  {
+   "id": "12f33e5e37",
+   "where": "a · Try a complimentary",
+   "original": "Schedule a massage appointment →",
+   "text": "Schedule a massage appointment →"
+  },
+  {
+   "id": "04f71fd0d2",
+   "where": "p · Try a complimentary",
+   "original": "Questions",
+   "text": "Questions"
+  },
+  {
+   "id": "55a31ff814",
+   "where": "h2 · Try a complimentary",
+   "original": "Chill,",
+   "text": "Chill,"
+  },
+  {
+   "id": "404e80546d",
+   "where": "span · Chill,",
+   "original": "answered",
+   "text": "answered"
+  },
+  {
+   "id": "d9bc95ddd7",
+   "where": "h3 · Chill,",
+   "original": "Will I get wet using the hydro massage lounges?",
+   "text": "Will I get wet using the hydro massage lounges?"
+  },
+  {
+   "id": "bb221e3721",
+   "where": "div · Will I get wet using the hydro massage lounges?",
+   "original": "No. You will receive a full body massage with the use of pressurized water. You will simply lie down on the open design bed, fully clothed, and feel the immediate benefits of the traveling jet system.",
+   "text": "No. You will receive a full body massage with the use of pressurized water. You will simply lie down on the open design bed, fully clothed, and feel the immediate benefits of the traveling jet system."
+  },
+  {
+   "id": "40622c2d85",
+   "where": "h3 · Will I get wet using the hydro massage lounges?",
+   "original": "How do I sign up for sessions?",
+   "text": "How do I sign up for sessions?"
+  },
+  {
+   "id": "6fe0a7233e",
+   "where": "div · How do I sign up for sessions?",
+   "original": "Complete the",
+   "text": "Complete the"
+  },
+  {
+   "id": "2f5927de3a",
+   "where": "a · How do I sign up for sessions?",
+   "original": "sign-up form",
+   "text": "sign-up form"
+  },
+  {
+   "id": "58716fc6b3",
+   "where": "text · How do I sign up for sessions?",
+   "original": "and you are done — it takes about a minute. You can also sign up at the front desk.",
+   "text": "and you are done — it takes about a minute. You can also sign up at the front desk."
+  },
+  {
+   "id": "15fcb66266",
+   "where": "h3 · How do I sign up for sessions?",
+   "original": "How many times a week should I do hydro massage?",
+   "text": "How many times a week should I do hydro massage?"
+  },
+  {
+   "id": "16c5870c04",
+   "where": "div · How many times a week should I do hydro massage?",
+   "original": "The frequency of use is up to you. You may use it once a day or once a week.",
+   "text": "The frequency of use is up to you. You may use it once a day or once a week."
+  },
+  {
+   "id": "093fdd744e",
+   "where": "h3 · How many times a week should I do hydro massage?",
+   "original": "How much does it cost?",
+   "text": "How much does it cost?"
+  },
+  {
+   "id": "3084ab6e9d",
+   "where": "div · How much does it cost?",
+   "original": "Introductory pricing is 15 sessions for $15, auto-renewing monthly. Use all 15 sessions in each 30 day period — sessions do not carry over.",
+   "text": "Introductory pricing is 15 sessions for $15, auto-renewing monthly. Use all 15 sessions in each 30 day period — sessions do not carry over."
+  },
+  {
+   "id": "0b3e09cd5b",
+   "where": "h3 · How much does it cost?",
+   "original": "Can I buy more if I use all of my sessions before 30 days?",
+   "text": "Can I buy more if I use all of my sessions before 30 days?"
+  },
+  {
+   "id": "045f20b768",
+   "where": "div · Can I buy more if I use all of my sessions before 30 days?",
+   "original": "Yes. You can buy another 15-session package, which will be non-recurring. This can be charged to your MindBody account, using the credit cards stored in the system.",
+   "text": "Yes. You can buy another 15-session package, which will be non-recurring. This can be charged to your MindBody account, using the credit cards stored in the system."
+  },
+  {
+   "id": "683d51b21f",
+   "where": "h3 · Can I buy more if I use all of my sessions before 30 days?",
+   "original": "Can I buy a single session?",
+   "text": "Can I buy a single session?"
+  },
+  {
+   "id": "22fb737f70",
+   "where": "div · Can I buy a single session?",
+   "original": "Single sessions are not available. You may have a complimentary session to see what it's like. If you enjoy it, you can purchase 15 sessions for $15 per month.",
+   "text": "Single sessions are not available. You may have a complimentary session to see what it's like. If you enjoy it, you can purchase 15 sessions for $15 per month."
+  },
+  {
+   "id": "208c189241",
+   "where": "h3 · Can I buy a single session?",
+   "original": "How do I cancel?",
+   "text": "How do I cancel?"
+  },
+  {
+   "id": "95ed00f78b",
+   "where": "div · How do I cancel?",
+   "original": "Inform the desk that you would like to cancel, or",
+   "text": "Inform the desk that you would like to cancel, or"
+  },
+  {
+   "id": "44cbfec8a0",
+   "where": "a · How do I cancel?",
+   "original": "use the cancellation form",
+   "text": "use the cancellation form"
+  },
+  {
+   "id": "287dc828f2",
+   "where": "text · How do I cancel?",
+   "original": ". You can keep using your remaining sessions until the date your membership would have renewed — after that they expire.",
+   "text": ". You can keep using your remaining sessions until the date your membership would have renewed — after that they expire."
+  },
+  {
+   "id": "aff784009e",
+   "where": "h3 · How do I cancel?",
+   "original": "Is there a fee to cancel?",
+   "text": "Is there a fee to cancel?"
+  },
+  {
+   "id": "4b8eaa0106",
+   "where": "div · Is there a fee to cancel?",
+   "original": "No.",
+   "text": "No."
+  },
+  {
+   "id": "ea1f05033a",
+   "where": "h3 · Is there a fee to cancel?",
+   "original": "Am I able to do more than 10 minutes at a time?",
+   "text": "Am I able to do more than 10 minutes at a time?"
+  },
+  {
+   "id": "0829822f38",
+   "where": "div · Am I able to do more than 10 minutes at a time?",
+   "original": "Yes, unless someone is waiting to use a lounge.",
+   "text": "Yes, unless someone is waiting to use a lounge."
+  },
+  {
+   "id": "3d768d83eb",
+   "where": "h3 · Am I able to do more than 10 minutes at a time?",
+   "original": "Can I buy a month (or more) for someone as a gift?",
+   "text": "Can I buy a month (or more) for someone as a gift?"
+  },
+  {
+   "id": "d74bec4b81",
+   "where": "div · Can I buy a month (or more) for someone as a gift?",
+   "original": "Yes — the gift must be for an existing GHF member. Gift cards are available at the front desk.",
+   "text": "Yes — the gift must be for an existing GHF member. Gift cards are available at the front desk."
+  },
+  {
+   "id": "ded0190eef",
+   "where": "p · Can I buy a month (or more) for someone as a gift?",
+   "original": "Request your pass",
+   "text": "Request your pass"
+  },
+  {
+   "id": "9494009075",
+   "where": "h2 · Can I buy a month (or more) for someone as a gift?",
+   "original": "Come try the Chill studio for",
+   "text": "Come try the Chill studio for"
+  },
+  {
+   "id": "71b7848483",
+   "where": "span · Come try the Chill studio for",
+   "original": "free",
+   "text": "free"
+  },
+  {
+   "id": "7fb9e26514",
+   "where": "p · Come try the Chill studio for",
+   "original": "Your free all-access pass gives you full membership privileges for one day at any GHF location — the Chill studio included. No charge, no obligation and no risk.",
+   "text": "Your free all-access pass gives you full membership privileges for one day at any GHF location — the Chill studio included. No charge, no obligation and no risk."
+  },
+  {
+   "id": "d77a0ee747",
+   "where": "label · Come try the Chill studio for",
+   "original": "First name",
+   "text": "First name"
+  },
+  {
+   "id": "dc5b5561f9",
+   "where": "label · Come try the Chill studio for",
+   "original": "Last name",
+   "text": "Last name"
+  },
+  {
+   "id": "b7cf14c4f7",
+   "where": "label · Come try the Chill studio for",
+   "original": "Email address",
+   "text": "Email address"
+  },
+  {
+   "id": "f43c1a833c",
+   "where": "label · Come try the Chill studio for",
+   "original": "Phone",
+   "text": "Phone"
+  },
+  {
+   "id": "43f2adf69e",
+   "where": "option · Come try the Chill studio for",
+   "original": "",
+   "text": ""
+  },
+  {
+   "id": "9f54b1a616",
+   "where": "option · Come try the Chill studio for",
+   "original": "GHF Main — 4820 W Newberry Road",
+   "text": "GHF Main — 4820 W Newberry Road"
+  },
+  {
+   "id": "89f6985b88",
+   "where": "option · Come try the Chill studio for",
+   "original": "GHF Women — 2441 NW 43rd Street",
+   "text": "GHF Women — 2441 NW 43rd Street"
+  },
+  {
+   "id": "ab2bc6bb76",
+   "where": "option · Come try the Chill studio for",
+   "original": "GHF Tioga — Tioga Town Center",
+   "text": "GHF Tioga — Tioga Town Center"
+  },
+  {
+   "id": "71a915bf7b",
+   "where": "label · Come try the Chill studio for",
+   "original": "Gym you would like to visit",
+   "text": "Gym you would like to visit"
+  },
+  {
+   "id": "f0bc6d7761",
+   "where": "button · Come try the Chill studio for",
+   "original": "Claim My Free Fitness Pass",
+   "text": "Claim My Free Fitness Pass"
+  },
+  {
+   "id": "22dac90578",
+   "where": "span · Come try the Chill studio for",
+   "original": "→",
+   "text": "→"
+  },
+  {
+   "id": "1c0e118f18",
+   "where": "p · Come try the Chill studio for",
+   "original": "Submit the form and we'll be in touch by phone, text or email to set up your pass.",
+   "text": "Submit the form and we'll be in touch by phone, text or email to set up your pass."
+  },
+  {
+   "id": "80327c7632",
+   "where": "h2 · Come try the Chill studio for",
+   "original": "Train hard.",
+   "text": "Train hard."
+  },
+  {
+   "id": "9a5f6bd227",
+   "where": "span · Train hard.",
+   "original": "Recover harder.",
+   "text": "Recover harder."
+  },
+  {
+   "id": "3aaca4bcca",
+   "where": "p · Train hard.",
+   "original": "Ready to start a more fit life? Become a GHF member today for as little as $15 per week.",
+   "text": "Ready to start a more fit life? Become a GHF member today for as little as $15 per week."
+  },
+  {
+   "id": "7d278cf904",
+   "where": "a · Train hard.",
+   "original": "Claim Your Free Pass",
+   "text": "Claim Your Free Pass"
+  },
+  {
+   "id": "6d158604cd",
+   "where": "a · Train hard.",
+   "original": "Free All-Access Pass",
+   "text": "Free All-Access Pass"
+  }
+ ]
+}

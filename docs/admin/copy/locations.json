@@ -1,0 +1,341 @@
+{
+ "page": "locations",
+ "items": [
+  {
+   "id": "2665df5676",
+   "where": "Browser tab title",
+   "original": "Locations & Hours | One Membership, Three Locations | GHF",
+   "text": "Locations & Hours | One Membership, Three Locations | GHF"
+  },
+  {
+   "id": "4416ea2812",
+   "where": "Search-engine description",
+   "original": "View hours and amenities for our three gyms in Gainesville, FL.",
+   "text": "View hours and amenities for our three gyms in Gainesville, FL."
+  },
+  {
+   "id": "d31dc86ba7",
+   "where": "a",
+   "original": "Home",
+   "text": "Home"
+  },
+  {
+   "id": "3b857b1e92",
+   "where": "text",
+   "original": "/ Locations and Hours",
+   "text": "/ Locations and Hours"
+  },
+  {
+   "id": "64cde62cbd",
+   "where": "p",
+   "original": "Locations & Hours",
+   "text": "Locations & Hours"
+  },
+  {
+   "id": "116b07122e",
+   "where": "span",
+   "original": "Three clubs.",
+   "text": "Three clubs."
+  },
+  {
+   "id": "cd31e1b6ee",
+   "where": "span",
+   "original": "Zero",
+   "text": "Zero"
+  },
+  {
+   "id": "9a4f5d4b97",
+   "where": "span",
+   "original": "excuses",
+   "text": "excuses"
+  },
+  {
+   "id": "364d9894e8",
+   "where": "p",
+   "original": "One membership unlocks all three: the 24/7 flagship on Newberry Road, Gainesville's only women-only club, and the family-friendly Tioga center. Wherever your day takes you, your gym is already there.",
+   "text": "One membership unlocks all three: the 24/7 flagship on Newberry Road, Gainesville's only women-only club, and the family-friendly Tioga center. Wherever your day takes you, your gym is already there."
+  },
+  {
+   "id": "18286bc84b",
+   "where": "a",
+   "original": "Get Your Free All-Access Pass",
+   "text": "Get Your Free All-Access Pass"
+  },
+  {
+   "id": "11307e6997",
+   "where": "span",
+   "original": "Open 24/7",
+   "text": "Open 24/7"
+  },
+  {
+   "id": "1f60dedf62",
+   "where": "a",
+   "original": "GHF Main",
+   "text": "GHF Main"
+  },
+  {
+   "id": "5df455c6c1",
+   "where": "a",
+   "original": "(352) 377-4955",
+   "text": "(352) 377-4955"
+  },
+  {
+   "id": "e695fad2bb",
+   "where": "dt",
+   "original": "Every day",
+   "text": "Every day"
+  },
+  {
+   "id": "f719c53b84",
+   "where": "dd",
+   "original": "Open 24 hours",
+   "text": "Open 24 hours"
+  },
+  {
+   "id": "1e57d7af99",
+   "where": "address",
+   "original": "4820 W Newberry Road, Gainesville, FL 32607",
+   "text": "4820 W Newberry Road, Gainesville, FL 32607"
+  },
+  {
+   "id": "5423a42324",
+   "where": "br",
+   "original": "General Manager — Adrian Antigua",
+   "text": "General Manager — Adrian Antigua"
+  },
+  {
+   "id": "2874d27ebb",
+   "where": "a",
+   "original": "Explore GHF Main",
+   "text": "Explore GHF Main"
+  },
+  {
+   "id": "b26e61c0dd",
+   "where": "span",
+   "original": "Women Only",
+   "text": "Women Only"
+  },
+  {
+   "id": "158264c946",
+   "where": "a",
+   "original": "GHF Women",
+   "text": "GHF Women"
+  },
+  {
+   "id": "49b3531511",
+   "where": "a",
+   "original": "(352) 374-4634",
+   "text": "(352) 374-4634"
+  },
+  {
+   "id": "295d964f06",
+   "where": "dt",
+   "original": "Mon–Thurs",
+   "text": "Mon–Thurs"
+  },
+  {
+   "id": "7fa6969054",
+   "where": "dd",
+   "original": "5am–9pm",
+   "text": "5am–9pm"
+  },
+  {
+   "id": "b3ab74fcd9",
+   "where": "dt",
+   "original": "Friday",
+   "text": "Friday"
+  },
+  {
+   "id": "f0f71f2a87",
+   "where": "dd",
+   "original": "5am–8pm",
+   "text": "5am–8pm"
+  },
+  {
+   "id": "660d188703",
+   "where": "dt",
+   "original": "Saturday",
+   "text": "Saturday"
+  },
+  {
+   "id": "11c664eaea",
+   "where": "dd",
+   "original": "8am–6pm",
+   "text": "8am–6pm"
+  },
+  {
+   "id": "c380a1842f",
+   "where": "dt",
+   "original": "Sunday",
+   "text": "Sunday"
+  },
+  {
+   "id": "c4f098bf18",
+   "where": "dd",
+   "original": "Closed",
+   "text": "Closed"
+  },
+  {
+   "id": "680d5d06da",
+   "where": "address",
+   "original": "2441 NW 43rd Street, Gainesville, FL 32606",
+   "text": "2441 NW 43rd Street, Gainesville, FL 32606"
+  },
+  {
+   "id": "c1871de0df",
+   "where": "br",
+   "original": "Manager — Jordan Heitzler",
+   "text": "Manager — Jordan Heitzler"
+  },
+  {
+   "id": "fb1beba12f",
+   "where": "a",
+   "original": "Explore GHF Women",
+   "text": "Explore GHF Women"
+  },
+  {
+   "id": "dd50095abf",
+   "where": "span",
+   "original": "Family Friendly",
+   "text": "Family Friendly"
+  },
+  {
+   "id": "2e0d1645a7",
+   "where": "a",
+   "original": "GHF Tioga",
+   "text": "GHF Tioga"
+  },
+  {
+   "id": "73d667a159",
+   "where": "a",
+   "original": "(352) 692-2180",
+   "text": "(352) 692-2180"
+  },
+  {
+   "id": "2c2fb6e5d9",
+   "where": "dt",
+   "original": "Mon–Thurs",
+   "text": "Mon–Thurs"
+  },
+  {
+   "id": "c6c11b7e89",
+   "where": "dd",
+   "original": "5am–10pm",
+   "text": "5am–10pm"
+  },
+  {
+   "id": "300d0348ab",
+   "where": "dt",
+   "original": "Friday",
+   "text": "Friday"
+  },
+  {
+   "id": "860cb28974",
+   "where": "dd",
+   "original": "5am–9pm",
+   "text": "5am–9pm"
+  },
+  {
+   "id": "62d9c844f6",
+   "where": "dt",
+   "original": "Saturday",
+   "text": "Saturday"
+  },
+  {
+   "id": "fd5ba75df6",
+   "where": "dd",
+   "original": "8am–8pm",
+   "text": "8am–8pm"
+  },
+  {
+   "id": "a03a3f7e88",
+   "where": "dt",
+   "original": "Sunday",
+   "text": "Sunday"
+  },
+  {
+   "id": "b9110f16d2",
+   "where": "dd",
+   "original": "10am–5pm",
+   "text": "10am–5pm"
+  },
+  {
+   "id": "5729ef4d94",
+   "where": "address",
+   "original": "12830 SW 1st Lane, Suite 100, Newberry, FL 32669",
+   "text": "12830 SW 1st Lane, Suite 100, Newberry, FL 32669"
+  },
+  {
+   "id": "2473d5dc5f",
+   "where": "br",
+   "original": "Manager — Darrius Powell",
+   "text": "Manager — Darrius Powell"
+  },
+  {
+   "id": "82ed404b52",
+   "where": "a",
+   "original": "Explore GHF Tioga",
+   "text": "Explore GHF Tioga"
+  },
+  {
+   "id": "4f0c46142d",
+   "where": "div",
+   "original": "Gyms in greater Gainesville",
+   "text": "Gyms in greater Gainesville"
+  },
+  {
+   "id": "4c51b1e98a",
+   "where": "div",
+   "original": "Membership covers them all",
+   "text": "Membership covers them all"
+  },
+  {
+   "id": "2e5c1ce723",
+   "where": "span",
+   "original": "/7",
+   "text": "/7"
+  },
+  {
+   "id": "38b318556d",
+   "where": "div",
+   "original": "Access at GHF Main",
+   "text": "Access at GHF Main"
+  },
+  {
+   "id": "0b5ea7e035",
+   "where": "div",
+   "original": "Staff across all locations",
+   "text": "Staff across all locations"
+  },
+  {
+   "id": "67059cf869",
+   "where": "h2",
+   "original": "Find the gym that's right for",
+   "text": "Find the gym that's right for"
+  },
+  {
+   "id": "595833a92f",
+   "where": "span · Find the gym that's right for",
+   "original": "you",
+   "text": "you"
+  },
+  {
+   "id": "a7aadd7954",
+   "where": "p · Find the gym that's right for",
+   "original": "Each location is unique and offers a different experience and value. You have access to all 3 locations (GHF Women is women only).",
+   "text": "Each location is unique and offers a different experience and value. You have access to all 3 locations (GHF Women is women only)."
+  },
+  {
+   "id": "569e498558",
+   "where": "a · Find the gym that's right for",
+   "original": "Claim Your Free Fitness Pass",
+   "text": "Claim Your Free Fitness Pass"
+  },
+  {
+   "id": "a0db744906",
+   "where": "a · Find the gym that's right for",
+   "original": "Get Membership Pricing",
+   "text": "Get Membership Pricing"
+  }
+ ]
+}

@@ -1,0 +1,755 @@
+{
+ "page": "group-fitness",
+ "items": [
+  {
+   "id": "23b3bcd7fa",
+   "where": "Browser tab title",
+   "original": "Fitness Classes at GHF | 900+ Group Classes Monthly",
+   "text": "Fitness Classes at GHF | 900+ Group Classes Monthly"
+  },
+  {
+   "id": "c736a0526b",
+   "where": "Search-engine description",
+   "original": "With over 900 classes per month across our three gym locations, GHF offers the best variety of group fitness classes in Gainesville.",
+   "text": "With over 900 classes per month across our three gym locations, GHF offers the best variety of group fitness classes in Gainesville."
+  },
+  {
+   "id": "7bb7e2c9a7",
+   "where": "a",
+   "original": "Home",
+   "text": "Home"
+  },
+  {
+   "id": "04c9325b2a",
+   "where": "text",
+   "original": "/",
+   "text": "/"
+  },
+  {
+   "id": "dd10934013",
+   "where": "a",
+   "original": "Fitness",
+   "text": "Fitness"
+  },
+  {
+   "id": "c4e2b2bf19",
+   "where": "text",
+   "original": "/ Group Classes",
+   "text": "/ Group Classes"
+  },
+  {
+   "id": "1d5107d90e",
+   "where": "p",
+   "original": "GroupFit at GHF",
+   "text": "GroupFit at GHF"
+  },
+  {
+   "id": "f1de9f63e2",
+   "where": "span",
+   "original": "The hour you'll look",
+   "text": "The hour you'll look"
+  },
+  {
+   "id": "ca81043adf",
+   "where": "span",
+   "original": "forward to",
+   "text": "forward to"
+  },
+  {
+   "id": "7b7a4b7eee",
+   "where": "span",
+   "original": "all day",
+   "text": "all day"
+  },
+  {
+   "id": "137c2aecba",
+   "where": "p",
+   "original": "900+ classes a month means there's always one that fits your schedule, your level, and your mood. Dance it out, find your zen, or sweat with a roomful of people cheering you on — your first class is free.",
+   "text": "900+ classes a month means there's always one that fits your schedule, your level, and your mood. Dance it out, find your zen, or sweat with a roomful of people cheering you on — your first class is free."
+  },
+  {
+   "id": "16661e3b4c",
+   "where": "a",
+   "original": "View Class Schedule",
+   "text": "View Class Schedule"
+  },
+  {
+   "id": "e8013a601b",
+   "where": "a",
+   "original": "Try a Free Class",
+   "text": "Try a Free Class"
+  },
+  {
+   "id": "3eddb14c3c",
+   "where": "span",
+   "original": "900+ classes / month",
+   "text": "900+ classes / month"
+  },
+  {
+   "id": "c8c3c08f6e",
+   "where": "span",
+   "original": "Included in membership",
+   "text": "Included in membership"
+  },
+  {
+   "id": "10a713008d",
+   "where": "span",
+   "original": "All levels welcome",
+   "text": "All levels welcome"
+  },
+  {
+   "id": "3f533bf4b3",
+   "where": "span",
+   "original": "Zumba",
+   "text": "Zumba"
+  },
+  {
+   "id": "34cc44bccd",
+   "where": "span",
+   "original": "Body Pump",
+   "text": "Body Pump"
+  },
+  {
+   "id": "ff091d5f93",
+   "where": "span",
+   "original": "Indoor Cycle",
+   "text": "Indoor Cycle"
+  },
+  {
+   "id": "b5dfede4fb",
+   "where": "span",
+   "original": "Yoga",
+   "text": "Yoga"
+  },
+  {
+   "id": "dce03b45e8",
+   "where": "span",
+   "original": "HIIT",
+   "text": "HIIT"
+  },
+  {
+   "id": "82f8b82e69",
+   "where": "span",
+   "original": "Pilates Mat",
+   "text": "Pilates Mat"
+  },
+  {
+   "id": "58e7cc59da",
+   "where": "span",
+   "original": "Tai Chi",
+   "text": "Tai Chi"
+  },
+  {
+   "id": "9a87798725",
+   "where": "span",
+   "original": "Aqua",
+   "text": "Aqua"
+  },
+  {
+   "id": "2d580fe581",
+   "where": "span",
+   "original": "Hot Yoga",
+   "text": "Hot Yoga"
+  },
+  {
+   "id": "088c579116",
+   "where": "span",
+   "original": "Body Combat",
+   "text": "Body Combat"
+  },
+  {
+   "id": "b69b0757c9",
+   "where": "span",
+   "original": "Zumba",
+   "text": "Zumba"
+  },
+  {
+   "id": "34a00e6052",
+   "where": "span",
+   "original": "Body Pump",
+   "text": "Body Pump"
+  },
+  {
+   "id": "ba528754f1",
+   "where": "span",
+   "original": "Indoor Cycle",
+   "text": "Indoor Cycle"
+  },
+  {
+   "id": "344190769a",
+   "where": "span",
+   "original": "Yoga",
+   "text": "Yoga"
+  },
+  {
+   "id": "a4443b5e1c",
+   "where": "span",
+   "original": "HIIT",
+   "text": "HIIT"
+  },
+  {
+   "id": "987d918b3c",
+   "where": "span",
+   "original": "Pilates Mat",
+   "text": "Pilates Mat"
+  },
+  {
+   "id": "834516acd8",
+   "where": "span",
+   "original": "Tai Chi",
+   "text": "Tai Chi"
+  },
+  {
+   "id": "1781c31d84",
+   "where": "span",
+   "original": "Aqua",
+   "text": "Aqua"
+  },
+  {
+   "id": "6fded99726",
+   "where": "span",
+   "original": "Hot Yoga",
+   "text": "Hot Yoga"
+  },
+  {
+   "id": "afe1f16f1e",
+   "where": "span",
+   "original": "Body Combat",
+   "text": "Body Combat"
+  },
+  {
+   "id": "ff49958417",
+   "where": "p",
+   "original": "A few examples of the classes we offer",
+   "text": "A few examples of the classes we offer"
+  },
+  {
+   "id": "18dcfe8301",
+   "where": "h2",
+   "original": "Something for",
+   "text": "Something for"
+  },
+  {
+   "id": "b1b6029d16",
+   "where": "span · Something for",
+   "original": "everyone",
+   "text": "everyone"
+  },
+  {
+   "id": "a44f13b44e",
+   "where": "p · Something for",
+   "original": "From beginner to advanced — and classes are included in your membership. Come as often as you want. We're here to help you reach your potential.",
+   "text": "From beginner to advanced — and classes are included in your membership. Come as often as you want. We're here to help you reach your potential."
+  },
+  {
+   "id": "b75fcd3306",
+   "where": "li · Something for",
+   "original": "Aqua Strength and Balance",
+   "text": "Aqua Strength and Balance"
+  },
+  {
+   "id": "446ea0a389",
+   "where": "li · Something for",
+   "original": "Les Mills classes (Body Pump, Flow, Combat, Core)",
+   "text": "Les Mills classes (Body Pump, Flow, Combat, Core)"
+  },
+  {
+   "id": "8d5fea3c45",
+   "where": "li · Something for",
+   "original": "Circuit Training/HIIT",
+   "text": "Circuit Training/HIIT"
+  },
+  {
+   "id": "ff046764b8",
+   "where": "li · Something for",
+   "original": "Club Seniors (Sit To Be Fit, balance, gentle joints)",
+   "text": "Club Seniors (Sit To Be Fit, balance, gentle joints)"
+  },
+  {
+   "id": "025c0ca953",
+   "where": "li · Something for",
+   "original": "Hot Yoga (85°, 95°, 105°)",
+   "text": "Hot Yoga (85°, 95°, 105°)"
+  },
+  {
+   "id": "ac3be38a09",
+   "where": "li · Something for",
+   "original": "Pilates Mat",
+   "text": "Pilates Mat"
+  },
+  {
+   "id": "48494411bf",
+   "where": "li · Something for",
+   "original": "SkyCycle Indoor Cycling",
+   "text": "SkyCycle Indoor Cycling"
+  },
+  {
+   "id": "9688a27aad",
+   "where": "li · Something for",
+   "original": "Yoga",
+   "text": "Yoga"
+  },
+  {
+   "id": "c386f1826f",
+   "where": "li · Something for",
+   "original": "Zumba, Cardio Party MashUp, Dance Attack",
+   "text": "Zumba, Cardio Party MashUp, Dance Attack"
+  },
+  {
+   "id": "e6e8e8f781",
+   "where": "p · Something for",
+   "original": "Unsure where to start?",
+   "text": "Unsure where to start?"
+  },
+  {
+   "id": "461e73864f",
+   "where": "h2 · Something for",
+   "original": "Our most",
+   "text": "Our most"
+  },
+  {
+   "id": "436d4d6789",
+   "where": "span · Our most",
+   "original": "popular",
+   "text": "popular"
+  },
+  {
+   "id": "5697f3d482",
+   "where": "text · Our most",
+   "original": "classes",
+   "text": "classes"
+  },
+  {
+   "id": "a1a00266d5",
+   "where": "p · Our most",
+   "original": "We recommend trying all kinds of classes to find what best suits you, your style and your vibe. Most classes are offered at a variety of times and days with different instructors.",
+   "text": "We recommend trying all kinds of classes to find what best suits you, your style and your vibe. Most classes are offered at a variety of times and days with different instructors."
+  },
+  {
+   "id": "60378f06db",
+   "where": "span · Our most",
+   "original": "Zumba",
+   "text": "Zumba"
+  },
+  {
+   "id": "aee2f349f8",
+   "where": "span · Our most",
+   "original": "Dance-party cardio that never feels like a workout.",
+   "text": "Dance-party cardio that never feels like a workout."
+  },
+  {
+   "id": "b5a23f859e",
+   "where": "span · Our most",
+   "original": "→",
+   "text": "→"
+  },
+  {
+   "id": "f9af4780e7",
+   "where": "span · Our most",
+   "original": "Body Combat",
+   "text": "Body Combat"
+  },
+  {
+   "id": "1827591e7b",
+   "where": "span · Our most",
+   "original": "Strike, punch and kick your way to total-body fitness.",
+   "text": "Strike, punch and kick your way to total-body fitness."
+  },
+  {
+   "id": "86501abcb7",
+   "where": "span · Our most",
+   "original": "→",
+   "text": "→"
+  },
+  {
+   "id": "8de4a9e4fa",
+   "where": "span · Our most",
+   "original": "Body Pump",
+   "text": "Body Pump"
+  },
+  {
+   "id": "d9df2d88b4",
+   "where": "span · Our most",
+   "original": "The original barbell class — tone and condition every major muscle group.",
+   "text": "The original barbell class — tone and condition every major muscle group."
+  },
+  {
+   "id": "7d7eb5b865",
+   "where": "span · Our most",
+   "original": "→",
+   "text": "→"
+  },
+  {
+   "id": "8b8967e9cd",
+   "where": "span · Our most",
+   "original": "Cardio Party MashUp",
+   "text": "Cardio Party MashUp"
+  },
+  {
+   "id": "026551b0bc",
+   "where": "span · Our most",
+   "original": "A mashup of dance and cardio styles set to music you already love.",
+   "text": "A mashup of dance and cardio styles set to music you already love."
+  },
+  {
+   "id": "2ccbef5f51",
+   "where": "span · Our most",
+   "original": "→",
+   "text": "→"
+  },
+  {
+   "id": "6a4d363f64",
+   "where": "span · Our most",
+   "original": "Aqua HIIT & HIIT",
+   "text": "Aqua HIIT & HIIT"
+  },
+  {
+   "id": "43ce060db3",
+   "where": "span · Our most",
+   "original": "High-intensity intervals — in and out of the water.",
+   "text": "High-intensity intervals — in and out of the water."
+  },
+  {
+   "id": "4889727e2c",
+   "where": "span · Our most",
+   "original": "→",
+   "text": "→"
+  },
+  {
+   "id": "69e4d036aa",
+   "where": "span · Our most",
+   "original": "S.W.E.A.T.",
+   "text": "S.W.E.A.T."
+  },
+  {
+   "id": "3a674ac2f9",
+   "where": "span · Our most",
+   "original": "Exactly what it sounds like. Bring a towel.",
+   "text": "Exactly what it sounds like. Bring a towel."
+  },
+  {
+   "id": "b7ec0d1595",
+   "where": "span · Our most",
+   "original": "→",
+   "text": "→"
+  },
+  {
+   "id": "a093d30821",
+   "where": "span · Our most",
+   "original": "Yoga or Stretch",
+   "text": "Yoga or Stretch"
+  },
+  {
+   "id": "f48f1b581a",
+   "where": "span · Our most",
+   "original": "Find your zen, restore your range of motion.",
+   "text": "Find your zen, restore your range of motion."
+  },
+  {
+   "id": "c30e29aef1",
+   "where": "span · Our most",
+   "original": "→",
+   "text": "→"
+  },
+  {
+   "id": "a3f8f17eca",
+   "where": "span · Our most",
+   "original": "Pilates Mat",
+   "text": "Pilates Mat"
+  },
+  {
+   "id": "2209232971",
+   "where": "span · Our most",
+   "original": "Core strength and control — no machines required.",
+   "text": "Core strength and control — no machines required."
+  },
+  {
+   "id": "3e819dee9d",
+   "where": "span · Our most",
+   "original": "→",
+   "text": "→"
+  },
+  {
+   "id": "fc4392aa07",
+   "where": "span · Our most",
+   "original": "Cycle",
+   "text": "Cycle"
+  },
+  {
+   "id": "a8dc5b3b5d",
+   "where": "span · Our most",
+   "original": "Indoor cycling classes every day of the week in our Sky Cycle studio.",
+   "text": "Indoor cycling classes every day of the week in our Sky Cycle studio."
+  },
+  {
+   "id": "234c103db8",
+   "where": "span · Our most",
+   "original": "→",
+   "text": "→"
+  },
+  {
+   "id": "ef51d4eecb",
+   "where": "p · Our most",
+   "original": "Class schedule",
+   "text": "Class schedule"
+  },
+  {
+   "id": "79b54204b0",
+   "where": "h2 · Our most",
+   "original": "Find your",
+   "text": "Find your"
+  },
+  {
+   "id": "9890f91a84",
+   "where": "span · Find your",
+   "original": "class",
+   "text": "class"
+  },
+  {
+   "id": "c637a9eb93",
+   "where": "p · Find your",
+   "original": "Filter by location, class type, studio, day or instructor. Every class below is included in your membership.",
+   "text": "Filter by location, class type, studio, day or instructor. Every class below is included in your membership."
+  },
+  {
+   "id": "c5d3cd8c0b",
+   "where": "button · Find your",
+   "original": "×",
+   "text": "×"
+  },
+  {
+   "id": "371d43329f",
+   "where": "span · Find your",
+   "original": "Type",
+   "text": "Type"
+  },
+  {
+   "id": "1af42736b1",
+   "where": "option · Find your",
+   "original": "All types",
+   "text": "All types"
+  },
+  {
+   "id": "ba9b7d2d55",
+   "where": "span · Find your",
+   "original": "Studio",
+   "text": "Studio"
+  },
+  {
+   "id": "33a1585f0a",
+   "where": "option · Find your",
+   "original": "All studios",
+   "text": "All studios"
+  },
+  {
+   "id": "b09afee7f9",
+   "where": "span · Find your",
+   "original": "Day",
+   "text": "Day"
+  },
+  {
+   "id": "bc728d6ac3",
+   "where": "option · Find your",
+   "original": "All days",
+   "text": "All days"
+  },
+  {
+   "id": "a60fa53521",
+   "where": "span · Find your",
+   "original": "Instructor",
+   "text": "Instructor"
+  },
+  {
+   "id": "87a127a7a0",
+   "where": "option · Find your",
+   "original": "All instructors",
+   "text": "All instructors"
+  },
+  {
+   "id": "91fa3ae399",
+   "where": "button · Find your",
+   "original": "Jump to now",
+   "text": "Jump to now"
+  },
+  {
+   "id": "efc805aeb8",
+   "where": "button · Find your",
+   "original": "Clear filters",
+   "text": "Clear filters"
+  },
+  {
+   "id": "c0f7730bc5",
+   "where": "p · Find your",
+   "original": "Loading this week’s classes…",
+   "text": "Loading this week’s classes…"
+  },
+  {
+   "id": "48e0bbb840",
+   "where": "button · Find your",
+   "original": "×",
+   "text": "×"
+  },
+  {
+   "id": "0b5076ef80",
+   "where": "span · Find your",
+   "original": "All Levels",
+   "text": "All Levels"
+  },
+  {
+   "id": "c3b5f707be",
+   "where": "p · Find your",
+   "original": "Classes for every body",
+   "text": "Classes for every body"
+  },
+  {
+   "id": "7dad0fb2f1",
+   "where": "h2 · Find your",
+   "original": "Beginners and seniors",
+   "text": "Beginners and seniors"
+  },
+  {
+   "id": "2aa1e16a90",
+   "where": "span · Beginners and seniors",
+   "original": "welcome",
+   "text": "welcome"
+  },
+  {
+   "id": "f9462879c0",
+   "where": "p · Beginners and seniors",
+   "original": "There is something for everyone from beginner to advanced and classes are included in your membership. You may also select from indoor cycling classes every day of the week in our Sky Cycle studio or take classes designed just for seniors.",
+   "text": "There is something for everyone from beginner to advanced and classes are included in your membership. You may also select from indoor cycling classes every day of the week in our Sky Cycle studio or take classes designed just for seniors."
+  },
+  {
+   "id": "3add70a7e1",
+   "where": "p · Beginners and seniors",
+   "original": "Enjoy more than 700 classes per month including Zumba, Pilates mat, yoga, sports conditioning, H.I.I.T, Les Mills programs, aqua, and more.",
+   "text": "Enjoy more than 700 classes per month including Zumba, Pilates mat, yoga, sports conditioning, H.I.I.T, Les Mills programs, aqua, and more."
+  },
+  {
+   "id": "b9d947f47c",
+   "where": "a · Beginners and seniors",
+   "original": "Classes for Seniors →",
+   "text": "Classes for Seniors →"
+  },
+  {
+   "id": "01b3dc377c",
+   "where": "p · Beginners and seniors",
+   "original": "Request your free fitness class pass",
+   "text": "Request your free fitness class pass"
+  },
+  {
+   "id": "7a1335b8be",
+   "where": "h2 · Beginners and seniors",
+   "original": "Your free class pass is",
+   "text": "Your free class pass is"
+  },
+  {
+   "id": "41739d78c7",
+   "where": "span · Your free class pass is",
+   "original": "waiting",
+   "text": "waiting"
+  },
+  {
+   "id": "02aa1a8c56",
+   "where": "p · Your free class pass is",
+   "original": "With your free class pass, you will have full membership privileges for one day at any Gainesville Health & Fitness location. There is no charge, no obligation and no risk. There is, however, a chance that you will be inspired.",
+   "text": "With your free class pass, you will have full membership privileges for one day at any Gainesville Health & Fitness location. There is no charge, no obligation and no risk. There is, however, a chance that you will be inspired."
+  },
+  {
+   "id": "e7211c0944",
+   "where": "label · Your free class pass is",
+   "original": "First name",
+   "text": "First name"
+  },
+  {
+   "id": "d85c443af1",
+   "where": "label · Your free class pass is",
+   "original": "Last name",
+   "text": "Last name"
+  },
+  {
+   "id": "07aca768bb",
+   "where": "label · Your free class pass is",
+   "original": "Email address",
+   "text": "Email address"
+  },
+  {
+   "id": "10ca308f6e",
+   "where": "label · Your free class pass is",
+   "original": "Phone",
+   "text": "Phone"
+  },
+  {
+   "id": "bc409cf6cf",
+   "where": "option · Your free class pass is",
+   "original": "",
+   "text": ""
+  },
+  {
+   "id": "b1240fa03b",
+   "where": "option · Your free class pass is",
+   "original": "GHF Main",
+   "text": "GHF Main"
+  },
+  {
+   "id": "13c69e7038",
+   "where": "option · Your free class pass is",
+   "original": "GHF Women",
+   "text": "GHF Women"
+  },
+  {
+   "id": "9514c1227f",
+   "where": "option · Your free class pass is",
+   "original": "GHF Tioga",
+   "text": "GHF Tioga"
+  },
+  {
+   "id": "6bc6993ce4",
+   "where": "label · Your free class pass is",
+   "original": "Preferred location",
+   "text": "Preferred location"
+  },
+  {
+   "id": "7d1af121f8",
+   "where": "button · Your free class pass is",
+   "original": "Get My Free Class Pass",
+   "text": "Get My Free Class Pass"
+  },
+  {
+   "id": "7153246b02",
+   "where": "p · Your free class pass is",
+   "original": "We will contact you via phone, email, or text. There is no charge, no obligation and no risk.",
+   "text": "We will contact you via phone, email, or text. There is no charge, no obligation and no risk."
+  },
+  {
+   "id": "dac6fda933",
+   "where": "h2 · Your free class pass is",
+   "original": "Come as often as you",
+   "text": "Come as often as you"
+  },
+  {
+   "id": "95da9d4dc3",
+   "where": "span · Come as often as you",
+   "original": "want",
+   "text": "want"
+  },
+  {
+   "id": "25ebc6c5d0",
+   "where": "p · Come as often as you",
+   "original": "And best of all, these classes are included in your GHF membership. We're here to help you reach your potential.",
+   "text": "And best of all, these classes are included in your GHF membership. We're here to help you reach your potential."
+  },
+  {
+   "id": "acf6e95e71",
+   "where": "a · Come as often as you",
+   "original": "Claim Your Free Pass",
+   "text": "Claim Your Free Pass"
+  },
+  {
+   "id": "51c57d3706",
+   "where": "a · Come as often as you",
+   "original": "Free All-Access Pass",
+   "text": "Free All-Access Pass"
+  }
+ ]
+}

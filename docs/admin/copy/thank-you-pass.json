@@ -1,0 +1,131 @@
+{
+ "page": "thank-you-pass",
+ "items": [
+  {
+   "id": "8d14b09e27",
+   "where": "Browser tab title",
+   "original": "Thank You | Free Pass | Gainesville Health & Fitness",
+   "text": "Thank You | Free Pass | Gainesville Health & Fitness"
+  },
+  {
+   "id": "8e32c14660",
+   "where": "Search-engine description",
+   "original": "Thanks for requesting your free all-access pass. A team member will follow up shortly to set it up.",
+   "text": "Thanks for requesting your free all-access pass. A team member will follow up shortly to set it up."
+  },
+  {
+   "id": "c326e410a3",
+   "where": "a",
+   "original": "Home",
+   "text": "Home"
+  },
+  {
+   "id": "07de7e8e0b",
+   "where": "text",
+   "original": "/ Thank you",
+   "text": "/ Thank you"
+  },
+  {
+   "id": "d5fd86e659",
+   "where": "p",
+   "original": "Pass requested",
+   "text": "Pass requested"
+  },
+  {
+   "id": "4768b10fca",
+   "where": "span",
+   "original": "Your free pass is",
+   "text": "Your free pass is"
+  },
+  {
+   "id": "a69dba5cb6",
+   "where": "span",
+   "original": "on its",
+   "text": "on its"
+  },
+  {
+   "id": "71cfa9a384",
+   "where": "span",
+   "original": "way",
+   "text": "way"
+  },
+  {
+   "id": "6069be285c",
+   "where": "p",
+   "original": "Congratulations on taking the first step toward a healthier, stronger you. One of our team members will follow up shortly to set up your pass and answer any questions.",
+   "text": "Congratulations on taking the first step toward a healthier, stronger you. One of our team members will follow up shortly to set up your pass and answer any questions."
+  },
+  {
+   "id": "9cd9d29af3",
+   "where": "strong",
+   "original": "Check your email",
+   "text": "Check your email"
+  },
+  {
+   "id": "f05b221d78",
+   "where": "text",
+   "original": "— look for a confirmation email or text with everything you'll need.",
+   "text": "— look for a confirmation email or text with everything you'll need."
+  },
+  {
+   "id": "82f348cb3a",
+   "where": "strong",
+   "original": "Prepare for your visit",
+   "text": "Prepare for your visit"
+  },
+  {
+   "id": "5703847d11",
+   "where": "text",
+   "original": "— dress comfortably, and get ready to look around and meet the team.",
+   "text": "— dress comfortably, and get ready to look around and meet the team."
+  },
+  {
+   "id": "89122b3e65",
+   "where": "br",
+   "original": "Questions? Call",
+   "text": "Questions? Call"
+  },
+  {
+   "id": "2f07943142",
+   "where": "a",
+   "original": "(352) 377-4955",
+   "text": "(352) 377-4955"
+  },
+  {
+   "id": "639331220d",
+   "where": "text",
+   "original": "or email",
+   "text": "or email"
+  },
+  {
+   "id": "30544fecb1",
+   "where": "a",
+   "original": "memberservices@ghfc.com",
+   "text": "memberservices@ghfc.com"
+  },
+  {
+   "id": "9039602f7b",
+   "where": "strong",
+   "original": "Your GHF Team",
+   "text": "Your GHF Team"
+  },
+  {
+   "id": "784e0b84af",
+   "where": "text",
+   "original": "—",
+   "text": "—"
+  },
+  {
+   "id": "037bfe3670",
+   "where": "em",
+   "original": "Gainesville Strong Since 1978",
+   "text": "Gainesville Strong Since 1978"
+  },
+  {
+   "id": "2fa1ba06fe",
+   "where": "a",
+   "original": "Explore Our Locations",
+   "text": "Explore Our Locations"
+  }
+ ]
+}

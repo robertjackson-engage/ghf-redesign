@@ -1,0 +1,6521 @@
+{
+ "page": "member-savings",
+ "items": [
+  {
+   "id": "4bf6ebb9b6",
+   "where": "Browser tab title",
+   "original": "Member Savings Program | GHF",
+   "text": "Member Savings Program | GHF"
+  },
+  {
+   "id": "51846a2531",
+   "where": "Search-engine description",
+   "original": "Save the cost of your gym membership dues at over 100 participating local businesses.",
+   "text": "Save the cost of your gym membership dues at over 100 participating local businesses."
+  },
+  {
+   "id": "0c6aed24c2",
+   "where": "a",
+   "original": "Home",
+   "text": "Home"
+  },
+  {
+   "id": "8b121973e0",
+   "where": "text",
+   "original": "/ Member Savings",
+   "text": "/ Member Savings"
+  },
+  {
+   "id": "db12cd76c9",
+   "where": "p",
+   "original": "Member Savings Program",
+   "text": "Member Savings Program"
+  },
+  {
+   "id": "185bc9ea46",
+   "where": "span",
+   "original": "The membership that pays",
+   "text": "The membership that pays"
+  },
+  {
+   "id": "34617b99c9",
+   "where": "span",
+   "original": "for",
+   "text": "for"
+  },
+  {
+   "id": "44d4ea5383",
+   "where": "span",
+   "original": "itself",
+   "text": "itself"
+  },
+  {
+   "id": "7595b953b8",
+   "where": "p",
+   "original": "Show your GHF card at dozens of local businesses and watch the discounts stack up — many members save more than their dues every month. Eat, shop, save, repeat.",
+   "text": "Show your GHF card at dozens of local businesses and watch the discounts stack up — many members save more than their dues every month. Eat, shop, save, repeat."
+  },
+  {
+   "id": "e2f11fdbb3",
+   "where": "a",
+   "original": "Get Pricing",
+   "text": "Get Pricing"
+  },
+  {
+   "id": "c7c1a586bb",
+   "where": "span",
+   "original": "100+ participating businesses",
+   "text": "100+ participating businesses"
+  },
+  {
+   "id": "d3282be372",
+   "where": "span",
+   "original": "No coupons required",
+   "text": "No coupons required"
+  },
+  {
+   "id": "83e9253c56",
+   "where": "div",
+   "original": "Participating local businesses",
+   "text": "Participating local businesses"
+  },
+  {
+   "id": "513a866e92",
+   "where": "div",
+   "original": "Membership card is all you need",
+   "text": "Membership card is all you need"
+  },
+  {
+   "id": "3c2b6c1757",
+   "where": "div",
+   "original": "Coupons required",
+   "text": "Coupons required"
+  },
+  {
+   "id": "45e8c31c84",
+   "where": "div",
+   "original": "Days a year of savings",
+   "text": "Days a year of savings"
+  },
+  {
+   "id": "bf0fe4ca85",
+   "where": "p",
+   "original": "How it works",
+   "text": "How it works"
+  },
+  {
+   "id": "ce91fc9e12",
+   "where": "h2",
+   "original": "Save every",
+   "text": "Save every"
+  },
+  {
+   "id": "d4759441e8",
+   "where": "span · Save every",
+   "original": "day",
+   "text": "day"
+  },
+  {
+   "id": "f34e45cb6f",
+   "where": "p · Save every",
+   "original": "With over 100 participating businesses, you'll save every day on a variety of services and products, no coupons required! Simply show your GHF membership card and start saving.",
+   "text": "With over 100 participating businesses, you'll save every day on a variety of services and products, no coupons required! Simply show your GHF membership card and start saving."
+  },
+  {
+   "id": "07fefb4219",
+   "where": "strong · Save every",
+   "original": "Would your business like to take part in the Member Savings Program?",
+   "text": "Would your business like to take part in the Member Savings Program?"
+  },
+  {
+   "id": "0a05b2ef67",
+   "where": "text · Save every",
+   "original": "Call us at (352) 377-4955 or email us — we'd love to partner with you.",
+   "text": "Call us at (352) 377-4955 or email us — we'd love to partner with you."
+  },
+  {
+   "id": "67d06da8af",
+   "where": "a · Save every",
+   "original": "Contact Us →",
+   "text": "Contact Us →"
+  },
+  {
+   "id": "ed3f2f211d",
+   "where": "p · Save every",
+   "original": "Participating businesses",
+   "text": "Participating businesses"
+  },
+  {
+   "id": "8437b2bf37",
+   "where": "h2 · Save every",
+   "original": "Where your card",
+   "text": "Where your card"
+  },
+  {
+   "id": "dc5b006a18",
+   "where": "span · Where your card",
+   "original": "works",
+   "text": "works"
+  },
+  {
+   "id": "fa91d158b5",
+   "where": "p · Where your card",
+   "original": "Show your GHF membership card to claim these offers. No coupons, no apps — just your card.",
+   "text": "Show your GHF membership card to claim these offers. No coupons, no apps — just your card."
+  },
+  {
+   "id": "47483b9e96",
+   "where": "button · Where your card",
+   "original": "×",
+   "text": "×"
+  },
+  {
+   "id": "33f00f7c99",
+   "where": "span · Where your card",
+   "original": "Category",
+   "text": "Category"
+  },
+  {
+   "id": "97d97de434",
+   "where": "option · Where your card",
+   "original": "All categories",
+   "text": "All categories"
+  },
+  {
+   "id": "fa6ddc1a20",
+   "where": "option · Where your card",
+   "original": "Auto",
+   "text": "Auto"
+  },
+  {
+   "id": "fef01e9576",
+   "where": "option · Where your card",
+   "original": "Beauty & Spa",
+   "text": "Beauty & Spa"
+  },
+  {
+   "id": "a0c70d01b9",
+   "where": "option · Where your card",
+   "original": "Children's Services",
+   "text": "Children's Services"
+  },
+  {
+   "id": "53419a6b01",
+   "where": "option · Where your card",
+   "original": "Dining",
+   "text": "Dining"
+  },
+  {
+   "id": "ca2938470c",
+   "where": "option · Where your card",
+   "original": "Event Services",
+   "text": "Event Services"
+  },
+  {
+   "id": "aa8dc77a29",
+   "where": "option · Where your card",
+   "original": "Fashion",
+   "text": "Fashion"
+  },
+  {
+   "id": "180038c471",
+   "where": "option · Where your card",
+   "original": "Framing & Art",
+   "text": "Framing & Art"
+  },
+  {
+   "id": "86220091f6",
+   "where": "option · Where your card",
+   "original": "Gifts",
+   "text": "Gifts"
+  },
+  {
+   "id": "1beeb0229c",
+   "where": "option · Where your card",
+   "original": "Health & Wellness",
+   "text": "Health & Wellness"
+  },
+  {
+   "id": "6b82537d07",
+   "where": "option · Where your card",
+   "original": "Home Improvement & Furnishings",
+   "text": "Home Improvement & Furnishings"
+  },
+  {
+   "id": "e82cc77eb9",
+   "where": "option · Where your card",
+   "original": "Homes/Apartments",
+   "text": "Homes/Apartments"
+  },
+  {
+   "id": "b5280014ae",
+   "where": "option · Where your card",
+   "original": "Medical Services",
+   "text": "Medical Services"
+  },
+  {
+   "id": "582aad0c31",
+   "where": "option · Where your card",
+   "original": "Other",
+   "text": "Other"
+  },
+  {
+   "id": "c14924b529",
+   "where": "option · Where your card",
+   "original": "Pet Care",
+   "text": "Pet Care"
+  },
+  {
+   "id": "fa61299b86",
+   "where": "option · Where your card",
+   "original": "Professional Services",
+   "text": "Professional Services"
+  },
+  {
+   "id": "99e2e572dc",
+   "where": "option · Where your card",
+   "original": "Sports",
+   "text": "Sports"
+  },
+  {
+   "id": "33e9719c87",
+   "where": "option · Where your card",
+   "original": "Travel & Adventure",
+   "text": "Travel & Adventure"
+  },
+  {
+   "id": "fdfb3b981a",
+   "where": "p · Where your card",
+   "original": "136 businesses",
+   "text": "136 businesses"
+  },
+  {
+   "id": "3555f7124f",
+   "where": "button · Where your card",
+   "original": "Clear filters",
+   "text": "Clear filters"
+  },
+  {
+   "id": "55b9dcaa1c",
+   "where": "p · Where your card",
+   "original": "No businesses match that search.",
+   "text": "No businesses match that search."
+  },
+  {
+   "id": "1290fb8f04",
+   "where": "button · Where your card",
+   "original": "Clear it",
+   "text": "Clear it"
+  },
+  {
+   "id": "4e23ac5322",
+   "where": "text · Where your card",
+   "original": "to see all 136.",
+   "text": "to see all 136."
+  },
+  {
+   "id": "fc97b0f18e",
+   "where": "p · Where your card",
+   "original": "Auto",
+   "text": "Auto"
+  },
+  {
+   "id": "be4d958087",
+   "where": "h3 · Where your card",
+   "original": "A Automotive Electric Specialist",
+   "text": "A Automotive Electric Specialist"
+  },
+  {
+   "id": "febaec46dc",
+   "where": "li · A Automotive Electric Specialist",
+   "original": "25% off diagnostic fee",
+   "text": "25% off diagnostic fee"
+  },
+  {
+   "id": "8d499967f0",
+   "where": "a · A Automotive Electric Specialist",
+   "original": "(352)338-3513",
+   "text": "(352)338-3513"
+  },
+  {
+   "id": "a53bab3c03",
+   "where": "i · A Automotive Electric Specialist",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "b539c6c0b4",
+   "where": "span · A Automotive Electric Specialist",
+   "original": "2948 NE 21st Way",
+   "text": "2948 NE 21st Way"
+  },
+  {
+   "id": "5d6f106eeb",
+   "where": "p · A Automotive Electric Specialist",
+   "original": "Auto",
+   "text": "Auto"
+  },
+  {
+   "id": "dd2a81b915",
+   "where": "h3 · A Automotive Electric Specialist",
+   "original": "Ahrens Auto",
+   "text": "Ahrens Auto"
+  },
+  {
+   "id": "7cca2044c8",
+   "where": "li · Ahrens Auto",
+   "original": "10% off scheduled maintenance labor",
+   "text": "10% off scheduled maintenance labor"
+  },
+  {
+   "id": "87d23eaa52",
+   "where": "a · Ahrens Auto",
+   "original": "(352)378-5710",
+   "text": "(352)378-5710"
+  },
+  {
+   "id": "eca1b6666a",
+   "where": "i · Ahrens Auto",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "6c45af6aa0",
+   "where": "span · Ahrens Auto",
+   "original": "604 SE 2nd St",
+   "text": "604 SE 2nd St"
+  },
+  {
+   "id": "967c99be93",
+   "where": "i · Ahrens Auto",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "0b9804a8e6",
+   "where": "a · Ahrens Auto",
+   "original": "Visit website",
+   "text": "Visit website"
+  },
+  {
+   "id": "8ec6bf047f",
+   "where": "p · Ahrens Auto",
+   "original": "Auto",
+   "text": "Auto"
+  },
+  {
+   "id": "cd26e24de4",
+   "where": "h3 · Ahrens Auto",
+   "original": "Campus Scooters",
+   "text": "Campus Scooters"
+  },
+  {
+   "id": "7ff9b15d73",
+   "where": "li · Campus Scooters",
+   "original": "30% off oil change service package",
+   "text": "30% off oil change service package"
+  },
+  {
+   "id": "f39ad80811",
+   "where": "li · Campus Scooters",
+   "original": "Buy one eye wear get one eye wear FREE (of equal or lesser value)",
+   "text": "Buy one eye wear get one eye wear FREE (of equal or lesser value)"
+  },
+  {
+   "id": "cfae8a310f",
+   "where": "a · Campus Scooters",
+   "original": "(352)263-0425",
+   "text": "(352)263-0425"
+  },
+  {
+   "id": "bebe4c4d0b",
+   "where": "i · Campus Scooters",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "8979b853d8",
+   "where": "span · Campus Scooters",
+   "original": "3219 SW 40th Blvd",
+   "text": "3219 SW 40th Blvd"
+  },
+  {
+   "id": "74c2c7d4f9",
+   "where": "p · Campus Scooters",
+   "original": "Auto",
+   "text": "Auto"
+  },
+  {
+   "id": "17c3fa3150",
+   "where": "h3 · Campus Scooters",
+   "original": "Continental Imports MV#11119",
+   "text": "Continental Imports MV#11119"
+  },
+  {
+   "id": "38c67a6112",
+   "where": "li · Continental Imports MV#11119",
+   "original": "10% off labor (up to $50)",
+   "text": "10% off labor (up to $50)"
+  },
+  {
+   "id": "3841055092",
+   "where": "a · Continental Imports MV#11119",
+   "original": "(352)377-6604",
+   "text": "(352)377-6604"
+  },
+  {
+   "id": "555f23ee3b",
+   "where": "i · Continental Imports MV#11119",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "69d07f0d16",
+   "where": "span · Continental Imports MV#11119",
+   "original": "1219 South Main Street",
+   "text": "1219 South Main Street"
+  },
+  {
+   "id": "83ba5b11d0",
+   "where": "i · Continental Imports MV#11119",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "45de067347",
+   "where": "a · Continental Imports MV#11119",
+   "original": "Visit website",
+   "text": "Visit website"
+  },
+  {
+   "id": "a92972db14",
+   "where": "p · Continental Imports MV#11119",
+   "original": "Auto",
+   "text": "Auto"
+  },
+  {
+   "id": "790b6b1fc9",
+   "where": "h3 · Continental Imports MV#11119",
+   "original": "Custom Glass Tinting",
+   "text": "Custom Glass Tinting"
+  },
+  {
+   "id": "79a635e0ef",
+   "where": "li · Custom Glass Tinting",
+   "original": "Auto - 15% Off Comfort and Pinnacle Series",
+   "text": "Auto - 15% Off Comfort and Pinnacle Series"
+  },
+  {
+   "id": "264ec9a751",
+   "where": "li · Custom Glass Tinting",
+   "original": "Residential - $50 off Home Window Tinting (Minimum $300 residential purchase)",
+   "text": "Residential - $50 off Home Window Tinting (Minimum $300 residential purchase)"
+  },
+  {
+   "id": "6f1bb44145",
+   "where": "a · Custom Glass Tinting",
+   "original": "(352)377-8468",
+   "text": "(352)377-8468"
+  },
+  {
+   "id": "34388e5ad4",
+   "where": "i · Custom Glass Tinting",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "4cbf893c34",
+   "where": "span · Custom Glass Tinting",
+   "original": "1605 NW 6th St.",
+   "text": "1605 NW 6th St."
+  },
+  {
+   "id": "64c5f35ee6",
+   "where": "i · Custom Glass Tinting",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "2306fd9675",
+   "where": "a · Custom Glass Tinting",
+   "original": "Visit website",
+   "text": "Visit website"
+  },
+  {
+   "id": "9ddcbe96ea",
+   "where": "p · Custom Glass Tinting",
+   "original": "Auto",
+   "text": "Auto"
+  },
+  {
+   "id": "6d49509e21",
+   "where": "h3 · Custom Glass Tinting",
+   "original": "Gainesville Detailing",
+   "text": "Gainesville Detailing"
+  },
+  {
+   "id": "75513e5bfb",
+   "where": "li · Gainesville Detailing",
+   "original": "15% Off Any Service or Detailing",
+   "text": "15% Off Any Service or Detailing"
+  },
+  {
+   "id": "21225d5a3b",
+   "where": "a · Gainesville Detailing",
+   "original": "(352)215-0026",
+   "text": "(352)215-0026"
+  },
+  {
+   "id": "594e86dcf8",
+   "where": "i · Gainesville Detailing",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "4eea8e2ed1",
+   "where": "a · Gainesville Detailing",
+   "original": "Visit website",
+   "text": "Visit website"
+  },
+  {
+   "id": "51a298ebfe",
+   "where": "p · Gainesville Detailing",
+   "original": "Auto",
+   "text": "Auto"
+  },
+  {
+   "id": "750bacd340",
+   "where": "h3 · Gainesville Detailing",
+   "original": "Gainesville Nissan",
+   "text": "Gainesville Nissan"
+  },
+  {
+   "id": "dcdf9a9cd6",
+   "where": "li · Gainesville Nissan",
+   "original": "$100 under dealer invoice, plus all applicable rebates",
+   "text": "$100 under dealer invoice, plus all applicable rebates"
+  },
+  {
+   "id": "0a5d0cb0e4",
+   "where": "li · Gainesville Nissan",
+   "original": "Free car washes",
+   "text": "Free car washes"
+  },
+  {
+   "id": "79d06bf583",
+   "where": "li · Gainesville Nissan",
+   "original": "$19.95 oil changes (up to 5 quarts conventional oil)",
+   "text": "$19.95 oil changes (up to 5 quarts conventional oil)"
+  },
+  {
+   "id": "11e95d6e2f",
+   "where": "a · Gainesville Nissan",
+   "original": "(352)371-2023",
+   "text": "(352)371-2023"
+  },
+  {
+   "id": "09e17b971b",
+   "where": "i · Gainesville Nissan",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "1fbc686db5",
+   "where": "span · Gainesville Nissan",
+   "original": "3915 N. Main Street",
+   "text": "3915 N. Main Street"
+  },
+  {
+   "id": "7fe764263c",
+   "where": "i · Gainesville Nissan",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "2db218ee3d",
+   "where": "a · Gainesville Nissan",
+   "original": "Visit website",
+   "text": "Visit website"
+  },
+  {
+   "id": "44deb8ebb2",
+   "where": "p · Gainesville Nissan",
+   "original": "Auto",
+   "text": "Auto"
+  },
+  {
+   "id": "180d6a0803",
+   "where": "h3 · Gainesville Nissan",
+   "original": "Honda of Gainesville",
+   "text": "Honda of Gainesville"
+  },
+  {
+   "id": "4c2babb5bc",
+   "where": "li · Honda of Gainesville",
+   "original": "Free car wash for 2 yrs and free maintenance. New cars and Trucks: 1 % over invoice. Used Cars: 2% over cost. Call James Quesenberry for details 352-372-2329 ext 440.",
+   "text": "Free car wash for 2 yrs and free maintenance. New cars and Trucks: 1 % over invoice. Used Cars: 2% over cost. Call James Quesenberry for details 352-372-2329 ext 440."
+  },
+  {
+   "id": "298b29ebdf",
+   "where": "li · Honda of Gainesville",
+   "original": "Express Service Oil Change only $17.95. *Hybrids, Synthetics and Diesels price higher. Up to 5 quarts standard oil. (free car wash and multi point inspection)",
+   "text": "Express Service Oil Change only $17.95. *Hybrids, Synthetics and Diesels price higher. Up to 5 quarts standard oil. (free car wash and multi point inspection)"
+  },
+  {
+   "id": "98540a6013",
+   "where": "a · Honda of Gainesville",
+   "original": "(352)372-2329 x440",
+   "text": "(352)372-2329 x440"
+  },
+  {
+   "id": "7978903ad1",
+   "where": "i · Honda of Gainesville",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "48097b231d",
+   "where": "span · Honda of Gainesville",
+   "original": "3801 N. Main Street",
+   "text": "3801 N. Main Street"
+  },
+  {
+   "id": "30bb48f353",
+   "where": "i · Honda of Gainesville",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "db6fa8b9bb",
+   "where": "a · Honda of Gainesville",
+   "original": "Visit website",
+   "text": "Visit website"
+  },
+  {
+   "id": "53551a5155",
+   "where": "p · Honda of Gainesville",
+   "original": "Auto",
+   "text": "Auto"
+  },
+  {
+   "id": "4a1efa3d99",
+   "where": "h3 · Honda of Gainesville",
+   "original": "Next Generation Detailing, LLC",
+   "text": "Next Generation Detailing, LLC"
+  },
+  {
+   "id": "52805b804e",
+   "where": "li · Next Generation Detailing, LLC",
+   "original": "10% off any service or detailing. Not valid with other offers or discounts.",
+   "text": "10% off any service or detailing. Not valid with other offers or discounts."
+  },
+  {
+   "id": "868858b4aa",
+   "where": "a · Next Generation Detailing, LLC",
+   "original": "(888)746-7179",
+   "text": "(888)746-7179"
+  },
+  {
+   "id": "d7b4e2b071",
+   "where": "p · Next Generation Detailing, LLC",
+   "original": "Auto",
+   "text": "Auto"
+  },
+  {
+   "id": "7e13aa9eea",
+   "where": "h3 · Next Generation Detailing, LLC",
+   "original": "Park Place Car Wash",
+   "text": "Park Place Car Wash"
+  },
+  {
+   "id": "0e394d4e56",
+   "where": "li · Park Place Car Wash",
+   "original": "$5.00 off The Superior Car Wash only!",
+   "text": "$5.00 off The Superior Car Wash only!"
+  },
+  {
+   "id": "e3a41f7b3d",
+   "where": "li · Park Place Car Wash",
+   "original": "Not applicable to other services.",
+   "text": "Not applicable to other services."
+  },
+  {
+   "id": "7748002c60",
+   "where": "a · Park Place Car Wash",
+   "original": "(352)331-5588",
+   "text": "(352)331-5588"
+  },
+  {
+   "id": "18967894b1",
+   "where": "i · Park Place Car Wash",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "ebecbcf9c0",
+   "where": "span · Park Place Car Wash",
+   "original": "7404 NW 4th Blvd",
+   "text": "7404 NW 4th Blvd"
+  },
+  {
+   "id": "0960d0893a",
+   "where": "i · Park Place Car Wash",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "768a6a69ef",
+   "where": "a · Park Place Car Wash",
+   "original": "Visit website",
+   "text": "Visit website"
+  },
+  {
+   "id": "78c234e43d",
+   "where": "p · Park Place Car Wash",
+   "original": "Auto",
+   "text": "Auto"
+  },
+  {
+   "id": "911d48bbda",
+   "where": "h3 · Park Place Car Wash",
+   "original": "Sha's Car Detailing",
+   "text": "Sha's Car Detailing"
+  },
+  {
+   "id": "470d5344dc",
+   "where": "li · Sha's Car Detailing",
+   "original": "15% off any service",
+   "text": "15% off any service"
+  },
+  {
+   "id": "ffc5c349a6",
+   "where": "a · Sha's Car Detailing",
+   "original": "(352)626-8605",
+   "text": "(352)626-8605"
+  },
+  {
+   "id": "9adde0d97f",
+   "where": "i · Sha's Car Detailing",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "d7b9fac34a",
+   "where": "span · Sha's Car Detailing",
+   "original": "Mobile",
+   "text": "Mobile"
+  },
+  {
+   "id": "2f77080916",
+   "where": "i · Sha's Car Detailing",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "1d82b30831",
+   "where": "a · Sha's Car Detailing",
+   "original": "Visit website",
+   "text": "Visit website"
+  },
+  {
+   "id": "cfcae27c0a",
+   "where": "p · Sha's Car Detailing",
+   "original": "Auto",
+   "text": "Auto"
+  },
+  {
+   "id": "f6589717e9",
+   "where": "h3 · Sha's Car Detailing",
+   "original": "Tire Kingdom",
+   "text": "Tire Kingdom"
+  },
+  {
+   "id": "27329121c5",
+   "where": "li · Tire Kingdom",
+   "original": "10% off Tires, Wheels, & Mechanical Services",
+   "text": "10% off Tires, Wheels, & Mechanical Services"
+  },
+  {
+   "id": "07651f4f5d",
+   "where": "li · Tire Kingdom",
+   "original": "Free Flat Repair or Tire Rotation",
+   "text": "Free Flat Repair or Tire Rotation"
+  },
+  {
+   "id": "3867b01705",
+   "where": "li · Tire Kingdom",
+   "original": "$7 off any oil change",
+   "text": "$7 off any oil change"
+  },
+  {
+   "id": "a025a45dd0",
+   "where": "a · Tire Kingdom",
+   "original": "Visit website",
+   "text": "Visit website"
+  },
+  {
+   "id": "f715706c84",
+   "where": "p · Tire Kingdom",
+   "original": "Auto",
+   "text": "Auto"
+  },
+  {
+   "id": "a57112838b",
+   "where": "h3 · Tire Kingdom",
+   "original": "Tomlinson Motor Company",
+   "text": "Tomlinson Motor Company"
+  },
+  {
+   "id": "f7c7c1da6b",
+   "where": "li · Tomlinson Motor Company",
+   "original": "$100 off the purchase price of any vehicle for current GHF members",
+   "text": "$100 off the purchase price of any vehicle for current GHF members"
+  },
+  {
+   "id": "f847215bdd",
+   "where": "a · Tomlinson Motor Company",
+   "original": "(352)372-0313",
+   "text": "(352)372-0313"
+  },
+  {
+   "id": "fb8a1bf85c",
+   "where": "i · Tomlinson Motor Company",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "190a3d46ca",
+   "where": "span · Tomlinson Motor Company",
+   "original": "3580 N Main St",
+   "text": "3580 N Main St"
+  },
+  {
+   "id": "d56baf8b06",
+   "where": "i · Tomlinson Motor Company",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "2ea8691436",
+   "where": "a · Tomlinson Motor Company",
+   "original": "Visit website",
+   "text": "Visit website"
+  },
+  {
+   "id": "f12a390c22",
+   "where": "p · Tomlinson Motor Company",
+   "original": "Beauty & Spa",
+   "text": "Beauty & Spa"
+  },
+  {
+   "id": "d709f66dbc",
+   "where": "h3 · Tomlinson Motor Company",
+   "original": "Accent Plastic Surgery & Aesthetics",
+   "text": "Accent Plastic Surgery & Aesthetics"
+  },
+  {
+   "id": "a3a2b6cfa7",
+   "where": "li · Accent Plastic Surgery & Aesthetics",
+   "original": "10% off laser hair removal packages (doesn't apply to single sessions)",
+   "text": "10% off laser hair removal packages (doesn't apply to single sessions)"
+  },
+  {
+   "id": "ddf79c4510",
+   "where": "li · Accent Plastic Surgery & Aesthetics",
+   "original": "10% off corrective facials",
+   "text": "10% off corrective facials"
+  },
+  {
+   "id": "3487ab8a5f",
+   "where": "a · Accent Plastic Surgery & Aesthetics",
+   "original": "(352)271-5388",
+   "text": "(352)271-5388"
+  },
+  {
+   "id": "b583455afa",
+   "where": "i · Accent Plastic Surgery & Aesthetics",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "ccc83d554f",
+   "where": "span · Accent Plastic Surgery & Aesthetics",
+   "original": "4340 Newberry Road, Suite 301",
+   "text": "4340 Newberry Road, Suite 301"
+  },
+  {
+   "id": "f41f247276",
+   "where": "i · Accent Plastic Surgery & Aesthetics",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "29aa553e37",
+   "where": "a · Accent Plastic Surgery & Aesthetics",
+   "original": "Visit website",
+   "text": "Visit website"
+  },
+  {
+   "id": "33b21de58d",
+   "where": "p · Accent Plastic Surgery & Aesthetics",
+   "original": "Beauty & Spa",
+   "text": "Beauty & Spa"
+  },
+  {
+   "id": "7f65483084",
+   "where": "h3 · Accent Plastic Surgery & Aesthetics",
+   "original": "Ciao Bella Salon",
+   "text": "Ciao Bella Salon"
+  },
+  {
+   "id": "bc8b765070",
+   "where": "li · Ciao Bella Salon",
+   "original": "10% off any service!",
+   "text": "10% off any service!"
+  },
+  {
+   "id": "1649595c76",
+   "where": "a · Ciao Bella Salon",
+   "original": "(352)379-9200",
+   "text": "(352)379-9200"
+  },
+  {
+   "id": "3869ebe69b",
+   "where": "i · Ciao Bella Salon",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "411c73425b",
+   "where": "span · Ciao Bella Salon",
+   "original": "235 S. Main Street, Ste. 102",
+   "text": "235 S. Main Street, Ste. 102"
+  },
+  {
+   "id": "1cd4b91718",
+   "where": "i · Ciao Bella Salon",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "3e67cbb7f1",
+   "where": "a · Ciao Bella Salon",
+   "original": "Visit website",
+   "text": "Visit website"
+  },
+  {
+   "id": "86640e57d4",
+   "where": "p · Ciao Bella Salon",
+   "original": "Beauty & Spa",
+   "text": "Beauty & Spa"
+  },
+  {
+   "id": "dc14268cb7",
+   "where": "h3 · Ciao Bella Salon",
+   "original": "Dermacare Laser and Skin Care Clinics",
+   "text": "Dermacare Laser and Skin Care Clinics"
+  },
+  {
+   "id": "2764c45cde",
+   "where": "li · Dermacare Laser and Skin Care Clinics",
+   "original": "10% off treatments and products. Includes laser tattoo removal, chemical peels, laser hair removal, facials, electrolysis, Obagi, and more (excludes Botox and fillers).",
+   "text": "10% off treatments and products. Includes laser tattoo removal, chemical peels, laser hair removal, facials, electrolysis, Obagi, and more (excludes Botox and fillers)."
+  },
+  {
+   "id": "1bafb08843",
+   "where": "a · Dermacare Laser and Skin Care Clinics",
+   "original": "(352)331-5355",
+   "text": "(352)331-5355"
+  },
+  {
+   "id": "888edae135",
+   "where": "i · Dermacare Laser and Skin Care Clinics",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "3a9bbadb52",
+   "where": "span · Dermacare Laser and Skin Care Clinics",
+   "original": "101 NW 75th Street, Suite 3",
+   "text": "101 NW 75th Street, Suite 3"
+  },
+  {
+   "id": "8e932382f2",
+   "where": "i · Dermacare Laser and Skin Care Clinics",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "b3d7ae4caf",
+   "where": "a · Dermacare Laser and Skin Care Clinics",
+   "original": "Visit website",
+   "text": "Visit website"
+  },
+  {
+   "id": "0fbde6475a",
+   "where": "p · Dermacare Laser and Skin Care Clinics",
+   "original": "Beauty & Spa",
+   "text": "Beauty & Spa"
+  },
+  {
+   "id": "3b12375bd6",
+   "where": "h3 · Dermacare Laser and Skin Care Clinics",
+   "original": "Eden Michele Salon",
+   "text": "Eden Michele Salon"
+  },
+  {
+   "id": "01dfccbbb5",
+   "where": "li · Eden Michele Salon",
+   "original": "10% off hair services (select stylists) & retail",
+   "text": "10% off hair services (select stylists) & retail"
+  },
+  {
+   "id": "1ba0f536ed",
+   "where": "a · Eden Michele Salon",
+   "original": "(352)888-7528",
+   "text": "(352)888-7528"
+  },
+  {
+   "id": "6f5e5d0752",
+   "where": "i · Eden Michele Salon",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "9fd8d30ef6",
+   "where": "span · Eden Michele Salon",
+   "original": "2441 NW 43rd St #2b",
+   "text": "2441 NW 43rd St #2b"
+  },
+  {
+   "id": "63b13b5dc4",
+   "where": "i · Eden Michele Salon",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "be518e2f79",
+   "where": "a · Eden Michele Salon",
+   "original": "Visit website",
+   "text": "Visit website"
+  },
+  {
+   "id": "eb8cbf0430",
+   "where": "p · Eden Michele Salon",
+   "original": "Beauty & Spa",
+   "text": "Beauty & Spa"
+  },
+  {
+   "id": "627e9ebd4b",
+   "where": "h3 · Eden Michele Salon",
+   "original": "Elegance Studio",
+   "text": "Elegance Studio"
+  },
+  {
+   "id": "85ca53286d",
+   "where": "li · Elegance Studio",
+   "original": "$10 off any cut or color service.",
+   "text": "$10 off any cut or color service."
+  },
+  {
+   "id": "6ae3ac24fb",
+   "where": "li · Elegance Studio",
+   "original": "$25 off organic keratin treatment.",
+   "text": "$25 off organic keratin treatment."
+  },
+  {
+   "id": "644508b259",
+   "where": "a · Elegance Studio",
+   "original": "(352)376-1000",
+   "text": "(352)376-1000"
+  },
+  {
+   "id": "5d30c5a6fe",
+   "where": "i · Elegance Studio",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "464d5b58ab",
+   "where": "span · Elegance Studio",
+   "original": "4040 Newberry Road",
+   "text": "4040 Newberry Road"
+  },
+  {
+   "id": "044600b7fe",
+   "where": "i · Elegance Studio",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "8d484d995a",
+   "where": "a · Elegance Studio",
+   "original": "Visit website",
+   "text": "Visit website"
+  },
+  {
+   "id": "abb99a6d53",
+   "where": "p · Elegance Studio",
+   "original": "Beauty & Spa",
+   "text": "Beauty & Spa"
+  },
+  {
+   "id": "5d4234a1ce",
+   "where": "h3 · Elegance Studio",
+   "original": "Floating Lotus Spa",
+   "text": "Floating Lotus Spa"
+  },
+  {
+   "id": "27d2075539",
+   "where": "li · Floating Lotus Spa",
+   "original": "10% off your purchase",
+   "text": "10% off your purchase"
+  },
+  {
+   "id": "c7290cab85",
+   "where": "a · Floating Lotus Spa",
+   "original": "(352)378-8125",
+   "text": "(352)378-8125"
+  },
+  {
+   "id": "e87b867cca",
+   "where": "i · Floating Lotus Spa",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "1c2370a6da",
+   "where": "span · Floating Lotus Spa",
+   "original": "2441 NW 43rd Street, Suite 9",
+   "text": "2441 NW 43rd Street, Suite 9"
+  },
+  {
+   "id": "a208e36ff9",
+   "where": "i · Floating Lotus Spa",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "663f8e1378",
+   "where": "a · Floating Lotus Spa",
+   "original": "Visit website",
+   "text": "Visit website"
+  },
+  {
+   "id": "4608db6361",
+   "where": "p · Floating Lotus Spa",
+   "original": "Beauty & Spa",
+   "text": "Beauty & Spa"
+  },
+  {
+   "id": "3f1dee0cbb",
+   "where": "h3 · Floating Lotus Spa",
+   "original": "Gainesville Dermatology Aesthetic Center",
+   "text": "Gainesville Dermatology Aesthetic Center"
+  },
+  {
+   "id": "31923b8fbd",
+   "where": "li · Gainesville Dermatology Aesthetic Center",
+   "original": "10% off services and products (excluding Sculptra and Fraxel)",
+   "text": "10% off services and products (excluding Sculptra and Fraxel)"
+  },
+  {
+   "id": "01ebb2efd7",
+   "where": "a · Gainesville Dermatology Aesthetic Center",
+   "original": "(352)333-3223",
+   "text": "(352)333-3223"
+  },
+  {
+   "id": "4d28979895",
+   "where": "i · Gainesville Dermatology Aesthetic Center",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "4835f2bbfd",
+   "where": "span · Gainesville Dermatology Aesthetic Center",
+   "original": "120 NW 76th Dr",
+   "text": "120 NW 76th Dr"
+  },
+  {
+   "id": "75251e5978",
+   "where": "i · Gainesville Dermatology Aesthetic Center",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "abd678bee2",
+   "where": "a · Gainesville Dermatology Aesthetic Center",
+   "original": "Visit website",
+   "text": "Visit website"
+  },
+  {
+   "id": "1b9d6b770c",
+   "where": "p · Gainesville Dermatology Aesthetic Center",
+   "original": "Beauty & Spa",
+   "text": "Beauty & Spa"
+  },
+  {
+   "id": "79654b79dc",
+   "where": "h3 · Gainesville Dermatology Aesthetic Center",
+   "original": "Gainesville Med Spa",
+   "text": "Gainesville Med Spa"
+  },
+  {
+   "id": "d619256bab",
+   "where": "li · Gainesville Med Spa",
+   "original": "OFFER: Free half hour massage with purchase of an hour",
+   "text": "OFFER: Free half hour massage with purchase of an hour"
+  },
+  {
+   "id": "691c576a4a",
+   "where": "a · Gainesville Med Spa",
+   "original": "(352)374-0909",
+   "text": "(352)374-0909"
+  },
+  {
+   "id": "c708e9da15",
+   "where": "i · Gainesville Med Spa",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "8de2aa1bb2",
+   "where": "span · Gainesville Med Spa",
+   "original": "4061 NW 43 St Ste. 16",
+   "text": "4061 NW 43 St Ste. 16"
+  },
+  {
+   "id": "62707b94ad",
+   "where": "i · Gainesville Med Spa",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "6a171ce997",
+   "where": "a · Gainesville Med Spa",
+   "original": "Visit website",
+   "text": "Visit website"
+  },
+  {
+   "id": "408d93448d",
+   "where": "p · Gainesville Med Spa",
+   "original": "Beauty & Spa",
+   "text": "Beauty & Spa"
+  },
+  {
+   "id": "b6cb347e6f",
+   "where": "h3 · Gainesville Med Spa",
+   "original": "GatorBrite Teeth Whitening",
+   "text": "GatorBrite Teeth Whitening"
+  },
+  {
+   "id": "489be17e2b",
+   "where": "li · GatorBrite Teeth Whitening",
+   "original": "$15 off Teeth Whitening for all members",
+   "text": "$15 off Teeth Whitening for all members"
+  },
+  {
+   "id": "5e17976fc9",
+   "where": "a · GatorBrite Teeth Whitening",
+   "original": "(352)505-6886",
+   "text": "(352)505-6886"
+  },
+  {
+   "id": "1afa95a2f0",
+   "where": "i · GatorBrite Teeth Whitening",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "4ab77bef85",
+   "where": "span · GatorBrite Teeth Whitening",
+   "original": "2725 SW 91st Street, Suite 120",
+   "text": "2725 SW 91st Street, Suite 120"
+  },
+  {
+   "id": "1f1cbbeba2",
+   "where": "i · GatorBrite Teeth Whitening",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "a0da700658",
+   "where": "a · GatorBrite Teeth Whitening",
+   "original": "Visit website",
+   "text": "Visit website"
+  },
+  {
+   "id": "e9f0532871",
+   "where": "p · GatorBrite Teeth Whitening",
+   "original": "Beauty & Spa",
+   "text": "Beauty & Spa"
+  },
+  {
+   "id": "de0c8daaf1",
+   "where": "h3 · GatorBrite Teeth Whitening",
+   "original": "LAE Beauty Tanning & Medispa",
+   "text": "LAE Beauty Tanning & Medispa"
+  },
+  {
+   "id": "b28c0034a2",
+   "where": "li · LAE Beauty Tanning & Medispa",
+   "original": "10% Off All Services",
+   "text": "10% Off All Services"
+  },
+  {
+   "id": "e953647361",
+   "where": "a · LAE Beauty Tanning & Medispa",
+   "original": "(352)331-9693",
+   "text": "(352)331-9693"
+  },
+  {
+   "id": "619b33a74c",
+   "where": "i · LAE Beauty Tanning & Medispa",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "3eec0e6bfb",
+   "where": "span · LAE Beauty Tanning & Medispa",
+   "original": "618 NW 60th Street, Suite I",
+   "text": "618 NW 60th Street, Suite I"
+  },
+  {
+   "id": "abe5524183",
+   "where": "i · LAE Beauty Tanning & Medispa",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "255305ffac",
+   "where": "a · LAE Beauty Tanning & Medispa",
+   "original": "Visit website",
+   "text": "Visit website"
+  },
+  {
+   "id": "88fe65a859",
+   "where": "p · LAE Beauty Tanning & Medispa",
+   "original": "Beauty & Spa",
+   "text": "Beauty & Spa"
+  },
+  {
+   "id": "6db1116a74",
+   "where": "h3 · LAE Beauty Tanning & Medispa",
+   "original": "Let's GoTattless",
+   "text": "Let's GoTattless"
+  },
+  {
+   "id": "a43fb0143d",
+   "where": "li · Let's GoTattless",
+   "original": "15% OFF on all services",
+   "text": "15% OFF on all services"
+  },
+  {
+   "id": "ca892d8e21",
+   "where": "li · Let's GoTattless",
+   "original": "Includes a free consultation",
+   "text": "Includes a free consultation"
+  },
+  {
+   "id": "9e47cfeabc",
+   "where": "a · Let's GoTattless",
+   "original": "(352)538-9198",
+   "text": "(352)538-9198"
+  },
+  {
+   "id": "34c41c8c7a",
+   "where": "i · Let's GoTattless",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "8bd4db9511",
+   "where": "span · Let's GoTattless",
+   "original": "4131 NW 28th Lane, Suite 3B",
+   "text": "4131 NW 28th Lane, Suite 3B"
+  },
+  {
+   "id": "d16693911b",
+   "where": "i · Let's GoTattless",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "9cb8c8d599",
+   "where": "a · Let's GoTattless",
+   "original": "Visit website",
+   "text": "Visit website"
+  },
+  {
+   "id": "2f76393906",
+   "where": "p · Let's GoTattless",
+   "original": "Beauty & Spa",
+   "text": "Beauty & Spa"
+  },
+  {
+   "id": "0a1fcd7c37",
+   "where": "h3 · Let's GoTattless",
+   "original": "Modern Nails & Day Spa",
+   "text": "Modern Nails & Day Spa"
+  },
+  {
+   "id": "31b415ccf5",
+   "where": "li · Modern Nails & Day Spa",
+   "original": "$5 Off - Spa Mani & Spa Pedi with French / Acrylic Full Set with White Tips / Pink & White Full Set",
+   "text": "$5 Off - Spa Mani & Spa Pedi with French / Acrylic Full Set with White Tips / Pink & White Full Set"
+  },
+  {
+   "id": "5e0d25f709",
+   "where": "li · Modern Nails & Day Spa",
+   "original": "10% Off - Eyelash Extension / Facials / Waxing",
+   "text": "10% Off - Eyelash Extension / Facials / Waxing"
+  },
+  {
+   "id": "59c3984c29",
+   "where": "li · Modern Nails & Day Spa",
+   "original": "$15 Off - Teeth Whitening",
+   "text": "$15 Off - Teeth Whitening"
+  },
+  {
+   "id": "bc7c1fdb7f",
+   "where": "a · Modern Nails & Day Spa",
+   "original": "(352)332-1555",
+   "text": "(352)332-1555"
+  },
+  {
+   "id": "12e724150f",
+   "where": "i · Modern Nails & Day Spa",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "c28df25df0",
+   "where": "span · Modern Nails & Day Spa",
+   "original": "Inside the Oaks Mall in front of Macy's",
+   "text": "Inside the Oaks Mall in front of Macy's"
+  },
+  {
+   "id": "2ce14cc0fa",
+   "where": "p · Modern Nails & Day Spa",
+   "original": "Beauty & Spa",
+   "text": "Beauty & Spa"
+  },
+  {
+   "id": "119fec2928",
+   "where": "h3 · Modern Nails & Day Spa",
+   "original": "Perfume Experts LLC",
+   "text": "Perfume Experts LLC"
+  },
+  {
+   "id": "eb9f2ff508",
+   "where": "li · Perfume Experts LLC",
+   "original": "20% off select perfumes",
+   "text": "20% off select perfumes"
+  },
+  {
+   "id": "f4a80e5b77",
+   "where": "a · Perfume Experts LLC",
+   "original": "(352)332-2000",
+   "text": "(352)332-2000"
+  },
+  {
+   "id": "af4facb41e",
+   "where": "p · Perfume Experts LLC",
+   "original": "Beauty & Spa",
+   "text": "Beauty & Spa"
+  },
+  {
+   "id": "5e5c1205a1",
+   "where": "h3 · Perfume Experts LLC",
+   "original": "Polish Lounge Nail Spa",
+   "text": "Polish Lounge Nail Spa"
+  },
+  {
+   "id": "76bca161eb",
+   "where": "li · Polish Lounge Nail Spa",
+   "original": "10% off any services $35+",
+   "text": "10% off any services $35+"
+  },
+  {
+   "id": "011bf8a154",
+   "where": "a · Polish Lounge Nail Spa",
+   "original": "(352)331-0006",
+   "text": "(352)331-0006"
+  },
+  {
+   "id": "a29046bf6d",
+   "where": "i · Polish Lounge Nail Spa",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "a72af0f37f",
+   "where": "span · Polish Lounge Nail Spa",
+   "original": "7321 NW 4th Blvd",
+   "text": "7321 NW 4th Blvd"
+  },
+  {
+   "id": "1c64d8a72d",
+   "where": "i · Polish Lounge Nail Spa",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "5f869501fb",
+   "where": "a · Polish Lounge Nail Spa",
+   "original": "Visit website",
+   "text": "Visit website"
+  },
+  {
+   "id": "759072c84e",
+   "where": "p · Polish Lounge Nail Spa",
+   "original": "Beauty & Spa",
+   "text": "Beauty & Spa"
+  },
+  {
+   "id": "2b201cb009",
+   "where": "h3 · Polish Lounge Nail Spa",
+   "original": "PRP Regeneration Specialists, LLC",
+   "text": "PRP Regeneration Specialists, LLC"
+  },
+  {
+   "id": "4bec306648",
+   "where": "li · PRP Regeneration Specialists, LLC",
+   "original": "10% off any Platelet Rich Plasma Treatment",
+   "text": "10% off any Platelet Rich Plasma Treatment"
+  },
+  {
+   "id": "bad634851e",
+   "where": "a · PRP Regeneration Specialists, LLC",
+   "original": "(352)260-4061",
+   "text": "(352)260-4061"
+  },
+  {
+   "id": "d20feb1001",
+   "where": "i · PRP Regeneration Specialists, LLC",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "f0de38c2d0",
+   "where": "span · PRP Regeneration Specialists, LLC",
+   "original": "9149 SW 49th Place",
+   "text": "9149 SW 49th Place"
+  },
+  {
+   "id": "bad1717155",
+   "where": "i · PRP Regeneration Specialists, LLC",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "e7c4b59b32",
+   "where": "a · PRP Regeneration Specialists, LLC",
+   "original": "Visit website",
+   "text": "Visit website"
+  },
+  {
+   "id": "8f12d5d306",
+   "where": "p · PRP Regeneration Specialists, LLC",
+   "original": "Beauty & Spa",
+   "text": "Beauty & Spa"
+  },
+  {
+   "id": "002ebdb5e3",
+   "where": "h3 · PRP Regeneration Specialists, LLC",
+   "original": "Pure Aesthetics",
+   "text": "Pure Aesthetics"
+  },
+  {
+   "id": "50b7789eec",
+   "where": "li · Pure Aesthetics",
+   "original": "15% off skin care, hair removal, cool sculpting.",
+   "text": "15% off skin care, hair removal, cool sculpting."
+  },
+  {
+   "id": "a72fc51ada",
+   "where": "a · Pure Aesthetics",
+   "original": "(352)332-7873",
+   "text": "(352)332-7873"
+  },
+  {
+   "id": "13e37f11d7",
+   "where": "i · Pure Aesthetics",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "7deaae1c58",
+   "where": "span · Pure Aesthetics",
+   "original": "108 NW 76th Dr. Ste A Gainesville, FL 32607",
+   "text": "108 NW 76th Dr. Ste A Gainesville, FL 32607"
+  },
+  {
+   "id": "3646d44246",
+   "where": "i · Pure Aesthetics",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "2f2332e77b",
+   "where": "a · Pure Aesthetics",
+   "original": "Visit website",
+   "text": "Visit website"
+  },
+  {
+   "id": "cdf53a78c4",
+   "where": "p · Pure Aesthetics",
+   "original": "Beauty & Spa",
+   "text": "Beauty & Spa"
+  },
+  {
+   "id": "e1cc3eb55f",
+   "where": "h3 · Pure Aesthetics",
+   "original": "Tan USA",
+   "text": "Tan USA"
+  },
+  {
+   "id": "54817809c3",
+   "where": "li · Tan USA",
+   "original": "$14.95 Mystic Tan Mondays (Level 2 - 1 per customer, must be used same day)",
+   "text": "$14.95 Mystic Tan Mondays (Level 2 - 1 per customer, must be used same day)"
+  },
+  {
+   "id": "9de8fdda53",
+   "where": "a · Tan USA",
+   "original": "(352)331-8266",
+   "text": "(352)331-8266"
+  },
+  {
+   "id": "5de184e1da",
+   "where": "i · Tan USA",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "1c99f81674",
+   "where": "span · Tan USA",
+   "original": "Oaks Mall Plaza",
+   "text": "Oaks Mall Plaza"
+  },
+  {
+   "id": "601d486093",
+   "where": "p · Tan USA",
+   "original": "Children's Services",
+   "text": "Children's Services"
+  },
+  {
+   "id": "a2129f1617",
+   "where": "h3 · Tan USA",
+   "original": "Capes & Tiaras, LLC",
+   "text": "Capes & Tiaras, LLC"
+  },
+  {
+   "id": "70a2629007",
+   "where": "li · Capes & Tiaras, LLC",
+   "original": "GHF members get 1.5 hours of our character impersonator services for $100 ($25-$50 savings!)",
+   "text": "GHF members get 1.5 hours of our character impersonator services for $100 ($25-$50 savings!)"
+  },
+  {
+   "id": "4babe4677c",
+   "where": "a · Capes & Tiaras, LLC",
+   "original": "(352)575-6155",
+   "text": "(352)575-6155"
+  },
+  {
+   "id": "dc336c897f",
+   "where": "i · Capes & Tiaras, LLC",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "fe1d3473e5",
+   "where": "span · Capes & Tiaras, LLC",
+   "original": "5825 SE County Rd",
+   "text": "5825 SE County Rd"
+  },
+  {
+   "id": "430064283f",
+   "where": "i · Capes & Tiaras, LLC",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "71b41fa5ac",
+   "where": "a · Capes & Tiaras, LLC",
+   "original": "Visit website",
+   "text": "Visit website"
+  },
+  {
+   "id": "4bd6e239e8",
+   "where": "p · Capes & Tiaras, LLC",
+   "original": "Children's Services",
+   "text": "Children's Services"
+  },
+  {
+   "id": "2d0df381ec",
+   "where": "h3 · Capes & Tiaras, LLC",
+   "original": "Jordan Glen School & Summer Camp",
+   "text": "Jordan Glen School & Summer Camp"
+  },
+  {
+   "id": "6ff852b7e1",
+   "where": "li · Jordan Glen School & Summer Camp",
+   "original": "$25 off one camp tuition",
+   "text": "$25 off one camp tuition"
+  },
+  {
+   "id": "3a13309138",
+   "where": "a · Jordan Glen School & Summer Camp",
+   "original": "(352)495-2728",
+   "text": "(352)495-2728"
+  },
+  {
+   "id": "1ba6c6eedd",
+   "where": "i · Jordan Glen School & Summer Camp",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "45b26149ce",
+   "where": "span · Jordan Glen School & Summer Camp",
+   "original": "12425 SW 154th Street",
+   "text": "12425 SW 154th Street"
+  },
+  {
+   "id": "3961de3631",
+   "where": "i · Jordan Glen School & Summer Camp",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "f31312c485",
+   "where": "a · Jordan Glen School & Summer Camp",
+   "original": "Visit website",
+   "text": "Visit website"
+  },
+  {
+   "id": "d84f20d8b6",
+   "where": "p · Jordan Glen School & Summer Camp",
+   "original": "Children's Services",
+   "text": "Children's Services"
+  },
+  {
+   "id": "0828c656b7",
+   "where": "h3 · Jordan Glen School & Summer Camp",
+   "original": "O2B Kids!",
+   "text": "O2B Kids!"
+  },
+  {
+   "id": "12fe60b86b",
+   "where": "li · O2B Kids!",
+   "original": "Buy One, Get One FREE Parent's Night Out! (Supercenter location only)",
+   "text": "Buy One, Get One FREE Parent's Night Out! (Supercenter location only)"
+  },
+  {
+   "id": "0d79de17a9",
+   "where": "a · O2B Kids!",
+   "original": "(352)332-5500",
+   "text": "(352)332-5500"
+  },
+  {
+   "id": "ab9f09d034",
+   "where": "i · O2B Kids!",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "e3d1b61157",
+   "where": "span · O2B Kids!",
+   "original": "6680 W Newberry Road",
+   "text": "6680 W Newberry Road"
+  },
+  {
+   "id": "bf6d7bdfa5",
+   "where": "i · O2B Kids!",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "ba37f7f394",
+   "where": "a · O2B Kids!",
+   "original": "Visit website",
+   "text": "Visit website"
+  },
+  {
+   "id": "bb4ec44771",
+   "where": "p · O2B Kids!",
+   "original": "Dining",
+   "text": "Dining"
+  },
+  {
+   "id": "e47ee791b7",
+   "where": "h3 · O2B Kids!",
+   "original": "Big Island Bowls",
+   "text": "Big Island Bowls"
+  },
+  {
+   "id": "85edd51cd4",
+   "where": "li · Big Island Bowls",
+   "original": "Free Yerba Mate Tea with Purchase of a Bowl",
+   "text": "Free Yerba Mate Tea with Purchase of a Bowl"
+  },
+  {
+   "id": "2d5fde5c7c",
+   "where": "a · Big Island Bowls",
+   "original": "(631)338-5527",
+   "text": "(631)338-5527"
+  },
+  {
+   "id": "c0fdf9e803",
+   "where": "i · Big Island Bowls",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "7dfb7096af",
+   "where": "span · Big Island Bowls",
+   "original": "Tioga Town Center",
+   "text": "Tioga Town Center"
+  },
+  {
+   "id": "c0f94277f9",
+   "where": "i · Big Island Bowls",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "5b5007bfda",
+   "where": "a · Big Island Bowls",
+   "original": "Visit website",
+   "text": "Visit website"
+  },
+  {
+   "id": "8ea3e0bae1",
+   "where": "p · Big Island Bowls",
+   "original": "Dining",
+   "text": "Dining"
+  },
+  {
+   "id": "9c8629344b",
+   "where": "h3 · Big Island Bowls",
+   "original": "Blackadder Brewing Company",
+   "text": "Blackadder Brewing Company"
+  },
+  {
+   "id": "17ba748044",
+   "where": "li · Blackadder Brewing Company",
+   "original": "10% off purchase",
+   "text": "10% off purchase"
+  },
+  {
+   "id": "e26eb49828",
+   "where": "a · Blackadder Brewing Company",
+   "original": "(352)339-0324",
+   "text": "(352)339-0324"
+  },
+  {
+   "id": "3549ede395",
+   "where": "i · Blackadder Brewing Company",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "a75bc66968",
+   "where": "span · Blackadder Brewing Company",
+   "original": "618-A NW 60th St",
+   "text": "618-A NW 60th St"
+  },
+  {
+   "id": "9988ad4a60",
+   "where": "i · Blackadder Brewing Company",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "cba3752939",
+   "where": "a · Blackadder Brewing Company",
+   "original": "Visit website",
+   "text": "Visit website"
+  },
+  {
+   "id": "8125828b1a",
+   "where": "p · Blackadder Brewing Company",
+   "original": "Dining",
+   "text": "Dining"
+  },
+  {
+   "id": "c937e8df74",
+   "where": "h3 · Blackadder Brewing Company",
+   "original": "Burger King",
+   "text": "Burger King"
+  },
+  {
+   "id": "2b443e7ec6",
+   "where": "li · Burger King",
+   "original": "10% Off Total Food Purchase",
+   "text": "10% Off Total Food Purchase"
+  },
+  {
+   "id": "73a9f8cf93",
+   "where": "span · Burger King",
+   "original": "*multiple locations",
+   "text": "*multiple locations"
+  },
+  {
+   "id": "87fbba84b9",
+   "where": "i · Burger King",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "f2088a24de",
+   "where": "a · Burger King",
+   "original": "Visit website",
+   "text": "Visit website"
+  },
+  {
+   "id": "781a45411b",
+   "where": "p · Burger King",
+   "original": "Dining",
+   "text": "Dining"
+  },
+  {
+   "id": "b848998b71",
+   "where": "h3 · Burger King",
+   "original": "Chef Ami",
+   "text": "Chef Ami"
+  },
+  {
+   "id": "fc1e5b0380",
+   "where": "li · Chef Ami",
+   "original": "Get your first 2 Meals FREE",
+   "text": "Get your first 2 Meals FREE"
+  },
+  {
+   "id": "6e6fb3505c",
+   "where": "li · Chef Ami",
+   "original": "Use Coupon Code: GHFC ($57.63 value)",
+   "text": "Use Coupon Code: GHFC ($57.63 value)"
+  },
+  {
+   "id": "64581d511c",
+   "where": "li · Chef Ami",
+   "original": "2 Meals for 2 People = $57.63",
+   "text": "2 Meals for 2 People = $57.63"
+  },
+  {
+   "id": "30d31e83fb",
+   "where": "li · Chef Ami",
+   "original": "3 Meals for 2 People = $74.95",
+   "text": "3 Meals for 2 People = $74.95"
+  },
+  {
+   "id": "79cac2c3a3",
+   "where": "a · Chef Ami",
+   "original": "(352)363-1108",
+   "text": "(352)363-1108"
+  },
+  {
+   "id": "faea34f63a",
+   "where": "i · Chef Ami",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "c51fa1c7a5",
+   "where": "span · Chef Ami",
+   "original": "4101 NW 6th St.",
+   "text": "4101 NW 6th St."
+  },
+  {
+   "id": "ecb9c87841",
+   "where": "i · Chef Ami",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "668d94b7c6",
+   "where": "a · Chef Ami",
+   "original": "Visit website",
+   "text": "Visit website"
+  },
+  {
+   "id": "1ff4dd7819",
+   "where": "p · Chef Ami",
+   "original": "Dining",
+   "text": "Dining"
+  },
+  {
+   "id": "38afd1d55d",
+   "where": "h3 · Chef Ami",
+   "original": "D'Lites Emporium",
+   "text": "D'Lites Emporium"
+  },
+  {
+   "id": "cda6c9c976",
+   "where": "li · D'Lites Emporium",
+   "original": "10% Off with Presentation of Membership Card",
+   "text": "10% Off with Presentation of Membership Card"
+  },
+  {
+   "id": "d6f10ef789",
+   "where": "a · D'Lites Emporium",
+   "original": "(352)375-4484",
+   "text": "(352)375-4484"
+  },
+  {
+   "id": "fb27a9bf8e",
+   "where": "i · D'Lites Emporium",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "d5395c9d59",
+   "where": "span · D'Lites Emporium",
+   "original": "Two convenient locations",
+   "text": "Two convenient locations"
+  },
+  {
+   "id": "dae315f0d2",
+   "where": "i · D'Lites Emporium",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "650203e81e",
+   "where": "a · D'Lites Emporium",
+   "original": "Visit website",
+   "text": "Visit website"
+  },
+  {
+   "id": "5e9342b42d",
+   "where": "p · D'Lites Emporium",
+   "original": "Dining",
+   "text": "Dining"
+  },
+  {
+   "id": "d09980ee80",
+   "where": "h3 · D'Lites Emporium",
+   "original": "David's Real Pit BBQ",
+   "text": "David's Real Pit BBQ"
+  },
+  {
+   "id": "de086556e9",
+   "where": "li · David's Real Pit BBQ",
+   "original": "FREE Dessert with purchase of adult BBQ dinner plate! (excludes $5.99 Wed/Thurs & other specials)",
+   "text": "FREE Dessert with purchase of adult BBQ dinner plate! (excludes $5.99 Wed/Thurs & other specials)"
+  },
+  {
+   "id": "671a01bb15",
+   "where": "a · David's Real Pit BBQ",
+   "original": "(352)373-2002",
+   "text": "(352)373-2002"
+  },
+  {
+   "id": "73adc861ea",
+   "where": "i · David's Real Pit BBQ",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "5cc375922b",
+   "where": "span · David's Real Pit BBQ",
+   "original": "5121-A NW 39th Ave",
+   "text": "5121-A NW 39th Ave"
+  },
+  {
+   "id": "e2771dd6a7",
+   "where": "i · David's Real Pit BBQ",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "3831999d15",
+   "where": "a · David's Real Pit BBQ",
+   "original": "Visit website",
+   "text": "Visit website"
+  },
+  {
+   "id": "6b93a65aa0",
+   "where": "p · David's Real Pit BBQ",
+   "original": "Dining",
+   "text": "Dining"
+  },
+  {
+   "id": "6b23b0b5a0",
+   "where": "h3 · David's Real Pit BBQ",
+   "original": "Donut Connection",
+   "text": "Donut Connection"
+  },
+  {
+   "id": "b5fe54251c",
+   "where": "li · Donut Connection",
+   "original": "10% discount on all items for GHF members.",
+   "text": "10% discount on all items for GHF members."
+  },
+  {
+   "id": "c218071057",
+   "where": "a · Donut Connection",
+   "original": "(352)375-0376",
+   "text": "(352)375-0376"
+  },
+  {
+   "id": "1392b90ee8",
+   "where": "i · Donut Connection",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "71ccd39593",
+   "where": "span · Donut Connection",
+   "original": "5205A NW 39th Ave",
+   "text": "5205A NW 39th Ave"
+  },
+  {
+   "id": "31d9bba9bb",
+   "where": "i · Donut Connection",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "01c13d830d",
+   "where": "a · Donut Connection",
+   "original": "Visit website",
+   "text": "Visit website"
+  },
+  {
+   "id": "0a9d55cfcd",
+   "where": "p · Donut Connection",
+   "original": "Dining",
+   "text": "Dining"
+  },
+  {
+   "id": "519596c78b",
+   "where": "h3 · Donut Connection",
+   "original": "Eat The 80",
+   "text": "Eat The 80"
+  },
+  {
+   "id": "590aa604a6",
+   "where": "li · Eat The 80",
+   "original": "10% off Weekly Meal Delivery",
+   "text": "10% off Weekly Meal Delivery"
+  },
+  {
+   "id": "e09a1eb446",
+   "where": "a · Eat The 80",
+   "original": "(352)234-2408",
+   "text": "(352)234-2408"
+  },
+  {
+   "id": "4710f6c0cc",
+   "where": "i · Eat The 80",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "ade8ee4b49",
+   "where": "span · Eat The 80",
+   "original": "1527 NW 6th Street",
+   "text": "1527 NW 6th Street"
+  },
+  {
+   "id": "b924fe547b",
+   "where": "i · Eat The 80",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "dfd09ee5f0",
+   "where": "a · Eat The 80",
+   "original": "Visit website",
+   "text": "Visit website"
+  },
+  {
+   "id": "130143afe4",
+   "where": "p · Eat The 80",
+   "original": "Dining",
+   "text": "Dining"
+  },
+  {
+   "id": "ec4b635595",
+   "where": "h3 · Eat The 80",
+   "original": "Just Salad",
+   "text": "Just Salad"
+  },
+  {
+   "id": "ae129aa00a",
+   "where": "li · Just Salad",
+   "original": "10% off",
+   "text": "10% off"
+  },
+  {
+   "id": "2262645cec",
+   "where": "a · Just Salad",
+   "original": "(866)673-3757",
+   "text": "(866)673-3757"
+  },
+  {
+   "id": "2a3872b37d",
+   "where": "i · Just Salad",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "39e187e7ef",
+   "where": "span · Just Salad",
+   "original": "1404 W University Ave",
+   "text": "1404 W University Ave"
+  },
+  {
+   "id": "aa55bc8fff",
+   "where": "i · Just Salad",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "70740de67f",
+   "where": "a · Just Salad",
+   "original": "Visit website",
+   "text": "Visit website"
+  },
+  {
+   "id": "60e715d4ff",
+   "where": "p · Just Salad",
+   "original": "Dining",
+   "text": "Dining"
+  },
+  {
+   "id": "5c9d20ec76",
+   "where": "h3 · Just Salad",
+   "original": "Muscle Meals 2 Go",
+   "text": "Muscle Meals 2 Go"
+  },
+  {
+   "id": "4fda4a955f",
+   "where": "li · Muscle Meals 2 Go",
+   "original": "Enjoy 10% off of your order. Use promo code GHF10.",
+   "text": "Enjoy 10% off of your order. Use promo code GHF10."
+  },
+  {
+   "id": "1222a9aecb",
+   "where": "a · Muscle Meals 2 Go",
+   "original": "(352)445-4578",
+   "text": "(352)445-4578"
+  },
+  {
+   "id": "1706ee80f2",
+   "where": "i · Muscle Meals 2 Go",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "b90be05d04",
+   "where": "span · Muscle Meals 2 Go",
+   "original": "1521 S Pine Ave",
+   "text": "1521 S Pine Ave"
+  },
+  {
+   "id": "ff814c0143",
+   "where": "i · Muscle Meals 2 Go",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "994b11e834",
+   "where": "a · Muscle Meals 2 Go",
+   "original": "Visit website",
+   "text": "Visit website"
+  },
+  {
+   "id": "4e7867649b",
+   "where": "p · Muscle Meals 2 Go",
+   "original": "Dining",
+   "text": "Dining"
+  },
+  {
+   "id": "8da3b96c65",
+   "where": "h3 · Muscle Meals 2 Go",
+   "original": "Pizza Hut",
+   "text": "Pizza Hut"
+  },
+  {
+   "id": "b46549cab6",
+   "where": "li · Pizza Hut",
+   "original": "$3.00 Off Any Large Pizza! (Not valid with other offers/coupons)",
+   "text": "$3.00 Off Any Large Pizza! (Not valid with other offers/coupons)"
+  },
+  {
+   "id": "35b5f79fb7",
+   "where": "a · Pizza Hut",
+   "original": "(352)374-4440",
+   "text": "(352)374-4440"
+  },
+  {
+   "id": "b8aaa933fc",
+   "where": "i · Pizza Hut",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "1d39810719",
+   "where": "a · Pizza Hut",
+   "original": "Visit website",
+   "text": "Visit website"
+  },
+  {
+   "id": "f9f8ae3acb",
+   "where": "p · Pizza Hut",
+   "original": "Dining",
+   "text": "Dining"
+  },
+  {
+   "id": "7d87de37bc",
+   "where": "h3 · Pizza Hut",
+   "original": "Saporito",
+   "text": "Saporito"
+  },
+  {
+   "id": "22aaec3cac",
+   "where": "li · Saporito",
+   "original": "10% Off any Extra Virgin Olive Oil or Balsamic Vinegar (Not valid with other offers or specials)",
+   "text": "10% Off any Extra Virgin Olive Oil or Balsamic Vinegar (Not valid with other offers or specials)"
+  },
+  {
+   "id": "c35c33de9d",
+   "where": "a · Saporito",
+   "original": "(352)745-7886",
+   "text": "(352)745-7886"
+  },
+  {
+   "id": "20a0c3e5d9",
+   "where": "i · Saporito",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "4a213d771a",
+   "where": "span · Saporito",
+   "original": "4401 NW 25th Place",
+   "text": "4401 NW 25th Place"
+  },
+  {
+   "id": "12abf99465",
+   "where": "i · Saporito",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "ea7894a9fb",
+   "where": "a · Saporito",
+   "original": "Visit website",
+   "text": "Visit website"
+  },
+  {
+   "id": "8456019eb1",
+   "where": "p · Saporito",
+   "original": "Dining",
+   "text": "Dining"
+  },
+  {
+   "id": "e0842c4f93",
+   "where": "h3 · Saporito",
+   "original": "The Bagel Bakery",
+   "text": "The Bagel Bakery"
+  },
+  {
+   "id": "16f0b64608",
+   "where": "li · The Bagel Bakery",
+   "original": "10% Off All Purchases!",
+   "text": "10% Off All Purchases!"
+  },
+  {
+   "id": "775cc18b5b",
+   "where": "a · The Bagel Bakery",
+   "original": "(352)384-9110",
+   "text": "(352)384-9110"
+  },
+  {
+   "id": "373932dbfd",
+   "where": "i · The Bagel Bakery",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "a314700830",
+   "where": "span · The Bagel Bakery",
+   "original": "4113 NW 16th Blvd (Publix Center)",
+   "text": "4113 NW 16th Blvd (Publix Center)"
+  },
+  {
+   "id": "a8537117e4",
+   "where": "i · The Bagel Bakery",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "2b30826b88",
+   "where": "a · The Bagel Bakery",
+   "original": "Visit website",
+   "text": "Visit website"
+  },
+  {
+   "id": "ad9efae21b",
+   "where": "p · The Bagel Bakery",
+   "original": "Dining",
+   "text": "Dining"
+  },
+  {
+   "id": "20f8ffe20c",
+   "where": "h3 · The Bagel Bakery",
+   "original": "The Pita Pit",
+   "text": "The Pita Pit"
+  },
+  {
+   "id": "ab4461c6aa",
+   "where": "li · The Pita Pit",
+   "original": "10% Off Entire Ticket. *Must Present Membership Card",
+   "text": "10% Off Entire Ticket. *Must Present Membership Card"
+  },
+  {
+   "id": "f5e0047265",
+   "where": "a · The Pita Pit",
+   "original": "(352)692-4400",
+   "text": "(352)692-4400"
+  },
+  {
+   "id": "c8944df88b",
+   "where": "i · The Pita Pit",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "71bf5a985d",
+   "where": "span · The Pita Pit",
+   "original": "1702 W. University Ave",
+   "text": "1702 W. University Ave"
+  },
+  {
+   "id": "6b6eefd36d",
+   "where": "i · The Pita Pit",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "81a3041346",
+   "where": "a · The Pita Pit",
+   "original": "Visit website",
+   "text": "Visit website"
+  },
+  {
+   "id": "cc9617f4ee",
+   "where": "p · The Pita Pit",
+   "original": "Event Services",
+   "text": "Event Services"
+  },
+  {
+   "id": "f4d409064e",
+   "where": "h3 · The Pita Pit",
+   "original": "Candies Limousines & Motorcoaches",
+   "text": "Candies Limousines & Motorcoaches"
+  },
+  {
+   "id": "64a7d76979",
+   "where": "li · Candies Limousines & Motorcoaches",
+   "original": "15% OFF any single day VIP Charter Tour Bus for your next event",
+   "text": "15% OFF any single day VIP Charter Tour Bus for your next event"
+  },
+  {
+   "id": "0b173b0f43",
+   "where": "li · Candies Limousines & Motorcoaches",
+   "original": "15% OFF any VIP Limousine for your next event",
+   "text": "15% OFF any VIP Limousine for your next event"
+  },
+  {
+   "id": "9db0828865",
+   "where": "a · Candies Limousines & Motorcoaches",
+   "original": "(352)332-4334",
+   "text": "(352)332-4334"
+  },
+  {
+   "id": "0628c8902c",
+   "where": "i · Candies Limousines & Motorcoaches",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "fbb0aba0a3",
+   "where": "a · Candies Limousines & Motorcoaches",
+   "original": "Visit website",
+   "text": "Visit website"
+  },
+  {
+   "id": "25893a0c2a",
+   "where": "p · Candies Limousines & Motorcoaches",
+   "original": "Event Services",
+   "text": "Event Services"
+  },
+  {
+   "id": "f2cd68c5de",
+   "where": "h3 · Candies Limousines & Motorcoaches",
+   "original": "Legendary Coaches",
+   "text": "Legendary Coaches"
+  },
+  {
+   "id": "ad675b15df",
+   "where": "li · Legendary Coaches",
+   "original": "Receive 25% OFF any single day VIP Tour Bus for your next event: Wedding, Graduations, Birthdays, Game-Days or any other special event.",
+   "text": "Receive 25% OFF any single day VIP Tour Bus for your next event: Wedding, Graduations, Birthdays, Game-Days or any other special event."
+  },
+  {
+   "id": "d6fb67374c",
+   "where": "a · Legendary Coaches",
+   "original": "(352)317-8326",
+   "text": "(352)317-8326"
+  },
+  {
+   "id": "a5ca56ab6d",
+   "where": "i · Legendary Coaches",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "52bb0f19d1",
+   "where": "a · Legendary Coaches",
+   "original": "Visit website",
+   "text": "Visit website"
+  },
+  {
+   "id": "2a192372b0",
+   "where": "p · Legendary Coaches",
+   "original": "Event Services",
+   "text": "Event Services"
+  },
+  {
+   "id": "4a4bff687b",
+   "where": "h3 · Legendary Coaches",
+   "original": "Solutions Bridal Designer House",
+   "text": "Solutions Bridal Designer House"
+  },
+  {
+   "id": "68a5897f9c",
+   "where": "li · Solutions Bridal Designer House",
+   "original": "Receive 10% off any purchase of one item for new brides. Must show GHF membership card (some restrictions may apply)",
+   "text": "Receive 10% off any purchase of one item for new brides. Must show GHF membership card (some restrictions may apply)"
+  },
+  {
+   "id": "62074e8da8",
+   "where": "a · Solutions Bridal Designer House",
+   "original": "(352)367-0070",
+   "text": "(352)367-0070"
+  },
+  {
+   "id": "83d8b7725c",
+   "where": "i · Solutions Bridal Designer House",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "9994552deb",
+   "where": "span · Solutions Bridal Designer House",
+   "original": "6450 SW Archer Rd, Suite 230",
+   "text": "6450 SW Archer Rd, Suite 230"
+  },
+  {
+   "id": "3f296f1c75",
+   "where": "p · Solutions Bridal Designer House",
+   "original": "Event Services",
+   "text": "Event Services"
+  },
+  {
+   "id": "4daf7c8e4d",
+   "where": "h3 · Solutions Bridal Designer House",
+   "original": "Ultimate Party Bus",
+   "text": "Ultimate Party Bus"
+  },
+  {
+   "id": "6f0c392c36",
+   "where": "li · Ultimate Party Bus",
+   "original": "Receive one hour free with any party bus booking of five hours or more.",
+   "text": "Receive one hour free with any party bus booking of five hours or more."
+  },
+  {
+   "id": "d8bd7d7b8b",
+   "where": "a · Ultimate Party Bus",
+   "original": "(352)505-4466",
+   "text": "(352)505-4466"
+  },
+  {
+   "id": "a01225a3d1",
+   "where": "i · Ultimate Party Bus",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "d48e6ff295",
+   "where": "span · Ultimate Party Bus",
+   "original": "3335 N Main Terrace",
+   "text": "3335 N Main Terrace"
+  },
+  {
+   "id": "ada28c243a",
+   "where": "p · Ultimate Party Bus",
+   "original": "Fashion",
+   "text": "Fashion"
+  },
+  {
+   "id": "0b6bed639c",
+   "where": "h3 · Ultimate Party Bus",
+   "original": "MALGORZATA'S",
+   "text": "MALGORZATA'S"
+  },
+  {
+   "id": "b3ad2d4607",
+   "where": "li · MALGORZATA'S",
+   "original": "10% OFF First Purchase with FREE membership in the 200 Club.",
+   "text": "10% OFF First Purchase with FREE membership in the 200 Club."
+  },
+  {
+   "id": "d1849b4de7",
+   "where": "li · MALGORZATA'S",
+   "original": "200 Club provides 10% savings on cumulative spending of $200 or more.",
+   "text": "200 Club provides 10% savings on cumulative spending of $200 or more."
+  },
+  {
+   "id": "2a175e5262",
+   "where": "li · MALGORZATA'S",
+   "original": "Located in the beautiful Thornebrook Village near the Women's Center.",
+   "text": "Located in the beautiful Thornebrook Village near the Women's Center."
+  },
+  {
+   "id": "6cfdcd6b01",
+   "where": "a · MALGORZATA'S",
+   "original": "(352)215-8689",
+   "text": "(352)215-8689"
+  },
+  {
+   "id": "161a07ff2b",
+   "where": "i · MALGORZATA'S",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "aafd26824e",
+   "where": "span · MALGORZATA'S",
+   "original": "2441 NW 43rd Street #9",
+   "text": "2441 NW 43rd Street #9"
+  },
+  {
+   "id": "8b9febe311",
+   "where": "i · MALGORZATA'S",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "899cdd6f53",
+   "where": "a · MALGORZATA'S",
+   "original": "Visit website",
+   "text": "Visit website"
+  },
+  {
+   "id": "5158dcb662",
+   "where": "p · MALGORZATA'S",
+   "original": "Framing & Art",
+   "text": "Framing & Art"
+  },
+  {
+   "id": "e483b4b498",
+   "where": "h3 · MALGORZATA'S",
+   "original": "Creative Workshop",
+   "text": "Creative Workshop"
+  },
+  {
+   "id": "54d397485b",
+   "where": "li · Creative Workshop",
+   "original": "10% Off Custom Picture Framing Under $500, That Day",
+   "text": "10% Off Custom Picture Framing Under $500, That Day"
+  },
+  {
+   "id": "c361245243",
+   "where": "li · Creative Workshop",
+   "original": "15% Off Custom Picture Framing Over $500, That Day",
+   "text": "15% Off Custom Picture Framing Over $500, That Day"
+  },
+  {
+   "id": "96abdc1b15",
+   "where": "a · Creative Workshop",
+   "original": "(352)376-7204",
+   "text": "(352)376-7204"
+  },
+  {
+   "id": "d120a3e632",
+   "where": "i · Creative Workshop",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "8a6beec19b",
+   "where": "span · Creative Workshop",
+   "original": "2035 NW 13th St",
+   "text": "2035 NW 13th St"
+  },
+  {
+   "id": "8713b2674d",
+   "where": "i · Creative Workshop",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "82a0151593",
+   "where": "a · Creative Workshop",
+   "original": "Visit website",
+   "text": "Visit website"
+  },
+  {
+   "id": "572de3a3fd",
+   "where": "p · Creative Workshop",
+   "original": "Framing & Art",
+   "text": "Framing & Art"
+  },
+  {
+   "id": "b59a8bbaaa",
+   "where": "h3 · Creative Workshop",
+   "original": "Studio T/M Ceramics",
+   "text": "Studio T/M Ceramics"
+  },
+  {
+   "id": "229c9e88f3",
+   "where": "a · Studio T/M Ceramics",
+   "original": "(352)284-2206",
+   "text": "(352)284-2206"
+  },
+  {
+   "id": "ddff7b9013",
+   "where": "i · Studio T/M Ceramics",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "bccdec9356",
+   "where": "span · Studio T/M Ceramics",
+   "original": "1854 NE 2nd St",
+   "text": "1854 NE 2nd St"
+  },
+  {
+   "id": "f80d1ca667",
+   "where": "i · Studio T/M Ceramics",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "d1e07f3c07",
+   "where": "a · Studio T/M Ceramics",
+   "original": "Visit website",
+   "text": "Visit website"
+  },
+  {
+   "id": "1eeae2ee92",
+   "where": "p · Studio T/M Ceramics",
+   "original": "Framing & Art",
+   "text": "Framing & Art"
+  },
+  {
+   "id": "6f5d9d7f20",
+   "where": "h3 · Studio T/M Ceramics",
+   "original": "Talking Walls",
+   "text": "Talking Walls"
+  },
+  {
+   "id": "3cd30e9bc3",
+   "where": "li · Talking Walls",
+   "original": "30% Off Your Entire Order on Custom Framing!",
+   "text": "30% Off Your Entire Order on Custom Framing!"
+  },
+  {
+   "id": "b786d203f8",
+   "where": "a · Talking Walls",
+   "original": "(352)376-0077",
+   "text": "(352)376-0077"
+  },
+  {
+   "id": "85d752ff75",
+   "where": "i · Talking Walls",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "9c76f70616",
+   "where": "span · Talking Walls",
+   "original": "Reitz Union @ UF",
+   "text": "Reitz Union @ UF"
+  },
+  {
+   "id": "4297bd68bb",
+   "where": "p · Talking Walls",
+   "original": "Gifts",
+   "text": "Gifts"
+  },
+  {
+   "id": "5e9a1ac16f",
+   "where": "h3 · Talking Walls",
+   "original": "Edible Arrangements",
+   "text": "Edible Arrangements"
+  },
+  {
+   "id": "95e7cbd29e",
+   "where": "li · Edible Arrangements",
+   "original": "$3.00 Off Any Order Of $25.00 Or More! (Mention GHFC0846 when ordering)",
+   "text": "$3.00 Off Any Order Of $25.00 Or More! (Mention GHFC0846 when ordering)"
+  },
+  {
+   "id": "fc921690a8",
+   "where": "a · Edible Arrangements",
+   "original": "(352)378-2400",
+   "text": "(352)378-2400"
+  },
+  {
+   "id": "9990967b9c",
+   "where": "i · Edible Arrangements",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "9e396ead8e",
+   "where": "span · Edible Arrangements",
+   "original": "7050 Archer Road Ste 4101A",
+   "text": "7050 Archer Road Ste 4101A"
+  },
+  {
+   "id": "1be2f72829",
+   "where": "i · Edible Arrangements",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "3c2f04a5c5",
+   "where": "a · Edible Arrangements",
+   "original": "Visit website",
+   "text": "Visit website"
+  },
+  {
+   "id": "257062a0d1",
+   "where": "p · Edible Arrangements",
+   "original": "Gifts",
+   "text": "Gifts"
+  },
+  {
+   "id": "b3a8b11400",
+   "where": "h3 · Edible Arrangements",
+   "original": "Lang Jewelers",
+   "text": "Lang Jewelers"
+  },
+  {
+   "id": "ed9cf2e2b1",
+   "where": "li · Lang Jewelers",
+   "original": "20% OFF Jewelry & Watch Repair. Select member offers - see store for details.",
+   "text": "20% OFF Jewelry & Watch Repair. Select member offers - see store for details."
+  },
+  {
+   "id": "c6b697f9a6",
+   "where": "a · Lang Jewelers",
+   "original": "(352)672-6299",
+   "text": "(352)672-6299"
+  },
+  {
+   "id": "e69f922570",
+   "where": "i · Lang Jewelers",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "19606d2881",
+   "where": "span · Lang Jewelers",
+   "original": "12921 SW 1st Road, Suite 115 Town of Tioga",
+   "text": "12921 SW 1st Road, Suite 115 Town of Tioga"
+  },
+  {
+   "id": "22841b9d78",
+   "where": "i · Lang Jewelers",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "8d25799082",
+   "where": "a · Lang Jewelers",
+   "original": "Visit website",
+   "text": "Visit website"
+  },
+  {
+   "id": "9c056a4d3e",
+   "where": "p · Lang Jewelers",
+   "original": "Health & Wellness",
+   "text": "Health & Wellness"
+  },
+  {
+   "id": "39f716c7d7",
+   "where": "h3 · Lang Jewelers",
+   "original": "A Team Emergency Dentistry",
+   "text": "A Team Emergency Dentistry"
+  },
+  {
+   "id": "57aa9538b6",
+   "where": "li · A Team Emergency Dentistry",
+   "original": "Free Exams & 10% Discount Off Our Fees",
+   "text": "Free Exams & 10% Discount Off Our Fees"
+  },
+  {
+   "id": "605e919476",
+   "where": "a · A Team Emergency Dentistry",
+   "original": "(352)681-2200",
+   "text": "(352)681-2200"
+  },
+  {
+   "id": "853d1a2fe8",
+   "where": "i · A Team Emergency Dentistry",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "e26e7e4054",
+   "where": "span · A Team Emergency Dentistry",
+   "original": "4031 NW 43rd St.",
+   "text": "4031 NW 43rd St."
+  },
+  {
+   "id": "c5cd1cfa75",
+   "where": "i · A Team Emergency Dentistry",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "0b9f5c6c58",
+   "where": "a · A Team Emergency Dentistry",
+   "original": "Visit website",
+   "text": "Visit website"
+  },
+  {
+   "id": "e3c701a3ef",
+   "where": "p · A Team Emergency Dentistry",
+   "original": "Health & Wellness",
+   "text": "Health & Wellness"
+  },
+  {
+   "id": "1253a244b9",
+   "where": "h3 · A Team Emergency Dentistry",
+   "original": "B-12 RX & MORE",
+   "text": "B-12 RX & MORE"
+  },
+  {
+   "id": "2e795dfe33",
+   "where": "li · B-12 RX & MORE",
+   "original": "25% Off All Injections For GHF Members",
+   "text": "25% Off All Injections For GHF Members"
+  },
+  {
+   "id": "145b212b92",
+   "where": "a · B-12 RX & MORE",
+   "original": "(352)213-5118",
+   "text": "(352)213-5118"
+  },
+  {
+   "id": "b1d4d69e91",
+   "where": "i · B-12 RX & MORE",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "fb779e7bed",
+   "where": "span · B-12 RX & MORE",
+   "original": "6419 W Newberry Rd Unit F9, Gainesville, FL 32605",
+   "text": "6419 W Newberry Rd Unit F9, Gainesville, FL 32605"
+  },
+  {
+   "id": "a45c7fe988",
+   "where": "i · B-12 RX & MORE",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "58cf2234d0",
+   "where": "a · B-12 RX & MORE",
+   "original": "Visit website",
+   "text": "Visit website"
+  },
+  {
+   "id": "cccc676e19",
+   "where": "p · B-12 RX & MORE",
+   "original": "Health & Wellness",
+   "text": "Health & Wellness"
+  },
+  {
+   "id": "342a27b847",
+   "where": "h3 · B-12 RX & MORE",
+   "original": "Celebrate Primary Care",
+   "text": "Celebrate Primary Care"
+  },
+  {
+   "id": "7d86586a87",
+   "where": "li · Celebrate Primary Care",
+   "original": "10% off monthly membership.",
+   "text": "10% off monthly membership."
+  },
+  {
+   "id": "e6bf0c58b1",
+   "where": "a · Celebrate Primary Care",
+   "original": "(352)474-8686",
+   "text": "(352)474-8686"
+  },
+  {
+   "id": "1bde069b07",
+   "where": "i · Celebrate Primary Care",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "508eff4fb7",
+   "where": "span · Celebrate Primary Care",
+   "original": "4400 NW 23 Ave, Gainesville, FL 32606",
+   "text": "4400 NW 23 Ave, Gainesville, FL 32606"
+  },
+  {
+   "id": "d1d5a1d097",
+   "where": "i · Celebrate Primary Care",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "38a3393fa1",
+   "where": "a · Celebrate Primary Care",
+   "original": "Visit website",
+   "text": "Visit website"
+  },
+  {
+   "id": "d9cd492902",
+   "where": "p · Celebrate Primary Care",
+   "original": "Health & Wellness",
+   "text": "Health & Wellness"
+  },
+  {
+   "id": "ab85557a12",
+   "where": "h3 · Celebrate Primary Care",
+   "original": "Gator CPR",
+   "text": "Gator CPR"
+  },
+  {
+   "id": "b7f48c1581",
+   "where": "li · Gator CPR",
+   "original": "15% off all CPR and First Aid Training (Classroom only)",
+   "text": "15% off all CPR and First Aid Training (Classroom only)"
+  },
+  {
+   "id": "176a8e4f1f",
+   "where": "a · Gator CPR",
+   "original": "(352)727-4733",
+   "text": "(352)727-4733"
+  },
+  {
+   "id": "9d35d81186",
+   "where": "i · Gator CPR",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "9776be2b57",
+   "where": "span · Gator CPR",
+   "original": "1029 NW 23rd Ave",
+   "text": "1029 NW 23rd Ave"
+  },
+  {
+   "id": "562fb720bf",
+   "where": "i · Gator CPR",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "9509b9a4e7",
+   "where": "a · Gator CPR",
+   "original": "Visit website",
+   "text": "Visit website"
+  },
+  {
+   "id": "afb603de1e",
+   "where": "p · Gator CPR",
+   "original": "Health & Wellness",
+   "text": "Health & Wellness"
+  },
+  {
+   "id": "e77edd48d5",
+   "where": "h3 · Gator CPR",
+   "original": "Happiness Coach Angela",
+   "text": "Happiness Coach Angela"
+  },
+  {
+   "id": "37fa589da9",
+   "where": "li · Happiness Coach Angela",
+   "original": "Buy one happiness coaching session, get one free ($100 value)",
+   "text": "Buy one happiness coaching session, get one free ($100 value)"
+  },
+  {
+   "id": "6d638c6bde",
+   "where": "a · Happiness Coach Angela",
+   "original": "(352)888-4834",
+   "text": "(352)888-4834"
+  },
+  {
+   "id": "a9a26c9353",
+   "where": "i · Happiness Coach Angela",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "b9e6a16868",
+   "where": "span · Happiness Coach Angela",
+   "original": "410 NW 4th Street",
+   "text": "410 NW 4th Street"
+  },
+  {
+   "id": "d17a882dff",
+   "where": "i · Happiness Coach Angela",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "e238ca16b2",
+   "where": "a · Happiness Coach Angela",
+   "original": "Visit website",
+   "text": "Visit website"
+  },
+  {
+   "id": "0f67a32730",
+   "where": "p · Happiness Coach Angela",
+   "original": "Health & Wellness",
+   "text": "Health & Wellness"
+  },
+  {
+   "id": "54f6a27965",
+   "where": "h3 · Happiness Coach Angela",
+   "original": "Lion Lady Fitness",
+   "text": "Lion Lady Fitness"
+  },
+  {
+   "id": "2b6e84777e",
+   "where": "li · Lion Lady Fitness",
+   "original": "10% off any program",
+   "text": "10% off any program"
+  },
+  {
+   "id": "d73a063d6c",
+   "where": "a · Lion Lady Fitness",
+   "original": "(352)278-7074",
+   "text": "(352)278-7074"
+  },
+  {
+   "id": "f31a411ee6",
+   "where": "i · Lion Lady Fitness",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "6ebc6623c8",
+   "where": "span · Lion Lady Fitness",
+   "original": "5200 W Newberry Rd",
+   "text": "5200 W Newberry Rd"
+  },
+  {
+   "id": "20d1c3840d",
+   "where": "i · Lion Lady Fitness",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "c602b23981",
+   "where": "a · Lion Lady Fitness",
+   "original": "Visit website",
+   "text": "Visit website"
+  },
+  {
+   "id": "242298b9b5",
+   "where": "p · Lion Lady Fitness",
+   "original": "Health & Wellness",
+   "text": "Health & Wellness"
+  },
+  {
+   "id": "037cb93de7",
+   "where": "h3 · Lion Lady Fitness",
+   "original": "Physique Nutrition",
+   "text": "Physique Nutrition"
+  },
+  {
+   "id": "d5b72a7b93",
+   "where": "li · Physique Nutrition",
+   "original": "10% Off for GHF Members & Staff",
+   "text": "10% Off for GHF Members & Staff"
+  },
+  {
+   "id": "f0e74925df",
+   "where": "a · Physique Nutrition",
+   "original": "(352)213-2679",
+   "text": "(352)213-2679"
+  },
+  {
+   "id": "ea720ce146",
+   "where": "i · Physique Nutrition",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "703690302a",
+   "where": "span · Physique Nutrition",
+   "original": "6275 West Newberry Road",
+   "text": "6275 West Newberry Road"
+  },
+  {
+   "id": "e60874793e",
+   "where": "i · Physique Nutrition",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "8f4abf525a",
+   "where": "a · Physique Nutrition",
+   "original": "Visit website",
+   "text": "Visit website"
+  },
+  {
+   "id": "0da5a95b96",
+   "where": "p · Physique Nutrition",
+   "original": "Health & Wellness",
+   "text": "Health & Wellness"
+  },
+  {
+   "id": "5779e9cd35",
+   "where": "h3 · Physique Nutrition",
+   "original": "Rejuvenation Station",
+   "text": "Rejuvenation Station"
+  },
+  {
+   "id": "dd78a8cc3e",
+   "where": "li · Rejuvenation Station",
+   "original": "Get 20% off any IV Therapy session (applicable for all IV therapy menu options, not including custom therapies) and free oxygen therapy with any purchase.",
+   "text": "Get 20% off any IV Therapy session (applicable for all IV therapy menu options, not including custom therapies) and free oxygen therapy with any purchase."
+  },
+  {
+   "id": "2b9c009685",
+   "where": "a · Rejuvenation Station",
+   "original": "(352)261-0946",
+   "text": "(352)261-0946"
+  },
+  {
+   "id": "9cd6aad4a0",
+   "where": "i · Rejuvenation Station",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "4b463aeead",
+   "where": "span · Rejuvenation Station",
+   "original": "194 NW 137th Drive, Suite 300",
+   "text": "194 NW 137th Drive, Suite 300"
+  },
+  {
+   "id": "64c394a864",
+   "where": "i · Rejuvenation Station",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "ca9023ea98",
+   "where": "a · Rejuvenation Station",
+   "original": "Visit website",
+   "text": "Visit website"
+  },
+  {
+   "id": "ee1e34c655",
+   "where": "p · Rejuvenation Station",
+   "original": "Health & Wellness",
+   "text": "Health & Wellness"
+  },
+  {
+   "id": "7bab55de40",
+   "where": "h3 · Rejuvenation Station",
+   "original": "Revival IV Lounge",
+   "text": "Revival IV Lounge"
+  },
+  {
+   "id": "cfd331824e",
+   "where": "li · Revival IV Lounge",
+   "original": "20% off your first visit",
+   "text": "20% off your first visit"
+  },
+  {
+   "id": "edd6874043",
+   "where": "a · Revival IV Lounge",
+   "original": "(352)792-6811",
+   "text": "(352)792-6811"
+  },
+  {
+   "id": "98da3bf0f1",
+   "where": "i · Revival IV Lounge",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "e14f5b2fb4",
+   "where": "span · Revival IV Lounge",
+   "original": "3300 SW Archer Rd. Suite 110",
+   "text": "3300 SW Archer Rd. Suite 110"
+  },
+  {
+   "id": "758dc090b5",
+   "where": "i · Revival IV Lounge",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "4223e49ad9",
+   "where": "a · Revival IV Lounge",
+   "original": "Visit website",
+   "text": "Visit website"
+  },
+  {
+   "id": "c9f0728f79",
+   "where": "p · Revival IV Lounge",
+   "original": "Health & Wellness",
+   "text": "Health & Wellness"
+  },
+  {
+   "id": "7f3a5baee8",
+   "where": "h3 · Revival IV Lounge",
+   "original": "The BioMat Company",
+   "text": "The BioMat Company"
+  },
+  {
+   "id": "3a364dfa4e",
+   "where": "li · The BioMat Company",
+   "original": "Free Shipping (a $20 - $160) & $100 Discount with License or Certification in Health or Wellness Industry",
+   "text": "Free Shipping (a $20 - $160) & $100 Discount with License or Certification in Health or Wellness Industry"
+  },
+  {
+   "id": "704e078cc0",
+   "where": "a · The BioMat Company",
+   "original": "Visit website",
+   "text": "Visit website"
+  },
+  {
+   "id": "207254cd0f",
+   "where": "p · The BioMat Company",
+   "original": "Health & Wellness",
+   "text": "Health & Wellness"
+  },
+  {
+   "id": "c7e5a3e645",
+   "where": "h3 · The BioMat Company",
+   "original": "Total Nutrition Gainesville",
+   "text": "Total Nutrition Gainesville"
+  },
+  {
+   "id": "da071e6cdf",
+   "where": "li · Total Nutrition Gainesville",
+   "original": "20% off to all GHF members on non sale items",
+   "text": "20% off to all GHF members on non sale items"
+  },
+  {
+   "id": "94ddb28eda",
+   "where": "li · Total Nutrition Gainesville",
+   "original": "Free shaker cups and t-shirts with purchase",
+   "text": "Free shaker cups and t-shirts with purchase"
+  },
+  {
+   "id": "8f5772874c",
+   "where": "a · Total Nutrition Gainesville",
+   "original": "(352)225-3074",
+   "text": "(352)225-3074"
+  },
+  {
+   "id": "22ce291b13",
+   "where": "i · Total Nutrition Gainesville",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "13b8c3758f",
+   "where": "span · Total Nutrition Gainesville",
+   "original": "3443 SW Archer Road #A-4",
+   "text": "3443 SW Archer Road #A-4"
+  },
+  {
+   "id": "bb4824e1ae",
+   "where": "i · Total Nutrition Gainesville",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "877359627f",
+   "where": "a · Total Nutrition Gainesville",
+   "original": "Visit website",
+   "text": "Visit website"
+  },
+  {
+   "id": "47adedfa24",
+   "where": "p · Total Nutrition Gainesville",
+   "original": "Health & Wellness",
+   "text": "Health & Wellness"
+  },
+  {
+   "id": "32293b7c78",
+   "where": "h3 · Total Nutrition Gainesville",
+   "original": "Zenful Accupuncture",
+   "text": "Zenful Accupuncture"
+  },
+  {
+   "id": "0e79cd2d4b",
+   "where": "li · Zenful Accupuncture",
+   "original": "30% off New Patient Appointment and voucher for one complementary cupping session; 20% off Follow up appointments",
+   "text": "30% off New Patient Appointment and voucher for one complementary cupping session; 20% off Follow up appointments"
+  },
+  {
+   "id": "d543535ee7",
+   "where": "a · Zenful Accupuncture",
+   "original": "(727)688-1590",
+   "text": "(727)688-1590"
+  },
+  {
+   "id": "93c45e4072",
+   "where": "i · Zenful Accupuncture",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "3e538f7bdf",
+   "where": "span · Zenful Accupuncture",
+   "original": "920 NW 8th Ave A, Gainesville FL 32601",
+   "text": "920 NW 8th Ave A, Gainesville FL 32601"
+  },
+  {
+   "id": "6e4d289323",
+   "where": "i · Zenful Accupuncture",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "32feca2030",
+   "where": "a · Zenful Accupuncture",
+   "original": "Visit website",
+   "text": "Visit website"
+  },
+  {
+   "id": "1a6f205fa0",
+   "where": "p · Zenful Accupuncture",
+   "original": "Home Improvement & Furnishings",
+   "text": "Home Improvement & Furnishings"
+  },
+  {
+   "id": "607af88371",
+   "where": "h3 · Zenful Accupuncture",
+   "original": "Absolute Quality Tree Service",
+   "text": "Absolute Quality Tree Service"
+  },
+  {
+   "id": "aa4bea51f0",
+   "where": "li · Absolute Quality Tree Service",
+   "original": "10% Off All Services",
+   "text": "10% Off All Services"
+  },
+  {
+   "id": "3a10cd179b",
+   "where": "a · Absolute Quality Tree Service",
+   "original": "(352)246-8183",
+   "text": "(352)246-8183"
+  },
+  {
+   "id": "d431f93552",
+   "where": "p · Absolute Quality Tree Service",
+   "original": "Home Improvement & Furnishings",
+   "text": "Home Improvement & Furnishings"
+  },
+  {
+   "id": "63ca932857",
+   "where": "h3 · Absolute Quality Tree Service",
+   "original": "ADT Security",
+   "text": "ADT Security"
+  },
+  {
+   "id": "580d592bc1",
+   "where": "li · ADT Security",
+   "original": "CALL: John J at 352-575-0031 - Using The Code A202864 for Your GHFC 20% OFF",
+   "text": "CALL: John J at 352-575-0031 - Using The Code A202864 for Your GHFC 20% OFF"
+  },
+  {
+   "id": "81b1d81641",
+   "where": "a · ADT Security",
+   "original": "(352)575-0031",
+   "text": "(352)575-0031"
+  },
+  {
+   "id": "5203da4137",
+   "where": "i · ADT Security",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "f3338434f5",
+   "where": "a · ADT Security",
+   "original": "Visit website",
+   "text": "Visit website"
+  },
+  {
+   "id": "f4e1e2a11a",
+   "where": "p · ADT Security",
+   "original": "Home Improvement & Furnishings",
+   "text": "Home Improvement & Furnishings"
+  },
+  {
+   "id": "fb47bbfe57",
+   "where": "h3 · ADT Security",
+   "original": "Bath Fitter",
+   "text": "Bath Fitter"
+  },
+  {
+   "id": "132c677f7e",
+   "where": "li · Bath Fitter",
+   "original": "Free Safety Bar or Soap Dish with Purchase of Bathfitter System!",
+   "text": "Free Safety Bar or Soap Dish with Purchase of Bathfitter System!"
+  },
+  {
+   "id": "8c9b5cbac4",
+   "where": "a · Bath Fitter",
+   "original": "(352)624-8827",
+   "text": "(352)624-8827"
+  },
+  {
+   "id": "b4da8dbb95",
+   "where": "i · Bath Fitter",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "56f3ad6f71",
+   "where": "a · Bath Fitter",
+   "original": "Visit website",
+   "text": "Visit website"
+  },
+  {
+   "id": "1a11beb36c",
+   "where": "p · Bath Fitter",
+   "original": "Home Improvement & Furnishings",
+   "text": "Home Improvement & Furnishings"
+  },
+  {
+   "id": "c2dc5c5003",
+   "where": "h3 · Bath Fitter",
+   "original": "Brehm Roofing and Restoration",
+   "text": "Brehm Roofing and Restoration"
+  },
+  {
+   "id": "9d173de7ec",
+   "where": "li · Brehm Roofing and Restoration",
+   "original": "The offer is as follows: 5% off of a roof repair (insurance claims excluded).",
+   "text": "The offer is as follows: 5% off of a roof repair (insurance claims excluded)."
+  },
+  {
+   "id": "f56ca4e2b0",
+   "where": "a · Brehm Roofing and Restoration",
+   "original": "(352)664-8585",
+   "text": "(352)664-8585"
+  },
+  {
+   "id": "c964750485",
+   "where": "i · Brehm Roofing and Restoration",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "0a44685098",
+   "where": "span · Brehm Roofing and Restoration",
+   "original": "1344 NW 121st Way",
+   "text": "1344 NW 121st Way"
+  },
+  {
+   "id": "04b4bf1b1d",
+   "where": "i · Brehm Roofing and Restoration",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "992f6a63dc",
+   "where": "a · Brehm Roofing and Restoration",
+   "original": "Visit website",
+   "text": "Visit website"
+  },
+  {
+   "id": "9ca7fe0311",
+   "where": "p · Brehm Roofing and Restoration",
+   "original": "Home Improvement & Furnishings",
+   "text": "Home Improvement & Furnishings"
+  },
+  {
+   "id": "939c053acb",
+   "where": "h3 · Brehm Roofing and Restoration",
+   "original": "Corda-Roy's Bean Bag Beds",
+   "text": "Corda-Roy's Bean Bag Beds"
+  },
+  {
+   "id": "6057b3fb6a",
+   "where": "li · Corda-Roy's Bean Bag Beds",
+   "original": "20% Off Purchases For All Members. (Does not include other offers or sale items)",
+   "text": "20% Off Purchases For All Members. (Does not include other offers or sale items)"
+  },
+  {
+   "id": "fbdd8682e8",
+   "where": "a · Corda-Roy's Bean Bag Beds",
+   "original": "(352)332-1837",
+   "text": "(352)332-1837"
+  },
+  {
+   "id": "808ab6a50b",
+   "where": "i · Corda-Roy's Bean Bag Beds",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "67e211f02f",
+   "where": "span · Corda-Roy's Bean Bag Beds",
+   "original": "5310 NW 8th Ave",
+   "text": "5310 NW 8th Ave"
+  },
+  {
+   "id": "ec011d2933",
+   "where": "i · Corda-Roy's Bean Bag Beds",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "f602efba5a",
+   "where": "a · Corda-Roy's Bean Bag Beds",
+   "original": "Visit website",
+   "text": "Visit website"
+  },
+  {
+   "id": "bd2ac6ddcd",
+   "where": "p · Corda-Roy's Bean Bag Beds",
+   "original": "Home Improvement & Furnishings",
+   "text": "Home Improvement & Furnishings"
+  },
+  {
+   "id": "f50c34f564",
+   "where": "h3 · Corda-Roy's Bean Bag Beds",
+   "original": "Curb Appeal Lawn Services",
+   "text": "Curb Appeal Lawn Services"
+  },
+  {
+   "id": "72393bdec1",
+   "where": "li · Curb Appeal Lawn Services",
+   "original": "10% off 1 year lawn care contract",
+   "text": "10% off 1 year lawn care contract"
+  },
+  {
+   "id": "122f69b828",
+   "where": "li · Curb Appeal Lawn Services",
+   "original": "20% off 1 year gardener contract",
+   "text": "20% off 1 year gardener contract"
+  },
+  {
+   "id": "553f1fb617",
+   "where": "a · Curb Appeal Lawn Services",
+   "original": "(352)505-0917",
+   "text": "(352)505-0917"
+  },
+  {
+   "id": "eaefd62162",
+   "where": "p · Curb Appeal Lawn Services",
+   "original": "Home Improvement & Furnishings",
+   "text": "Home Improvement & Furnishings"
+  },
+  {
+   "id": "73ec48ea06",
+   "where": "h3 · Curb Appeal Lawn Services",
+   "original": "Liberty Air",
+   "text": "Liberty Air"
+  },
+  {
+   "id": "a29d4e592b",
+   "where": "li · Liberty Air",
+   "original": "$50 off repairs or $200 off new system. Offer applies to new customers residing in Alachua County.",
+   "text": "$50 off repairs or $200 off new system. Offer applies to new customers residing in Alachua County."
+  },
+  {
+   "id": "c7dec93511",
+   "where": "a · Liberty Air",
+   "original": "(352)333-1985",
+   "text": "(352)333-1985"
+  },
+  {
+   "id": "eb2f853d69",
+   "where": "i · Liberty Air",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "ae01d29a34",
+   "where": "a · Liberty Air",
+   "original": "Visit website",
+   "text": "Visit website"
+  },
+  {
+   "id": "2bf4bff254",
+   "where": "p · Liberty Air",
+   "original": "Home Improvement & Furnishings",
+   "text": "Home Improvement & Furnishings"
+  },
+  {
+   "id": "11a01c6c76",
+   "where": "h3 · Liberty Air",
+   "original": "Mr Tree and Lawn Services, LLC",
+   "text": "Mr Tree and Lawn Services, LLC"
+  },
+  {
+   "id": "28d1ba4bc1",
+   "where": "li · Mr Tree and Lawn Services, LLC",
+   "original": "5% off for members of GHF",
+   "text": "5% off for members of GHF"
+  },
+  {
+   "id": "0c8bd413cd",
+   "where": "a · Mr Tree and Lawn Services, LLC",
+   "original": "(352)682-4444",
+   "text": "(352)682-4444"
+  },
+  {
+   "id": "a0559b3007",
+   "where": "i · Mr Tree and Lawn Services, LLC",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "56557f99da",
+   "where": "span · Mr Tree and Lawn Services, LLC",
+   "original": "1410 NW 13th St. Suite 3",
+   "text": "1410 NW 13th St. Suite 3"
+  },
+  {
+   "id": "5e826b5641",
+   "where": "i · Mr Tree and Lawn Services, LLC",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "2f66375b28",
+   "where": "a · Mr Tree and Lawn Services, LLC",
+   "original": "Visit website",
+   "text": "Visit website"
+  },
+  {
+   "id": "66acafe36b",
+   "where": "p · Mr Tree and Lawn Services, LLC",
+   "original": "Home Improvement & Furnishings",
+   "text": "Home Improvement & Furnishings"
+  },
+  {
+   "id": "84cb2782f4",
+   "where": "h3 · Mr Tree and Lawn Services, LLC",
+   "original": "Natural Element Painting & Repair",
+   "text": "Natural Element Painting & Repair"
+  },
+  {
+   "id": "6aaa9e98f8",
+   "where": "li · Natural Element Painting & Repair",
+   "original": "One Free Exterior Home Pressure Washing (a $125 value), with purchase of $1,000 painting, wall covering and/or repair job.",
+   "text": "One Free Exterior Home Pressure Washing (a $125 value), with purchase of $1,000 painting, wall covering and/or repair job."
+  },
+  {
+   "id": "8149b9432f",
+   "where": "a · Natural Element Painting & Repair",
+   "original": "(352)514-0005",
+   "text": "(352)514-0005"
+  },
+  {
+   "id": "5dd002c859",
+   "where": "i · Natural Element Painting & Repair",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "04cf87be38",
+   "where": "span · Natural Element Painting & Repair",
+   "original": "2510 NW 90th Terrace",
+   "text": "2510 NW 90th Terrace"
+  },
+  {
+   "id": "cada5b89b9",
+   "where": "i · Natural Element Painting & Repair",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "51e3c33425",
+   "where": "a · Natural Element Painting & Repair",
+   "original": "Visit website",
+   "text": "Visit website"
+  },
+  {
+   "id": "831684287a",
+   "where": "p · Natural Element Painting & Repair",
+   "original": "Home Improvement & Furnishings",
+   "text": "Home Improvement & Furnishings"
+  },
+  {
+   "id": "616b2bd1b3",
+   "where": "h3 · Natural Element Painting & Repair",
+   "original": "Pro'Scape Professional Lawn & Landscaping Service",
+   "text": "Pro'Scape Professional Lawn & Landscaping Service"
+  },
+  {
+   "id": "490763ece5",
+   "where": "li · Pro'Scape Professional Lawn & Landscaping Service",
+   "original": "First month free yard service with one year agreement OR",
+   "text": "First month free yard service with one year agreement OR"
+  },
+  {
+   "id": "522454ea48",
+   "where": "li · Pro'Scape Professional Lawn & Landscaping Service",
+   "original": "15% off pressure washing service",
+   "text": "15% off pressure washing service"
+  },
+  {
+   "id": "028ca54d95",
+   "where": "a · Pro'Scape Professional Lawn & Landscaping Service",
+   "original": "(352)222-5027",
+   "text": "(352)222-5027"
+  },
+  {
+   "id": "ad4741b873",
+   "where": "p · Pro'Scape Professional Lawn & Landscaping Service",
+   "original": "Home Improvement & Furnishings",
+   "text": "Home Improvement & Furnishings"
+  },
+  {
+   "id": "c6a909b881",
+   "where": "h3 · Pro'Scape Professional Lawn & Landscaping Service",
+   "original": "Real Deal Handyman & Lawn Services",
+   "text": "Real Deal Handyman & Lawn Services"
+  },
+  {
+   "id": "b704c3a983",
+   "where": "li · Real Deal Handyman & Lawn Services",
+   "original": "20% off any services of $150 or more",
+   "text": "20% off any services of $150 or more"
+  },
+  {
+   "id": "a589982540",
+   "where": "li · Real Deal Handyman & Lawn Services",
+   "original": "15% off any 1 Year Lawn or Maintenance Contract",
+   "text": "15% off any 1 Year Lawn or Maintenance Contract"
+  },
+  {
+   "id": "83884484b7",
+   "where": "a · Real Deal Handyman & Lawn Services",
+   "original": "(850)459-9852",
+   "text": "(850)459-9852"
+  },
+  {
+   "id": "6d56f444ea",
+   "where": "p · Real Deal Handyman & Lawn Services",
+   "original": "Home Improvement & Furnishings",
+   "text": "Home Improvement & Furnishings"
+  },
+  {
+   "id": "f88567ca30",
+   "where": "h3 · Real Deal Handyman & Lawn Services",
+   "original": "Screen Doctors, LLC",
+   "text": "Screen Doctors, LLC"
+  },
+  {
+   "id": "6e14b52284",
+   "where": "li · Screen Doctors, LLC",
+   "original": "FREE Driveway Cleaning with Pressure Wash of Home, a $100 value!",
+   "text": "FREE Driveway Cleaning with Pressure Wash of Home, a $100 value!"
+  },
+  {
+   "id": "1022f0e263",
+   "where": "a · Screen Doctors, LLC",
+   "original": "(352)339-3789",
+   "text": "(352)339-3789"
+  },
+  {
+   "id": "b8b0e2a4cd",
+   "where": "i · Screen Doctors, LLC",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "97cb562d80",
+   "where": "a · Screen Doctors, LLC",
+   "original": "Visit website",
+   "text": "Visit website"
+  },
+  {
+   "id": "582b1a9ef9",
+   "where": "p · Screen Doctors, LLC",
+   "original": "Home Improvement & Furnishings",
+   "text": "Home Improvement & Furnishings"
+  },
+  {
+   "id": "d877021eb0",
+   "where": "h3 · Screen Doctors, LLC",
+   "original": "Sears Carpet & Air Duct Cleaning",
+   "text": "Sears Carpet & Air Duct Cleaning"
+  },
+  {
+   "id": "1ceb129a76",
+   "where": "li · Sears Carpet & Air Duct Cleaning",
+   "original": "10% off any services. Minimum order $125. Cannot be combined with other discounts.",
+   "text": "10% off any services. Minimum order $125. Cannot be combined with other discounts."
+  },
+  {
+   "id": "592c1a1317",
+   "where": "a · Sears Carpet & Air Duct Cleaning",
+   "original": "(352)377-1715",
+   "text": "(352)377-1715"
+  },
+  {
+   "id": "461c83190d",
+   "where": "i · Sears Carpet & Air Duct Cleaning",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "fcb397f65f",
+   "where": "a · Sears Carpet & Air Duct Cleaning",
+   "original": "Visit website",
+   "text": "Visit website"
+  },
+  {
+   "id": "cd0dfed772",
+   "where": "p · Sears Carpet & Air Duct Cleaning",
+   "original": "Home Improvement & Furnishings",
+   "text": "Home Improvement & Furnishings"
+  },
+  {
+   "id": "39dceabfdb",
+   "where": "h3 · Sears Carpet & Air Duct Cleaning",
+   "original": "Sears Garage Doors",
+   "text": "Sears Garage Doors"
+  },
+  {
+   "id": "8aedd6b096",
+   "where": "li · Sears Garage Doors",
+   "original": "$25 off any service. Minimum order $199. Cannot be combined with other offers or discounts.",
+   "text": "$25 off any service. Minimum order $199. Cannot be combined with other offers or discounts."
+  },
+  {
+   "id": "659f6a2d61",
+   "where": "a · Sears Garage Doors",
+   "original": "(352)377-1715",
+   "text": "(352)377-1715"
+  },
+  {
+   "id": "2c92e1d743",
+   "where": "i · Sears Garage Doors",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "02469b25e5",
+   "where": "a · Sears Garage Doors",
+   "original": "Visit website",
+   "text": "Visit website"
+  },
+  {
+   "id": "2c1dfbf43b",
+   "where": "p · Sears Garage Doors",
+   "original": "Home Improvement & Furnishings",
+   "text": "Home Improvement & Furnishings"
+  },
+  {
+   "id": "b6060c4ebb",
+   "where": "h3 · Sears Garage Doors",
+   "original": "Sleep Center Superstores",
+   "text": "Sleep Center Superstores"
+  },
+  {
+   "id": "c0f22be0a0",
+   "where": "li · Sleep Center Superstores",
+   "original": "10% off any mattress set over $499 (*some exclusions apply, see store for details)",
+   "text": "10% off any mattress set over $499 (*some exclusions apply, see store for details)"
+  },
+  {
+   "id": "5457b4757a",
+   "where": "a · Sleep Center Superstores",
+   "original": "(352)872-5668",
+   "text": "(352)872-5668"
+  },
+  {
+   "id": "738d56ff97",
+   "where": "i · Sleep Center Superstores",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "51827212f9",
+   "where": "span · Sleep Center Superstores",
+   "original": "4994 NW 39th Ave - A",
+   "text": "4994 NW 39th Ave - A"
+  },
+  {
+   "id": "af65dd8a0c",
+   "where": "p · Sleep Center Superstores",
+   "original": "Home Improvement & Furnishings",
+   "text": "Home Improvement & Furnishings"
+  },
+  {
+   "id": "9294ff98b4",
+   "where": "h3 · Sleep Center Superstores",
+   "original": "Wood You Furniture",
+   "text": "Wood You Furniture"
+  },
+  {
+   "id": "a91e7a17c9",
+   "where": "li · Wood You Furniture",
+   "original": "10% Off Any Purchase Under $500.00",
+   "text": "10% Off Any Purchase Under $500.00"
+  },
+  {
+   "id": "fc984f2a73",
+   "where": "li · Wood You Furniture",
+   "original": "15% Off Any Purchase Over $500.00",
+   "text": "15% Off Any Purchase Over $500.00"
+  },
+  {
+   "id": "2738f18e07",
+   "where": "a · Wood You Furniture",
+   "original": "(352)373-1107",
+   "text": "(352)373-1107"
+  },
+  {
+   "id": "0ec45720a0",
+   "where": "i · Wood You Furniture",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "b4d37acb09",
+   "where": "span · Wood You Furniture",
+   "original": "1601 N Main St",
+   "text": "1601 N Main St"
+  },
+  {
+   "id": "3d5f34ffe9",
+   "where": "i · Wood You Furniture",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "e179f52df7",
+   "where": "a · Wood You Furniture",
+   "original": "Visit website",
+   "text": "Visit website"
+  },
+  {
+   "id": "eeba64805f",
+   "where": "p · Wood You Furniture",
+   "original": "Homes/Apartments",
+   "text": "Homes/Apartments"
+  },
+  {
+   "id": "2597ad0a61",
+   "where": "h3 · Wood You Furniture",
+   "original": "Allison Ables Property Management",
+   "text": "Allison Ables Property Management"
+  },
+  {
+   "id": "9289d8292d",
+   "where": "li · Allison Ables Property Management",
+   "original": "50% Off Leasing Fee for GHF members who sign a new property management agreement",
+   "text": "50% Off Leasing Fee for GHF members who sign a new property management agreement"
+  },
+  {
+   "id": "c8483a2c64",
+   "where": "a · Allison Ables Property Management",
+   "original": "(352)371-1828",
+   "text": "(352)371-1828"
+  },
+  {
+   "id": "fe2b0e870f",
+   "where": "i · Allison Ables Property Management",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "9d2beca13e",
+   "where": "span · Allison Ables Property Management",
+   "original": "2725 SW 91st Street, Suite 120",
+   "text": "2725 SW 91st Street, Suite 120"
+  },
+  {
+   "id": "81be8b47f7",
+   "where": "i · Allison Ables Property Management",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "d1b7ce0003",
+   "where": "a · Allison Ables Property Management",
+   "original": "Visit website",
+   "text": "Visit website"
+  },
+  {
+   "id": "2c18bfe0f5",
+   "where": "p · Allison Ables Property Management",
+   "original": "Homes/Apartments",
+   "text": "Homes/Apartments"
+  },
+  {
+   "id": "f72c284eb3",
+   "where": "h3 · Allison Ables Property Management",
+   "original": "Allison Ables Real Estate",
+   "text": "Allison Ables Real Estate"
+  },
+  {
+   "id": "54cc83cd1f",
+   "where": "li · Allison Ables Real Estate",
+   "original": "Free home inspection ($350 value) when GHF members purchase with one of our agents.",
+   "text": "Free home inspection ($350 value) when GHF members purchase with one of our agents."
+  },
+  {
+   "id": "6a6cb8257d",
+   "where": "a · Allison Ables Real Estate",
+   "original": "(352)371-1828",
+   "text": "(352)371-1828"
+  },
+  {
+   "id": "4afb4e4c5d",
+   "where": "i · Allison Ables Real Estate",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "669aed4c8b",
+   "where": "span · Allison Ables Real Estate",
+   "original": "2725 SW 91st Street, Suite 120",
+   "text": "2725 SW 91st Street, Suite 120"
+  },
+  {
+   "id": "e34a990da8",
+   "where": "i · Allison Ables Real Estate",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "79a9d72587",
+   "where": "a · Allison Ables Real Estate",
+   "original": "Visit website",
+   "text": "Visit website"
+  },
+  {
+   "id": "fa91a96b06",
+   "where": "p · Allison Ables Real Estate",
+   "original": "Homes/Apartments",
+   "text": "Homes/Apartments"
+  },
+  {
+   "id": "85229085a6",
+   "where": "h3 · Allison Ables Real Estate",
+   "original": "Amira Custom Homes",
+   "text": "Amira Custom Homes"
+  },
+  {
+   "id": "d8b42f1f7d",
+   "where": "li · Amira Custom Homes",
+   "original": "10% off custom home plan design services",
+   "text": "10% off custom home plan design services"
+  },
+  {
+   "id": "eed6949a94",
+   "where": "a · Amira Custom Homes",
+   "original": "(352)327-4409",
+   "text": "(352)327-4409"
+  },
+  {
+   "id": "1328317192",
+   "where": "i · Amira Custom Homes",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "34e765a0f8",
+   "where": "span · Amira Custom Homes",
+   "original": "14901 Main Street",
+   "text": "14901 Main Street"
+  },
+  {
+   "id": "968b55dc4d",
+   "where": "i · Amira Custom Homes",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "68bd0515ed",
+   "where": "a · Amira Custom Homes",
+   "original": "Visit website",
+   "text": "Visit website"
+  },
+  {
+   "id": "5d32e1738b",
+   "where": "p · Amira Custom Homes",
+   "original": "Homes/Apartments",
+   "text": "Homes/Apartments"
+  },
+  {
+   "id": "d4122b64a0",
+   "where": "h3 · Amira Custom Homes",
+   "original": "Gainesville Self Storage",
+   "text": "Gainesville Self Storage"
+  },
+  {
+   "id": "590aaf5a63",
+   "where": "li · Gainesville Self Storage",
+   "original": "$25 off a move-in for members and employees",
+   "text": "$25 off a move-in for members and employees"
+  },
+  {
+   "id": "9b64b44e15",
+   "where": "a · Gainesville Self Storage",
+   "original": "(352)462-4215",
+   "text": "(352)462-4215"
+  },
+  {
+   "id": "3b06a05218",
+   "where": "i · Gainesville Self Storage",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "21b2957777",
+   "where": "span · Gainesville Self Storage",
+   "original": "4500 SW 41 Blvd.",
+   "text": "4500 SW 41 Blvd."
+  },
+  {
+   "id": "c48efa9f9c",
+   "where": "i · Gainesville Self Storage",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "0cc39a9283",
+   "where": "a · Gainesville Self Storage",
+   "original": "Visit website",
+   "text": "Visit website"
+  },
+  {
+   "id": "14ae0fb1aa",
+   "where": "p · Gainesville Self Storage",
+   "original": "Homes/Apartments",
+   "text": "Homes/Apartments"
+  },
+  {
+   "id": "3be4136956",
+   "where": "h3 · Gainesville Self Storage",
+   "original": "Life Storage",
+   "text": "Life Storage"
+  },
+  {
+   "id": "3ed6ed105b",
+   "where": "li · Life Storage",
+   "original": "$35 credit at move-in for members and employees. (Cannot be combined with any other offers.)",
+   "text": "$35 credit at move-in for members and employees. (Cannot be combined with any other offers.)"
+  },
+  {
+   "id": "d33745470b",
+   "where": "a · Life Storage",
+   "original": "(352)218-0062",
+   "text": "(352)218-0062"
+  },
+  {
+   "id": "b8c778e973",
+   "where": "i · Life Storage",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "c354267aa2",
+   "where": "span · Life Storage",
+   "original": "6589 SW Archer Rd.",
+   "text": "6589 SW Archer Rd."
+  },
+  {
+   "id": "337dd5534f",
+   "where": "i · Life Storage",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "7e5782c264",
+   "where": "a · Life Storage",
+   "original": "Visit website",
+   "text": "Visit website"
+  },
+  {
+   "id": "07c43d2e6d",
+   "where": "p · Life Storage",
+   "original": "Homes/Apartments",
+   "text": "Homes/Apartments"
+  },
+  {
+   "id": "de7dbfae68",
+   "where": "h3 · Life Storage",
+   "original": "Noble On Newberry",
+   "text": "Noble On Newberry"
+  },
+  {
+   "id": "461c0d7d43",
+   "where": "li · Noble On Newberry",
+   "original": "10% off monthly storage unit or private office rental",
+   "text": "10% off monthly storage unit or private office rental"
+  },
+  {
+   "id": "5e8f8abbd7",
+   "where": "a · Noble On Newberry",
+   "original": "(352)451-4157",
+   "text": "(352)451-4157"
+  },
+  {
+   "id": "cfb36cfcb8",
+   "where": "i · Noble On Newberry",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "5564e82892",
+   "where": "span · Noble On Newberry",
+   "original": "658 NW 120th Terr.",
+   "text": "658 NW 120th Terr."
+  },
+  {
+   "id": "cf930b70e4",
+   "where": "i · Noble On Newberry",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "7976b550bd",
+   "where": "a · Noble On Newberry",
+   "original": "Visit website",
+   "text": "Visit website"
+  },
+  {
+   "id": "a736396deb",
+   "where": "p · Noble On Newberry",
+   "original": "Homes/Apartments",
+   "text": "Homes/Apartments"
+  },
+  {
+   "id": "93614d7353",
+   "where": "h3 · Noble On Newberry",
+   "original": "Sapphire Builders LLC",
+   "text": "Sapphire Builders LLC"
+  },
+  {
+   "id": "1996a148d2",
+   "where": "li · Sapphire Builders LLC",
+   "original": "$1,000 off any upgrade on one of our homes",
+   "text": "$1,000 off any upgrade on one of our homes"
+  },
+  {
+   "id": "966d2ef140",
+   "where": "a · Sapphire Builders LLC",
+   "original": "(352)331-3343",
+   "text": "(352)331-3343"
+  },
+  {
+   "id": "dd419cf2f8",
+   "where": "i · Sapphire Builders LLC",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "649586b3db",
+   "where": "span · Sapphire Builders LLC",
+   "original": "124 Southwest 62nd Street",
+   "text": "124 Southwest 62nd Street"
+  },
+  {
+   "id": "f704db1f72",
+   "where": "p · Sapphire Builders LLC",
+   "original": "Homes/Apartments",
+   "text": "Homes/Apartments"
+  },
+  {
+   "id": "a7bbc5dad2",
+   "where": "h3 · Sapphire Builders LLC",
+   "original": "Skobel Homes",
+   "text": "Skobel Homes"
+  },
+  {
+   "id": "41b8a8163d",
+   "where": "li · Skobel Homes",
+   "original": "$1,000 towards Options when you purchase a new Skobel Home.",
+   "text": "$1,000 towards Options when you purchase a new Skobel Home."
+  },
+  {
+   "id": "00f67874a6",
+   "where": "a · Skobel Homes",
+   "original": "(352)505-9100",
+   "text": "(352)505-9100"
+  },
+  {
+   "id": "175ddacdb9",
+   "where": "i · Skobel Homes",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "03b46bf378",
+   "where": "a · Skobel Homes",
+   "original": "Visit website",
+   "text": "Visit website"
+  },
+  {
+   "id": "aa59cfab98",
+   "where": "p · Skobel Homes",
+   "original": "Medical Services",
+   "text": "Medical Services"
+  },
+  {
+   "id": "dc28605673",
+   "where": "h3 · Skobel Homes",
+   "original": "Carrie Chauhan Acupuncture & Herbal Medicine LLC",
+   "text": "Carrie Chauhan Acupuncture & Herbal Medicine LLC"
+  },
+  {
+   "id": "263fb43dbe",
+   "where": "li · Carrie Chauhan Acupuncture & Herbal Medicine LLC",
+   "original": "Free 30-minute consultation and 20% off acupuncture treatments and/or herbal consultations.",
+   "text": "Free 30-minute consultation and 20% off acupuncture treatments and/or herbal consultations."
+  },
+  {
+   "id": "b7ab72291a",
+   "where": "a · Carrie Chauhan Acupuncture & Herbal Medicine LLC",
+   "original": "(352)260-5111",
+   "text": "(352)260-5111"
+  },
+  {
+   "id": "f4ae48dfe3",
+   "where": "i · Carrie Chauhan Acupuncture & Herbal Medicine LLC",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "f29d247602",
+   "where": "span · Carrie Chauhan Acupuncture & Herbal Medicine LLC",
+   "original": "3600 NW 43rd Street, E-4",
+   "text": "3600 NW 43rd Street, E-4"
+  },
+  {
+   "id": "bb4ce5c7f0",
+   "where": "p · Carrie Chauhan Acupuncture & Herbal Medicine LLC",
+   "original": "Medical Services",
+   "text": "Medical Services"
+  },
+  {
+   "id": "b6d0dd7764",
+   "where": "h3 · Carrie Chauhan Acupuncture & Herbal Medicine LLC",
+   "original": "Comfort Keepers",
+   "text": "Comfort Keepers"
+  },
+  {
+   "id": "8b8b358446",
+   "where": "li · Comfort Keepers",
+   "original": "$150 set-up fee is waived for all GHF members.",
+   "text": "$150 set-up fee is waived for all GHF members."
+  },
+  {
+   "id": "713c62c541",
+   "where": "a · Comfort Keepers",
+   "original": "(352)331-7760",
+   "text": "(352)331-7760"
+  },
+  {
+   "id": "84a6ce0a3b",
+   "where": "i · Comfort Keepers",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "4b9e8542be",
+   "where": "span · Comfort Keepers",
+   "original": "1035 NW 57th St",
+   "text": "1035 NW 57th St"
+  },
+  {
+   "id": "c6764f890c",
+   "where": "i · Comfort Keepers",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "2feb8166c7",
+   "where": "a · Comfort Keepers",
+   "original": "Visit website",
+   "text": "Visit website"
+  },
+  {
+   "id": "b88f1d3c0c",
+   "where": "p · Comfort Keepers",
+   "original": "Medical Services",
+   "text": "Medical Services"
+  },
+  {
+   "id": "d9554b2cfc",
+   "where": "h3 · Comfort Keepers",
+   "original": "Cruz Davis Family & Cosmetic Dentistry",
+   "text": "Cruz Davis Family & Cosmetic Dentistry"
+  },
+  {
+   "id": "25c50b8fa5",
+   "where": "li · Cruz Davis Family & Cosmetic Dentistry",
+   "original": "$25 off New Patient Exam (Comprehensive Oral Evaluation, ADA code D0150)",
+   "text": "$25 off New Patient Exam (Comprehensive Oral Evaluation, ADA code D0150)"
+  },
+  {
+   "id": "1df6b1c988",
+   "where": "a · Cruz Davis Family & Cosmetic Dentistry",
+   "original": "(352)384-0050",
+   "text": "(352)384-0050"
+  },
+  {
+   "id": "0f27e7d5ce",
+   "where": "i · Cruz Davis Family & Cosmetic Dentistry",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "e3816f624f",
+   "where": "span · Cruz Davis Family & Cosmetic Dentistry",
+   "original": "2845 NW 41st Street",
+   "text": "2845 NW 41st Street"
+  },
+  {
+   "id": "8e8da007aa",
+   "where": "i · Cruz Davis Family & Cosmetic Dentistry",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "3f68c8f78b",
+   "where": "a · Cruz Davis Family & Cosmetic Dentistry",
+   "original": "Visit website",
+   "text": "Visit website"
+  },
+  {
+   "id": "e4cce3c0d3",
+   "where": "p · Cruz Davis Family & Cosmetic Dentistry",
+   "original": "Medical Services",
+   "text": "Medical Services"
+  },
+  {
+   "id": "b569c31774",
+   "where": "h3 · Cruz Davis Family & Cosmetic Dentistry",
+   "original": "Eileen C Golway DMD, PA",
+   "text": "Eileen C Golway DMD, PA"
+  },
+  {
+   "id": "759c9795fc",
+   "where": "li · Eileen C Golway DMD, PA",
+   "original": "$50 off New Patient Appointment",
+   "text": "$50 off New Patient Appointment"
+  },
+  {
+   "id": "2dd8ea0d90",
+   "where": "a · Eileen C Golway DMD, PA",
+   "original": "(352)333-3683",
+   "text": "(352)333-3683"
+  },
+  {
+   "id": "a663c21e3d",
+   "where": "i · Eileen C Golway DMD, PA",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "2c01b71282",
+   "where": "span · Eileen C Golway DMD, PA",
+   "original": "6801 NW 9th Blvd",
+   "text": "6801 NW 9th Blvd"
+  },
+  {
+   "id": "6100f5db1d",
+   "where": "i · Eileen C Golway DMD, PA",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "3f69d1b830",
+   "where": "a · Eileen C Golway DMD, PA",
+   "original": "Visit website",
+   "text": "Visit website"
+  },
+  {
+   "id": "a7eed4f600",
+   "where": "p · Eileen C Golway DMD, PA",
+   "original": "Medical Services",
+   "text": "Medical Services"
+  },
+  {
+   "id": "543368a59a",
+   "where": "h3 · Eileen C Golway DMD, PA",
+   "original": "Gainesville OB/GYN",
+   "text": "Gainesville OB/GYN"
+  },
+  {
+   "id": "ed562d730b",
+   "where": "li · Gainesville OB/GYN",
+   "original": "15% discount on all Obagi skin care products and Botox by mentioning this ad.",
+   "text": "15% discount on all Obagi skin care products and Botox by mentioning this ad."
+  },
+  {
+   "id": "ea368d712c",
+   "where": "a · Gainesville OB/GYN",
+   "original": "(352)371-2011",
+   "text": "(352)371-2011"
+  },
+  {
+   "id": "d0cc7c1f0b",
+   "where": "i · Gainesville OB/GYN",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "bcfabfc4e7",
+   "where": "span · Gainesville OB/GYN",
+   "original": "6400 W. Newberry Road, Suite 207",
+   "text": "6400 W. Newberry Road, Suite 207"
+  },
+  {
+   "id": "1b6ef04b7c",
+   "where": "i · Gainesville OB/GYN",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "0e88c8003c",
+   "where": "a · Gainesville OB/GYN",
+   "original": "Visit website",
+   "text": "Visit website"
+  },
+  {
+   "id": "70b33e0011",
+   "where": "p · Gainesville OB/GYN",
+   "original": "Medical Services",
+   "text": "Medical Services"
+  },
+  {
+   "id": "e2ad30b2d8",
+   "where": "h3 · Gainesville OB/GYN",
+   "original": "Gentle Dental Care",
+   "text": "Gentle Dental Care"
+  },
+  {
+   "id": "bd380c2035",
+   "where": "li · Gentle Dental Care",
+   "original": "NEW PATIENT SPECIAL $140 includes: A comprehensive oral exam, complete set of x-rays, and a regular cleaning. (please mention: SPECIAL11 when scheduling)",
+   "text": "NEW PATIENT SPECIAL $140 includes: A comprehensive oral exam, complete set of x-rays, and a regular cleaning. (please mention: SPECIAL11 when scheduling)"
+  },
+  {
+   "id": "df02d6f72f",
+   "where": "a · Gentle Dental Care",
+   "original": "(352)378-2555",
+   "text": "(352)378-2555"
+  },
+  {
+   "id": "fbe787495c",
+   "where": "i · Gentle Dental Care",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "96e290e6a9",
+   "where": "span · Gentle Dental Care",
+   "original": "3655 SW 2nd Ave",
+   "text": "3655 SW 2nd Ave"
+  },
+  {
+   "id": "ad173fdf59",
+   "where": "i · Gentle Dental Care",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "855a15e2e9",
+   "where": "a · Gentle Dental Care",
+   "original": "Visit website",
+   "text": "Visit website"
+  },
+  {
+   "id": "800fe8741e",
+   "where": "p · Gentle Dental Care",
+   "original": "Medical Services",
+   "text": "Medical Services"
+  },
+  {
+   "id": "0eef12b2cb",
+   "where": "h3 · Gentle Dental Care",
+   "original": "Magnolia Family Dental",
+   "text": "Magnolia Family Dental"
+  },
+  {
+   "id": "960ba4c15d",
+   "where": "li · Magnolia Family Dental",
+   "original": "Free bleaching with new patient comprehensive exam, full-mouth X-rays, and dental cleaning. A $372 value.",
+   "text": "Free bleaching with new patient comprehensive exam, full-mouth X-rays, and dental cleaning. A $372 value."
+  },
+  {
+   "id": "6785c93dd2",
+   "where": "a · Magnolia Family Dental",
+   "original": "(352)373-7361",
+   "text": "(352)373-7361"
+  },
+  {
+   "id": "9ab023be76",
+   "where": "i · Magnolia Family Dental",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "e93a650162",
+   "where": "span · Magnolia Family Dental",
+   "original": "4121-A NW 37 Place",
+   "text": "4121-A NW 37 Place"
+  },
+  {
+   "id": "5255dc3217",
+   "where": "i · Magnolia Family Dental",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "829c712cd9",
+   "where": "a · Magnolia Family Dental",
+   "original": "Visit website",
+   "text": "Visit website"
+  },
+  {
+   "id": "01b852f4cc",
+   "where": "p · Magnolia Family Dental",
+   "original": "Medical Services",
+   "text": "Medical Services"
+  },
+  {
+   "id": "c0c52f47d6",
+   "where": "h3 · Magnolia Family Dental",
+   "original": "Medi-Weightloss Clinic",
+   "text": "Medi-Weightloss Clinic"
+  },
+  {
+   "id": "c14c77c0fb",
+   "where": "li · Medi-Weightloss Clinic",
+   "original": "GHF members receive 20% off their initial visit and 10% off follow-up visits.",
+   "text": "GHF members receive 20% off their initial visit and 10% off follow-up visits."
+  },
+  {
+   "id": "ef5f99d73f",
+   "where": "a · Medi-Weightloss Clinic",
+   "original": "(352)224-1177",
+   "text": "(352)224-1177"
+  },
+  {
+   "id": "07beeb7be8",
+   "where": "i · Medi-Weightloss Clinic",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "b83f50d2b8",
+   "where": "span · Medi-Weightloss Clinic",
+   "original": "1143 NW 64th Terrace",
+   "text": "1143 NW 64th Terrace"
+  },
+  {
+   "id": "f8ecabf174",
+   "where": "i · Medi-Weightloss Clinic",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "2f826fedd0",
+   "where": "a · Medi-Weightloss Clinic",
+   "original": "Visit website",
+   "text": "Visit website"
+  },
+  {
+   "id": "349ef7c8b3",
+   "where": "p · Medi-Weightloss Clinic",
+   "original": "Medical Services",
+   "text": "Medical Services"
+  },
+  {
+   "id": "2d11ec2ea6",
+   "where": "h3 · Medi-Weightloss Clinic",
+   "original": "Millhopper Family Dentistry",
+   "text": "Millhopper Family Dentistry"
+  },
+  {
+   "id": "59c04cea76",
+   "where": "li · Millhopper Family Dentistry",
+   "original": "$50 off 1st new patient visit",
+   "text": "$50 off 1st new patient visit"
+  },
+  {
+   "id": "a684aa22df",
+   "where": "a · Millhopper Family Dentistry",
+   "original": "(352)240-3114",
+   "text": "(352)240-3114"
+  },
+  {
+   "id": "76e5fe1e88",
+   "where": "i · Millhopper Family Dentistry",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "5e36034295",
+   "where": "span · Millhopper Family Dentistry",
+   "original": "3510 NW 43rd Street",
+   "text": "3510 NW 43rd Street"
+  },
+  {
+   "id": "6a2f134e35",
+   "where": "i · Millhopper Family Dentistry",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "6d08e5150f",
+   "where": "a · Millhopper Family Dentistry",
+   "original": "Visit website",
+   "text": "Visit website"
+  },
+  {
+   "id": "e9b3a11e98",
+   "where": "p · Millhopper Family Dentistry",
+   "original": "Other",
+   "text": "Other"
+  },
+  {
+   "id": "84052d5aa1",
+   "where": "h3 · Millhopper Family Dentistry",
+   "original": "Mode Salon",
+   "text": "Mode Salon"
+  },
+  {
+   "id": "5f02017bed",
+   "where": "li · Mode Salon",
+   "original": "Receive 10% of any service at Mode Salon, Full Skin Care, Waxing, Nails & Hair (Gainesville only)",
+   "text": "Receive 10% of any service at Mode Salon, Full Skin Care, Waxing, Nails & Hair (Gainesville only)"
+  },
+  {
+   "id": "ddef23ef31",
+   "where": "span · Mode Salon",
+   "original": "603 E. University Ave.",
+   "text": "603 E. University Ave."
+  },
+  {
+   "id": "c9c57f08f4",
+   "where": "i · Mode Salon",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "4a54d17bcd",
+   "where": "a · Mode Salon",
+   "original": "Visit website",
+   "text": "Visit website"
+  },
+  {
+   "id": "0543b5022e",
+   "where": "p · Mode Salon",
+   "original": "Other",
+   "text": "Other"
+  },
+  {
+   "id": "741c719182",
+   "where": "h3 · Mode Salon",
+   "original": "Northwood Oaks Veterinary Hospital",
+   "text": "Northwood Oaks Veterinary Hospital"
+  },
+  {
+   "id": "1387a3e1a2",
+   "where": "li · Northwood Oaks Veterinary Hospital",
+   "original": "10% Discount Off Select Items",
+   "text": "10% Discount Off Select Items"
+  },
+  {
+   "id": "0a3fd76c93",
+   "where": "a · Northwood Oaks Veterinary Hospital",
+   "original": "(352)373-7387",
+   "text": "(352)373-7387"
+  },
+  {
+   "id": "a6bb75c4d2",
+   "where": "i · Northwood Oaks Veterinary Hospital",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "aeab3278ae",
+   "where": "span · Northwood Oaks Veterinary Hospital",
+   "original": "5331 NW 34th Blvd",
+   "text": "5331 NW 34th Blvd"
+  },
+  {
+   "id": "150b867b63",
+   "where": "i · Northwood Oaks Veterinary Hospital",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "c8bf3c977c",
+   "where": "a · Northwood Oaks Veterinary Hospital",
+   "original": "Visit website",
+   "text": "Visit website"
+  },
+  {
+   "id": "68e7f16cfb",
+   "where": "p · Northwood Oaks Veterinary Hospital",
+   "original": "Pet Care",
+   "text": "Pet Care"
+  },
+  {
+   "id": "84c2e5fb1b",
+   "where": "h3 · Northwood Oaks Veterinary Hospital",
+   "original": "A Dog's Life",
+   "text": "A Dog's Life"
+  },
+  {
+   "id": "65b5d5faa9",
+   "where": "li · A Dog's Life",
+   "original": "10% off pet sitting services for 7 consecutive visits or more",
+   "text": "10% off pet sitting services for 7 consecutive visits or more"
+  },
+  {
+   "id": "8461dc77dd",
+   "where": "a · A Dog's Life",
+   "original": "(352)262-1587",
+   "text": "(352)262-1587"
+  },
+  {
+   "id": "7ccd8a0e53",
+   "where": "i · A Dog's Life",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "5014101472",
+   "where": "span · A Dog's Life",
+   "original": "11494 NE 110 Ave Archer, Fl 32618",
+   "text": "11494 NE 110 Ave Archer, Fl 32618"
+  },
+  {
+   "id": "501400cdcd",
+   "where": "i · A Dog's Life",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "89bafa0a69",
+   "where": "a · A Dog's Life",
+   "original": "Visit website",
+   "text": "Visit website"
+  },
+  {
+   "id": "7bbc23a31e",
+   "where": "p · A Dog's Life",
+   "original": "Pet Care",
+   "text": "Pet Care"
+  },
+  {
+   "id": "c71783e56c",
+   "where": "h3 · A Dog's Life",
+   "original": "Earth Pets Natural Pet Market",
+   "text": "Earth Pets Natural Pet Market"
+  },
+  {
+   "id": "f01a41f5a5",
+   "where": "li · Earth Pets Natural Pet Market",
+   "original": "FREE 1/2 Pound of Dog Biscuits with any Purchase! Not Valid with other offers.",
+   "text": "FREE 1/2 Pound of Dog Biscuits with any Purchase! Not Valid with other offers."
+  },
+  {
+   "id": "ba9411f75a",
+   "where": "a · Earth Pets Natural Pet Market",
+   "original": "(352)331-5123",
+   "text": "(352)331-5123"
+  },
+  {
+   "id": "611f7fa5eb",
+   "where": "i · Earth Pets Natural Pet Market",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "8a02132fee",
+   "where": "span · Earth Pets Natural Pet Market",
+   "original": "500 NW 60th St (By Yamato's)",
+   "text": "500 NW 60th St (By Yamato's)"
+  },
+  {
+   "id": "9c8137d66f",
+   "where": "i · Earth Pets Natural Pet Market",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "73fff06768",
+   "where": "a · Earth Pets Natural Pet Market",
+   "original": "Visit website",
+   "text": "Visit website"
+  },
+  {
+   "id": "2a2339d327",
+   "where": "p · Earth Pets Natural Pet Market",
+   "original": "Pet Care",
+   "text": "Pet Care"
+  },
+  {
+   "id": "6523a5d913",
+   "where": "h3 · Earth Pets Natural Pet Market",
+   "original": "Earth Vets",
+   "text": "Earth Vets"
+  },
+  {
+   "id": "ef621a8ee0",
+   "where": "li · Earth Vets",
+   "original": "Free Exam For New Customer (one per family)",
+   "text": "Free Exam For New Customer (one per family)"
+  },
+  {
+   "id": "4be747c68c",
+   "where": "li · Earth Vets",
+   "original": "Existing Clients - 10% Discount for Professional Services",
+   "text": "Existing Clients - 10% Discount for Professional Services"
+  },
+  {
+   "id": "dad1c72753",
+   "where": "a · Earth Vets",
+   "original": "(352)332-9991",
+   "text": "(352)332-9991"
+  },
+  {
+   "id": "9692b163fc",
+   "where": "i · Earth Vets",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "4396eb88d2",
+   "where": "span · Earth Vets",
+   "original": "500 NW 60th St (Next to Yamatos)",
+   "text": "500 NW 60th St (Next to Yamatos)"
+  },
+  {
+   "id": "84ed8a255b",
+   "where": "i · Earth Vets",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "3d3fdc7ba9",
+   "where": "a · Earth Vets",
+   "original": "Visit website",
+   "text": "Visit website"
+  },
+  {
+   "id": "a35dc049b8",
+   "where": "p · Earth Vets",
+   "original": "Pet Care",
+   "text": "Pet Care"
+  },
+  {
+   "id": "8339034f73",
+   "where": "h3 · Earth Vets",
+   "original": "Gainesville Pet Sitter",
+   "text": "Gainesville Pet Sitter"
+  },
+  {
+   "id": "62931b9f4f",
+   "where": "li · Gainesville Pet Sitter",
+   "original": "One complimentary visit for GHF members. ($17 value - Dogs, $15 value - Cats)",
+   "text": "One complimentary visit for GHF members. ($17 value - Dogs, $15 value - Cats)"
+  },
+  {
+   "id": "b559f82a0f",
+   "where": "a · Gainesville Pet Sitter",
+   "original": "(904)635-3039",
+   "text": "(904)635-3039"
+  },
+  {
+   "id": "943f7a583a",
+   "where": "i · Gainesville Pet Sitter",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "bdd0ad8e5c",
+   "where": "span · Gainesville Pet Sitter",
+   "original": "2246 SW 43rd Pl",
+   "text": "2246 SW 43rd Pl"
+  },
+  {
+   "id": "de281e4416",
+   "where": "i · Gainesville Pet Sitter",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "a175027c96",
+   "where": "a · Gainesville Pet Sitter",
+   "original": "Visit website",
+   "text": "Visit website"
+  },
+  {
+   "id": "ff9186d7da",
+   "where": "p · Gainesville Pet Sitter",
+   "original": "Pet Care",
+   "text": "Pet Care"
+  },
+  {
+   "id": "4f6fda7dd3",
+   "where": "h3 · Gainesville Pet Sitter",
+   "original": "Paws at Home",
+   "text": "Paws at Home"
+  },
+  {
+   "id": "d57965d838",
+   "where": "li · Paws at Home",
+   "original": "10% off pet services",
+   "text": "10% off pet services"
+  },
+  {
+   "id": "3da0d9ec91",
+   "where": "a · Paws at Home",
+   "original": "(386)462-0020",
+   "text": "(386)462-0020"
+  },
+  {
+   "id": "3f0fc0adcc",
+   "where": "i · Paws at Home",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "1f9bb422d2",
+   "where": "a · Paws at Home",
+   "original": "Visit website",
+   "text": "Visit website"
+  },
+  {
+   "id": "6a25721002",
+   "where": "p · Paws at Home",
+   "original": "Professional Services",
+   "text": "Professional Services"
+  },
+  {
+   "id": "46a2e5229e",
+   "where": "h3 · Paws at Home",
+   "original": "Alachua Fire Extinguisher",
+   "text": "Alachua Fire Extinguisher"
+  },
+  {
+   "id": "7f329a0309",
+   "where": "li · Alachua Fire Extinguisher",
+   "original": "10% off all in-store purchases",
+   "text": "10% off all in-store purchases"
+  },
+  {
+   "id": "4db216a5f7",
+   "where": "a · Alachua Fire Extinguisher",
+   "original": "(352)377-3473",
+   "text": "(352)377-3473"
+  },
+  {
+   "id": "1154b9adc2",
+   "where": "i · Alachua Fire Extinguisher",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "17563661ac",
+   "where": "span · Alachua Fire Extinguisher",
+   "original": "2939 SW Williston Road",
+   "text": "2939 SW Williston Road"
+  },
+  {
+   "id": "d25e25de52",
+   "where": "p · Alachua Fire Extinguisher",
+   "original": "Professional Services",
+   "text": "Professional Services"
+  },
+  {
+   "id": "6874417fdd",
+   "where": "h3 · Alachua Fire Extinguisher",
+   "original": "Allen Law Firm, P.A.",
+   "text": "Allen Law Firm, P.A."
+  },
+  {
+   "id": "b89ae51c49",
+   "where": "li · Allen Law Firm, P.A.",
+   "original": "5% off trial fee & 5% off non-trial fee",
+   "text": "5% off trial fee & 5% off non-trial fee"
+  },
+  {
+   "id": "f64b82034a",
+   "where": "a · Allen Law Firm, P.A.",
+   "original": "(877)241-1933",
+   "text": "(877)241-1933"
+  },
+  {
+   "id": "99048bda23",
+   "where": "i · Allen Law Firm, P.A.",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "cea93301b5",
+   "where": "span · Allen Law Firm, P.A.",
+   "original": "2550 SW 76th St #150",
+   "text": "2550 SW 76th St #150"
+  },
+  {
+   "id": "d6370c9c62",
+   "where": "i · Allen Law Firm, P.A.",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "dd12b8308c",
+   "where": "a · Allen Law Firm, P.A.",
+   "original": "Visit website",
+   "text": "Visit website"
+  },
+  {
+   "id": "ff8f2568ec",
+   "where": "p · Allen Law Firm, P.A.",
+   "original": "Professional Services",
+   "text": "Professional Services"
+  },
+  {
+   "id": "e34802aa51",
+   "where": "h3 · Allen Law Firm, P.A.",
+   "original": "Allstate - Judy Locascio Agency",
+   "text": "Allstate - Judy Locascio Agency"
+  },
+  {
+   "id": "f0269fcb12",
+   "where": "li · Allstate - Judy Locascio Agency",
+   "original": "$10 VISA gift card with any auto or life insurance quote",
+   "text": "$10 VISA gift card with any auto or life insurance quote"
+  },
+  {
+   "id": "89551db503",
+   "where": "li · Allstate - Judy Locascio Agency",
+   "original": "FREE Insurance Reviews",
+   "text": "FREE Insurance Reviews"
+  },
+  {
+   "id": "917fbb3520",
+   "where": "li · Allstate - Judy Locascio Agency",
+   "original": "Located just east of GHF Main and 43rd Street",
+   "text": "Located just east of GHF Main and 43rd Street"
+  },
+  {
+   "id": "5c3abfdede",
+   "where": "a · Allstate - Judy Locascio Agency",
+   "original": "(352)335-2505",
+   "text": "(352)335-2505"
+  },
+  {
+   "id": "5266fc80bc",
+   "where": "i · Allstate - Judy Locascio Agency",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "2a4aadbb55",
+   "where": "span · Allstate - Judy Locascio Agency",
+   "original": "4056 Newberry Road",
+   "text": "4056 Newberry Road"
+  },
+  {
+   "id": "39c1832765",
+   "where": "p · Allstate - Judy Locascio Agency",
+   "original": "Professional Services",
+   "text": "Professional Services"
+  },
+  {
+   "id": "0fa843cb67",
+   "where": "h3 · Allstate - Judy Locascio Agency",
+   "original": "Aqua-Caribbean Swimming Pool Service",
+   "text": "Aqua-Caribbean Swimming Pool Service"
+  },
+  {
+   "id": "5d893ef9ff",
+   "where": "li · Aqua-Caribbean Swimming Pool Service",
+   "original": "10% off weekly residential pool service (current year service rate) with your GHF membership card.",
+   "text": "10% off weekly residential pool service (current year service rate) with your GHF membership card."
+  },
+  {
+   "id": "6e739be588",
+   "where": "a · Aqua-Caribbean Swimming Pool Service",
+   "original": "(352)505-0859",
+   "text": "(352)505-0859"
+  },
+  {
+   "id": "f4a58edc3a",
+   "where": "i · Aqua-Caribbean Swimming Pool Service",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "946a24efde",
+   "where": "span · Aqua-Caribbean Swimming Pool Service",
+   "original": "3324 W. University Ave. Suite 225",
+   "text": "3324 W. University Ave. Suite 225"
+  },
+  {
+   "id": "40bc515cd3",
+   "where": "i · Aqua-Caribbean Swimming Pool Service",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "d1e1df4dab",
+   "where": "a · Aqua-Caribbean Swimming Pool Service",
+   "original": "Visit website",
+   "text": "Visit website"
+  },
+  {
+   "id": "6ed3394a68",
+   "where": "p · Aqua-Caribbean Swimming Pool Service",
+   "original": "Professional Services",
+   "text": "Professional Services"
+  },
+  {
+   "id": "4e6628b373",
+   "where": "h3 · Aqua-Caribbean Swimming Pool Service",
+   "original": "Be Secure Locksmith",
+   "text": "Be Secure Locksmith"
+  },
+  {
+   "id": "5bb00c826c",
+   "where": "li · Be Secure Locksmith",
+   "original": "10% car key duplication and emergency lockout services",
+   "text": "10% car key duplication and emergency lockout services"
+  },
+  {
+   "id": "95b49e38cc",
+   "where": "a · Be Secure Locksmith",
+   "original": "(352)414-5351",
+   "text": "(352)414-5351"
+  },
+  {
+   "id": "c951f38450",
+   "where": "i · Be Secure Locksmith",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "e4cc5d76d1",
+   "where": "span · Be Secure Locksmith",
+   "original": "3438 SW 24th Ave",
+   "text": "3438 SW 24th Ave"
+  },
+  {
+   "id": "40a768fec6",
+   "where": "i · Be Secure Locksmith",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "1f6537c548",
+   "where": "a · Be Secure Locksmith",
+   "original": "Visit website",
+   "text": "Visit website"
+  },
+  {
+   "id": "625af00942",
+   "where": "p · Be Secure Locksmith",
+   "original": "Professional Services",
+   "text": "Professional Services"
+  },
+  {
+   "id": "c30f11b425",
+   "where": "h3 · Be Secure Locksmith",
+   "original": "C Squared Wireless",
+   "text": "C Squared Wireless"
+  },
+  {
+   "id": "39053e3395",
+   "where": "li · C Squared Wireless",
+   "original": "10% off phones, services and accessories (authorized Boost Mobile/Virgin Wireless Dealer)",
+   "text": "10% off phones, services and accessories (authorized Boost Mobile/Virgin Wireless Dealer)"
+  },
+  {
+   "id": "c4c050fa80",
+   "where": "a · C Squared Wireless",
+   "original": "(352)333-7564",
+   "text": "(352)333-7564"
+  },
+  {
+   "id": "1fe4b03257",
+   "where": "i · C Squared Wireless",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "007da2c810",
+   "where": "span · C Squared Wireless",
+   "original": "7349 W Newberry",
+   "text": "7349 W Newberry"
+  },
+  {
+   "id": "05f3b60623",
+   "where": "p · C Squared Wireless",
+   "original": "Professional Services",
+   "text": "Professional Services"
+  },
+  {
+   "id": "fc4d5056d5",
+   "where": "h3 · C Squared Wireless",
+   "original": "Fine, Farkash, & Parlapiano P.A.",
+   "text": "Fine, Farkash, & Parlapiano P.A."
+  },
+  {
+   "id": "0178221bd7",
+   "where": "li · Fine, Farkash, & Parlapiano P.A.",
+   "original": "10% off the non trial fee",
+   "text": "10% off the non trial fee"
+  },
+  {
+   "id": "6a38063552",
+   "where": "li · Fine, Farkash, & Parlapiano P.A.",
+   "original": "10% off the trial fee",
+   "text": "10% off the trial fee"
+  },
+  {
+   "id": "02bf174822",
+   "where": "a · Fine, Farkash, & Parlapiano P.A.",
+   "original": "(352)376-6046",
+   "text": "(352)376-6046"
+  },
+  {
+   "id": "d29fa13e85",
+   "where": "i · Fine, Farkash, & Parlapiano P.A.",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "c423e1839e",
+   "where": "span · Fine, Farkash, & Parlapiano P.A.",
+   "original": "622 NE 1st St.",
+   "text": "622 NE 1st St."
+  },
+  {
+   "id": "18d2a8bba8",
+   "where": "i · Fine, Farkash, & Parlapiano P.A.",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "c0f145d4d0",
+   "where": "a · Fine, Farkash, & Parlapiano P.A.",
+   "original": "Visit website",
+   "text": "Visit website"
+  },
+  {
+   "id": "648fc26b61",
+   "where": "p · Fine, Farkash, & Parlapiano P.A.",
+   "original": "Professional Services",
+   "text": "Professional Services"
+  },
+  {
+   "id": "8426563a47",
+   "where": "h3 · Fine, Farkash, & Parlapiano P.A.",
+   "original": "Florida Uniforms & Supplies",
+   "text": "Florida Uniforms & Supplies"
+  },
+  {
+   "id": "891119b3c5",
+   "where": "li · Florida Uniforms & Supplies",
+   "original": "10% Off Any Purchase! (Excludes Sale Prices and Littmans)",
+   "text": "10% Off Any Purchase! (Excludes Sale Prices and Littmans)"
+  },
+  {
+   "id": "0a2032d0fd",
+   "where": "a · Florida Uniforms & Supplies",
+   "original": "(352)367-9060",
+   "text": "(352)367-9060"
+  },
+  {
+   "id": "06d29317e5",
+   "where": "i · Florida Uniforms & Supplies",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "ae72ac4ad1",
+   "where": "span · Florida Uniforms & Supplies",
+   "original": "Oaks Mall Plaza, 2nd Floor",
+   "text": "Oaks Mall Plaza, 2nd Floor"
+  },
+  {
+   "id": "24cf34e3eb",
+   "where": "p · Florida Uniforms & Supplies",
+   "original": "Professional Services",
+   "text": "Professional Services"
+  },
+  {
+   "id": "fb03ffb1e9",
+   "where": "h3 · Florida Uniforms & Supplies",
+   "original": "Gadget Guys",
+   "text": "Gadget Guys"
+  },
+  {
+   "id": "50b13de3e5",
+   "where": "li · Gadget Guys",
+   "original": "10% off all services and accessories",
+   "text": "10% off all services and accessories"
+  },
+  {
+   "id": "093a34c213",
+   "where": "a · Gadget Guys",
+   "original": "(352)421-5409",
+   "text": "(352)421-5409"
+  },
+  {
+   "id": "c189623830",
+   "where": "i · Gadget Guys",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "4536a545c3",
+   "where": "span · Gadget Guys",
+   "original": "3147 SW 45th St #20, Gainesville, FL 32608",
+   "text": "3147 SW 45th St #20, Gainesville, FL 32608"
+  },
+  {
+   "id": "019d0a5fb1",
+   "where": "i · Gadget Guys",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "e44981aa18",
+   "where": "a · Gadget Guys",
+   "original": "Visit website",
+   "text": "Visit website"
+  },
+  {
+   "id": "7200e6beb6",
+   "where": "p · Gadget Guys",
+   "original": "Professional Services",
+   "text": "Professional Services"
+  },
+  {
+   "id": "79634f7a77",
+   "where": "h3 · Gadget Guys",
+   "original": "GatorTec",
+   "text": "GatorTec"
+  },
+  {
+   "id": "84a64d0678",
+   "where": "li · GatorTec",
+   "original": "10% off of in-store computer service (labor only, parts excluded)",
+   "text": "10% off of in-store computer service (labor only, parts excluded)"
+  },
+  {
+   "id": "a3bd9ff1dc",
+   "where": "a · GatorTec",
+   "original": "(352)505-7582",
+   "text": "(352)505-7582"
+  },
+  {
+   "id": "97c173ff6f",
+   "where": "i · GatorTec",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "6501f3814c",
+   "where": "span · GatorTec",
+   "original": "13005 SW 1st Road",
+   "text": "13005 SW 1st Road"
+  },
+  {
+   "id": "6102253e26",
+   "where": "i · GatorTec",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "cd5f29bd26",
+   "where": "a · GatorTec",
+   "original": "Visit website",
+   "text": "Visit website"
+  },
+  {
+   "id": "4243c95e43",
+   "where": "p · GatorTec",
+   "original": "Professional Services",
+   "text": "Professional Services"
+  },
+  {
+   "id": "5e0dfdf4b1",
+   "where": "h3 · GatorTec",
+   "original": "Huntington Learning Center",
+   "text": "Huntington Learning Center"
+  },
+  {
+   "id": "99835ae9bc",
+   "where": "li · Huntington Learning Center",
+   "original": "$79 for academic evaluation (regular service $195) & 10% off tuition.",
+   "text": "$79 for academic evaluation (regular service $195) & 10% off tuition."
+  },
+  {
+   "id": "0f140081c4",
+   "where": "a · Huntington Learning Center",
+   "original": "(352)448-6888",
+   "text": "(352)448-6888"
+  },
+  {
+   "id": "2f5e31d1fa",
+   "where": "i · Huntington Learning Center",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "1a39467569",
+   "where": "span · Huntington Learning Center",
+   "original": "3822 W. Newberry Rd. Ste A",
+   "text": "3822 W. Newberry Rd. Ste A"
+  },
+  {
+   "id": "15282ffe3f",
+   "where": "i · Huntington Learning Center",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "bbf138fd87",
+   "where": "a · Huntington Learning Center",
+   "original": "Visit website",
+   "text": "Visit website"
+  },
+  {
+   "id": "7edcc525c0",
+   "where": "p · Huntington Learning Center",
+   "original": "Professional Services",
+   "text": "Professional Services"
+  },
+  {
+   "id": "2df6eab2a4",
+   "where": "h3 · Huntington Learning Center",
+   "original": "Jani King",
+   "text": "Jani King"
+  },
+  {
+   "id": "b58be80c47",
+   "where": "li · Jani King",
+   "original": "Free deep impact initial clean with a 12 month agreement",
+   "text": "Free deep impact initial clean with a 12 month agreement"
+  },
+  {
+   "id": "3ad278bbf4",
+   "where": "a · Jani King",
+   "original": "(352)792-6061",
+   "text": "(352)792-6061"
+  },
+  {
+   "id": "0e580de383",
+   "where": "i · Jani King",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "5387332e07",
+   "where": "span · Jani King",
+   "original": "408 W. University Ave #203",
+   "text": "408 W. University Ave #203"
+  },
+  {
+   "id": "1bfc58cd81",
+   "where": "i · Jani King",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "258ab74c92",
+   "where": "a · Jani King",
+   "original": "Visit website",
+   "text": "Visit website"
+  },
+  {
+   "id": "7ff458a296",
+   "where": "p · Jani King",
+   "original": "Professional Services",
+   "text": "Professional Services"
+  },
+  {
+   "id": "b9542119ac",
+   "where": "h3 · Jani King",
+   "original": "KAPLAN Test Prep and Admissions",
+   "text": "KAPLAN Test Prep and Admissions"
+  },
+  {
+   "id": "68baf5ee6a",
+   "where": "li · KAPLAN Test Prep and Admissions",
+   "original": "10% Off for Gainesville Health & Fitness Members",
+   "text": "10% Off for Gainesville Health & Fitness Members"
+  },
+  {
+   "id": "3fceb40386",
+   "where": "a · KAPLAN Test Prep and Admissions",
+   "original": "(352)377-0804",
+   "text": "(352)377-0804"
+  },
+  {
+   "id": "621d90a299",
+   "where": "i · KAPLAN Test Prep and Admissions",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "5525c4d987",
+   "where": "span · KAPLAN Test Prep and Admissions",
+   "original": "686 Museum Road",
+   "text": "686 Museum Road"
+  },
+  {
+   "id": "f0332afe8c",
+   "where": "i · KAPLAN Test Prep and Admissions",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "76f55b598e",
+   "where": "a · KAPLAN Test Prep and Admissions",
+   "original": "Visit website",
+   "text": "Visit website"
+  },
+  {
+   "id": "b5d0f84790",
+   "where": "p · KAPLAN Test Prep and Admissions",
+   "original": "Professional Services",
+   "text": "Professional Services"
+  },
+  {
+   "id": "41ea1498a9",
+   "where": "h3 · KAPLAN Test Prep and Admissions",
+   "original": "LegalShield & IDShield",
+   "text": "LegalShield & IDShield"
+  },
+  {
+   "id": "a73b87e4d1",
+   "where": "li · LegalShield & IDShield",
+   "original": "Discounted Group Pricing for LegalShield and/or IDShield Individual and Family Plans",
+   "text": "Discounted Group Pricing for LegalShield and/or IDShield Individual and Family Plans"
+  },
+  {
+   "id": "0ed16f7021",
+   "where": "li · LegalShield & IDShield",
+   "original": "Small Business Legal Plans",
+   "text": "Small Business Legal Plans"
+  },
+  {
+   "id": "a2c5625b07",
+   "where": "li · LegalShield & IDShield",
+   "original": "Discounted Group Pricing for Commercial Drivers Legal Plan",
+   "text": "Discounted Group Pricing for Commercial Drivers Legal Plan"
+  },
+  {
+   "id": "9cf429a777",
+   "where": "li · LegalShield & IDShield",
+   "original": "All Plans Month-to-Month",
+   "text": "All Plans Month-to-Month"
+  },
+  {
+   "id": "376beb92d1",
+   "where": "a · LegalShield & IDShield",
+   "original": "(352)317-7500",
+   "text": "(352)317-7500"
+  },
+  {
+   "id": "5275d8d1b9",
+   "where": "i · LegalShield & IDShield",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "50b9a7944f",
+   "where": "a · LegalShield & IDShield",
+   "original": "Visit website",
+   "text": "Visit website"
+  },
+  {
+   "id": "94efbfd773",
+   "where": "p · LegalShield & IDShield",
+   "original": "Professional Services",
+   "text": "Professional Services"
+  },
+  {
+   "id": "b41f7809c3",
+   "where": "h3 · LegalShield & IDShield",
+   "original": "Merry Maids",
+   "text": "Merry Maids"
+  },
+  {
+   "id": "2a9ee41bf9",
+   "where": "li · Merry Maids",
+   "original": "We want to offer 10% off all services AND $100 off! $20 off 5 cleans for new ongoing clients.",
+   "text": "We want to offer 10% off all services AND $100 off! $20 off 5 cleans for new ongoing clients."
+  },
+  {
+   "id": "d34d473622",
+   "where": "li · Merry Maids",
+   "original": "owner4683@merrymaids.net",
+   "text": "owner4683@merrymaids.net"
+  },
+  {
+   "id": "0614cc9659",
+   "where": "a · Merry Maids",
+   "original": "(352)727-4400",
+   "text": "(352)727-4400"
+  },
+  {
+   "id": "f11f7f524f",
+   "where": "i · Merry Maids",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "e6a0a074e3",
+   "where": "span · Merry Maids",
+   "original": "4585 NW 6th St. STE D",
+   "text": "4585 NW 6th St. STE D"
+  },
+  {
+   "id": "57164127ac",
+   "where": "i · Merry Maids",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "1224e2e03b",
+   "where": "a · Merry Maids",
+   "original": "Visit website",
+   "text": "Visit website"
+  },
+  {
+   "id": "8cbcaa2f05",
+   "where": "p · Merry Maids",
+   "original": "Professional Services",
+   "text": "Professional Services"
+  },
+  {
+   "id": "0bcc1ed024",
+   "where": "h3 · Merry Maids",
+   "original": "Online Potential",
+   "text": "Online Potential"
+  },
+  {
+   "id": "c025c33a65",
+   "where": "li · Online Potential",
+   "original": "Enjoy a 25% Discount on any web marketing services",
+   "text": "Enjoy a 25% Discount on any web marketing services"
+  },
+  {
+   "id": "db0bc68811",
+   "where": "a · Online Potential",
+   "original": "(352)234-4372",
+   "text": "(352)234-4372"
+  },
+  {
+   "id": "6376108b05",
+   "where": "i · Online Potential",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "3805128a09",
+   "where": "a · Online Potential",
+   "original": "Visit website",
+   "text": "Visit website"
+  },
+  {
+   "id": "2c20774a34",
+   "where": "p · Online Potential",
+   "original": "Professional Services",
+   "text": "Professional Services"
+  },
+  {
+   "id": "2a4f680b42",
+   "where": "h3 · Online Potential",
+   "original": "Simplify Home Organizing",
+   "text": "Simplify Home Organizing"
+  },
+  {
+   "id": "8e34552049",
+   "where": "li · Simplify Home Organizing",
+   "original": "20% off your first virtual home organizing session",
+   "text": "20% off your first virtual home organizing session"
+  },
+  {
+   "id": "ea55df7b1c",
+   "where": "a · Simplify Home Organizing",
+   "original": "(352)888-4834",
+   "text": "(352)888-4834"
+  },
+  {
+   "id": "cb128cfb12",
+   "where": "i · Simplify Home Organizing",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "ecc2ef83ac",
+   "where": "span · Simplify Home Organizing",
+   "original": "410 NW 4th Street",
+   "text": "410 NW 4th Street"
+  },
+  {
+   "id": "f716ecefcf",
+   "where": "i · Simplify Home Organizing",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "90ec5dfc05",
+   "where": "a · Simplify Home Organizing",
+   "original": "Visit website",
+   "text": "Visit website"
+  },
+  {
+   "id": "e9015788c5",
+   "where": "p · Simplify Home Organizing",
+   "original": "Professional Services",
+   "text": "Professional Services"
+  },
+  {
+   "id": "7fabc5e344",
+   "where": "h3 · Simplify Home Organizing",
+   "original": "SparkIt Creative",
+   "text": "SparkIt Creative"
+  },
+  {
+   "id": "ecf5184c31",
+   "where": "li · SparkIt Creative",
+   "original": "Additional 15% off any contract or non-contract service.",
+   "text": "Additional 15% off any contract or non-contract service."
+  },
+  {
+   "id": "ba04c300fe",
+   "where": "li · SparkIt Creative",
+   "original": "Can be paired with other discounts",
+   "text": "Can be paired with other discounts"
+  },
+  {
+   "id": "046fbad92a",
+   "where": "a · SparkIt Creative",
+   "original": "(239)980-6995",
+   "text": "(239)980-6995"
+  },
+  {
+   "id": "d98f63a560",
+   "where": "i · SparkIt Creative",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "e80cff2e15",
+   "where": "span · SparkIt Creative",
+   "original": "2700 SW 13th Street",
+   "text": "2700 SW 13th Street"
+  },
+  {
+   "id": "187ebaba52",
+   "where": "i · SparkIt Creative",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "dc41d4278f",
+   "where": "a · SparkIt Creative",
+   "original": "Visit website",
+   "text": "Visit website"
+  },
+  {
+   "id": "ed9f3d2341",
+   "where": "p · SparkIt Creative",
+   "original": "Professional Services",
+   "text": "Professional Services"
+  },
+  {
+   "id": "6ea8c8a39f",
+   "where": "h3 · SparkIt Creative",
+   "original": "Studio Olivia",
+   "text": "Studio Olivia"
+  },
+  {
+   "id": "598ede6252",
+   "where": "li · Studio Olivia",
+   "original": "15% off all packages and free DVD of photos",
+   "text": "15% off all packages and free DVD of photos"
+  },
+  {
+   "id": "4270551042",
+   "where": "a · Studio Olivia",
+   "original": "(352)514-9973",
+   "text": "(352)514-9973"
+  },
+  {
+   "id": "adc30e535a",
+   "where": "i · Studio Olivia",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "6dda0da58e",
+   "where": "a · Studio Olivia",
+   "original": "Visit website",
+   "text": "Visit website"
+  },
+  {
+   "id": "2467ba63a1",
+   "where": "p · Studio Olivia",
+   "original": "Professional Services",
+   "text": "Professional Services"
+  },
+  {
+   "id": "22bea8d0be",
+   "where": "h3 · Studio Olivia",
+   "original": "The Tutoring Company",
+   "text": "The Tutoring Company"
+  },
+  {
+   "id": "0d30754207",
+   "where": "li · The Tutoring Company",
+   "original": "10% off tutoring sessions",
+   "text": "10% off tutoring sessions"
+  },
+  {
+   "id": "019cc34af0",
+   "where": "a · The Tutoring Company",
+   "original": "(352)328-1993",
+   "text": "(352)328-1993"
+  },
+  {
+   "id": "4a356e9a74",
+   "where": "i · The Tutoring Company",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "806c12ec75",
+   "where": "span · The Tutoring Company",
+   "original": "909 NW 101 Drive",
+   "text": "909 NW 101 Drive"
+  },
+  {
+   "id": "c469b4ed22",
+   "where": "i · The Tutoring Company",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "34f8a0fe77",
+   "where": "a · The Tutoring Company",
+   "original": "Visit website",
+   "text": "Visit website"
+  },
+  {
+   "id": "84998187b1",
+   "where": "p · The Tutoring Company",
+   "original": "Professional Services",
+   "text": "Professional Services"
+  },
+  {
+   "id": "7b40d86498",
+   "where": "h3 · The Tutoring Company",
+   "original": "UF Mover Guys",
+   "text": "UF Mover Guys"
+  },
+  {
+   "id": "b8fbd0f991",
+   "where": "li · UF Mover Guys",
+   "original": "10% off your entire move",
+   "text": "10% off your entire move"
+  },
+  {
+   "id": "5062d04d3b",
+   "where": "a · UF Mover Guys",
+   "original": "(352)415-0886",
+   "text": "(352)415-0886"
+  },
+  {
+   "id": "d68c44df61",
+   "where": "i · UF Mover Guys",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "45432fd8dc",
+   "where": "span · UF Mover Guys",
+   "original": "4001 W Newberry Road",
+   "text": "4001 W Newberry Road"
+  },
+  {
+   "id": "9b319b20ce",
+   "where": "i · UF Mover Guys",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "79a93c0d4c",
+   "where": "a · UF Mover Guys",
+   "original": "Visit website",
+   "text": "Visit website"
+  },
+  {
+   "id": "4b9418f444",
+   "where": "p · UF Mover Guys",
+   "original": "Sports",
+   "text": "Sports"
+  },
+  {
+   "id": "f2f5384135",
+   "where": "h3 · UF Mover Guys",
+   "original": "Chain Reaction",
+   "text": "Chain Reaction"
+  },
+  {
+   "id": "6ae52b6e12",
+   "where": "li · Chain Reaction",
+   "original": "20% off labor, parts and accessories",
+   "text": "20% off labor, parts and accessories"
+  },
+  {
+   "id": "3b0f9c3570",
+   "where": "li · Chain Reaction",
+   "original": "10% off new bikes",
+   "text": "10% off new bikes"
+  },
+  {
+   "id": "ee96486c6e",
+   "where": "a · Chain Reaction",
+   "original": "(352)373-4052",
+   "text": "(352)373-4052"
+  },
+  {
+   "id": "9faf1ceab5",
+   "where": "i · Chain Reaction",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "1622d1703d",
+   "where": "span · Chain Reaction",
+   "original": "1630 W. University Ave",
+   "text": "1630 W. University Ave"
+  },
+  {
+   "id": "e8b895c527",
+   "where": "i · Chain Reaction",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "ca554d5eeb",
+   "where": "a · Chain Reaction",
+   "original": "Visit website",
+   "text": "Visit website"
+  },
+  {
+   "id": "70f2634104",
+   "where": "p · Chain Reaction",
+   "original": "Sports",
+   "text": "Sports"
+  },
+  {
+   "id": "0928b85892",
+   "where": "h3 · Chain Reaction",
+   "original": "Fencers' Club Gainesville",
+   "text": "Fencers' Club Gainesville"
+  },
+  {
+   "id": "8f5d7f5adf",
+   "where": "li · Fencers' Club Gainesville",
+   "original": "First month of classes FREE",
+   "text": "First month of classes FREE"
+  },
+  {
+   "id": "e8edbd1bfe",
+   "where": "a · Fencers' Club Gainesville",
+   "original": "(386)853-0717",
+   "text": "(386)853-0717"
+  },
+  {
+   "id": "7e2499b2c5",
+   "where": "i · Fencers' Club Gainesville",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "8665dbc32f",
+   "where": "span · Fencers' Club Gainesville",
+   "original": "22 NE 11th St",
+   "text": "22 NE 11th St"
+  },
+  {
+   "id": "272ab9352a",
+   "where": "i · Fencers' Club Gainesville",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "8142c8d7f2",
+   "where": "a · Fencers' Club Gainesville",
+   "original": "Visit website",
+   "text": "Visit website"
+  },
+  {
+   "id": "6bdded6658",
+   "where": "p · Fencers' Club Gainesville",
+   "original": "Sports",
+   "text": "Sports"
+  },
+  {
+   "id": "fc5e0073a3",
+   "where": "h3 · Fencers' Club Gainesville",
+   "original": "Lloyd Clarke Sports",
+   "text": "Lloyd Clarke Sports"
+  },
+  {
+   "id": "adfff38918",
+   "where": "li · Lloyd Clarke Sports",
+   "original": "10% off any regular priced merchandise",
+   "text": "10% off any regular priced merchandise"
+  },
+  {
+   "id": "54c27ce0ca",
+   "where": "a · Lloyd Clarke Sports",
+   "original": "(352)372-7836",
+   "text": "(352)372-7836"
+  },
+  {
+   "id": "1caed94879",
+   "where": "i · Lloyd Clarke Sports",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "f8fb9dd7a7",
+   "where": "span · Lloyd Clarke Sports",
+   "original": "1504 NW 13th St",
+   "text": "1504 NW 13th St"
+  },
+  {
+   "id": "3c27ab2294",
+   "where": "i · Lloyd Clarke Sports",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "d471ce7e71",
+   "where": "a · Lloyd Clarke Sports",
+   "original": "Visit website",
+   "text": "Visit website"
+  },
+  {
+   "id": "bbd461f8b2",
+   "where": "p · Lloyd Clarke Sports",
+   "original": "Sports",
+   "text": "Sports"
+  },
+  {
+   "id": "8d5648a432",
+   "where": "h3 · Lloyd Clarke Sports",
+   "original": "Meadowbrook Golf Club",
+   "text": "Meadowbrook Golf Club"
+  },
+  {
+   "id": "8dda5edfe8",
+   "where": "li · Meadowbrook Golf Club",
+   "original": "FREE lunch and a FREE warm up bucket of range balls with every 18 hole round of of golf purchased. $10 value",
+   "text": "FREE lunch and a FREE warm up bucket of range balls with every 18 hole round of of golf purchased. $10 value"
+  },
+  {
+   "id": "fadd21da49",
+   "where": "a · Meadowbrook Golf Club",
+   "original": "(352)332-0577",
+   "text": "(352)332-0577"
+  },
+  {
+   "id": "eb9c3e7c7e",
+   "where": "i · Meadowbrook Golf Club",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "5ed8a4cc8e",
+   "where": "span · Meadowbrook Golf Club",
+   "original": "3200 NW 98th St",
+   "text": "3200 NW 98th St"
+  },
+  {
+   "id": "9d5cdbf5a4",
+   "where": "i · Meadowbrook Golf Club",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "eb9b23b6c1",
+   "where": "a · Meadowbrook Golf Club",
+   "original": "Visit website",
+   "text": "Visit website"
+  },
+  {
+   "id": "3f057ce922",
+   "where": "p · Meadowbrook Golf Club",
+   "original": "Sports",
+   "text": "Sports"
+  },
+  {
+   "id": "bbe44b87a7",
+   "where": "h3 · Meadowbrook Golf Club",
+   "original": "The Super Cool Bike Shop",
+   "text": "The Super Cool Bike Shop"
+  },
+  {
+   "id": "790c588af9",
+   "where": "li · The Super Cool Bike Shop",
+   "original": "10% Off Spin Shoes, Clothing Parts & Accessories",
+   "text": "10% Off Spin Shoes, Clothing Parts & Accessories"
+  },
+  {
+   "id": "c158054667",
+   "where": "li · The Super Cool Bike Shop",
+   "original": "5% Off All Bikes",
+   "text": "5% Off All Bikes"
+  },
+  {
+   "id": "cc2c95391d",
+   "where": "a · The Super Cool Bike Shop",
+   "original": "(352)371-2453",
+   "text": "(352)371-2453"
+  },
+  {
+   "id": "e52040c271",
+   "where": "i · The Super Cool Bike Shop",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "d57ad57b98",
+   "where": "span · The Super Cool Bike Shop",
+   "original": "3460 W University Ave",
+   "text": "3460 W University Ave"
+  },
+  {
+   "id": "8eca74a41a",
+   "where": "i · The Super Cool Bike Shop",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "0984fc2f2d",
+   "where": "a · The Super Cool Bike Shop",
+   "original": "Visit website",
+   "text": "Visit website"
+  },
+  {
+   "id": "8c07528524",
+   "where": "p · The Super Cool Bike Shop",
+   "original": "Travel & Adventure",
+   "text": "Travel & Adventure"
+  },
+  {
+   "id": "18216f7750",
+   "where": "h3 · The Super Cool Bike Shop",
+   "original": "Anderson's Outdoor Adventures",
+   "text": "Anderson's Outdoor Adventures"
+  },
+  {
+   "id": "26cfa7b49d",
+   "where": "li · Anderson's Outdoor Adventures",
+   "original": "15% Off Any Rental At Any Of Our 4 Locations",
+   "text": "15% Off Any Rental At Any Of Our 4 Locations"
+  },
+  {
+   "id": "4a3af85519",
+   "where": "a · Anderson's Outdoor Adventures",
+   "original": "(352)507-0059",
+   "text": "(352)507-0059"
+  },
+  {
+   "id": "9deebe9ad4",
+   "where": "i · Anderson's Outdoor Adventures",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "cd2a46ea48",
+   "where": "span · Anderson's Outdoor Adventures",
+   "original": "8500 NE SR 47 High Springs, FL",
+   "text": "8500 NE SR 47 High Springs, FL"
+  },
+  {
+   "id": "7282858ff9",
+   "where": "i · Anderson's Outdoor Adventures",
+   "original": "·",
+   "text": "·"
+  },
+  {
+   "id": "6e847fa9ad",
+   "where": "a · Anderson's Outdoor Adventures",
+   "original": "Visit website",
+   "text": "Visit website"
+  },
+  {
+   "id": "aee214d937",
+   "where": "h2 · Anderson's Outdoor Adventures",
+   "original": "Your membership pays you",
+   "text": "Your membership pays you"
+  },
+  {
+   "id": "c0baea613c",
+   "where": "span · Your membership pays you",
+   "original": "back",
+   "text": "back"
+  },
+  {
+   "id": "6e3d070d30",
+   "where": "p · Your membership pays you",
+   "original": "Ready to start a more fit life? Become a GHF member today for as little as $15 per week.",
+   "text": "Ready to start a more fit life? Become a GHF member today for as little as $15 per week."
+  },
+  {
+   "id": "1fd6d1c557",
+   "where": "a · Your membership pays you",
+   "original": "Claim Your Free Pass",
+   "text": "Claim Your Free Pass"
+  },
+  {
+   "id": "758b1f276c",
+   "where": "a · Your membership pays you",
+   "original": "Free All-Access Pass",
+   "text": "Free All-Access Pass"
+  }
+ ]
+}

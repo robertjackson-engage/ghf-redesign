@@ -1,0 +1,83 @@
+{
+ "page": "chill-cancel",
+ "items": [
+  {
+   "id": "04822ce939",
+   "where": "Browser tab title",
+   "original": "Cancel Chill | Gainesville Health & Fitness",
+   "text": "Cancel Chill | Gainesville Health & Fitness"
+  },
+  {
+   "id": "16fed7b243",
+   "where": "Search-engine description",
+   "original": "Cancel your Chill by GHF membership. No fee — use your remaining sessions up to your renewal date.",
+   "text": "Cancel your Chill by GHF membership. No fee — use your remaining sessions up to your renewal date."
+  },
+  {
+   "id": "eed798c202",
+   "where": "a",
+   "original": "Home",
+   "text": "Home"
+  },
+  {
+   "id": "f18876197f",
+   "where": "text",
+   "original": "/ Chill / Cancel",
+   "text": "/ Chill / Cancel"
+  },
+  {
+   "id": "a820e0169d",
+   "where": "p",
+   "original": "Cancel Chill",
+   "text": "Cancel Chill"
+  },
+  {
+   "id": "cb2bb89db5",
+   "where": "span",
+   "original": "No fee. Use your sessions",
+   "text": "No fee. Use your sessions"
+  },
+  {
+   "id": "1b56be12a2",
+   "where": "span",
+   "original": "up to your",
+   "text": "up to your"
+  },
+  {
+   "id": "0db1f4c86d",
+   "where": "span",
+   "original": "renewal date",
+   "text": "renewal date"
+  },
+  {
+   "id": "377ece74bb",
+   "where": "p",
+   "original": "Cancelling Chill costs nothing. It stops your next renewal — you can keep using the sessions you have left up to the date it would have renewed, and they expire after that. Complete the form below, or simply tell the front desk.",
+   "text": "Cancelling Chill costs nothing. It stops your next renewal — you can keep using the sessions you have left up to the date it would have renewed, and they expire after that. Complete the form below, or simply tell the front desk."
+  },
+  {
+   "id": "28b129c15f",
+   "where": "br",
+   "original": "Changed your mind?",
+   "text": "Changed your mind?"
+  },
+  {
+   "id": "deacfbdc54",
+   "where": "a",
+   "original": "Back to Chill by GHF",
+   "text": "Back to Chill by GHF"
+  },
+  {
+   "id": "78c708ec44",
+   "where": "p",
+   "original": "You can also cancel in person — just let the front desk know. Questions? Call",
+   "text": "You can also cancel in person — just let the front desk know. Questions? Call"
+  },
+  {
+   "id": "7170bc6d34",
+   "where": "a",
+   "original": "(352) 377-4955",
+   "text": "(352) 377-4955"
+  }
+ ]
+}

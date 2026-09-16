@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GHF Visual Text Editor</title>
+<link rel="icon" type="image/svg+xml" href="../assets/img/ghf-mark.svg">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Instrument+Serif:ital@1&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#0b0b0c;--ink-2:#141416;--ink-3:#1d1d20;--bone:#f3f0e9;--brand:#005898;--accent:#0d6fbf;--accent-soft:#5aa6dd;
+ --line:rgba(243,240,233,.14);--muted:rgba(243,240,233,.62);--ok:#6fcf97;--warn:#e6a54b;--bad:#e57f79;
+ --display:"Anton","Arial Narrow",sans-serif;--serif:"Instrument Serif",Georgia,serif;--body:"Inter",-apple-system,sans-serif}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0}
+body{background:var(--ink);color:var(--bone);font:400 14px/1.5 var(--body);display:grid;grid-template-rows:auto 1fr;overflow:hidden}
+button,select,input,textarea{font:inherit;color:inherit}
+/* top bar */
+.bar{display:flex;align-items:center;gap:14px;padding:10px 16px;border-bottom:1px solid var(--line);background:var(--ink-2)}
+.bar .brand{font-family:var(--display);font-size:17px;letter-spacing:.03em;text-transform:uppercase;white-space:nowrap}
+.bar .brand em{font-family:var(--serif);font-style:italic;text-transform:none;color:var(--accent-soft);font-size:16px;margin-left:6px}
+.bar select{background:var(--ink-3);border:1px solid var(--line);border-radius:3px;padding:8px 10px;min-width:260px;max-width:40vw}
+.seg{display:inline-flex;border:1px solid var(--line);border-radius:3px;overflow:hidden}
+.seg button{background:transparent;border:0;padding:8px 12px;cursor:pointer;color:var(--muted)}
+.seg button.on{background:var(--accent);color:#fff}
+.spacer{flex:1}
+.badge{font-size:12px;color:var(--muted)}
+.badge b{color:var(--bone)}
+.btn{background:var(--accent);color:#fff;border:0;border-radius:3px;padding:10px 18px;font-family:var(--display);font-size:13px;letter-spacing:.1em;text-transform:uppercase;cursor:pointer}
+.btn[disabled]{opacity:.35;cursor:not-allowed}
+.btn.ghost{background:transparent;border:1px solid var(--line);color:var(--bone)}
+.status{font-size:12px;color:var(--muted);min-width:180px;text-align:right}
+.status.ok{color:var(--ok)}.status.bad{color:var(--bad)}.status.busy{color:var(--accent-soft)}
+/* stage */
+.stage{display:grid;grid-template-columns:1fr 360px;min-height:0}
+.preview{position:relative;background:#000;overflow:hidden;display:flex;justify-content:center}
+.preview iframe{border:0;width:100%;height:100%;background:#fff;transition:width .3s}
+.preview.phone iframe{width:390px}
+.hint{position:absolute;left:50%;bottom:14px;transform:translateX(-50%);background:rgba(11,11,12,.88);border:1px solid var(--line);
+ padding:8px 14px;border-radius:999px;font-size:12px;color:var(--muted);pointer-events:none;backdrop-filter:blur(8px)}
+/* panel */
+.panel{border-left:1px solid var(--line);background:var(--ink-2);overflow-y:auto;display:flex;flex-direction:column}
+.panel section{padding:18px 18px 8px;border-bottom:1px solid var(--line)}
+.eyebrow{font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);font-weight:600;margin:0 0 8px}
+.where{font-size:12px;color:var(--accent-soft);margin-bottom:10px}
+.orig{font-size:13px;color:var(--muted);background:var(--ink-3);border-radius:3px;padding:10px 12px;line-height:1.55;max-height:120px;overflow:auto}
+textarea{width:100%;min-height:120px;resize:vertical;background:var(--ink);border:1px solid var(--line);border-radius:3px;padding:12px;line-height:1.55}
+textarea:focus{outline:none;border-color:var(--accent)}
+.row{display:flex;gap:8px;margin:12px 0 10px}
+.row .btn{padding:9px 14px;font-size:12px}
+.empty{color:var(--muted);font-size:13px;line-height:1.6}
+.empty b{color:var(--bone)}
+.find input{width:100%;background:var(--ink);border:1px solid var(--line);border-radius:3px;padding:10px 12px}
+.hits{list-style:none;margin:8px 0 0;padding:0;max-height:220px;overflow:auto}
+.hits li{padding:8px 10px;border-bottom:1px solid var(--line);font-size:12.5px;cursor:pointer;color:var(--muted)}
+.hits li:hover{color:var(--bone);background:var(--ink-3)}
+.hits li small{display:block;color:var(--accent-soft);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase}
+.changes{list-style:none;margin:0;padding:0}
+.changes li{padding:8px 0;border-bottom:1px solid var(--line);font-size:12.5px;display:flex;justify-content:space-between;gap:10px}
+.changes li span{color:var(--muted);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.changes li a{color:var(--bad);cursor:pointer;font-size:12px;text-decoration:none}
+.kbd{font-family:ui-monospace,Menlo,monospace;font-size:11px;background:var(--ink-3);padding:1px 6px;border-radius:3px}
+@media(max-width:900px){.stage{grid-template-columns:1fr}.panel{display:none}}
+</style>
+</head>
+<body>
+<header class="bar">
+  <div class="brand">GHF <em>text editor</em></div>
+  <select id="pageSel" aria-label="Page"></select>
+  <div class="seg" role="group" aria-label="Preview size"><button class="on" data-dev="desktop" type="button">Desktop</button><button data-dev="phone" type="button">Phone</button></div>
+  <div class="spacer"></div>
+  <div class="badge" id="badge">No unsaved changes</div>
+  <button class="btn ghost" id="discard" type="button" disabled>Discard</button>
+  <button class="btn" id="save" type="button" disabled>Save &amp; publish</button>
+  <div class="status" id="status"></div>
+</header>
+
+<div class="stage">
+  <div class="preview" id="preview">
+    <iframe id="frame" title="Page preview"></iframe>
+    <div class="hint">Hover any text, then click it to edit · <span class="kbd">Esc</span> deselects</div>
+  </div>
+  <aside class="panel">
+    <section id="editor">
+      <p class="eyebrow">Selected text</p>
+      <div id="sel">
+        <p class="empty">Click any sentence, heading, button or menu item in the preview.<br><br>
+          <b>Save &amp; publish</b> writes your changes to the site's text catalogue and the site rebuilds in about a minute.</p>
+      </div>
+    </section>
+    <section class="find">
+      <p class="eyebrow">Find text on this page</p>
+      <input id="find" type="search" placeholder="Type a word or phrase…">
+      <ul class="hits" id="hits"></ul>
+    </section>
+    <section>
+      <p class="eyebrow">Unsaved changes</p>
+      <ul class="changes" id="changes"><li class="empty">None yet.</li></ul>
+    </section>
+  </aside>
+</div>
+
+<script>
+(function () {
+  "use strict";
+  var $ = function (s) { return document.querySelector(s); };
+  var frame = $("#frame"), pageSel = $("#pageSel"), statusEl = $("#status"), badge = $("#badge");
+  var CONFIG = null, manifests = {}, bindings = [], pending = {}, current = null, selected = null, hiEl = null, selEl = null;
+  var LOCAL = /^(localhost|127\.0\.0\.1)$/.test(location.hostname);
+
+  function status(kind, msg) { statusEl.className = "status " + (kind || ""); statusEl.textContent = msg || ""; }
+  function norm(s) { return s.replace(/\s+/g, " ").trim(); }
+  function editable(t) { return /[A-Za-z0-9]/.test(t) && !/^\d{1,3}$/.test(t); }
+
+  /* ---------- load config + page list ---------- */
+  fetch("./copy/pages.json", { cache: "no-store" }).then(function (r) { return r.json(); }).then(function (c) {
+    CONFIG = c;
+    pageSel.innerHTML = c.pages.map(function (p) { return '<option value="' + p.scope + '">' + p.title.replace(/\s*\|.*$/, "") + " — " + p.file + "</option>"; }).join("");
+    var want = new URLSearchParams(location.search).get("page");
+    if (want && c.pages.some(function (p) { return p.scope === want; })) pageSel.value = want;
+    loadPage(pageSel.value);
+  }).catch(function (e) { status("bad", "Couldn't load the page list: " + e.message); });
+
+  pageSel.addEventListener("change", function () {
+    if (Object.keys(pending).length && !confirm("You have unsaved changes on this page. Switch anyway and lose them?")) { pageSel.value = current.scope; return; }
+    pending = {}; renderChanges(); loadPage(pageSel.value);
+  });
+
+  function loadPage(scope) {
+    var p = CONFIG.pages.filter(function (x) { return x.scope === scope; })[0];
+    if (!p) return;
+    current = p; selected = null; renderSelection();
+    history.replaceState(null, "", "?page=" + scope);
+    status("busy", "Loading page…");
+    Promise.all([
+      fetch("./copy/" + scope + ".json", { cache: "no-store" }).then(function (r) { return r.json(); }),
+      fetch("./copy/_site.json", { cache: "no-store" }).then(function (r) { return r.json(); })
+    ]).then(function (m) {
+      manifests = { page: m[0], _site: m[1] };
+      try { sessionStorage.setItem("ghf-intro", "1"); localStorage.setItem("ghf-view", "guest"); } catch (e) {}
+      frame.src = "../" + p.file + "?edit=1&t=" + Date.now();
+    }).catch(function (e) { status("bad", "Couldn't load text catalogue: " + e.message); });
+  }
+
+  /* ---------- bind DOM text nodes to catalogue entries ---------- */
+  frame.addEventListener("load", function () {
+    var doc = frame.contentDocument;
+    if (!doc || !manifests.page) return;
+    bindings = [];
+    var pools = { page: manifests.page.items.slice(), _site: manifests._site.items.slice() };
+    pools.page.forEach(function (e) { e.scope = "page"; e.bound = false; });
+    pools._site.forEach(function (e) { e.scope = "_site"; e.bound = false; });
+    var walker = doc.createTreeWalker(doc.documentElement, NodeFilter.SHOW_TEXT | NodeFilter.SHOW_COMMENT);
+    var scope = "page", n;
+    while ((n = walker.nextNode())) {
+      if (n.nodeType === 8) { var c = n.nodeValue.trim(); if (c === "copy:_site") scope = "_site"; else if (c === "/copy") scope = "page"; continue; }
+      var parent = n.parentNode; if (!parent) continue;
+      var tag = parent.nodeName;
+      if (/^(SCRIPT|STYLE|NOSCRIPT|TEMPLATE)$/.test(tag)) continue;
+      var t = norm(n.nodeValue);
+      if (!editable(t)) continue;
+      var pool = pools[scope], hit = null;
+      for (var i = 0; i < pool.length; i++) {
+        var e = pool[i];
+        if (!e.bound && (e.text === t || e.original === t)) { hit = e; break; }
+      }
+      if (!hit) continue;
+      hit.bound = true; hit.node = n;
+      bindings.push({ node: n, entry: hit, lead: n.nodeValue.match(/^\s*/)[0], trail: n.nodeValue.match(/\s*$/)[0] });
+    }
+    /* re-apply any pending edits after a reload */
+    bindings.forEach(function (b) { if (pending[b.entry.id] !== undefined) setNode(b, pending[b.entry.id]); });
+    installInteraction(doc);
+    status("ok", bindings.length + " editable texts on this page");
+  });
+
+  function findBinding(node) { for (var i = 0; i < bindings.length; i++) if (bindings[i].node === node) return bindings[i]; return null; }
+  function setNode(b, text) { b.node.nodeValue = b.lead + text + b.trail; }
+
+  function installInteraction(doc) {
+    var style = doc.createElement("style");
+    style.textContent = "[data-copy-hi]{outline:2px dashed #5aa6dd !important;outline-offset:3px !important;cursor:text !important}" +
+      "[data-copy-sel]{outline:2px solid #0d6fbf !important;outline-offset:3px !important;background:rgba(13,111,191,.12) !important}" +
+      "html{scroll-behavior:auto !important}";
+    doc.head.appendChild(style);
+    function nodeAt(x, y) {
+      var r = doc.caretRangeFromPoint ? doc.caretRangeFromPoint(x, y) : null;
+      if (r) return r.startContainer;
+      if (doc.caretPositionFromPoint) { var p = doc.caretPositionFromPoint(x, y); return p && p.offsetNode; }
+      return null;
+    }
+    doc.addEventListener("mousemove", function (e) {
+      var node = nodeAt(e.clientX, e.clientY), b = node && node.nodeType === 3 ? findBinding(node) : null;
+      var el = b ? b.node.parentElement : null;
+      if (hiEl && hiEl !== el) hiEl.removeAttribute("data-copy-hi");
+      if (el && el !== selEl) el.setAttribute("data-copy-hi", "");
+      hiEl = el;
+    }, true);
+    ["click", "mousedown", "mouseup", "submit"].forEach(function (ev) {
+      doc.addEventListener(ev, function (e) {
+        e.preventDefault(); e.stopPropagation();
+        if (ev !== "click") return;
+        var node = nodeAt(e.clientX, e.clientY), b = node && node.nodeType === 3 ? findBinding(node) : null;
+        if (b) select(b); else { selected = null; renderSelection(); }
+      }, true);
+    });
+    doc.addEventListener("keydown", function (e) { if (e.key === "Escape") { selected = null; renderSelection(); } }, true);
+  }
+  document.addEventListener("keydown", function (e) { if (e.key === "Escape" && document.activeElement.tagName !== "TEXTAREA") { selected = null; renderSelection(); } });
+
+  /* ---------- selection panel ---------- */
+  function select(b) {
+    selected = b; renderSelection();
+    var el = b.node.parentElement;
+    if (el && el.scrollIntoView) el.scrollIntoView({ block: "center", behavior: "smooth" });
+  }
+  function renderSelection() {
+    if (selEl) { selEl.removeAttribute("data-copy-sel"); selEl = null; }
+    var box = $("#sel");
+    if (!selected) {
+      box.innerHTML = '<p class="empty">Click any sentence, heading, button or menu item in the preview.<br><br><b>Save &amp; publish</b> writes your changes to the site\'s text catalogue and the site rebuilds in about a minute.</p>';
+      return;
+    }
+    var e = selected.entry, cur = pending[e.id] !== undefined ? pending[e.id] : e.text;
+    selEl = selected.node.parentElement; if (selEl) selEl.setAttribute("data-copy-sel", "");
+    box.innerHTML =
+      '<div class="where">' + (e.scope === "_site" ? "Shared on every page · " : "") + esc(e.where) + "</div>" +
+      '<p class="eyebrow">Original</p><div class="orig">' + esc(e.original) + "</div>" +
+      '<p class="eyebrow" style="margin-top:14px">Text</p><textarea id="txt" spellcheck="true">' + esc(cur) + "</textarea>" +
+      '<div class="row"><button class="btn ghost" id="revert" type="button">Back to original</button></div>';
+    var ta = $("#txt"); ta.focus(); ta.setSelectionRange(ta.value.length, ta.value.length);
+    ta.addEventListener("input", function () { applyEdit(selected, ta.value); });
+    $("#revert").addEventListener("click", function () { ta.value = e.original; applyEdit(selected, e.original); });
+  }
+  function applyEdit(b, value) {
+    var e = b.entry, v = value.replace(/\s+/g, " ").trim();
+    setNode(b, v || e.text);
+    if (v === e.text || !v) delete pending[e.id]; else pending[e.id] = v;
+    renderChanges();
+  }
+  function renderChanges() {
+    var ids = Object.keys(pending), list = $("#changes");
+    badge.innerHTML = ids.length ? "<b>" + ids.length + "</b> unsaved change" + (ids.length === 1 ? "" : "s") : "No unsaved changes";
+    $("#save").disabled = !ids.length; $("#discard").disabled = !ids.length;
+    if (!ids.length) { list.innerHTML = '<li class="empty">None yet.</li>'; return; }
+    list.innerHTML = ids.map(function (id) {
+      var e = entryById(id);
+      return "<li><span title=\"" + esc(pending[id]) + "\">" + esc(pending[id]) + "</span><a data-undo=\"" + id + "\">undo</a></li>";
+    }).join("");
+    list.querySelectorAll("[data-undo]").forEach(function (a) {
+      a.addEventListener("click", function () {
+        var id = a.dataset.undo, b = bindings.filter(function (x) { return x.entry.id === id; })[0];
+        if (b) setNode(b, b.entry.text);
+        delete pending[id]; renderChanges(); if (selected && selected.entry.id === id) renderSelection();
+      });
+    });
+  }
+  function entryById(id) { return manifests.page.items.concat(manifests._site.items).filter(function (e) { return e.id === id; })[0]; }
+  $("#discard").addEventListener("click", function () {
+    if (!confirm("Discard all unsaved changes on this page?")) return;
+    bindings.forEach(function (b) { if (pending[b.entry.id] !== undefined) setNode(b, b.entry.text); });
+    pending = {}; renderChanges(); renderSelection();
+  });
+
+  /* ---------- find ---------- */
+  $("#find").addEventListener("input", function () {
+    var q = this.value.trim().toLowerCase(), hits = $("#hits");
+    if (q.length < 2) { hits.innerHTML = ""; return; }
+    var rows = bindings.filter(function (b) { return (pending[b.entry.id] || b.entry.text).toLowerCase().indexOf(q) !== -1; }).slice(0, 30);
+    hits.innerHTML = rows.map(function (b, i) { return "<li data-i=\"" + bindings.indexOf(b) + "\"><small>" + esc(b.entry.where) + "</small>" + esc(pending[b.entry.id] || b.entry.text) + "</li>"; }).join("") || '<li class="empty">No matches.</li>';
+    hits.querySelectorAll("li[data-i]").forEach(function (li) { li.addEventListener("click", function () { select(bindings[+li.dataset.i]); }); });
+  });
+
+  /* ---------- device toggle ---------- */
+  document.querySelectorAll("[data-dev]").forEach(function (b) {
+    b.addEventListener("click", function () {
+      document.querySelectorAll("[data-dev]").forEach(function (x) { x.classList.remove("on"); });
+      b.classList.add("on"); $("#preview").classList.toggle("phone", b.dataset.dev === "phone");
+    });
+  });
+
+  /* ---------- save ---------- */
+  $("#save").addEventListener("click", function () {
+    var ids = Object.keys(pending); if (!ids.length) return;
+    var touched = {};
+    ids.forEach(function (id) { var e = entryById(id); touched[e.scope === "_site" ? "_site" : current.scope] = true; });
+    var files = Object.keys(touched).map(function (scope) {
+      var m = scope === "_site" ? manifests._site : manifests.page;
+      return { scope: scope, data: { page: m.page, items: m.items.map(function (i) {
+        return { id: i.id, where: i.where, original: i.original, text: pending[i.id] !== undefined ? pending[i.id] : i.text };
+      }) } };
+    });
+    $("#save").disabled = true; status("busy", "Saving…");
+    (LOCAL ? saveLocal(files) : saveGitHub(files)).then(function (msg) {
+      files.forEach(function (f) { var m = f.scope === "_site" ? manifests._site : manifests.page; m.items = f.data.items; });
+      bindings.forEach(function (b) { if (pending[b.entry.id] !== undefined) b.entry.text = pending[b.entry.id]; });
+      pending = {}; renderChanges(); renderSelection(); status("ok", msg);
+    }).catch(function (e) { status("bad", "Not saved: " + e.message); $("#save").disabled = false; });
+  });
+
+  function saveLocal(files) {
+    return Promise.all(files.map(function (f) {
+      return fetch("/__copy/" + f.scope, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(f.data) })
+        .then(function (r) { if (!r.ok) throw new Error("local save failed (" + r.status + ")"); });
+    })).then(function () {
+      status("busy", "Saved — rebuilding site…");
+      return new Promise(function (res) {
+        var tries = 0, iv = setInterval(function () {
+          fetch("/__copy/status").then(function (r) { return r.json(); }).then(function (s) {
+            if ((!s.building && s.last) || ++tries > 60) { clearInterval(iv); res(s.ok === false ? "Saved, but the rebuild reported an error — check the terminal" : "Saved and rebuilt locally"); }
+          }).catch(function () {});
+        }, 1000);
+      });
+    });
+  }
+
+  function token() {
+    var t = null;
+    try { t = localStorage.getItem("ghf-edit-token"); } catch (e) {}
+    if (!t) {
+      try { var u = JSON.parse(localStorage.getItem("sveltia-cms.user") || "null"); if (u && u.token) t = u.token; } catch (e) {}
+    }
+    if (!t) {
+      t = prompt("To publish, paste a GitHub access token with write access to " + CONFIG.repo + " (Settings → Developer settings → Fine-grained tokens → Contents: Read and write). It is kept only in this browser.");
+      if (t) try { localStorage.setItem("ghf-edit-token", t.trim()); } catch (e) {}
+    }
+    if (!t) throw new Error("no GitHub token");
+    return t.trim();
+  }
+  function b64(str) { return btoa(unescape(encodeURIComponent(str))); }
+  function saveGitHub(files) {
+    var tok = token(), api = "https://api.github.com/repos/" + CONFIG.repo + "/contents/content/copy/";
+    var headers = { Authorization: "Bearer " + tok, Accept: "application/vnd.github+json", "Content-Type": "application/json" };
+    return files.reduce(function (chain, f) {
+      return chain.then(function () {
+        var path = api + f.scope + ".json";
+        return fetch(path + "?ref=" + CONFIG.branch, { headers: headers }).then(function (r) {
+          if (r.status === 401 || r.status === 403) { try { localStorage.removeItem("ghf-edit-token"); } catch (e) {} throw new Error("GitHub rejected the token"); }
+          return r.ok ? r.json() : null;
+        }).then(function (existing) {
+          var body = { message: "Site text: " + f.scope + " (" + Object.keys(pending).length + " change" + (Object.keys(pending).length === 1 ? "" : "s") + ")",
+                       content: b64(JSON.stringify(f.data, null, 1) + "\n"), branch: CONFIG.branch };
+          if (existing && existing.sha) body.sha = existing.sha;
+          return fetch(path, { method: "PUT", headers: headers, body: JSON.stringify(body) });
+        }).then(function (r) { if (!r.ok) return r.json().then(function (j) { throw new Error(j.message || ("GitHub error " + r.status)); }); });
+      });
+    }, Promise.resolve()).then(function () { return "Saved — publishing to the live site (about a minute)"; });
+  }
+
+  function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); }
+  window.addEventListener("beforeunload", function (e) { if (Object.keys(pending).length) { e.preventDefault(); e.returnValue = ""; } });
+})();
+</script>
+</body>
+</html>

@@ -13,6 +13,10 @@ The .env file is gitignored, so the key never reaches the repo.
 import http.server
 import json
 import os
+import re
+import subprocess
+import threading
+import time
 import socketserver
 import urllib.error
 import urllib.request
@@ -40,11 +44,58 @@ def load_dotenv():
 load_dotenv()
 
 
+BUILD_STATE = {"building": False, "last": 0, "ok": True, "log": ""}
+_build_lock = threading.Lock()
+_build_timer = None
+
+
+def _run_build():
+    with _build_lock:
+        BUILD_STATE.update(building=True)
+        r = subprocess.run(["python3", os.path.join(ROOT, "build.py")], capture_output=True, text=True, cwd=ROOT)
+        BUILD_STATE.update(building=False, last=time.time(), ok=r.returncode == 0,
+                           log=(r.stdout + r.stderr)[-2000:])
+
+
+def schedule_build(delay=0.6):
+    """Debounced: several quick saves trigger one rebuild."""
+    global _build_timer
+    if _build_timer:
+        _build_timer.cancel()
+    _build_timer = threading.Timer(delay, _run_build)
+    _build_timer.daemon = True
+    _build_timer.start()
+
+
 class Handler(http.server.SimpleHTTPRequestHandler):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, directory=SITE, **kwargs)
 
+    def do_GET(self):
+        if self.path.startswith("/__copy/status"):
+            self._json(200, BUILD_STATE)
+            return
+        super().do_GET()
+
     def do_POST(self):
+        # Visual text editor (docs/admin/edit.html) saving a page catalogue while working locally.
+        # Writes content/copy/<scope>.json and rebuilds the site in the background.
+        m = re.fullmatch(r"/__copy/([a-z0-9_-]+)", self.path)
+        if m:
+            length = int(self.headers.get("Content-Length", 0))
+            try:
+                data = json.loads(self.rfile.read(length).decode("utf-8"))
+                assert isinstance(data.get("items"), list) and data.get("page") == m.group(1)
+            except Exception:
+                self._json(400, {"error": "bad payload"})
+                return
+            path = os.path.join(ROOT, "content", "copy", m.group(1) + ".json")
+            with open(path, "w", encoding="utf-8") as fh:
+                json.dump(data, fh, ensure_ascii=False, indent=1)
+                fh.write("\n")
+            schedule_build()
+            self._json(200, {"ok": True, "saved": os.path.relpath(path, ROOT)})
+            return
         if self.path != "/api/chat":
             self.send_error(404)
             return

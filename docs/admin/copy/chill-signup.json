@@ -1,0 +1,89 @@
+{
+ "page": "chill-signup",
+ "items": [
+  {
+   "id": "bc3ae16010",
+   "where": "Browser tab title",
+   "original": "Sign Up For Chill | Gainesville Health & Fitness",
+   "text": "Sign Up For Chill | Gainesville Health & Fitness"
+  },
+  {
+   "id": "6c2f8e8d97",
+   "where": "Search-engine description",
+   "original": "Sign up for Chill by GHF — 15 HydroMassage and CryoLounge+ sessions for $15 a month.",
+   "text": "Sign up for Chill by GHF — 15 HydroMassage and CryoLounge+ sessions for $15 a month."
+  },
+  {
+   "id": "851222b913",
+   "where": "a",
+   "original": "Home",
+   "text": "Home"
+  },
+  {
+   "id": "7b3236abf9",
+   "where": "text",
+   "original": "/ Chill / Sign Up",
+   "text": "/ Chill / Sign Up"
+  },
+  {
+   "id": "222e421fa8",
+   "where": "p",
+   "original": "Sign up for Chill",
+   "text": "Sign up for Chill"
+  },
+  {
+   "id": "8ee1af2d86",
+   "where": "span",
+   "original": "Fifteen sessions,",
+   "text": "Fifteen sessions,"
+  },
+  {
+   "id": "656d7651fa",
+   "where": "span",
+   "original": "fifteen dollars",
+   "text": "fifteen dollars"
+  },
+  {
+   "id": "9e56d7e4d7",
+   "where": "p",
+   "original": "Complete the form below and your Chill membership is set up — that is the whole process. 15 sessions for $15 a month or 30 for $25, auto-renewing, with CryoLounge+ included.",
+   "text": "Complete the form below and your Chill membership is set up — that is the whole process. 15 sessions for $15 a month or 30 for $25, auto-renewing, with CryoLounge+ included."
+  },
+  {
+   "id": "a74f5c4740",
+   "where": "br",
+   "original": "Not sure yet?",
+   "text": "Not sure yet?"
+  },
+  {
+   "id": "35a05ace45",
+   "where": "a",
+   "original": "Try a complimentary session",
+   "text": "Try a complimentary session"
+  },
+  {
+   "id": "1eefc26e72",
+   "where": "text",
+   "original": "at the desk first.",
+   "text": "at the desk first."
+  },
+  {
+   "id": "3981f62465",
+   "where": "p",
+   "original": "Trouble with the form? Call",
+   "text": "Trouble with the form? Call"
+  },
+  {
+   "id": "42c40432a3",
+   "where": "a",
+   "original": "(352) 377-4955",
+   "text": "(352) 377-4955"
+  },
+  {
+   "id": "40328d46f3",
+   "where": "text",
+   "original": "or ask at the front desk — we can sign you up in person.",
+   "text": "or ask at the front desk — we can sign you up in person."
+  }
+ ]
+}
