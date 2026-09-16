@@ -299,6 +299,13 @@ body.menu-open .menu-list a { opacity: 1; transform: translateY(0); transition: 
 .hero__media img, .hero__media video {
   width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0;
 }
+/* Two of the location tour videos carry a burned-in "3 Locations | 1 Membership" lower
+   third that sits exactly where the hero headline goes. object-fit:cover crops the sides
+   here (the hero is a taller aspect than the 16:9 footage), never the bottom, so the band
+   is lifted out of frame by scaling from the top edge instead. .hero__media clips it. */
+.hero--cropb .hero__media video,
+.hero--cropb .hero__media img { transform: scale(1.16); transform-origin: 50% 0; }
+
 .hero__media::after {
   content: ""; position: absolute; inset: 0;
   background: linear-gradient(to top, rgba(11,11,12,0.92) 0%, rgba(11,11,12,0.35) 45%, rgba(11,11,12,0.42) 100%);

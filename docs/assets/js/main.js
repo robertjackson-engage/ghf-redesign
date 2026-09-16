@@ -397,10 +397,17 @@
     });
   });
 
-  /* ---------- hero video: respect data saver ---------- */
+  /* ---------- hero video: respect data saver and reduced motion ---------- */
   var heroVid = document.querySelector(".hero__media video");
-  if (heroVid && navigator.connection && navigator.connection.saveData) {
-    heroVid.removeAttribute("autoplay");
-    heroVid.pause();
+  if (heroVid) {
+    /* the reduced-motion media query in main.css only shortens CSS animations; it does
+       nothing to an autoplaying video, which is the largest piece of motion on the page.
+       Pausing leaves the poster frame showing, which is the intended still fallback. */
+    var noMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    var saveData = navigator.connection && navigator.connection.saveData;
+    if (noMotion || saveData) {
+      heroVid.removeAttribute("autoplay");
+      heroVid.pause();
+    }
   }
 })();

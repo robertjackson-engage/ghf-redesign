@@ -13,3 +13,6 @@ intellipay/.env
 
 # browser-test scratch output
 .playwright-mcp/
+
+# raw tour footage staged at the repo root (the web-ready cuts live in docs/assets/video)
+/*.mp4
