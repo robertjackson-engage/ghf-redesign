@@ -1709,6 +1709,8 @@ body.chat-open .chat-panel { opacity: 1; transform: none; pointer-events: auto; 
  background:linear-gradient(180deg,rgba(13,111,191,.16),rgba(13,111,191,.03));
  box-shadow:0 14px 40px rgba(13,111,191,.16);transition:.35s var(--ease-out)}
 .jn .opt--feat:hover{border-color:var(--accent);transform:translateY(-2px)}
+.jn .opt--feat.sel{box-shadow:0 0 0 2px var(--accent),0 16px 44px rgba(13,111,191,.28)}
+.jn .opt--feat.sel .opt__flag{background:var(--accent-soft);color:var(--ink)}
 .jn .opt--feat .opt__flag{background:var(--accent);color:#fff;font-family:var(--font-display);
  font-size:11px;letter-spacing:.16em;text-transform:uppercase;padding:7px 21px;margin-bottom:19px}
 .jn .opt--feat .nm,.jn .opt--feat .pr,.jn .opt--feat .opt__wins{padding-left:21px;padding-right:21px}

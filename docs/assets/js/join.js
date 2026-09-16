@@ -118,7 +118,7 @@
       wins += win("That’s about <b>" + saving(Math.round((v.dues - v.afterDues) * DRAFTS_PER_YEAR * 100) / 100) + " a year</b> you keep, for good");
     wins += win("No maintenance fee, ever");
 
-    return '<label class="opt opt--feat sel" data-p="' + k + '" role="radio" tabindex="0" aria-checked="true">' +
+    return '<label class="opt opt--feat" data-p="' + k + '" role="radio" tabindex="0" aria-checked="false">' +
       '<div class="opt__flag">Best value — most members choose</div>' +
       '<span class="tick"></span>' + body +
       '<ul class="opt__wins">' + wins + "</ul></label>";
@@ -138,9 +138,7 @@
     }).join("");
     /* add-ons are intentionally not offered in the join flow — three plans only.
        They remain in the server catalog for later use. */
-    wire();
-    /* the featured plan starts selected, so the cart shows a real number on arrival */
-    plan = BEST; planChosen = true; quoteNow();
+    wire();   /* no quoteNow() here — the cart stays hidden until a plan is picked */
   }).catch(function (e) {
     $("#clubs").innerHTML = '<div class="jn-note warn">We couldn\'t load membership options right now (' + e.message + '). Please try again in a moment or call (352) 377-4955.</div>';
   });
