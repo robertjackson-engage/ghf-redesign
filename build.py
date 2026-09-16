@@ -4895,6 +4895,8 @@ cycle_body = hero(
     ["Kick it into", 'high <span class="serif">gear</span>'],
     "Stadium seating, 40 bikes and a video wall that takes you on rides around the world. Themed classes with music, virtual rides, or ride at your own pace outside class times &mdash; all included in your membership.",
     img=f"{IMG}/skycycle-class.jpg",
+    video="assets/video/ghf-cycle-loop.mp4",
+    poster=f"{IMG}/hero-cycle.jpg",
     crumb='Classes &nbsp;/&nbsp; Indoor Cycling',
     actions=[("See The Schedule", "#schedule", True), ("Class Styles", "#fusion", False)],
     meta=["40 bikes", "My Ride technology", "30 to 60 minutes"],
