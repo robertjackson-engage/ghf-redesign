@@ -1,0 +1,1355 @@
+{
+ "page": "personal-training",
+ "items": [
+  {
+   "id": "d80dcd4c96",
+   "where": "Browser tab title",
+   "original": "Personal Training | I Train For Life | GHF",
+   "text": "Personal Training | I Train For Life | GHF"
+  },
+  {
+   "id": "b8c4009236",
+   "where": "Search-engine description",
+   "original": "Personal Training at GHF gives you the guidance, motivation and accountability to take your fitness to the next level.",
+   "text": "Personal Training at GHF gives you the guidance, motivation and accountability to take your fitness to the next level."
+  },
+  {
+   "id": "69812a7014",
+   "where": "a",
+   "original": "Home",
+   "text": "Home"
+  },
+  {
+   "id": "2faeb77433",
+   "where": "text",
+   "original": "/",
+   "text": "/"
+  },
+  {
+   "id": "747836b9f9",
+   "where": "a",
+   "original": "Training",
+   "text": "Training"
+  },
+  {
+   "id": "9a12f8a6ca",
+   "where": "text",
+   "original": "/ Personal Training",
+   "text": "/ Personal Training"
+  },
+  {
+   "id": "2f6b84816c",
+   "where": "p",
+   "original": "GHF Personal Training",
+   "text": "GHF Personal Training"
+  },
+  {
+   "id": "fea6b093dd",
+   "where": "span",
+   "original": "I train",
+   "text": "I train"
+  },
+  {
+   "id": "cf0f34c3d0",
+   "where": "span",
+   "original": "for",
+   "text": "for"
+  },
+  {
+   "id": "29bcf2556b",
+   "where": "span",
+   "original": "life",
+   "text": "life"
+  },
+  {
+   "id": "5af8ff1118",
+   "where": "p",
+   "original": "Lose the weight. Fix the back pain. Add 20 yards to your drive. 35 nationally certified trainers who treat your goal like a promise — and your first assessment is free.",
+   "text": "Lose the weight. Fix the back pain. Add 20 yards to your drive. 35 nationally certified trainers who treat your goal like a promise — and your first assessment is free."
+  },
+  {
+   "id": "458ebd0b8c",
+   "where": "a",
+   "original": "Schedule Your Free Assessment",
+   "text": "Schedule Your Free Assessment"
+  },
+  {
+   "id": "bcef01dbe8",
+   "where": "a",
+   "original": "Training Options",
+   "text": "Training Options"
+  },
+  {
+   "id": "94227fcd78",
+   "where": "span",
+   "original": "35+ certified trainers",
+   "text": "35+ certified trainers"
+  },
+  {
+   "id": "9bff7cab2f",
+   "where": "span",
+   "original": "Olympic athletes trained",
+   "text": "Olympic athletes trained"
+  },
+  {
+   "id": "982b589f15",
+   "where": "span",
+   "original": "Free first assessment",
+   "text": "Free first assessment"
+  },
+  {
+   "id": "d39069c3d2",
+   "where": "p",
+   "original": "One-on-one personal training",
+   "text": "One-on-one personal training"
+  },
+  {
+   "id": "e48033122e",
+   "where": "h2",
+   "original": "Make real results",
+   "text": "Make real results"
+  },
+  {
+   "id": "87b9b4fb41",
+   "where": "span · Make real results",
+   "original": "happen",
+   "text": "happen"
+  },
+  {
+   "id": "b326a98fa4",
+   "where": "p · Make real results",
+   "original": "It all starts with you and your GHF trainer who will design a program to support your unique goals, passions, and personality.",
+   "text": "It all starts with you and your GHF trainer who will design a program to support your unique goals, passions, and personality."
+  },
+  {
+   "id": "686b525765",
+   "where": "p · Make real results",
+   "original": "Clients of all fitness levels benefit from the combined knowledge, training and practice of 35 specialized, nationally certified trainers. You won't find this anywhere else in the region. We will customize your workout to help you feel great and enjoy life to the fullest.",
+   "text": "Clients of all fitness levels benefit from the combined knowledge, training and practice of 35 specialized, nationally certified trainers. You won't find this anywhere else in the region. We will customize your workout to help you feel great and enjoy life to the fullest."
+  },
+  {
+   "id": "4c91c6881c",
+   "where": "a · Make real results",
+   "original": "Schedule Your FREE Assessment →",
+   "text": "Schedule Your FREE Assessment →"
+  },
+  {
+   "id": "c9a3c58c4e",
+   "where": "p · Make real results",
+   "original": "Personal training that fits your life",
+   "text": "Personal training that fits your life"
+  },
+  {
+   "id": "01ba534671",
+   "where": "h2 · Make real results",
+   "original": "Three ways to",
+   "text": "Three ways to"
+  },
+  {
+   "id": "a5a992edfa",
+   "where": "span · Three ways to",
+   "original": "train",
+   "text": "train"
+  },
+  {
+   "id": "28de326bf4",
+   "where": "h3 · Three ways to",
+   "original": "Private",
+   "text": "Private"
+  },
+  {
+   "id": "5e263f6ba8",
+   "where": "p · Private",
+   "original": "Achieve your fitness goals through 1-on-1 workouts personalized to match your abilities. Your personal trainer will inspire, guide and motivate.",
+   "text": "Achieve your fitness goals through 1-on-1 workouts personalized to match your abilities. Your personal trainer will inspire, guide and motivate."
+  },
+  {
+   "id": "1940c209cb",
+   "where": "h3 · Private",
+   "original": "Express",
+   "text": "Express"
+  },
+  {
+   "id": "e61bfe3a41",
+   "where": "p · Express",
+   "original": "Enjoy the individual attention and proven benefits of personal training in half the time. 25-minute sessions to fit your busy life.",
+   "text": "Enjoy the individual attention and proven benefits of personal training in half the time. 25-minute sessions to fit your busy life."
+  },
+  {
+   "id": "36f53b12c7",
+   "where": "h3 · Express",
+   "original": "Semi-Private",
+   "text": "Semi-Private"
+  },
+  {
+   "id": "49528ba760",
+   "where": "p · Semi-Private",
+   "original": "Workout with a friend. Semi-private personal training matches you and a friend with a trainer eager to help you succeed together.",
+   "text": "Workout with a friend. Semi-private personal training matches you and a friend with a trainer eager to help you succeed together."
+  },
+  {
+   "id": "c5899a83f0",
+   "where": "span · Semi-Private",
+   "original": "GHF PT Studio",
+   "text": "GHF PT Studio"
+  },
+  {
+   "id": "4c95b3cba0",
+   "where": "p · Semi-Private",
+   "original": "Why train at GHF",
+   "text": "Why train at GHF"
+  },
+  {
+   "id": "e4abed49f5",
+   "where": "h2 · Semi-Private",
+   "original": "The best in the",
+   "text": "The best in the"
+  },
+  {
+   "id": "c8918eaf53",
+   "where": "span · The best in the",
+   "original": "industry",
+   "text": "industry"
+  },
+  {
+   "id": "3a7dd401ec",
+   "where": "li · The best in the",
+   "original": "40 personal trainers on staff",
+   "text": "40 personal trainers on staff"
+  },
+  {
+   "id": "053bce291d",
+   "where": "li · The best in the",
+   "original": "Certified and accredited",
+   "text": "Certified and accredited"
+  },
+  {
+   "id": "8a14686250",
+   "where": "li · The best in the",
+   "original": "Thousands of clients trained",
+   "text": "Thousands of clients trained"
+  },
+  {
+   "id": "c6aac02620",
+   "where": "li · The best in the",
+   "original": "Multiple Olympic athletes trained",
+   "text": "Multiple Olympic athletes trained"
+  },
+  {
+   "id": "c038f4f6ed",
+   "where": "li · The best in the",
+   "original": "120,000 sq ft of the world's most innovative training equipment",
+   "text": "120,000 sq ft of the world's most innovative training equipment"
+  },
+  {
+   "id": "8f35bcc6fb",
+   "where": "a · The best in the",
+   "original": "Schedule Your FREE Assessment →",
+   "text": "Schedule Your FREE Assessment →"
+  },
+  {
+   "id": "c9f6dd9cac",
+   "where": "p · The best in the",
+   "original": "Meet our trainers",
+   "text": "Meet our trainers"
+  },
+  {
+   "id": "ef4ecf04be",
+   "where": "h2 · The best in the",
+   "original": "The people you'll actually",
+   "text": "The people you'll actually"
+  },
+  {
+   "id": "fee9f22499",
+   "where": "span · The people you'll actually",
+   "original": "work with",
+   "text": "work with"
+  },
+  {
+   "id": "7c4e57b743",
+   "where": "p · The people you'll actually",
+   "original": "36 certified trainers, each with their own specialties. Click anyone to see their background.",
+   "text": "36 certified trainers, each with their own specialties. Click anyone to see their background."
+  },
+  {
+   "id": "01e726bb54",
+   "where": "p · The people you'll actually",
+   "original": "One day or day one.",
+   "text": "One day or day one."
+  },
+  {
+   "id": "6d4df40a28",
+   "where": "h3 · The people you'll actually",
+   "original": "Abby McVety",
+   "text": "Abby McVety"
+  },
+  {
+   "id": "2c5fed3622",
+   "where": "span · Abby McVety",
+   "original": "Read profile →",
+   "text": "Read profile →"
+  },
+  {
+   "id": "0abf320623",
+   "where": "p · Abby McVety",
+   "original": "Weight Loss, Strength Training, Populations 60+",
+   "text": "Weight Loss, Strength Training, Populations 60+"
+  },
+  {
+   "id": "af2bbc6bb6",
+   "where": "p · Abby McVety",
+   "original": "This is the way.",
+   "text": "This is the way."
+  },
+  {
+   "id": "95f5336dbd",
+   "where": "h3 · Abby McVety",
+   "original": "Adam Brandel",
+   "text": "Adam Brandel"
+  },
+  {
+   "id": "d13dfebf72",
+   "where": "span · Adam Brandel",
+   "original": "Read profile →",
+   "text": "Read profile →"
+  },
+  {
+   "id": "b6fdb56458",
+   "where": "p · Adam Brandel",
+   "original": "Weight Loss, Strength Training, Post-Rehab Training",
+   "text": "Weight Loss, Strength Training, Post-Rehab Training"
+  },
+  {
+   "id": "eff37dbe26",
+   "where": "p · Adam Brandel",
+   "original": "I want to show clients that they truly can achieve anything they set their mind to. Fitness is not a straight line, there will be ups and downs. I want them to enjoy the journey and look back on all they have accomplished with pride.",
+   "text": "I want to show clients that they truly can achieve anything they set their mind to. Fitness is not a straight line, there will be ups and downs. I want them to enjoy the journey and look back on all they have accomplished with pride."
+  },
+  {
+   "id": "f64f56cfaf",
+   "where": "h3 · Adam Brandel",
+   "original": "Akela Collins",
+   "text": "Akela Collins"
+  },
+  {
+   "id": "7a732d9b8e",
+   "where": "span · Akela Collins",
+   "original": "Read profile →",
+   "text": "Read profile →"
+  },
+  {
+   "id": "b0614abeab",
+   "where": "p · Akela Collins",
+   "original": "Weight Loss, Strength Training, Post-Rehab Training",
+   "text": "Weight Loss, Strength Training, Post-Rehab Training"
+  },
+  {
+   "id": "b7a7a27542",
+   "where": "p · Akela Collins",
+   "original": "Do or do not, there is no try. &mdash; Yoda",
+   "text": "Do or do not, there is no try. &mdash; Yoda"
+  },
+  {
+   "id": "f73b2e9138",
+   "where": "h3 · Akela Collins",
+   "original": "Andrew Jannereth",
+   "text": "Andrew Jannereth"
+  },
+  {
+   "id": "f51419689d",
+   "where": "span · Andrew Jannereth",
+   "original": "Read profile →",
+   "text": "Read profile →"
+  },
+  {
+   "id": "ba0d6f0f10",
+   "where": "p · Andrew Jannereth",
+   "original": "Weight Loss, Strength Training, Hypertrophy/Muscle Gain",
+   "text": "Weight Loss, Strength Training, Hypertrophy/Muscle Gain"
+  },
+  {
+   "id": "98efcedf52",
+   "where": "h3 · Andrew Jannereth",
+   "original": "Angel Molina",
+   "text": "Angel Molina"
+  },
+  {
+   "id": "465bf5d4dc",
+   "where": "span · Angel Molina",
+   "original": "Read profile →",
+   "text": "Read profile →"
+  },
+  {
+   "id": "f58ede1586",
+   "where": "p · Angel Molina",
+   "original": "Weight Loss, Strength Training, Post-Rehab Training",
+   "text": "Weight Loss, Strength Training, Post-Rehab Training"
+  },
+  {
+   "id": "7ca8886134",
+   "where": "p · Angel Molina",
+   "original": "You are not your thoughts.",
+   "text": "You are not your thoughts."
+  },
+  {
+   "id": "0fd48a83df",
+   "where": "h3 · Angel Molina",
+   "original": "Anthony May",
+   "text": "Anthony May"
+  },
+  {
+   "id": "d9380d7971",
+   "where": "span · Anthony May",
+   "original": "Read profile →",
+   "text": "Read profile →"
+  },
+  {
+   "id": "d227e62f94",
+   "where": "p · Anthony May",
+   "original": "Strength Training, Populations 60+, Hypertrophy/Muscle Gain",
+   "text": "Strength Training, Populations 60+, Hypertrophy/Muscle Gain"
+  },
+  {
+   "id": "de90971db1",
+   "where": "p · Anthony May",
+   "original": "Compare yourself to who you were yesterday, not to who someone else is today. &mdash; Jordan Peterson",
+   "text": "Compare yourself to who you were yesterday, not to who someone else is today. &mdash; Jordan Peterson"
+  },
+  {
+   "id": "ebbba7c1b6",
+   "where": "h3 · Anthony May",
+   "original": "Canyon Arganbright",
+   "text": "Canyon Arganbright"
+  },
+  {
+   "id": "dca8065a4c",
+   "where": "span · Canyon Arganbright",
+   "original": "Read profile →",
+   "text": "Read profile →"
+  },
+  {
+   "id": "ebca397316",
+   "where": "p · Canyon Arganbright",
+   "original": "Hypertrophy/Muscle Gain",
+   "text": "Hypertrophy/Muscle Gain"
+  },
+  {
+   "id": "210306bfa0",
+   "where": "h3 · Canyon Arganbright",
+   "original": "Cari Blalock",
+   "text": "Cari Blalock"
+  },
+  {
+   "id": "1c0c3e2472",
+   "where": "span · Cari Blalock",
+   "original": "Read profile →",
+   "text": "Read profile →"
+  },
+  {
+   "id": "872ea4ba61",
+   "where": "p · Cari Blalock",
+   "original": "Weight Loss, Strength Training, Nutrition Education",
+   "text": "Weight Loss, Strength Training, Nutrition Education"
+  },
+  {
+   "id": "1319fca418",
+   "where": "h3 · Cari Blalock",
+   "original": "Chad Hollingsworth",
+   "text": "Chad Hollingsworth"
+  },
+  {
+   "id": "98417de5d7",
+   "where": "span · Chad Hollingsworth",
+   "original": "Read profile →",
+   "text": "Read profile →"
+  },
+  {
+   "id": "053bb015c9",
+   "where": "p · Chad Hollingsworth",
+   "original": "Weight Loss, Strength Training, Hypertrophy/Muscle Gain",
+   "text": "Weight Loss, Strength Training, Hypertrophy/Muscle Gain"
+  },
+  {
+   "id": "006dc92a2d",
+   "where": "h3 · Chad Hollingsworth",
+   "original": "Chloe Mesa",
+   "text": "Chloe Mesa"
+  },
+  {
+   "id": "e47dd6934b",
+   "where": "span · Chloe Mesa",
+   "original": "Read profile →",
+   "text": "Read profile →"
+  },
+  {
+   "id": "36c54b363b",
+   "where": "p · Chloe Mesa",
+   "original": "Weight Loss, Strength Training, Post-Rehab Training",
+   "text": "Weight Loss, Strength Training, Post-Rehab Training"
+  },
+  {
+   "id": "daab0bb189",
+   "where": "p · Chloe Mesa",
+   "original": "Fall down seven times, stand up eight.",
+   "text": "Fall down seven times, stand up eight."
+  },
+  {
+   "id": "7c8104b727",
+   "where": "h3 · Chloe Mesa",
+   "original": "Chris Pilarczyk",
+   "text": "Chris Pilarczyk"
+  },
+  {
+   "id": "1d1f501266",
+   "where": "span · Chris Pilarczyk",
+   "original": "Read profile →",
+   "text": "Read profile →"
+  },
+  {
+   "id": "9b2c184b97",
+   "where": "p · Chris Pilarczyk",
+   "original": "Strength Training, Post-Rehab Training, Athletic Performance",
+   "text": "Strength Training, Post-Rehab Training, Athletic Performance"
+  },
+  {
+   "id": "a9894b6276",
+   "where": "h3 · Chris Pilarczyk",
+   "original": "Christopher Blas",
+   "text": "Christopher Blas"
+  },
+  {
+   "id": "739927c409",
+   "where": "span · Christopher Blas",
+   "original": "Read profile →",
+   "text": "Read profile →"
+  },
+  {
+   "id": "1ab3d5a8dc",
+   "where": "p · Christopher Blas",
+   "original": "Weight Loss, Strength Training, Post-Rehab Training",
+   "text": "Weight Loss, Strength Training, Post-Rehab Training"
+  },
+  {
+   "id": "4311cfdf19",
+   "where": "p · Christopher Blas",
+   "original": "If you want, you can overcome it all: pressure, expectations, gravity. &mdash; Mesut &Ouml;zil",
+   "text": "If you want, you can overcome it all: pressure, expectations, gravity. &mdash; Mesut &Ouml;zil"
+  },
+  {
+   "id": "8ecce3ab0c",
+   "where": "h3 · Christopher Blas",
+   "original": "Daniel Clark",
+   "text": "Daniel Clark"
+  },
+  {
+   "id": "c5720d5dec",
+   "where": "span · Daniel Clark",
+   "original": "Read profile →",
+   "text": "Read profile →"
+  },
+  {
+   "id": "8bced21f05",
+   "where": "p · Daniel Clark",
+   "original": "Post-Rehab Training, Athletic Performance, Child/Adolescent Training",
+   "text": "Post-Rehab Training, Athletic Performance, Child/Adolescent Training"
+  },
+  {
+   "id": "6bcdf9ef91",
+   "where": "h3 · Daniel Clark",
+   "original": "Danielle Marshall",
+   "text": "Danielle Marshall"
+  },
+  {
+   "id": "db47ce151e",
+   "where": "span · Danielle Marshall",
+   "original": "Read profile →",
+   "text": "Read profile →"
+  },
+  {
+   "id": "8546846a51",
+   "where": "p · Danielle Marshall",
+   "original": "Weight Loss, Strength Training, Populations 60+",
+   "text": "Weight Loss, Strength Training, Populations 60+"
+  },
+  {
+   "id": "b357c97534",
+   "where": "p · Danielle Marshall",
+   "original": "Every day it gets easier. The hard part is doing it every day.",
+   "text": "Every day it gets easier. The hard part is doing it every day."
+  },
+  {
+   "id": "6cbe102b85",
+   "where": "h3 · Danielle Marshall",
+   "original": "Dominic Taylor",
+   "text": "Dominic Taylor"
+  },
+  {
+   "id": "5f0da21ef4",
+   "where": "span · Dominic Taylor",
+   "original": "Read profile →",
+   "text": "Read profile →"
+  },
+  {
+   "id": "3f47d947c2",
+   "where": "p · Dominic Taylor",
+   "original": "Weight Loss, Athletic Performance, Hypertrophy/Muscle Gain",
+   "text": "Weight Loss, Athletic Performance, Hypertrophy/Muscle Gain"
+  },
+  {
+   "id": "f0a7c0c990",
+   "where": "p · Dominic Taylor",
+   "original": "Nothing changes if nothing changes.",
+   "text": "Nothing changes if nothing changes."
+  },
+  {
+   "id": "25e17ea0e0",
+   "where": "h3 · Dominic Taylor",
+   "original": "Francine Hall",
+   "text": "Francine Hall"
+  },
+  {
+   "id": "3e206a38d8",
+   "where": "span · Francine Hall",
+   "original": "Read profile →",
+   "text": "Read profile →"
+  },
+  {
+   "id": "1d6f987b38",
+   "where": "p · Francine Hall",
+   "original": "Weight Loss, Strength Training, Hypertrophy/Muscle Gain",
+   "text": "Weight Loss, Strength Training, Hypertrophy/Muscle Gain"
+  },
+  {
+   "id": "617aae4b84",
+   "where": "p · Francine Hall",
+   "original": "The pain that you are willing to endure is measured by how bad you want it. &mdash; David Goggins",
+   "text": "The pain that you are willing to endure is measured by how bad you want it. &mdash; David Goggins"
+  },
+  {
+   "id": "bed25b3f98",
+   "where": "h3 · Francine Hall",
+   "original": "Fredery Estevez",
+   "text": "Fredery Estevez"
+  },
+  {
+   "id": "c7b21f4074",
+   "where": "span · Fredery Estevez",
+   "original": "Read profile →",
+   "text": "Read profile →"
+  },
+  {
+   "id": "2c6c4462b9",
+   "where": "p · Fredery Estevez",
+   "original": "Hypertrophy/Muscle Gain, Nutrition Education",
+   "text": "Hypertrophy/Muscle Gain, Nutrition Education"
+  },
+  {
+   "id": "c5c50f9b84",
+   "where": "p · Fredery Estevez",
+   "original": "The best view comes from the highest climb.",
+   "text": "The best view comes from the highest climb."
+  },
+  {
+   "id": "ce66c9c80f",
+   "where": "h3 · Fredery Estevez",
+   "original": "Garrett Barrelle",
+   "text": "Garrett Barrelle"
+  },
+  {
+   "id": "949bc2e84d",
+   "where": "span · Garrett Barrelle",
+   "original": "Read profile →",
+   "text": "Read profile →"
+  },
+  {
+   "id": "0f2274a1ed",
+   "where": "p · Garrett Barrelle",
+   "original": "Hypertrophy/Muscle Gain, Endurance",
+   "text": "Hypertrophy/Muscle Gain, Endurance"
+  },
+  {
+   "id": "820ad6bfec",
+   "where": "p · Garrett Barrelle",
+   "original": "Smart over hard.",
+   "text": "Smart over hard."
+  },
+  {
+   "id": "91df8d4e8f",
+   "where": "h3 · Garrett Barrelle",
+   "original": "Jim McCown",
+   "text": "Jim McCown"
+  },
+  {
+   "id": "8bb6c73774",
+   "where": "span · Jim McCown",
+   "original": "Read profile →",
+   "text": "Read profile →"
+  },
+  {
+   "id": "ed84ef27f9",
+   "where": "p · Jim McCown",
+   "original": "Post-Rehab Training, Populations 60+, Populations 40+",
+   "text": "Post-Rehab Training, Populations 60+, Populations 40+"
+  },
+  {
+   "id": "02fe85e546",
+   "where": "p · Jim McCown",
+   "original": "You are braver than you believe, stronger than you seem and smarter than you think.",
+   "text": "You are braver than you believe, stronger than you seem and smarter than you think."
+  },
+  {
+   "id": "9fb3d38cf8",
+   "where": "h3 · Jim McCown",
+   "original": "Kaaren Register",
+   "text": "Kaaren Register"
+  },
+  {
+   "id": "171dfb5c1c",
+   "where": "span · Kaaren Register",
+   "original": "Read profile →",
+   "text": "Read profile →"
+  },
+  {
+   "id": "e5e2a3527d",
+   "where": "p · Kaaren Register",
+   "original": "Strength Training, Child/Adolescent Training, Hypertrophy/Muscle Gain",
+   "text": "Strength Training, Child/Adolescent Training, Hypertrophy/Muscle Gain"
+  },
+  {
+   "id": "e66f3eb6f2",
+   "where": "p · Kaaren Register",
+   "original": "Step by step walk the thousand mile road. &mdash; Miyamoto Musashi",
+   "text": "Step by step walk the thousand mile road. &mdash; Miyamoto Musashi"
+  },
+  {
+   "id": "344664afce",
+   "where": "h3 · Kaaren Register",
+   "original": "Kevin Bogard",
+   "text": "Kevin Bogard"
+  },
+  {
+   "id": "cef63edc3a",
+   "where": "span · Kevin Bogard",
+   "original": "Read profile →",
+   "text": "Read profile →"
+  },
+  {
+   "id": "4bf57bf286",
+   "where": "p · Kevin Bogard",
+   "original": "Weight Loss, Strength Training, Post-Rehab Training",
+   "text": "Weight Loss, Strength Training, Post-Rehab Training"
+  },
+  {
+   "id": "a5a4da5dfa",
+   "where": "p · Kevin Bogard",
+   "original": "Fitness is about so much more than exercise. It's a catalyst for positive change, and it affects every aspect of your life.",
+   "text": "Fitness is about so much more than exercise. It's a catalyst for positive change, and it affects every aspect of your life."
+  },
+  {
+   "id": "d4583dc5c8",
+   "where": "h3 · Kevin Bogard",
+   "original": "Lauren Rohrs",
+   "text": "Lauren Rohrs"
+  },
+  {
+   "id": "dbd580f3f5",
+   "where": "span · Lauren Rohrs",
+   "original": "Read profile →",
+   "text": "Read profile →"
+  },
+  {
+   "id": "95bcbac9c2",
+   "where": "p · Lauren Rohrs",
+   "original": "Weight Loss, Strength Training",
+   "text": "Weight Loss, Strength Training"
+  },
+  {
+   "id": "978b2a2c5e",
+   "where": "p · Lauren Rohrs",
+   "original": "What we face may look insurmountable, but what I learned is that we are always stronger than we know. &mdash; Arnold Schwarzenegger",
+   "text": "What we face may look insurmountable, but what I learned is that we are always stronger than we know. &mdash; Arnold Schwarzenegger"
+  },
+  {
+   "id": "4a0fac2d26",
+   "where": "h3 · Lauren Rohrs",
+   "original": "Lucas Todd",
+   "text": "Lucas Todd"
+  },
+  {
+   "id": "c45e924969",
+   "where": "span · Lucas Todd",
+   "original": "Read profile →",
+   "text": "Read profile →"
+  },
+  {
+   "id": "18b8ddfbfd",
+   "where": "p · Lucas Todd",
+   "original": "Weight Loss, Strength Training, Populations 60+",
+   "text": "Weight Loss, Strength Training, Populations 60+"
+  },
+  {
+   "id": "f3f992ec4b",
+   "where": "h3 · Lucas Todd",
+   "original": "Madison Williams",
+   "text": "Madison Williams"
+  },
+  {
+   "id": "fcabd77f7b",
+   "where": "span · Madison Williams",
+   "original": "Read profile →",
+   "text": "Read profile →"
+  },
+  {
+   "id": "4aeb965126",
+   "where": "p · Madison Williams",
+   "original": "Weight Loss, Hypertrophy/Muscle Gain, Nutrition Education",
+   "text": "Weight Loss, Hypertrophy/Muscle Gain, Nutrition Education"
+  },
+  {
+   "id": "40e0cf7805",
+   "where": "p · Madison Williams",
+   "original": "To bring about change you must not be afraid to take the first step. We will fail when we fail to try. &mdash; Rosa Parks",
+   "text": "To bring about change you must not be afraid to take the first step. We will fail when we fail to try. &mdash; Rosa Parks"
+  },
+  {
+   "id": "d1fe2c1f98",
+   "where": "h3 · Madison Williams",
+   "original": "Mandy Hill",
+   "text": "Mandy Hill"
+  },
+  {
+   "id": "2185dc1fbd",
+   "where": "span · Mandy Hill",
+   "original": "Read profile →",
+   "text": "Read profile →"
+  },
+  {
+   "id": "4450f8cf8b",
+   "where": "p · Mandy Hill",
+   "original": "Weight Loss, Strength Training, Post-Rehab Training",
+   "text": "Weight Loss, Strength Training, Post-Rehab Training"
+  },
+  {
+   "id": "1c107159ae",
+   "where": "p · Mandy Hill",
+   "original": "Make more, do more, be more.",
+   "text": "Make more, do more, be more."
+  },
+  {
+   "id": "5f404b1396",
+   "where": "h3 · Mandy Hill",
+   "original": "Mandy Lanier",
+   "text": "Mandy Lanier"
+  },
+  {
+   "id": "fb54340a35",
+   "where": "span · Mandy Lanier",
+   "original": "Read profile →",
+   "text": "Read profile →"
+  },
+  {
+   "id": "66665baf53",
+   "where": "p · Mandy Lanier",
+   "original": "Weight Loss, Strength Training, Athletic Performance",
+   "text": "Weight Loss, Strength Training, Athletic Performance"
+  },
+  {
+   "id": "c929d67f09",
+   "where": "p · Mandy Lanier",
+   "original": "Do not be afraid to grow slowly, only fear standing still. The world breaks everyone at some point and afterwards some are stronger in the broken places. &mdash; Ernest Hemingway",
+   "text": "Do not be afraid to grow slowly, only fear standing still. The world breaks everyone at some point and afterwards some are stronger in the broken places. &mdash; Ernest Hemingway"
+  },
+  {
+   "id": "3ff2bf1138",
+   "where": "h3 · Mandy Lanier",
+   "original": "Matt Mallard",
+   "text": "Matt Mallard"
+  },
+  {
+   "id": "0dc3cd07d2",
+   "where": "span · Matt Mallard",
+   "original": "Read profile →",
+   "text": "Read profile →"
+  },
+  {
+   "id": "2fdac0c021",
+   "where": "p · Matt Mallard",
+   "original": "Weight Loss, Strength Training, Post-Rehab Training",
+   "text": "Weight Loss, Strength Training, Post-Rehab Training"
+  },
+  {
+   "id": "81e28e3e4f",
+   "where": "p · Matt Mallard",
+   "original": "Knowing and helping yourself is the only way to help others.",
+   "text": "Knowing and helping yourself is the only way to help others."
+  },
+  {
+   "id": "9f035da9bb",
+   "where": "h3 · Matt Mallard",
+   "original": "Nelson Luque",
+   "text": "Nelson Luque"
+  },
+  {
+   "id": "9133147460",
+   "where": "span · Nelson Luque",
+   "original": "Read profile →",
+   "text": "Read profile →"
+  },
+  {
+   "id": "89db29bf7b",
+   "where": "p · Nelson Luque",
+   "original": "Strength Training, Hypertrophy/Muscle Gain, Nutrition Education",
+   "text": "Strength Training, Hypertrophy/Muscle Gain, Nutrition Education"
+  },
+  {
+   "id": "f08dffb9e0",
+   "where": "h3 · Nelson Luque",
+   "original": "Noah Holmer",
+   "text": "Noah Holmer"
+  },
+  {
+   "id": "04b6beb607",
+   "where": "span · Noah Holmer",
+   "original": "Read profile →",
+   "text": "Read profile →"
+  },
+  {
+   "id": "6955e41171",
+   "where": "p · Noah Holmer",
+   "original": "Weight Loss, Strength Training, Populations 60+",
+   "text": "Weight Loss, Strength Training, Populations 60+"
+  },
+  {
+   "id": "7ea18cf10b",
+   "where": "p · Noah Holmer",
+   "original": "You teach people how to treat you by the way you treat yourself!",
+   "text": "You teach people how to treat you by the way you treat yourself!"
+  },
+  {
+   "id": "e24c2bfe54",
+   "where": "h3 · Noah Holmer",
+   "original": "Romona Jackson",
+   "text": "Romona Jackson"
+  },
+  {
+   "id": "a250112113",
+   "where": "span · Romona Jackson",
+   "original": "Read profile →",
+   "text": "Read profile →"
+  },
+  {
+   "id": "8f3a559c7d",
+   "where": "p · Romona Jackson",
+   "original": "Strength Training, Populations 60+, Small Groups",
+   "text": "Strength Training, Populations 60+, Small Groups"
+  },
+  {
+   "id": "7ebb55a4cc",
+   "where": "h3 · Romona Jackson",
+   "original": "Ryan Gross",
+   "text": "Ryan Gross"
+  },
+  {
+   "id": "be34784cf4",
+   "where": "span · Ryan Gross",
+   "original": "Read profile →",
+   "text": "Read profile →"
+  },
+  {
+   "id": "6967be6a4c",
+   "where": "p · Ryan Gross",
+   "original": "Weight Loss, Strength Training, Populations 60+",
+   "text": "Weight Loss, Strength Training, Populations 60+"
+  },
+  {
+   "id": "6264a3a710",
+   "where": "p · Ryan Gross",
+   "original": "Dreams without goals are just dreams and ultimately fuel disappointment. On the road to achieving your dreams you must apply discipline, but more importantly consistency &mdash; because without commitment you'll never start, and without consistency you'll never finish.",
+   "text": "Dreams without goals are just dreams and ultimately fuel disappointment. On the road to achieving your dreams you must apply discipline, but more importantly consistency &mdash; because without commitment you'll never start, and without consistency you'll never finish."
+  },
+  {
+   "id": "a1f7db370c",
+   "where": "h3 · Ryan Gross",
+   "original": "Seth Faris",
+   "text": "Seth Faris"
+  },
+  {
+   "id": "20ffff974c",
+   "where": "span · Seth Faris",
+   "original": "Read profile →",
+   "text": "Read profile →"
+  },
+  {
+   "id": "acb3a31f6d",
+   "where": "p · Seth Faris",
+   "original": "Weight Loss, Strength Training, Hypertrophy/Muscle Gain",
+   "text": "Weight Loss, Strength Training, Hypertrophy/Muscle Gain"
+  },
+  {
+   "id": "b3c67b228a",
+   "where": "p · Seth Faris",
+   "original": "Form equals physique.",
+   "text": "Form equals physique."
+  },
+  {
+   "id": "dfb0daf809",
+   "where": "h3 · Seth Faris",
+   "original": "Shelly Ward",
+   "text": "Shelly Ward"
+  },
+  {
+   "id": "8ea9893949",
+   "where": "span · Shelly Ward",
+   "original": "Read profile →",
+   "text": "Read profile →"
+  },
+  {
+   "id": "d0ad94fd15",
+   "where": "p · Shelly Ward",
+   "original": "Weight Loss, Post-Rehab Training, Populations 40+",
+   "text": "Weight Loss, Post-Rehab Training, Populations 40+"
+  },
+  {
+   "id": "b1d4c9d37f",
+   "where": "h3 · Shelly Ward",
+   "original": "Sofia Montealegre",
+   "text": "Sofia Montealegre"
+  },
+  {
+   "id": "baffbd034c",
+   "where": "span · Sofia Montealegre",
+   "original": "Read profile →",
+   "text": "Read profile →"
+  },
+  {
+   "id": "8119fb852b",
+   "where": "p · Sofia Montealegre",
+   "original": "Weight Loss, Child/Adolescent Training, Hypertrophy/Muscle Gain",
+   "text": "Weight Loss, Child/Adolescent Training, Hypertrophy/Muscle Gain"
+  },
+  {
+   "id": "c52048be56",
+   "where": "p · Sofia Montealegre",
+   "original": "Education is the most powerful weapon. &mdash; Nelson Mandela",
+   "text": "Education is the most powerful weapon. &mdash; Nelson Mandela"
+  },
+  {
+   "id": "0316aa8040",
+   "where": "h3 · Sofia Montealegre",
+   "original": "Steve Perrault",
+   "text": "Steve Perrault"
+  },
+  {
+   "id": "fb1ca78fbc",
+   "where": "span · Steve Perrault",
+   "original": "Read profile →",
+   "text": "Read profile →"
+  },
+  {
+   "id": "2786bce2b6",
+   "where": "p · Steve Perrault",
+   "original": "Weight Loss, Strength Training, Post-Rehab Training",
+   "text": "Weight Loss, Strength Training, Post-Rehab Training"
+  },
+  {
+   "id": "1a3e8689dc",
+   "where": "p · Steve Perrault",
+   "original": "I can do all things through Christ who strengthens me.",
+   "text": "I can do all things through Christ who strengthens me."
+  },
+  {
+   "id": "2beeb4a969",
+   "where": "h3 · Steve Perrault",
+   "original": "Victoria Beckham",
+   "text": "Victoria Beckham"
+  },
+  {
+   "id": "11d4bd502d",
+   "where": "span · Victoria Beckham",
+   "original": "Read profile →",
+   "text": "Read profile →"
+  },
+  {
+   "id": "ce08bf81f0",
+   "where": "p · Victoria Beckham",
+   "original": "Weight Loss, Hypertrophy/Muscle Gain, Nutrition Education",
+   "text": "Weight Loss, Hypertrophy/Muscle Gain, Nutrition Education"
+  },
+  {
+   "id": "c07864522c",
+   "where": "button · Victoria Beckham",
+   "original": "✕",
+   "text": "✕"
+  },
+  {
+   "id": "3f443a1ccb",
+   "where": "p · Victoria Beckham",
+   "original": "Train with",
+   "text": "Train with"
+  },
+  {
+   "id": "763a30b095",
+   "where": "label · Victoria Beckham",
+   "original": "First name",
+   "text": "First name"
+  },
+  {
+   "id": "3d94f173b7",
+   "where": "label · Victoria Beckham",
+   "original": "Last name",
+   "text": "Last name"
+  },
+  {
+   "id": "cdc515f650",
+   "where": "label · Victoria Beckham",
+   "original": "Email address",
+   "text": "Email address"
+  },
+  {
+   "id": "2430339ee1",
+   "where": "label · Victoria Beckham",
+   "original": "Phone",
+   "text": "Phone"
+  },
+  {
+   "id": "e5f1123336",
+   "where": "button · Victoria Beckham",
+   "original": "Request This Trainer",
+   "text": "Request This Trainer"
+  },
+  {
+   "id": "091220902e",
+   "where": "span · Victoria Beckham",
+   "original": "→",
+   "text": "→"
+  },
+  {
+   "id": "edf95b82ef",
+   "where": "p · Victoria Beckham",
+   "original": "Real members. Real results.",
+   "text": "Real members. Real results."
+  },
+  {
+   "id": "7d2d47baeb",
+   "where": "blockquote · Victoria Beckham",
+   "original": "I finally see changes in my body and I can run again.",
+   "text": "I finally see changes in my body and I can run again."
+  },
+  {
+   "id": "d0bfd8c979",
+   "where": "figcaption · Victoria Beckham",
+   "original": "— Sindia",
+   "text": "— Sindia"
+  },
+  {
+   "id": "5ffecf4bb6",
+   "where": "blockquote · Victoria Beckham",
+   "original": "I've experienced the results that personal training can give you and it's life-enhancing.",
+   "text": "I've experienced the results that personal training can give you and it's life-enhancing."
+  },
+  {
+   "id": "6ae0b6185b",
+   "where": "figcaption · Victoria Beckham",
+   "original": "— Phyllis",
+   "text": "— Phyllis"
+  },
+  {
+   "id": "a2aebe4455",
+   "where": "blockquote · Victoria Beckham",
+   "original": "I lost 55lbs and found the confidence to keep it off.",
+   "text": "I lost 55lbs and found the confidence to keep it off."
+  },
+  {
+   "id": "fe1b7211fb",
+   "where": "figcaption · Victoria Beckham",
+   "original": "— Carol",
+   "text": "— Carol"
+  },
+  {
+   "id": "1d8b934caf",
+   "where": "blockquote · Victoria Beckham",
+   "original": "I am proud to say I have lost nearly 80lbs with the expertise of my trainer who pushed me to heights I never thought possible and never gave up on me.",
+   "text": "I am proud to say I have lost nearly 80lbs with the expertise of my trainer who pushed me to heights I never thought possible and never gave up on me."
+  },
+  {
+   "id": "e3870f8ef8",
+   "where": "figcaption · Victoria Beckham",
+   "original": "— Anita",
+   "text": "— Anita"
+  },
+  {
+   "id": "d7b064378a",
+   "where": "blockquote · Victoria Beckham",
+   "original": "I added 20 yards to my golf drive and lowered my A1C.",
+   "text": "I added 20 yards to my golf drive and lowered my A1C."
+  },
+  {
+   "id": "9e2b0fd31f",
+   "where": "figcaption · Victoria Beckham",
+   "original": "— Steber",
+   "text": "— Steber"
+  },
+  {
+   "id": "3fb451696b",
+   "where": "blockquote · Victoria Beckham",
+   "original": "Through my trainer's leadership and motivational skills, I was able to lose over 30 pounds.",
+   "text": "Through my trainer's leadership and motivational skills, I was able to lose over 30 pounds."
+  },
+  {
+   "id": "09cdec873c",
+   "where": "figcaption · Victoria Beckham",
+   "original": "— Jared C.",
+   "text": "— Jared C."
+  },
+  {
+   "id": "b27507d20b",
+   "where": "blockquote · Victoria Beckham",
+   "original": "I dropped five dress sizes and 45 pounds with personal training. You can too!",
+   "text": "I dropped five dress sizes and 45 pounds with personal training. You can too!"
+  },
+  {
+   "id": "aee486dbcc",
+   "where": "figcaption · Victoria Beckham",
+   "original": "— Kimmy C.",
+   "text": "— Kimmy C."
+  },
+  {
+   "id": "b3746def00",
+   "where": "blockquote · Victoria Beckham",
+   "original": "I'm pain-free. Personal training has me hiking trails again.",
+   "text": "I'm pain-free. Personal training has me hiking trails again."
+  },
+  {
+   "id": "b0c81c7ab5",
+   "where": "figcaption · Victoria Beckham",
+   "original": "— Scott F.",
+   "text": "— Scott F."
+  },
+  {
+   "id": "9151f039c5",
+   "where": "p · Victoria Beckham",
+   "original": "Free fitness assessment & training session",
+   "text": "Free fitness assessment & training session"
+  },
+  {
+   "id": "c9204df2e4",
+   "where": "h2 · Victoria Beckham",
+   "original": "Your first session is on",
+   "text": "Your first session is on"
+  },
+  {
+   "id": "359f869a46",
+   "where": "span · Your first session is on",
+   "original": "us",
+   "text": "us"
+  },
+  {
+   "id": "c8e04c40f3",
+   "where": "p · Your first session is on",
+   "original": "You will be matched with a certified personal trainer to assess your abilities, determine your action plan and guide your complimentary training session. Your assessment features the InBody 570 Body Composition Analyzer — a detailed snapshot of your body's makeup: body fat, lean muscle, metabolic rate, total body water, and visceral fat — helping you make informed decisions about your fitness and wellness journey.",
+   "text": "You will be matched with a certified personal trainer to assess your abilities, determine your action plan and guide your complimentary training session. Your assessment features the InBody 570 Body Composition Analyzer — a detailed snapshot of your body's makeup: body fat, lean muscle, metabolic rate, total body water, and visceral fat — helping you make informed decisions about your fitness and wellness journey."
+  },
+  {
+   "id": "d1688052da",
+   "where": "label · Your first session is on",
+   "original": "First name",
+   "text": "First name"
+  },
+  {
+   "id": "3529150754",
+   "where": "label · Your first session is on",
+   "original": "Last name",
+   "text": "Last name"
+  },
+  {
+   "id": "22bb1d2641",
+   "where": "label · Your first session is on",
+   "original": "Email address",
+   "text": "Email address"
+  },
+  {
+   "id": "88d8ca96d2",
+   "where": "label · Your first session is on",
+   "original": "Phone",
+   "text": "Phone"
+  },
+  {
+   "id": "6d966e1cc0",
+   "where": "option · Your first session is on",
+   "original": "Free Assessment",
+   "text": "Free Assessment"
+  },
+  {
+   "id": "184c853781",
+   "where": "option · Your first session is on",
+   "original": "1 on 1 Personal Training",
+   "text": "1 on 1 Personal Training"
+  },
+  {
+   "id": "738f795fd6",
+   "where": "option · Your first session is on",
+   "original": "Semi-Private Personal Training",
+   "text": "Semi-Private Personal Training"
+  },
+  {
+   "id": "1e8b33cf12",
+   "where": "option · Your first session is on",
+   "original": "Express Training Sessions",
+   "text": "Express Training Sessions"
+  },
+  {
+   "id": "da013bc00a",
+   "where": "label · Your first session is on",
+   "original": "What are you interested in?",
+   "text": "What are you interested in?"
+  },
+  {
+   "id": "f08c8052bb",
+   "where": "button · Your first session is on",
+   "original": "Schedule Your Assessment",
+   "text": "Schedule Your Assessment"
+  },
+  {
+   "id": "3b90f95cfb",
+   "where": "span · Your first session is on",
+   "original": "→",
+   "text": "→"
+  },
+  {
+   "id": "034c4a73f5",
+   "where": "p · Your first session is on",
+   "original": "We will contact you via phone, email, or text. There is no charge, no obligation and no risk.",
+   "text": "We will contact you via phone, email, or text. There is no charge, no obligation and no risk."
+  },
+  {
+   "id": "0a7db6f559",
+   "where": "h2 · Your first session is on",
+   "original": "Now is the time.",
+   "text": "Now is the time."
+  },
+  {
+   "id": "f7b55014f4",
+   "where": "span · Now is the time.",
+   "original": "Start training for life.",
+   "text": "Start training for life."
+  },
+  {
+   "id": "48d06504f0",
+   "where": "p · Now is the time.",
+   "original": "Complete the form and we will contact you via phone, email, or text. We look forward to meeting you!",
+   "text": "Complete the form and we will contact you via phone, email, or text. We look forward to meeting you!"
+  },
+  {
+   "id": "56fadb7370",
+   "where": "a · Now is the time.",
+   "original": "Get Started",
+   "text": "Get Started"
+  },
+  {
+   "id": "9e8fd7c5f1",
+   "where": "a · Now is the time.",
+   "original": "Free All-Access Pass",
+   "text": "Free All-Access Pass"
+  }
+ ]
+}

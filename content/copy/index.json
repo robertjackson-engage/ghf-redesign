@@ -1,0 +1,767 @@
+{
+ "page": "index",
+ "items": [
+  {
+   "id": "fc24ae6460",
+   "where": "Browser tab title",
+   "original": "Gainesville Health & Fitness | The Gym That's Best At Helping Beginners",
+   "text": "Gainesville Health & Fitness | The Gym That's Best At Helping Beginners"
+  },
+  {
+   "id": "aaba66461a",
+   "where": "Search-engine description",
+   "original": "The gym that's best at helping beginners — with staff to guide your journey. 3 locations, 900+ classes monthly, open 24/7 at GHF Main.",
+   "text": "The gym that's best at helping beginners — with staff to guide your journey. 3 locations, 900+ classes monthly, open 24/7 at GHF Main."
+  },
+  {
+   "id": "9d004ba8ad",
+   "where": "p",
+   "original": "Gainesville's most-loved gym — 45 years strong",
+   "text": "Gainesville's most-loved gym — 45 years strong"
+  },
+  {
+   "id": "dee1c19132",
+   "where": "span",
+   "original": "Walk in unsure.",
+   "text": "Walk in unsure."
+  },
+  {
+   "id": "d645c8a296",
+   "where": "span",
+   "original": "Walk out",
+   "text": "Walk out"
+  },
+  {
+   "id": "95ee0783ef",
+   "where": "span",
+   "original": "stronger",
+   "text": "stronger"
+  },
+  {
+   "id": "0895cf5534",
+   "where": "p",
+   "original": "Starting is the hardest part — so we made it the easiest. From your very first visit, a real coach walks the floor with you, builds your plan, and shows you the ropes. No guesswork. No intimidation. Just results.",
+   "text": "Starting is the hardest part — so we made it the easiest. From your very first visit, a real coach walks the floor with you, builds your plan, and shows you the ropes. No guesswork. No intimidation. Just results."
+  },
+  {
+   "id": "f12031d865",
+   "where": "a",
+   "original": "Claim Your Free Fitness Pass",
+   "text": "Claim Your Free Fitness Pass"
+  },
+  {
+   "id": "7674a126c1",
+   "where": "a",
+   "original": "See What's Inside",
+   "text": "See What's Inside"
+  },
+  {
+   "id": "02e1994151",
+   "where": "a",
+   "original": "Join Online",
+   "text": "Join Online"
+  },
+  {
+   "id": "d885eeec19",
+   "where": "a",
+   "original": "Free Pass",
+   "text": "Free Pass"
+  },
+  {
+   "id": "117038c78c",
+   "where": "a",
+   "original": "Get Pricing",
+   "text": "Get Pricing"
+  },
+  {
+   "id": "8dd8bca1c8",
+   "where": "span",
+   "original": "Free coaching on every visit",
+   "text": "Free coaching on every visit"
+  },
+  {
+   "id": "c53652d7c6",
+   "where": "span",
+   "original": "Open 24/7 at GHF Main",
+   "text": "Open 24/7 at GHF Main"
+  },
+  {
+   "id": "b4341a104c",
+   "where": "span",
+   "original": "900+ classes included",
+   "text": "900+ classes included"
+  },
+  {
+   "id": "aa6af4924d",
+   "where": "span",
+   "original": "Strength",
+   "text": "Strength"
+  },
+  {
+   "id": "5fb573afab",
+   "where": "span",
+   "original": "Cardio",
+   "text": "Cardio"
+  },
+  {
+   "id": "d63ab00a84",
+   "where": "span",
+   "original": "Hot Yoga",
+   "text": "Hot Yoga"
+  },
+  {
+   "id": "fcc78bd573",
+   "where": "span",
+   "original": "Pilates",
+   "text": "Pilates"
+  },
+  {
+   "id": "f7b815fc9d",
+   "where": "span",
+   "original": "Indoor Pool",
+   "text": "Indoor Pool"
+  },
+  {
+   "id": "ce254b0150",
+   "where": "span",
+   "original": "Sauna",
+   "text": "Sauna"
+  },
+  {
+   "id": "5998cf1d29",
+   "where": "span",
+   "original": "Recovery",
+   "text": "Recovery"
+  },
+  {
+   "id": "a0b681ec47",
+   "where": "span",
+   "original": "Fitness Classes",
+   "text": "Fitness Classes"
+  },
+  {
+   "id": "541b1a2878",
+   "where": "span",
+   "original": "Personal Training",
+   "text": "Personal Training"
+  },
+  {
+   "id": "ec56cc82f6",
+   "where": "span",
+   "original": "Strength",
+   "text": "Strength"
+  },
+  {
+   "id": "71559a8328",
+   "where": "span",
+   "original": "Cardio",
+   "text": "Cardio"
+  },
+  {
+   "id": "ae726e99af",
+   "where": "span",
+   "original": "Hot Yoga",
+   "text": "Hot Yoga"
+  },
+  {
+   "id": "8ce490b9a5",
+   "where": "span",
+   "original": "Pilates",
+   "text": "Pilates"
+  },
+  {
+   "id": "ffb2e6186a",
+   "where": "span",
+   "original": "Indoor Pool",
+   "text": "Indoor Pool"
+  },
+  {
+   "id": "de16555e59",
+   "where": "span",
+   "original": "Sauna",
+   "text": "Sauna"
+  },
+  {
+   "id": "68e78554b3",
+   "where": "span",
+   "original": "Recovery",
+   "text": "Recovery"
+  },
+  {
+   "id": "1507adeefc",
+   "where": "span",
+   "original": "Fitness Classes",
+   "text": "Fitness Classes"
+  },
+  {
+   "id": "125897b33d",
+   "where": "span",
+   "original": "Personal Training",
+   "text": "Personal Training"
+  },
+  {
+   "id": "5b2c53a30e",
+   "where": "p",
+   "original": "The reason members stay",
+   "text": "The reason members stay"
+  },
+  {
+   "id": "2864a3a587",
+   "where": "h2",
+   "original": "Finally, a gym that",
+   "text": "Finally, a gym that"
+  },
+  {
+   "id": "ef6902025f",
+   "where": "br · Finally, a gym that",
+   "original": "doesn't leave you",
+   "text": "doesn't leave you"
+  },
+  {
+   "id": "9d57993fd3",
+   "where": "span · Finally, a gym that",
+   "original": "guessing",
+   "text": "guessing"
+  },
+  {
+   "id": "c5881c7acc",
+   "where": "p · Finally, a gym that",
+   "original": "You'll never stand in the middle of the floor wondering what to do next. A coach shows you the beginner strength circuit, sets up every machine, and points you to the classes, pool, and recovery spaces that fit your goals — every time you come in, at no extra charge.",
+   "text": "You'll never stand in the middle of the floor wondering what to do next. A coach shows you the beginner strength circuit, sets up every machine, and points you to the classes, pool, and recovery spaces that fit your goals — every time you come in, at no extra charge."
+  },
+  {
+   "id": "256754c499",
+   "where": "p · Finally, a gym that",
+   "original": "Most gyms hand you a key card and wish you luck. We hand you a team. It's the reason people who were nervous to start become members who never want to leave.",
+   "text": "Most gyms hand you a key card and wish you luck. We hand you a team. It's the reason people who were nervous to start become members who never want to leave."
+  },
+  {
+   "id": "0d3a53585b",
+   "where": "a · Finally, a gym that",
+   "original": "See why people choose GHF →",
+   "text": "See why people choose GHF →"
+  },
+  {
+   "id": "eeb3d90e9e",
+   "where": "div · Finally, a gym that",
+   "original": "Years perfecting how beginners start",
+   "text": "Years perfecting how beginners start"
+  },
+  {
+   "id": "cc46342f33",
+   "where": "div · Finally, a gym that",
+   "original": "Coaches on the floor to help you — free",
+   "text": "Coaches on the floor to help you — free"
+  },
+  {
+   "id": "e017c41598",
+   "where": "div · Finally, a gym that",
+   "original": "Classes included, never an upcharge",
+   "text": "Classes included, never an upcharge"
+  },
+  {
+   "id": "e2e5f0bffe",
+   "where": "div · Finally, a gym that",
+   "original": "Locations, one membership, zero excuses",
+   "text": "Locations, one membership, zero excuses"
+  },
+  {
+   "id": "d4152da565",
+   "where": "p · Finally, a gym that",
+   "original": "Find what you'll love",
+   "text": "Find what you'll love"
+  },
+  {
+   "id": "1697b49c83",
+   "where": "h2 · Finally, a gym that",
+   "original": "Every way to",
+   "text": "Every way to"
+  },
+  {
+   "id": "6c2f7fadfc",
+   "where": "span · Every way to",
+   "original": "move",
+   "text": "move"
+  },
+  {
+   "id": "773c05e04d",
+   "where": "a · Every way to",
+   "original": "View all classes →",
+   "text": "View all classes →"
+  },
+  {
+   "id": "5bccaba528",
+   "where": "h3 · Every way to",
+   "original": "Strength",
+   "text": "Strength"
+  },
+  {
+   "id": "e6730238f3",
+   "where": "br · Strength",
+   "original": "Training",
+   "text": "Training"
+  },
+  {
+   "id": "29dd08b114",
+   "where": "span · Strength",
+   "original": "Explore →",
+   "text": "Explore →"
+  },
+  {
+   "id": "a9d79752ce",
+   "where": "h3 · Strength",
+   "original": "Group",
+   "text": "Group"
+  },
+  {
+   "id": "04e0e4b37f",
+   "where": "br · Group",
+   "original": "Classes",
+   "text": "Classes"
+  },
+  {
+   "id": "358c73c3fc",
+   "where": "span · Group",
+   "original": "Explore →",
+   "text": "Explore →"
+  },
+  {
+   "id": "9e054349a4",
+   "where": "h3 · Group",
+   "original": "Pool &",
+   "text": "Pool &"
+  },
+  {
+   "id": "571d0e8f66",
+   "where": "br · Pool &",
+   "original": "Aqua Center",
+   "text": "Aqua Center"
+  },
+  {
+   "id": "8fbb9d2f85",
+   "where": "span · Pool &",
+   "original": "Explore →",
+   "text": "Explore →"
+  },
+  {
+   "id": "c4bb1f01cc",
+   "where": "h3 · Pool &",
+   "original": "Hot",
+   "text": "Hot"
+  },
+  {
+   "id": "d93f1e50f5",
+   "where": "br · Hot",
+   "original": "Yoga",
+   "text": "Yoga"
+  },
+  {
+   "id": "4aa480955c",
+   "where": "span · Hot",
+   "original": "Explore →",
+   "text": "Explore →"
+  },
+  {
+   "id": "d3ac97d7c2",
+   "where": "h3 · Hot",
+   "original": "Cardio",
+   "text": "Cardio"
+  },
+  {
+   "id": "22e5f40ff0",
+   "where": "span · Cardio",
+   "original": "Explore →",
+   "text": "Explore →"
+  },
+  {
+   "id": "4df11d678f",
+   "where": "h3 · Cardio",
+   "original": "Recovery",
+   "text": "Recovery"
+  },
+  {
+   "id": "70947f68be",
+   "where": "span · Recovery",
+   "original": "Explore →",
+   "text": "Explore →"
+  },
+  {
+   "id": "955924b28b",
+   "where": "span · Recovery",
+   "original": "New Leg Den",
+   "text": "New Leg Den"
+  },
+  {
+   "id": "029c164bae",
+   "where": "span · Recovery",
+   "original": "The EndZone",
+   "text": "The EndZone"
+  },
+  {
+   "id": "0bccb03484",
+   "where": "span · Recovery",
+   "original": "Functional Turf",
+   "text": "Functional Turf"
+  },
+  {
+   "id": "3e01eb907e",
+   "where": "span · Recovery",
+   "original": "10,000 sq ft expansion",
+   "text": "10,000 sq ft expansion"
+  },
+  {
+   "id": "c253c81f57",
+   "where": "span · Recovery",
+   "original": "New Leg Den",
+   "text": "New Leg Den"
+  },
+  {
+   "id": "ed209e1e01",
+   "where": "span · Recovery",
+   "original": "The EndZone",
+   "text": "The EndZone"
+  },
+  {
+   "id": "f7580bc76f",
+   "where": "span · Recovery",
+   "original": "Functional Turf",
+   "text": "Functional Turf"
+  },
+  {
+   "id": "fd42720bb6",
+   "where": "span · Recovery",
+   "original": "10,000 sq ft expansion",
+   "text": "10,000 sq ft expansion"
+  },
+  {
+   "id": "954232e8ca",
+   "where": "span · Recovery",
+   "original": "GHF Main",
+   "text": "GHF Main"
+  },
+  {
+   "id": "5d0a9beab3",
+   "where": "p · Recovery",
+   "original": "New at GHF Main",
+   "text": "New at GHF Main"
+  },
+  {
+   "id": "e0b7648b99",
+   "where": "h2 · Recovery",
+   "original": "Don't wait. Work out in the new",
+   "text": "Don't wait. Work out in the new"
+  },
+  {
+   "id": "b2f9e77950",
+   "where": "span · Don't wait. Work out in the new",
+   "original": "Leg Den",
+   "text": "Leg Den"
+  },
+  {
+   "id": "a2175bf337",
+   "where": "p · Don't wait. Work out in the new",
+   "original": "Welcome to the gym near you with more ways to lift so you don't have to wait. Our brand new leg den at GHF Main has double the squat and deadlift platforms in a bigger studio (more than twice the size of the former leg den).",
+   "text": "Welcome to the gym near you with more ways to lift so you don't have to wait. Our brand new leg den at GHF Main has double the squat and deadlift platforms in a bigger studio (more than twice the size of the former leg den)."
+  },
+  {
+   "id": "4c8a4ed75f",
+   "where": "p · Don't wait. Work out in the new",
+   "original": "Enjoy MORE of everything including amenities, classes, 3 locations, and hours — all for your best results. Try out all of our lifting spaces.",
+   "text": "Enjoy MORE of everything including amenities, classes, 3 locations, and hours — all for your best results. Try out all of our lifting spaces."
+  },
+  {
+   "id": "3ddda17a0f",
+   "where": "a · Don't wait. Work out in the new",
+   "original": "Strength Training Options →",
+   "text": "Strength Training Options →"
+  },
+  {
+   "id": "df6bb646df",
+   "where": "span · Don't wait. Work out in the new",
+   "original": "The EndZone",
+   "text": "The EndZone"
+  },
+  {
+   "id": "c58785bb7d",
+   "where": "p · Don't wait. Work out in the new",
+   "original": "Lower body, upgraded",
+   "text": "Lower body, upgraded"
+  },
+  {
+   "id": "f84aff06c8",
+   "where": "h2 · Don't wait. Work out in the new",
+   "original": "The EndZone: your lower body's new",
+   "text": "The EndZone: your lower body's new"
+  },
+  {
+   "id": "131fe3762e",
+   "where": "span · The EndZone: your lower body's new",
+   "original": "home turf",
+   "text": "home turf"
+  },
+  {
+   "id": "2e7fbbadf0",
+   "where": "p · The EndZone: your lower body's new",
+   "original": "A dedicated space packed with all the best equipment to target hips and glutes. Hip thrust platforms, belted squat platform, booty builder abductor, and glute hamstring developer (GHD).",
+   "text": "A dedicated space packed with all the best equipment to target hips and glutes. Hip thrust platforms, belted squat platform, booty builder abductor, and glute hamstring developer (GHD)."
+  },
+  {
+   "id": "9d04b484be",
+   "where": "p · The EndZone: your lower body's new",
+   "original": "These muscles act as your body's powerhouse, stabilizing the pelvis to relieve lower back pain, improving your athletic \"explosiveness,\" and protecting your knees from injury during everyday movement.",
+   "text": "These muscles act as your body's powerhouse, stabilizing the pelvis to relieve lower back pain, improving your athletic \"explosiveness,\" and protecting your knees from injury during everyday movement."
+  },
+  {
+   "id": "657253ce49",
+   "where": "a · The EndZone: your lower body's new",
+   "original": "More Ways To Lift →",
+   "text": "More Ways To Lift →"
+  },
+  {
+   "id": "41bff869ee",
+   "where": "p · The EndZone: your lower body's new",
+   "original": "Recover like you mean it",
+   "text": "Recover like you mean it"
+  },
+  {
+   "id": "eaeef2e87a",
+   "where": "h2 · The EndZone: your lower body's new",
+   "original": "Soak away",
+   "text": "Soak away"
+  },
+  {
+   "id": "212a9f4197",
+   "where": "span · Soak away",
+   "original": "the sore",
+   "text": "the sore"
+  },
+  {
+   "id": "d1699e13eb",
+   "where": "a · Soak away",
+   "original": "More about recovery →",
+   "text": "More about recovery →"
+  },
+  {
+   "id": "3a5098a8f3",
+   "where": "h3 · Soak away",
+   "original": "The Hot Tub",
+   "text": "The Hot Tub"
+  },
+  {
+   "id": "d01d7779d9",
+   "where": "p · The Hot Tub",
+   "original": "Indulge in the therapeutic benefits as the hot water eases tension, promotes muscle relaxation, relieves pain, and improves sleep. Let the hot tub become your personal oasis of tranquility. Available at GHF Main and GHF Women — the Gainesville, FL gyms offering the most recovery options including cold plunge, hot tub, steam, pool, yoga and stretch. Included in every gym membership.",
+   "text": "Indulge in the therapeutic benefits as the hot water eases tension, promotes muscle relaxation, relieves pain, and improves sleep. Let the hot tub become your personal oasis of tranquility. Available at GHF Main and GHF Women — the Gainesville, FL gyms offering the most recovery options including cold plunge, hot tub, steam, pool, yoga and stretch. Included in every gym membership."
+  },
+  {
+   "id": "f5ddc963bf",
+   "where": "h3 · The Hot Tub",
+   "original": "The Cold Plunge",
+   "text": "The Cold Plunge"
+  },
+  {
+   "id": "746c069e72",
+   "where": "p · The Cold Plunge",
+   "original": "Wake up your nervous system and feel alive again. Step into a transformative chill in our cold therapy pool that instantly triggers a powerful surge of endorphins and increased circulation. You'll hit the ultimate reset button on your stress levels, leaving GHF with a renewed sense of energy that caffeine simply can't match. Included in membership!",
+   "text": "Wake up your nervous system and feel alive again. Step into a transformative chill in our cold therapy pool that instantly triggers a powerful surge of endorphins and increased circulation. You'll hit the ultimate reset button on your stress levels, leaving GHF with a renewed sense of energy that caffeine simply can't match. Included in membership!"
+  },
+  {
+   "id": "c3855377b0",
+   "where": "p · The Cold Plunge",
+   "original": "When you're ready for more",
+   "text": "When you're ready for more"
+  },
+  {
+   "id": "4a4a758689",
+   "where": "h2 · The Cold Plunge",
+   "original": "Go further with a",
+   "text": "Go further with a"
+  },
+  {
+   "id": "ec8e4b45d2",
+   "where": "span · Go further with a",
+   "original": "coach in your corner",
+   "text": "coach in your corner"
+  },
+  {
+   "id": "6967ebb504",
+   "where": "p · Go further with a",
+   "original": "Want faster results, real accountability, or a body that surprises you? Pick the program that fits your goal — your first session is free.",
+   "text": "Want faster results, real accountability, or a body that surprises you? Pick the program that fits your goal — your first session is free."
+  },
+  {
+   "id": "fd67c79dde",
+   "where": "span · Go further with a",
+   "original": "Personal Training",
+   "text": "Personal Training"
+  },
+  {
+   "id": "91eee53834",
+   "where": "span · Go further with a",
+   "original": "A certified trainer who knows your name, your history, and your goal — and takes it personally.",
+   "text": "A certified trainer who knows your name, your history, and your goal — and takes it personally."
+  },
+  {
+   "id": "cc303f5d66",
+   "where": "span · Go further with a",
+   "original": "X-Force Body",
+   "text": "X-Force Body"
+  },
+  {
+   "id": "19416d7c59",
+   "where": "span · Go further with a",
+   "original": "Shed fat with one or two short workouts a week. The busy person's secret weapon.",
+   "text": "Shed fat with one or two short workouts a week. The busy person's secret weapon."
+  },
+  {
+   "id": "5f8ee09c5b",
+   "where": "span · Go further with a",
+   "original": "Pilates",
+   "text": "Pilates"
+  },
+  {
+   "id": "c73098fb2e",
+   "where": "span · Go further with a",
+   "original": "Stand taller, move easier, build a core that carries you — on the Reformer.",
+   "text": "Stand taller, move easier, build a core that carries you — on the Reformer."
+  },
+  {
+   "id": "ed33721ded",
+   "where": "span · Go further with a",
+   "original": "CrossFit",
+   "text": "CrossFit"
+  },
+  {
+   "id": "0a6667eeed",
+   "where": "span · Go further with a",
+   "original": "Camaraderie, competition, and results you'll want to brag about.",
+   "text": "Camaraderie, competition, and results you'll want to brag about."
+  },
+  {
+   "id": "9c6698c880",
+   "where": "span · Go further with a",
+   "original": "TRIBE Team Training",
+   "text": "TRIBE Team Training"
+  },
+  {
+   "id": "10e51fa3eb",
+   "where": "span · Go further with a",
+   "original": "Same crew, eight weeks, real accountability. Teams don't let you quit.",
+   "text": "Same crew, eight weeks, real accountability. Teams don't let you quit."
+  },
+  {
+   "id": "770c3719b4",
+   "where": "span · Go further with a",
+   "original": "Step inside",
+   "text": "Step inside"
+  },
+  {
+   "id": "117edc78e8",
+   "where": "br · Go further with a",
+   "original": "GHF Main",
+   "text": "GHF Main"
+  },
+  {
+   "id": "7c5c8d97d2",
+   "where": "blockquote · Go further with a",
+   "original": "I lost 55lbs and found the confidence to keep it off.",
+   "text": "I lost 55lbs and found the confidence to keep it off."
+  },
+  {
+   "id": "7041e632f5",
+   "where": "figcaption · Go further with a",
+   "original": "— Carol, GHF member",
+   "text": "— Carol, GHF member"
+  },
+  {
+   "id": "0ef3f6bb55",
+   "where": "p · Go further with a",
+   "original": "Getting started is the easy part",
+   "text": "Getting started is the easy part"
+  },
+  {
+   "id": "c9fa75e1d7",
+   "where": "h2 · Go further with a",
+   "original": "Your first visit,",
+   "text": "Your first visit,"
+  },
+  {
+   "id": "4cf28eb57f",
+   "where": "span · Your first visit,",
+   "original": "mapped out",
+   "text": "mapped out"
+  },
+  {
+   "id": "046d419cea",
+   "where": "p · Your first visit,",
+   "original": "No contracts to sign, no sales pitch to survive. Just show up and see how it feels.",
+   "text": "No contracts to sign, no sales pitch to survive. Just show up and see how it feels."
+  },
+  {
+   "id": "9d1e402b13",
+   "where": "a · Your first visit,",
+   "original": "Claim your free pass",
+   "text": "Claim your free pass"
+  },
+  {
+   "id": "cd6f0d5ac6",
+   "where": "p · Your first visit,",
+   "original": "One day, full access, zero obligation. Every class, the pool, the sauna, the coaches — on us.",
+   "text": "One day, full access, zero obligation. Every class, the pool, the sauna, the coaches — on us."
+  },
+  {
+   "id": "a6e7fa5ba6",
+   "where": "h3 · Your first visit,",
+   "original": "Meet your coach",
+   "text": "Meet your coach"
+  },
+  {
+   "id": "8283d88141",
+   "where": "p · Meet your coach",
+   "original": "A real human gives you the tour, learns your goal, and walks you through your first workout — so you're never guessing.",
+   "text": "A real human gives you the tour, learns your goal, and walks you through your first workout — so you're never guessing."
+  },
+  {
+   "id": "35d76e18b8",
+   "where": "h3 · Meet your coach",
+   "original": "Make it a habit",
+   "text": "Make it a habit"
+  },
+  {
+   "id": "c30fab74dd",
+   "where": "p · Make it a habit",
+   "original": "A plan that fits your life, people who notice when you show up, and results you can see. That's how one visit becomes a routine.",
+   "text": "A plan that fits your life, people who notice when you show up, and results you can see. That's how one visit becomes a routine."
+  },
+  {
+   "id": "f890409628",
+   "where": "h2 · Make it a habit",
+   "original": "Your first day is",
+   "text": "Your first day is"
+  },
+  {
+   "id": "c5e3c2c4a8",
+   "where": "span · Your first day is",
+   "original": "free",
+   "text": "free"
+  },
+  {
+   "id": "9ea5c4b115",
+   "where": "p · Your first day is",
+   "original": "Full access for a day: every class, the pool, the sauna, the coaches — no charge, no obligation, no sales pitch. The only risk is falling in love with the place.",
+   "text": "Full access for a day: every class, the pool, the sauna, the coaches — no charge, no obligation, no sales pitch. The only risk is falling in love with the place."
+  },
+  {
+   "id": "6b66ff230e",
+   "where": "a · Your first day is",
+   "original": "Claim Your Free Pass",
+   "text": "Claim Your Free Pass"
+  },
+  {
+   "id": "0c097f1dfd",
+   "where": "a · Your first day is",
+   "original": "Join Online Today",
+   "text": "Join Online Today"
+  }
+ ]
+}

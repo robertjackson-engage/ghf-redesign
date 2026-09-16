@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 # GHF redesign — static site generator
 import os, time, json
+import copy_layer
 
 OUT = os.path.join(os.path.dirname(__file__), "docs")
 IMG = "assets/img"
@@ -867,7 +868,9 @@ def savings_directory(items):
 
 
 def page(filename, title, desc, active, body):
-    html = head(title, desc) + header_html(active) + body + footer_html()
+    # copy_layer catalogues every text node for the CMS ("Site Text") and applies edits.
+    html = copy_layer.compose(filename, head(title, desc), header_html(active), footer_html(), body,
+                              manifest=filename not in globals().get("_cms_filenames", set()))
     with open(os.path.join(OUT, filename), "w") as f:
         f.write(html)
     print("built", filename)
@@ -5252,7 +5255,8 @@ def blog_post_body(p):
 """ + cta_band('Like what you\'re <span class="serif">reading?</span>', "Come see it in person.", f"../{IMG}/GroupFit_Echo_Yoga_Class_Outdoor_Classes_2021.jpg")
 
 def page_sub(filename, title, desc, body):
-    html = head(title, desc) + header_html("blog.html") + body + footer_html()
+    # blog posts are edited in the CMS already — apply shared header/footer edits only
+    html = copy_layer.compose(filename, head(title, desc), header_html("blog.html"), footer_html(), body, manifest=False)
     html = _re.sub(r'(href|src)="/(?!/)', r'\1="../', html)
     html = _re.sub(r'(href|src)="assets/', r'\1="../assets/', html)
     html = _re.sub(r'(href)="([a-z0-9-]+\.html)(#[^"]*)?"', r'\1="../\2\3"', html)

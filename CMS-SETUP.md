@@ -74,3 +74,24 @@ Tips:
 - Every page automatically gets the site header, footer, navigation and AI concierge.
 - Existing pages migrated into the builder (e.g. **Bring a Guest**, **Corporate Wellness**)
   live in `content/pages/*.json`; the rest are still generated from `build.py` until migrated.
+
+## Site Text — edit any text on any page
+
+Every piece of text on the site is editable from the CMS without touching code.
+
+- In the CMS sidebar open **Site Text**. There is one entry per page (`index`, `pool`, `join`, …)
+  plus **`_site`**, which holds the header, menus and footer shared by every page.
+- Each page lists its text in page order. **Where** tells you the element and the heading it sits
+  under; **Original** is what the design started with; change **Text** and save.
+- Saving commits `content/copy/<page>.json`; the build action rebuilds and publishes in about a minute.
+- Pages created with the **Pages** editor and **Blog Posts** are edited in their own collections
+  (they don't appear under Site Text). Header/footer edits from `_site` still apply to them.
+
+How it works: `copy_layer.py` runs inside `build.py`. After a page renders, it catalogues each text
+node into the page's JSON (stable ids from the text and its position), then swaps in any entry whose
+Text differs from Original. Running `python3 build.py` also refreshes the catalogues, so new copy
+added in code shows up in the CMS automatically. If code changes an original sentence, the old edit
+for that sentence stops applying and the new sentence appears ready to edit.
+
+Local editing: `python3 serve.py`, open http://localhost:4173/admin/, choose **Work with Local
+Repository** and pick the repo folder — edits write straight to `content/copy/`; run the build to see them.

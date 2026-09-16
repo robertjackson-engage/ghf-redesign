@@ -138,6 +138,36 @@ collections:
             fields:
               - { name: words, label: "Words", widget: list, field: { name: word, widget: string } }
               - { name: accent, label: "Dark background", widget: boolean, default: false, required: false }
+  - name: copy
+    label: "Site Text"
+    label_singular: "Page text"
+    folder: "content/copy"
+    extension: json
+    format: json
+    create: false
+    delete: false
+    identifier_field: page
+    summary: "{{page}}"
+    sortable_fields: [page]
+    description: >
+      Every piece of text on the site, page by page. "_site" holds the header, menus and footer
+      shared by all pages. Change the "Text" field — "Original" shows what the design started
+      with and "Where" tells you the element and the heading it sits under. Saving publishes on
+      the next build (about a minute). Pages built with the Pages editor are edited there instead.
+    fields:
+      - { name: page, label: "Page", widget: string, readonly: true }
+      - name: items
+        label: "Text on this page"
+        label_singular: "Text"
+        widget: list
+        allow_add: false
+        collapsed: true
+        summary: "{{fields.where}}  —  {{fields.text}}"
+        fields:
+          - { name: id, widget: hidden }
+          - { name: where, label: "Where", widget: string, readonly: true }
+          - { name: original, label: "Original", widget: text, readonly: true }
+          - { name: text, label: "Text", widget: text }
   - name: blog
     label: "Blog Posts"
     label_singular: "Blog Post"

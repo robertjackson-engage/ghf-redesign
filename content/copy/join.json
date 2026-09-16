@@ -1,0 +1,557 @@
+{
+ "page": "join",
+ "items": [
+  {
+   "id": "0df657158b",
+   "where": "Browser tab title",
+   "original": "Join Online | Gainesville's Best Gym Memberships | GHF",
+   "text": "Join Online | Gainesville's Best Gym Memberships | GHF"
+  },
+  {
+   "id": "85ad283d80",
+   "where": "Search-engine description",
+   "original": "Join Gainesville's best gym online — $29.99 + tax, dues every other Wednesday, no maintenance fee. 24 month, 12 month, and month-to-month agreements.",
+   "text": "Join Gainesville's best gym online — $29.99 + tax, dues every other Wednesday, no maintenance fee. 24 month, 12 month, and month-to-month agreements."
+  },
+  {
+   "id": "f7c20bbf7d",
+   "where": "a",
+   "original": "Home",
+   "text": "Home"
+  },
+  {
+   "id": "965c23e596",
+   "where": "text",
+   "original": "/ Join Online",
+   "text": "/ Join Online"
+  },
+  {
+   "id": "2eb17ee35e",
+   "where": "p",
+   "original": "Join Online — Memberships from $29.99 + tax",
+   "text": "Join Online — Memberships from $29.99 + tax"
+  },
+  {
+   "id": "27376a44c5",
+   "where": "span",
+   "original": "Join Gainesville's",
+   "text": "Join Gainesville's"
+  },
+  {
+   "id": "b2eb1772d9",
+   "where": "span",
+   "original": "best gym —",
+   "text": "best gym —"
+  },
+  {
+   "id": "802adf5505",
+   "where": "span",
+   "original": "online",
+   "text": "online"
+  },
+  {
+   "id": "3eea7c45b4",
+   "where": "p",
+   "original": "Be part of Gainesville's largest, state-of-the-art fitness community, where your membership connects you to expert guidance, innovative programs, and top-tier amenities for both physical and mental well-being.",
+   "text": "Be part of Gainesville's largest, state-of-the-art fitness community, where your membership connects you to expert guidance, innovative programs, and top-tier amenities for both physical and mental well-being."
+  },
+  {
+   "id": "b7f368d657",
+   "where": "em",
+   "original": "Must be 18 years or older to join without parent or guardian. Not quite ready to join?",
+   "text": "Must be 18 years or older to join without parent or guardian. Not quite ready to join?"
+  },
+  {
+   "id": "edc162d85e",
+   "where": "a",
+   "original": "Try GHF with a free gym pass",
+   "text": "Try GHF with a free gym pass"
+  },
+  {
+   "id": "41e609cbfc",
+   "where": "p",
+   "original": "All memberships are less than",
+   "text": "All memberships are less than"
+  },
+  {
+   "id": "b7cba8ad7f",
+   "where": "strong",
+   "original": "$16",
+   "text": "$16"
+  },
+  {
+   "id": "92b70fa934",
+   "where": "text",
+   "original": "a week",
+   "text": "a week"
+  },
+  {
+   "id": "c6a676a704",
+   "where": "span",
+   "original": "One membership, 3 locations",
+   "text": "One membership, 3 locations"
+  },
+  {
+   "id": "9b4f3f3e68",
+   "where": "a",
+   "original": "Start My Membership",
+   "text": "Start My Membership"
+  },
+  {
+   "id": "a41e28d0db",
+   "where": "a",
+   "original": "Or Call (352) 377-4955",
+   "text": "Or Call (352) 377-4955"
+  },
+  {
+   "id": "b8d2bac778",
+   "where": "div",
+   "original": "Gainesville Health & Fitness",
+   "text": "Gainesville Health & Fitness"
+  },
+  {
+   "id": "b409598a0b",
+   "where": "em",
+   "original": "join",
+   "text": "join"
+  },
+  {
+   "id": "aedd3abc1b",
+   "where": "div",
+   "original": "Secure enrollment",
+   "text": "Secure enrollment"
+  },
+  {
+   "id": "2442cdcf24",
+   "where": "button",
+   "original": "×",
+   "text": "×"
+  },
+  {
+   "id": "a8376ffbde",
+   "where": "span",
+   "original": "Your details",
+   "text": "Your details"
+  },
+  {
+   "id": "e8111777c3",
+   "where": "span",
+   "original": "Home club",
+   "text": "Home club"
+  },
+  {
+   "id": "c126031fb8",
+   "where": "span",
+   "original": "Membership",
+   "text": "Membership"
+  },
+  {
+   "id": "2694c093ea",
+   "where": "span",
+   "original": "Due today",
+   "text": "Due today"
+  },
+  {
+   "id": "dfd7a383c1",
+   "where": "p",
+   "original": "Step one",
+   "text": "Step one"
+  },
+  {
+   "id": "67451c646e",
+   "where": "h1",
+   "original": "Tell us",
+   "text": "Tell us"
+  },
+  {
+   "id": "b73a466660",
+   "where": "span · Tell us",
+   "original": "about you",
+   "text": "about you"
+  },
+  {
+   "id": "6ab706e61b",
+   "where": "p · Tell us",
+   "original": "Must be 18 years or older to join without a parent or guardian.",
+   "text": "Must be 18 years or older to join without a parent or guardian."
+  },
+  {
+   "id": "10a5dbe5d2",
+   "where": "label · Tell us",
+   "original": "First name",
+   "text": "First name"
+  },
+  {
+   "id": "363e62a333",
+   "where": "label · Tell us",
+   "original": "Last name",
+   "text": "Last name"
+  },
+  {
+   "id": "14eecbcc03",
+   "where": "label · Tell us",
+   "original": "Email",
+   "text": "Email"
+  },
+  {
+   "id": "c0d22dc326",
+   "where": "label · Tell us",
+   "original": "Mobile",
+   "text": "Mobile"
+  },
+  {
+   "id": "c1318cbe19",
+   "where": "button · Tell us",
+   "original": "Continue",
+   "text": "Continue"
+  },
+  {
+   "id": "c6c9c4b785",
+   "where": "p · Tell us",
+   "original": "Step two",
+   "text": "Step two"
+  },
+  {
+   "id": "27fd929765",
+   "where": "h1 · Tell us",
+   "original": "Pick your",
+   "text": "Pick your"
+  },
+  {
+   "id": "57e27c9e51",
+   "where": "span · Pick your",
+   "original": "home",
+   "text": "home"
+  },
+  {
+   "id": "0e73bde86a",
+   "where": "text · Pick your",
+   "original": "club",
+   "text": "club"
+  },
+  {
+   "id": "b0ebb93070",
+   "where": "p · Pick your",
+   "original": "One membership opens all three. Train wherever the day takes you.",
+   "text": "One membership opens all three. Train wherever the day takes you."
+  },
+  {
+   "id": "4eaba167ce",
+   "where": "button · Pick your",
+   "original": "Back",
+   "text": "Back"
+  },
+  {
+   "id": "4c9aa5f046",
+   "where": "button · Pick your",
+   "original": "Continue",
+   "text": "Continue"
+  },
+  {
+   "id": "6728ca6306",
+   "where": "p · Pick your",
+   "original": "Step three",
+   "text": "Step three"
+  },
+  {
+   "id": "5f1564429e",
+   "where": "h1 · Pick your",
+   "original": "Choose your",
+   "text": "Choose your"
+  },
+  {
+   "id": "47e8974498",
+   "where": "span · Choose your",
+   "original": "membership",
+   "text": "membership"
+  },
+  {
+   "id": "b341e7a72b",
+   "where": "p · Choose your",
+   "original": "Every plan is $29.99 + tax every other Wednesday — and there is no maintenance fee, ever.",
+   "text": "Every plan is $29.99 + tax every other Wednesday — and there is no maintenance fee, ever."
+  },
+  {
+   "id": "ae7c368ca0",
+   "where": "button · Choose your",
+   "original": "Back",
+   "text": "Back"
+  },
+  {
+   "id": "3865094957",
+   "where": "button · Choose your",
+   "original": "Continue",
+   "text": "Continue"
+  },
+  {
+   "id": "ece6ea5890",
+   "where": "p · Choose your",
+   "original": "Step four",
+   "text": "Step four"
+  },
+  {
+   "id": "d46ef1b937",
+   "where": "h1 · Choose your",
+   "original": "Total due",
+   "text": "Total due"
+  },
+  {
+   "id": "41389d3e82",
+   "where": "span · Total due",
+   "original": "today",
+   "text": "today"
+  },
+  {
+   "id": "380ea79af4",
+   "where": "span · Total due",
+   "original": "Preparing secure window…",
+   "text": "Preparing secure window…"
+  },
+  {
+   "id": "d0aea71eee",
+   "where": "p · Total due",
+   "original": "🔒 Entered directly with our payment processor. GHF never sees your card number.",
+   "text": "🔒 Entered directly with our payment processor. GHF never sees your card number."
+  },
+  {
+   "id": "ac90697052",
+   "where": "button · Total due",
+   "original": "Back",
+   "text": "Back"
+  },
+  {
+   "id": "21d78e71f1",
+   "where": "p · Total due",
+   "original": "Welcome to GHF",
+   "text": "Welcome to GHF"
+  },
+  {
+   "id": "569d2143be",
+   "where": "h1 · Total due",
+   "original": "You're",
+   "text": "You're"
+  },
+  {
+   "id": "d05e53791c",
+   "where": "span · You're",
+   "original": "in",
+   "text": "in"
+  },
+  {
+   "id": "69a021a9b7",
+   "where": "p · You're",
+   "original": "Recurring dues",
+   "text": "Recurring dues"
+  },
+  {
+   "id": "5d44e4b550",
+   "where": "p · You're",
+   "original": "Prefer your dues to come from a different card, or from your bank account? You can switch now — today's payment is already done and will not be affected.",
+   "text": "Prefer your dues to come from a different card, or from your bank account? You can switch now — today's payment is already done and will not be affected."
+  },
+  {
+   "id": "e8ce1503b2",
+   "where": "button · You're",
+   "original": "Use a different method",
+   "text": "Use a different method"
+  },
+  {
+   "id": "15071a4042",
+   "where": "a · You're",
+   "original": "Browse classes",
+   "text": "Browse classes"
+  },
+  {
+   "id": "bfd69bca35",
+   "where": "a · You're",
+   "original": "Back to home",
+   "text": "Back to home"
+  },
+  {
+   "id": "c1b5d4441c",
+   "where": "h3 · You're",
+   "original": "Your cart",
+   "text": "Your cart"
+  },
+  {
+   "id": "c211d7b2f9",
+   "where": "p · Your cart",
+   "original": "Every GHF membership includes",
+   "text": "Every GHF membership includes"
+  },
+  {
+   "id": "e92214ebf7",
+   "where": "h2 · Your cart",
+   "original": "The benefits and amenities of Gainesville's best",
+   "text": "The benefits and amenities of Gainesville's best"
+  },
+  {
+   "id": "0332e7626b",
+   "where": "span · The benefits and amenities of Gainesville's best",
+   "original": "gym",
+   "text": "gym"
+  },
+  {
+   "id": "1642661323",
+   "where": "p · The benefits and amenities of Gainesville's best",
+   "original": "With a strong culture of service, every employee goes above and beyond to help you reach your full potential. You're going to feel good here.",
+   "text": "With a strong culture of service, every employee goes above and beyond to help you reach your full potential. You're going to feel good here."
+  },
+  {
+   "id": "23691c00f3",
+   "where": "li · The benefits and amenities of Gainesville's best",
+   "original": "24-hour access at GHF Main",
+   "text": "24-hour access at GHF Main"
+  },
+  {
+   "id": "0e20d1f287",
+   "where": "li · The benefits and amenities of Gainesville's best",
+   "original": "Fitness staff to help you every time",
+   "text": "Fitness staff to help you every time"
+  },
+  {
+   "id": "d08cd08cf9",
+   "where": "li · The benefits and amenities of Gainesville's best",
+   "original": "900+ free fitness classes each month",
+   "text": "900+ free fitness classes each month"
+  },
+  {
+   "id": "830cb13831",
+   "where": "li · The benefits and amenities of Gainesville's best",
+   "original": "Free hot yoga classes",
+   "text": "Free hot yoga classes"
+  },
+  {
+   "id": "271d1d6b00",
+   "where": "li · The benefits and amenities of Gainesville's best",
+   "original": "Largest variety of cardio & weight training machines",
+   "text": "Largest variety of cardio & weight training machines"
+  },
+  {
+   "id": "a006e93ed6",
+   "where": "li · The benefits and amenities of Gainesville's best",
+   "original": "One membership, 3 locations",
+   "text": "One membership, 3 locations"
+  },
+  {
+   "id": "901217c542",
+   "where": "li · The benefits and amenities of Gainesville's best",
+   "original": "GHF Women only fitness location",
+   "text": "GHF Women only fitness location"
+  },
+  {
+   "id": "baf2348653",
+   "where": "li · The benefits and amenities of Gainesville's best",
+   "original": "Indoor basketball and volleyball",
+   "text": "Indoor basketball and volleyball"
+  },
+  {
+   "id": "840879087f",
+   "where": "li · The benefits and amenities of Gainesville's best",
+   "original": "Renovated indoor heated pools",
+   "text": "Renovated indoor heated pools"
+  },
+  {
+   "id": "1007216d62",
+   "where": "li · The benefits and amenities of Gainesville's best",
+   "original": "Sauna, steam, hot tub, cold pool",
+   "text": "Sauna, steam, hot tub, cold pool"
+  },
+  {
+   "id": "194871d5a2",
+   "where": "li · The benefits and amenities of Gainesville's best",
+   "original": "Full-time housekeeping",
+   "text": "Full-time housekeeping"
+  },
+  {
+   "id": "7cc2a21e33",
+   "where": "li · The benefits and amenities of Gainesville's best",
+   "original": "Free lockers",
+   "text": "Free lockers"
+  },
+  {
+   "id": "3fb9308971",
+   "where": "li · The benefits and amenities of Gainesville's best",
+   "original": "Free babysitting",
+   "text": "Free babysitting"
+  },
+  {
+   "id": "c0e47285ff",
+   "where": "li · The benefits and amenities of Gainesville's best",
+   "original": "Member savings program",
+   "text": "Member savings program"
+  },
+  {
+   "id": "d8e49012d6",
+   "where": "span · The benefits and amenities of Gainesville's best",
+   "original": "Our Expertise",
+   "text": "Our Expertise"
+  },
+  {
+   "id": "c6f2f3cd6e",
+   "where": "h3 · The benefits and amenities of Gainesville's best",
+   "original": "Helping beginners get started",
+   "text": "Helping beginners get started"
+  },
+  {
+   "id": "f7486438d4",
+   "where": "span · Helping beginners get started",
+   "original": "Our Passion",
+   "text": "Our Passion"
+  },
+  {
+   "id": "a0986b1cee",
+   "where": "h3 · Helping beginners get started",
+   "original": "Guiding you to break out of your comfort zone and unleash your fullest potential",
+   "text": "Guiding you to break out of your comfort zone and unleash your fullest potential"
+  },
+  {
+   "id": "15af85ad89",
+   "where": "span · Guiding you to break out of your comfort zone and unleash yo",
+   "original": "Our Promise",
+   "text": "Our Promise"
+  },
+  {
+   "id": "890377615f",
+   "where": "h3 · Guiding you to break out of your comfort zone and unleash yo",
+   "original": "You're going to feel good here",
+   "text": "You're going to feel good here"
+  },
+  {
+   "id": "7302f398d3",
+   "where": "h2 · You're going to feel good here",
+   "original": "Or call",
+   "text": "Or call"
+  },
+  {
+   "id": "06c9aa206c",
+   "where": "span · Or call",
+   "original": "(352) 377-4955",
+   "text": "(352) 377-4955"
+  },
+  {
+   "id": "83d6f0bf16",
+   "where": "text · Or call",
+   "original": "today",
+   "text": "today"
+  },
+  {
+   "id": "5072ba09bb",
+   "where": "p · Or call",
+   "original": "Not quite ready to join? Try GHF with a free gym pass — there is no charge, no obligation and no risk.",
+   "text": "Not quite ready to join? Try GHF with a free gym pass — there is no charge, no obligation and no risk."
+  },
+  {
+   "id": "2313f53770",
+   "where": "a · Or call",
+   "original": "Try GHF For Free",
+   "text": "Try GHF For Free"
+  },
+  {
+   "id": "378f9e81a1",
+   "where": "a · Or call",
+   "original": "Request Pricing & More Info",
+   "text": "Request Pricing & More Info"
+  }
+ ]
+}

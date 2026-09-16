@@ -1,0 +1,125 @@
+{
+ "page": "blog",
+ "items": [
+  {
+   "id": "6fb40d10c3",
+   "where": "Browser tab title",
+   "original": "Blog | GHF",
+   "text": "Blog | GHF"
+  },
+  {
+   "id": "15eca24ed5",
+   "where": "Search-engine description",
+   "original": "News, stories and tips from GHF.",
+   "text": "News, stories and tips from GHF."
+  },
+  {
+   "id": "43201d3adc",
+   "where": "a",
+   "original": "Home",
+   "text": "Home"
+  },
+  {
+   "id": "980b299df9",
+   "where": "text",
+   "original": "/ Blog",
+   "text": "/ Blog"
+  },
+  {
+   "id": "7f81afb53c",
+   "where": "p",
+   "original": "GHF Blog",
+   "text": "GHF Blog"
+  },
+  {
+   "id": "39fb67f95d",
+   "where": "span",
+   "original": "News &",
+   "text": "News &"
+  },
+  {
+   "id": "97c42d886a",
+   "where": "span",
+   "original": "stories",
+   "text": "stories"
+  },
+  {
+   "id": "8403ace447",
+   "where": "p",
+   "original": "Member stories, training tips, club news and behind-the-scenes fun — fresh from the team.",
+   "text": "Member stories, training tips, club news and behind-the-scenes fun — fresh from the team."
+  },
+  {
+   "id": "24013ba0cf",
+   "where": "a",
+   "original": "Join Now",
+   "text": "Join Now"
+  },
+  {
+   "id": "cf008a5aa3",
+   "where": "p",
+   "original": "Latest",
+   "text": "Latest"
+  },
+  {
+   "id": "f2c477e2d7",
+   "where": "h2",
+   "original": "On the",
+   "text": "On the"
+  },
+  {
+   "id": "427bee741a",
+   "where": "span · On the",
+   "original": "blog",
+   "text": "blog"
+  },
+  {
+   "id": "2393905704",
+   "where": "span · On the",
+   "original": "Jun 16, 2026 · The GHF Team",
+   "text": "Jun 16, 2026 · The GHF Team"
+  },
+  {
+   "id": "1125b7f328",
+   "where": "h3 · On the",
+   "original": "Welcome to the New GHF Blog",
+   "text": "Welcome to the New GHF Blog"
+  },
+  {
+   "id": "53ae4ddd5e",
+   "where": "p · Welcome to the New GHF Blog",
+   "original": "Member wins, class highlights, and tips to help you feel your best — now in one easy-to-update place.",
+   "text": "Member wins, class highlights, and tips to help you feel your best — now in one easy-to-update place."
+  },
+  {
+   "id": "d1db4302c0",
+   "where": "h2 · Welcome to the New GHF Blog",
+   "original": "Come be part of the",
+   "text": "Come be part of the"
+  },
+  {
+   "id": "a8c97f9c8a",
+   "where": "span · Come be part of the",
+   "original": "story",
+   "text": "story"
+  },
+  {
+   "id": "471a635e8e",
+   "where": "p · Come be part of the",
+   "original": "There's always something happening. Come see for yourself.",
+   "text": "There's always something happening. Come see for yourself."
+  },
+  {
+   "id": "7372310a30",
+   "where": "a · Come be part of the",
+   "original": "Claim Your Free Pass",
+   "text": "Claim Your Free Pass"
+  },
+  {
+   "id": "cc06f23de9",
+   "where": "a · Come be part of the",
+   "original": "Free All-Access Pass",
+   "text": "Free All-Access Pass"
+  }
+ ]
+}

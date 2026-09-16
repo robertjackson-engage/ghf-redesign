@@ -1,0 +1,695 @@
+{
+ "page": "jbar",
+ "items": [
+  {
+   "id": "6ec51f49d0",
+   "where": "Browser tab title",
+   "original": "J-Bar by GHF | Smoothies, Acai Bowls & Protein Shakes in Gainesville",
+   "text": "J-Bar by GHF | Smoothies, Acai Bowls & Protein Shakes in Gainesville"
+  },
+  {
+   "id": "acb0b75452",
+   "where": "Search-engine description",
+   "original": "The J-Bar smoothie cafe inside GHF Main — fruit smoothies, protein shakes, acai bowls and parfaits, made to order with real fruit. No membership required.",
+   "text": "The J-Bar smoothie cafe inside GHF Main — fruit smoothies, protein shakes, acai bowls and parfaits, made to order with real fruit. No membership required."
+  },
+  {
+   "id": "0fcbf01102",
+   "where": "a",
+   "original": "Home",
+   "text": "Home"
+  },
+  {
+   "id": "0fe449e6a9",
+   "where": "text",
+   "original": "/ Amenities / J-Bar",
+   "text": "/ Amenities / J-Bar"
+  },
+  {
+   "id": "949d6d4ba6",
+   "where": "p",
+   "original": "J-Bar by GHF",
+   "text": "J-Bar by GHF"
+  },
+  {
+   "id": "ffc6e10084",
+   "where": "span",
+   "original": "Crafted shakes,",
+   "text": "Crafted shakes,"
+  },
+  {
+   "id": "db2fdc9ee8",
+   "where": "span",
+   "original": "bowls &",
+   "text": "bowls &"
+  },
+  {
+   "id": "78ccac6d67",
+   "where": "span",
+   "original": "more",
+   "text": "more"
+  },
+  {
+   "id": "acb958a756",
+   "where": "p",
+   "original": "Real fruit, whey protein and a blender, inside GHF Main. Smoothies, acai bowls, parfaits and grab-and-go — and you do not need to be a member to order one.",
+   "text": "Real fruit, whey protein and a blender, inside GHF Main. Smoothies, acai bowls, parfaits and grab-and-go — and you do not need to be a member to order one."
+  },
+  {
+   "id": "c06cc92e2f",
+   "where": "a",
+   "original": "See The Menu",
+   "text": "See The Menu"
+  },
+  {
+   "id": "57dd009158",
+   "where": "a",
+   "original": "Hours",
+   "text": "Hours"
+  },
+  {
+   "id": "fe3ce04503",
+   "where": "span",
+   "original": "Inside GHF Main",
+   "text": "Inside GHF Main"
+  },
+  {
+   "id": "2fe6a0656c",
+   "where": "span",
+   "original": "Open to everyone",
+   "text": "Open to everyone"
+  },
+  {
+   "id": "bf97a72b43",
+   "where": "span",
+   "original": "Made to order",
+   "text": "Made to order"
+  },
+  {
+   "id": "205101aa39",
+   "where": "span",
+   "original": "GHF Main",
+   "text": "GHF Main"
+  },
+  {
+   "id": "a2654ee14f",
+   "where": "p",
+   "original": "Smoothies worthy of your efforts",
+   "text": "Smoothies worthy of your efforts"
+  },
+  {
+   "id": "754f9a6548",
+   "where": "h2",
+   "original": "Real ingredients,",
+   "text": "Real ingredients,"
+  },
+  {
+   "id": "fac7d3d84a",
+   "where": "span · Real ingredients,",
+   "original": "every time",
+   "text": "every time"
+  },
+  {
+   "id": "5cffd0aff7",
+   "where": "p · Real ingredients,",
+   "original": "Nestled inside GHF Main is J-Bar, your one-stop destination for all things smoothies — from delectable fruit smoothies to invigorating protein shakes. Our standout varieties include the refreshing Strawberry Banana blend and the energizing Peanut Butter Blitz.",
+   "text": "Nestled inside GHF Main is J-Bar, your one-stop destination for all things smoothies — from delectable fruit smoothies to invigorating protein shakes. Our standout varieties include the refreshing Strawberry Banana blend and the energizing Peanut Butter Blitz."
+  },
+  {
+   "id": "fd60453aba",
+   "where": "p · Real ingredients,",
+   "original": "Our acai bowls are a testament to the vibrancy of real ingredients, and the smoothie bowls offer a delightful combination of taste and texture, making them the perfect meal replacements or fulfilling snacks. For those particular about protein intake, our shakes are crafted with high-quality whey protein.",
+   "text": "Our acai bowls are a testament to the vibrancy of real ingredients, and the smoothie bowls offer a delightful combination of taste and texture, making them the perfect meal replacements or fulfilling snacks. For those particular about protein intake, our shakes are crafted with high-quality whey protein."
+  },
+  {
+   "id": "8e9fbde436",
+   "where": "span · Real ingredients,",
+   "original": "No membership needed",
+   "text": "No membership needed"
+  },
+  {
+   "id": "7b94176a1d",
+   "where": "p · Real ingredients,",
+   "original": "Any time of day",
+   "text": "Any time of day"
+  },
+  {
+   "id": "f53fad044c",
+   "where": "h2 · Real ingredients,",
+   "original": "Breakfast, snack or",
+   "text": "Breakfast, snack or"
+  },
+  {
+   "id": "5c8baf4e13",
+   "where": "span · Breakfast, snack or",
+   "original": "recovery",
+   "text": "recovery"
+  },
+  {
+   "id": "8afe47e862",
+   "where": "p · Breakfast, snack or",
+   "original": "Whether you're winding down after an intense workout, looking for a healthy breakfast option, or just in the mood for a tantalizing treat, J-Bar caters to every palate and purpose. And the best part? You don't need to be a GHF member to relish our handcrafted delicacies.",
+   "text": "Whether you're winding down after an intense workout, looking for a healthy breakfast option, or just in the mood for a tantalizing treat, J-Bar caters to every palate and purpose. And the best part? You don't need to be a GHF member to relish our handcrafted delicacies."
+  },
+  {
+   "id": "4983a24dc1",
+   "where": "p · Breakfast, snack or",
+   "original": "We believe nutrition is the cornerstone of wellness, complementing every rep you lift, every mile you run, and every stretch you hold. We're not just a smoothie bar; we're a part of your holistic fitness story.",
+   "text": "We believe nutrition is the cornerstone of wellness, complementing every rep you lift, every mile you run, and every stretch you hold. We're not just a smoothie bar; we're a part of your holistic fitness story."
+  },
+  {
+   "id": "36fe45d568",
+   "where": "p · Breakfast, snack or",
+   "original": "Watch one get made",
+   "text": "Watch one get made"
+  },
+  {
+   "id": "b6f49e2f01",
+   "where": "h2 · Breakfast, snack or",
+   "original": "The Matcha",
+   "text": "The Matcha"
+  },
+  {
+   "id": "d6bfd3f92a",
+   "where": "span · The Matcha",
+   "original": "Madness",
+   "text": "Madness"
+  },
+  {
+   "id": "65bd3807e4",
+   "where": "p · The Matcha",
+   "original": "Milk, pineapple juice, mango, whey protein, spinach and matcha powder — start to finish at the J-Bar counter.",
+   "text": "Milk, pineapple juice, mango, whey protein, spinach and matcha powder — start to finish at the J-Bar counter."
+  },
+  {
+   "id": "e1f1c52951",
+   "where": "p · The Matcha",
+   "original": "The menu",
+   "text": "The menu"
+  },
+  {
+   "id": "212b46f4a7",
+   "where": "h2 · The Matcha",
+   "original": "Thirty-two ways to",
+   "text": "Thirty-two ways to"
+  },
+  {
+   "id": "aa54ae4515",
+   "where": "span · Thirty-two ways to",
+   "original": "refuel",
+   "text": "refuel"
+  },
+  {
+   "id": "4618c0e821",
+   "where": "p · Thirty-two ways to",
+   "original": "Every smoothie is made to order with real fruit. Add whey protein, branched-chain amino acids or a superfood boost to any of them.",
+   "text": "Every smoothie is made to order with real fruit. Add whey protein, branched-chain amino acids or a superfood boost to any of them."
+  },
+  {
+   "id": "7ec245d32e",
+   "where": "h3 · Thirty-two ways to",
+   "original": "Fruit Smoothies",
+   "text": "Fruit Smoothies"
+  },
+  {
+   "id": "435eb5b13d",
+   "where": "strong · Fruit Smoothies",
+   "original": "Strawberry Banana",
+   "text": "Strawberry Banana"
+  },
+  {
+   "id": "688c2a3a69",
+   "where": "span · Fruit Smoothies",
+   "original": "Strawberry Kiwi Juice | Strawberry | Banana",
+   "text": "Strawberry Kiwi Juice | Strawberry | Banana"
+  },
+  {
+   "id": "e0aa2da3ff",
+   "where": "strong · Fruit Smoothies",
+   "original": "Mango Blast",
+   "text": "Mango Blast"
+  },
+  {
+   "id": "5a6a92e94c",
+   "where": "span · Fruit Smoothies",
+   "original": "Tropical Juice | Mango | Strawberry | Whey Protein | Superfood",
+   "text": "Tropical Juice | Mango | Strawberry | Whey Protein | Superfood"
+  },
+  {
+   "id": "69d3ad4185",
+   "where": "strong · Fruit Smoothies",
+   "original": "In The Tropics",
+   "text": "In The Tropics"
+  },
+  {
+   "id": "923dea0862",
+   "where": "span · Fruit Smoothies",
+   "original": "Tropical Juice | Pineapple | Banana",
+   "text": "Tropical Juice | Pineapple | Banana"
+  },
+  {
+   "id": "100053dd95",
+   "where": "strong · Fruit Smoothies",
+   "original": "Blue Heaven",
+   "text": "Blue Heaven"
+  },
+  {
+   "id": "17e64ae3d8",
+   "where": "span · Fruit Smoothies",
+   "original": "Tropical Juice | Blueberry | Pineapple",
+   "text": "Tropical Juice | Blueberry | Pineapple"
+  },
+  {
+   "id": "ad0dd39f6b",
+   "where": "strong · Fruit Smoothies",
+   "original": "Berry Health Fusion",
+   "text": "Berry Health Fusion"
+  },
+  {
+   "id": "044ee297c6",
+   "where": "span · Fruit Smoothies",
+   "original": "Four Berry Juice | Blueberry | Banana | Berry Health Fusion Mix | Whey Protein | Fish Oil",
+   "text": "Four Berry Juice | Blueberry | Banana | Berry Health Fusion Mix | Whey Protein | Fish Oil"
+  },
+  {
+   "id": "b58388cb3d",
+   "where": "strong · Fruit Smoothies",
+   "original": "Pineapple Recovery",
+   "text": "Pineapple Recovery"
+  },
+  {
+   "id": "3f9d5a0ed1",
+   "where": "span · Fruit Smoothies",
+   "original": "Pineapple Juice | Pineapple | Banana | Whey Protein Isolate | BCAA",
+   "text": "Pineapple Juice | Pineapple | Banana | Whey Protein Isolate | BCAA"
+  },
+  {
+   "id": "3681287b55",
+   "where": "strong · Fruit Smoothies",
+   "original": "Lean Body Maker",
+   "text": "Lean Body Maker"
+  },
+  {
+   "id": "6e14165570",
+   "where": "span · Fruit Smoothies",
+   "original": "Water | Banana | Whey Protein Isolate | Superfood",
+   "text": "Water | Banana | Whey Protein Isolate | Superfood"
+  },
+  {
+   "id": "33f08545aa",
+   "where": "strong · Fruit Smoothies",
+   "original": "Jungle Juice",
+   "text": "Jungle Juice"
+  },
+  {
+   "id": "e66a7ee5c2",
+   "where": "span · Fruit Smoothies",
+   "original": "Pineapple Juice | Banana | Pineapple | Spinach | Whey Protein",
+   "text": "Pineapple Juice | Banana | Pineapple | Spinach | Whey Protein"
+  },
+  {
+   "id": "0e8b5d07ac",
+   "where": "strong · Fruit Smoothies",
+   "original": "Matcha Madness",
+   "text": "Matcha Madness"
+  },
+  {
+   "id": "5eb6d0697f",
+   "where": "span · Fruit Smoothies",
+   "original": "Milk | Pineapple Juice | Mango | Whey Protein | Spinach | Matcha Powder",
+   "text": "Milk | Pineapple Juice | Mango | Whey Protein | Spinach | Matcha Powder"
+  },
+  {
+   "id": "51260fd7ea",
+   "where": "h3 · Fruit Smoothies",
+   "original": "Peanut Butter Delights",
+   "text": "Peanut Butter Delights"
+  },
+  {
+   "id": "b28878446b",
+   "where": "strong · Peanut Butter Delights",
+   "original": "Java Nut",
+   "text": "Java Nut"
+  },
+  {
+   "id": "645b88286a",
+   "where": "span · Peanut Butter Delights",
+   "original": "Milk | Banana | Almond | Coffee | Whey Protein | Peanut Butter | Chocolate Sauce",
+   "text": "Milk | Banana | Almond | Coffee | Whey Protein | Peanut Butter | Chocolate Sauce"
+  },
+  {
+   "id": "12853d86bf",
+   "where": "strong · Peanut Butter Delights",
+   "original": "Peanut Butter Blitz",
+   "text": "Peanut Butter Blitz"
+  },
+  {
+   "id": "c99f66627b",
+   "where": "span · Peanut Butter Delights",
+   "original": "Milk | Banana | Whey Protein | Peanut Butter",
+   "text": "Milk | Banana | Whey Protein | Peanut Butter"
+  },
+  {
+   "id": "818fedca88",
+   "where": "strong · Peanut Butter Delights",
+   "original": "PB&J",
+   "text": "PB&J"
+  },
+  {
+   "id": "4f249df4eb",
+   "where": "span · Peanut Butter Delights",
+   "original": "Four Berry Juice | Whey Protein | Blueberry | Strawberry | Peanut Butter",
+   "text": "Four Berry Juice | Whey Protein | Blueberry | Strawberry | Peanut Butter"
+  },
+  {
+   "id": "27740a989e",
+   "where": "strong · Peanut Butter Delights",
+   "original": "Haus",
+   "text": "Haus"
+  },
+  {
+   "id": "2780eac2b6",
+   "where": "span · Peanut Butter Delights",
+   "original": "Milk | Banana | Peanut Butter | Whey Protein | Greek Yogurt | Chocolate Sauce",
+   "text": "Milk | Banana | Peanut Butter | Whey Protein | Greek Yogurt | Chocolate Sauce"
+  },
+  {
+   "id": "089ae4ad85",
+   "where": "strong · Peanut Butter Delights",
+   "original": "Joe's Smoothie",
+   "text": "Joe's Smoothie"
+  },
+  {
+   "id": "ada918c6ec",
+   "where": "span · Peanut Butter Delights",
+   "original": "Milk | Banana | Blueberry | Peanut Butter | Whey Protein",
+   "text": "Milk | Banana | Blueberry | Peanut Butter | Whey Protein"
+  },
+  {
+   "id": "eb8eaca292",
+   "where": "h3 · Peanut Butter Delights",
+   "original": "Power Parfaits",
+   "text": "Power Parfaits"
+  },
+  {
+   "id": "6e9bc8b446",
+   "where": "strong · Power Parfaits",
+   "original": "Protein Parfait",
+   "text": "Protein Parfait"
+  },
+  {
+   "id": "90357be7b3",
+   "where": "span · Power Parfaits",
+   "original": "Greek Yogurt | Granola | Honey | Strawberry | Blueberry",
+   "text": "Greek Yogurt | Granola | Honey | Strawberry | Blueberry"
+  },
+  {
+   "id": "5526eef655",
+   "where": "strong · Power Parfaits",
+   "original": "Wildberry Parfait",
+   "text": "Wildberry Parfait"
+  },
+  {
+   "id": "84012ad41b",
+   "where": "span · Power Parfaits",
+   "original": "Greek Yogurt | Granola | Blackberry | Raspberry | Honey",
+   "text": "Greek Yogurt | Granola | Blackberry | Raspberry | Honey"
+  },
+  {
+   "id": "a5d6d0156f",
+   "where": "strong · Power Parfaits",
+   "original": "Four Berry Protein Parfait",
+   "text": "Four Berry Protein Parfait"
+  },
+  {
+   "id": "224c61d138",
+   "where": "span · Power Parfaits",
+   "original": "Greek Yogurt | Granola | Blackberry | Raspberry | Blueberry | Strawberry | Honey",
+   "text": "Greek Yogurt | Granola | Blackberry | Raspberry | Blueberry | Strawberry | Honey"
+  },
+  {
+   "id": "6200aca8bd",
+   "where": "strong · Power Parfaits",
+   "original": "Strawberry Banana Protein Parfait",
+   "text": "Strawberry Banana Protein Parfait"
+  },
+  {
+   "id": "7a216e3a5b",
+   "where": "span · Power Parfaits",
+   "original": "Greek Yogurt | Granola | Strawberry | Banana | Honey",
+   "text": "Greek Yogurt | Granola | Strawberry | Banana | Honey"
+  },
+  {
+   "id": "8fbcd74d37",
+   "where": "h3 · Power Parfaits",
+   "original": "Acai Bowls",
+   "text": "Acai Bowls"
+  },
+  {
+   "id": "598861e013",
+   "where": "strong · Acai Bowls",
+   "original": "Rainbowl",
+   "text": "Rainbowl"
+  },
+  {
+   "id": "9e94574b21",
+   "where": "span · Acai Bowls",
+   "original": "Acai | Granola | Strawberry | Kiwi | Blueberry | Banana",
+   "text": "Acai | Granola | Strawberry | Kiwi | Blueberry | Banana"
+  },
+  {
+   "id": "f96f8af422",
+   "where": "strong · Acai Bowls",
+   "original": "J-Bowl",
+   "text": "J-Bowl"
+  },
+  {
+   "id": "87ec8517d8",
+   "where": "span · Acai Bowls",
+   "original": "Acai | Granola | Strawberry | Banana | Honey | Almond",
+   "text": "Acai | Granola | Strawberry | Banana | Honey | Almond"
+  },
+  {
+   "id": "2afac8e1ed",
+   "where": "strong · Acai Bowls",
+   "original": "Beach Bum",
+   "text": "Beach Bum"
+  },
+  {
+   "id": "bf1671ebe2",
+   "where": "span · Acai Bowls",
+   "original": "Acai | Granola | Blueberry | Banana",
+   "text": "Acai | Granola | Blueberry | Banana"
+  },
+  {
+   "id": "8547da1b9f",
+   "where": "strong · Acai Bowls",
+   "original": "PB&J Bowl",
+   "text": "PB&J Bowl"
+  },
+  {
+   "id": "156b9c5c4b",
+   "where": "span · Acai Bowls",
+   "original": "Acai | Peanut Butter | Granola | Blueberry | Strawberry | Honey",
+   "text": "Acai | Peanut Butter | Granola | Blueberry | Strawberry | Honey"
+  },
+  {
+   "id": "98d42d921d",
+   "where": "strong · Acai Bowls",
+   "original": "Berry Bowl",
+   "text": "Berry Bowl"
+  },
+  {
+   "id": "e29523ebf4",
+   "where": "span · Acai Bowls",
+   "original": "Acai | Granola | Strawberry | Blueberry | Blackberry | Raspberry | Honey",
+   "text": "Acai | Granola | Strawberry | Blueberry | Blackberry | Raspberry | Honey"
+  },
+  {
+   "id": "3e928edc7b",
+   "where": "h3 · Acai Bowls",
+   "original": "Additional Products",
+   "text": "Additional Products"
+  },
+  {
+   "id": "c25f40bdc5",
+   "where": "strong · Additional Products",
+   "original": "Monster Energy Drinks",
+   "text": "Monster Energy Drinks"
+  },
+  {
+   "id": "f1844486b6",
+   "where": "span · Additional Products",
+   "original": "Assorted Flavors",
+   "text": "Assorted Flavors"
+  },
+  {
+   "id": "fce9863e48",
+   "where": "strong · Additional Products",
+   "original": "Alani Nu Energy Drinks",
+   "text": "Alani Nu Energy Drinks"
+  },
+  {
+   "id": "adc5ce8451",
+   "where": "span · Additional Products",
+   "original": "Assorted Flavors",
+   "text": "Assorted Flavors"
+  },
+  {
+   "id": "852efeb8b0",
+   "where": "strong · Additional Products",
+   "original": "BUM Energy Drinks",
+   "text": "BUM Energy Drinks"
+  },
+  {
+   "id": "d7f1e6f3c9",
+   "where": "span · Additional Products",
+   "original": "Assorted Flavors",
+   "text": "Assorted Flavors"
+  },
+  {
+   "id": "eb6ec86324",
+   "where": "strong · Additional Products",
+   "original": "Ghost Energy Drinks",
+   "text": "Ghost Energy Drinks"
+  },
+  {
+   "id": "0d9affccf6",
+   "where": "span · Additional Products",
+   "original": "Assorted Flavors",
+   "text": "Assorted Flavors"
+  },
+  {
+   "id": "6dec90bb7b",
+   "where": "strong · Additional Products",
+   "original": "Gorilla Mind Energy Drinks",
+   "text": "Gorilla Mind Energy Drinks"
+  },
+  {
+   "id": "9ffda8ab2b",
+   "where": "span · Additional Products",
+   "original": "Assorted Flavors",
+   "text": "Assorted Flavors"
+  },
+  {
+   "id": "df890f760c",
+   "where": "strong · Additional Products",
+   "original": "Celcius",
+   "text": "Celcius"
+  },
+  {
+   "id": "78f3e9e797",
+   "where": "span · Additional Products",
+   "original": "Assorted Flavors",
+   "text": "Assorted Flavors"
+  },
+  {
+   "id": "cac07ba12e",
+   "where": "strong · Additional Products",
+   "original": "Core Power Ready-To-Drink Protein Shake",
+   "text": "Core Power Ready-To-Drink Protein Shake"
+  },
+  {
+   "id": "314f3a973a",
+   "where": "span · Additional Products",
+   "original": "Strawberry, Chocolate, Vanilla available in 26g and 42g of protein",
+   "text": "Strawberry, Chocolate, Vanilla available in 26g and 42g of protein"
+  },
+  {
+   "id": "2f9aae7acd",
+   "where": "strong · Additional Products",
+   "original": "Hard-Boiled Eggs",
+   "text": "Hard-Boiled Eggs"
+  },
+  {
+   "id": "e565eaeebd",
+   "where": "strong · Additional Products",
+   "original": "Sandwiches",
+   "text": "Sandwiches"
+  },
+  {
+   "id": "71be152b6f",
+   "where": "p · Additional Products",
+   "original": "Hours",
+   "text": "Hours"
+  },
+  {
+   "id": "379ae9f317",
+   "where": "h2 · Additional Products",
+   "original": "Open early,",
+   "text": "Open early,"
+  },
+  {
+   "id": "13fe5d77ca",
+   "where": "span · Open early,",
+   "original": "open late",
+   "text": "open late"
+  },
+  {
+   "id": "c228b18dd7",
+   "where": "p · Open early,",
+   "original": "You will find the J-Bar just inside GHF Main at 4820 W Newberry Road. Walk in and order — no membership, no app, no waiting on a table.",
+   "text": "You will find the J-Bar just inside GHF Main at 4820 W Newberry Road. Walk in and order — no membership, no app, no waiting on a table."
+  },
+  {
+   "id": "521af389a7",
+   "where": "strong · Open early,",
+   "original": "Monday – Friday",
+   "text": "Monday – Friday"
+  },
+  {
+   "id": "b1f0fc5fde",
+   "where": "text · Open early,",
+   "original": "6:00am – 9:00pm",
+   "text": "6:00am – 9:00pm"
+  },
+  {
+   "id": "90b218cc22",
+   "where": "strong · Open early,",
+   "original": "Saturday – Sunday",
+   "text": "Saturday – Sunday"
+  },
+  {
+   "id": "6af0ac9fd0",
+   "where": "text · Open early,",
+   "original": "8:00am – 6:00pm",
+   "text": "8:00am – 6:00pm"
+  },
+  {
+   "id": "3e98c1aa6f",
+   "where": "a · Open early,",
+   "original": "More about GHF Main →",
+   "text": "More about GHF Main →"
+  },
+  {
+   "id": "91f419e683",
+   "where": "h2 · Open early,",
+   "original": "Fuel the work you just",
+   "text": "Fuel the work you just"
+  },
+  {
+   "id": "3f9db47e57",
+   "where": "span · Fuel the work you just",
+   "original": "put in",
+   "text": "put in"
+  },
+  {
+   "id": "e1c1946f81",
+   "where": "p · Fuel the work you just",
+   "original": "Ready to start a more fit life? Become a GHF member today for as little as $15 per week.",
+   "text": "Ready to start a more fit life? Become a GHF member today for as little as $15 per week."
+  },
+  {
+   "id": "71cb28189b",
+   "where": "a · Fuel the work you just",
+   "original": "Claim Your Free Pass",
+   "text": "Claim Your Free Pass"
+  },
+  {
+   "id": "3559311799",
+   "where": "a · Fuel the work you just",
+   "original": "Free All-Access Pass",
+   "text": "Free All-Access Pass"
+  }
+ ]
+}

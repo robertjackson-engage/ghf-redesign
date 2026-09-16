@@ -1,0 +1,821 @@
+{
+ "page": "ghf-pass",
+ "items": [
+  {
+   "id": "f70695dd11",
+   "where": "Browser tab title",
+   "original": "Free All-Access Pass | Try GHF Free | Gainesville Health & Fitness",
+   "text": "Free All-Access Pass | Try GHF Free | Gainesville Health & Fitness"
+  },
+  {
+   "id": "222c1e849b",
+   "where": "Search-engine description",
+   "original": "Try Gainesville Health & Fitness free. Your all-access pass gives you full membership privileges for one day at any of our three locations — classes, pool, sauna, weight floor and a coach to guide you. No charge, no obligation.",
+   "text": "Try Gainesville Health & Fitness free. Your all-access pass gives you full membership privileges for one day at any of our three locations — classes, pool, sauna, weight floor and a coach to guide you. No charge, no obligation."
+  },
+  {
+   "id": "26f3037798",
+   "where": "a",
+   "original": "Home",
+   "text": "Home"
+  },
+  {
+   "id": "12eef6c246",
+   "where": "text",
+   "original": "/ Free All-Access Pass",
+   "text": "/ Free All-Access Pass"
+  },
+  {
+   "id": "96064e62bf",
+   "where": "p",
+   "original": "The GHF Pass",
+   "text": "The GHF Pass"
+  },
+  {
+   "id": "a3293cc8d4",
+   "where": "span",
+   "original": "Find your",
+   "text": "Find your"
+  },
+  {
+   "id": "41bae47906",
+   "where": "span",
+   "original": "strong",
+   "text": "strong"
+  },
+  {
+   "id": "fb6b6a886a",
+   "where": "span",
+   "original": "here",
+   "text": "here"
+  },
+  {
+   "id": "a0be405c68",
+   "where": "p",
+   "original": "Your free pass gives you a team that will help you navigate the gym — you don't have to figure it out alone. Full membership privileges for one day: every class, the pool, the sauna, the weight room, and a coach who walks it with you.",
+   "text": "Your free pass gives you a team that will help you navigate the gym — you don't have to figure it out alone. Full membership privileges for one day: every class, the pool, the sauna, the weight room, and a coach who walks it with you."
+  },
+  {
+   "id": "dd58279d5d",
+   "where": "a",
+   "original": "Claim My Free Pass",
+   "text": "Claim My Free Pass"
+  },
+  {
+   "id": "7d71dc87fe",
+   "where": "a",
+   "original": "Call (352) 377-4955",
+   "text": "Call (352) 377-4955"
+  },
+  {
+   "id": "9ebdd65a1a",
+   "where": "span",
+   "original": "One day, full access",
+   "text": "One day, full access"
+  },
+  {
+   "id": "93a1b45002",
+   "where": "span",
+   "original": "No charge, no obligation",
+   "text": "No charge, no obligation"
+  },
+  {
+   "id": "6f3f0fe5f6",
+   "where": "span",
+   "original": "Any of 3 locations",
+   "text": "Any of 3 locations"
+  },
+  {
+   "id": "d5c47680e7",
+   "where": "div",
+   "original": "Day of full membership privileges",
+   "text": "Day of full membership privileges"
+  },
+  {
+   "id": "8f91a979fe",
+   "where": "div",
+   "original": "Locations to choose from",
+   "text": "Locations to choose from"
+  },
+  {
+   "id": "03cdfcf56c",
+   "where": "div",
+   "original": "Classes included each month",
+   "text": "Classes included each month"
+  },
+  {
+   "id": "b17290ac88",
+   "where": "div",
+   "original": "Cost, obligation or risk",
+   "text": "Cost, obligation or risk"
+  },
+  {
+   "id": "15bab55ba5",
+   "where": "p",
+   "original": "What your pass includes",
+   "text": "What your pass includes"
+  },
+  {
+   "id": "1d5b778402",
+   "where": "h2",
+   "original": "A full day,",
+   "text": "A full day,"
+  },
+  {
+   "id": "83c38897b7",
+   "where": "span · A full day,",
+   "original": "all of it",
+   "text": "all of it"
+  },
+  {
+   "id": "58a3ad0836",
+   "where": "p · A full day,",
+   "original": "Feeling out of shape, not sure where to start, and afraid you won't stick with it? That's exactly who we're best at helping. Your pass isn't a tour — it's the real thing, with someone beside you.",
+   "text": "Feeling out of shape, not sure where to start, and afraid you won't stick with it? That's exactly who we're best at helping. Your pass isn't a tour — it's the real thing, with someone beside you."
+  },
+  {
+   "id": "da58dfd963",
+   "where": "li · A full day,",
+   "original": "One-day gym membership",
+   "text": "One-day gym membership"
+  },
+  {
+   "id": "df7a362be5",
+   "where": "li · A full day,",
+   "original": "Free hydromassage session",
+   "text": "Free hydromassage session"
+  },
+  {
+   "id": "029085bb36",
+   "where": "li · A full day,",
+   "original": "24/7 access at GHF Main",
+   "text": "24/7 access at GHF Main"
+  },
+  {
+   "id": "e5367b4998",
+   "where": "li · A full day,",
+   "original": "All group fitness classes",
+   "text": "All group fitness classes"
+  },
+  {
+   "id": "0348823048",
+   "where": "li · A full day,",
+   "original": "Indoor heated lap & therapy pools",
+   "text": "Indoor heated lap & therapy pools"
+  },
+  {
+   "id": "79235cc1d9",
+   "where": "li · A full day,",
+   "original": "Sauna, steam, hot tub, cold plunge",
+   "text": "Sauna, steam, hot tub, cold plunge"
+  },
+  {
+   "id": "fcd8d0f504",
+   "where": "li · A full day,",
+   "original": "Largest free weight area in town",
+   "text": "Largest free weight area in town"
+  },
+  {
+   "id": "d8b5919870",
+   "where": "li · A full day,",
+   "original": "Most cardio & weight machines",
+   "text": "Most cardio & weight machines"
+  },
+  {
+   "id": "ec7e8b0f57",
+   "where": "li · A full day,",
+   "original": "Indoor basketball & volleyball",
+   "text": "Indoor basketball & volleyball"
+  },
+  {
+   "id": "f95fb7d194",
+   "where": "li · A full day,",
+   "original": "Free babysitting at Kid's Club",
+   "text": "Free babysitting at Kid's Club"
+  },
+  {
+   "id": "5b4bd2bf44",
+   "where": "li · A full day,",
+   "original": "Free lockers & full-time housekeeping",
+   "text": "Free lockers & full-time housekeeping"
+  },
+  {
+   "id": "19d5facf73",
+   "where": "li · A full day,",
+   "original": "A women-only fitness center",
+   "text": "A women-only fitness center"
+  },
+  {
+   "id": "ecda98e6c0",
+   "where": "p · A full day,",
+   "original": "Why choose GHF",
+   "text": "Why choose GHF"
+  },
+  {
+   "id": "e1b7f191d7",
+   "where": "h2 · A full day,",
+   "original": "More than just a",
+   "text": "More than just a"
+  },
+  {
+   "id": "76a147ef0e",
+   "where": "span · More than just a",
+   "original": "gym",
+   "text": "gym"
+  },
+  {
+   "id": "ec01af73cd",
+   "where": "p · More than just a",
+   "original": "First-timers and seasoned lifters train side by side here — and both walk out feeling like they belong.",
+   "text": "First-timers and seasoned lifters train side by side here — and both walk out feeling like they belong."
+  },
+  {
+   "id": "13c7c0cc03",
+   "where": "span · More than just a",
+   "original": "Convenience",
+   "text": "Convenience"
+  },
+  {
+   "id": "8158ba3e0f",
+   "where": "h3 · More than just a",
+   "original": "Staffed 24 hours a day, three locations on one membership, a women-only club, and free babysitting while you work out",
+   "text": "Staffed 24 hours a day, three locations on one membership, a women-only club, and free babysitting while you work out"
+  },
+  {
+   "id": "f14864e384",
+   "where": "span · Staffed 24 hours a day, three locations on one membership, a",
+   "original": "Programming",
+   "text": "Programming"
+  },
+  {
+   "id": "8302068991",
+   "where": "h3 · Staffed 24 hours a day, three locations on one membership, a",
+   "original": "Supervised strength training on The Line, 900+ group classes monthly, indoor cycle studio and hot yoga — all included",
+   "text": "Supervised strength training on The Line, 900+ group classes monthly, indoor cycle studio and hot yoga — all included"
+  },
+  {
+   "id": "6e371c11a7",
+   "where": "span · Supervised strength training on The Line, 900+ group classes",
+   "original": "Availability",
+   "text": "Availability"
+  },
+  {
+   "id": "e5cd0090ba",
+   "where": "h3 · Supervised strength training on The Line, 900+ group classes",
+   "original": "Thousands of strength and cardio machines, the largest free weight areas in town, indoor basketball and volleyball",
+   "text": "Thousands of strength and cardio machines, the largest free weight areas in town, indoor basketball and volleyball"
+  },
+  {
+   "id": "3fd8e31984",
+   "where": "span · Thousands of strength and cardio machines, the largest free ",
+   "original": "Aquix Area",
+   "text": "Aquix Area"
+  },
+  {
+   "id": "4900066416",
+   "where": "h3 · Thousands of strength and cardio machines, the largest free ",
+   "original": "75-foot lap pool, cold pool, sauna, steam room, hot tub and warm therapy pool for the ultimate post-workout recovery",
+   "text": "75-foot lap pool, cold pool, sauna, steam room, hot tub and warm therapy pool for the ultimate post-workout recovery"
+  },
+  {
+   "id": "c555c9007c",
+   "where": "p · 75-foot lap pool, cold pool, sauna, steam room, hot tub and ",
+   "original": "How it works",
+   "text": "How it works"
+  },
+  {
+   "id": "8448493249",
+   "where": "h2 · 75-foot lap pool, cold pool, sauna, steam room, hot tub and ",
+   "original": "Four steps,",
+   "text": "Four steps,"
+  },
+  {
+   "id": "81d1a48ccb",
+   "where": "span · Four steps,",
+   "original": "zero pressure",
+   "text": "zero pressure"
+  },
+  {
+   "id": "ccbee5615e",
+   "where": "p · Four steps,",
+   "original": "No contracts to sign, no sales pitch to survive. Just show up and see how it feels.",
+   "text": "No contracts to sign, no sales pitch to survive. Just show up and see how it feels."
+  },
+  {
+   "id": "ef18aac7f7",
+   "where": "h3 · Four steps,",
+   "original": "Request your pass",
+   "text": "Request your pass"
+  },
+  {
+   "id": "4490f118e6",
+   "where": "p · Request your pass",
+   "original": "Fill out the form below. It takes about twenty seconds and costs you nothing.",
+   "text": "Fill out the form below. It takes about twenty seconds and costs you nothing."
+  },
+  {
+   "id": "6499f990b7",
+   "where": "h3 · Request your pass",
+   "original": "We reach out",
+   "text": "We reach out"
+  },
+  {
+   "id": "4f27372ed9",
+   "where": "p · We reach out",
+   "original": "We'll contact you by phone, text, or email to set it up, then send the pass to your inbox.",
+   "text": "We'll contact you by phone, text, or email to set it up, then send the pass to your inbox."
+  },
+  {
+   "id": "2a1195e6be",
+   "where": "h3 · We reach out",
+   "original": "Come in when you're ready",
+   "text": "Come in when you're ready"
+  },
+  {
+   "id": "df32bf37df",
+   "where": "p · Come in when you're ready",
+   "original": "Activate it anytime by walking into the location you picked. Bring photo ID to check in as a guest.",
+   "text": "Activate it anytime by walking into the location you picked. Bring photo ID to check in as a guest."
+  },
+  {
+   "id": "92e7a54bf7",
+   "where": "h3 · Come in when you're ready",
+   "original": "A coach shows you around",
+   "text": "A coach shows you around"
+  },
+  {
+   "id": "059ce83a4e",
+   "where": "p · A coach shows you around",
+   "original": "A real person learns your goal, walks you through your first workout, and makes sure you're never guessing.",
+   "text": "A real person learns your goal, walks you through your first workout, and makes sure you're never guessing."
+  },
+  {
+   "id": "f4bd091e76",
+   "where": "p · A coach shows you around",
+   "original": "Where to use it",
+   "text": "Where to use it"
+  },
+  {
+   "id": "f327f488a6",
+   "where": "h2 · A coach shows you around",
+   "original": "Pick your",
+   "text": "Pick your"
+  },
+  {
+   "id": "f71ba903b2",
+   "where": "span · Pick your",
+   "original": "club",
+   "text": "club"
+  },
+  {
+   "id": "623e6f750b",
+   "where": "p · Pick your",
+   "original": "Your pass is good at any one of the three. Each is a little different — choose the one that fits your day.",
+   "text": "Your pass is good at any one of the three. Each is a little different — choose the one that fits your day."
+  },
+  {
+   "id": "9ec7f7d961",
+   "where": "span · Pick your",
+   "original": "Open 24/7",
+   "text": "Open 24/7"
+  },
+  {
+   "id": "beedda8b54",
+   "where": "a · Pick your",
+   "original": "GHF Main",
+   "text": "GHF Main"
+  },
+  {
+   "id": "b1406d848e",
+   "where": "a · Pick your",
+   "original": "(352) 377-4955",
+   "text": "(352) 377-4955"
+  },
+  {
+   "id": "590b59df54",
+   "where": "dt · Pick your",
+   "original": "Every day",
+   "text": "Every day"
+  },
+  {
+   "id": "3723645243",
+   "where": "dd · Pick your",
+   "original": "Open 24 hours",
+   "text": "Open 24 hours"
+  },
+  {
+   "id": "4e67988d0e",
+   "where": "address · Pick your",
+   "original": "4820 W Newberry Road, Gainesville, FL 32607",
+   "text": "4820 W Newberry Road, Gainesville, FL 32607"
+  },
+  {
+   "id": "d5d3e0186c",
+   "where": "span · Pick your",
+   "original": "Women Only",
+   "text": "Women Only"
+  },
+  {
+   "id": "2a832f8c91",
+   "where": "a · Pick your",
+   "original": "GHF Women",
+   "text": "GHF Women"
+  },
+  {
+   "id": "873bf0409b",
+   "where": "a · Pick your",
+   "original": "(352) 374-4634",
+   "text": "(352) 374-4634"
+  },
+  {
+   "id": "1b6af7a310",
+   "where": "dt · Pick your",
+   "original": "Mon–Thurs",
+   "text": "Mon–Thurs"
+  },
+  {
+   "id": "694ae464fb",
+   "where": "dd · Pick your",
+   "original": "5am–9pm",
+   "text": "5am–9pm"
+  },
+  {
+   "id": "4b9a3405c1",
+   "where": "dt · Pick your",
+   "original": "Friday",
+   "text": "Friday"
+  },
+  {
+   "id": "c2bde1d1ab",
+   "where": "dd · Pick your",
+   "original": "5am–8pm",
+   "text": "5am–8pm"
+  },
+  {
+   "id": "bdbf851e46",
+   "where": "dt · Pick your",
+   "original": "Saturday",
+   "text": "Saturday"
+  },
+  {
+   "id": "2d9e51557c",
+   "where": "dd · Pick your",
+   "original": "8am–6pm",
+   "text": "8am–6pm"
+  },
+  {
+   "id": "acb62a1598",
+   "where": "dt · Pick your",
+   "original": "Sunday",
+   "text": "Sunday"
+  },
+  {
+   "id": "b9184b68ce",
+   "where": "dd · Pick your",
+   "original": "Closed",
+   "text": "Closed"
+  },
+  {
+   "id": "3b093438a5",
+   "where": "address · Pick your",
+   "original": "2441 NW 43rd Street, Gainesville, FL 32606",
+   "text": "2441 NW 43rd Street, Gainesville, FL 32606"
+  },
+  {
+   "id": "d0ca9f3897",
+   "where": "span · Pick your",
+   "original": "Family Friendly",
+   "text": "Family Friendly"
+  },
+  {
+   "id": "733cc01baa",
+   "where": "a · Pick your",
+   "original": "GHF Tioga",
+   "text": "GHF Tioga"
+  },
+  {
+   "id": "012f0651eb",
+   "where": "a · Pick your",
+   "original": "(352) 692-2180",
+   "text": "(352) 692-2180"
+  },
+  {
+   "id": "17838a4c35",
+   "where": "dt · Pick your",
+   "original": "Mon–Thurs",
+   "text": "Mon–Thurs"
+  },
+  {
+   "id": "2dc9501177",
+   "where": "dd · Pick your",
+   "original": "5am–10pm",
+   "text": "5am–10pm"
+  },
+  {
+   "id": "13557d5c51",
+   "where": "dt · Pick your",
+   "original": "Friday",
+   "text": "Friday"
+  },
+  {
+   "id": "5f53643515",
+   "where": "dd · Pick your",
+   "original": "5am–9pm",
+   "text": "5am–9pm"
+  },
+  {
+   "id": "afc913a31c",
+   "where": "dt · Pick your",
+   "original": "Saturday",
+   "text": "Saturday"
+  },
+  {
+   "id": "b555a83e2b",
+   "where": "dd · Pick your",
+   "original": "8am–8pm",
+   "text": "8am–8pm"
+  },
+  {
+   "id": "a38e8d35e2",
+   "where": "dt · Pick your",
+   "original": "Sunday",
+   "text": "Sunday"
+  },
+  {
+   "id": "68c13d49c1",
+   "where": "dd · Pick your",
+   "original": "10am–5pm",
+   "text": "10am–5pm"
+  },
+  {
+   "id": "ae812a85ef",
+   "where": "address · Pick your",
+   "original": "12830 SW 1st Lane, Suite 100, Newberry, FL 32669",
+   "text": "12830 SW 1st Lane, Suite 100, Newberry, FL 32669"
+  },
+  {
+   "id": "7292d1fcb9",
+   "where": "p · Pick your",
+   "original": "Request your pass",
+   "text": "Request your pass"
+  },
+  {
+   "id": "51a894c147",
+   "where": "h2 · Pick your",
+   "original": "You're one click away from the gym that helps",
+   "text": "You're one click away from the gym that helps"
+  },
+  {
+   "id": "10d622ee0c",
+   "where": "span · You're one click away from the gym that helps",
+   "original": "beginners",
+   "text": "beginners"
+  },
+  {
+   "id": "9389302a64",
+   "where": "li · You're one click away from the gym that helps",
+   "original": "Full membership privileges for one day",
+   "text": "Full membership privileges for one day"
+  },
+  {
+   "id": "a0e0d20db2",
+   "where": "li · You're one click away from the gym that helps",
+   "original": "Good at any of our three locations",
+   "text": "Good at any of our three locations"
+  },
+  {
+   "id": "d6d196a822",
+   "where": "li · You're one click away from the gym that helps",
+   "original": "Please bring photo ID to check in",
+   "text": "Please bring photo ID to check in"
+  },
+  {
+   "id": "3dd54df857",
+   "where": "li · You're one click away from the gym that helps",
+   "original": "For first-time, local guests",
+   "text": "For first-time, local guests"
+  },
+  {
+   "id": "eb98f85b6e",
+   "where": "li · You're one click away from the gym that helps",
+   "original": "Ages 13+ — 13 to 17 with a parent or guardian",
+   "text": "Ages 13+ — 13 to 17 with a parent or guardian"
+  },
+  {
+   "id": "2ab5de8064",
+   "where": "li · You're one click away from the gym that helps",
+   "original": "No charge, no obligation, no risk",
+   "text": "No charge, no obligation, no risk"
+  },
+  {
+   "id": "ac55b408cd",
+   "where": "label · You're one click away from the gym that helps",
+   "original": "First name",
+   "text": "First name"
+  },
+  {
+   "id": "9a3aab2de7",
+   "where": "label · You're one click away from the gym that helps",
+   "original": "Last name",
+   "text": "Last name"
+  },
+  {
+   "id": "2b1ca36ca2",
+   "where": "label · You're one click away from the gym that helps",
+   "original": "Email address",
+   "text": "Email address"
+  },
+  {
+   "id": "7cb41ee060",
+   "where": "label · You're one click away from the gym that helps",
+   "original": "Phone",
+   "text": "Phone"
+  },
+  {
+   "id": "b26388ecde",
+   "where": "option · You're one click away from the gym that helps",
+   "original": "",
+   "text": ""
+  },
+  {
+   "id": "3172c487c1",
+   "where": "option · You're one click away from the gym that helps",
+   "original": "GHF Main — 4820 W Newberry Road",
+   "text": "GHF Main — 4820 W Newberry Road"
+  },
+  {
+   "id": "7dcdb4e59c",
+   "where": "option · You're one click away from the gym that helps",
+   "original": "GHF Women — 2441 NW 43rd Street",
+   "text": "GHF Women — 2441 NW 43rd Street"
+  },
+  {
+   "id": "40ea33d863",
+   "where": "option · You're one click away from the gym that helps",
+   "original": "GHF Tioga — Tioga Town Center",
+   "text": "GHF Tioga — Tioga Town Center"
+  },
+  {
+   "id": "417dc84a62",
+   "where": "label · You're one click away from the gym that helps",
+   "original": "Gym you would like to visit",
+   "text": "Gym you would like to visit"
+  },
+  {
+   "id": "4d577fec69",
+   "where": "button · You're one click away from the gym that helps",
+   "original": "Claim My Free Fitness Pass",
+   "text": "Claim My Free Fitness Pass"
+  },
+  {
+   "id": "d9a9d91e80",
+   "where": "span · You're one click away from the gym that helps",
+   "original": "→",
+   "text": "→"
+  },
+  {
+   "id": "10e09628c4",
+   "where": "p · You're one click away from the gym that helps",
+   "original": "Submit the form and we’ll be in touch by phone, text or email to set up your pass. We’ll email it to you — just activate it by visiting the location of your choice. There is no charge, no obligation and no risk.",
+   "text": "Submit the form and we’ll be in touch by phone, text or email to set up your pass. We’ll email it to you — just activate it by visiting the location of your choice. There is no charge, no obligation and no risk."
+  },
+  {
+   "id": "84f4231549",
+   "where": "p · You're one click away from the gym that helps",
+   "original": "Pass questions",
+   "text": "Pass questions"
+  },
+  {
+   "id": "d57fe9cb1e",
+   "where": "h2 · You're one click away from the gym that helps",
+   "original": "Before you",
+   "text": "Before you"
+  },
+  {
+   "id": "b99ed608ae",
+   "where": "span · Before you",
+   "original": "come in",
+   "text": "come in"
+  },
+  {
+   "id": "931c23f035",
+   "where": "h3 · Before you",
+   "original": "What does the free pass actually get me?",
+   "text": "What does the free pass actually get me?"
+  },
+  {
+   "id": "c43d081383",
+   "where": "div · What does the free pass actually get me?",
+   "original": "Full membership privileges for one day at the Gainesville Health & Fitness location of your choice. That means every group fitness class, the pool and Aquix recovery area, the sauna and steam room, the full weight floor and cardio deck, Kid's Club babysitting, and a hydromassage session. There is no charge, no obligation and no risk. There is, however, a chance that you will be inspired.",
+   "text": "Full membership privileges for one day at the Gainesville Health & Fitness location of your choice. That means every group fitness class, the pool and Aquix recovery area, the sauna and steam room, the full weight floor and cardio deck, Kid's Club babysitting, and a hydromassage session. There is no charge, no obligation and no risk. There is, however, a chance that you will be inspired."
+  },
+  {
+   "id": "286a670809",
+   "where": "h3 · What does the free pass actually get me?",
+   "original": "Who is the pass for?",
+   "text": "Who is the pass for?"
+  },
+  {
+   "id": "cd64f69375",
+   "where": "div · Who is the pass for?",
+   "original": "First-time, local guests. The minimum age is 13 — guests 13 to 17 need to be accompanied by a parent or guardian. If you've used a pass with us before, or you're visiting from out of town, give us a call at (352) 377-4955 and we'll sort something out.",
+   "text": "First-time, local guests. The minimum age is 13 — guests 13 to 17 need to be accompanied by a parent or guardian. If you've used a pass with us before, or you're visiting from out of town, give us a call at (352) 377-4955 and we'll sort something out."
+  },
+  {
+   "id": "a585cf197c",
+   "where": "h3 · Who is the pass for?",
+   "original": "What should I bring?",
+   "text": "What should I bring?"
+  },
+  {
+   "id": "07756e68b8",
+   "where": "div · What should I bring?",
+   "original": "Photo ID to check in as a guest, comfortable clothes, supportive shoes, a water bottle, and a towel. If you plan to shower or use the sauna, bring toiletries and a change of clothes — lockers are free and we have full-time housekeeping.",
+   "text": "Photo ID to check in as a guest, comfortable clothes, supportive shoes, a water bottle, and a towel. If you plan to shower or use the sauna, bring toiletries and a change of clothes — lockers are free and we have full-time housekeeping."
+  },
+  {
+   "id": "43f88f5e1c",
+   "where": "h3 · What should I bring?",
+   "original": "Do I have to know what I'm doing?",
+   "text": "Do I have to know what I'm doing?"
+  },
+  {
+   "id": "f1b865f617",
+   "where": "div · Do I have to know what I'm doing?",
+   "original": "Not even a little. We're the gym that's best at helping beginners — that's the whole point. Tell the front desk it's your first visit and a fitness instructor will come meet you, learn your goal, and walk you through your first workout. You will not be handed a key card and left to guess.",
+   "text": "Not even a little. We're the gym that's best at helping beginners — that's the whole point. Tell the front desk it's your first visit and a fitness instructor will come meet you, learn your goal, and walk you through your first workout. You will not be handed a key card and left to guess."
+  },
+  {
+   "id": "3df967e998",
+   "where": "h3 · Do I have to know what I'm doing?",
+   "original": "Will someone try to sell me a membership?",
+   "text": "Will someone try to sell me a membership?"
+  },
+  {
+   "id": "e38b3fda4c",
+   "where": "div · Will someone try to sell me a membership?",
+   "original": "No pitch, no pressure. If you decide you want pricing afterward we're happy to walk you through it, and you can always",
+   "text": "No pitch, no pressure. If you decide you want pricing afterward we're happy to walk you through it, and you can always"
+  },
+  {
+   "id": "0d039c7f00",
+   "where": "a · Will someone try to sell me a membership?",
+   "original": "join online",
+   "text": "join online"
+  },
+  {
+   "id": "e1cae624a1",
+   "where": "text · Will someone try to sell me a membership?",
+   "original": "on your own time. But the pass is genuinely free and genuinely no-obligation.",
+   "text": "on your own time. But the pass is genuinely free and genuinely no-obligation."
+  },
+  {
+   "id": "300d63daf0",
+   "where": "h3 · Will someone try to sell me a membership?",
+   "original": "Can I bring a friend?",
+   "text": "Can I bring a friend?"
+  },
+  {
+   "id": "1f8642633c",
+   "where": "div · Can I bring a friend?",
+   "original": "Come in together and we'll take care of you both. Once you're a member, our Power of Friends program gives every guest you bring 6 free visits — see",
+   "text": "Come in together and we'll take care of you both. Once you're a member, our Power of Friends program gives every guest you bring 6 free visits — see"
+  },
+  {
+   "id": "30a09da0ca",
+   "where": "a · Can I bring a friend?",
+   "original": "Bring a Guest",
+   "text": "Bring a Guest"
+  },
+  {
+   "id": "9dbf791100",
+   "where": "text · Can I bring a friend?",
+   "original": "for how that works.",
+   "text": "for how that works."
+  },
+  {
+   "id": "fab4830f8c",
+   "where": "h2 · Can I bring a friend?",
+   "original": "Ready to make it",
+   "text": "Ready to make it"
+  },
+  {
+   "id": "74df11c56e",
+   "where": "span · Ready to make it",
+   "original": "yours?",
+   "text": "yours?"
+  },
+  {
+   "id": "985dbf5096",
+   "where": "p · Ready to make it",
+   "original": "Get ready for an experience that will help you get the most out of life and inspire you to become your best. Memberships start at as little as $15 per week.",
+   "text": "Get ready for an experience that will help you get the most out of life and inspire you to become your best. Memberships start at as little as $15 per week."
+  },
+  {
+   "id": "ebe40200d6",
+   "where": "a · Ready to make it",
+   "original": "Join GHF Online",
+   "text": "Join GHF Online"
+  }
+ ]
+}

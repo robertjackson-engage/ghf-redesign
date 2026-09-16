@@ -1,0 +1,791 @@
+{
+ "page": "_site",
+ "items": [
+  {
+   "id": "7c820c87d2",
+   "where": "a",
+   "original": "Classes",
+   "text": "Classes"
+  },
+  {
+   "id": "01d34ba850",
+   "where": "a",
+   "original": "Class Schedule",
+   "text": "Class Schedule"
+  },
+  {
+   "id": "9d9006287d",
+   "where": "a",
+   "original": "Hot Yoga",
+   "text": "Hot Yoga"
+  },
+  {
+   "id": "4539fa2d02",
+   "where": "a",
+   "original": "Outdoor Classes",
+   "text": "Outdoor Classes"
+  },
+  {
+   "id": "cf29a4905a",
+   "where": "a",
+   "original": "Cycle Classes",
+   "text": "Cycle Classes"
+  },
+  {
+   "id": "c4f24c33a7",
+   "where": "a",
+   "original": "GHF Live",
+   "text": "GHF Live"
+  },
+  {
+   "id": "8a5fca21c9",
+   "where": "a",
+   "original": "Training",
+   "text": "Training"
+  },
+  {
+   "id": "c6e7634357",
+   "where": "a",
+   "original": "Personal Training",
+   "text": "Personal Training"
+  },
+  {
+   "id": "19e856dc7e",
+   "where": "a",
+   "original": "Pilates",
+   "text": "Pilates"
+  },
+  {
+   "id": "378c2670af",
+   "where": "a",
+   "original": "X-Force Body",
+   "text": "X-Force Body"
+  },
+  {
+   "id": "27025cceac",
+   "where": "a",
+   "original": "CrossFit",
+   "text": "CrossFit"
+  },
+  {
+   "id": "1ba22ea7f7",
+   "where": "a",
+   "original": "TRIBE Team Training",
+   "text": "TRIBE Team Training"
+  },
+  {
+   "id": "51268012fa",
+   "where": "a",
+   "original": "HYROX",
+   "text": "HYROX"
+  },
+  {
+   "id": "3eae32ca8e",
+   "where": "a",
+   "original": "Amenities",
+   "text": "Amenities"
+  },
+  {
+   "id": "ef5083032b",
+   "where": "a",
+   "original": "Echo Outdoor Pavilion",
+   "text": "Echo Outdoor Pavilion"
+  },
+  {
+   "id": "c95a9266d8",
+   "where": "a",
+   "original": "Sky Cycle — Indoor Cycling",
+   "text": "Sky Cycle — Indoor Cycling"
+  },
+  {
+   "id": "0a33f866eb",
+   "where": "a",
+   "original": "GHF Live — Stream Classes",
+   "text": "GHF Live — Stream Classes"
+  },
+  {
+   "id": "1a72e0dc13",
+   "where": "a",
+   "original": "Cancer Recovery Program",
+   "text": "Cancer Recovery Program"
+  },
+  {
+   "id": "81fb745fa3",
+   "where": "a",
+   "original": "Indoor Pools",
+   "text": "Indoor Pools"
+  },
+  {
+   "id": "b86138dc8b",
+   "where": "a",
+   "original": "Free Babysitting",
+   "text": "Free Babysitting"
+  },
+  {
+   "id": "33c814c206",
+   "where": "a",
+   "original": "Indoor Basketball",
+   "text": "Indoor Basketball"
+  },
+  {
+   "id": "c4454e9b56",
+   "where": "a",
+   "original": "Member Savings",
+   "text": "Member Savings"
+  },
+  {
+   "id": "a07d8e1ca2",
+   "where": "a",
+   "original": "J-Bar Smoothies",
+   "text": "J-Bar Smoothies"
+  },
+  {
+   "id": "4f27aab67a",
+   "where": "a",
+   "original": "Chill Studio",
+   "text": "Chill Studio"
+  },
+  {
+   "id": "b45e0b1d01",
+   "where": "a",
+   "original": "Locations",
+   "text": "Locations"
+  },
+  {
+   "id": "76e1eb70c7",
+   "where": "a",
+   "original": "GHF Main",
+   "text": "GHF Main"
+  },
+  {
+   "id": "e7de1942b2",
+   "where": "a",
+   "original": "GHF Women",
+   "text": "GHF Women"
+  },
+  {
+   "id": "6791e2688a",
+   "where": "a",
+   "original": "GHF Tioga",
+   "text": "GHF Tioga"
+  },
+  {
+   "id": "04fe07b68c",
+   "where": "a",
+   "original": "Join Online",
+   "text": "Join Online"
+  },
+  {
+   "id": "f5cc4d5253",
+   "where": "a",
+   "original": "Free Pass",
+   "text": "Free Pass"
+  },
+  {
+   "id": "4a1678d75d",
+   "where": "a",
+   "original": "Get Pricing",
+   "text": "Get Pricing"
+  },
+  {
+   "id": "49be73cf4d",
+   "where": "span",
+   "original": "Menu",
+   "text": "Menu"
+  },
+  {
+   "id": "f20e1d6af7",
+   "where": "text",
+   "original": "Join Online",
+   "text": "Join Online"
+  },
+  {
+   "id": "6db573aec8",
+   "where": "text",
+   "original": "Free All-Access Pass",
+   "text": "Free All-Access Pass"
+  },
+  {
+   "id": "fc792a6422",
+   "where": "text",
+   "original": "Class Schedule",
+   "text": "Class Schedule"
+  },
+  {
+   "id": "a8ce26b8a9",
+   "where": "text",
+   "original": "Locations",
+   "text": "Locations"
+  },
+  {
+   "id": "e99cd27e7c",
+   "where": "text",
+   "original": "GHF Main",
+   "text": "GHF Main"
+  },
+  {
+   "id": "fdaab2cf40",
+   "where": "text",
+   "original": "GHF Women",
+   "text": "GHF Women"
+  },
+  {
+   "id": "5e858fac26",
+   "where": "text",
+   "original": "GHF Tioga",
+   "text": "GHF Tioga"
+  },
+  {
+   "id": "dc5336cdb9",
+   "where": "text",
+   "original": "Amenities",
+   "text": "Amenities"
+  },
+  {
+   "id": "8fefd31eaf",
+   "where": "text",
+   "original": "J-Bar Smoothie Cafe",
+   "text": "J-Bar Smoothie Cafe"
+  },
+  {
+   "id": "d15d463da6",
+   "where": "text",
+   "original": "Court Sports — Basketball & Volleyball",
+   "text": "Court Sports — Basketball & Volleyball"
+  },
+  {
+   "id": "289d363f73",
+   "where": "text",
+   "original": "Echo Outdoor Pavilion",
+   "text": "Echo Outdoor Pavilion"
+  },
+  {
+   "id": "973b604ffe",
+   "where": "text",
+   "original": "Pool & Aqua Center",
+   "text": "Pool & Aqua Center"
+  },
+  {
+   "id": "b2a7e24015",
+   "where": "text",
+   "original": "Post Workout Recovery",
+   "text": "Post Workout Recovery"
+  },
+  {
+   "id": "45be0476b4",
+   "where": "text",
+   "original": "Chill Studio — HydroMassage & CryoLounge+",
+   "text": "Chill Studio — HydroMassage & CryoLounge+"
+  },
+  {
+   "id": "5a70efe9a9",
+   "where": "text",
+   "original": "Strength Training Equipment",
+   "text": "Strength Training Equipment"
+  },
+  {
+   "id": "ed1d358212",
+   "where": "text",
+   "original": "Cardio Selections",
+   "text": "Cardio Selections"
+  },
+  {
+   "id": "ba93796152",
+   "where": "text",
+   "original": "Hot Yoga",
+   "text": "Hot Yoga"
+  },
+  {
+   "id": "d386e355eb",
+   "where": "text",
+   "original": "Kids Club",
+   "text": "Kids Club"
+  },
+  {
+   "id": "795e0c72b0",
+   "where": "text",
+   "original": "Personal Training",
+   "text": "Personal Training"
+  },
+  {
+   "id": "d866ac80c4",
+   "where": "text",
+   "original": "Pilates",
+   "text": "Pilates"
+  },
+  {
+   "id": "692200451e",
+   "where": "text",
+   "original": "Hyrox",
+   "text": "Hyrox"
+  },
+  {
+   "id": "347caa28b4",
+   "where": "text",
+   "original": "CrossFit",
+   "text": "CrossFit"
+  },
+  {
+   "id": "9e8d1f6df0",
+   "where": "text",
+   "original": "X-Force Fat Loss",
+   "text": "X-Force Fat Loss"
+  },
+  {
+   "id": "dd25ee4373",
+   "where": "text",
+   "original": "Team Strong Training",
+   "text": "Team Strong Training"
+  },
+  {
+   "id": "73e48bfc78",
+   "where": "text",
+   "original": "Why GHF",
+   "text": "Why GHF"
+  },
+  {
+   "id": "12bc0cccc9",
+   "where": "text",
+   "original": "Home",
+   "text": "Home"
+  },
+  {
+   "id": "349cea92ca",
+   "where": "text",
+   "original": "Weight Loss",
+   "text": "Weight Loss"
+  },
+  {
+   "id": "826edce775",
+   "where": "text",
+   "original": "Blog",
+   "text": "Blog"
+  },
+  {
+   "id": "70f6786409",
+   "where": "text",
+   "original": "Contact",
+   "text": "Contact"
+  },
+  {
+   "id": "496db2bb71",
+   "where": "text",
+   "original": "TRIBE Team Training",
+   "text": "TRIBE Team Training"
+  },
+  {
+   "id": "8c0b783dfa",
+   "where": "text",
+   "original": "Corporate Wellness",
+   "text": "Corporate Wellness"
+  },
+  {
+   "id": "de4c6192c7",
+   "where": "text",
+   "original": "Bring a Guest",
+   "text": "Bring a Guest"
+  },
+  {
+   "id": "944233032d",
+   "where": "p",
+   "original": "\"There is no charge, no obligation and no risk. There is, however, a chance that you will be inspired.\"",
+   "text": "\"There is no charge, no obligation and no risk. There is, however, a chance that you will be inspired.\""
+  },
+  {
+   "id": "f9be24ceac",
+   "where": "a",
+   "original": "Free All-Access Pass",
+   "text": "Free All-Access Pass"
+  },
+  {
+   "id": "4626d331b1",
+   "where": "h6",
+   "original": "More at GHF",
+   "text": "More at GHF"
+  },
+  {
+   "id": "22bc7126ff",
+   "where": "a",
+   "original": "Signature Training",
+   "text": "Signature Training"
+  },
+  {
+   "id": "cd2fc270a8",
+   "where": "a",
+   "original": "CrossFit",
+   "text": "CrossFit"
+  },
+  {
+   "id": "54039f3a6b",
+   "where": "a",
+   "original": "X-Force Body",
+   "text": "X-Force Body"
+  },
+  {
+   "id": "1cf91ac1b2",
+   "where": "a",
+   "original": "Seniors",
+   "text": "Seniors"
+  },
+  {
+   "id": "7361821dde",
+   "where": "a",
+   "original": "Sports Activities",
+   "text": "Sports Activities"
+  },
+  {
+   "id": "12f7f92378",
+   "where": "a",
+   "original": "FIT For All",
+   "text": "FIT For All"
+  },
+  {
+   "id": "705634c1ea",
+   "where": "a",
+   "original": "Bring a Guest",
+   "text": "Bring a Guest"
+  },
+  {
+   "id": "3a3e4ef2bf",
+   "where": "a",
+   "original": "Member Savings",
+   "text": "Member Savings"
+  },
+  {
+   "id": "0830d3f36c",
+   "where": "a",
+   "original": "FAQ",
+   "text": "FAQ"
+  },
+  {
+   "id": "1830a7a5a2",
+   "where": "h6",
+   "original": "Visit",
+   "text": "Visit"
+  },
+  {
+   "id": "2a9cfa22fa",
+   "where": "a",
+   "original": "GHF Main — 4820 W Newberry Road",
+   "text": "GHF Main — 4820 W Newberry Road"
+  },
+  {
+   "id": "5015589884",
+   "where": "a",
+   "original": "GHF Women — 2441 NW 43rd Street",
+   "text": "GHF Women — 2441 NW 43rd Street"
+  },
+  {
+   "id": "a97621ae59",
+   "where": "a",
+   "original": "GHF Tioga — 12830 SW 1st Lane",
+   "text": "GHF Tioga — 12830 SW 1st Lane"
+  },
+  {
+   "id": "fc4a6244d6",
+   "where": "h6",
+   "original": "Talk to us",
+   "text": "Talk to us"
+  },
+  {
+   "id": "db24ffc0d8",
+   "where": "a",
+   "original": "(352) 377-4955",
+   "text": "(352) 377-4955"
+  },
+  {
+   "id": "48e384ca63",
+   "where": "a",
+   "original": "memberservices@ghfc.com",
+   "text": "memberservices@ghfc.com"
+  },
+  {
+   "id": "ece5250617",
+   "where": "p",
+   "original": "The gym that's best at helping beginners — with staff to guide your journey. One membership, three locations.",
+   "text": "The gym that's best at helping beginners — with staff to guide your journey. One membership, three locations."
+  },
+  {
+   "id": "906edce6f0",
+   "where": "a",
+   "original": "FB",
+   "text": "FB"
+  },
+  {
+   "id": "29c2f509c1",
+   "where": "a",
+   "original": "IG",
+   "text": "IG"
+  },
+  {
+   "id": "74a4dfb7ed",
+   "where": "a",
+   "original": "YT",
+   "text": "YT"
+  },
+  {
+   "id": "5a36c6294f",
+   "where": "a",
+   "original": "IN",
+   "text": "IN"
+  },
+  {
+   "id": "b62209b039",
+   "where": "h5",
+   "original": "Explore",
+   "text": "Explore"
+  },
+  {
+   "id": "8e0910d2b7",
+   "where": "a",
+   "original": "Join Online",
+   "text": "Join Online"
+  },
+  {
+   "id": "ced42fe3d9",
+   "where": "a",
+   "original": "Free All-Access Pass",
+   "text": "Free All-Access Pass"
+  },
+  {
+   "id": "68b8f8fd7c",
+   "where": "a",
+   "original": "Blog",
+   "text": "Blog"
+  },
+  {
+   "id": "caaa3fca52",
+   "where": "a",
+   "original": "Why GHF",
+   "text": "Why GHF"
+  },
+  {
+   "id": "6fab464af4",
+   "where": "a",
+   "original": "Group Classes",
+   "text": "Group Classes"
+  },
+  {
+   "id": "3c825f9d58",
+   "where": "a",
+   "original": "Personal Training",
+   "text": "Personal Training"
+  },
+  {
+   "id": "5ac3cb2437",
+   "where": "a",
+   "original": "Strength Training",
+   "text": "Strength Training"
+  },
+  {
+   "id": "8c3aefaad7",
+   "where": "a",
+   "original": "Amenities",
+   "text": "Amenities"
+  },
+  {
+   "id": "94f533605c",
+   "where": "a",
+   "original": "Recovery",
+   "text": "Recovery"
+  },
+  {
+   "id": "3eb7c6de96",
+   "where": "a",
+   "original": "Chill Studio",
+   "text": "Chill Studio"
+  },
+  {
+   "id": "b3d59f5da7",
+   "where": "a",
+   "original": "Cancel Chill",
+   "text": "Cancel Chill"
+  },
+  {
+   "id": "26707ef29a",
+   "where": "a",
+   "original": "J-Bar Smoothies",
+   "text": "J-Bar Smoothies"
+  },
+  {
+   "id": "0f0da7daec",
+   "where": "a",
+   "original": "Court Sports",
+   "text": "Court Sports"
+  },
+  {
+   "id": "257a9cd619",
+   "where": "a",
+   "original": "Echo Outdoor Pavilion",
+   "text": "Echo Outdoor Pavilion"
+  },
+  {
+   "id": "911b483274",
+   "where": "a",
+   "original": "Sky Cycle",
+   "text": "Sky Cycle"
+  },
+  {
+   "id": "ddde3298ce",
+   "where": "a",
+   "original": "GHF Live",
+   "text": "GHF Live"
+  },
+  {
+   "id": "82e68c5c5c",
+   "where": "a",
+   "original": "Cancer Recovery",
+   "text": "Cancer Recovery"
+  },
+  {
+   "id": "0a85cabc8c",
+   "where": "a",
+   "original": "Kid's Club",
+   "text": "Kid's Club"
+  },
+  {
+   "id": "fa64004dbd",
+   "where": "a",
+   "original": "Member Savings",
+   "text": "Member Savings"
+  },
+  {
+   "id": "ebd62a3051",
+   "where": "a",
+   "original": "Bring a Guest",
+   "text": "Bring a Guest"
+  },
+  {
+   "id": "c03bb27cdc",
+   "where": "a",
+   "original": "FAQ",
+   "text": "FAQ"
+  },
+  {
+   "id": "0b32b570d1",
+   "where": "h5",
+   "original": "Programs",
+   "text": "Programs"
+  },
+  {
+   "id": "fd6dd89d82",
+   "where": "a",
+   "original": "Signature Training",
+   "text": "Signature Training"
+  },
+  {
+   "id": "f29c5f0fdf",
+   "where": "a",
+   "original": "Hot Yoga",
+   "text": "Hot Yoga"
+  },
+  {
+   "id": "665d97cd92",
+   "where": "a",
+   "original": "Pilates",
+   "text": "Pilates"
+  },
+  {
+   "id": "23011975c2",
+   "where": "a",
+   "original": "TRIBE Team Training",
+   "text": "TRIBE Team Training"
+  },
+  {
+   "id": "e6d694d57f",
+   "where": "a",
+   "original": "CrossFit",
+   "text": "CrossFit"
+  },
+  {
+   "id": "b979f3d1ce",
+   "where": "a",
+   "original": "X-Force Body",
+   "text": "X-Force Body"
+  },
+  {
+   "id": "a8819b6d89",
+   "where": "a",
+   "original": "Seniors",
+   "text": "Seniors"
+  },
+  {
+   "id": "4dab7ea3af",
+   "where": "a",
+   "original": "Pool & Aqua Center",
+   "text": "Pool & Aqua Center"
+  },
+  {
+   "id": "a23c66aabf",
+   "where": "a",
+   "original": "Locations & Hours",
+   "text": "Locations & Hours"
+  },
+  {
+   "id": "a9fd6af03c",
+   "where": "h5",
+   "original": "Stay connected with GHF",
+   "text": "Stay connected with GHF"
+  },
+  {
+   "id": "3033e2c8ff",
+   "where": "a",
+   "original": "(352) 377-4955",
+   "text": "(352) 377-4955"
+  },
+  {
+   "id": "f6d2f04802",
+   "where": "a",
+   "original": "memberservices@ghfc.com",
+   "text": "memberservices@ghfc.com"
+  },
+  {
+   "id": "00371f9ab8",
+   "where": "a",
+   "original": "Email Directory",
+   "text": "Email Directory"
+  },
+  {
+   "id": "c8bf28ab5e",
+   "where": "button",
+   "original": "Join",
+   "text": "Join"
+  },
+  {
+   "id": "fae8aae010",
+   "where": "div",
+   "original": "GAINESVILLE",
+   "text": "GAINESVILLE"
+  },
+  {
+   "id": "433d41e6e6",
+   "where": "span",
+   "original": "©2026 Gainesville Health & Fitness. All Rights Reserved.",
+   "text": "©2026 Gainesville Health & Fitness. All Rights Reserved."
+  },
+  {
+   "id": "85bee86ae4",
+   "where": "a",
+   "original": "Contact Us",
+   "text": "Contact Us"
+  },
+  {
+   "id": "e0b07d3556",
+   "where": "a",
+   "original": "Careers",
+   "text": "Careers"
+  },
+  {
+   "id": "e8371240f4",
+   "where": "a",
+   "original": "Privacy Policy",
+   "text": "Privacy Policy"
+  },
+  {
+   "id": "e90ceb2ebd",
+   "where": "a",
+   "original": "Accessibility",
+   "text": "Accessibility"
+  }
+ ]
+}
