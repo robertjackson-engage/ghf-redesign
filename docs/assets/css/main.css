@@ -1228,7 +1228,14 @@ a.split--link:focus-visible { outline: 2px solid var(--accent); outline-offset: 
 .site-footer .brand__icon { width: 26px; height: 26px; }
 
 /* two header CTAs is tight mid-width — keep Join Online, tuck Get Pricing away */
-@media (max-width: 1420px) { .header-pricing { display: none; } }
+/* header CTAs hold all three down to the mobile breakpoint. The tightest point is ~1101px,
+   just before .nav-desktop collapses, where they fit with nothing to spare — so the buttons
+   tighten below 1260px to keep a usable margin. Scoped to .header-cta: .btn--sm is used
+   elsewhere on the site and must not change. */
+@media (max-width: 1260px) {
+  .header-cta { gap: 10px; }
+  .header-cta .btn--sm { padding: 12px 16px; letter-spacing: 0.14em; }
+}
 
 /* ============================================================
    GX — group fitness class schedule (lives in .section--light)
