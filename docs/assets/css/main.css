@@ -817,9 +817,11 @@ a.split--link:focus-visible { outline: 2px solid var(--accent); outline-offset: 
 .socials a {
   width: 44px; height: 44px; border: 1px solid var(--line); border-radius: 50%;
   display: flex; align-items: center; justify-content: center;
-  font-size: 11px; letter-spacing: 0.08em; font-weight: 600; color: var(--muted);
+  color: var(--muted);
   transition: all .4s;
 }
+/* the glyph inherits the link's colour, so the hover on .socials a still drives it */
+.socials__icon { width: 18px; height: 18px; display: block; }
 .socials a:hover { background: var(--accent); border-color: var(--accent); color: #fff; }
 .site-footer__mega {
   font-family: var(--font-display); text-transform: uppercase; text-align: center;
