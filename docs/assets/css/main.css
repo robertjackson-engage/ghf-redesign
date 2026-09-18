@@ -503,8 +503,9 @@ a.split--link:focus-visible { outline: 2px solid var(--accent); outline-offset: 
 }
 .marquee--accent { background: var(--accent); border-color: var(--accent); }
 .marquee__track {
+  --marquee-dur: 28s;
   display: flex; flex-shrink: 0; align-items: center; gap: 0;
-  animation: marquee 28s linear infinite; will-change: transform;
+  animation: marquee var(--marquee-dur) linear infinite; will-change: transform;
 }
 .marquee span {
   font-family: var(--font-display); text-transform: uppercase;
@@ -1100,8 +1101,15 @@ a.split--link:focus-visible { outline: 2px solid var(--accent); outline-offset: 
     transition-duration: 0.01ms !important;
   }
   html { scroll-behavior: auto; }
-  .marquee__track, .hero__scroll::after, .gx__dots i, .chat-typing i,
+  .hero__scroll::after, .gx__dots i, .chat-typing i,
   .chat-orb::before, .gx-class__live i::after { animation: none !important; }
+  /* the marquee is the site's signature motion and keeps running, like the hero videos.
+     Both properties have to be restored: duration alone would leave iteration-count at 1,
+     so the bar would run once to translateX(-100%) and sit empty. */
+  .marquee__track {
+    animation-duration: var(--marquee-dur) !important;
+    animation-iteration-count: infinite !important;
+  }
 }
 
 /* ============================================================
