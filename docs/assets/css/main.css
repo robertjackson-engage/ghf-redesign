@@ -1094,8 +1094,14 @@ a.split--link:focus-visible { outline: 2px solid var(--accent); outline-offset: 
 }
 
 @media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
   html { scroll-behavior: auto; }
+  .marquee__track, .hero__scroll::after, .gx__dots i, .chat-typing i,
+  .chat-orb::before, .gx-class__live i::after { animation: none !important; }
 }
 
 /* ============================================================
