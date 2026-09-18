@@ -4966,7 +4966,7 @@ cycle_body = hero(
     video="assets/video/ghf-cycle-loop.mp4",
     poster=f"{IMG}/hero-cycle.jpg",
     crumb='Classes &nbsp;/&nbsp; Indoor Cycling',
-    actions=[("See The Schedule", "#schedule", True), ("Class Styles", "#fusion", False)],
+    actions=[("See The Schedule", "#schedule", True)],
     meta=["40 bikes", "My Ride technology", "30 to 60 minutes"],
     page=True,
 ) + split(
@@ -4988,40 +4988,6 @@ cycle_body = hero(
       <p class="body-copy reveal" style="max-width:38ch">What a ride in the Sky Cycle studio actually looks like.</p>
     </div>
     <div class="reveal">{embed(CYCLE_VIDEO, "Sky Cycle at Gainesville Health & Fitness", allow_yt=True)}</div>
-  </div>
-</section>
-
-<section class="section" id="fusion">
-  <div class="wrap">
-    <div class="cards-head">
-      <div>
-        <p class="eyebrow">Cycle Fusion</p>
-        <h2 class="h-display reveal" style="font-size:clamp(34px,4.6vw,72px)">Cycling, and then <span class="serif">some</span></h2>
-      </div>
-      <p class="body-copy reveal" style="max-width:38ch">Fusion classes combine the intensity of indoor cycling with other disciplines &mdash; strength, flexibility and mindfulness in one session.</p>
-    </div>
-    <div class="rows reveal">
-      <div class="row-item">
-        <span class="row-item__idx">01</span>
-        <span class="row-item__title">Cycle Fusion</span>
-        <span class="row-item__desc">A carefully curated blend of cycling, strength training, flexibility work and mindfulness techniques &mdash; a comprehensive programme that helps you hit your goals and enhances your overall well-being.</span>
-      </div>
-      <div class="row-item">
-        <span class="row-item__idx">02</span>
-        <span class="row-item__title">Cycle Flow</span>
-        <span class="row-item__desc">The perfect harmony of cycling and yoga. Pedal through an exhilarating cardio session, then transition into a yoga flow to stretch, unwind and find balance &mdash; endurance and flexibility together.</span>
-      </div>
-      <div class="row-item">
-        <span class="row-item__idx">03</span>
-        <span class="row-item__title">Cycle Sculpt</span>
-        <span class="row-item__desc">Cycling with weight training. Pedal to the beat engaging legs and core, then pick up dumbbells, bands or sliders to target specific muscle groups. Builds strength, tones and boosts metabolism.</span>
-      </div>
-      <div class="row-item">
-        <span class="row-item__idx">04</span>
-        <span class="row-item__title">Cycle Core</span>
-        <span class="row-item__desc">Strengthens your abdominal muscles while you ride. Guided through core exercises targeting abs, obliques and lower back &mdash; a dynamic, calorie-burning alternative to mundane ab workouts.</span>
-      </div>
-    </div>
   </div>
 </section>
 
