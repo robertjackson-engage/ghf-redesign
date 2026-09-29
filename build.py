@@ -256,6 +256,7 @@ MENU = [
     ("Home", "index.html"),
     ("Weight Loss", "weight-loss.html"),
     ("Blog", "blog.html"),
+    ("Careers", "careers.html"),
     ("Contact", "contact.html"),
     ("TRIBE Team Training", "tribe.html"),
 ]
@@ -470,6 +471,7 @@ def footer_html():
           <a href="kids-club.html">Kid's Club</a>
           <a href="member-savings.html">Member Savings</a>
           <a href="bring-a-guest.html">Bring a Guest</a>
+          <a href="careers.html">Careers</a>
           <a href="faq.html">FAQ</a>
         </div>
       </div>
@@ -505,7 +507,7 @@ def footer_html():
       <span>©2026 Gainesville Health &amp; Fitness. All Rights Reserved.</span>
       <div class="legal">
         <a href="contact.html">Contact Us</a>
-        <a href="contact.html">Careers</a>
+        <a href="careers.html">Careers</a>
         <a href="contact.html">Privacy Policy</a>
         <a href="contact.html">Accessibility</a>
       </div>
@@ -5185,6 +5187,204 @@ cancer_body = hero(
 
 
 # ============================================================ BUILD ALL
+# ============================================================ CAREERS
+# Content from ghfc.com/careers. Each role keeps its OWN Keap application page: they carry
+# role-specific copy and already feed GHF's hiring pipeline, so they are linked out to rather
+# than rebuilt as native forms, which would need new form ids and could silently drop
+# applicants. All ten destinations were checked live when this page was built.
+CAREER_ROLES = [
+    ("Service Staff",
+     '<p class="body-copy">Our service team includes fitness floor instructors, receptionists, customer '
+     "service specialists, Kid's Club attendants, smoothie bar servers, maintenance and housekeeping staff. "
+     'These are the roles that meet members and guests most often, and they are chosen carefully.</p>',
+     "https://ot4g372h.pages.infusionsoft.net"),
+    ("Membership Sales",
+     '<p class="body-copy">Help people unleash their fullest potential by joining GHF. You will build your own '
+     'book of business from prospects you generate, meet daily, weekly and monthly acquisition and retention '
+     'goals, take part in outreach for new prospects and referrals, and act as relationship manager for your '
+     'members and guests.</p>',
+     "https://kg480-6e9f66.pages.infusionsoft.net/"),
+    ("TRIBE Team Training Coaches",
+     '<p class="body-copy">Instruct, lead and motivate groups of 8 to 10 people through cardiovascular, '
+     'strength and conditioning work. Coaches give movement cues and guide the group in a fun, dynamic '
+     'environment, working with people of every age, ability and skill level.</p>',
+     "https://7swob8aw.pages.infusionsoft.net/"),
+    ("GroupFit Instructors",
+     '<p class="body-copy">Instructors guide members to higher levels of health through class. Building '
+     'camaraderie, designing class formats with sensible regressions, connecting members with the rest of GHF '
+     'and living the brand are the heart of the job. We run 900 classes a month across all three locations, and '
+     'always need inspired, certified instructors to lead them.</p>',
+     "https://q20tv08s.pages.infusionsoft.net/"),
+    ("Personal Trainers",
+     '<p class="body-copy">Trainers give members the tools and the motivation to reach their goals. All of ours '
+     'are certified through NASM, ACSM or NSCA. With thousands of members there is an enormous prospecting pool '
+     'here, so trainers have real room to build clientele and grow their income, with generous benefits behind '
+     'them.</p>',
+     "https://kg480-5dbdfe.pages.infusionsoft.net/"),
+    ("CrossFit Coaches",
+     '<p class="body-copy">Build a community of athletes committed to each other&rsquo;s improvement, on and off '
+     'the turf. Coaches hold CrossFit Level 1 or higher.</p>'
+     '<p class="body-copy">CrossFit opens doors here: continuing education, and consideration for roles in '
+     'Personal Training, Pilates, TRIBE and leadership. We are devoted to improvement and always open to new '
+     'ideas.</p>',
+     "https://lqhxx9pn.pages.infusionsoft.net/"),
+    ("Maintenance",
+     '<p class="body-copy">We keep our equipment and facilities in exceptional condition, with systems of '
+     'preventative maintenance built to protect safety and satisfaction. There is no such thing as &ldquo;that '
+     'is not my job&rdquo; here: the work spans facilities and equipment, across preventative, repair and '
+     'project agendas.</p>',
+     "https://p0fqxhfv.pages.infusionsoft.net/"),
+    ("Internships",
+     '<p class="body-copy">Find out what working in the fitness industry is really like. Interns get firsthand '
+     'experience inside one of the most renowned health clubs in the country, across hiring, membership sales, '
+     'facility operations, service, personal training, and marketing and public relations.</p>'
+     '<p class="body-copy"><strong>All internships are unpaid and must receive academic credit.</strong></p>',
+     "https://kg480-e5ac43.pages.infusionsoft.net/"),
+    ("ReQuest Physical Therapy",
+     '<p class="body-copy">Our two onsite ReQuest clinics are always interested in therapists and administrative '
+     'staff who take on new challenges and genuinely want to help people get back to what they love. ReQuest '
+     'hires through its own site.</p>',
+     "https://requestphysicaltherapy.com/join-our-team/"),
+    ("Volunteer with FIT for ALL",
+     '<p class="body-copy">FIT for ALL is Fun, Inclusive Training for individuals with special needs, built for '
+     'athletes with developmental and intellectual disabilities including Down syndrome and autism.</p>'
+     '<p class="body-copy">Volunteers are partnered with an athlete to encourage and guide them through '
+     'cardiovascular, strength and circuit-style workouts, safely and with a good time had. You are trained on '
+     'how to guide each workout before you start.</p>',
+     "http://fitforall.org"),
+]
+
+CAREERS_FILM = "https://www.youtube.com/embed/BRhPFIPHI9o"
+CAREER_ALUMNI = [
+    ("yu1GoNrC5VE", "Ken Cornell", "County Commissioner"),
+    ("gwnnRTw3cJ0", "Larry Hartfield", "Karate instructor, Hartfield Insurance Group"),
+    ("CuSZPtiUVxE", "Craig Wilburn", "Realtor"),
+    ("YtC4vm_dsik", "Carissa Blaser", "Owner, Pure Aesthetics"),
+]
+
+
+def career_items():
+    """Accordion rows for the roles. The answer is raw HTML, so each role carries the apply
+    link that belongs to it rather than a single shared one."""
+    rows = []
+    for title, body, href in CAREER_ROLES:
+        if "requestphysical" in href:
+            label = "Visit the ReQuest site"
+        elif "fitforall" in href:
+            label = "Volunteer at fitforall.org"
+        else:
+            label = "Apply for this role"
+        rows.append((title, body +
+                     '<p style="margin-top:18px"><a class="btn btn--solid" href="' + href +
+                     '" target="_blank" rel="noopener">' + label +
+                     ' <span class="arr">&rarr;</span></a></p>'))
+    return rows
+
+
+def career_alumni():
+    out = ""
+    for vid, name, role in CAREER_ALUMNI:
+        out += ('<div class="reveal">'
+                + embed("https://www.youtube.com/embed/" + vid, name + " on working at GHF", allow_yt=True)
+                + '<p class="eyebrow" style="margin-top:16px">' + name + '</p>'
+                + '<p class="body-copy" style="margin-top:6px">' + role + '</p></div>')
+    return out
+
+
+careers_body = hero(
+    "Careers at GHF",
+    ["Work somewhere that", 'takes people <span class="serif">seriously</span>'],
+    "We are looking for people who see fitness as a career rather than a job &mdash; in every department, from "
+    "the training floor to the front desk. Nearly 400 of them work here already.",
+    img=f"{IMG}/GHF_Careers_Floor_Instructor_Fitness_Jobs_Service.jpg",
+    crumb="Careers",
+    actions=[("See Open Roles", "#roles", True), ("Why GHF", "#why", False)],
+    meta=["Founded 1978", "Three locations", "Nearly 400 employees"],
+    page=True,
+) + '<div id="why">' + stats_band([
+    (str(time.localtime().tm_year - 1978), "", "years in Gainesville"),
+    ("400", "", "people on the team"),
+    ("3", "", "locations in Gainesville"),
+    ("2", "", "onsite ReQuest clinics"),
+]) + split(
+    "Why GHF", "01",
+    'One of America&rsquo;s best <span class="serif">small businesses</span>',
+    ["At GHF we want to create an experience that helps people get the most out of life, and inspires them to "
+     "become their best. Every department has people who work their hardest, show integrity, and hold an "
+     "extraordinary commitment to helping others.",
+     "Founded in 1978, GHF has more than four decades behind it. <em>Forbes</em> has named us one of the best "
+     "small businesses in America, and the Gainesville Chamber of Commerce named us Employer of the Year in "
+     "2019 and Large Business of the Year in 2021.",
+     "You will find a workplace that meets your standards as well as ours."],
+    f"{IMG}/GHF_Careers_Floor_Instructor_Fitness_Jobs_Service.jpg",
+    "A GHF floor instructor working with a member", light=True,
+) + '</div>' + f"""
+<section class="section" id="film">
+  <div class="wrap">
+    <div class="cards-head">
+      <div>
+        <p class="eyebrow">Before you decide</p>
+        <h2 class="h-display reveal" style="font-size:clamp(34px,4.6vw,72px)">What the team says about <span class="serif">working here</span></h2>
+      </div>
+      <p class="body-copy reveal" style="max-width:38ch">Hear it from the people on the floor rather than from us.</p>
+    </div>
+    <div class="reveal">{embed(CAREERS_FILM, "What the GHF team loves about working here", allow_yt=True)}</div>
+  </div>
+</section>
+
+<section class="section section--light" id="perks">
+  <div class="wrap">
+    <div class="intro-grid">
+      <div>
+        <p class="eyebrow">Your VIP perks</p>
+        <h2 class="h-display reveal">Some of what comes with <span class="serif">the job</span></h2>
+      </div>
+      <div class="intro-grid__right reveal">
+        <ul class="checklist">
+          <li>Free membership at all three clubs &mdash; Main, Tioga and the Women&rsquo;s Center</li>
+          <li>Free HydroMassage sessions in the Chill Studio</li>
+          <li>Unlimited free Pilates, CrossFit, AMP&rsquo;D 45 and TRIBE Team Training</li>
+          <li>Free GHF swag</li>
+          <li>Discounts on retail, including GHF Gear and lululemon</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="roles">
+  <div class="wrap">
+    <div class="cards-head">
+      <div>
+        <p class="eyebrow">Open roles</p>
+        <h2 class="h-display reveal" style="font-size:clamp(34px,4.6vw,72px)">Ten ways to <span class="serif">join us</span></h2>
+      </div>
+      <p class="body-copy reveal" style="max-width:38ch">Open a role to read what the job involves, then apply straight to that team.</p>
+    </div>
+    {accordion(career_items(), open_first=False)}
+  </div>
+</section>
+
+<section class="section section--light" id="alumni">
+  <div class="wrap">
+    <div class="cards-head">
+      <div>
+        <p class="eyebrow">Where people go next</p>
+        <h2 class="h-display reveal" style="font-size:clamp(34px,4.6vw,72px)">What they took <span class="serif">with them</span></h2>
+      </div>
+      <p class="body-copy reveal" style="max-width:38ch">Former staff on why they chose GHF, and how they still use what they learned here.</p>
+    </div>
+    <div class="card-grid card-grid--4">{career_alumni()}</div>
+  </div>
+</section>
+""" + cta_band(
+    'Come build something <span class="serif">here</span>',
+    "Find the team that fits you and apply today.",
+    f"{IMG}/GHF_GroupFit_Les_Mills_Body_Pump_Squats.jpg",
+    primary=("See Open Roles", "careers.html#roles"),
+    secondary=None,
+)
+
 PAGES = [
     ("index.html", "Gainesville Health & Fitness | The Gym That's Best At Helping Beginners", "The gym that's best at helping beginners — with staff to guide your journey. 3 locations, 900+ classes monthly, open 24/7 at GHF Main.", "", home_body),
     ("why-ghf.html", "Why GHF? | Gainesville Health & Fitness", "Offering you more programs, classes, choices, and variety than any other gym.", "why-ghf.html", why_body),
@@ -5225,6 +5425,7 @@ PAGES = [
     ("live.html", "GHF Live | Stream GroupFit Classes at Home | Gainesville", "Stream GHF GroupFit classes live or watch them later. Included with your membership.", "group-fitness.html", live_body),
     ("cancer-recovery.html", "Cancer Recovery at GHF | Exercise After Cancer Treatment", "A no-charge cancer recovery program at Gainesville Health & Fitness — strength, aerobic and flexibility training at your own pace with a fitness counselor.", "recovery.html", cancer_body),
     ("faq.html", "FAQ | Get The Most Out Of Your Gym Membership | GHF", "Frequently asked questions about Gainesville Health & Fitness memberships, amenities, and getting started.", "", faq_body),
+    ("careers.html", "Careers & Internships | Work at Gainesville Health & Fitness", "Fitness careers, coaching roles and internships at GHF \u2014 nearly 400 employees across three Gainesville locations, named by Forbes one of America's best small businesses.", "", careers_body),
     ("ghf-pass.html", "Free All-Access Pass | Try GHF Free | Gainesville Health & Fitness", "Try Gainesville Health & Fitness free. Your all-access pass gives you full membership privileges for one day at any of our three locations — classes, pool, sauna, weight floor and a coach to guide you. No charge, no obligation.", "", ghf_pass_body),
     ("contact.html", "Contact Us & Get Pricing | Gainesville Health & Fitness", "Let's talk fitness memberships in Gainesville — pricing packages and amenities to craft your gym experience.", "", contact_body),
     ("thank-you-pricing.html", "Thank You | Gainesville Health & Fitness", "Thanks for requesting gym pricing from Gainesville Health & Fitness. A team member will follow up shortly with membership options.", "", thankyou_body),

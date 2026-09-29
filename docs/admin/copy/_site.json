@@ -362,6 +362,12 @@
    "text": "Blog"
   },
   {
+   "id": "e0b07d3556",
+   "where": "text",
+   "original": "Careers",
+   "text": "Careers"
+  },
+  {
    "id": "70f6786409",
    "where": "text",
    "original": "Contact",
@@ -662,6 +668,12 @@
    "text": "Bring a Guest"
   },
   {
+   "id": "c0500e8b47",
+   "where": "a",
+   "original": "Careers",
+   "text": "Careers"
+  },
+  {
    "id": "c03bb27cdc",
    "where": "a",
    "original": "FAQ",
@@ -776,7 +788,7 @@
    "text": "Contact Us"
   },
   {
-   "id": "e0b07d3556",
+   "id": "76bb56b59f",
    "where": "a",
    "original": "Careers",
    "text": "Careers"
