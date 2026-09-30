@@ -1,0 +1,125 @@
+{
+ "page": "careers-service-staff",
+ "items": [
+  {
+   "id": "46b47f38a3",
+   "where": "Browser tab title",
+   "original": "Apply: Service Staff | Gainesville Health & Fitness",
+   "text": "Apply: Service Staff | Gainesville Health & Fitness"
+  },
+  {
+   "id": "5f27ef9f90",
+   "where": "Search-engine description",
+   "original": "Apply for a Service Staff role at GHF — fitness floor, front desk, Kid's Club, smoothie bar, housekeeping and maintenance.",
+   "text": "Apply for a Service Staff role at GHF — fitness floor, front desk, Kid's Club, smoothie bar, housekeeping and maintenance."
+  },
+  {
+   "id": "a60f0ded5d",
+   "where": "a",
+   "original": "Home",
+   "text": "Home"
+  },
+  {
+   "id": "11d5419778",
+   "where": "text",
+   "original": "/",
+   "text": "/"
+  },
+  {
+   "id": "72989d4e62",
+   "where": "a",
+   "original": "Careers",
+   "text": "Careers"
+  },
+  {
+   "id": "b18a5e541b",
+   "where": "text",
+   "original": "/ Service Staff",
+   "text": "/ Service Staff"
+  },
+  {
+   "id": "ca97eca8b8",
+   "where": "p",
+   "original": "Apply to GHF",
+   "text": "Apply to GHF"
+  },
+  {
+   "id": "905106e9f9",
+   "where": "span",
+   "original": "Service Staff",
+   "text": "Service Staff"
+  },
+  {
+   "id": "ac192d9260",
+   "where": "span",
+   "original": "at",
+   "text": "at"
+  },
+  {
+   "id": "a508cee4a2",
+   "where": "span",
+   "original": "GHF",
+   "text": "GHF"
+  },
+  {
+   "id": "7ed63892b2",
+   "where": "p",
+   "original": "Our service team meets members and guests more than anyone else at GHF — the fitness floor, the front desk, Kid’s Club, the smoothie bar, housekeeping and maintenance. Tell us about yourself below.",
+   "text": "Our service team meets members and guests more than anyone else at GHF — the fitness floor, the front desk, Kid’s Club, the smoothie bar, housekeeping and maintenance. Tell us about yourself below."
+  },
+  {
+   "id": "f3f27c38f3",
+   "where": "p",
+   "original": "Loading the application…",
+   "text": "Loading the application…"
+  },
+  {
+   "id": "423843b855",
+   "where": "legend",
+   "original": "About you",
+   "text": "About you"
+  },
+  {
+   "id": "95364f440c",
+   "where": "label",
+   "original": "Your name",
+   "text": "Your name"
+  },
+  {
+   "id": "ea539ab739",
+   "where": "label",
+   "original": "Email address",
+   "text": "Email address"
+  },
+  {
+   "id": "24964f230a",
+   "where": "label",
+   "original": "Phone (optional)",
+   "text": "Phone (optional)"
+  },
+  {
+   "id": "7ca6d4a4c5",
+   "where": "button",
+   "original": "Send my application",
+   "text": "Send my application"
+  },
+  {
+   "id": "b3b4665e61",
+   "where": "span",
+   "original": "→",
+   "text": "→"
+  },
+  {
+   "id": "696167aadb",
+   "where": "p",
+   "original": "We read every application. If you would rather talk to someone first, call",
+   "text": "We read every application. If you would rather talk to someone first, call"
+  },
+  {
+   "id": "182d2bf1f6",
+   "where": "a",
+   "original": "(352) 377-4955",
+   "text": "(352) 377-4955"
+  }
+ ]
+}

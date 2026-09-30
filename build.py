@@ -5187,6 +5187,61 @@ cancer_body = hero(
 
 
 # ============================================================ BUILD ALL
+# ---------------------------------------------------------------- Perch applications
+# Service Staff applications are taken on our own site rather than on Perch's hosted page.
+# The field list, their order, which are required and the knock-out rules all live in the
+# posting, so apply.js renders whatever Perch currently asks for instead of a copy that
+# would drift. Contract verified against the live API, including the 422 auto-reject path.
+PERCH_APPLY = "https://perch-platform-api.onrender.com/apply/ghf"
+
+
+def apply_page(slug, role, lede):
+    """A single job application, rendered client-side from the Perch posting."""
+    return hero(
+        "Apply to GHF",
+        [role, 'at <span class="serif">GHF</span>'],
+        lede,
+        img=f"{IMG}/GHF_Careers_Floor_Instructor_Fitness_Jobs_Service.jpg",
+        crumb='<a href="careers.html">Careers</a> &nbsp;/&nbsp; ' + role,
+        page=True,
+        hero_cls="hero--compact",
+    ) + f"""
+<section class="section section--light">
+  <div class="wrap">
+    <div class="apply" data-api="{PERCH_APPLY}/{slug}">
+      <div class="apply__body">
+        <div class="apply__loading"><p class="lede">Loading the application&hellip;</p></div>
+        <form class="apply__form" hidden novalidate>
+          <fieldset class="apply__section">
+            <legend>About you</legend>
+            <div class="apply__field"><input id="ap-name" type="text" placeholder=" " required>
+              <label for="ap-name">Your name</label></div>
+            <div class="apply__field"><input id="ap-email" type="email" placeholder=" " required>
+              <label for="ap-email">Email address</label></div>
+            <div class="apply__field"><input id="ap-phone" type="tel" placeholder=" ">
+              <label for="ap-phone">Phone (optional)</label></div>
+          </fieldset>
+          <div class="apply__fields"></div>
+          <div class="apply__out"></div>
+          <button class="btn btn--dark apply__submit" type="submit">Send my application <span class="arr">&rarr;</span></button>
+          <p class="form-note">We read every application. If you would rather talk to someone first,
+          call <a href="tel:+13523774955">(352) 377-4955</a>.</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+<script src="assets/js/apply.js?v={V}" defer></script>
+"""
+
+
+service_staff_body = apply_page(
+    "service-staff-ghf-main-2", "Service Staff",
+    "Our service team meets members and guests more than anyone else at GHF &mdash; the fitness floor, "
+    "the front desk, Kid&rsquo;s Club, the smoothie bar, housekeeping and maintenance. Tell us about "
+    "yourself below.",
+)
+
 # ============================================================ CAREERS
 # Content from ghfc.com/careers. Each role keeps its OWN Keap application page: they carry
 # role-specific copy and already feed GHF's hiring pipeline, so they are linked out to rather
@@ -5197,7 +5252,7 @@ CAREER_ROLES = [
      '<p class="body-copy">Our service team includes fitness floor instructors, receptionists, customer '
      "service specialists, Kid's Club attendants, smoothie bar servers, maintenance and housekeeping staff. "
      'These are the roles that meet members and guests most often, and they are chosen carefully.</p>',
-     "https://ot4g372h.pages.infusionsoft.net"),
+     "careers-service-staff.html"),
     ("Membership Sales",
      '<p class="body-copy">Help people unleash their fullest potential by joining GHF. You will build your own '
      'book of business from prospects you generate, meet daily, weekly and monthly acquisition and retention '
@@ -5274,10 +5329,11 @@ def career_items():
             label = "Volunteer at fitforall.org"
         else:
             label = "Apply for this role"
+        # Service Staff is taken on our own site now, so it is an internal link
+        ext = ' target="_blank" rel="noopener"' if href.startswith("http") else ""
         rows.append((title, body +
-                     '<p style="margin-top:18px"><a class="btn btn--solid" href="' + href +
-                     '" target="_blank" rel="noopener">' + label +
-                     ' <span class="arr">&rarr;</span></a></p>'))
+                     '<p style="margin-top:18px"><a class="btn btn--solid" href="' + href + '"' + ext + '>' +
+                     label + ' <span class="arr">&rarr;</span></a></p>'))
     return rows
 
 
@@ -5426,6 +5482,7 @@ PAGES = [
     ("cancer-recovery.html", "Cancer Recovery at GHF | Exercise After Cancer Treatment", "A no-charge cancer recovery program at Gainesville Health & Fitness — strength, aerobic and flexibility training at your own pace with a fitness counselor.", "recovery.html", cancer_body),
     ("faq.html", "FAQ | Get The Most Out Of Your Gym Membership | GHF", "Frequently asked questions about Gainesville Health & Fitness memberships, amenities, and getting started.", "", faq_body),
     ("careers.html", "Careers & Internships | Work at Gainesville Health & Fitness", "Fitness careers, coaching roles and internships at GHF \u2014 nearly 400 employees across three Gainesville locations, named by Forbes one of America's best small businesses.", "", careers_body),
+    ("careers-service-staff.html", "Apply: Service Staff | Gainesville Health & Fitness", "Apply for a Service Staff role at GHF \u2014 fitness floor, front desk, Kid's Club, smoothie bar, housekeeping and maintenance.", "", service_staff_body),
     ("ghf-pass.html", "Free All-Access Pass | Try GHF Free | Gainesville Health & Fitness", "Try Gainesville Health & Fitness free. Your all-access pass gives you full membership privileges for one day at any of our three locations — classes, pool, sauna, weight floor and a coach to guide you. No charge, no obligation.", "", ghf_pass_body),
     ("contact.html", "Contact Us & Get Pricing | Gainesville Health & Fitness", "Let's talk fitness memberships in Gainesville — pricing packages and amenities to craft your gym experience.", "", contact_body),
     ("thank-you-pricing.html", "Thank You | Gainesville Health & Fitness", "Thanks for requesting gym pricing from Gainesville Health & Fitness. A team member will follow up shortly with membership options.", "", thankyou_body),
