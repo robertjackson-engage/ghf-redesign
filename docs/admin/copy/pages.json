@@ -1,6 +1,7 @@
 {
  "repo": "robertjackson-engage/ghf-redesign",
  "branch": "main",
+ "backend": "https://ghf-cms.azurewebsites.net",
  "pages": [
   {
    "scope": "index",

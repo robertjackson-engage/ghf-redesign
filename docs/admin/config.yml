@@ -1,9 +1,14 @@
+# The CMS talks to the GHF CMS backend (cms-backend/server.py, on Azure). Staff sign in with their
+# Microsoft work account; the backend commits to GitHub with its own token. Nobody needs GitHub.
 backend:
-  name: github
+  name: gitea                     # the backend speaks Sveltia's Gitea-compatible API
   repo: robertjackson-engage/ghf-redesign
   branch: main
-# Local dev only: when the Sveltia CMS proxy server is running on localhost,
-# /admin edits local files directly with no GitHub login. Ignored in production.
+  base_url: https://ghf-cms.azurewebsites.net
+  api_root: https://ghf-cms.azurewebsites.net/api/v1
+  app_id: ghf-cms                 # any constant; sign-in is PKCE through our backend
+# Local dev: run `python3 cms-backend/server.py` and open /admin/?backend=local to use it; or run the
+# Sveltia proxy and choose "Work with Local Repository" (local_backend) to edit files with no login.
 local_backend: true
 media_folder: "docs/assets/img"
 public_folder: "/assets/img"

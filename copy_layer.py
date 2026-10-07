@@ -163,7 +163,7 @@ def publish(out_dir, pages, repo, branch):
     os.makedirs(dst, exist_ok=True)
     for f in glob.glob(os.path.join(COPY_DIR, "*.json")):
         shutil.copy(f, dst)
-    index = {"repo": repo, "branch": branch, "pages": []}
+    index = {"repo": repo, "branch": branch, "backend": os.environ.get("CMS_PUBLIC_URL", "https://ghf-cms.azurewebsites.net"), "pages": []}
     for fn, title in pages:
         sc = scope_of(fn)
         if os.path.exists(os.path.join(COPY_DIR, sc + ".json")):

@@ -313,38 +313,29 @@ textarea:focus{outline:none;border-color:var(--accent)}
     });
   }
 
-  function token() {
-    var t = null;
-    try { t = localStorage.getItem("ghf-edit-token"); } catch (e) {}
-    if (!t) {
-      try { var u = JSON.parse(localStorage.getItem("sveltia-cms.user") || "null"); if (u && u.token) t = u.token; } catch (e) {}
-    }
-    if (!t) {
-      t = prompt("To publish, paste a GitHub access token with write access to " + CONFIG.repo + " (Settings → Developer settings → Fine-grained tokens → Contents: Read and write). It is kept only in this browser.");
-      if (t) try { localStorage.setItem("ghf-edit-token", t.trim()); } catch (e) {}
-    }
-    if (!t) throw new Error("no GitHub token");
-    return t.trim();
+  /* ---------- publish through the GHF CMS backend (Microsoft sign-in, no GitHub) ---------- */
+  var BACKEND = (CONFIG && CONFIG.backend) || "https://ghf-cms.azurewebsites.net";
+  function session() {
+    /* Sveltia stores the signed-in editor here after the Microsoft login at /admin/ */
+    try { var u = JSON.parse(localStorage.getItem("sveltia-cms.user") || "null"); if (u && u.token) return u.token; } catch (e) {}
+    return null;
   }
-  function b64(str) { return btoa(unescape(encodeURIComponent(str))); }
   function saveGitHub(files) {
-    var tok = token(), api = "https://api.github.com/repos/" + CONFIG.repo + "/contents/content/copy/";
-    var headers = { Authorization: "Bearer " + tok, Accept: "application/vnd.github+json", "Content-Type": "application/json" };
-    return files.reduce(function (chain, f) {
-      return chain.then(function () {
-        var path = api + f.scope + ".json";
-        return fetch(path + "?ref=" + CONFIG.branch, { headers: headers }).then(function (r) {
-          if (r.status === 401 || r.status === 403) { try { localStorage.removeItem("ghf-edit-token"); } catch (e) {} throw new Error("GitHub rejected the token"); }
-          return r.ok ? r.json() : null;
-        }).then(function (existing) {
-          var body = { message: "Site text: " + f.scope + " (" + Object.keys(pending).length + " change" + (Object.keys(pending).length === 1 ? "" : "s") + ")",
-                       content: b64(JSON.stringify(f.data, null, 1) + "\n"), branch: CONFIG.branch };
-          if (existing && existing.sha) body.sha = existing.sha;
-          return fetch(path, { method: "PUT", headers: headers, body: JSON.stringify(body) });
-        }).then(function (r) { if (!r.ok) return r.json().then(function (j) { throw new Error(j.message || ("GitHub error " + r.status)); }); });
-      });
-    }, Promise.resolve()).then(function () { return "Saved — publishing to the live site (about a minute)"; });
+    var tok = session();
+    if (!tok) {
+      if (confirm("Please sign in first. Open the CMS sign-in page now? (Your changes stay here — come back to this tab after signing in.)")) window.open("./", "_blank");
+      return Promise.reject(new Error("not signed in"));
+    }
+    var payload = { message: "Site text: " + Object.keys(touchedScopes(files)).join(", ") + " (" + Object.keys(pending).length + " change" + (Object.keys(pending).length === 1 ? "" : "s") + ")",
+                    files: files.map(function (f) { return { path: "content/copy/" + f.scope + ".json", content: JSON.stringify(f.data, null, 1) + "\n" }; }) };
+    return fetch(BACKEND + "/publish", { method: "POST", headers: { Authorization: "Bearer " + tok, "Content-Type": "application/json" }, body: JSON.stringify(payload) })
+      .then(function (r) {
+        if (r.status === 401) { try { localStorage.removeItem("sveltia-cms.user"); } catch (e) {} throw new Error("Your sign-in expired — sign in again at /admin/ and retry"); }
+        return r.json().then(function (j) { if (!r.ok) throw new Error(j.message || j.error || ("Publish failed (" + r.status + ")")); });
+      })
+      .then(function () { return "Saved — publishing to the live site (about a minute)"; });
   }
+  function touchedScopes(files) { var o = {}; files.forEach(function (f) { o[f.scope] = true; }); return o; }
 
   function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); }
   window.addEventListener("beforeunload", function (e) { if (Object.keys(pending).length) { e.preventDefault(); e.returnValue = ""; } });
